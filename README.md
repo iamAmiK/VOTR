@@ -19,6 +19,7 @@ VOTR is the system described in the paper `[VOTR: Vector Orchestrated Tool Retri
 
 ## Highlights
 
+- **Tool retrieval accuracy:** Successfully pulls tools from a dataset of 308 servers, 2806 tools at 96.4% recall with smaller sets providing 100% recall.
 - **Paper-aligned system:** Implements the VOTR retrieval stack and evaluation workflow from the manuscript.
 - **Hybrid retrieval core:** Dense similarity + BM25 + SPLADE-lite fused with weighted Reciprocal Rank Fusion.
 - **Field-aware reranking:** Structured overlap scoring across server/tool name, description, and parameter signals.
