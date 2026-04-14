@@ -13,7 +13,7 @@
 
 </div>
 
-VOTR is the system described in the paper `paper/main.tex`: a FastAPI service that retrieves and ranks MCP tools before model invocation, then returns a compact candidate set for schema injection. It is designed to preserve retrieval quality while reducing prompt overhead and supporting live MCP registry updates.
+VOTR is the system described in the paper `[`VOTR: Vector Orchestrated Tool Retrieval for Scalable Multi-Agent Systems`]([https://github.com/iamAmiK/VOTR-Orchestrator](https://github.com/iamAmiK/VOTR/blob/main/docs/VOTR%20-%20Vector%20Orchestrated%20Tool%20Retrieval%20for%20Scalable%20Multi-Agent%20Systems.pdf))`: a FastAPI service that retrieves and ranks MCP tools before model invocation, then returns a compact candidate set for schema injection. It is designed to preserve retrieval quality while reducing prompt overhead and supporting live MCP registry updates.
 
 ---
 
