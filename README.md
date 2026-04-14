@@ -7,7 +7,7 @@
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-service-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![MCP](https://img.shields.io/badge/MCP-compatible-6f42c1?style=for-the-badge)](https://modelcontextprotocol.io/)
-[![Paper](https://img.shields.io/badge/Paper-VOTR-blue?style=for-the-badge)](../paper/main.tex)
+[![Paper](https://img.shields.io/badge/Paper-VOTR-blue?style=for-the-badge)](https://github.com/iamAmiK/VOTR/blob/main/docs/VOTR%20-%20Vector%20Orchestrated%20Tool%20Retrieval%20for%20Scalable%20Multi-Agent%20Systems.pdf)
 [![HuggingFace](https://img.shields.io/badge/HuggingFace-assets-ffcc4d?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/datasets/a13awd/VOTR)
 
 </div>
