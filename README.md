@@ -1,57 +1,70 @@
 <div align="center">
 
-# MCP-Router: Dynamic Tool Routing for MCP Ecosystems
+# VOTR: Vector Orchestrated Tool Retrieval
 
-**Production-oriented hybrid retrieval and routing for large Model Context Protocol tool catalogs**
+**Production-grade MCP tool retrieval and routing for large, dynamic tool ecosystems**
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-service-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![Paper](https://img.shields.io/badge/Paper-MCP--Router-blue?style=for-the-badge)](../paper/main.tex)
 [![MCP](https://img.shields.io/badge/MCP-compatible-6f42c1?style=for-the-badge)](https://modelcontextprotocol.io/)
+[![Paper](https://img.shields.io/badge/Paper-VOTR-blue?style=for-the-badge)](../paper/main.tex)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-assets-ffcc4d?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/datasets/a13awd/VOTR)
 
 </div>
 
-MCP-Router extends proactive tool retrieval ideas from MCP-Zero into a deployable service for live MCP stacks.  
-It combines dense retrieval, BM25, SPLADE-lite features, field-aware reranking, and confidence-gated top-k selection to reduce prompt bloat while preserving routing accuracy.
+VOTR is the system described in the paper `paper/main.tex`: a FastAPI service that retrieves and ranks MCP tools before model invocation, then returns a compact candidate set for schema injection. It is designed to preserve retrieval quality while reducing prompt overhead and supporting live MCP registry updates.
 
 ---
 
-## Why MCP-Router
+## Highlights
 
-Modern agent deployments face three practical constraints:
-
-- **Prompt budget pressure:** Tool schemas can dominate context windows when thousands of tools are available.
-- **Live ecosystem churn:** Servers and tools are added/removed frequently, requiring dynamic registration.
-- **Routing ambiguity:** Similar tools across providers need robust ranking and uncertainty-aware handoff.
-
-MCP-Router addresses these with:
-
-- **Hybrid retrieval:** dense + BM25 + sparse expansion fused with weighted RRF.
-- **Adaptive candidate set:** confidence policy returns 1/3/5 tools instead of fixed-k.
-- **Hot registration:** discover and index new servers at runtime.
-- **Schema compression:** compact tool lines for lower token overhead.
-- **Session memory:** avoids redundant reinjection in multi-turn workflows.
+- **Paper-aligned system:** Implements the VOTR retrieval stack and evaluation workflow from the manuscript.
+- **Hybrid retrieval core:** Dense similarity + BM25 + SPLADE-lite fused with weighted Reciprocal Rank Fusion.
+- **Field-aware reranking:** Structured overlap scoring across server/tool name, description, and parameter signals.
+- **Confidence-gated handoff:** Dynamic \(k \in \{1,3,5\}\) selection calibrated from non-conformity style thresholds.
+- **Registry built for live MCP:** Runtime discovery and hot registration through stdio and HTTP/SSE pathways.
+- **Robustness features:** Overlap-aware disambiguation, abstention/null-route guards, and regression-oriented suites.
+- **Token efficiency:** Compact schema lines (paper reports 26.2 tokens/tool vs 93.5 MCP-Zero-style wrapper on the indexed corpus).
 
 ---
 
-## Project Layout
+## Problem Context
 
-```text
-MCP-Router/
-├── src/mcp_router/                # Core router package
-│   ├── router.py                  # FastAPI entrypoint
-│   ├── retrieval/                 # Hybrid retrieval + reranking
-│   ├── registry/                  # Tool/server registration and discovery
-│   ├── session/                   # Session memory
-│   ├── schema_compress/           # Compact schema formatting
-│   └── stores/qdrant_store.py     # Optional vector-store adapter
-├── scripts/                       # Index build and migration helpers
-├── benchmarks/                    # Functional, efficiency, ablation runs
-├── evaluation/                    # Evaluation helpers + result summaries
-├── config.yaml                    # Default runtime config
-├── RUN_EVALS.md                   # Benchmark runbook
-└── README.md
-```
+In large MCP deployments, injecting every tool schema is not viable. The paper motivates this with a 309-server / 2,806-tool setting, where full schema injection can exceed practical prompt budgets. VOTR treats tool selection as a retrieval and ranking problem with uncertainty-aware candidate sizing, instead of static top-k injection.
+
+---
+
+## Repository Scope
+
+This repository is the **core VOTR router implementation**.
+
+- `src/mcp_router/`: retrieval engine, reranking, confidence policy, registry, API
+- `benchmarks/`: functional correctness, ablations, efficiency, confidence, robustness
+- `evaluation/`: reporting and external benchmark adapters (including LiveMCPBench tooling)
+- `scripts/`: index/data preparation and result table generation
+- `docs/`: implementation notes and policy documentation
+
+Companion integration loop (optional, separate repo):
+- [`VOTR-Orchestrator`](https://github.com/iamAmiK/VOTR-Orchestrator)
+
+`VOTR-Orchestrator` is used for end-to-end integration testing around the router. In practice, it acts as the execution harness that sends routed tool candidates into a production-style multi-step agent loop, then validates tool-calling behavior across full conversations and chained tasks.
+
+---
+
+## Hugging Face Assets (Embeddings / Index Artifacts)
+
+Prebuilt embeddings and index artifacts are published here:
+
+- **Dataset/artifacts page:** [https://huggingface.co/datasets/a13awd/VOTR](https://huggingface.co/datasets/a13awd/VOTR)
+
+Current published payload includes approximately **623 MB** of data uploaded from the `MCP-Router/data` tree, covering precomputed routing artifacts for reproducibility.
+
+Hosted artifact types include:
+
+- Precomputed tool/server embedding shards (`.npy`)
+- Index metadata (`meta.json`, registry export, schema docs)
+- Benchmark-ready subset indexes (small/medium/full, LiveMCPBench variant)
+- Versioned checksum manifest for reproducibility
 
 ---
 
@@ -60,12 +73,11 @@ MCP-Router/
 ### Requirements
 
 - Python 3.10+
-- `OPENAI_API_KEY` for embedding-time query routing
+- `OPENAI_API_KEY` (for query-time embedding in default configuration)
 
 ### Setup
 
 ```bash
-cd MCP-Router
 python -m pip install -e .
 ```
 
@@ -80,9 +92,7 @@ python -m pip install -e ".[qdrant]"
 
 ## Quickstart
 
-### 1) Build an index
-
-From MCP-Zero style export:
+### 1) Build index locally (if not using Hugging Face artifacts)
 
 ```bash
 python scripts/build_index.py \
@@ -90,7 +100,7 @@ python scripts/build_index.py \
   --output data/index
 ```
 
-Small local index for fast iteration:
+Small dev build:
 
 ```bash
 python scripts/build_index.py \
@@ -99,7 +109,7 @@ python scripts/build_index.py \
   --max-servers 20
 ```
 
-### 2) Configure API key
+### 2) Set API key
 
 PowerShell:
 
@@ -107,7 +117,7 @@ PowerShell:
 $env:OPENAI_API_KEY="sk-..."
 ```
 
-### 3) Start the API
+### 3) Run the router
 
 ```bash
 python -m uvicorn mcp_router.router:app --host 0.0.0.0 --port 8765
@@ -115,85 +125,62 @@ python -m uvicorn mcp_router.router:app --host 0.0.0.0 --port 8765
 
 ---
 
-## API Examples
+## API Surface
 
-### `POST /route`
+Common endpoints:
+
+- `POST /route` - retrieve and rank candidate tools for a request
+- `POST /register` - register a server/tools payload directly
+- `POST /register/discover` - discover/register from stdio MCP server
+- `POST /register/discover/sse` - discover/register from HTTP endpoint
+
+Minimal `POST /route` body:
 
 ```json
 {
   "server_intent": "GitHub repositories and API",
-  "tool_intent": "search for repositories matching a query string",
+  "tool_intent": "search repositories by query",
   "session_id": "user-123"
-}
-```
-
-### `POST /register`
-
-```json
-{
-  "server": {
-    "name": "MyServer",
-    "description": "Does X",
-    "summary": "Short summary for routing",
-    "tools": [
-      {"name": "do_x", "description": "Runs X", "parameter": {}}
-    ],
-    "source": "user"
-  }
-}
-```
-
-### `POST /register/discover`
-
-```json
-{
-  "command": "npx",
-  "args": ["-y", "@modelcontextprotocol/server-filesystem", "C:\\repo"],
-  "server_name": "Filesystem",
-  "server_description": "Read and write files in a local workspace",
-  "timeout_seconds": 30
 }
 ```
 
 ---
 
-## Evaluation
+## Evaluation at a Glance
 
-Use the benchmark runbook in `RUN_EVALS.md`. Common entry points:
+Paper evaluation covers:
+
+- **Single-tool routing** across small / medium / large suites
+- **Multi-hop** and **multi-tool** scaled suites (including long-hop stress runs)
+- **Ablations** (dense-only, BM25-only, dense+BM25, no policy components)
+- **Confidence calibration and handoff behavior**
+- **Latency and token-efficiency measurements**
+- **Out-of-distribution stress test on LiveMCPBench**
+
+Runbook:
+
+- `RUN_EVALS.md`
+
+Common commands:
 
 ```bash
 python benchmarks/functional_correctness/_run_all_suites.py
 python benchmarks/efficiency/run_latency.py
 python benchmarks/baselines_ablations/run_profiles.py
-```
-
-For paper tables and summary scripts:
-
-```bash
 python benchmarks/efficiency/build_paper_comparison.py
 python scripts/generate_results_tables.py
 ```
 
 ---
 
-## Optional Orchestrator Integration
-
-For end-to-end integration testing with multi-step tool-calling loops, use the companion repository:
-
-- [`VOTR-Orchestrator`](https://github.com/<your-username>/VOTR-Orchestrator)
-
-This `VOTR` repository is the core router implementation. The orchestrator is maintained separately so users can adopt the router without extra orchestration dependencies.
-
----
-
 ## Reproducibility Notes
 
-- Main config is in `config.yaml`; local overrides should go in `config.local.yaml`.
-- Generated index artifacts live under `data/index*` and are intentionally ignored from source control.
-- Generated benchmark outputs live under `benchmarks/results` and `evaluation/results`.
+- Use `config.yaml` for baseline settings; put machine-specific overrides in `config.local.yaml`.
+- Generated runtime artifacts and benchmark outputs are intentionally ignored by `.gitignore`.
+- For paper-consistent runs, keep index build source/version and benchmark suite versions fixed.
 
 ---
 
 ## Citation
 
-If you use MCP-Router in research, cite the paper in `paper/main.tex` and your final bibliographic record.
+If you use VOTR, cite your final paper and released artifact links.
