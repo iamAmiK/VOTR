@@ -1,0 +1,777 @@
+{
+  "summary": {
+    "num_cases": 1,
+    "num_hops": 50,
+    "overall_top1_accuracy": 0.0,
+    "overall_handoff_accuracy_at_recommended_k": 0.0,
+    "confidence_buckets": {
+      "high": {
+        "count": 33,
+        "top1_accuracy": 0.0,
+        "handoff_accuracy_at_recommended_k": 0.0
+      },
+      "low": {
+        "count": 15,
+        "top1_accuracy": 0.0,
+        "handoff_accuracy_at_recommended_k": 0.0
+      },
+      "medium": {
+        "count": 2,
+        "top1_accuracy": 0.0,
+        "handoff_accuracy_at_recommended_k": 0.0
+      }
+    }
+  },
+  "rows": [
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 0,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "AgentQL::extract-web-data"
+      ],
+      "predicted_top1": "Dart::list_tasks",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.008115141257936768,
+      "top1_score": 0.030246288798920377,
+      "top2_score": 0.02213114754098361
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Aiven::list_projects"
+      ],
+      "predicted_top1": "Dart::list_docs",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.00022192479142194022,
+      "top1_score": 0.036882631257631256,
+      "top2_score": 0.036660706466209315
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 2,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Alibaba Cloud AnalyticDB for MySQL::get_query_plan"
+      ],
+      "predicted_top1": "Xero::list-organisation-details",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.00010073300428931758,
+      "top1_score": 0.03711917562724014,
+      "top2_score": 0.03701844262295082
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Apache IoTDB::list_tables"
+      ],
+      "predicted_top1": "Keboola::retrieve_jobs",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.003462762317012369,
+      "top1_score": 0.036696838242802135,
+      "top2_score": 0.033234075925789766
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 4,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Apify::get-actor-details"
+      ],
+      "predicted_top1": "Xero::list-organisation-details",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.00010073300428931758,
+      "top1_score": 0.03711917562724014,
+      "top2_score": 0.03701844262295082
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "APIMatic MCP::validate-openapi-using-apimatic"
+      ],
+      "predicted_top1": "Puppeteer::puppeteer_evaluate",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.002029768206571185,
+      "top1_score": 0.03724680800756621,
+      "top2_score": 0.035217039800995026
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 6,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Arize Phoenix::arize-phoenix-otel"
+      ],
+      "predicted_top1": "Keboola::query_table",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.00030764633030018473,
+      "top1_score": 0.03328372288532411,
+      "top2_score": 0.03297607655502392
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 7,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Astra DB::ListRecords"
+      ],
+      "predicted_top1": "Keboola::retrieve_jobs",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0046975071978377116,
+      "top1_score": 0.026736111111111113,
+      "top2_score": 0.0220386039132734
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 8,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Audiense Insights::get-reports"
+      ],
+      "predicted_top1": "GitHub::get_pull_request",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.004629470634004991,
+      "top1_score": 0.026022913256955812,
+      "top2_score": 0.02139344262295082
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 9,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "AWS::Search Documentation"
+      ],
+      "predicted_top1": "Keboola::retrieve_jobs",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0026605605179756894,
+      "top1_score": 0.037266458495966694,
+      "top2_score": 0.034605897977991004
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 10,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Axiom::listDatasets"
+      ],
+      "predicted_top1": "Dart::list_docs",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.00022192479142194022,
+      "top1_score": 0.036882631257631256,
+      "top2_score": 0.036660706466209315
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 11,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Azure::Query search indexes"
+      ],
+      "predicted_top1": "Meilisearch::get-tasks",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0004465597273635366,
+      "top1_score": 0.02213114754098361,
+      "top2_score": 0.021684587813620072
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 12,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Bankless Onchain::get_proxy"
+      ],
+      "predicted_top1": "Keboola::get_table_detail",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0023760460850624776,
+      "top1_score": 0.038171500630517025,
+      "top2_score": 0.03579545454545455
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 13,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Bitrise::list_apps"
+      ],
+      "predicted_top1": "Keboola::retrieve_jobs",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.003462762317012369,
+      "top1_score": 0.036696838242802135,
+      "top2_score": 0.033234075925789766
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 14,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Box::box_search_tool"
+      ],
+      "predicted_top1": "Keboola::retrieve_jobs",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0026605605179756894,
+      "top1_score": 0.037266458495966694,
+      "top2_score": 0.034605897977991004
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 15,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Chroma::chroma_list_collections"
+      ],
+      "predicted_top1": "Contentful-mcp::list_assets",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.004440729211573569,
+      "top1_score": 0.03843204653622422,
+      "top2_score": 0.033991317324650654
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 16,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "CircleCI::get_job_test_results"
+      ],
+      "predicted_top1": "Keboola::get_table_detail",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0023760460850624776,
+      "top1_score": 0.038171500630517025,
+      "top2_score": 0.03579545454545455
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 17,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "ClickHouse::list_tables"
+      ],
+      "predicted_top1": "Keboola::retrieve_jobs",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.003462762317012369,
+      "top1_score": 0.036696838242802135,
+      "top2_score": 0.033234075925789766
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 18,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Codacy::codacy_search_repository_srm_items"
+      ],
+      "predicted_top1": "llm-context::lc-sel-files",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0012116294635907965,
+      "top1_score": 0.032293919266810835,
+      "top2_score": 0.031082289803220038
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 19,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "CodeLogic::codelogic-method-impact"
+      ],
+      "predicted_top1": "Keboola::query_table",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.00030764633030018473,
+      "top1_score": 0.03328372288532411,
+      "top2_score": 0.03297607655502392
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 20,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Comet Opik::Traces"
+      ],
+      "predicted_top1": "Puppeteer::puppeteer_evaluate",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.002029768206571185,
+      "top1_score": 0.03724680800756621,
+      "top2_score": 0.035217039800995026
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 21,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Couchbase::get_document_by_id"
+      ],
+      "predicted_top1": "GitLab::create_or_update_file",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.002554414324906131,
+      "top1_score": 0.023614523614523618,
+      "top2_score": 0.021060109289617487
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 22,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Dart::list_docs"
+      ],
+      "predicted_top1": "Keboola::retrieve_jobs",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0046975071978377116,
+      "top1_score": 0.026736111111111113,
+      "top2_score": 0.0220386039132734
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 23,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "DevHub::get_locations"
+      ],
+      "predicted_top1": "ClickUp::get_list",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0004642580999453076,
+      "top1_score": 0.021323020087739553,
+      "top2_score": 0.020858761987794246
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 24,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Dynatrace::list_problems"
+      ],
+      "predicted_top1": "Keboola::retrieve_jobs",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0046975071978377116,
+      "top1_score": 0.026736111111111113,
+      "top2_score": 0.0220386039132734
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 25,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "EduBase::edubase_get_user"
+      ],
+      "predicted_top1": "GitHub::get_pull_request",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.004629470634004991,
+      "top1_score": 0.026022913256955812,
+      "top2_score": 0.02139344262295082
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 26,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Elasticsearch::search"
+      ],
+      "predicted_top1": "Meilisearch::get-tasks",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0006990849798887908,
+      "top1_score": 0.02213114754098361,
+      "top2_score": 0.021432062561094818
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 27,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "eSignatures::list_templates"
+      ],
+      "predicted_top1": "Keboola::retrieve_jobs",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0046975071978377116,
+      "top1_score": 0.026736111111111113,
+      "top2_score": 0.0220386039132734
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 28,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Exa::github_search"
+      ],
+      "predicted_top1": "Dart::list_tasks",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.006759825142178086,
+      "top1_score": 0.03367604617604618,
+      "top2_score": 0.026916221033868093
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 29,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Fewsats::balance"
+      ],
+      "predicted_top1": "Terminal-Control::execute_command",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0010725378181303605,
+      "top1_score": 0.02213114754098361,
+      "top2_score": 0.02105860972285325
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 30,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Fibery::list_databases"
+      ],
+      "predicted_top1": "Keboola::retrieve_jobs",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0046975071978377116,
+      "top1_score": 0.026736111111111113,
+      "top2_score": 0.0220386039132734
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 31,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Financial Datasets::get_company_news"
+      ],
+      "predicted_top1": "ClickUp::get_list",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0004642580999453076,
+      "top1_score": 0.021323020087739553,
+      "top2_score": 0.020858761987794246
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 32,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Firecrawl::firecrawl_search"
+      ],
+      "predicted_top1": "Keboola::retrieve_jobs",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0026605605179756894,
+      "top1_score": 0.037266458495966694,
+      "top2_score": 0.034605897977991004
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 33,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Gitee::search_users"
+      ],
+      "predicted_top1": "llm-context::lc-sel-files",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0012116294635907965,
+      "top1_score": 0.032293919266810835,
+      "top2_score": 0.031082289803220038
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 34,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Gyazo::gyazo_search"
+      ],
+      "predicted_top1": "llm-context::lc-sel-files",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0012116294635907965,
+      "top1_score": 0.032293919266810835,
+      "top2_score": 0.031082289803220038
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 35,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "gotoHuman::list-forms"
+      ],
+      "predicted_top1": "Xero::list-items",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0033275608516829328,
+      "top1_score": 0.03611007684315415,
+      "top2_score": 0.032782515991471216
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 36,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Grafana::search_dashboards"
+      ],
+      "predicted_top1": "Xero::list-items",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.016380504089966684,
+      "top1_score": 0.03799122488101534,
+      "top2_score": 0.021610720791048657
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 37,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Graphlit::Web Search (including Podcast Search)"
+      ],
+      "predicted_top1": "Meilisearch::get-tasks",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0004465597273635366,
+      "top1_score": 0.02213114754098361,
+      "top2_score": 0.021684587813620072
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 38,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "GreptimeDB::list_tools"
+      ],
+      "predicted_top1": "Contentful-mcp::list_assets",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.004440729211573569,
+      "top1_score": 0.03843204653622422,
+      "top2_score": 0.033991317324650654
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 39,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Heroku::ps_list"
+      ],
+      "predicted_top1": "Dart::list_docs",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.00022192479142194022,
+      "top1_score": 0.036882631257631256,
+      "top2_score": 0.036660706466209315
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 40,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Hologres::get_query_plan"
+      ],
+      "predicted_top1": "Keboola::get_table_detail",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.00713511013370715,
+      "top1_score": 0.03758140579384685,
+      "top2_score": 0.030446295660139698
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 41,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Hyperbrowser::search_with_bing"
+      ],
+      "predicted_top1": "Meilisearch::get-tasks",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0006990849798887908,
+      "top1_score": 0.02213114754098361,
+      "top2_score": 0.021432062561094818
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 42,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "expected_labels": [
+        "ForeverVM::listMachines"
+      ],
+      "predicted_top1": "Dart::list_tasks",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0008424165880538195,
+      "top1_score": 0.03791161978628928,
+      "top2_score": 0.03706920319823546
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 43,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Inkeep::search-product-content"
+      ],
+      "predicted_top1": "llm-context::lc-sel-files",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0012116294635907965,
+      "top1_score": 0.032293919266810835,
+      "top2_score": 0.031082289803220038
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 44,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Kagi Search::search"
+      ],
+      "predicted_top1": "Xero::list-items",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.016380504089966684,
+      "top1_score": 0.03799122488101534,
+      "top2_score": 0.021610720791048657
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 45,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Keboola::get_job_detail"
+      ],
+      "predicted_top1": "Keboola::get_table_detail",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0023760460850624776,
+      "top1_score": 0.038171500630517025,
+      "top2_score": 0.03579545454545455
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 46,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Lara Translate::list_memories"
+      ],
+      "predicted_top1": "Xero::list-items",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0033275608516829328,
+      "top1_score": 0.03611007684315415,
+      "top2_score": 0.032782515991471216
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 47,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Logfire::get_logfire_records_schema"
+      ],
+      "predicted_top1": "Xero::list-organisation-details",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.00010073300428931758,
+      "top1_score": 0.03711917562724014,
+      "top2_score": 0.03701844262295082
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 48,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Langfuse Prompt Management::get-prompt"
+      ],
+      "predicted_top1": "ClickUp::get_list",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0004642580999453076,
+      "top1_score": 0.021323020087739553,
+      "top2_score": 0.020858761987794246
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "hop_index": 49,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "expected_labels": [
+        "Lingo.dev::list-users"
+      ],
+      "predicted_top1": "Dart::list_tasks",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0008424165880538195,
+      "top1_score": 0.03791161978628928,
+      "top2_score": 0.03706920319823546
+    }
+  ]
+}

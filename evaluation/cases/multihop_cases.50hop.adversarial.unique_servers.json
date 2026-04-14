@@ -1,0 +1,261 @@
+{
+  "cases": [
+    {
+      "id": "cross-app-50-hop-adversarial-unique-servers",
+      "description": "Adversarial 50-hop strict benchmark: unique servers with intentionally generic, overlapping intents",
+      "session_id": "mh-50hop-adversarial-1",
+      "hops": [
+        {
+          "server_intent": "records and document management tasks",
+          "tool_intent": "execute an operation and return output",
+          "expected_tool_key": "AgentQL::extract-web-data"
+        },
+        {
+          "server_intent": "project and communication system actions",
+          "tool_intent": "return available items with pagination and optional filtering",
+          "expected_tool_key": "Aiven::list_projects"
+        },
+        {
+          "server_intent": "general business platform operations",
+          "tool_intent": "fetch details for a specific item or identifier",
+          "expected_tool_key": "Alibaba Cloud AnalyticDB for MySQL::get_query_plan"
+        },
+        {
+          "server_intent": "analytics and integration platform tasks",
+          "tool_intent": "return available items with pagination and optional filtering",
+          "expected_tool_key": "Apache IoTDB::list_tables"
+        },
+        {
+          "server_intent": "general business platform operations",
+          "tool_intent": "fetch details for a specific item or identifier",
+          "expected_tool_key": "Apify::get-actor-details"
+        },
+        {
+          "server_intent": "workspace automation and data operations",
+          "tool_intent": "execute an operation and return output",
+          "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic"
+        },
+        {
+          "server_intent": "analytics and integration platform tasks",
+          "tool_intent": "execute an operation and return output",
+          "expected_tool_key": "Arize Phoenix::arize-phoenix-otel"
+        },
+        {
+          "server_intent": "workspace automation and data operations",
+          "tool_intent": "return available items with pagination and optional filtering",
+          "expected_tool_key": "Astra DB::ListRecords"
+        },
+        {
+          "server_intent": "developer workflow and content operations",
+          "tool_intent": "fetch details for a specific item or identifier",
+          "expected_tool_key": "Audiense Insights::get-reports"
+        },
+        {
+          "server_intent": "analytics and integration platform tasks",
+          "tool_intent": "find relevant items matching a query with optional filters",
+          "expected_tool_key": "AWS::Search Documentation"
+        },
+        {
+          "server_intent": "project and communication system actions",
+          "tool_intent": "return available items with pagination and optional filtering",
+          "expected_tool_key": "Axiom::listDatasets"
+        },
+        {
+          "server_intent": "workspace automation and data operations",
+          "tool_intent": "find relevant items matching a query with optional filters",
+          "expected_tool_key": "Azure::Query search indexes"
+        },
+        {
+          "server_intent": "analytics and integration platform tasks",
+          "tool_intent": "fetch details for a specific item or identifier",
+          "expected_tool_key": "Bankless Onchain::get_proxy"
+        },
+        {
+          "server_intent": "analytics and integration platform tasks",
+          "tool_intent": "return available items with pagination and optional filtering",
+          "expected_tool_key": "Bitrise::list_apps"
+        },
+        {
+          "server_intent": "analytics and integration platform tasks",
+          "tool_intent": "find relevant items matching a query with optional filters",
+          "expected_tool_key": "Box::box_search_tool"
+        },
+        {
+          "server_intent": "developer workflow and content operations",
+          "tool_intent": "return available items with pagination and optional filtering",
+          "expected_tool_key": "Chroma::chroma_list_collections"
+        },
+        {
+          "server_intent": "analytics and integration platform tasks",
+          "tool_intent": "fetch details for a specific item or identifier",
+          "expected_tool_key": "CircleCI::get_job_test_results"
+        },
+        {
+          "server_intent": "analytics and integration platform tasks",
+          "tool_intent": "return available items with pagination and optional filtering",
+          "expected_tool_key": "ClickHouse::list_tables"
+        },
+        {
+          "server_intent": "developer workflow and content operations",
+          "tool_intent": "find relevant items matching a query with optional filters",
+          "expected_tool_key": "Codacy::codacy_search_repository_srm_items"
+        },
+        {
+          "server_intent": "analytics and integration platform tasks",
+          "tool_intent": "execute an operation and return output",
+          "expected_tool_key": "CodeLogic::codelogic-method-impact"
+        },
+        {
+          "server_intent": "workspace automation and data operations",
+          "tool_intent": "execute an operation and return output",
+          "expected_tool_key": "Comet Opik::Traces"
+        },
+        {
+          "server_intent": "project and communication system actions",
+          "tool_intent": "fetch details for a specific item or identifier",
+          "expected_tool_key": "Couchbase::get_document_by_id"
+        },
+        {
+          "server_intent": "workspace automation and data operations",
+          "tool_intent": "return available items with pagination and optional filtering",
+          "expected_tool_key": "Dart::list_docs"
+        },
+        {
+          "server_intent": "records and document management tasks",
+          "tool_intent": "fetch details for a specific item or identifier",
+          "expected_tool_key": "DevHub::get_locations"
+        },
+        {
+          "server_intent": "workspace automation and data operations",
+          "tool_intent": "return available items with pagination and optional filtering",
+          "expected_tool_key": "Dynatrace::list_problems"
+        },
+        {
+          "server_intent": "developer workflow and content operations",
+          "tool_intent": "fetch details for a specific item or identifier",
+          "expected_tool_key": "EduBase::edubase_get_user"
+        },
+        {
+          "server_intent": "project and communication system actions",
+          "tool_intent": "find relevant items matching a query with optional filters",
+          "expected_tool_key": "Elasticsearch::search"
+        },
+        {
+          "server_intent": "workspace automation and data operations",
+          "tool_intent": "return available items with pagination and optional filtering",
+          "expected_tool_key": "eSignatures::list_templates"
+        },
+        {
+          "server_intent": "records and document management tasks",
+          "tool_intent": "find relevant items matching a query with optional filters",
+          "expected_tool_key": "Exa::github_search"
+        },
+        {
+          "server_intent": "project and communication system actions",
+          "tool_intent": "execute an operation and return output",
+          "expected_tool_key": "Fewsats::balance"
+        },
+        {
+          "server_intent": "workspace automation and data operations",
+          "tool_intent": "return available items with pagination and optional filtering",
+          "expected_tool_key": "Fibery::list_databases"
+        },
+        {
+          "server_intent": "records and document management tasks",
+          "tool_intent": "fetch details for a specific item or identifier",
+          "expected_tool_key": "Financial Datasets::get_company_news"
+        },
+        {
+          "server_intent": "analytics and integration platform tasks",
+          "tool_intent": "find relevant items matching a query with optional filters",
+          "expected_tool_key": "Firecrawl::firecrawl_search"
+        },
+        {
+          "server_intent": "developer workflow and content operations",
+          "tool_intent": "find relevant items matching a query with optional filters",
+          "expected_tool_key": "Gitee::search_users"
+        },
+        {
+          "server_intent": "developer workflow and content operations",
+          "tool_intent": "find relevant items matching a query with optional filters",
+          "expected_tool_key": "Gyazo::gyazo_search"
+        },
+        {
+          "server_intent": "general business platform operations",
+          "tool_intent": "return available items with pagination and optional filtering",
+          "expected_tool_key": "gotoHuman::list-forms"
+        },
+        {
+          "server_intent": "general business platform operations",
+          "tool_intent": "find relevant items matching a query with optional filters",
+          "expected_tool_key": "Grafana::search_dashboards"
+        },
+        {
+          "server_intent": "workspace automation and data operations",
+          "tool_intent": "find relevant items matching a query with optional filters",
+          "expected_tool_key": "Graphlit::Web Search (including Podcast Search)"
+        },
+        {
+          "server_intent": "developer workflow and content operations",
+          "tool_intent": "return available items with pagination and optional filtering",
+          "expected_tool_key": "GreptimeDB::list_tools"
+        },
+        {
+          "server_intent": "project and communication system actions",
+          "tool_intent": "return available items with pagination and optional filtering",
+          "expected_tool_key": "Heroku::ps_list"
+        },
+        {
+          "server_intent": "workspace automation and data operations",
+          "tool_intent": "fetch details for a specific item or identifier",
+          "expected_tool_key": "Hologres::get_query_plan"
+        },
+        {
+          "server_intent": "project and communication system actions",
+          "tool_intent": "find relevant items matching a query with optional filters",
+          "expected_tool_key": "Hyperbrowser::search_with_bing"
+        },
+        {
+          "server_intent": "records and document management tasks",
+          "tool_intent": "return available items with pagination and optional filtering",
+          "expected_tool_key": "ForeverVM::listMachines"
+        },
+        {
+          "server_intent": "developer workflow and content operations",
+          "tool_intent": "find relevant items matching a query with optional filters",
+          "expected_tool_key": "Inkeep::search-product-content"
+        },
+        {
+          "server_intent": "general business platform operations",
+          "tool_intent": "find relevant items matching a query with optional filters",
+          "expected_tool_key": "Kagi Search::search"
+        },
+        {
+          "server_intent": "analytics and integration platform tasks",
+          "tool_intent": "fetch details for a specific item or identifier",
+          "expected_tool_key": "Keboola::get_job_detail"
+        },
+        {
+          "server_intent": "general business platform operations",
+          "tool_intent": "return available items with pagination and optional filtering",
+          "expected_tool_key": "Lara Translate::list_memories"
+        },
+        {
+          "server_intent": "general business platform operations",
+          "tool_intent": "fetch details for a specific item or identifier",
+          "expected_tool_key": "Logfire::get_logfire_records_schema"
+        },
+        {
+          "server_intent": "records and document management tasks",
+          "tool_intent": "fetch details for a specific item or identifier",
+          "expected_tool_key": "Langfuse Prompt Management::get-prompt"
+        },
+        {
+          "server_intent": "records and document management tasks",
+          "tool_intent": "return available items with pagination and optional filtering",
+          "expected_tool_key": "Lingo.dev::list-users"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "num_tasks": 95,
+  "num_tasks_with_steps": 95,
+  "num_tasks_with_tools": 95,
+  "num_tasks_step_tool_count_equal": 39,
+  "num_tasks_all_tools_uniquely_mapped": 67,
+  "num_exact_step_records": 82,
+  "num_tasks_in_exact_step_subset": 32,
+  "unknown_tool_names": {
+    "ddg-search": 1,
+    "execute_command": 1,
+    "get_maven_latest_version": 1,
+    "open_document": 1,
+    "trial_references": 1
+  },
+  "ambiguous_tool_names": {
+    "add_table": 1,
+    "fetch": 3,
+    "list_directory": 2,
+    "read_file": 1,
+    "search_papers": 4,
+    "write_file": 18
+  }
+}

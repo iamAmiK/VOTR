@@ -1,0 +1,777 @@
+{
+  "summary": {
+    "num_cases": 1,
+    "num_hops": 50,
+    "overall_top1_accuracy": 0.96,
+    "overall_handoff_accuracy_at_recommended_k": 0.96,
+    "confidence_buckets": {
+      "high": {
+        "count": 28,
+        "top1_accuracy": 0.9285714285714286,
+        "handoff_accuracy_at_recommended_k": 0.9285714285714286
+      },
+      "low": {
+        "count": 18,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "medium": {
+        "count": 4,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      }
+    }
+  },
+  "rows": [
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 0,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "AgentQL::extract-web-data"
+      ],
+      "predicted_top1": "AgentQL::extract-web-data",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.018728806237715716,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.01979578392621871
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Aiven::list_projects"
+      ],
+      "predicted_top1": "Aiven::list_projects",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 2,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Bloomberg::bdh"
+      ],
+      "predicted_top1": "Bloomberg::bdh",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0015578242909185525,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.036966765873015874
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Apache IoTDB::list_tables"
+      ],
+      "predicted_top1": "Apache IoTDB::list_tables",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.004594663807998042,
+      "top1_score": 0.038260179799048125,
+      "top2_score": 0.03366551599105008
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 4,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Apify::get-actor-details"
+      ],
+      "predicted_top1": "Apify::get-actor-details",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011333971275801005,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037391193036354325
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "APIMatic MCP::validate-openapi-using-apimatic"
+      ],
+      "predicted_top1": "APIMatic MCP::validate-openapi-using-apimatic",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.006600984262459059,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03192360590147537
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 6,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Slack::slack_add_reactionl"
+      ],
+      "predicted_top1": "Slack::slack_add_reaction",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0010453830205284509,
+      "top1_score": 0.03843204653622422,
+      "top2_score": 0.03738666351569577
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 7,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Astra DB::ListRecords"
+      ],
+      "predicted_top1": "Astra DB::ListRecords",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.005496975261650036,
+      "top1_score": 0.03728266269249876,
+      "top2_score": 0.031785687430848725
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 8,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Xero-mcp-server::list_quotes"
+      ],
+      "predicted_top1": "Xero-mcp-server::list_quotes",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0012195117298237357,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03730507843411069
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 9,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "AWS::Search Documentation"
+      ],
+      "predicted_top1": "AWS::AWS and AWSCC Provider Documentation",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0010537920328540368,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03747079813108039
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 10,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Axiom::listDatasets"
+      ],
+      "predicted_top1": "Axiom::listDatasets",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 11,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Azure::Query search indexes"
+      ],
+      "predicted_top1": "Azure::Query search indexes",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006184264645396342,
+      "top1_score": 0.03843204653622422,
+      "top2_score": 0.03781362007168459
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 12,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Airtable::search_records"
+      ],
+      "predicted_top1": "Airtable::search_records",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.01027583537634754,
+      "top1_score": 0.038260179799048125,
+      "top2_score": 0.027984344422700584
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 13,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Bitrise::list_apps"
+      ],
+      "predicted_top1": "Bitrise::list_apps",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0016217976159805872,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03690279254795384
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 14,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Box::box_search_tool"
+      ],
+      "predicted_top1": "Box::box_search_tool",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.002395909496314401,
+      "top1_score": 0.038260179799048125,
+      "top2_score": 0.035864270302733724
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 15,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Chroma::chroma_list_collections"
+      ],
+      "predicted_top1": "Chroma::chroma_list_collections",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0012195117298237357,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03730507843411069
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 16,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "CircleCI::get_job_test_results"
+      ],
+      "predicted_top1": "CircleCI::get_job_test_results",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 17,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "ClickHouse::list_tables"
+      ],
+      "predicted_top1": "ClickHouse::list_tables",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 18,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Codacy::codacy_list_repository_issues"
+      ],
+      "predicted_top1": "Codacy::codacy_list_repository_issues",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006922934871110495,
+      "top1_score": 0.03843204653622422,
+      "top2_score": 0.03773975304911317
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 19,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "CodeLogic::codelogic-method-impact"
+      ],
+      "predicted_top1": "CodeLogic::codelogic-method-impact",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 20,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "expected_labels": [
+        "Comet Opik::Traces"
+      ],
+      "predicted_top1": "Comet Opik::Traces",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0008550564593896824,
+      "top1_score": 0.02213114754098361,
+      "top2_score": 0.021276091081593927
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 21,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Couchbase::get_document_by_id"
+      ],
+      "predicted_top1": "Couchbase::get_document_by_id",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 22,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Dart::list_docs"
+      ],
+      "predicted_top1": "Dart::list_docs",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 23,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "DevHub::get_locations"
+      ],
+      "predicted_top1": "DevHub::get_locations",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0013657812309319436,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03715880893300248
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 24,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Dynatrace::list_problems"
+      ],
+      "predicted_top1": "Dynatrace::list_problems",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 25,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "EduBase::edubase_get_user"
+      ],
+      "predicted_top1": "EduBase::edubase_get_user",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011940618796894495,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037330528284244976
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 26,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Elasticsearch::search"
+      ],
+      "predicted_top1": "Elasticsearch::search",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0016217976159805872,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03690279254795384
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 27,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "eSignatures::list_templates"
+      ],
+      "predicted_top1": "eSignatures::list_templates",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011333971275801005,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037391193036354325
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 28,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Exa::github_search"
+      ],
+      "predicted_top1": "Exa::github_search",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0015181070062068175,
+      "top1_score": 0.03825563524590164,
+      "top2_score": 0.036737528239694825
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 29,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Fewsats::pay_offer"
+      ],
+      "predicted_top1": "Fewsats::pay_offer",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 30,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Fibery::list_databases"
+      ],
+      "predicted_top1": "Fibery::list_databases",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.001787061924239601,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.036737528239694825
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 31,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Financial Datasets::get_company_news"
+      ],
+      "predicted_top1": "Financial Datasets::get_company_news",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.00026895491803278354,
+      "top1_score": 0.038260179799048125,
+      "top2_score": 0.03799122488101534
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 32,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Firecrawl::firecrawl_search"
+      ],
+      "predicted_top1": "Firecrawl::firecrawl_search",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 33,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Gitee::search_users"
+      ],
+      "predicted_top1": "Gitee::search_users",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0013657812309319436,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03715880893300248
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 34,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Gyazo::gyazo_search"
+      ],
+      "predicted_top1": "Gyazo::gyazo_search",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 35,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "expected_labels": [
+        "gotoHuman::list-forms"
+      ],
+      "predicted_top1": "gotoHuman::list-forms",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 36,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Grafana::search_dashboards"
+      ],
+      "predicted_top1": "Grafana::search_dashboards",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0018250234812189695,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.036699566682715457
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 37,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Graphlit::Web Search (including Podcast Search)"
+      ],
+      "predicted_top1": "Graphlit::Web Search (including Podcast Search)",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.001472005099860188,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03705258506407424
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 38,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "GreptimeDB::list_tools"
+      ],
+      "predicted_top1": "GreptimeDB::list_tools",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 39,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Heroku::ps_list"
+      ],
+      "predicted_top1": "Heroku::ps_list",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.001554677820887758,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03696991234304667
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 40,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Hologres::get_query_plan"
+      ],
+      "predicted_top1": "Hologres::get_query_plan",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 41,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Hyperbrowser::search_with_bing"
+      ],
+      "predicted_top1": "Hyperbrowser::search_with_bing",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.004195785073753219,
+      "top1_score": 0.0383424408014572,
+      "top2_score": 0.03414665572770398
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 42,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "expected_labels": [
+        "ForeverVM::listMachines"
+      ],
+      "predicted_top1": "ForeverVM::listMachines",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 43,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Inkeep::search-product-content"
+      ],
+      "predicted_top1": "Inkeep::search-product-content",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.007253063183452223,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.0312715269804822
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 44,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Kagi Search::search"
+      ],
+      "predicted_top1": "Kagi Search::search",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 45,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Keboola::get_job_detail"
+      ],
+      "predicted_top1": "Keboola::get_job_detail",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0038701588012743995,
+      "top1_score": 0.038078030436570896,
+      "top2_score": 0.0342078716352965
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 46,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "expected_labels": [
+        "Lara Translate::list_memories"
+      ],
+      "predicted_top1": "Lara Translate::list_memories",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009669864772984815,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037557603686635944
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 47,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Logfire::get_logfire_records_schema"
+      ],
+      "predicted_top1": "Logfire::get_logfire_records_schema",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0012150023503143537,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03730958781362007
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 48,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Langfuse Prompt Management::get-prompt"
+      ],
+      "predicted_top1": "Langfuse Prompt Management::get-prompt",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "hop_index": 49,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Lingo.dev::list-users"
+      ],
+      "predicted_top1": "Lingo.dev::list-users",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0015421925212545234,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.0369823976426799
+    }
+  ]
+}

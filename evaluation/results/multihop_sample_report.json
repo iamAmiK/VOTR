@@ -1,0 +1,100 @@
+{
+  "summary": {
+    "num_cases": 2,
+    "k": 5,
+    "keep_memory": false,
+    "mean_hop_acc_at_1": 0.8333333333333333,
+    "mean_hop_acc_at_k": 1.0,
+    "chain_success_rate_at_k": 1.0
+  },
+  "results": [
+    {
+      "case_id": "github-search-then-commits",
+      "description": "Two-hop GitHub flow: find repos, then inspect commits",
+      "hops": [
+        {
+          "expected_labels": [
+            "GitHub::search_repositories"
+          ],
+          "predicted_topk": [
+            "GitHub::search_repositories",
+            "GitHub::search_code",
+            "Gitee::search_open_source_repositories",
+            "Gitee::list_user_repos",
+            "Gitee::search_users"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "GitHub::list_commits"
+          ],
+          "predicted_topk": [
+            "GitHub::list_commits",
+            "GitHub::list_pull_requests",
+            "GitHub::push_files",
+            "GitHub::get_pull_request_files",
+            "GitHub::list_issues"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        }
+      ],
+      "hop_acc_at_1": 1.0,
+      "hop_acc_at_k": 1.0,
+      "chain_success_at_k": true
+    },
+    {
+      "case_id": "clickup-xero-slack-three-hop",
+      "description": "Find/delete task in ClickUp, list quotes in Xero, add reaction in Slack",
+      "hops": [
+        {
+          "expected_labels": [
+            "*::delete_task"
+          ],
+          "predicted_topk": [
+            "ClickUp::move_task",
+            "ClickUp::delete_task",
+            "ClickUp::delete_time_entry",
+            "ClickUp::create_task",
+            "ClickUp::delete_folder"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "*::list_quotes"
+          ],
+          "predicted_topk": [
+            "Xero-mcp-server::list_quotes",
+            "Xero::list-quotes",
+            "Xero-mcp-server::list_invoices",
+            "Xero::list-invoices",
+            "Xero::list-items"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "*::slack_add_reaction"
+          ],
+          "predicted_topk": [
+            "Slack::slack_add_reaction",
+            "Slack::slack_reply_to_thread",
+            "Slack::slack_post_message",
+            "Slack::slack_get_thread_replies",
+            "Slack::slack_get_channel_history"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        }
+      ],
+      "hop_acc_at_1": 0.6666666666666666,
+      "hop_acc_at_k": 1.0,
+      "chain_success_at_k": true
+    }
+  ]
+}

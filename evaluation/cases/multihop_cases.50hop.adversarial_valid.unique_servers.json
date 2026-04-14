@@ -1,0 +1,261 @@
+{
+  "cases": [
+    {
+      "id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "description": "Hard but realistic 50-hop strict benchmark: each hop names the application/domain while keeping tool intent ambiguous",
+      "session_id": "mh-50hop-adversarial-valid-1",
+      "hops": [
+        {
+          "server_intent": "In AgentQL, perform an action in this application.",
+          "tool_intent": "run an operation and return the result",
+          "expected_tool_key": "AgentQL::extract-web-data"
+        },
+        {
+          "server_intent": "In Aiven, perform an action in this application.",
+          "tool_intent": "list available items with optional pagination",
+          "expected_tool_key": "Aiven::list_projects"
+        },
+        {
+          "server_intent": "In Alibaba Cloud AnalyticDB for MySQL, perform an action in this application.",
+          "tool_intent": "get details for a specific item by identifier",
+          "expected_tool_key": "Alibaba Cloud AnalyticDB for MySQL::get_query_plan"
+        },
+        {
+          "server_intent": "In Apache IoTDB, perform an action in this application.",
+          "tool_intent": "list available items with optional pagination",
+          "expected_tool_key": "Apache IoTDB::list_tables"
+        },
+        {
+          "server_intent": "In Apify, perform an action in this application.",
+          "tool_intent": "get details for a specific item by identifier",
+          "expected_tool_key": "Apify::get-actor-details"
+        },
+        {
+          "server_intent": "In APIMatic MCP, perform an action in this application.",
+          "tool_intent": "run an operation and return the result",
+          "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic"
+        },
+        {
+          "server_intent": "In Arize Phoenix, perform an action in this application.",
+          "tool_intent": "run an operation and return the result",
+          "expected_tool_key": "Arize Phoenix::arize-phoenix-otel"
+        },
+        {
+          "server_intent": "In Astra DB, perform an action in this application.",
+          "tool_intent": "list available items with optional pagination",
+          "expected_tool_key": "Astra DB::ListRecords"
+        },
+        {
+          "server_intent": "In Audiense Insights, perform an action in this application.",
+          "tool_intent": "get details for a specific item by identifier",
+          "expected_tool_key": "Audiense Insights::get-reports"
+        },
+        {
+          "server_intent": "In AWS, perform an action in this application.",
+          "tool_intent": "search for relevant items using filters",
+          "expected_tool_key": "AWS::Search Documentation"
+        },
+        {
+          "server_intent": "In Axiom, perform an action in this application.",
+          "tool_intent": "list available items with optional pagination",
+          "expected_tool_key": "Axiom::listDatasets"
+        },
+        {
+          "server_intent": "In Azure, perform an action in this application.",
+          "tool_intent": "search for relevant items using filters",
+          "expected_tool_key": "Azure::Query search indexes"
+        },
+        {
+          "server_intent": "In Bankless Onchain, perform an action in this application.",
+          "tool_intent": "get details for a specific item by identifier",
+          "expected_tool_key": "Bankless Onchain::get_proxy"
+        },
+        {
+          "server_intent": "In Bitrise, perform an action in this application.",
+          "tool_intent": "list available items with optional pagination",
+          "expected_tool_key": "Bitrise::list_apps"
+        },
+        {
+          "server_intent": "In Box, perform an action in this application.",
+          "tool_intent": "search for relevant items using filters",
+          "expected_tool_key": "Box::box_search_tool"
+        },
+        {
+          "server_intent": "In Chroma, perform an action in this application.",
+          "tool_intent": "list available items with optional pagination",
+          "expected_tool_key": "Chroma::chroma_list_collections"
+        },
+        {
+          "server_intent": "In CircleCI, perform an action in this application.",
+          "tool_intent": "get details for a specific item by identifier",
+          "expected_tool_key": "CircleCI::get_job_test_results"
+        },
+        {
+          "server_intent": "In ClickHouse, perform an action in this application.",
+          "tool_intent": "list available items with optional pagination",
+          "expected_tool_key": "ClickHouse::list_tables"
+        },
+        {
+          "server_intent": "In Codacy, perform an action in this application.",
+          "tool_intent": "search for relevant items using filters",
+          "expected_tool_key": "Codacy::codacy_search_repository_srm_items"
+        },
+        {
+          "server_intent": "In CodeLogic, perform an action in this application.",
+          "tool_intent": "run an operation and return the result",
+          "expected_tool_key": "CodeLogic::codelogic-method-impact"
+        },
+        {
+          "server_intent": "In Comet Opik, perform an action in this application.",
+          "tool_intent": "run an operation and return the result",
+          "expected_tool_key": "Comet Opik::Traces"
+        },
+        {
+          "server_intent": "In Couchbase, perform an action in this application.",
+          "tool_intent": "get details for a specific item by identifier",
+          "expected_tool_key": "Couchbase::get_document_by_id"
+        },
+        {
+          "server_intent": "In Dart, perform an action in this application.",
+          "tool_intent": "list available items with optional pagination",
+          "expected_tool_key": "Dart::list_docs"
+        },
+        {
+          "server_intent": "In DevHub, perform an action in this application.",
+          "tool_intent": "get details for a specific item by identifier",
+          "expected_tool_key": "DevHub::get_locations"
+        },
+        {
+          "server_intent": "In Dynatrace, perform an action in this application.",
+          "tool_intent": "list available items with optional pagination",
+          "expected_tool_key": "Dynatrace::list_problems"
+        },
+        {
+          "server_intent": "In EduBase, perform an action in this application.",
+          "tool_intent": "get details for a specific item by identifier",
+          "expected_tool_key": "EduBase::edubase_get_user"
+        },
+        {
+          "server_intent": "In Elasticsearch, perform an action in this application.",
+          "tool_intent": "search for relevant items using filters",
+          "expected_tool_key": "Elasticsearch::search"
+        },
+        {
+          "server_intent": "In eSignatures, perform an action in this application.",
+          "tool_intent": "list available items with optional pagination",
+          "expected_tool_key": "eSignatures::list_templates"
+        },
+        {
+          "server_intent": "In Exa, perform an action in this application.",
+          "tool_intent": "search for relevant items using filters",
+          "expected_tool_key": "Exa::github_search"
+        },
+        {
+          "server_intent": "In Fewsats, perform an action in this application.",
+          "tool_intent": "run an operation and return the result",
+          "expected_tool_key": "Fewsats::balance"
+        },
+        {
+          "server_intent": "In Fibery, perform an action in this application.",
+          "tool_intent": "list available items with optional pagination",
+          "expected_tool_key": "Fibery::list_databases"
+        },
+        {
+          "server_intent": "In Financial Datasets, perform an action in this application.",
+          "tool_intent": "get details for a specific item by identifier",
+          "expected_tool_key": "Financial Datasets::get_company_news"
+        },
+        {
+          "server_intent": "In Firecrawl, perform an action in this application.",
+          "tool_intent": "search for relevant items using filters",
+          "expected_tool_key": "Firecrawl::firecrawl_search"
+        },
+        {
+          "server_intent": "In Gitee, perform an action in this application.",
+          "tool_intent": "search for relevant items using filters",
+          "expected_tool_key": "Gitee::search_users"
+        },
+        {
+          "server_intent": "In Gyazo, perform an action in this application.",
+          "tool_intent": "search for relevant items using filters",
+          "expected_tool_key": "Gyazo::gyazo_search"
+        },
+        {
+          "server_intent": "In gotoHuman, perform an action in this application.",
+          "tool_intent": "list available items with optional pagination",
+          "expected_tool_key": "gotoHuman::list-forms"
+        },
+        {
+          "server_intent": "In Grafana, perform an action in this application.",
+          "tool_intent": "search for relevant items using filters",
+          "expected_tool_key": "Grafana::search_dashboards"
+        },
+        {
+          "server_intent": "In Graphlit, perform an action in this application.",
+          "tool_intent": "search for relevant items using filters",
+          "expected_tool_key": "Graphlit::Web Search (including Podcast Search)"
+        },
+        {
+          "server_intent": "In GreptimeDB, perform an action in this application.",
+          "tool_intent": "list available items with optional pagination",
+          "expected_tool_key": "GreptimeDB::list_tools"
+        },
+        {
+          "server_intent": "In Heroku, perform an action in this application.",
+          "tool_intent": "list available items with optional pagination",
+          "expected_tool_key": "Heroku::ps_list"
+        },
+        {
+          "server_intent": "In Hologres, perform an action in this application.",
+          "tool_intent": "get details for a specific item by identifier",
+          "expected_tool_key": "Hologres::get_query_plan"
+        },
+        {
+          "server_intent": "In Hyperbrowser, perform an action in this application.",
+          "tool_intent": "search for relevant items using filters",
+          "expected_tool_key": "Hyperbrowser::search_with_bing"
+        },
+        {
+          "server_intent": "In ForeverVM, perform an action in this application.",
+          "tool_intent": "list available items with optional pagination",
+          "expected_tool_key": "ForeverVM::listMachines"
+        },
+        {
+          "server_intent": "In Inkeep, perform an action in this application.",
+          "tool_intent": "search for relevant items using filters",
+          "expected_tool_key": "Inkeep::search-product-content"
+        },
+        {
+          "server_intent": "In Kagi Search, perform an action in this application.",
+          "tool_intent": "search for relevant items using filters",
+          "expected_tool_key": "Kagi Search::search"
+        },
+        {
+          "server_intent": "In Keboola, perform an action in this application.",
+          "tool_intent": "get details for a specific item by identifier",
+          "expected_tool_key": "Keboola::get_job_detail"
+        },
+        {
+          "server_intent": "In Lara Translate, perform an action in this application.",
+          "tool_intent": "list available items with optional pagination",
+          "expected_tool_key": "Lara Translate::list_memories"
+        },
+        {
+          "server_intent": "In Logfire, perform an action in this application.",
+          "tool_intent": "get details for a specific item by identifier",
+          "expected_tool_key": "Logfire::get_logfire_records_schema"
+        },
+        {
+          "server_intent": "In Langfuse Prompt Management, perform an action in this application.",
+          "tool_intent": "get details for a specific item by identifier",
+          "expected_tool_key": "Langfuse Prompt Management::get-prompt"
+        },
+        {
+          "server_intent": "In Lingo.dev, perform an action in this application.",
+          "tool_intent": "list available items with optional pagination",
+          "expected_tool_key": "Lingo.dev::list-users"
+        }
+      ]
+    }
+  ]
+}

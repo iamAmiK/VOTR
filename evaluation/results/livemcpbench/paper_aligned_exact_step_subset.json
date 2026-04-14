@@ -1,0 +1,1506 @@
+[
+  {
+    "task_id": "dda8ea55-629c-4ae8-ab87-0c81477ae615",
+    "question": "I'm planning a trip to the Forbidden City in Beijing, show me where to park and what's interesting to do within 1km distance?",
+    "steps": [
+      {
+        "task_id": "dda8ea55-629c-4ae8-ab87-0c81477ae615",
+        "question": "I'm planning a trip to the Forbidden City in Beijing, show me where to park and what's interesting to do within 1km distance?",
+        "step_index": 1,
+        "step_query": "convert the address of Location into precise geographic coordinates.",
+        "gold_tool_name": "geocode_address",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      },
+      {
+        "task_id": "dda8ea55-629c-4ae8-ab87-0c81477ae615",
+        "question": "I'm planning a trip to the Forbidden City in Beijing, show me where to park and what's interesting to do within 1km distance?",
+        "step_index": 2,
+        "step_query": "find parking facilities within a 1-kilometer radius of Location, filtering for both surface and multi-storey parking options, and provide details such as capacity, fee structure, and access restrictions.",
+        "gold_tool_name": "find_parking_facilities",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      },
+      {
+        "task_id": "dda8ea55-629c-4ae8-ab87-0c81477ae615",
+        "question": "I'm planning a trip to the Forbidden City in Beijing, show me where to park and what's interesting to do within 1km distance?",
+        "step_index": 3,
+        "step_query": "discover nearby points of interest and amenities within the same radius, focusing on categories such as restaurants, shops, and tourist attractions.",
+        "gold_tool_name": "find_nearby_places",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      },
+      {
+        "task_id": "dda8ea55-629c-4ae8-ab87-0c81477ae615",
+        "question": "I'm planning a trip to the Forbidden City in Beijing, show me where to park and what's interesting to do within 1km distance?",
+        "step_index": 4,
+        "step_query": "convert the coordinates of each identified parking facility and point of interest back into human-readable addresses to facilitate easy navigation and planning.",
+        "gold_tool_name": "reverse_geocode",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "5a2720cd-20f1-49e7-a3fc-8e74af2217f6",
+    "question": "There are three of us. One person is in Haidian Huangzhuang, another is at Chaoyang Joy City, and the third is at Shijingshan Hospital. Could you please recommend a fair meeting point for us, and then suggest some places for entertainment nearby?",
+    "steps": [
+      {
+        "task_id": "5a2720cd-20f1-49e7-a3fc-8e74af2217f6",
+        "question": "There are three of us. One person is in Haidian Huangzhuang, another is at Chaoyang Joy City, and the third is at Shijingshan Hospital. Could you please recommend a fair meeting point for us, and then suggest some places for entertainment nearby?",
+        "step_index": 1,
+        "step_query": "Convert all address or place name to geographic coordinates",
+        "gold_tool_name": "geocode_address",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      },
+      {
+        "task_id": "5a2720cd-20f1-49e7-a3fc-8e74af2217f6",
+        "question": "There are three of us. One person is in Haidian Huangzhuang, another is at Chaoyang Joy City, and the third is at Shijingshan Hospital. Could you please recommend a fair meeting point for us, and then suggest some places for entertainment nearby?",
+        "step_index": 2,
+        "step_query": "Find the optimal meeting place for multiple people coming from different locations",
+        "gold_tool_name": "suggest_meeting_point",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      },
+      {
+        "task_id": "5a2720cd-20f1-49e7-a3fc-8e74af2217f6",
+        "question": "There are three of us. One person is in Haidian Huangzhuang, another is at Chaoyang Joy City, and the third is at Shijingshan Hospital. Could you please recommend a fair meeting point for us, and then suggest some places for entertainment nearby?",
+        "step_index": 3,
+        "step_query": "Discover place of entertainment near the optimal meeting place",
+        "gold_tool_name": "find_nearby_places",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      },
+      {
+        "task_id": "5a2720cd-20f1-49e7-a3fc-8e74af2217f6",
+        "question": "There are three of us. One person is in Haidian Huangzhuang, another is at Chaoyang Joy City, and the third is at Shijingshan Hospital. Could you please recommend a fair meeting point for us, and then suggest some places for entertainment nearby?",
+        "step_index": 4,
+        "step_query": "Convert geographic coordinates to a detailed address and location description",
+        "gold_tool_name": "reverse_geocode",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "afd60e13-2448-4c0f-9aae-2054b91f1ac1",
+    "question": "I'm driving an EV with a 300km range from Beijing to Chengdu. Can you map out a route with all the charging stations I'll need?",
+    "steps": [
+      {
+        "task_id": "afd60e13-2448-4c0f-9aae-2054b91f1ac1",
+        "question": "I'm driving an EV with a 300km range from Beijing to Chengdu. Can you map out a route with all the charging stations I'll need?",
+        "step_index": 1,
+        "step_query": "Convert all place names to geographic coordinates",
+        "gold_tool_name": "geocode_address",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      },
+      {
+        "task_id": "afd60e13-2448-4c0f-9aae-2054b91f1ac1",
+        "question": "I'm driving an EV with a 300km range from Beijing to Chengdu. Can you map out a route with all the charging stations I'll need?",
+        "step_index": 2,
+        "step_query": "Calculate detailed route directions between two geographic points",
+        "gold_tool_name": "get_route_directions",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      },
+      {
+        "task_id": "afd60e13-2448-4c0f-9aae-2054b91f1ac1",
+        "question": "I'm driving an EV with a 300km range from Beijing to Chengdu. Can you map out a route with all the charging stations I'll need?",
+        "step_index": 3,
+        "step_query": "Find electric vehicle charging stations acctording to EV range",
+        "gold_tool_name": "find_ev_charging_stations",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      },
+      {
+        "task_id": "afd60e13-2448-4c0f-9aae-2054b91f1ac1",
+        "question": "I'm driving an EV with a 300km range from Beijing to Chengdu. Can you map out a route with all the charging stations I'll need?",
+        "step_index": 4,
+        "step_query": "Convert geographic coordinates to a detailed address and location description",
+        "gold_tool_name": "reverse_geocode",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "be3f2275-15a4-4e05-b3cb-b0eeb9109d3a",
+    "question": "Help me check the high-speed train tickets from Beijing to Shanghai on next Wednesday.",
+    "steps": [
+      {
+        "task_id": "be3f2275-15a4-4e05-b3cb-b0eeb9109d3a",
+        "question": "Help me check the high-speed train tickets from Beijing to Shanghai on next Wednesday.",
+        "step_index": 1,
+        "step_query": "Get current time and calculate next Wednesday's date",
+        "gold_tool_name": "get_current_time",
+        "gold_server_name": "time",
+        "gold_server": {
+          "server_name": "time",
+          "display_name": "Time MCP Server",
+          "description": "A Model Context Protocol server that provides time and timezone conversion capabilities. This server enables LLMs to get current time information and perform timezone conversions using IANA timezone names, with automatic system timezone detection.",
+          "category": "Discovery",
+          "organization": "modelcontextprotocol",
+          "web": "https://github.com/modelcontextprotocol/servers/tree/main/src/time"
+        }
+      },
+      {
+        "task_id": "be3f2275-15a4-4e05-b3cb-b0eeb9109d3a",
+        "question": "Help me check the high-speed train tickets from Beijing to Shanghai on next Wednesday.",
+        "step_index": 2,
+        "step_query": "Query the station_code of a city by its Chinese name",
+        "gold_tool_name": "get-station-code-of-citys",
+        "gold_server_name": "12306-mcp",
+        "gold_server": {
+          "server_name": "12306-mcp",
+          "display_name": "12306-mcp",
+          "description": "A 12306 ticket search server based on the Model Context Protocol (MCP). The server provides a simple API interface that allows users to search for 12306 tickets.",
+          "category": "Discovery",
+          "organization": "Joooook",
+          "web": "https://github.com/Joooook/12306-mcp"
+        }
+      },
+      {
+        "task_id": "be3f2275-15a4-4e05-b3cb-b0eeb9109d3a",
+        "question": "Help me check the high-speed train tickets from Beijing to Shanghai on next Wednesday.",
+        "step_index": 3,
+        "step_query": "Check 12306 remaining ticket information.",
+        "gold_tool_name": "get-tickets",
+        "gold_server_name": "12306-mcp",
+        "gold_server": {
+          "server_name": "12306-mcp",
+          "display_name": "12306-mcp",
+          "description": "A 12306 ticket search server based on the Model Context Protocol (MCP). The server provides a simple API interface that allows users to search for 12306 tickets.",
+          "category": "Discovery",
+          "organization": "Joooook",
+          "web": "https://github.com/Joooook/12306-mcp"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "0b21b741-440b-460e-8bad-fa70f99dd01c",
+    "question": "What are the \u516b\u5b57 of a boy born on August 8, 2008 at 11:00 am?",
+    "steps": [
+      {
+        "task_id": "0b21b741-440b-460e-8bad-fa70f99dd01c",
+        "question": "What are the \u516b\u5b57 of a boy born on August 8, 2008 at 11:00 am?",
+        "step_index": 1,
+        "step_query": "Get information about \u516b\u5b57 based on time and gender.",
+        "gold_tool_name": "getBaziDetail",
+        "gold_server_name": "Bazi",
+        "gold_server": {
+          "server_name": "Bazi",
+          "display_name": "Bazi MCP (\u516b\u5b57 MCP) by Cantian AI",
+          "description": "Unlock precise Bazi insights with the Bazi MCP, the first AI-powered Bazi calculator. Built to address inaccuracies in existing AI fortune-telling tools like GPT and DeepSeek, our MCP delivers reliable Bazi data for personality analysis, destiny forecasting, and more.",
+          "category": "Entertainment",
+          "organization": "cantian-ai",
+          "web": "https://github.com/cantian-ai/bazi-mcp"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "4de2e9f7-f3ea-4d02-8532-0a1b0b530609",
+    "question": "Read the sales data under /root/excel/Local_Electronic_Sales.xlsx, plot it as a bar chart by month and save it in /root/figs/sale.png",
+    "steps": [
+      {
+        "task_id": "4de2e9f7-f3ea-4d02-8532-0a1b0b530609",
+        "question": "Read the sales data under /root/excel/Local_Electronic_Sales.xlsx, plot it as a bar chart by month and save it in /root/figs/sale.png",
+        "step_index": 1,
+        "step_query": "read the excel file to get the data",
+        "gold_tool_name": "excel_read_sheet",
+        "gold_server_name": "excel",
+        "gold_server": {
+          "server_name": "excel",
+          "display_name": "Excel MCP Server",
+          "description": "A Model Context Protocol (MCP) server that reads and writes MS Excel data.",
+          "category": "File Access",
+          "organization": "negokaz",
+          "web": "https://github.com/negokaz/excel-mcp-server"
+        }
+      },
+      {
+        "task_id": "4de2e9f7-f3ea-4d02-8532-0a1b0b530609",
+        "question": "Read the sales data under /root/excel/Local_Electronic_Sales.xlsx, plot it as a bar chart by month and save it in /root/figs/sale.png",
+        "step_index": 2,
+        "step_query": "draw the bar chart",
+        "gold_tool_name": "generate_bar_chart",
+        "gold_server_name": "mcp-server-chart",
+        "gold_server": {
+          "server_name": "mcp-server-chart",
+          "display_name": "MCP Server Chart",
+          "description": "A Model Context Protocol server for generating charts using AntV.",
+          "category": "Visualization",
+          "organization": "antvis",
+          "web": "https://github.com/antvis/mcp-server-chart"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "08644b1a-ac5e-45a9-8ad1-3a3942e8d366",
+    "question": "Help me recommend any cheap goodies worth buying recently? Save this information to /root/excel/goods.xlsx.",
+    "steps": [
+      {
+        "task_id": "08644b1a-ac5e-45a9-8ad1-3a3942e8d366",
+        "question": "Help me recommend any cheap goodies worth buying recently? Save this information to /root/excel/goods.xlsx.",
+        "step_index": 1,
+        "step_query": "get the information for cheap goodies",
+        "gold_tool_name": "get-smzdm-rank",
+        "gold_server_name": "trends-hub",
+        "gold_server": {
+          "server_name": "trends-hub",
+          "display_name": "Trends Hub",
+          "description": "\u57fa\u4e8e Model Context Protocol (MCP) \u534f\u8bae\u7684\u5168\u7f51\u70ed\u70b9\u8d8b\u52bf\u4e00\u7ad9\u5f0f\u805a\u5408\u670d\u52a1",
+          "category": "Discovery",
+          "organization": "baranwang",
+          "web": "https://github.com/baranwang/mcp-trends-hub"
+        }
+      },
+      {
+        "task_id": "08644b1a-ac5e-45a9-8ad1-3a3942e8d366",
+        "question": "Help me recommend any cheap goodies worth buying recently? Save this information to /root/excel/goods.xlsx.",
+        "step_index": 2,
+        "step_query": "write these information to excel in /root/excel/goods.xlsx",
+        "gold_tool_name": "excel_write_to_sheet",
+        "gold_server_name": "excel",
+        "gold_server": {
+          "server_name": "excel",
+          "display_name": "Excel MCP Server",
+          "description": "A Model Context Protocol (MCP) server that reads and writes MS Excel data.",
+          "category": "File Access",
+          "organization": "negokaz",
+          "web": "https://github.com/negokaz/excel-mcp-server"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "860f7b99-23fe-41fe-9608-59717bad2a9a",
+    "question": "Get deepwiki for vercel/ai and convert its structure to mindmap",
+    "steps": [
+      {
+        "task_id": "860f7b99-23fe-41fe-9608-59717bad2a9a",
+        "question": "Get deepwiki for vercel/ai and convert its structure to mindmap",
+        "step_index": 1,
+        "step_query": "get the deepwiki of vercel/ai",
+        "gold_tool_name": "deepwiki_fetch",
+        "gold_server_name": "mcp-deepwiki",
+        "gold_server": {
+          "server_name": "mcp-deepwiki",
+          "display_name": "Deepwiki MCP Server",
+          "description": "This is an unofficial Deepwiki MCP Server\nIt takes a Deepwiki URL via MCP, crawls all relevant pages, converts them to Markdown, and returns either one document or a list by page.",
+          "category": "Discovery",
+          "organization": "regenrek",
+          "web": "https://github.com/regenrek/deepwiki-mcp"
+        }
+      },
+      {
+        "task_id": "860f7b99-23fe-41fe-9608-59717bad2a9a",
+        "question": "Get deepwiki for vercel/ai and convert its structure to mindmap",
+        "step_index": 2,
+        "step_query": "create the mindmap of the deepwiki",
+        "gold_tool_name": "convert_markdown_to_mindmap",
+        "gold_server_name": "mindmap",
+        "gold_server": {
+          "server_name": "mindmap",
+          "display_name": "Mindmap MCP Server",
+          "description": "A Model Context Protocol (MCP) server for converting Markdown content to interactive mindmaps.",
+          "category": "Visualization",
+          "organization": "YuChenSSR",
+          "web": "https://github.com/YuChenSSR/mindmap-mcp-server"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "cda14e48-b067-48fc-94de-bb8ec090b952",
+    "question": "draw cowboy using canvas ",
+    "steps": [
+      {
+        "task_id": "cda14e48-b067-48fc-94de-bb8ec090b952",
+        "question": "draw cowboy using canvas ",
+        "step_index": 1,
+        "step_query": "create the canvas",
+        "gold_tool_name": "drawing_generateCanvas",
+        "gold_server_name": "painter",
+        "gold_server": {
+          "server_name": "painter",
+          "display_name": "Drawing MCP Server",
+          "description": "A Model Context Protocol (MCP) server that provides drawing capabilities for AI assistants.",
+          "category": "Visualization",
+          "organization": "",
+          "web": "https://github.com/flrngel/mcp-painter"
+        }
+      },
+      {
+        "task_id": "cda14e48-b067-48fc-94de-bb8ec090b952",
+        "question": "draw cowboy using canvas ",
+        "step_index": 2,
+        "step_query": "drawing",
+        "gold_tool_name": "drawing_fillRectangle",
+        "gold_server_name": "painter",
+        "gold_server": {
+          "server_name": "painter",
+          "display_name": "Drawing MCP Server",
+          "description": "A Model Context Protocol (MCP) server that provides drawing capabilities for AI assistants.",
+          "category": "Visualization",
+          "organization": "",
+          "web": "https://github.com/flrngel/mcp-painter"
+        }
+      },
+      {
+        "task_id": "cda14e48-b067-48fc-94de-bb8ec090b952",
+        "question": "draw cowboy using canvas ",
+        "step_index": 3,
+        "step_query": "get picture",
+        "gold_tool_name": "drawing_getCanvasPng",
+        "gold_server_name": "painter",
+        "gold_server": {
+          "server_name": "painter",
+          "display_name": "Drawing MCP Server",
+          "description": "A Model Context Protocol (MCP) server that provides drawing capabilities for AI assistants.",
+          "category": "Visualization",
+          "organization": "",
+          "web": "https://github.com/flrngel/mcp-painter"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "d116bda4-e70c-4ef1-ab1a-b68b4855e1bf",
+    "question": "Read the data under /root/excel/people_data.xlsx and tell me Sophia Moore's bmi.",
+    "steps": [
+      {
+        "task_id": "d116bda4-e70c-4ef1-ab1a-b68b4855e1bf",
+        "question": "Read the data under /root/excel/people_data.xlsx and tell me Sophia Moore's bmi.",
+        "step_index": 1,
+        "step_query": "read the excel",
+        "gold_tool_name": "excel_read_sheet",
+        "gold_server_name": "excel",
+        "gold_server": {
+          "server_name": "excel",
+          "display_name": "Excel MCP Server",
+          "description": "A Model Context Protocol (MCP) server that reads and writes MS Excel data.",
+          "category": "File Access",
+          "organization": "negokaz",
+          "web": "https://github.com/negokaz/excel-mcp-server"
+        }
+      },
+      {
+        "task_id": "d116bda4-e70c-4ef1-ab1a-b68b4855e1bf",
+        "question": "Read the data under /root/excel/people_data.xlsx and tell me Sophia Moore's bmi.",
+        "step_index": 2,
+        "step_query": "caculate the bmi",
+        "gold_tool_name": "calculate",
+        "gold_server_name": "calculator",
+        "gold_server": {
+          "server_name": "calculator",
+          "display_name": "Calculator MCP Server",
+          "description": "A Model Context Protocol server for calculating. This server enables LLMs to use calculator for precise numerical calculations.",
+          "category": "Miscellaneous",
+          "organization": "",
+          "web": "https://github.com/githejie/mcp-server-calculator"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "e8f13600-c0c8-427e-98d3-0762ad510805",
+    "question": "There are three people eating in the house this week, I'm allergic to shrimp and my son doesn't eat scallions, so please help me recommend a meal plan and a rough shopping list for next week.",
+    "steps": [
+      {
+        "task_id": "e8f13600-c0c8-427e-98d3-0762ad510805",
+        "question": "There are three people eating in the house this week, I'm allergic to shrimp and my son doesn't eat scallions, so please help me recommend a meal plan and a rough shopping list for next week.",
+        "step_index": 1,
+        "step_query": "recommend recipes based on the user's contraindications, allergens, and number of people, create a meal plan for the week and a rough shopping list",
+        "gold_tool_name": "mcp_howtocook_recommendMeals",
+        "gold_server_name": "howtocook-mcp",
+        "gold_server": {
+          "server_name": "howtocook-mcp",
+          "display_name": "HowToCook-MCP Server",
+          "description": "An MCP (Model Context Protocol) server based on Anduin2017/HowToCook, allowing AI assistants to recommend recipes, plan meals, and solve the age-old question of \"what should I eat today?\"",
+          "category": "Discovery",
+          "organization": "worryzyy",
+          "web": "https://github.com/worryzyy/HowToCook-mcp"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "5b2087e4-4c07-4e0d-9b2f-79514ce465f5",
+    "question": "I play mid lane in League of Legends and want to improve. Provide champion recommendations with optimal item builds, runes, and summoner spells.",
+    "steps": [
+      {
+        "task_id": "5b2087e4-4c07-4e0d-9b2f-79514ce465f5",
+        "question": "I play mid lane in League of Legends and want to improve. Provide champion recommendations with optimal item builds, runes, and summoner spells.",
+        "step_index": 1,
+        "step_query": "get the the analytics of champions by positions and chose some",
+        "gold_tool_name": "lol-champion-positions-data",
+        "gold_server_name": "opgg-mcp",
+        "gold_server": {
+          "server_name": "opgg-mcp",
+          "display_name": "OP.GG MCP Server",
+          "description": "This MCP server provides AI agents with access to OP.GG data through a standardized interface. It offers a simple way to connect to our remote server (https://mcp-api.op.gg/mcp), allowing for easy installation and immediate access to OP.GG data in a format that's easily consumable by AI models and agent frameworks.",
+          "category": "Entertainment",
+          "organization": "",
+          "web": "https://github.com/opgginc/opgg-mcp"
+        }
+      },
+      {
+        "task_id": "5b2087e4-4c07-4e0d-9b2f-79514ce465f5",
+        "question": "I play mid lane in League of Legends and want to improve. Provide champion recommendations with optimal item builds, runes, and summoner spells.",
+        "step_index": 2,
+        "step_query": "retrieves very detailed information about specific champions",
+        "gold_tool_name": "lol-champion-analysis",
+        "gold_server_name": "opgg-mcp",
+        "gold_server": {
+          "server_name": "opgg-mcp",
+          "display_name": "OP.GG MCP Server",
+          "description": "This MCP server provides AI agents with access to OP.GG data through a standardized interface. It offers a simple way to connect to our remote server (https://mcp-api.op.gg/mcp), allowing for easy installation and immediate access to OP.GG data in a format that's easily consumable by AI models and agent frameworks.",
+          "category": "Entertainment",
+          "organization": "",
+          "web": "https://github.com/opgginc/opgg-mcp"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "b276e772-28b5-42fd-bb85-fd73e017fe25",
+    "question": "I have 9.5g gold, please estimate its value based on the current price of gold",
+    "steps": [
+      {
+        "task_id": "b276e772-28b5-42fd-bb85-fd73e017fe25",
+        "question": "I have 9.5g gold, please estimate its value based on the current price of gold",
+        "step_index": 1,
+        "step_query": "get the current gold price",
+        "gold_tool_name": "get_asset_price",
+        "gold_server_name": "Asset_Price_MCP",
+        "gold_server": {
+          "server_name": "Asset_Price_MCP",
+          "display_name": "Asset Price MCP Server (asset-price-mcp)",
+          "description": "A Model Context Protocol server for retrieving and displaying current asset price information. This server provides tools to fetch real-time price information for various asset (including precious metals and cryptocurrencies), making it easy for large language models to access and display this data.",
+          "category": "Finance",
+          "organization": "mk965",
+          "web": "https://github.com/mk965/asset-price-mcp"
+        }
+      },
+      {
+        "task_id": "b276e772-28b5-42fd-bb85-fd73e017fe25",
+        "question": "I have 9.5g gold, please estimate its value based on the current price of gold",
+        "step_index": 2,
+        "step_query": "calculate the price",
+        "gold_tool_name": "calculate",
+        "gold_server_name": "calculator",
+        "gold_server": {
+          "server_name": "calculator",
+          "display_name": "Calculator MCP Server",
+          "description": "A Model Context Protocol server for calculating. This server enables LLMs to use calculator for precise numerical calculations.",
+          "category": "Miscellaneous",
+          "organization": "",
+          "web": "https://github.com/githejie/mcp-server-calculator"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "fab605cf-d337-4ac1-beba-b3f563eaffff",
+    "question": "What is the current effect text of 'Sky Striker Ace = Zero', and what are its ATK and DEF? Show me the picture.",
+    "steps": [
+      {
+        "task_id": "fab605cf-d337-4ac1-beba-b3f563eaffff",
+        "question": "What is the current effect text of 'Sky Striker Ace = Zero', and what are its ATK and DEF? Show me the picture.",
+        "step_index": 1,
+        "step_query": "get the latest card information",
+        "gold_tool_name": "search_cards",
+        "gold_server_name": "ygocdb",
+        "gold_server": {
+          "server_name": "ygocdb",
+          "display_name": "Baige (ygocdb.com) MCP Server",
+          "description": "A server based on Model Context Protocol (MCP) for interacting with the Baige (ygocdb.com) API. Provides a set of tools for querying Yu-Gi-Oh! card information in Chinese.",
+          "category": "Discovery",
+          "organization": "lieyanqzu",
+          "web": "https://github.com/lieyanqzu/ygocdb-mcp"
+        }
+      },
+      {
+        "task_id": "fab605cf-d337-4ac1-beba-b3f563eaffff",
+        "question": "What is the current effect text of 'Sky Striker Ace = Zero', and what are its ATK and DEF? Show me the picture.",
+        "step_index": 2,
+        "step_query": "get the picture of the card",
+        "gold_tool_name": "get_card_image",
+        "gold_server_name": "ygocdb",
+        "gold_server": {
+          "server_name": "ygocdb",
+          "display_name": "Baige (ygocdb.com) MCP Server",
+          "description": "A server based on Model Context Protocol (MCP) for interacting with the Baige (ygocdb.com) API. Provides a set of tools for querying Yu-Gi-Oh! card information in Chinese.",
+          "category": "Discovery",
+          "organization": "lieyanqzu",
+          "web": "https://github.com/lieyanqzu/ygocdb-mcp"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "9a18862e-22ce-46e7-b46a-72c6f5c79b23",
+    "question": "Get line 10 of /root/txt/Android.txt, please note that this file is very large",
+    "steps": [
+      {
+        "task_id": "9a18862e-22ce-46e7-b46a-72c6f5c79b23",
+        "question": "Get line 10 of /root/txt/Android.txt, please note that this file is very large",
+        "step_index": 1,
+        "step_query": "locate the 10th line in the file",
+        "gold_tool_name": "get_text_file_contents",
+        "gold_server_name": "text-editor",
+        "gold_server": {
+          "server_name": "text-editor",
+          "display_name": "MCP Text Editor Server",
+          "description": "A Model Context Protocol (MCP) server that provides line-oriented text file editing capabilities through a standardized API. Optimized for LLM tools with efficient partial file access to minimize token usage.",
+          "category": "File Access",
+          "organization": "",
+          "web": "https://github.com/tumf/mcp-text-editor"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "fbe982c3-4142-40ec-8541-e06d7ab2e399",
+    "question": "I need a Word document summarizing NIO. Please title it 'NIO Company Overview' and include three headed sections: a brief introduction from Wikipedia, three major news updates from the last quarter as bullet points, and a list of their main vehicle models. Finally, save it in /root/word/nio.docx",
+    "steps": [
+      {
+        "task_id": "fbe982c3-4142-40ec-8541-e06d7ab2e399",
+        "question": "I need a Word document summarizing NIO. Please title it 'NIO Company Overview' and include three headed sections: a brief introduction from Wikipedia, three major news updates from the last quarter as bullet points, and a list of their main vehicle models. Finally, save it in /root/word/nio.docx",
+        "step_index": 1,
+        "step_query": "get the wikipedia about NIO",
+        "gold_tool_name": "search_wikipedia",
+        "gold_server_name": "wikipedia",
+        "gold_server": {
+          "server_name": "wikipedia",
+          "display_name": "Wikipedia MCP Server",
+          "description": "A Model Context Protocol (MCP) server that retrieves information from Wikipedia to provide context to Large Language Models (LLMs). This tool helps AI assistants access factual information from Wikipedia to ground their responses in reliable sources.",
+          "category": "Discovery",
+          "organization": "cablate",
+          "web": "https://github.com/Rudra-ravi/wikipedia-mcp"
+        }
+      },
+      {
+        "task_id": "fbe982c3-4142-40ec-8541-e06d7ab2e399",
+        "question": "I need a Word document summarizing NIO. Please title it 'NIO Company Overview' and include three headed sections: a brief introduction from Wikipedia, three major news updates from the last quarter as bullet points, and a list of their main vehicle models. Finally, save it in /root/word/nio.docx",
+        "step_index": 2,
+        "step_query": "get news about NIO",
+        "gold_tool_name": "get-36kr-trending",
+        "gold_server_name": "trends-hub",
+        "gold_server": {
+          "server_name": "trends-hub",
+          "display_name": "Trends Hub",
+          "description": "\u57fa\u4e8e Model Context Protocol (MCP) \u534f\u8bae\u7684\u5168\u7f51\u70ed\u70b9\u8d8b\u52bf\u4e00\u7ad9\u5f0f\u805a\u5408\u670d\u52a1",
+          "category": "Discovery",
+          "organization": "baranwang",
+          "web": "https://github.com/baranwang/mcp-trends-hub"
+        }
+      },
+      {
+        "task_id": "fbe982c3-4142-40ec-8541-e06d7ab2e399",
+        "question": "I need a Word document summarizing NIO. Please title it 'NIO Company Overview' and include three headed sections: a brief introduction from Wikipedia, three major news updates from the last quarter as bullet points, and a list of their main vehicle models. Finally, save it in /root/word/nio.docx",
+        "step_index": 3,
+        "step_query": "create a word document",
+        "gold_tool_name": "create_document",
+        "gold_server_name": "word-document-server",
+        "gold_server": {
+          "server_name": "word-document-server",
+          "display_name": "Office-Word-MCP-Server",
+          "description": "A Model Context Protocol (MCP) server for creating, reading, and manipulating Microsoft Word documents. This server enables AI assistants to work with Word documents through a standardized interface, providing rich document editing capabilities.",
+          "category": "File Access",
+          "organization": "GongRzhe",
+          "web": "https://github.com/gongrzhe/office-word-mcp-server"
+        }
+      },
+      {
+        "task_id": "fbe982c3-4142-40ec-8541-e06d7ab2e399",
+        "question": "I need a Word document summarizing NIO. Please title it 'NIO Company Overview' and include three headed sections: a brief introduction from Wikipedia, three major news updates from the last quarter as bullet points, and a list of their main vehicle models. Finally, save it in /root/word/nio.docx",
+        "step_index": 4,
+        "step_query": "write the content to the word document",
+        "gold_tool_name": "add_paragraph",
+        "gold_server_name": "word-document-server",
+        "gold_server": {
+          "server_name": "word-document-server",
+          "display_name": "Office-Word-MCP-Server",
+          "description": "A Model Context Protocol (MCP) server for creating, reading, and manipulating Microsoft Word documents. This server enables AI assistants to work with Word documents through a standardized interface, providing rich document editing capabilities.",
+          "category": "File Access",
+          "organization": "GongRzhe",
+          "web": "https://github.com/gongrzhe/office-word-mcp-server"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "470f7ac1-f573-4fec-8990-97f578749f78",
+    "question": "How are Samsung Electronics and SK Hynix doing today? I need their current stock prices, the daily percentage change for each, and can you also calculate their current market capitalization?",
+    "steps": [
+      {
+        "task_id": "470f7ac1-f573-4fec-8990-97f578749f78",
+        "question": "How are Samsung Electronics and SK Hynix doing today? I need their current stock prices, the daily percentage change for each, and can you also calculate their current market capitalization?",
+        "step_index": 1,
+        "step_query": "get current time",
+        "gold_tool_name": "get_current_time",
+        "gold_server_name": "time",
+        "gold_server": {
+          "server_name": "time",
+          "display_name": "Time MCP Server",
+          "description": "A Model Context Protocol server that provides time and timezone conversion capabilities. This server enables LLMs to get current time information and perform timezone conversions using IANA timezone names, with automatic system timezone detection.",
+          "category": "Discovery",
+          "organization": "modelcontextprotocol",
+          "web": "https://github.com/modelcontextprotocol/servers/tree/main/src/time"
+        }
+      },
+      {
+        "task_id": "470f7ac1-f573-4fec-8990-97f578749f78",
+        "question": "How are Samsung Electronics and SK Hynix doing today? I need their current stock prices, the daily percentage change for each, and can you also calculate their current market capitalization?",
+        "step_index": 2,
+        "step_query": "get current stock prices for both",
+        "gold_tool_name": "get_stock_ohlcv",
+        "gold_server_name": "kospi-kosdaq",
+        "gold_server": {
+          "server_name": "kospi-kosdaq",
+          "display_name": "kospi-kosdaq-stock-server",
+          "description": "An MCP server that provides KOSPI/KOSDAQ stock data using FastMCP.",
+          "category": "Finance",
+          "organization": "dragon1086",
+          "web": "https://github.com/dragon1086/kospi-kosdaq-stock-server"
+        }
+      },
+      {
+        "task_id": "470f7ac1-f573-4fec-8990-97f578749f78",
+        "question": "How are Samsung Electronics and SK Hynix doing today? I need their current stock prices, the daily percentage change for each, and can you also calculate their current market capitalization?",
+        "step_index": 3,
+        "step_query": "calculate the daily percentage change",
+        "gold_tool_name": "get_stock_market_cap",
+        "gold_server_name": "kospi-kosdaq",
+        "gold_server": {
+          "server_name": "kospi-kosdaq",
+          "display_name": "kospi-kosdaq-stock-server",
+          "description": "An MCP server that provides KOSPI/KOSDAQ stock data using FastMCP.",
+          "category": "Finance",
+          "organization": "dragon1086",
+          "web": "https://github.com/dragon1086/kospi-kosdaq-stock-server"
+        }
+      },
+      {
+        "task_id": "470f7ac1-f573-4fec-8990-97f578749f78",
+        "question": "How are Samsung Electronics and SK Hynix doing today? I need their current stock prices, the daily percentage change for each, and can you also calculate their current market capitalization?",
+        "step_index": 4,
+        "step_query": "get market capitalization",
+        "gold_tool_name": "calculate",
+        "gold_server_name": "calculator",
+        "gold_server": {
+          "server_name": "calculator",
+          "display_name": "Calculator MCP Server",
+          "description": "A Model Context Protocol server for calculating. This server enables LLMs to use calculator for precise numerical calculations.",
+          "category": "Miscellaneous",
+          "organization": "",
+          "web": "https://github.com/githejie/mcp-server-calculator"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "17a4aef0-bb60-47b1-9b47-3686bca29db3",
+    "question": "Generate a well-formatted PDF report  in /root/pdf/douban_report.pdf, summarizing current douban trends.",
+    "steps": [
+      {
+        "task_id": "17a4aef0-bb60-47b1-9b47-3686bca29db3",
+        "question": "Generate a well-formatted PDF report  in /root/pdf/douban_report.pdf, summarizing current douban trends.",
+        "step_index": 1,
+        "step_query": "Getting the current trends in douban",
+        "gold_tool_name": "get-douban-rank",
+        "gold_server_name": "trends-hub",
+        "gold_server": {
+          "server_name": "trends-hub",
+          "display_name": "Trends Hub",
+          "description": "\u57fa\u4e8e Model Context Protocol (MCP) \u534f\u8bae\u7684\u5168\u7f51\u70ed\u70b9\u8d8b\u52bf\u4e00\u7ad9\u5f0f\u805a\u5408\u670d\u52a1",
+          "category": "Discovery",
+          "organization": "baranwang",
+          "web": "https://github.com/baranwang/mcp-trends-hub"
+        }
+      },
+      {
+        "task_id": "17a4aef0-bb60-47b1-9b47-3686bca29db3",
+        "question": "Generate a well-formatted PDF report  in /root/pdf/douban_report.pdf, summarizing current douban trends.",
+        "step_index": 2,
+        "step_query": "Create a word document.",
+        "gold_tool_name": "create_document",
+        "gold_server_name": "word-document-server",
+        "gold_server": {
+          "server_name": "word-document-server",
+          "display_name": "Office-Word-MCP-Server",
+          "description": "A Model Context Protocol (MCP) server for creating, reading, and manipulating Microsoft Word documents. This server enables AI assistants to work with Word documents through a standardized interface, providing rich document editing capabilities.",
+          "category": "File Access",
+          "organization": "GongRzhe",
+          "web": "https://github.com/gongrzhe/office-word-mcp-server"
+        }
+      },
+      {
+        "task_id": "17a4aef0-bb60-47b1-9b47-3686bca29db3",
+        "question": "Generate a well-formatted PDF report  in /root/pdf/douban_report.pdf, summarizing current douban trends.",
+        "step_index": 3,
+        "step_query": "Write the word document.",
+        "gold_tool_name": "add_paragraph",
+        "gold_server_name": "word-document-server",
+        "gold_server": {
+          "server_name": "word-document-server",
+          "display_name": "Office-Word-MCP-Server",
+          "description": "A Model Context Protocol (MCP) server for creating, reading, and manipulating Microsoft Word documents. This server enables AI assistants to work with Word documents through a standardized interface, providing rich document editing capabilities.",
+          "category": "File Access",
+          "organization": "GongRzhe",
+          "web": "https://github.com/gongrzhe/office-word-mcp-server"
+        }
+      },
+      {
+        "task_id": "17a4aef0-bb60-47b1-9b47-3686bca29db3",
+        "question": "Generate a well-formatted PDF report  in /root/pdf/douban_report.pdf, summarizing current douban trends.",
+        "step_index": 4,
+        "step_query": "Convert word document to pdf.",
+        "gold_tool_name": "convert_to_pdf",
+        "gold_server_name": "word-document-server",
+        "gold_server": {
+          "server_name": "word-document-server",
+          "display_name": "Office-Word-MCP-Server",
+          "description": "A Model Context Protocol (MCP) server for creating, reading, and manipulating Microsoft Word documents. This server enables AI assistants to work with Word documents through a standardized interface, providing rich document editing capabilities.",
+          "category": "File Access",
+          "organization": "GongRzhe",
+          "web": "https://github.com/gongrzhe/office-word-mcp-server"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "6265fd4a-a790-4be1-9806-d27b69bc6468",
+    "question": "Help me recommend some consumer electronics that are worth buying these days.",
+    "steps": [
+      {
+        "task_id": "6265fd4a-a790-4be1-9806-d27b69bc6468",
+        "question": "Help me recommend some consumer electronics that are worth buying these days.",
+        "step_index": 1,
+        "step_query": "collect the treendings in consumer electronics",
+        "gold_tool_name": "get-ifanr-news",
+        "gold_server_name": "trends-hub",
+        "gold_server": {
+          "server_name": "trends-hub",
+          "display_name": "Trends Hub",
+          "description": "\u57fa\u4e8e Model Context Protocol (MCP) \u534f\u8bae\u7684\u5168\u7f51\u70ed\u70b9\u8d8b\u52bf\u4e00\u7ad9\u5f0f\u805a\u5408\u670d\u52a1",
+          "category": "Discovery",
+          "organization": "baranwang",
+          "web": "https://github.com/baranwang/mcp-trends-hub"
+        }
+      },
+      {
+        "task_id": "6265fd4a-a790-4be1-9806-d27b69bc6468",
+        "question": "Help me recommend some consumer electronics that are worth buying these days.",
+        "step_index": 2,
+        "step_query": "write a report",
+        "gold_tool_name": "get-smzdm-rank",
+        "gold_server_name": "trends-hub",
+        "gold_server": {
+          "server_name": "trends-hub",
+          "display_name": "Trends Hub",
+          "description": "\u57fa\u4e8e Model Context Protocol (MCP) \u534f\u8bae\u7684\u5168\u7f51\u70ed\u70b9\u8d8b\u52bf\u4e00\u7ad9\u5f0f\u805a\u5408\u670d\u52a1",
+          "category": "Discovery",
+          "organization": "baranwang",
+          "web": "https://github.com/baranwang/mcp-trends-hub"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "04282571-1610-4436-9888-4cffecc6d92e",
+    "question": "Plan a bike route from UCAS Zhongguancun Campus to UCAS Yanqihu Campus, including an estimated travel time.",
+    "steps": [
+      {
+        "task_id": "04282571-1610-4436-9888-4cffecc6d92e",
+        "question": "Plan a bike route from UCAS Zhongguancun Campus to UCAS Yanqihu Campus, including an estimated travel time.",
+        "step_index": 1,
+        "step_query": "Convert  places to geographic coordinates",
+        "gold_tool_name": "geocode_address",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      },
+      {
+        "task_id": "04282571-1610-4436-9888-4cffecc6d92e",
+        "question": "Plan a bike route from UCAS Zhongguancun Campus to UCAS Yanqihu Campus, including an estimated travel time.",
+        "step_index": 2,
+        "step_query": "Calculate detailed route directions between two geographic points.",
+        "gold_tool_name": "get_route_directions",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      },
+      {
+        "task_id": "04282571-1610-4436-9888-4cffecc6d92e",
+        "question": "Plan a bike route from UCAS Zhongguancun Campus to UCAS Yanqihu Campus, including an estimated travel time.",
+        "step_index": 3,
+        "step_query": "Generate a report",
+        "gold_tool_name": "reverse_geocode",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "b6281fad-0da4-4fd4-b669-7e4ff9083a82",
+    "question": "I have 18.9g silver, please estimate its value based on the current price",
+    "steps": [
+      {
+        "task_id": "b6281fad-0da4-4fd4-b669-7e4ff9083a82",
+        "question": "I have 18.9g silver, please estimate its value based on the current price",
+        "step_index": 1,
+        "step_query": "get the current silver price",
+        "gold_tool_name": "get_asset_price",
+        "gold_server_name": "Asset_Price_MCP",
+        "gold_server": {
+          "server_name": "Asset_Price_MCP",
+          "display_name": "Asset Price MCP Server (asset-price-mcp)",
+          "description": "A Model Context Protocol server for retrieving and displaying current asset price information. This server provides tools to fetch real-time price information for various asset (including precious metals and cryptocurrencies), making it easy for large language models to access and display this data.",
+          "category": "Finance",
+          "organization": "mk965",
+          "web": "https://github.com/mk965/asset-price-mcp"
+        }
+      },
+      {
+        "task_id": "b6281fad-0da4-4fd4-b669-7e4ff9083a82",
+        "question": "I have 18.9g silver, please estimate its value based on the current price",
+        "step_index": 2,
+        "step_query": "calculate the price",
+        "gold_tool_name": "calculate",
+        "gold_server_name": "calculator",
+        "gold_server": {
+          "server_name": "calculator",
+          "display_name": "Calculator MCP Server",
+          "description": "A Model Context Protocol server for calculating. This server enables LLMs to use calculator for precise numerical calculations.",
+          "category": "Miscellaneous",
+          "organization": "",
+          "web": "https://github.com/githejie/mcp-server-calculator"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "8f26fc1a-fdaa-4e7a-ae53-7b4cacb15334",
+    "question": "My office is located at Jin Mao Tower, 88 Century Avenue, Pudong New Area, Shanghai.\nI'm looking at a potential apartment in the Nanjing West Road area, specifically let's say near 'Nanjing West Road 2-68, Huangpu District, Shanghai'.\nCould you please run a detailed commute analysis for me? I need to compare three different transportation modes: driving, walking, and biking. It's crucial to get an idea of the morning rush hour, so let's set the departure time for 8:00 AM.",
+    "steps": [
+      {
+        "task_id": "8f26fc1a-fdaa-4e7a-ae53-7b4cacb15334",
+        "question": "My office is located at Jin Mao Tower, 88 Century Avenue, Pudong New Area, Shanghai.\nI'm looking at a potential apartment in the Nanjing West Road area, specifically let's say near 'Nanjing West Road 2-68, Huangpu District, Shanghai'.\nCould you please run a detailed commute analysis for me? I need to compare three different transportation modes: driving, walking, and biking. It's crucial to get an idea of the morning rush hour, so let's set the departure time for 8:00 AM.",
+        "step_index": 1,
+        "step_query": "Convert an address or place name to geographic coordinates with detailed location information.",
+        "gold_tool_name": "geocode_address",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      },
+      {
+        "task_id": "8f26fc1a-fdaa-4e7a-ae53-7b4cacb15334",
+        "question": "My office is located at Jin Mao Tower, 88 Century Avenue, Pudong New Area, Shanghai.\nI'm looking at a potential apartment in the Nanjing West Road area, specifically let's say near 'Nanjing West Road 2-68, Huangpu District, Shanghai'.\nCould you please run a detailed commute analysis for me? I need to compare three different transportation modes: driving, walking, and biking. It's crucial to get an idea of the morning rush hour, so let's set the departure time for 8:00 AM.",
+        "step_index": 2,
+        "step_query": "Perform a detailed commute analysis between home and work locations.",
+        "gold_tool_name": "analyze_commute",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "b84fbf2e-2e19-4cc4-ab86-8a32bd0d33ed",
+    "question": "I'm considering relocating to New York City and need a comprehensive understanding of a potential neighborhood's livability. Please generate a detailed analysis for the area surrounding 72nd Street and 5th Avenue, Manhattan. Focus on a 1000-meter radius to assess the quality of life. I'm particularly interested in the availability of amenities, public transportation accessibility, green spaces and recreational areas, and proximity to education and healthcare facilities. The output should provide counts and proximity scores for these categories to help me evaluate the overall convenience and quality of the residential area.\"",
+    "steps": [
+      {
+        "task_id": "b84fbf2e-2e19-4cc4-ab86-8a32bd0d33ed",
+        "question": "I'm considering relocating to New York City and need a comprehensive understanding of a potential neighborhood's livability. Please generate a detailed analysis for the area surrounding 72nd Street and 5th Avenue, Manhattan. Focus on a 1000-meter radius to assess the quality of life. I'm particularly interested in the availability of amenities, public transportation accessibility, green spaces and recreational areas, and proximity to education and healthcare facilities. The output should provide counts and proximity scores for these categories to help me evaluate the overall convenience and quality of the residential area.\"",
+        "step_index": 1,
+        "step_query": "Convert an address or place name to geographic coordinates with detailed location information.",
+        "gold_tool_name": "geocode_address",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      },
+      {
+        "task_id": "b84fbf2e-2e19-4cc4-ab86-8a32bd0d33ed",
+        "question": "I'm considering relocating to New York City and need a comprehensive understanding of a potential neighborhood's livability. Please generate a detailed analysis for the area surrounding 72nd Street and 5th Avenue, Manhattan. Focus on a 1000-meter radius to assess the quality of life. I'm particularly interested in the availability of amenities, public transportation accessibility, green spaces and recreational areas, and proximity to education and healthcare facilities. The output should provide counts and proximity scores for these categories to help me evaluate the overall convenience and quality of the residential area.\"",
+        "step_index": 2,
+        "step_query": "Generate a comprehensive neighborhood analysis focused on livability factors.",
+        "gold_tool_name": "analyze_neighborhood",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "e28e8dcb-3ccb-406d-a2c7-f5670d649979",
+    "question": "Help me view recent finance-related news, categorize financial news by sentiment, and extract key entities (companies, people, products) and important financial events.",
+    "steps": [
+      {
+        "task_id": "e28e8dcb-3ccb-406d-a2c7-f5670d649979",
+        "question": "Help me view recent finance-related news, categorize financial news by sentiment, and extract key entities (companies, people, products) and important financial events.",
+        "step_index": 1,
+        "step_query": "get finance-related news",
+        "gold_tool_name": "get-36kr-trending",
+        "gold_server_name": "trends-hub",
+        "gold_server": {
+          "server_name": "trends-hub",
+          "display_name": "Trends Hub",
+          "description": "\u57fa\u4e8e Model Context Protocol (MCP) \u534f\u8bae\u7684\u5168\u7f51\u70ed\u70b9\u8d8b\u52bf\u4e00\u7ad9\u5f0f\u805a\u5408\u670d\u52a1",
+          "category": "Discovery",
+          "organization": "baranwang",
+          "web": "https://github.com/baranwang/mcp-trends-hub"
+        }
+      },
+      {
+        "task_id": "e28e8dcb-3ccb-406d-a2c7-f5670d649979",
+        "question": "Help me view recent finance-related news, categorize financial news by sentiment, and extract key entities (companies, people, products) and important financial events.",
+        "step_index": 2,
+        "step_query": "categorize financial news",
+        "gold_tool_name": "get-bbc-news",
+        "gold_server_name": "trends-hub",
+        "gold_server": {
+          "server_name": "trends-hub",
+          "display_name": "Trends Hub",
+          "description": "\u57fa\u4e8e Model Context Protocol (MCP) \u534f\u8bae\u7684\u5168\u7f51\u70ed\u70b9\u8d8b\u52bf\u4e00\u7ad9\u5f0f\u805a\u5408\u670d\u52a1",
+          "category": "Discovery",
+          "organization": "baranwang",
+          "web": "https://github.com/baranwang/mcp-trends-hub"
+        }
+      },
+      {
+        "task_id": "e28e8dcb-3ccb-406d-a2c7-f5670d649979",
+        "question": "Help me view recent finance-related news, categorize financial news by sentiment, and extract key entities (companies, people, products) and important financial events.",
+        "step_index": 3,
+        "step_query": "extract key entities and events",
+        "gold_tool_name": "get-nytimes-news",
+        "gold_server_name": "trends-hub",
+        "gold_server": {
+          "server_name": "trends-hub",
+          "display_name": "Trends Hub",
+          "description": "\u57fa\u4e8e Model Context Protocol (MCP) \u534f\u8bae\u7684\u5168\u7f51\u70ed\u70b9\u8d8b\u52bf\u4e00\u7ad9\u5f0f\u805a\u5408\u670d\u52a1",
+          "category": "Discovery",
+          "organization": "baranwang",
+          "web": "https://github.com/baranwang/mcp-trends-hub"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "1f6a6db5-05b5-4a8d-a6ef-fbb5d823ad1d",
+    "question": "I plan to go to Shinjuku Gyoen from Tokyo Tower and then find a highly rated Japanese restaurant nearby for lunch. Give me restaurant recommendations and tell me how to get there.",
+    "steps": [
+      {
+        "task_id": "1f6a6db5-05b5-4a8d-a6ef-fbb5d823ad1d",
+        "question": "I plan to go to Shinjuku Gyoen from Tokyo Tower and then find a highly rated Japanese restaurant nearby for lunch. Give me restaurant recommendations and tell me how to get there.",
+        "step_index": 1,
+        "step_query": "Convert addresses to geographic coordinates.",
+        "gold_tool_name": "geocode_address",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      },
+      {
+        "task_id": "1f6a6db5-05b5-4a8d-a6ef-fbb5d823ad1d",
+        "question": "I plan to go to Shinjuku Gyoen from Tokyo Tower and then find a highly rated Japanese restaurant nearby for lunch. Give me restaurant recommendations and tell me how to get there.",
+        "step_index": 2,
+        "step_query": "Search for restaurant within a defined geographic area.",
+        "gold_tool_name": "search_category",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      },
+      {
+        "task_id": "1f6a6db5-05b5-4a8d-a6ef-fbb5d823ad1d",
+        "question": "I plan to go to Shinjuku Gyoen from Tokyo Tower and then find a highly rated Japanese restaurant nearby for lunch. Give me restaurant recommendations and tell me how to get there.",
+        "step_index": 3,
+        "step_query": "Get route directions between two geographic points.",
+        "gold_tool_name": "get_route_directions",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      },
+      {
+        "task_id": "1f6a6db5-05b5-4a8d-a6ef-fbb5d823ad1d",
+        "question": "I plan to go to Shinjuku Gyoen from Tokyo Tower and then find a highly rated Japanese restaurant nearby for lunch. Give me restaurant recommendations and tell me how to get there.",
+        "step_index": 4,
+        "step_query": "Write the report.",
+        "gold_tool_name": "reverse_geocode",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "2293b5eb-3af1-4f5f-9eaf-138c27885544",
+    "question": "Give me a two-day tour of Beijing based on the recent weather, and my hotel is in the Haidian District",
+    "steps": [
+      {
+        "task_id": "2293b5eb-3af1-4f5f-9eaf-138c27885544",
+        "question": "Give me a two-day tour of Beijing based on the recent weather, and my hotel is in the Haidian District",
+        "step_index": 1,
+        "step_query": "get the weather of beijing in next two days",
+        "gold_tool_name": "get_weather_by_city",
+        "gold_server_name": "weather",
+        "gold_server": {
+          "server_name": "weather",
+          "display_name": "MCP Weather Free",
+          "description": "A Model Context Protocol (MCP) server that provides weather data using the free Open-Meteo API. No API key required!",
+          "category": "Discovery",
+          "organization": "",
+          "web": "https://github.com/microagents/mcp-weather-free"
+        }
+      },
+      {
+        "task_id": "2293b5eb-3af1-4f5f-9eaf-138c27885544",
+        "question": "Give me a two-day tour of Beijing based on the recent weather, and my hotel is in the Haidian District",
+        "step_index": 2,
+        "step_query": "Convert the address to geographic coordinates",
+        "gold_tool_name": "geocode_address",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      },
+      {
+        "task_id": "2293b5eb-3af1-4f5f-9eaf-138c27885544",
+        "question": "Give me a two-day tour of Beijing based on the recent weather, and my hotel is in the Haidian District",
+        "step_index": 3,
+        "step_query": "find points of interest and amenities near haidian.",
+        "gold_tool_name": "find_nearby_places",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      },
+      {
+        "task_id": "2293b5eb-3af1-4f5f-9eaf-138c27885544",
+        "question": "Give me a two-day tour of Beijing based on the recent weather, and my hotel is in the Haidian District",
+        "step_index": 4,
+        "step_query": "determine travel plans based on weather conditions",
+        "gold_tool_name": "reverse_geocode",
+        "gold_server_name": "osm-mcp-server",
+        "gold_server": {
+          "server_name": "osm-mcp-server",
+          "display_name": "OpenStreetMap (OSM) MCP Server",
+          "description": "An OpenStreetMap MCP server implementation that enhances LLM capabilities with location-based services and geospatial data.",
+          "category": "Location",
+          "organization": "",
+          "web": "https://github.com/jagan-shanmugam/open-streetmap-mcp"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "49cdaab7-39f0-4556-a3bb-7bd523916b32",
+    "question": "We have organized an online raffle with the following list of participants: [\u2018Alice\u2019, \u2018Bob\u2019, \u2018Charlie\u2019, \u2018David\u2019, \u2018Eve\u2019]. Please choose one lucky winner at random from this list.",
+    "steps": [
+      {
+        "task_id": "49cdaab7-39f0-4556-a3bb-7bd523916b32",
+        "question": "We have organized an online raffle with the following list of participants: [\u2018Alice\u2019, \u2018Bob\u2019, \u2018Charlie\u2019, \u2018David\u2019, \u2018Eve\u2019]. Please choose one lucky winner at random from this list.",
+        "step_index": 1,
+        "step_query": "must use random tool to avoid bias",
+        "gold_tool_name": "random_sample",
+        "gold_server_name": "random-number",
+        "gold_server": {
+          "server_name": "random-number",
+          "display_name": "Random Number MCP",
+          "description": "Essential random number generation utilities from the Python standard library, including pseudorandom and cryptographically secure operations for integers, floats, weighted selections, list shuffling, and secure token generation.",
+          "category": "Entertainment",
+          "organization": "",
+          "web": "https://github.com/zazencodes/random-number-mcp"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "0dafdf66-af3a-4110-ab79-d9c037f7bc62",
+    "question": "Find the earliest available high-speed train from Beijing South to Shanghai South for tomorrow. What's the departure time and ticket price?",
+    "steps": [
+      {
+        "task_id": "0dafdf66-af3a-4110-ab79-d9c037f7bc62",
+        "question": "Find the earliest available high-speed train from Beijing South to Shanghai South for tomorrow. What's the departure time and ticket price?",
+        "step_index": 1,
+        "step_query": "get the station codes",
+        "gold_tool_name": "get-station-code-by-names",
+        "gold_server_name": "12306-mcp",
+        "gold_server": {
+          "server_name": "12306-mcp",
+          "display_name": "12306-mcp",
+          "description": "A 12306 ticket search server based on the Model Context Protocol (MCP). The server provides a simple API interface that allows users to search for 12306 tickets.",
+          "category": "Discovery",
+          "organization": "Joooook",
+          "web": "https://github.com/Joooook/12306-mcp"
+        }
+      },
+      {
+        "task_id": "0dafdf66-af3a-4110-ab79-d9c037f7bc62",
+        "question": "Find the earliest available high-speed train from Beijing South to Shanghai South for tomorrow. What's the departure time and ticket price?",
+        "step_index": 2,
+        "step_query": "check available tickets",
+        "gold_tool_name": "get-tickets",
+        "gold_server_name": "12306-mcp",
+        "gold_server": {
+          "server_name": "12306-mcp",
+          "display_name": "12306-mcp",
+          "description": "A 12306 ticket search server based on the Model Context Protocol (MCP). The server provides a simple API interface that allows users to search for 12306 tickets.",
+          "category": "Discovery",
+          "organization": "Joooook",
+          "web": "https://github.com/Joooook/12306-mcp"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "614189f6-b70d-4144-87ad-f27209f0ec14",
+    "question": "What's on the zhihu and bilibili trendings today? Help me recommend something tech related!",
+    "steps": [
+      {
+        "task_id": "614189f6-b70d-4144-87ad-f27209f0ec14",
+        "question": "What's on the zhihu and bilibili trendings today? Help me recommend something tech related!",
+        "step_index": 1,
+        "step_query": "get trendings for both sites",
+        "gold_tool_name": "get-bilibili-rank",
+        "gold_server_name": "trends-hub",
+        "gold_server": {
+          "server_name": "trends-hub",
+          "display_name": "Trends Hub",
+          "description": "\u57fa\u4e8e Model Context Protocol (MCP) \u534f\u8bae\u7684\u5168\u7f51\u70ed\u70b9\u8d8b\u52bf\u4e00\u7ad9\u5f0f\u805a\u5408\u670d\u52a1",
+          "category": "Discovery",
+          "organization": "baranwang",
+          "web": "https://github.com/baranwang/mcp-trends-hub"
+        }
+      },
+      {
+        "task_id": "614189f6-b70d-4144-87ad-f27209f0ec14",
+        "question": "What's on the zhihu and bilibili trendings today? Help me recommend something tech related!",
+        "step_index": 2,
+        "step_query": "filter the trendings",
+        "gold_tool_name": "get-zhihu-trending",
+        "gold_server_name": "trends-hub",
+        "gold_server": {
+          "server_name": "trends-hub",
+          "display_name": "Trends Hub",
+          "description": "\u57fa\u4e8e Model Context Protocol (MCP) \u534f\u8bae\u7684\u5168\u7f51\u70ed\u70b9\u8d8b\u52bf\u4e00\u7ad9\u5f0f\u805a\u5408\u670d\u52a1",
+          "category": "Discovery",
+          "organization": "baranwang",
+          "web": "https://github.com/baranwang/mcp-trends-hub"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "ffd5f6fb-051c-4c0f-9b82-90038b4cdb84",
+    "question": "I need you to pull up the Chinese almanac and find me the best dates to get married in the near future. Give me a list of the most auspicious Gregorian dates for a wedding in the next months.",
+    "steps": [
+      {
+        "task_id": "ffd5f6fb-051c-4c0f-9b82-90038b4cdb84",
+        "question": "I need you to pull up the Chinese almanac and find me the best dates to get married in the near future. Give me a list of the most auspicious Gregorian dates for a wedding in the next months.",
+        "step_index": 1,
+        "step_query": "get current time",
+        "gold_tool_name": "get_current_time",
+        "gold_server_name": "time",
+        "gold_server": {
+          "server_name": "time",
+          "display_name": "Time MCP Server",
+          "description": "A Model Context Protocol server that provides time and timezone conversion capabilities. This server enables LLMs to get current time information and perform timezone conversions using IANA timezone names, with automatic system timezone detection.",
+          "category": "Discovery",
+          "organization": "modelcontextprotocol",
+          "web": "https://github.com/modelcontextprotocol/servers/tree/main/src/time"
+        }
+      },
+      {
+        "task_id": "ffd5f6fb-051c-4c0f-9b82-90038b4cdb84",
+        "question": "I need you to pull up the Chinese almanac and find me the best dates to get married in the near future. Give me a list of the most auspicious Gregorian dates for a wedding in the next months.",
+        "step_index": 2,
+        "step_query": "get almanac",
+        "gold_tool_name": "getChineseCalendar",
+        "gold_server_name": "Bazi",
+        "gold_server": {
+          "server_name": "Bazi",
+          "display_name": "Bazi MCP (\u516b\u5b57 MCP) by Cantian AI",
+          "description": "Unlock precise Bazi insights with the Bazi MCP, the first AI-powered Bazi calculator. Built to address inaccuracies in existing AI fortune-telling tools like GPT and DeepSeek, our MCP delivers reliable Bazi data for personality analysis, destiny forecasting, and more.",
+          "category": "Entertainment",
+          "organization": "cantian-ai",
+          "web": "https://github.com/cantian-ai/bazi-mcp"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "b050f277-0a92-4cfc-933b-5f01430e77dd",
+    "question": "Convert /root/word/CV.docx and /root/word/Report_Card.docx to PDF, merge the two resulting files, and save the final combined document as /root/pdf/full_cv.pdf.",
+    "steps": [
+      {
+        "task_id": "b050f277-0a92-4cfc-933b-5f01430e77dd",
+        "question": "Convert /root/word/CV.docx and /root/word/Report_Card.docx to PDF, merge the two resulting files, and save the final combined document as /root/pdf/full_cv.pdf.",
+        "step_index": 1,
+        "step_query": "convert two documents to two separate pdf",
+        "gold_tool_name": "docx_to_pdf",
+        "gold_server_name": "searxng",
+        "gold_server": {
+          "server_name": "searxng",
+          "display_name": "Simple Document Processing MCP Server",
+          "description": "A powerful Model Context Protocol (MCP) server providing comprehensive document processing capabilities.",
+          "category": "File Access",
+          "organization": "cablate",
+          "web": "https://github.com/cablate/mcp-doc-forge"
+        }
+      },
+      {
+        "task_id": "b050f277-0a92-4cfc-933b-5f01430e77dd",
+        "question": "Convert /root/word/CV.docx and /root/word/Report_Card.docx to PDF, merge the two resulting files, and save the final combined document as /root/pdf/full_cv.pdf.",
+        "step_index": 2,
+        "step_query": "merge them into a single document",
+        "gold_tool_name": "pdf_merger",
+        "gold_server_name": "searxng",
+        "gold_server": {
+          "server_name": "searxng",
+          "display_name": "Simple Document Processing MCP Server",
+          "description": "A powerful Model Context Protocol (MCP) server providing comprehensive document processing capabilities.",
+          "category": "File Access",
+          "organization": "cablate",
+          "web": "https://github.com/cablate/mcp-doc-forge"
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "38c156c5-ff2c-4cf4-9a23-984d761b8bcb",
+    "question": "Help me do a full investment analysis on Nvidia's stock",
+    "steps": [
+      {
+        "task_id": "38c156c5-ff2c-4cf4-9a23-984d761b8bcb",
+        "question": "Help me do a full investment analysis on Nvidia's stock",
+        "step_index": 1,
+        "step_query": "Get the stock prices for one month",
+        "gold_tool_name": "get_stock_price_date_range",
+        "gold_server_name": "yahoo-finance",
+        "gold_server": {
+          "server_name": "yahoo-finance",
+          "display_name": "MCP Yahoo Finance",
+          "description": "A Model Context Protocol (MCP) server for Yahoo Finance interaction. This server provides tools to get pricing, company information and more.",
+          "category": "Finance",
+          "organization": "maxscheijen",
+          "web": "https://github.com/maxscheijen/mcp-yahoo-finance"
+        }
+      },
+      {
+        "task_id": "38c156c5-ff2c-4cf4-9a23-984d761b8bcb",
+        "question": "Help me do a full investment analysis on Nvidia's stock",
+        "step_index": 2,
+        "step_query": "Get cashflow,  income statement",
+        "gold_tool_name": "get_income_statement",
+        "gold_server_name": "yahoo-finance",
+        "gold_server": {
+          "server_name": "yahoo-finance",
+          "display_name": "MCP Yahoo Finance",
+          "description": "A Model Context Protocol (MCP) server for Yahoo Finance interaction. This server provides tools to get pricing, company information and more.",
+          "category": "Finance",
+          "organization": "maxscheijen",
+          "web": "https://github.com/maxscheijen/mcp-yahoo-finance"
+        }
+      },
+      {
+        "task_id": "38c156c5-ff2c-4cf4-9a23-984d761b8bcb",
+        "question": "Help me do a full investment analysis on Nvidia's stock",
+        "step_index": 3,
+        "step_query": "Get news",
+        "gold_tool_name": "get_cashflow",
+        "gold_server_name": "yahoo-finance",
+        "gold_server": {
+          "server_name": "yahoo-finance",
+          "display_name": "MCP Yahoo Finance",
+          "description": "A Model Context Protocol (MCP) server for Yahoo Finance interaction. This server provides tools to get pricing, company information and more.",
+          "category": "Finance",
+          "organization": "maxscheijen",
+          "web": "https://github.com/maxscheijen/mcp-yahoo-finance"
+        }
+      },
+      {
+        "task_id": "38c156c5-ff2c-4cf4-9a23-984d761b8bcb",
+        "question": "Help me do a full investment analysis on Nvidia's stock",
+        "step_index": 4,
+        "step_query": "make a report",
+        "gold_tool_name": "get_news",
+        "gold_server_name": "yahoo-finance",
+        "gold_server": {
+          "server_name": "yahoo-finance",
+          "display_name": "MCP Yahoo Finance",
+          "description": "A Model Context Protocol (MCP) server for Yahoo Finance interaction. This server provides tools to get pricing, company information and more.",
+          "category": "Finance",
+          "organization": "maxscheijen",
+          "web": "https://github.com/maxscheijen/mcp-yahoo-finance"
+        }
+      }
+    ]
+  }
+]

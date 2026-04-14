@@ -1,0 +1,31 @@
+{
+  "cases": [
+    {
+      "id": "cross-app-20-hop",
+      "description": "Twenty-hop retrieval across GitHub, Slack, Bloomberg, Google, and other sources",
+      "session_id": "mh-20hop-1",
+      "hops": [
+        {"server_intent": "GitHub repositories and API", "tool_intent": "search repositories by query", "expected_tool_name": "search_repositories"},
+        {"server_intent": "GitHub commit history", "tool_intent": "list commits for a repository branch", "expected_tool_name": "list_commits"},
+        {"server_intent": "Slack messaging workspace", "tool_intent": "add a reaction to a message", "expected_tool_name": "slack_add_reaction"},
+        {"server_intent": "Slack messaging workspace", "tool_intent": "post a message to a channel", "expected_tool_name": "slack_post_message"},
+        {"server_intent": "Bloomberg market data", "tool_intent": "get point-in-time reference data for a ticker", "expected_tool_name": "bdtick"},
+        {"server_intent": "Bloomberg historical market data", "tool_intent": "get historical daily prices for a ticker", "expected_tool_name": "bdh"},
+        {"server_intent": "Bloomberg intraday bars", "tool_intent": "get intraday bars for a ticker", "expected_tool_name": "bdib"},
+        {"server_intent": "Bloomberg fundamentals and estimates", "tool_intent": "query earnings breakdown", "expected_tool_name": "bds"},
+        {"server_intent": "Google Drive files", "tool_intent": "search files in drive", "expected_tool_name": "search"},
+        {"server_intent": "Google Sheets documents", "tool_intent": "list spreadsheets", "expected_tool_name": "list_spreadsheets"},
+        {"server_intent": "Google Tasks productivity", "tool_intent": "list tasks in my task list", "expected_tool_name": "list"},
+        {"server_intent": "Xero accounting quotes", "tool_intent": "list all sales quotes", "expected_tool_name": "list_quotes"},
+        {"server_intent": "ClickUp project tasks", "tool_intent": "delete a task", "expected_tool_name": "delete_time_entry"},
+        {"server_intent": "Atlassian Jira issues", "tool_intent": "search issues by JQL", "expected_tool_name": "jira_search"},
+        {"server_intent": "Linear issue tracking", "tool_intent": "update an issue status", "expected_tool_name": "linear_update_issue"},
+        {"server_intent": "Monday.com work management", "tool_intent": "list items in groups", "expected_tool_name": "monday-list-items-in-groups"},
+        {"server_intent": "Notion workspace knowledge", "tool_intent": "search pages and databases", "expected_tool_name": "list_databases"},
+        {"server_intent": "Airtable records database", "tool_intent": "search records by query", "expected_tool_name": "search_records"},
+        {"server_intent": "CoinMarketCap crypto data", "tool_intent": "get latest cryptocurrency listings", "expected_tool_name": "get-coin-quotes"},
+        {"server_intent": "Filesystem local files", "tool_intent": "list directory contents", "expected_tool_name": "list_directory"}
+      ]
+    }
+  ]
+}

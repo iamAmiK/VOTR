@@ -1,0 +1,61 @@
+{
+  "cases": [
+    {
+      "id": "cross-app-10-hop",
+      "description": "Ten sequential hops across different application domains",
+      "session_id": "mh-10hop-1",
+      "hops": [
+        {
+          "server_intent": "GitHub repositories and API",
+          "tool_intent": "search for repositories by query",
+          "expected_tool_name": "search_repositories"
+        },
+        {
+          "server_intent": "Slack workspace messaging",
+          "tool_intent": "add a reaction to a message",
+          "expected_tool_name": "slack_add_reaction"
+        },
+        {
+          "server_intent": "Xero accounting quotes",
+          "tool_intent": "list sales quotes",
+          "expected_tool_name": "list_quotes"
+        },
+        {
+          "server_intent": "ClickUp tasks and projects",
+          "tool_intent": "find and delete a task",
+          "expected_tool_name": "delete_task"
+        },
+        {
+          "server_intent": "Google Drive files",
+          "tool_intent": "list files in drive",
+          "expected_tool_name": "search"
+        },
+        {
+          "server_intent": "Jira issue tracking",
+          "tool_intent": "search issues by JQL",
+          "expected_tool_name": "jira_search"
+        },
+        {
+          "server_intent": "Linear issue tracking",
+          "tool_intent": "update an issue status",
+          "expected_tool_name": "linear_update_issue"
+        },
+        {
+          "server_intent": "Google Tasks",
+          "tool_intent": "list tasks in my task list",
+          "expected_tool_name": "list"
+        },
+        {
+          "server_intent": "Monday.com boards and items",
+          "tool_intent": "list items in a group",
+          "expected_tool_name": "monday-list-items-in-groups"
+        },
+        {
+          "server_intent": "GitHub commit history",
+          "tool_intent": "list commits for a repository branch",
+          "expected_tool_name": "list_commits"
+        }
+      ]
+    }
+  ]
+}

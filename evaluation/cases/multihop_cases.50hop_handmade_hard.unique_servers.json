@@ -1,0 +1,261 @@
+{
+  "cases": [
+    {
+      "id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "description": "Final realistic-hard 50-hop strict benchmark with unique servers, natural app-aware phrasing, and concrete task intents",
+      "session_id": "mh-50hop-realistic-hard-1",
+      "hops": [
+        {
+          "server_intent": "Gp to Agent QL and do the following",
+          "tool_intent": "I want to extract the web data for this link: www.google.com",
+          "expected_tool_key": "AgentQL::extract-web-data"
+        },
+        {
+          "server_intent": "Then go to Aiven and",
+          "tool_intent": "list all the projects in my account..",
+          "expected_tool_key": "Aiven::list_projects"
+        },
+        {
+          "server_intent": "Go to Bloomberg bcz I need to do some financial things",
+          "tool_intent": "I neeed the historical data for Microsoft Stocks.",
+          "expected_tool_key": "Bloomberg::bdh"
+        },
+        {
+          "server_intent": "Go to Apache to perform this task.",
+          "tool_intent": "I need a list of all the tables in the database named Products.",
+          "expected_tool_key": "Apache IoTDB::list_tables"
+        },
+        {
+          "server_intent": "Use the Apify MCP to do.",
+          "tool_intent": "I need the information for a specific actor.",
+          "expected_tool_key": "Apify::get-actor-details"
+        },
+        {
+          "server_intent": "Use APIMatic to perform this task.",
+          "tool_intent": "I need to validate an OpenAPI file.",
+          "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic"
+        },
+        {
+          "server_intent": "I want to use Slack to do the following.",
+          "tool_intent": "I want to give a laughing face emoji to the message.",
+          "expected_tool_key": "Slack::slack_add_reaction"
+        },
+        {
+          "server_intent": "Use the AstraDB MCP to perform this task.",
+          "tool_intent": "I need a list of records from a collection.",
+          "expected_tool_key": "Astra DB::ListRecords"
+        },
+        {
+          "server_intent": "Utilise Xero for the following",
+          "tool_intent": "Show all the sales quotes for this account.",
+          "expected_tool_key": "Xero-mcp-server::list_quotes"
+        },
+        {
+          "server_intent": "In AWS MCP perform this task.",
+          "tool_intent": "Show/search the documentation for how to use the EC2 service.",
+          "expected_tool_key": "AWS::Search Documentation"
+        },
+        {
+          "server_intent": "In Axiom perform this task.",
+          "tool_intent": "Show all available Axiom data.",
+          "expected_tool_key": "Axiom::listDatasets"
+        },
+        {
+          "server_intent": "In Azure perform this task.",
+          "tool_intent": "I need to find something in the indexes.",
+          "expected_tool_key": "Azure::Query search indexes"
+        },
+        {
+          "server_intent": "In Airtable, do the following task.",
+          "tool_intent": "Search for data for this query",
+          "expected_tool_key": "Airtable::search_records"
+        },
+        {
+          "server_intent": "In Bitrise perform this task.",
+          "tool_intent": "I need to see all the apps I have.",
+          "expected_tool_key": "Bitrise::list_apps"
+        },
+        {
+          "server_intent": "In Box do this task.",
+          "tool_intent": "Search for this.",
+          "expected_tool_key": "Box::box_search_tool"
+        },
+        {
+          "server_intent": "In Chroma perform this task.",
+          "tool_intent": "Show all collections with pagination support.",
+          "expected_tool_key": "Chroma::chroma_list_collections"
+        },
+        {
+          "server_intent": "In CircleCI perform this task.",
+          "tool_intent": "Show me the metadata for this specific test job - www.google.com.",
+          "expected_tool_key": "CircleCI::get_job_test_results"
+        },
+        {
+          "server_intent": "In ClickHouse perform this task.",
+          "tool_intent": "In the database Product show all the tables info.",
+          "expected_tool_key": "ClickHouse::list_tables"
+        },
+        {
+          "server_intent": "In Codacy we need to perform this task.",
+          "tool_intent": "Find and show all code quality issues in my repository.",
+          "expected_tool_key": "Codacy::codacy_list_repository_issues"
+        },
+        {
+          "server_intent": "In CodeLogic perform this task.",
+          "tool_intent": "Pull an impact assessment for this method.",
+          "expected_tool_key": "CodeLogic::codelogic-method-impact"
+        },
+        {
+          "server_intent": "In Comet perform this task.",
+          "tool_intent": "Track and analyse  the trace data for this job.",
+          "expected_tool_key": "Comet Opik::Traces"
+        },
+        {
+          "server_intent": "In Couchbase perform this task.",
+          "tool_intent": "Get a document by the ID: 1234567890 from this specified scope and collection.",
+          "expected_tool_key": "Couchbase::get_document_by_id"
+        },
+        {
+          "server_intent": "In Dart perform this task.",
+          "tool_intent": "Find all the docs with the filtering by folder, title, text content, and more.",
+          "expected_tool_key": "Dart::list_docs"
+        },
+        {
+          "server_intent": "In DevHub perform this task.",
+          "tool_intent": "Gets all locations for a specific business. Returns detailed location information including address, coordinates, and URLs.. Include business_id if needed.",
+          "expected_tool_key": "DevHub::get_locations"
+        },
+        {
+          "server_intent": "In Dynatrace (Manage and interact with the Dynatrace Platform for real-time observability and monitoring.), perform this task.",
+          "tool_intent": "Lists problem details from your services, such as Kubernetes..",
+          "expected_tool_key": "Dynatrace::list_problems"
+        },
+        {
+          "server_intent": "In EduBase, perform this task.",
+          "tool_intent": "Get my user information.",
+          "expected_tool_key": "EduBase::edubase_get_user"
+        },
+        {
+          "server_intent": "In Elasticsearch, perform this task.",
+          "tool_intent": "Run a search using a query DSL.",
+          "expected_tool_key": "Elasticsearch::search"
+        },
+        {
+          "server_intent": "In eSignatures, perform this task.",
+          "tool_intent": "Show all my templates.",
+          "expected_tool_key": "eSignatures::list_templates"
+        },
+        {
+          "server_intent": "In Exa, perform this task.",
+          "tool_intent": "Search for GitHub repositories.",
+          "expected_tool_key": "Exa::github_search"
+        },
+        {
+          "server_intent": "In Fewsats, perform this task.",
+          "tool_intent": "Pay for a specific offer.",
+          "expected_tool_key": "Fewsats::pay_offer"
+        },
+        {
+          "server_intent": "In Fibery, perform this task.",
+          "tool_intent": "List all databases in my workspace.",
+          "expected_tool_key": "Fibery::list_databases"
+        },
+        {
+          "server_intent": "In Financial Datasets, perform this task.",
+          "tool_intent": "Get the latest news for a company.",
+          "expected_tool_key": "Financial Datasets::get_company_news"
+        },
+        {
+          "server_intent": "In Firecrawl, perform this task.",
+          "tool_intent": "Search the web and extract content from results.",
+          "expected_tool_key": "Firecrawl::firecrawl_search"
+        },
+        {
+          "server_intent": "In Gitee, perform this task.",
+          "tool_intent": "Search for users.",
+          "expected_tool_key": "Gitee::search_users"
+        },
+        {
+          "server_intent": "In Gyazo, perform this task.",
+          "tool_intent": "Search my uploaded captures by keyword.",
+          "expected_tool_key": "Gyazo::gyazo_search"
+        },
+        {
+          "server_intent": "In gotoHuman, perform this task.",
+          "tool_intent": "List all available review forms.",
+          "expected_tool_key": "gotoHuman::list-forms"
+        },
+        {
+          "server_intent": "In Grafana, perform this task.",
+          "tool_intent": "Search for dashboards.",
+          "expected_tool_key": "Grafana::search_dashboards"
+        },
+        {
+          "server_intent": "In Graphlit, perform this task.",
+          "tool_intent": "Perform a web search and ingest the results.",
+          "expected_tool_key": "Graphlit::Web Search (including Podcast Search)"
+        },
+        {
+          "server_intent": "In GreptimeDB, perform this task.",
+          "tool_intent": "List all available tools.",
+          "expected_tool_key": "GreptimeDB::list_tools"
+        },
+        {
+          "server_intent": "In Heroku, perform this task.",
+          "tool_intent": "List all dynos for an app.",
+          "expected_tool_key": "Heroku::ps_list"
+        },
+        {
+          "server_intent": "In Hologres, perform this task.",
+          "tool_intent": "Get the query plan.",
+          "expected_tool_key": "Hologres::get_query_plan"
+        },
+        {
+          "server_intent": "In Hyperbrowser, perform this task.",
+          "tool_intent": "Search the web using Bing.",
+          "expected_tool_key": "Hyperbrowser::search_with_bing"
+        },
+        {
+          "server_intent": "In ForeverVM, perform this task.",
+          "tool_intent": "List all my machines.",
+          "expected_tool_key": "ForeverVM::listMachines"
+        },
+        {
+          "server_intent": "In Inkeep, perform this task.",
+          "tool_intent": "Search the product documentation.",
+          "expected_tool_key": "Inkeep::search-product-content"
+        },
+        {
+          "server_intent": "In Kagi Search, perform this task.",
+          "tool_intent": "Search the web for information.",
+          "expected_tool_key": "Kagi Search::search"
+        },
+        {
+          "server_intent": "In Keboola, perform this task.",
+          "tool_intent": "Get the details for a specific job.",
+          "expected_tool_key": "Keboola::get_job_detail"
+        },
+        {
+          "server_intent": "In Lara Translate, perform this task.",
+          "tool_intent": "List my saved translation memories.",
+          "expected_tool_key": "Lara Translate::list_memories"
+        },
+        {
+          "server_intent": "In Logfire, perform this task.",
+          "tool_intent": "Get the OpenTelemetry schema.",
+          "expected_tool_key": "Logfire::get_logfire_records_schema"
+        },
+        {
+          "server_intent": "In Langfuse Prompt Management, perform this task.",
+          "tool_intent": "Retrieve and compile a specific prompt.",
+          "expected_tool_key": "Langfuse Prompt Management::get-prompt"
+        },
+        {
+          "server_intent": "In Lingo.dev, perform this task.",
+          "tool_intent": "List all registered users.",
+          "expected_tool_key": "Lingo.dev::list-users"
+        }
+      ]
+    }
+  ]
+}

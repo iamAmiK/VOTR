@@ -1,0 +1,162 @@
+{
+  "summary": {
+    "num_cases": 1,
+    "k": 5,
+    "keep_memory": false,
+    "mean_hop_acc_at_1": 1.0,
+    "mean_hop_acc_at_k": 1.0,
+    "chain_success_rate_at_k": 1.0
+  },
+  "results": [
+    {
+      "case_id": "cross-app-10-hop",
+      "description": "Ten sequential hops across different application domains",
+      "hops": [
+        {
+          "expected_labels": [
+            "*::search_repositories"
+          ],
+          "predicted_topk": [
+            "GitHub::search_repositories",
+            "GitHub::search_code",
+            "Gitee::search_open_source_repositories",
+            "GitHub::search_users",
+            "Gitee::list_user_repos"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "*::slack_add_reaction"
+          ],
+          "predicted_topk": [
+            "Slack::slack_add_reaction",
+            "Slack::slack_reply_to_thread",
+            "Slack::slack_post_message",
+            "Slack::slack_get_thread_replies",
+            "Slack::slack_get_channel_history"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "*::list_quotes"
+          ],
+          "predicted_topk": [
+            "Xero-mcp-server::list_quotes",
+            "Xero::list-quotes",
+            "Xero-mcp-server::list_invoices",
+            "Xero::list-invoices",
+            "Xero::list-items"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "*::delete_task",
+            "*::delete_time_entry"
+          ],
+          "predicted_topk": [
+            "ClickUp::delete_time_entry",
+            "ClickUp::create_task",
+            "ClickUp::delete_task",
+            "ClickUp::delete_folder",
+            "ClickUp::move_task"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "*::search"
+          ],
+          "predicted_topk": [
+            "Google Drive::search",
+            "Google Sheets::listSpreadsheets",
+            "Google Sheets::list_spreadsheets",
+            "Filesystem::list_directory",
+            "Golang Filesystem Server::list_directory"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "*::jira_search"
+          ],
+          "predicted_topk": [
+            "Atlassian::jira_search",
+            "Atlassian::jira_create_issue",
+            "Atlassian::jira_get_issue",
+            "Atlassian::confluence_search",
+            "Atlassian::jira_update_issue"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "*::linear_update_issue"
+          ],
+          "predicted_topk": [
+            "Linear::linear_update_issue",
+            "Linear::linear_create_issue",
+            "Linear::linear_add_comment",
+            "Linear (Go)::linear_update_issue",
+            "Linear::linear_get_user_issues"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "*::list"
+          ],
+          "predicted_topk": [
+            "Google Tasks::list",
+            "Google Tasks::clear",
+            "Google Tasks::search",
+            "Google Tasks::delete",
+            "Google Tasks::create"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "*::monday-list-items-in-groups"
+          ],
+          "predicted_topk": [
+            "Monday.com::monday-list-items-in-groups",
+            "Monday.com::monday-create-board-group",
+            "Monday.com::monday-move-item-to-group",
+            "Monday.com::monday-list-subitems-in-items",
+            "Monday.com::monday-list-boards"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "*::list_commits"
+          ],
+          "predicted_topk": [
+            "GitHub::list_commits",
+            "GitHub::list_pull_requests",
+            "GitHub::push_files",
+            "GitHub::get_pull_request_files",
+            "GitHub::list_issues"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        }
+      ],
+      "hop_acc_at_1": 1.0,
+      "hop_acc_at_k": 1.0,
+      "chain_success_at_k": true
+    }
+  ]
+}

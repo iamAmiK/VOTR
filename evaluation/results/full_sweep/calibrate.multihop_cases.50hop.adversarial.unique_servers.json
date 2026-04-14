@@ -1,0 +1,3967 @@
+{
+  "summary": {
+    "num_cases": 1,
+    "num_hops": 50,
+    "selection_mode": "fallback_best_tradeoff",
+    "recommended_thresholds": {
+      "handoff_gap_high": 0.00022192479142194022,
+      "handoff_gap_medium": 0.00010073300428931758
+    },
+    "policy_k": {
+      "handoff_k_high": 1,
+      "handoff_k_medium": 3,
+      "handoff_k_low": 5
+    },
+    "metrics_at_recommended_thresholds": {
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.12,
+      "bucket_counts": {
+        "high": 47,
+        "medium": 3,
+        "low": 0
+      },
+      "top1_precision_by_bucket": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "constraints_ok": false
+    },
+    "config_snippet": {
+      "handoff_gap_high": 0.00022192479142194022,
+      "handoff_gap_medium": 0.00010073300428931758,
+      "handoff_k_high": 1,
+      "handoff_k_medium": 3,
+      "handoff_k_low": 5
+    }
+  },
+  "all_results": [
+    {
+      "high": 0.00022192479142194022,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 47,
+        "medium": 3,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.12,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00030764633030018473,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 44,
+        "medium": 6,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.24,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0004465597273635366,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 42,
+        "medium": 8,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.32,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0004642580999453076,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 40,
+        "medium": 10,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.4,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0006990849798887908,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 37,
+        "medium": 13,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.52,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0008424165880538195,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 35,
+        "medium": 15,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.6,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0010725378181303605,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 33,
+        "medium": 17,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.68,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0012116294635907965,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 32,
+        "medium": 18,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.72,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002029768206571185,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 28,
+        "medium": 22,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.88,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0023760460850624776,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 26,
+        "medium": 24,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.96,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002554414324906131,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 23,
+        "medium": 27,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.08,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0026605605179756894,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 22,
+        "medium": 28,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.12,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0033275608516829328,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 19,
+        "medium": 31,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.24,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.003462762317012369,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 17,
+        "medium": 33,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.32,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004440729211573569,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 14,
+        "medium": 36,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.44,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004629470634004991,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 12,
+        "medium": 38,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.52,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0046975071978377116,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 10,
+        "medium": 40,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.6,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.006759825142178086,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 5,
+        "medium": 45,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.8,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 4,
+        "medium": 46,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.84,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 3,
+        "medium": 47,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.88,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.00010073300428931758,
+      "counts": {
+        "high": 2,
+        "medium": 48,
+        "low": 0
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.92,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00030764633030018473,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 44,
+        "medium": 3,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.36,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0004465597273635366,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 42,
+        "medium": 5,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.44,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0004642580999453076,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 40,
+        "medium": 7,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.52,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0006990849798887908,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 37,
+        "medium": 10,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.64,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0008424165880538195,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 35,
+        "medium": 12,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.72,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0010725378181303605,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 33,
+        "medium": 14,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.8,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0012116294635907965,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 32,
+        "medium": 15,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.84,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002029768206571185,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 28,
+        "medium": 19,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.0,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0023760460850624776,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 26,
+        "medium": 21,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.08,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002554414324906131,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 23,
+        "medium": 24,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.2,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0026605605179756894,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 22,
+        "medium": 25,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.24,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0033275608516829328,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 19,
+        "medium": 28,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.36,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.003462762317012369,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 17,
+        "medium": 30,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.44,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004440729211573569,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 14,
+        "medium": 33,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.56,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004629470634004991,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 12,
+        "medium": 35,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.64,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0046975071978377116,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 10,
+        "medium": 37,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.72,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.006759825142178086,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 5,
+        "medium": 42,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.92,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 4,
+        "medium": 43,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.96,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 3,
+        "medium": 44,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.0,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.00022192479142194022,
+      "counts": {
+        "high": 2,
+        "medium": 45,
+        "low": 3
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.04,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0004465597273635366,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 42,
+        "medium": 2,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.56,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0004642580999453076,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 40,
+        "medium": 4,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.64,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0006990849798887908,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 37,
+        "medium": 7,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.76,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0008424165880538195,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 35,
+        "medium": 9,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.84,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0010725378181303605,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 33,
+        "medium": 11,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.92,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0012116294635907965,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 32,
+        "medium": 12,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.96,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002029768206571185,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 28,
+        "medium": 16,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.12,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0023760460850624776,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 26,
+        "medium": 18,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.2,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002554414324906131,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 23,
+        "medium": 21,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.32,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0026605605179756894,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 22,
+        "medium": 22,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.36,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0033275608516829328,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 19,
+        "medium": 25,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.48,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.003462762317012369,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 17,
+        "medium": 27,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.56,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004440729211573569,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 14,
+        "medium": 30,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.68,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004629470634004991,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 12,
+        "medium": 32,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.76,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0046975071978377116,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 10,
+        "medium": 34,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.84,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.006759825142178086,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 5,
+        "medium": 39,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.04,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 4,
+        "medium": 40,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.08,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 3,
+        "medium": 41,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.12,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.00030764633030018473,
+      "counts": {
+        "high": 2,
+        "medium": 42,
+        "low": 6
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.16,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0004642580999453076,
+      "medium": 0.0004465597273635366,
+      "counts": {
+        "high": 40,
+        "medium": 2,
+        "low": 8
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.72,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0006990849798887908,
+      "medium": 0.0004465597273635366,
+      "counts": {
+        "high": 37,
+        "medium": 5,
+        "low": 8
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.84,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0008424165880538195,
+      "medium": 0.0004465597273635366,
+      "counts": {
+        "high": 35,
+        "medium": 7,
+        "low": 8
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.92,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0010725378181303605,
+      "medium": 0.0004465597273635366,
+      "counts": {
+        "high": 33,
+        "medium": 9,
+        "low": 8
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.0,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0012116294635907965,
+      "medium": 0.0004465597273635366,
+      "counts": {
+        "high": 32,
+        "medium": 10,
+        "low": 8
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.04,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002029768206571185,
+      "medium": 0.0004465597273635366,
+      "counts": {
+        "high": 28,
+        "medium": 14,
+        "low": 8
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.2,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0023760460850624776,
+      "medium": 0.0004465597273635366,
+      "counts": {
+        "high": 26,
+        "medium": 16,
+        "low": 8
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.28,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002554414324906131,
+      "medium": 0.0004465597273635366,
+      "counts": {
+        "high": 23,
+        "medium": 19,
+        "low": 8
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.4,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0026605605179756894,
+      "medium": 0.0004465597273635366,
+      "counts": {
+        "high": 22,
+        "medium": 20,
+        "low": 8
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.44,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0033275608516829328,
+      "medium": 0.0004465597273635366,
+      "counts": {
+        "high": 19,
+        "medium": 23,
+        "low": 8
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.56,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.003462762317012369,
+      "medium": 0.0004465597273635366,
+      "counts": {
+        "high": 17,
+        "medium": 25,
+        "low": 8
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.64,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004440729211573569,
+      "medium": 0.0004465597273635366,
+      "counts": {
+        "high": 14,
+        "medium": 28,
+        "low": 8
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.76,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004629470634004991,
+      "medium": 0.0004465597273635366,
+      "counts": {
+        "high": 12,
+        "medium": 30,
+        "low": 8
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.84,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0046975071978377116,
+      "medium": 0.0004465597273635366,
+      "counts": {
+        "high": 10,
+        "medium": 32,
+        "low": 8
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.92,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.006759825142178086,
+      "medium": 0.0004465597273635366,
+      "counts": {
+        "high": 5,
+        "medium": 37,
+        "low": 8
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.12,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.0004465597273635366,
+      "counts": {
+        "high": 4,
+        "medium": 38,
+        "low": 8
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.16,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.0004465597273635366,
+      "counts": {
+        "high": 3,
+        "medium": 39,
+        "low": 8
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.2,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.0004465597273635366,
+      "counts": {
+        "high": 2,
+        "medium": 40,
+        "low": 8
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.24,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0006990849798887908,
+      "medium": 0.0004642580999453076,
+      "counts": {
+        "high": 37,
+        "medium": 3,
+        "low": 10
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 1.92,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0008424165880538195,
+      "medium": 0.0004642580999453076,
+      "counts": {
+        "high": 35,
+        "medium": 5,
+        "low": 10
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.0,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0010725378181303605,
+      "medium": 0.0004642580999453076,
+      "counts": {
+        "high": 33,
+        "medium": 7,
+        "low": 10
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.08,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0012116294635907965,
+      "medium": 0.0004642580999453076,
+      "counts": {
+        "high": 32,
+        "medium": 8,
+        "low": 10
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.12,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002029768206571185,
+      "medium": 0.0004642580999453076,
+      "counts": {
+        "high": 28,
+        "medium": 12,
+        "low": 10
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.28,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0023760460850624776,
+      "medium": 0.0004642580999453076,
+      "counts": {
+        "high": 26,
+        "medium": 14,
+        "low": 10
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.36,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002554414324906131,
+      "medium": 0.0004642580999453076,
+      "counts": {
+        "high": 23,
+        "medium": 17,
+        "low": 10
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.48,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0026605605179756894,
+      "medium": 0.0004642580999453076,
+      "counts": {
+        "high": 22,
+        "medium": 18,
+        "low": 10
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.52,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0033275608516829328,
+      "medium": 0.0004642580999453076,
+      "counts": {
+        "high": 19,
+        "medium": 21,
+        "low": 10
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.64,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.003462762317012369,
+      "medium": 0.0004642580999453076,
+      "counts": {
+        "high": 17,
+        "medium": 23,
+        "low": 10
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.72,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004440729211573569,
+      "medium": 0.0004642580999453076,
+      "counts": {
+        "high": 14,
+        "medium": 26,
+        "low": 10
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.84,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004629470634004991,
+      "medium": 0.0004642580999453076,
+      "counts": {
+        "high": 12,
+        "medium": 28,
+        "low": 10
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.92,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0046975071978377116,
+      "medium": 0.0004642580999453076,
+      "counts": {
+        "high": 10,
+        "medium": 30,
+        "low": 10
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.0,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.006759825142178086,
+      "medium": 0.0004642580999453076,
+      "counts": {
+        "high": 5,
+        "medium": 35,
+        "low": 10
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.2,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.0004642580999453076,
+      "counts": {
+        "high": 4,
+        "medium": 36,
+        "low": 10
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.24,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.0004642580999453076,
+      "counts": {
+        "high": 3,
+        "medium": 37,
+        "low": 10
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.28,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.0004642580999453076,
+      "counts": {
+        "high": 2,
+        "medium": 38,
+        "low": 10
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.32,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0008424165880538195,
+      "medium": 0.0006990849798887908,
+      "counts": {
+        "high": 35,
+        "medium": 2,
+        "low": 13
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.12,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0010725378181303605,
+      "medium": 0.0006990849798887908,
+      "counts": {
+        "high": 33,
+        "medium": 4,
+        "low": 13
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.2,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0012116294635907965,
+      "medium": 0.0006990849798887908,
+      "counts": {
+        "high": 32,
+        "medium": 5,
+        "low": 13
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.24,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002029768206571185,
+      "medium": 0.0006990849798887908,
+      "counts": {
+        "high": 28,
+        "medium": 9,
+        "low": 13
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.4,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0023760460850624776,
+      "medium": 0.0006990849798887908,
+      "counts": {
+        "high": 26,
+        "medium": 11,
+        "low": 13
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.48,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002554414324906131,
+      "medium": 0.0006990849798887908,
+      "counts": {
+        "high": 23,
+        "medium": 14,
+        "low": 13
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.6,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0026605605179756894,
+      "medium": 0.0006990849798887908,
+      "counts": {
+        "high": 22,
+        "medium": 15,
+        "low": 13
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.64,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0033275608516829328,
+      "medium": 0.0006990849798887908,
+      "counts": {
+        "high": 19,
+        "medium": 18,
+        "low": 13
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.76,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.003462762317012369,
+      "medium": 0.0006990849798887908,
+      "counts": {
+        "high": 17,
+        "medium": 20,
+        "low": 13
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.84,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004440729211573569,
+      "medium": 0.0006990849798887908,
+      "counts": {
+        "high": 14,
+        "medium": 23,
+        "low": 13
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.96,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004629470634004991,
+      "medium": 0.0006990849798887908,
+      "counts": {
+        "high": 12,
+        "medium": 25,
+        "low": 13
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.04,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0046975071978377116,
+      "medium": 0.0006990849798887908,
+      "counts": {
+        "high": 10,
+        "medium": 27,
+        "low": 13
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.12,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.006759825142178086,
+      "medium": 0.0006990849798887908,
+      "counts": {
+        "high": 5,
+        "medium": 32,
+        "low": 13
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.32,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.0006990849798887908,
+      "counts": {
+        "high": 4,
+        "medium": 33,
+        "low": 13
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.36,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.0006990849798887908,
+      "counts": {
+        "high": 3,
+        "medium": 34,
+        "low": 13
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.4,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.0006990849798887908,
+      "counts": {
+        "high": 2,
+        "medium": 35,
+        "low": 13
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.44,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0010725378181303605,
+      "medium": 0.0008424165880538195,
+      "counts": {
+        "high": 33,
+        "medium": 2,
+        "low": 15
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.28,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0012116294635907965,
+      "medium": 0.0008424165880538195,
+      "counts": {
+        "high": 32,
+        "medium": 3,
+        "low": 15
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.32,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002029768206571185,
+      "medium": 0.0008424165880538195,
+      "counts": {
+        "high": 28,
+        "medium": 7,
+        "low": 15
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.48,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0023760460850624776,
+      "medium": 0.0008424165880538195,
+      "counts": {
+        "high": 26,
+        "medium": 9,
+        "low": 15
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.56,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002554414324906131,
+      "medium": 0.0008424165880538195,
+      "counts": {
+        "high": 23,
+        "medium": 12,
+        "low": 15
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.68,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0026605605179756894,
+      "medium": 0.0008424165880538195,
+      "counts": {
+        "high": 22,
+        "medium": 13,
+        "low": 15
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.72,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0033275608516829328,
+      "medium": 0.0008424165880538195,
+      "counts": {
+        "high": 19,
+        "medium": 16,
+        "low": 15
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.84,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.003462762317012369,
+      "medium": 0.0008424165880538195,
+      "counts": {
+        "high": 17,
+        "medium": 18,
+        "low": 15
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.92,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004440729211573569,
+      "medium": 0.0008424165880538195,
+      "counts": {
+        "high": 14,
+        "medium": 21,
+        "low": 15
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.04,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004629470634004991,
+      "medium": 0.0008424165880538195,
+      "counts": {
+        "high": 12,
+        "medium": 23,
+        "low": 15
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.12,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0046975071978377116,
+      "medium": 0.0008424165880538195,
+      "counts": {
+        "high": 10,
+        "medium": 25,
+        "low": 15
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.2,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.006759825142178086,
+      "medium": 0.0008424165880538195,
+      "counts": {
+        "high": 5,
+        "medium": 30,
+        "low": 15
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.4,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.0008424165880538195,
+      "counts": {
+        "high": 4,
+        "medium": 31,
+        "low": 15
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.44,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.0008424165880538195,
+      "counts": {
+        "high": 3,
+        "medium": 32,
+        "low": 15
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.48,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.0008424165880538195,
+      "counts": {
+        "high": 2,
+        "medium": 33,
+        "low": 15
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.52,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0012116294635907965,
+      "medium": 0.0010725378181303605,
+      "counts": {
+        "high": 32,
+        "medium": 1,
+        "low": 17
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.4,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002029768206571185,
+      "medium": 0.0010725378181303605,
+      "counts": {
+        "high": 28,
+        "medium": 5,
+        "low": 17
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.56,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0023760460850624776,
+      "medium": 0.0010725378181303605,
+      "counts": {
+        "high": 26,
+        "medium": 7,
+        "low": 17
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.64,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002554414324906131,
+      "medium": 0.0010725378181303605,
+      "counts": {
+        "high": 23,
+        "medium": 10,
+        "low": 17
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.76,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0026605605179756894,
+      "medium": 0.0010725378181303605,
+      "counts": {
+        "high": 22,
+        "medium": 11,
+        "low": 17
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.8,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0033275608516829328,
+      "medium": 0.0010725378181303605,
+      "counts": {
+        "high": 19,
+        "medium": 14,
+        "low": 17
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.92,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.003462762317012369,
+      "medium": 0.0010725378181303605,
+      "counts": {
+        "high": 17,
+        "medium": 16,
+        "low": 17
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.0,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004440729211573569,
+      "medium": 0.0010725378181303605,
+      "counts": {
+        "high": 14,
+        "medium": 19,
+        "low": 17
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.12,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004629470634004991,
+      "medium": 0.0010725378181303605,
+      "counts": {
+        "high": 12,
+        "medium": 21,
+        "low": 17
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.2,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0046975071978377116,
+      "medium": 0.0010725378181303605,
+      "counts": {
+        "high": 10,
+        "medium": 23,
+        "low": 17
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.28,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.006759825142178086,
+      "medium": 0.0010725378181303605,
+      "counts": {
+        "high": 5,
+        "medium": 28,
+        "low": 17
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.48,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.0010725378181303605,
+      "counts": {
+        "high": 4,
+        "medium": 29,
+        "low": 17
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.52,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.0010725378181303605,
+      "counts": {
+        "high": 3,
+        "medium": 30,
+        "low": 17
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.56,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.0010725378181303605,
+      "counts": {
+        "high": 2,
+        "medium": 31,
+        "low": 17
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.6,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002029768206571185,
+      "medium": 0.0012116294635907965,
+      "counts": {
+        "high": 28,
+        "medium": 4,
+        "low": 18
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.6,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0023760460850624776,
+      "medium": 0.0012116294635907965,
+      "counts": {
+        "high": 26,
+        "medium": 6,
+        "low": 18
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.68,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002554414324906131,
+      "medium": 0.0012116294635907965,
+      "counts": {
+        "high": 23,
+        "medium": 9,
+        "low": 18
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.8,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0026605605179756894,
+      "medium": 0.0012116294635907965,
+      "counts": {
+        "high": 22,
+        "medium": 10,
+        "low": 18
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.84,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0033275608516829328,
+      "medium": 0.0012116294635907965,
+      "counts": {
+        "high": 19,
+        "medium": 13,
+        "low": 18
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.96,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.003462762317012369,
+      "medium": 0.0012116294635907965,
+      "counts": {
+        "high": 17,
+        "medium": 15,
+        "low": 18
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.04,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004440729211573569,
+      "medium": 0.0012116294635907965,
+      "counts": {
+        "high": 14,
+        "medium": 18,
+        "low": 18
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.16,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004629470634004991,
+      "medium": 0.0012116294635907965,
+      "counts": {
+        "high": 12,
+        "medium": 20,
+        "low": 18
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.24,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0046975071978377116,
+      "medium": 0.0012116294635907965,
+      "counts": {
+        "high": 10,
+        "medium": 22,
+        "low": 18
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.32,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.006759825142178086,
+      "medium": 0.0012116294635907965,
+      "counts": {
+        "high": 5,
+        "medium": 27,
+        "low": 18
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.52,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.0012116294635907965,
+      "counts": {
+        "high": 4,
+        "medium": 28,
+        "low": 18
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.56,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.0012116294635907965,
+      "counts": {
+        "high": 3,
+        "medium": 29,
+        "low": 18
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.6,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.0012116294635907965,
+      "counts": {
+        "high": 2,
+        "medium": 30,
+        "low": 18
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.64,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0023760460850624776,
+      "medium": 0.002029768206571185,
+      "counts": {
+        "high": 26,
+        "medium": 2,
+        "low": 22
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.84,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002554414324906131,
+      "medium": 0.002029768206571185,
+      "counts": {
+        "high": 23,
+        "medium": 5,
+        "low": 22
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 2.96,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0026605605179756894,
+      "medium": 0.002029768206571185,
+      "counts": {
+        "high": 22,
+        "medium": 6,
+        "low": 22
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.0,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0033275608516829328,
+      "medium": 0.002029768206571185,
+      "counts": {
+        "high": 19,
+        "medium": 9,
+        "low": 22
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.12,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.003462762317012369,
+      "medium": 0.002029768206571185,
+      "counts": {
+        "high": 17,
+        "medium": 11,
+        "low": 22
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.2,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004440729211573569,
+      "medium": 0.002029768206571185,
+      "counts": {
+        "high": 14,
+        "medium": 14,
+        "low": 22
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.32,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004629470634004991,
+      "medium": 0.002029768206571185,
+      "counts": {
+        "high": 12,
+        "medium": 16,
+        "low": 22
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.4,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0046975071978377116,
+      "medium": 0.002029768206571185,
+      "counts": {
+        "high": 10,
+        "medium": 18,
+        "low": 22
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.48,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.006759825142178086,
+      "medium": 0.002029768206571185,
+      "counts": {
+        "high": 5,
+        "medium": 23,
+        "low": 22
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.68,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.002029768206571185,
+      "counts": {
+        "high": 4,
+        "medium": 24,
+        "low": 22
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.72,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.002029768206571185,
+      "counts": {
+        "high": 3,
+        "medium": 25,
+        "low": 22
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.76,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.002029768206571185,
+      "counts": {
+        "high": 2,
+        "medium": 26,
+        "low": 22
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.8,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.002554414324906131,
+      "medium": 0.0023760460850624776,
+      "counts": {
+        "high": 23,
+        "medium": 3,
+        "low": 24
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.04,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0026605605179756894,
+      "medium": 0.0023760460850624776,
+      "counts": {
+        "high": 22,
+        "medium": 4,
+        "low": 24
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.08,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0033275608516829328,
+      "medium": 0.0023760460850624776,
+      "counts": {
+        "high": 19,
+        "medium": 7,
+        "low": 24
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.2,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.003462762317012369,
+      "medium": 0.0023760460850624776,
+      "counts": {
+        "high": 17,
+        "medium": 9,
+        "low": 24
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.28,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004440729211573569,
+      "medium": 0.0023760460850624776,
+      "counts": {
+        "high": 14,
+        "medium": 12,
+        "low": 24
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.4,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004629470634004991,
+      "medium": 0.0023760460850624776,
+      "counts": {
+        "high": 12,
+        "medium": 14,
+        "low": 24
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.48,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0046975071978377116,
+      "medium": 0.0023760460850624776,
+      "counts": {
+        "high": 10,
+        "medium": 16,
+        "low": 24
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.56,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.006759825142178086,
+      "medium": 0.0023760460850624776,
+      "counts": {
+        "high": 5,
+        "medium": 21,
+        "low": 24
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.76,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.0023760460850624776,
+      "counts": {
+        "high": 4,
+        "medium": 22,
+        "low": 24
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.8,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.0023760460850624776,
+      "counts": {
+        "high": 3,
+        "medium": 23,
+        "low": 24
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.84,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.0023760460850624776,
+      "counts": {
+        "high": 2,
+        "medium": 24,
+        "low": 24
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.88,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0026605605179756894,
+      "medium": 0.002554414324906131,
+      "counts": {
+        "high": 22,
+        "medium": 1,
+        "low": 27
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.2,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0033275608516829328,
+      "medium": 0.002554414324906131,
+      "counts": {
+        "high": 19,
+        "medium": 4,
+        "low": 27
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.32,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.003462762317012369,
+      "medium": 0.002554414324906131,
+      "counts": {
+        "high": 17,
+        "medium": 6,
+        "low": 27
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.4,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004440729211573569,
+      "medium": 0.002554414324906131,
+      "counts": {
+        "high": 14,
+        "medium": 9,
+        "low": 27
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.52,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004629470634004991,
+      "medium": 0.002554414324906131,
+      "counts": {
+        "high": 12,
+        "medium": 11,
+        "low": 27
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.6,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0046975071978377116,
+      "medium": 0.002554414324906131,
+      "counts": {
+        "high": 10,
+        "medium": 13,
+        "low": 27
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.68,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.006759825142178086,
+      "medium": 0.002554414324906131,
+      "counts": {
+        "high": 5,
+        "medium": 18,
+        "low": 27
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.88,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.002554414324906131,
+      "counts": {
+        "high": 4,
+        "medium": 19,
+        "low": 27
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.92,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.002554414324906131,
+      "counts": {
+        "high": 3,
+        "medium": 20,
+        "low": 27
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.96,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.002554414324906131,
+      "counts": {
+        "high": 2,
+        "medium": 21,
+        "low": 27
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.0,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0033275608516829328,
+      "medium": 0.0026605605179756894,
+      "counts": {
+        "high": 19,
+        "medium": 3,
+        "low": 28
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.36,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.003462762317012369,
+      "medium": 0.0026605605179756894,
+      "counts": {
+        "high": 17,
+        "medium": 5,
+        "low": 28
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.44,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004440729211573569,
+      "medium": 0.0026605605179756894,
+      "counts": {
+        "high": 14,
+        "medium": 8,
+        "low": 28
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.56,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004629470634004991,
+      "medium": 0.0026605605179756894,
+      "counts": {
+        "high": 12,
+        "medium": 10,
+        "low": 28
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.64,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0046975071978377116,
+      "medium": 0.0026605605179756894,
+      "counts": {
+        "high": 10,
+        "medium": 12,
+        "low": 28
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.72,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.006759825142178086,
+      "medium": 0.0026605605179756894,
+      "counts": {
+        "high": 5,
+        "medium": 17,
+        "low": 28
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.92,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.0026605605179756894,
+      "counts": {
+        "high": 4,
+        "medium": 18,
+        "low": 28
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.96,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.0026605605179756894,
+      "counts": {
+        "high": 3,
+        "medium": 19,
+        "low": 28
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.0,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.0026605605179756894,
+      "counts": {
+        "high": 2,
+        "medium": 20,
+        "low": 28
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.04,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.003462762317012369,
+      "medium": 0.0033275608516829328,
+      "counts": {
+        "high": 17,
+        "medium": 2,
+        "low": 31
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.56,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004440729211573569,
+      "medium": 0.0033275608516829328,
+      "counts": {
+        "high": 14,
+        "medium": 5,
+        "low": 31
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.68,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004629470634004991,
+      "medium": 0.0033275608516829328,
+      "counts": {
+        "high": 12,
+        "medium": 7,
+        "low": 31
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.76,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0046975071978377116,
+      "medium": 0.0033275608516829328,
+      "counts": {
+        "high": 10,
+        "medium": 9,
+        "low": 31
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.84,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.006759825142178086,
+      "medium": 0.0033275608516829328,
+      "counts": {
+        "high": 5,
+        "medium": 14,
+        "low": 31
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.04,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.0033275608516829328,
+      "counts": {
+        "high": 4,
+        "medium": 15,
+        "low": 31
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.08,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.0033275608516829328,
+      "counts": {
+        "high": 3,
+        "medium": 16,
+        "low": 31
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.12,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.0033275608516829328,
+      "counts": {
+        "high": 2,
+        "medium": 17,
+        "low": 31
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.16,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004440729211573569,
+      "medium": 0.003462762317012369,
+      "counts": {
+        "high": 14,
+        "medium": 3,
+        "low": 33
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.76,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004629470634004991,
+      "medium": 0.003462762317012369,
+      "counts": {
+        "high": 12,
+        "medium": 5,
+        "low": 33
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.84,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0046975071978377116,
+      "medium": 0.003462762317012369,
+      "counts": {
+        "high": 10,
+        "medium": 7,
+        "low": 33
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.92,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.006759825142178086,
+      "medium": 0.003462762317012369,
+      "counts": {
+        "high": 5,
+        "medium": 12,
+        "low": 33
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.12,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.003462762317012369,
+      "counts": {
+        "high": 4,
+        "medium": 13,
+        "low": 33
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.16,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.003462762317012369,
+      "counts": {
+        "high": 3,
+        "medium": 14,
+        "low": 33
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.2,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.003462762317012369,
+      "counts": {
+        "high": 2,
+        "medium": 15,
+        "low": 33
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.24,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.004629470634004991,
+      "medium": 0.004440729211573569,
+      "counts": {
+        "high": 12,
+        "medium": 2,
+        "low": 36
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 3.96,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0046975071978377116,
+      "medium": 0.004440729211573569,
+      "counts": {
+        "high": 10,
+        "medium": 4,
+        "low": 36
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.04,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.006759825142178086,
+      "medium": 0.004440729211573569,
+      "counts": {
+        "high": 5,
+        "medium": 9,
+        "low": 36
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.24,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.004440729211573569,
+      "counts": {
+        "high": 4,
+        "medium": 10,
+        "low": 36
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.28,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.004440729211573569,
+      "counts": {
+        "high": 3,
+        "medium": 11,
+        "low": 36
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.32,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.004440729211573569,
+      "counts": {
+        "high": 2,
+        "medium": 12,
+        "low": 36
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.36,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.0046975071978377116,
+      "medium": 0.004629470634004991,
+      "counts": {
+        "high": 10,
+        "medium": 2,
+        "low": 38
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.12,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.006759825142178086,
+      "medium": 0.004629470634004991,
+      "counts": {
+        "high": 5,
+        "medium": 7,
+        "low": 38
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.32,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.004629470634004991,
+      "counts": {
+        "high": 4,
+        "medium": 8,
+        "low": 38
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.36,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.004629470634004991,
+      "counts": {
+        "high": 3,
+        "medium": 9,
+        "low": 38
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.4,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.004629470634004991,
+      "counts": {
+        "high": 2,
+        "medium": 10,
+        "low": 38
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.44,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.006759825142178086,
+      "medium": 0.0046975071978377116,
+      "counts": {
+        "high": 5,
+        "medium": 5,
+        "low": 40
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.4,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.0046975071978377116,
+      "counts": {
+        "high": 4,
+        "medium": 6,
+        "low": 40
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.44,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.0046975071978377116,
+      "counts": {
+        "high": 3,
+        "medium": 7,
+        "low": 40
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.48,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.0046975071978377116,
+      "counts": {
+        "high": 2,
+        "medium": 8,
+        "low": 40
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.52,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.00713511013370715,
+      "medium": 0.006759825142178086,
+      "counts": {
+        "high": 4,
+        "medium": 1,
+        "low": 45
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.64,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.006759825142178086,
+      "counts": {
+        "high": 3,
+        "medium": 2,
+        "low": 45
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.68,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.006759825142178086,
+      "counts": {
+        "high": 2,
+        "medium": 3,
+        "low": 45
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.72,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.008115141257936768,
+      "medium": 0.00713511013370715,
+      "counts": {
+        "high": 3,
+        "medium": 1,
+        "low": 46
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.72,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.00713511013370715,
+      "counts": {
+        "high": 2,
+        "medium": 2,
+        "low": 46
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.76,
+      "constraints_ok": false
+    },
+    {
+      "high": 0.016380504089966684,
+      "medium": 0.008115141257936768,
+      "counts": {
+        "high": 2,
+        "medium": 1,
+        "low": 47
+      },
+      "top1_precision": {
+        "high": 0.0,
+        "medium": 0.0,
+        "low": 0.0
+      },
+      "handoff_accuracy": 0.0,
+      "avg_recommended_k": 4.8,
+      "constraints_ok": false
+    }
+  ]
+}

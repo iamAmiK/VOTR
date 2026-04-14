@@ -1,0 +1,261 @@
+{
+  "cases": [
+    {
+      "id": "cross-app-50-hop-unique-servers",
+      "description": "Fifty-hop strict benchmark with unique server per hop, auto-generated from current index metadata",
+      "session_id": "mh-50hop-unique-1",
+      "hops": [
+        {
+          "server_intent": "Enable AI agents to get structured data from unstructured web with AgentQL.",
+          "tool_intent": "Extracts structured data from a given URL using a prompt to describe the data and fields to extract.",
+          "expected_tool_key": "AgentQL::extract-web-data"
+        },
+        {
+          "server_intent": "Navigate your Aiven projects and interact with the PostgreSQL\u00ae, Apache Kafka\u00ae, ClickHouse\u00ae and OpenSearch\u00ae services",
+          "tool_intent": "List all projects on your Aiven account.",
+          "expected_tool_key": "Aiven::list_projects"
+        },
+        {
+          "server_intent": "Connect to a AnalyticDB for MySQL cluster for getting database or table metadata, querying and analyzing data.It will be supported to add the openapi for cluster operation in the future.",
+          "tool_intent": "Execute a SQL query in the AnalyticDB for MySQL Cluster",
+          "expected_tool_key": "Alibaba Cloud AnalyticDB for MySQL::execute_sql"
+        },
+        {
+          "server_intent": "MCP Server for Apache IoTDB database and its tools",
+          "tool_intent": "Execute SHOW/COUNT queries to read metadata from the database",
+          "expected_tool_key": "Apache IoTDB::metadata_query"
+        },
+        {
+          "server_intent": "Actors MCP Server: Use 3,000+ pre-built cloud tools to extract data from websites, e-commerce, social media, search engines, maps, and more",
+          "tool_intent": "Retrieves documentation, input schema, and details about a specific Actor.",
+          "expected_tool_key": "Apify::get-actor-details"
+        },
+        {
+          "server_intent": "APIMatic MCP Server is used to validate OpenAPI specifications using APIMatic. The server processes OpenAPI files and returns validation summaries by leveraging APIMatic\u2019s API.",
+          "tool_intent": "Validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary.",
+          "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic"
+        },
+        {
+          "server_intent": "Inspect traces, manage prompts, curate datasets, and run experiments using Arize Phoenix, an open-source AI and LLM observability tool.",
+          "tool_intent": "Provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults",
+          "expected_tool_key": "Arize Phoenix::arize-phoenix-otel"
+        },
+        {
+          "server_intent": "Comprehensive tools for managing collections and documents in a DataStax Astra DB NoSQL database with a full range of operations such as create, update, delete, find, and associated bulk actions.",
+          "tool_intent": "Get all collections in the database",
+          "expected_tool_key": "Astra DB::GetCollections"
+        },
+        {
+          "server_intent": "Marketing insights and audience analysis from Audiense reports, covering demographic, cultural, influencer, and content engagement analysis.",
+          "tool_intent": "Retrieves the list of Audiense insights reports owned by the authenticated user.",
+          "expected_tool_key": "Audiense Insights::get-reports"
+        },
+        {
+          "server_intent": "Specialized MCP servers that bring AWS best practices directly to your development workflow.",
+          "tool_intent": "Search AWS documentation and best practices using the official AWS search API.",
+          "expected_tool_key": "AWS::Search Documentation"
+        },
+        {
+          "server_intent": "Query and analyze your Axiom logs, traces, and all other event data in natural language",
+          "tool_intent": "Execute APL queries against Axiom datasets",
+          "expected_tool_key": "Axiom::queryApl"
+        },
+        {
+          "server_intent": "The Azure MCP Server gives MCP Clients access to key Azure services and tools like Azure Storage, Cosmos DB, the Azure CLI, and more.",
+          "tool_intent": "Lists all Azure AI Search services.",
+          "expected_tool_key": "Azure::List Azure AI Search services"
+        },
+        {
+          "server_intent": "Query Onchain data, like ERC20 tokens, transaction history, smart contract state.",
+          "tool_intent": "Read state from smart contracts on various blockchain networks.",
+          "expected_tool_key": "Bankless Onchain::read_contract"
+        },
+        {
+          "server_intent": "Chat with your builds, CI, and more.",
+          "tool_intent": "List all the apps available for the authenticated account",
+          "expected_tool_key": "Bitrise::list_apps"
+        },
+        {
+          "server_intent": "Interact with the Intelligent Content Management platform through Box AI.",
+          "tool_intent": "Get your current user information and check connection status.",
+          "expected_tool_key": "Box::box_who_am_i"
+        },
+        {
+          "server_intent": "Embeddings, vector search, document storage, and full-text search with the open-source AI application database",
+          "tool_intent": "List all collections with pagination support",
+          "expected_tool_key": "Chroma::chroma_list_collections"
+        },
+        {
+          "server_intent": "Enable AI Agents to fix build failures from CircleCI.",
+          "tool_intent": "Retrieves detailed failure logs from CircleCI builds. Can be used with CircleCI URLs or local project context.",
+          "expected_tool_key": "CircleCI::get_build_failure_logs"
+        },
+        {
+          "server_intent": "Query your ClickHouse database server.",
+          "tool_intent": "Execute SQL queries on your ClickHouse cluster.",
+          "expected_tool_key": "ClickHouse::run_select_query"
+        },
+        {
+          "server_intent": "Interact with Codacy API to query code quality issues, vulnerabilities, and coverage insights about your code.",
+          "tool_intent": "List organizations with pagination support.",
+          "expected_tool_key": "Codacy::codacy_list_organizations"
+        },
+        {
+          "server_intent": "Interact with CodeLogic, a Software Intelligence platform that graphs complex code and data architecture dependencies, to boost AI accuracy and insight.",
+          "tool_intent": "Pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class.",
+          "expected_tool_key": "CodeLogic::codelogic-method-impact"
+        },
+        {
+          "server_intent": "Query and analyze your Opik logs, traces, prompts and all other telemtry data from your LLMs in natural language.",
+          "tool_intent": "Create, list, update, and delete prompts",
+          "expected_tool_key": "Comet Opik::Prompts Management"
+        },
+        {
+          "server_intent": "Interact with the data stored in Couchbase clusters.",
+          "tool_intent": "Get a list of all the scopes and collections in the specified bucket.",
+          "expected_tool_key": "Couchbase::get_scopes_and_collections"
+        },
+        {
+          "server_intent": "Interact with task, doc, and project data in Dart, an AI-native project management tool",
+          "tool_intent": "Get information about the user's space, including available assignees, dartboards, folders, statuses, tags, priorities, and sizes",
+          "expected_tool_key": "Dart::get_config"
+        },
+        {
+          "server_intent": "Manage and utilize website content within the DevHub CMS platform",
+          "tool_intent": "Gets all businesses within the DevHub account. Returns a list of businesses with their IDs and names.",
+          "expected_tool_key": "DevHub::get_businesses"
+        },
+        {
+          "server_intent": "Manage and interact with the Dynatrace Platform  for real-time observability and monitoring.",
+          "tool_intent": "Lists problem details from your services, such as Kubernetes.",
+          "expected_tool_key": "Dynatrace::list_problems"
+        },
+        {
+          "server_intent": "Interact with EduBase, a comprehensive e-learning platform with advanced quizzing, exam management, and content organization capabilities",
+          "tool_intent": "Retrieves user information from the EduBase platform.",
+          "expected_tool_key": "EduBase::edubase_get_user"
+        },
+        {
+          "server_intent": "Query your data in Elasticsearch",
+          "tool_intent": "List all available Elasticsearch indices",
+          "expected_tool_key": "Elasticsearch::list_indices"
+        },
+        {
+          "server_intent": "Contract and template management for drafting, reviewing, and sending binding contracts.",
+          "tool_intent": "Draft for review or send contract",
+          "expected_tool_key": "eSignatures::create_contract"
+        },
+        {
+          "server_intent": "Search Engine made for AIs by Exa",
+          "tool_intent": "Performs real-time web searches with optimized results and content extraction.",
+          "expected_tool_key": "Exa::web_search_exa"
+        },
+        {
+          "server_intent": "Enable AI Agents to purchase anything in a secure way using Fewsats",
+          "tool_intent": "Retrieve the balance of the user's wallet",
+          "expected_tool_key": "Fewsats::balance"
+        },
+        {
+          "server_intent": "Perform queries and entity operations in your Fibery workspace.",
+          "tool_intent": "Retrieves a list of all databases available in your Fibery workspace.",
+          "expected_tool_key": "Fibery::list_databases"
+        },
+        {
+          "server_intent": "Stock market API made for AI agents",
+          "tool_intent": "Get income statements for a company.",
+          "expected_tool_key": "Financial Datasets::get_income_statements"
+        },
+        {
+          "server_intent": "Extract web data with Firecrawl",
+          "tool_intent": "Scrape content from a single URL with advanced options.",
+          "expected_tool_key": "Firecrawl::firecrawl_scrape"
+        },
+        {
+          "server_intent": "Gitee API integration, repository, issue, and pull request management, and more.",
+          "tool_intent": "List user authorized repositories",
+          "expected_tool_key": "Gitee::list_user_repos"
+        },
+        {
+          "server_intent": "Search, fetch, upload, and interact with Gyazo images, including metadata and OCR data.",
+          "tool_intent": "Full-text search for captures uploaded by users on Gyazo",
+          "expected_tool_key": "Gyazo::gyazo_search"
+        },
+        {
+          "server_intent": "Human-in-the-loop platform - Allow AI agents and automations to send requests for approval to your gotoHuman inbox.",
+          "tool_intent": "List all available review forms.",
+          "expected_tool_key": "gotoHuman::list-forms"
+        },
+        {
+          "server_intent": "Search dashboards, investigate incidents and query datasources in your Grafana instance",
+          "tool_intent": "Search for dashboards",
+          "expected_tool_key": "Grafana::search_dashboards"
+        },
+        {
+          "server_intent": "Ingest anything from Slack to Gmail to podcast feeds, in addition to web crawling, into a searchable Graphlit project.",
+          "tool_intent": "Searches and retrieves contents from the knowledge base.",
+          "expected_tool_key": "Graphlit::Query Contents"
+        },
+        {
+          "server_intent": "Provides AI assistants with a secure and structured way to explore and analyze data in GreptimeDB.",
+          "tool_intent": "Lists tables in the database.",
+          "expected_tool_key": "GreptimeDB::list_resources"
+        },
+        {
+          "server_intent": "Interact with the Heroku Platform through LLM-driven tools for managing apps, add-ons, dynos, databases, and more.",
+          "tool_intent": "List all Heroku apps. You can filter apps by personal, collaborator, team, or space.",
+          "expected_tool_key": "Heroku::list_apps"
+        },
+        {
+          "server_intent": "Connect to a Hologres instance, get table metadata, query and analyze data.",
+          "tool_intent": "Execute a SELECT SQL query on the Hologres server",
+          "expected_tool_key": "Hologres::execute_select_sql"
+        },
+        {
+          "server_intent": "Hyperbrowser is the next-generation platform empowering AI agents and enabling effortless, scalable browser automation.",
+          "tool_intent": "Extract formatted (markdown, screenshot etc) content from any webpage",
+          "expected_tool_key": "Hyperbrowser::scrape_webpage"
+        },
+        {
+          "server_intent": "Run Python in a code sandbox.",
+          "tool_intent": "Connects to a new machine or an existing one by ID.",
+          "expected_tool_key": "ForeverVM::repl"
+        },
+        {
+          "server_intent": "RAG Search over your content powered by Inkeep",
+          "tool_intent": "Retrieves product documentation about Inkeep. The query should be framed as a conversational question about Inkeep.",
+          "expected_tool_key": "Inkeep::search-product-content"
+        },
+        {
+          "server_intent": "Search the web using Kagi's search API",
+          "tool_intent": "Performs a web search to find information based on the query provided.",
+          "expected_tool_key": "Kagi Search::search"
+        },
+        {
+          "server_intent": "Build robust data workflows, integrations, and analytics on a single intuitive platform.",
+          "tool_intent": "Gets detailed information about a specific bucket.",
+          "expected_tool_key": "Keboola::get_bucket_detail"
+        },
+        {
+          "server_intent": "MCP Server for Lara Translate API, enabling powerful translation capabilities with support for language detection and context-aware translations.",
+          "tool_intent": "Translate text between languages",
+          "expected_tool_key": "Lara Translate::translate"
+        },
+        {
+          "server_intent": "Provides access to OpenTelemetry traces and metrics through Logfire.",
+          "tool_intent": "Get exception counts from traces grouped by file",
+          "expected_tool_key": "Logfire::find_exceptions"
+        },
+        {
+          "server_intent": "Open-source tool for collaborative editing, versioning, evaluating, and releasing prompts.",
+          "tool_intent": "List available prompts",
+          "expected_tool_key": "Langfuse Prompt Management::get-prompts"
+        },
+        {
+          "server_intent": "Make your AI agent speak every language on the planet, using Lingo.dev Localization Engine.",
+          "tool_intent": "Starts the MCP server.",
+          "expected_tool_key": "Lingo.dev::start-server"
+        }
+      ]
+    }
+  ]
+}

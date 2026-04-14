@@ -1,0 +1,43 @@
+{
+  "cases": [
+    {
+      "id": "github-search-then-commits",
+      "description": "Two-hop GitHub flow: find repos, then inspect commits",
+      "session_id": "mh-case-1",
+      "hops": [
+        {
+          "server_intent": "GitHub repositories and API",
+          "tool_intent": "search for repositories matching a query string",
+          "expected_tool_key": "GitHub::search_repositories"
+        },
+        {
+          "server_intent": "GitHub commit history",
+          "tool_intent": "list commits for a repository branch",
+          "expected_tool_key": "GitHub::list_commits"
+        }
+      ]
+    },
+    {
+      "id": "clickup-xero-slack-three-hop",
+      "description": "Find/delete task in ClickUp, list quotes in Xero, add reaction in Slack",
+      "session_id": "mh-case-2",
+      "hops": [
+        {
+          "server_intent": "ClickUp task management",
+          "tool_intent": "find a task and delete it",
+          "expected_tool_name": "delete_task"
+        },
+        {
+          "server_intent": "Xero accounting and sales quotes",
+          "tool_intent": "list all the sales quotes",
+          "expected_tool_name": "list_quotes"
+        },
+        {
+          "server_intent": "Slack messaging workspace",
+          "tool_intent": "add a reaction to a message",
+          "expected_tool_name": "slack_add_reaction"
+        }
+      ]
+    }
+  ]
+}

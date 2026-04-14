@@ -1,0 +1,777 @@
+{
+  "summary": {
+    "num_cases": 1,
+    "num_hops": 50,
+    "overall_top1_accuracy": 0.58,
+    "overall_handoff_accuracy_at_recommended_k": 0.7,
+    "confidence_buckets": {
+      "high": {
+        "count": 33,
+        "top1_accuracy": 0.6363636363636364,
+        "handoff_accuracy_at_recommended_k": 0.6363636363636364
+      },
+      "low": {
+        "count": 11,
+        "top1_accuracy": 0.5454545454545454,
+        "handoff_accuracy_at_recommended_k": 0.9090909090909091
+      },
+      "medium": {
+        "count": 6,
+        "top1_accuracy": 0.3333333333333333,
+        "handoff_accuracy_at_recommended_k": 0.6666666666666666
+      }
+    }
+  },
+  "rows": [
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 0,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "AgentQL::extract-web-data"
+      ],
+      "predicted_top1": "AgentQL::extract-web-data",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0048299840429902804,
+      "top1_score": 0.03730507843411069,
+      "top2_score": 0.03247509439112041
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 1,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "expected_labels": [
+        "Aiven::list_projects"
+      ],
+      "predicted_top1": "Aiven::list_services",
+      "hit_at_1": false,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 2,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Alibaba Cloud AnalyticDB for MySQL::get_query_plan"
+      ],
+      "predicted_top1": "Alibaba Cloud AnalyticDB for MySQL::get_query_plan",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0010452489854873084,
+      "top1_score": 0.0373991935483871,
+      "top2_score": 0.03635394456289979
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Apache IoTDB::list_tables"
+      ],
+      "predicted_top1": "Apache IoTDB::list_tables",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0014710187353629972,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03705357142857143
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 4,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Apify::get-actor-details"
+      ],
+      "predicted_top1": "Apify::get-actor-details",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0036015088830952738,
+      "top1_score": 0.037669533704544754,
+      "top2_score": 0.03406802482144948
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "APIMatic MCP::validate-openapi-using-apimatic"
+      ],
+      "predicted_top1": "APIMatic MCP::validate-openapi-using-apimatic",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0024715338654124827,
+      "top1_score": 0.03276944541332403,
+      "top2_score": 0.030297911547911546
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 6,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "expected_labels": [
+        "Arize Phoenix::arize-phoenix-otel"
+      ],
+      "predicted_top1": "Arize Phoenix::@arizeai/phoenix-client",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 7,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Astra DB::ListRecords"
+      ],
+      "predicted_top1": "Astra DB::ListRecords",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0017079122182242223,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.036816677945710204
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 8,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Audiense Insights::get-reports"
+      ],
+      "predicted_top1": "Raygun::get_application",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0004353505358264814,
+      "top1_score": 0.03710051333002153,
+      "top2_score": 0.03666516279419505
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 9,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "AWS::Search Documentation"
+      ],
+      "predicted_top1": "AWS::dynamodb_item_query",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.001354822684806821,
+      "top1_score": 0.038171500630517025,
+      "top2_score": 0.036816677945710204
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 10,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Axiom::listDatasets"
+      ],
+      "predicted_top1": "Axiom::listDatasets",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0018250234812189695,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.036699566682715457
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 11,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Azure::Query search indexes"
+      ],
+      "predicted_top1": "Azure DevOps::Query Work Items",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0022125315730910783,
+      "top1_score": 0.038260179799048125,
+      "top2_score": 0.036047648225957046
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 12,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Bankless Onchain::get_proxy"
+      ],
+      "predicted_top1": "Bankless Onchain::get_events",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.002938686416556327,
+      "top1_score": 0.03433992584209243,
+      "top2_score": 0.031401239425536104
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 13,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Bitrise::list_apps"
+      ],
+      "predicted_top1": "Bitrise::list_cache_items",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0017564836546051926,
+      "top1_score": 0.037642679900744415,
+      "top2_score": 0.03588619624613922
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 14,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Box::box_search_tool"
+      ],
+      "predicted_top1": "Box::box_search_tool",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0027218113409624503,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.035802778822971976
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 15,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "expected_labels": [
+        "Chroma::chroma_list_collections"
+      ],
+      "predicted_top1": "Chroma::chroma_list_collections",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0008604956883132425,
+      "top1_score": 0.0383424408014572,
+      "top2_score": 0.037481945113143955
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 16,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "expected_labels": [
+        "CircleCI::get_job_test_results"
+      ],
+      "predicted_top1": "CircleCI::get_build_failure_logs",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0009390985821582654,
+      "top1_score": 0.032036922327040834,
+      "top2_score": 0.03109782374488257
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 17,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "ClickHouse::list_tables"
+      ],
+      "predicted_top1": "ClickHouse::list_tables",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0013784751076527935,
+      "top1_score": 0.03843204653622422,
+      "top2_score": 0.03705357142857143
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 18,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Codacy::codacy_search_repository_srm_items"
+      ],
+      "predicted_top1": "Codacy::codacy_list_repository_issues",
+      "hit_at_1": false,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006104058113576907,
+      "top1_score": 0.038171500630517025,
+      "top2_score": 0.037561094819159334
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 19,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "CodeLogic::codelogic-method-impact"
+      ],
+      "predicted_top1": "CodeLogic::codelogic-method-impact",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.001112002693852504,
+      "top1_score": 0.038089915548931944,
+      "top2_score": 0.03697791285507944
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 20,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Comet Opik::Traces"
+      ],
+      "predicted_top1": "Comet Opik::Metrics",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.001146186593035177,
+      "top1_score": 0.03775614754098361,
+      "top2_score": 0.03660996094794843
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 21,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Couchbase::get_document_by_id"
+      ],
+      "predicted_top1": "Couchbase::get_document_by_id",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.001439648253503359,
+      "top1_score": 0.0383424408014572,
+      "top2_score": 0.03690279254795384
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 22,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Dart::list_docs"
+      ],
+      "predicted_top1": "Dart::list_docs",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 23,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "DevHub::get_locations"
+      ],
+      "predicted_top1": "Raygun::get_application",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0017564373254037452,
+      "top1_score": 0.03843204653622422,
+      "top2_score": 0.03667560921082048
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 24,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Dynatrace::list_problems"
+      ],
+      "predicted_top1": "Datadog::get-incidents",
+      "hit_at_1": false,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0007575753969696411,
+      "top1_score": 0.03372113997113997,
+      "top2_score": 0.03296356457417033
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 25,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "EduBase::edubase_get_user"
+      ],
+      "predicted_top1": "EduBase::edubase_get_user",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.002911658506678419,
+      "top1_score": 0.038089915548931944,
+      "top2_score": 0.035178257042253525
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 26,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Elasticsearch::search"
+      ],
+      "predicted_top1": "Elasticsearch::search",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0013823173536900019,
+      "top1_score": 0.03800416341399948,
+      "top2_score": 0.03662184606030948
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 27,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "eSignatures::list_templates"
+      ],
+      "predicted_top1": "Okta::list_users",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0017180535502389557,
+      "top1_score": 0.035633912655971475,
+      "top2_score": 0.03391585910573252
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 28,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Exa::github_search"
+      ],
+      "predicted_top1": "Exa::github_search",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0005169356174115625,
+      "top1_score": 0.03782201405152225,
+      "top2_score": 0.03730507843411069
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 29,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Fewsats::balance"
+      ],
+      "predicted_top1": "Fewsats::balance",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 8.680555555555525e-05,
+      "top1_score": 0.038078030436570896,
+      "top2_score": 0.03799122488101534
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 30,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Fibery::list_databases"
+      ],
+      "predicted_top1": "Fibery::list_databases",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0016217976159805872,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03690279254795384
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 31,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Financial Datasets::get_company_news"
+      ],
+      "predicted_top1": "Grafana::get_oncall_shift",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.011314761471341982,
+      "top1_score": 0.033353365384615384,
+      "top2_score": 0.0220386039132734
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 32,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Firecrawl::firecrawl_search"
+      ],
+      "predicted_top1": "Firecrawl::firecrawl_deep_research",
+      "hit_at_1": false,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.00029635556901395216,
+      "top1_score": 0.03722592872809531,
+      "top2_score": 0.03692957315908136
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 33,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Gitee::search_users"
+      ],
+      "predicted_top1": "Gitee::search_users",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0002689398855448624,
+      "top1_score": 0.03791161978628928,
+      "top2_score": 0.037642679900744415
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 34,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Gyazo::gyazo_search"
+      ],
+      "predicted_top1": "Gyazo::gyazo_search",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0015578242909185525,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.036966765873015874
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 35,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "gotoHuman::list-forms"
+      ],
+      "predicted_top1": "gotoHuman::list-forms",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0014878909076637761,
+      "top1_score": 0.038171500630517025,
+      "top2_score": 0.03668360972285325
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 36,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Grafana::search_dashboards"
+      ],
+      "predicted_top1": "Grafana::find_slow_requests",
+      "hit_at_1": false,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0005138503385347729,
+      "top1_score": 0.037594938649131285,
+      "top2_score": 0.03708108831059651
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 37,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Graphlit::Web Search (including Podcast Search)"
+      ],
+      "predicted_top1": "Graphlit::Retrieve Relevant Sources",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.006110552908931227,
+      "top1_score": 0.0377352084959667,
+      "top2_score": 0.03162465558703547
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 38,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "GreptimeDB::list_tools"
+      ],
+      "predicted_top1": "GreptimeDB::list_tools",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 9.254362771020375e-05,
+      "top1_score": 0.038260179799048125,
+      "top2_score": 0.03816763617133792
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 39,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "expected_labels": [
+        "Heroku::ps_list"
+      ],
+      "predicted_top1": "Heroku::list_private_spaces",
+      "hit_at_1": false,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0008689867626937992,
+      "top1_score": 0.038260179799048125,
+      "top2_score": 0.037391193036354325
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 40,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "Hologres::get_query_plan"
+      ],
+      "predicted_top1": "Hologres::get_query_plan",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 3.361851987172815e-05,
+      "top1_score": 0.03526481244671782,
+      "top2_score": 0.035231193926846094
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 41,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "expected_labels": [
+        "Hyperbrowser::search_with_bing"
+      ],
+      "predicted_top1": "Hyperbrowser::search_with_bing",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0010026093090715754,
+      "top1_score": 0.03452129650422936,
+      "top2_score": 0.033518687195157784
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 42,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "ForeverVM::listMachines"
+      ],
+      "predicted_top1": "ForeverVM::createMachine",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.003095643270995062,
+      "top1_score": 0.038260179799048125,
+      "top2_score": 0.03516453652805306
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 43,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Inkeep::search-product-content"
+      ],
+      "predicted_top1": "Inkeep::search-product-content",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.003533403842763974,
+      "top1_score": 0.038260179799048125,
+      "top2_score": 0.03472677595628415
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 44,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Kagi Search::search"
+      ],
+      "predicted_top1": "Kagi Search::search",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0018250234812189695,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.036699566682715457
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 45,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Keboola::get_job_detail"
+      ],
+      "predicted_top1": "Keboola::get_table_detail",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.002950206234990538,
+      "top1_score": 0.037746355478030263,
+      "top2_score": 0.034796149243039726
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 46,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Lara Translate::list_memories"
+      ],
+      "predicted_top1": "Lara Translate::list_memories",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0026764204712380335,
+      "top1_score": 0.03843204653622422,
+      "top2_score": 0.03575562606498619
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 47,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Logfire::get_logfire_records_schema"
+      ],
+      "predicted_top1": "Raygun::get_application",
+      "hit_at_1": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.001293398893544323,
+      "top1_score": 0.03843204653622422,
+      "top2_score": 0.0371386476426799
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 48,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Langfuse Prompt Management::get-prompt"
+      ],
+      "predicted_top1": "Langfuse Prompt Management::get-prompt",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011253966155473291,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.0373991935483871
+    },
+    {
+      "case_id": "cross-app-50-hop-adversarial-valid-unique-servers",
+      "hop_index": 49,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "Lingo.dev::list-users"
+      ],
+      "predicted_top1": "Lingo.dev::list-users",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0032987049380492003,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.035225885225885226
+    }
+  ]
+}

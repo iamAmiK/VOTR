@@ -1,0 +1,327 @@
+{
+  "summary": {
+    "num_cases": 1,
+    "num_hops": 20,
+    "overall_top1_accuracy": 0.95,
+    "overall_handoff_accuracy_at_recommended_k": 1.0,
+    "confidence_buckets": {
+      "high": {
+        "count": 8,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "low": {
+        "count": 11,
+        "top1_accuracy": 0.9090909090909091,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "medium": {
+        "count": 1,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      }
+    }
+  },
+  "rows": [
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 0,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "*::search_repositories"
+      ],
+      "predicted_top1": "GitHub::search_repositories",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 1,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "*::list_commits"
+      ],
+      "predicted_top1": "GitHub::list_commits",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.003582505221849483,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03494208494208494
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 2,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "*::slack_add_reaction"
+      ],
+      "predicted_top1": "Slack::slack_add_reaction",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.001301807905869909,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03722278225806452
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 3,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "*::slack_post_message"
+      ],
+      "predicted_top1": "Slack::slack_post_message",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 4,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "*::bdtick"
+      ],
+      "predicted_top1": "Bloomberg::bdp",
+      "hit_at_1": false,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.00026895491803278354,
+      "top1_score": 0.038260179799048125,
+      "top2_score": 0.03799122488101534
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 5,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "*::bdh"
+      ],
+      "predicted_top1": "Bloomberg::bdh",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006129703776451556,
+      "top1_score": 0.03775614754098361,
+      "top2_score": 0.03714317716333845
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 6,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "*::bdib"
+      ],
+      "predicted_top1": "Bloomberg::bdib",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011333971275801005,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037391193036354325
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 7,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "*::bds"
+      ],
+      "predicted_top1": "Bloomberg::bds",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0007570993963726264,
+      "top1_score": 0.03781362007168459,
+      "top2_score": 0.03705652067531196
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 8,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "*::search"
+      ],
+      "predicted_top1": "Google Drive::search",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0021706456010346376,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03635394456289979
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 9,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "*::list_spreadsheets"
+      ],
+      "predicted_top1": "Google Sheets::list_spreadsheets",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 8.960573476702455e-05,
+      "top1_score": 0.03791161978628928,
+      "top2_score": 0.03782201405152225
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 10,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "expected_labels": [
+        "*::list"
+      ],
+      "predicted_top1": "Google Tasks::list",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000836960501159334,
+      "top1_score": 0.038260179799048125,
+      "top2_score": 0.03742321929788879
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 11,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "*::list_quotes"
+      ],
+      "predicted_top1": "Xero-mcp-server::list_quotes",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 9.254362771020375e-05,
+      "top1_score": 0.038260179799048125,
+      "top2_score": 0.03816763617133792
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 12,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "*::delete_time_entry"
+      ],
+      "predicted_top1": "ClickUp::delete_time_entry",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0005687021885684429,
+      "top1_score": 0.03578097996823464,
+      "top2_score": 0.0352122777796662
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 13,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "*::jira_search"
+      ],
+      "predicted_top1": "Atlassian::jira_search",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0010426450507904708,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037481945113143955
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 14,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "*::linear_update_issue"
+      ],
+      "predicted_top1": "Linear::linear_update_issue",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011253966155473291,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.0373991935483871
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 15,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "*::monday-list-items-in-groups"
+      ],
+      "predicted_top1": "Monday.com::monday-list-items-in-groups",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0012195117298237357,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03730507843411069
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 16,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "*::list_databases"
+      ],
+      "predicted_top1": "Fibery::list_databases",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0019954628031192065,
+      "top1_score": 0.03370102292913,
+      "top2_score": 0.03170556012601079
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 17,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "*::search_records"
+      ],
+      "predicted_top1": "Airtable::search_records",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006922934871110495,
+      "top1_score": 0.03843204653622422,
+      "top2_score": 0.03773975304911317
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 18,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "*::get-coin-quotes"
+      ],
+      "predicted_top1": "coin_api_mcp::get-coin-quotes",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0005936379928315402,
+      "top1_score": 0.03816763617133792,
+      "top2_score": 0.03757399817850638
+    },
+    {
+      "case_id": "cross-app-20-hop",
+      "hop_index": 19,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "*::list_directory"
+      ],
+      "predicted_top1": "Filesystem::list_directory",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    }
+  ]
+}

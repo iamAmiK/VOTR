@@ -1,0 +1,301 @@
+{
+  "summary": {
+    "num_cases": 1,
+    "k": 5,
+    "keep_memory": false,
+    "mean_hop_acc_at_1": 0.85,
+    "mean_hop_acc_at_k": 1.0,
+    "chain_success_rate_at_k": 1.0
+  },
+  "results": [
+    {
+      "case_id": "cross-app-20-hop-strict",
+      "description": "Strict benchmark with independently curated exact tool labels per hop",
+      "hops": [
+        {
+          "expected_labels": [
+            "GitHub::search_repositories"
+          ],
+          "predicted_topk": [
+            "GitHub::search_repositories",
+            "GitHub::search_code",
+            "Gitee::search_open_source_repositories",
+            "GitHub::search_users",
+            "GitHub::list_pull_requests"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "GitHub::list_commits"
+          ],
+          "predicted_topk": [
+            "GitHub::list_commits",
+            "GitHub::list_pull_requests",
+            "GitHub::push_files",
+            "GitHub::get_pull_request_files",
+            "GitHub::list_issues"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Slack::slack_add_reaction"
+          ],
+          "predicted_topk": [
+            "Slack::slack_add_reaction",
+            "Slack::slack_reply_to_thread",
+            "Slack::slack_post_message",
+            "Slack::slack_get_thread_replies",
+            "Slack::slack_get_channel_history"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Slack::slack_post_message"
+          ],
+          "predicted_topk": [
+            "Slack::slack_post_message",
+            "Slack::slack_get_channel_history",
+            "Slack::slack_reply_to_thread",
+            "Slack::slack_list_channels",
+            "Slack::slack_add_reaction"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Bloomberg::bdp"
+          ],
+          "predicted_topk": [
+            "Bloomberg::bdtick",
+            "Bloomberg::bdp",
+            "Bloomberg::bdib",
+            "Bloomberg::bds",
+            "Bloomberg::bdh"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Bloomberg::bdh"
+          ],
+          "predicted_topk": [
+            "Bloomberg::bdh",
+            "Financial Datasets::get_crypto_prices",
+            "Financial Datasets::get_historical_stock_prices",
+            "Financial Datasets::get_historical_crypto_prices",
+            "Financial Datasets::get_current_stock_price"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Bloomberg::bdib"
+          ],
+          "predicted_topk": [
+            "Bloomberg::bdib",
+            "Bloomberg::bdh",
+            "Bloomberg::bdtick",
+            "Bloomberg::bdp",
+            "Bloomberg::beqs"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Bloomberg::earning"
+          ],
+          "predicted_topk": [
+            "Bloomberg::bds",
+            "Bloomberg::beqs",
+            "Bloomberg::bdh",
+            "Bloomberg::earning",
+            "Bloomberg::dividend"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Google Drive::search"
+          ],
+          "predicted_topk": [
+            "Google Drive::search",
+            "Google Sheets::listSpreadsheets",
+            "Google Sheets::list_spreadsheets",
+            "Graphlit::Google Drive",
+            "Filesystem::search_files"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Google Sheets::list_spreadsheets"
+          ],
+          "predicted_topk": [
+            "Google Sheets::list_spreadsheets",
+            "Google Sheets::get_multiple_spreadsheet_summary",
+            "Google Sheets::get_multiple_sheet_data",
+            "Google Sheets::list_sheets",
+            "Google Sheets::create_spreadsheet"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Google Tasks::list"
+          ],
+          "predicted_topk": [
+            "Google Tasks::list",
+            "Google Tasks::clear",
+            "ClickUp::get_tasks",
+            "Google Tasks::search",
+            "Google Tasks::create"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Xero-mcp-server::list_quotes"
+          ],
+          "predicted_topk": [
+            "Xero-mcp-server::list_quotes",
+            "Xero::list-quotes",
+            "Xero-mcp-server::list_invoices",
+            "Xero::list-invoices",
+            "Xero-mcp-server::list_contacts"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "ClickUp::delete_task"
+          ],
+          "predicted_topk": [
+            "ClickUp::delete_time_entry",
+            "ClickUp::create_task",
+            "ClickUp::delete_folder",
+            "ClickUp::delete_list",
+            "ClickUp::delete_task"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Atlassian::jira_search"
+          ],
+          "predicted_topk": [
+            "Atlassian::jira_search",
+            "Atlassian::confluence_search",
+            "Atlassian::jira_create_issue",
+            "Atlassian::jira_update_issue",
+            "Atlassian::jira_get_issue"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Linear::linear_update_issue"
+          ],
+          "predicted_topk": [
+            "Linear::linear_update_issue",
+            "Linear::linear_create_issue",
+            "Linear::linear_add_comment",
+            "Linear (Go)::linear_update_issue",
+            "Linear::linear_get_user_issues"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Monday.com::monday-list-items-in-groups"
+          ],
+          "predicted_topk": [
+            "Monday.com::monday-list-items-in-groups",
+            "Monday.com::monday-list-subitems-in-items",
+            "Monday.com::monday-get-board-groups",
+            "Monday.com::monday-list-boards",
+            "Monday.com::monday-get-docs"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Fibery::list_databases"
+          ],
+          "predicted_topk": [
+            "Fibery::list_databases",
+            "Outline::List Collections",
+            "Graphlit::List Notion Databases",
+            "Sqlite::list_tables",
+            "MongoDB Lens::list-connections"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Airtable::search_records"
+          ],
+          "predicted_topk": [
+            "Airtable::search_records",
+            "Airtable::list_records",
+            "Airtable::get_record",
+            "Airtable::update_records",
+            "Airtable::delete_records"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "coin_api_mcp::get-coin-quotes"
+          ],
+          "predicted_topk": [
+            "coin_api_mcp::get-coin-quotes",
+            "CoinMarketCap::contentPostsLatest",
+            "coin_api_mcp::listing-coins",
+            "CoinMarketCap::contentLatest",
+            "CoinMarketCap::cryptoMarketPairsLatest"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Filesystem::list_directory"
+          ],
+          "predicted_topk": [
+            "Filesystem::list_directory",
+            "Golang Filesystem Server::list_directory",
+            "Filesystem::get_file_info",
+            "Golang Filesystem Server::list_allowed_directories",
+            "Filesystem::read_file"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        }
+      ],
+      "hop_acc_at_1": 0.85,
+      "hop_acc_at_k": 1.0,
+      "chain_success_at_k": true
+    }
+  ]
+}

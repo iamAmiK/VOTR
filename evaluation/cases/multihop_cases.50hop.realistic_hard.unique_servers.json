@@ -1,0 +1,261 @@
+{
+  "cases": [
+    {
+      "id": "cross-app-50-hop-realistic-hard-unique-servers",
+      "description": "Final realistic-hard 50-hop strict benchmark with unique servers, natural app-aware phrasing, and concrete task intents",
+      "session_id": "mh-50hop-realistic-hard-1",
+      "hops": [
+        {
+          "server_intent": "In AgentQL (Enable AI agents to get structured data from unstructured web with AgentQL.), perform this task.",
+          "tool_intent": "Extracts structured data from a given URL using a prompt to describe the data and fields to extract.. Include url, prompt if needed.",
+          "expected_tool_key": "AgentQL::extract-web-data"
+        },
+        {
+          "server_intent": "In Aiven (Navigate your Aiven projects and interact with the PostgreSQL\u00ae, Apache Kafka\u00ae, ClickHouse\u00ae and OpenSearch\u00ae...), perform this task.",
+          "tool_intent": "List all projects on your Aiven account..",
+          "expected_tool_key": "Aiven::list_projects"
+        },
+        {
+          "server_intent": "In Alibaba Cloud AnalyticDB for MySQL (Connect to a AnalyticDB for MySQL cluster for getting database or table metadata, querying and analyzing da...), perform this task.",
+          "tool_intent": "Get the query plan for a SQL query.",
+          "expected_tool_key": "Alibaba Cloud AnalyticDB for MySQL::get_query_plan"
+        },
+        {
+          "server_intent": "In Apache IoTDB (MCP Server for Apache IoTDB database and its tools), perform this task.",
+          "tool_intent": "Get a list of all tables in the database.",
+          "expected_tool_key": "Apache IoTDB::list_tables"
+        },
+        {
+          "server_intent": "In Apify (Actors MCP Server: Use 3,000+ pre-built cloud tools to extract data from websites, e-commerce, social media...), perform this task.",
+          "tool_intent": "Retrieves documentation, input schema, and details about a specific Actor..",
+          "expected_tool_key": "Apify::get-actor-details"
+        },
+        {
+          "server_intent": "In APIMatic MCP (APIMatic MCP Server is used to validate OpenAPI specifications using APIMatic. The server processes OpenAPI...), perform this task.",
+          "tool_intent": "Validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary..",
+          "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic"
+        },
+        {
+          "server_intent": "In Arize Phoenix (Inspect traces, manage prompts, curate datasets, and run experiments using Arize Phoenix, an open-source AI...), perform this task.",
+          "tool_intent": "Provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults.",
+          "expected_tool_key": "Arize Phoenix::arize-phoenix-otel"
+        },
+        {
+          "server_intent": "In Astra DB (Comprehensive tools for managing collections and documents in a DataStax Astra DB NoSQL database with a ful...), perform this task.",
+          "tool_intent": "List records from a collection in the database.",
+          "expected_tool_key": "Astra DB::ListRecords"
+        },
+        {
+          "server_intent": "In Audiense Insights (Marketing insights and audience analysis from Audiense reports, covering demographic, cultural, influencer,...), perform this task.",
+          "tool_intent": "Retrieves available baseline audiences, optionally filtered by country.. Include country if needed.",
+          "expected_tool_key": "Audiense Insights::get-baselines"
+        },
+        {
+          "server_intent": "In AWS (Specialized MCP servers that bring AWS best practices directly to your development workflow.), perform this task.",
+          "tool_intent": "Search AWS documentation and best practices using the official AWS search API..",
+          "expected_tool_key": "AWS::Search Documentation"
+        },
+        {
+          "server_intent": "In Axiom (Query and analyze your Axiom logs, traces, and all other event data in natural language), perform this task.",
+          "tool_intent": "List available Axiom datasets.",
+          "expected_tool_key": "Axiom::listDatasets"
+        },
+        {
+          "server_intent": "In Azure (The Azure MCP Server gives MCP Clients access to key Azure services and tools like Azure Storage, Cosmos DB...), perform this task.",
+          "tool_intent": "Queries search indexes for specific data..",
+          "expected_tool_key": "Azure::Query search indexes"
+        },
+        {
+          "server_intent": "In Bankless Onchain (Query Onchain data, like ERC20 tokens, transaction history, smart contract state.), perform this task.",
+          "tool_intent": "Retrieve proxy implementation contract addresses.. Include network, contract if needed.",
+          "expected_tool_key": "Bankless Onchain::get_proxy"
+        },
+        {
+          "server_intent": "In Bitrise (Chat with your builds, CI, and more.), perform this task.",
+          "tool_intent": "List all the apps available for the authenticated account. Include sort_by, next if needed.",
+          "expected_tool_key": "Bitrise::list_apps"
+        },
+        {
+          "server_intent": "In Box (Interact with the Intelligent Content Management platform through Box AI.), perform this task.",
+          "tool_intent": "Search for files in Box.. Include query, file_extensions if needed.",
+          "expected_tool_key": "Box::box_search_tool"
+        },
+        {
+          "server_intent": "In Chroma (Embeddings, vector search, document storage, and full-text search with the open-source AI application database), perform this task.",
+          "tool_intent": "List all collections with pagination support.",
+          "expected_tool_key": "Chroma::chroma_list_collections"
+        },
+        {
+          "server_intent": "In CircleCI (Enable AI Agents to fix build failures from CircleCI.), perform this task.",
+          "tool_intent": "Retrieves test metadata for CircleCI jobs. Can be used with CircleCI URLs or local project context.. Include url_or_context if needed.",
+          "expected_tool_key": "CircleCI::get_job_test_results"
+        },
+        {
+          "server_intent": "In ClickHouse (Query your ClickHouse database server.), perform this task.",
+          "tool_intent": "List all tables in a database.. Include database if needed.",
+          "expected_tool_key": "ClickHouse::list_tables"
+        },
+        {
+          "server_intent": "In Codacy (Interact with Codacy API to query code quality issues, vulnerabilities, and coverage insights about your code.), perform this task.",
+          "tool_intent": "Lists and filters code quality issues in a repository. This is the primary tool for investigating general code quality concerns (e.g., best practices, performance, com...",
+          "expected_tool_key": "Codacy::codacy_list_repository_issues"
+        },
+        {
+          "server_intent": "In CodeLogic (Interact with CodeLogic, a Software Intelligence platform that graphs complex code and data architecture de...), perform this task.",
+          "tool_intent": "Pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class.. Include method, class if needed.",
+          "expected_tool_key": "CodeLogic::codelogic-method-impact"
+        },
+        {
+          "server_intent": "In Comet Opik (Query and analyze your Opik logs, traces, prompts and all other telemtry data from your LLMs in natural lan...), perform this task.",
+          "tool_intent": "Track and analyze trace data.",
+          "expected_tool_key": "Comet Opik::Traces"
+        },
+        {
+          "server_intent": "In Couchbase (Interact with the data stored in Couchbase clusters.), perform this task.",
+          "tool_intent": "Get a document by ID from a specified scope and collection..",
+          "expected_tool_key": "Couchbase::get_document_by_id"
+        },
+        {
+          "server_intent": "In Dart (Interact with task, doc, and project data in Dart, an AI-native project management tool), perform this task.",
+          "tool_intent": "List docs with optional filtering by folder, title, text content, and more.",
+          "expected_tool_key": "Dart::list_docs"
+        },
+        {
+          "server_intent": "In DevHub (Manage and utilize website content within the DevHub CMS platform), perform this task.",
+          "tool_intent": "Gets all locations for a specific business. Returns detailed location information including address, coordinates, and URLs.. Include business_id if needed.",
+          "expected_tool_key": "DevHub::get_locations"
+        },
+        {
+          "server_intent": "In Dynatrace (Manage and interact with the Dynatrace Platform for real-time observability and monitoring.), perform this task.",
+          "tool_intent": "Lists problem details from your services, such as Kubernetes..",
+          "expected_tool_key": "Dynatrace::list_problems"
+        },
+        {
+          "server_intent": "In EduBase (Interact with EduBase, a comprehensive e-learning platform with advanced quizzing, exam management, and con...), perform this task.",
+          "tool_intent": "Retrieves user information from the EduBase platform..",
+          "expected_tool_key": "EduBase::edubase_get_user"
+        },
+        {
+          "server_intent": "In Elasticsearch (Query your data in Elasticsearch), perform this task.",
+          "tool_intent": "Perform an Elasticsearch search with the provided query DSL.",
+          "expected_tool_key": "Elasticsearch::search"
+        },
+        {
+          "server_intent": "In eSignatures (Contract and template management for drafting, reviewing, and sending binding contracts.), perform this task.",
+          "tool_intent": "List all your templates.",
+          "expected_tool_key": "eSignatures::list_templates"
+        },
+        {
+          "server_intent": "In Exa (Search Engine made for AIs by Exa), perform this task.",
+          "tool_intent": "Search GitHub repositories using Exa AI - performs real-time searches on GitHub.com to find relevant repositories, issues, and GitHub accounts..",
+          "expected_tool_key": "Exa::github_search"
+        },
+        {
+          "server_intent": "In Fewsats (Enable AI Agents to purchase anything in a secure way using Fewsats), perform this task.",
+          "tool_intent": "Pays an offer with the specified ID from the l402_offers. Include offer_id, l402_offer if needed.",
+          "expected_tool_key": "Fewsats::pay_offer"
+        },
+        {
+          "server_intent": "In Fibery (Perform queries and entity operations in your Fibery workspace.), perform this task.",
+          "tool_intent": "Retrieves a list of all databases available in your Fibery workspace..",
+          "expected_tool_key": "Fibery::list_databases"
+        },
+        {
+          "server_intent": "In Financial Datasets (Stock market API made for AI agents), perform this task.",
+          "tool_intent": "Get news for a company..",
+          "expected_tool_key": "Financial Datasets::get_company_news"
+        },
+        {
+          "server_intent": "In Firecrawl (Extract web data with Firecrawl), perform this task.",
+          "tool_intent": "Search the web and optionally extract content from search results.. Include query, limit if needed.",
+          "expected_tool_key": "Firecrawl::firecrawl_search"
+        },
+        {
+          "server_intent": "In Gitee (Gitee API integration, repository, issue, and pull request management, and more.), perform this task.",
+          "tool_intent": "Search for users.",
+          "expected_tool_key": "Gitee::search_users"
+        },
+        {
+          "server_intent": "In Gyazo (Search, fetch, upload, and interact with Gyazo images, including metadata and OCR data.), perform this task.",
+          "tool_intent": "Full-text search for captures uploaded by users on Gyazo. Include keyword, pagination if needed.",
+          "expected_tool_key": "Gyazo::gyazo_search"
+        },
+        {
+          "server_intent": "In gotoHuman (Human-in-the-loop platform - Allow AI agents and automations to send requests for approval to your gotoHuma...), perform this task.",
+          "tool_intent": "List all available review forms..",
+          "expected_tool_key": "gotoHuman::list-forms"
+        },
+        {
+          "server_intent": "In Grafana (Search dashboards, investigate incidents and query datasources in your Grafana instance), perform this task.",
+          "tool_intent": "Search for dashboards.",
+          "expected_tool_key": "Grafana::search_dashboards"
+        },
+        {
+          "server_intent": "In Graphlit (Ingest anything from Slack to Gmail to podcast feeds, in addition to web crawling, into a searchable Graphl...), perform this task.",
+          "tool_intent": "Performs web searches and ingests the results..",
+          "expected_tool_key": "Graphlit::Web Search (including Podcast Search)"
+        },
+        {
+          "server_intent": "In GreptimeDB (Provides AI assistants with a secure and structured way to explore and analyze data in GreptimeDB.), perform this task.",
+          "tool_intent": "Lists available tools..",
+          "expected_tool_key": "GreptimeDB::list_tools"
+        },
+        {
+          "server_intent": "In Heroku (Interact with the Heroku Platform through LLM-driven tools for managing apps, add-ons, dynos, databases, an...), perform this task.",
+          "tool_intent": "List all dynos for an app..",
+          "expected_tool_key": "Heroku::ps_list"
+        },
+        {
+          "server_intent": "In Hologres (Connect to a Hologres instance, get table metadata, query and analyze data.), perform this task.",
+          "tool_intent": "Get query plan.",
+          "expected_tool_key": "Hologres::get_query_plan"
+        },
+        {
+          "server_intent": "In Hyperbrowser (Hyperbrowser is the next-generation platform empowering AI agents and enabling effortless, scalable browser...), perform this task.",
+          "tool_intent": "Query the web and get results with Bing search.",
+          "expected_tool_key": "Hyperbrowser::search_with_bing"
+        },
+        {
+          "server_intent": "In ForeverVM (Run Python in a code sandbox.), perform this task.",
+          "tool_intent": "Lists all machines, optionally filtered by tags.. Include tags if needed.",
+          "expected_tool_key": "ForeverVM::listMachines"
+        },
+        {
+          "server_intent": "In Inkeep (RAG Search over your content powered by Inkeep), perform this task.",
+          "tool_intent": "Retrieves product documentation about Inkeep. The query should be framed as a conversational question about Inkeep..",
+          "expected_tool_key": "Inkeep::search-product-content"
+        },
+        {
+          "server_intent": "In Kagi Search (Search the web using Kagi's search API), perform this task.",
+          "tool_intent": "Performs a web search to find information based on the query provided..",
+          "expected_tool_key": "Kagi Search::search"
+        },
+        {
+          "server_intent": "In Keboola (Build robust data workflows, integrations, and analytics on a single intuitive platform.), perform this task.",
+          "tool_intent": "Retrieves detailed information about a specific job, identified by the job_id, including its status, parameters, results, and any relevant metadata..",
+          "expected_tool_key": "Keboola::get_job_detail"
+        },
+        {
+          "server_intent": "In Lara Translate (MCP Server for Lara Translate API, enabling powerful translation capabilities with support for language det...), perform this task.",
+          "tool_intent": "List saved translation memories.",
+          "expected_tool_key": "Lara Translate::list_memories"
+        },
+        {
+          "server_intent": "In Logfire (Provides access to OpenTelemetry traces and metrics through Logfire.), perform this task.",
+          "tool_intent": "Get the OpenTelemetry schema to help with custom queries.",
+          "expected_tool_key": "Logfire::get_logfire_records_schema"
+        },
+        {
+          "server_intent": "In Langfuse Prompt Management (Open-source tool for collaborative editing, versioning, evaluating, and releasing prompts.), perform this task.",
+          "tool_intent": "Retrieve and compile a specific prompt. Include name, arguments if needed.",
+          "expected_tool_key": "Langfuse Prompt Management::get-prompt"
+        },
+        {
+          "server_intent": "In Lingo.dev (Make your AI agent speak every language on the planet, using Lingo.dev Localization Engine.), perform this task.",
+          "tool_intent": "Lists all users registered with the MCP server..",
+          "expected_tool_key": "Lingo.dev::list-users"
+        }
+      ]
+    }
+  ]
+}

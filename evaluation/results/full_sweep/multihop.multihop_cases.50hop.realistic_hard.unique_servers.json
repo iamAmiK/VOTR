@@ -1,0 +1,721 @@
+{
+  "summary": {
+    "num_cases": 1,
+    "k": 5,
+    "keep_memory": false,
+    "mean_hop_acc_at_1": 1.0,
+    "mean_hop_acc_at_k": 1.0,
+    "chain_success_rate_at_k": 1.0
+  },
+  "results": [
+    {
+      "case_id": "cross-app-50-hop-realistic-hard-unique-servers",
+      "description": "Final realistic-hard 50-hop strict benchmark with unique servers, natural app-aware phrasing, and concrete task intents",
+      "hops": [
+        {
+          "expected_labels": [
+            "AgentQL::extract-web-data"
+          ],
+          "predicted_topk": [
+            "AgentQL::extract-web-data",
+            "Tavily::tavily-extract",
+            "Redis::server management",
+            "Redis::hash",
+            "Redis::string"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Aiven::list_projects"
+          ],
+          "predicted_topk": [
+            "Aiven::list_projects",
+            "Aiven::list_services",
+            "Aiven::get_service_details",
+            "Neon::list_projects",
+            "ClickHouse::list_databases"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Alibaba Cloud AnalyticDB for MySQL::get_query_plan"
+          ],
+          "predicted_topk": [
+            "Alibaba Cloud AnalyticDB for MySQL::get_query_plan",
+            "Alibaba Cloud AnalyticDB for MySQL::get_execution_plan",
+            "Alibaba Cloud AnalyticDB for MySQL::execute_sql",
+            "Hologres::get_query_plan",
+            "Hologres::get_execution_plan"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Apache IoTDB::list_tables"
+          ],
+          "predicted_topk": [
+            "Apache IoTDB::list_tables",
+            "Apache IoTDB::read_query",
+            "Apache IoTDB::select_query",
+            "Apache IoTDB::describe-table",
+            "Apache IoTDB::metadata_query"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Apify::get-actor-details"
+          ],
+          "predicted_topk": [
+            "Apify::get-actor-details",
+            "Apify::discover-actors",
+            "Apify::remove-actor-from-tool",
+            "Apify::add-actor-as-tool",
+            "Redis Cloud API::get_task_by_id"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "APIMatic MCP::validate-openapi-using-apimatic"
+          ],
+          "predicted_topk": [
+            "APIMatic MCP::validate-openapi-using-apimatic",
+            "OpenAPI AnyApi::{prefix}_api_request_schema",
+            "OpenAPI Schema::list-endpoints",
+            "OpenAPI Schema::get-request-body",
+            "OpenAPI Schema::get-response-schema"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Arize Phoenix::arize-phoenix-otel"
+          ],
+          "predicted_topk": [
+            "Arize Phoenix::arize-phoenix-otel",
+            "Arize Phoenix::arize-phoenix-client",
+            "Arize Phoenix::@arizeai/phoenix-client",
+            "Arize Phoenix::@arizeai/phoenix-mcp",
+            "Arize Phoenix::arize-phoenix-evals"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Astra DB::ListRecords"
+          ],
+          "predicted_topk": [
+            "Astra DB::ListRecords",
+            "Astra DB::DeleteCollection",
+            "Astra DB::BulkDeleteRecords",
+            "Astra DB::CreateCollection",
+            "Astra DB::FindRecord"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Audiense Insights::get-baselines"
+          ],
+          "predicted_topk": [
+            "Audiense Insights::get-baselines",
+            "Audiense Insights::compare-audience-influencers",
+            "Audiense Insights::get-categories",
+            "Audiense Insights::get-audience-insights",
+            "Audiense Insights::get-reports"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "AWS::Search Documentation"
+          ],
+          "predicted_topk": [
+            "AWS::Search Documentation",
+            "AWS::GitHub Repository Search in AWS Organizations",
+            "AWS::Convert Documentation to Markdown",
+            "AWS::Infrastructure as Code Best Practices",
+            "AWS::Get Content Recommendations"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Axiom::listDatasets"
+          ],
+          "predicted_topk": [
+            "Axiom::listDatasets",
+            "Axiom::queryApl",
+            "Comet Opik::Metrics",
+            "Comet Opik::Prompts Management",
+            "Comet Opik::Traces"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Azure::Query search indexes"
+          ],
+          "predicted_topk": [
+            "Azure::Query search indexes",
+            "Azure::List Azure AI Search services",
+            "Azure::List indexes and look at their schema and configuration",
+            "Azure::List and query databases",
+            "Azure::Query logs using KQL"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Bankless Onchain::get_proxy"
+          ],
+          "predicted_topk": [
+            "Bankless Onchain::get_proxy",
+            "Bankless Onchain::get_events",
+            "Bankless Onchain::read_contract",
+            "EVM MCP Server::is-contract",
+            "EVM MCP Server::read-contract"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Bitrise::list_apps"
+          ],
+          "predicted_topk": [
+            "Bitrise::list_apps",
+            "Bitrise::list_connected_apps",
+            "Bitrise::list_builds",
+            "Bitrise::get_connected_app",
+            "Bitrise::me"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Box::box_search_tool"
+          ],
+          "predicted_topk": [
+            "Box::box_search_tool",
+            "Box::box_upload_file_from_content_tool",
+            "Box::box_ask_ai_tool",
+            "Box::box_download_file_tool",
+            "Box::box_manage_folder_tool"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Chroma::chroma_list_collections"
+          ],
+          "predicted_topk": [
+            "Chroma::chroma_list_collections",
+            "Chroma::chroma_get_documents",
+            "Chroma::chroma_delete_collection",
+            "Chroma::chroma_get_collection_info",
+            "Chroma::chroma_get_collection_count"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "CircleCI::get_job_test_results"
+          ],
+          "predicted_topk": [
+            "CircleCI::get_job_test_results",
+            "CircleCI::get_build_failure_logs",
+            "CircleCI::find_flaky_tests",
+            "CircleCI::get_latest_pipeline_status",
+            "CircleCI::config_helper"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "ClickHouse::list_tables"
+          ],
+          "predicted_topk": [
+            "ClickHouse::list_tables",
+            "ClickHouse::list_databases",
+            "ClickHouse::run_select_query",
+            "Azure ADX::list_tables",
+            "Milvus::milvus_list_collections"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Codacy::codacy_list_repository_issues"
+          ],
+          "predicted_topk": [
+            "Codacy::codacy_list_repository_issues",
+            "Codacy::codacy_search_repository_srm_items",
+            "Codacy::codacy_get_file_issues",
+            "Codacy::codacy_list_repository_tool_patterns",
+            "Codacy::codacy_search_organization_srm_items"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "CodeLogic::codelogic-method-impact"
+          ],
+          "predicted_topk": [
+            "CodeLogic::codelogic-method-impact",
+            "CodeLogic::codelogic-database-impact",
+            "Codacy::codacy_list_repository_issues",
+            "Codacy::codacy_get_file_clones",
+            "Codacy::codacy_get_file_issues"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Comet Opik::Traces"
+          ],
+          "predicted_topk": [
+            "Comet Opik::Traces",
+            "Comet Opik::Metrics",
+            "Comet Opik::Prompts Management",
+            "Comet Opik::Projects/Workspaces Management",
+            "Logfire::find_exceptions_in_file"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Couchbase::get_document_by_id"
+          ],
+          "predicted_topk": [
+            "Couchbase::get_document_by_id",
+            "Couchbase::delete_document_by_id",
+            "Couchbase::upsert_document_by_id",
+            "Couchbase::get_collection_structure",
+            "Couchbase::get_scopes_and_collections"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Dart::list_docs"
+          ],
+          "predicted_topk": [
+            "Dart::list_docs",
+            "Dart::create_doc",
+            "Dart::list_tasks",
+            "Dart::get_doc",
+            "Dart::update_doc"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "DevHub::get_locations"
+          ],
+          "predicted_topk": [
+            "DevHub::get_locations",
+            "DevHub::get_nearest_location",
+            "DevHub::get_businesses",
+            "DevHub::site_from_url",
+            "DevHub::get_hours_of_operation"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Dynatrace::list_problems"
+          ],
+          "predicted_topk": [
+            "Dynatrace::list_problems",
+            "Dynatrace::get_security_problems",
+            "Dynatrace::set_up_notification_workflow",
+            "Dynatrace::execute_dql",
+            "Dynatrace::get_ownership"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "EduBase::edubase_get_user"
+          ],
+          "predicted_topk": [
+            "EduBase::edubase_get_user",
+            "OpenCTI::get_user_by_id",
+            "Okta::get_user_last_location",
+            "Okta::get_user",
+            "Okta::get_group"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Elasticsearch::search"
+          ],
+          "predicted_topk": [
+            "Elasticsearch::search",
+            "Elasticsearch::list_indices",
+            "Elasticsearch::get_mappings",
+            "Elasticsearch::get_shards",
+            "Milvus::milvus_vector_search"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "eSignatures::list_templates"
+          ],
+          "predicted_topk": [
+            "eSignatures::list_templates",
+            "eSignatures::delete_template",
+            "eSignatures::create_template",
+            "eSignatures::list_recent_contracts",
+            "eSignatures::update_template"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Exa::github_search"
+          ],
+          "predicted_topk": [
+            "Exa::github_search",
+            "Exa::web_search_exa",
+            "Exa::linkedin_search",
+            "Exa::research_paper_search",
+            "Exa::competitor_finder"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Fewsats::pay_offer"
+          ],
+          "predicted_topk": [
+            "Fewsats::pay_offer",
+            "Fewsats::payment_info",
+            "Fewsats::balance",
+            "Fewsats::payment_methods",
+            "Solana Agent Kit::getPythPriceFeedID"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Fibery::list_databases"
+          ],
+          "predicted_topk": [
+            "Fibery::list_databases",
+            "Fibery::update_entity",
+            "Fibery::query_database",
+            "Fibery::create_entity",
+            "Fibery::create_entities_batch"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Financial Datasets::get_company_news"
+          ],
+          "predicted_topk": [
+            "Financial Datasets::get_company_news",
+            "Financial Datasets::get_income_statements",
+            "Financial Datasets::get_balance_sheets",
+            "Financial Datasets::get_cash_flow_statements",
+            "Financial Datasets::get_current_stock_price"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Firecrawl::firecrawl_search"
+          ],
+          "predicted_topk": [
+            "Firecrawl::firecrawl_search",
+            "FireCrawl::firecrawl_search",
+            "Firecrawl::firecrawl_extract",
+            "Firecrawl::firecrawl_deep_research",
+            "Firecrawl::firecrawl_scrape"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Gitee::search_users"
+          ],
+          "predicted_topk": [
+            "Gitee::search_users",
+            "Gitee::search_open_source_repositories",
+            "Gitee::create_pull",
+            "Gitee::list_repo_pulls",
+            "Gitee::create_issue"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Gyazo::gyazo_search"
+          ],
+          "predicted_topk": [
+            "Gyazo::gyazo_search",
+            "Gyazo::gyazo_image",
+            "Gyazo::gyazo_upload",
+            "Gyazo::gyazo_latest_image",
+            "Chroma::chroma_get_documents"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "gotoHuman::list-forms"
+          ],
+          "predicted_topk": [
+            "gotoHuman::list-forms",
+            "gotoHuman::request-human-review-with-form",
+            "gotoHuman::get-form-schema",
+            "Box::box_docgen_template_list_tool",
+            "Elasticsearch::list_indices"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Grafana::search_dashboards"
+          ],
+          "predicted_topk": [
+            "Grafana::search_dashboards",
+            "Grafana::list_datasources",
+            "Grafana::list_incidents",
+            "Grafana::create_incident",
+            "Grafana::resolve_incident"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Graphlit::Web Search (including Podcast Search)"
+          ],
+          "predicted_topk": [
+            "Graphlit::Web Search (including Podcast Search)",
+            "Graphlit::Web Crawling",
+            "Graphlit::Web Pages",
+            "Graphlit::Screenshot Page",
+            "Graphlit::Query Feeds"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "GreptimeDB::list_tools"
+          ],
+          "predicted_topk": [
+            "GreptimeDB::list_tools",
+            "GreptimeDB::list_prompts",
+            "GreptimeDB::list_resources",
+            "GreptimeDB::get_prompt",
+            "GreptimeDB::read_resource"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Heroku::ps_list"
+          ],
+          "predicted_topk": [
+            "Heroku::ps_list",
+            "Heroku::list_addons",
+            "Heroku::get_app_info",
+            "Heroku::ps_restart",
+            "Heroku::list_apps"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Hologres::get_query_plan"
+          ],
+          "predicted_topk": [
+            "Hologres::get_query_plan",
+            "Hologres::get_execution_plan",
+            "Hologres::gather_table_statistics",
+            "Hologres::execute_select_sql",
+            "Alibaba Cloud AnalyticDB for MySQL::get_query_plan"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Hyperbrowser::search_with_bing"
+          ],
+          "predicted_topk": [
+            "Hyperbrowser::search_with_bing",
+            "Hyperbrowser::browser_use_agent",
+            "Hyperbrowser::claude_computer_use_agent",
+            "Hyperbrowser::list_profiles",
+            "Hyperbrowser::extract_structured_data"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "ForeverVM::listMachines"
+          ],
+          "predicted_topk": [
+            "ForeverVM::listMachines",
+            "ForeverVM::createMachine",
+            "ForeverVM::repl",
+            "code-sandbox-mcp::sandbox_exec",
+            "code-sandbox-mcp::sandbox_stop"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Inkeep::search-product-content"
+          ],
+          "predicted_topk": [
+            "Inkeep::search-product-content",
+            "Pinecone::pinecone-stats",
+            "DevHub::create_blog_post",
+            "Productboard::get_product_detail",
+            "Keboola::docs_query"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Kagi Search::search"
+          ],
+          "predicted_topk": [
+            "Kagi Search::search",
+            "Kagi Search::summarizer",
+            "mcp-local-rag::rag_search",
+            "Google Custom Search::search",
+            "Tavily::tavily-search"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Keboola::get_job_detail"
+          ],
+          "predicted_topk": [
+            "Keboola::get_job_detail",
+            "Keboola::get_bucket_detail",
+            "Keboola::get_table_detail",
+            "Keboola::get_component_details",
+            "Keboola::retrieve_jobs"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Lara Translate::list_memories"
+          ],
+          "predicted_topk": [
+            "Lara Translate::list_memories",
+            "Lara Translate::delete_memory",
+            "Lara Translate::create_memory",
+            "Lara Translate::update_memory",
+            "Lara Translate::translate"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Logfire::get_logfire_records_schema"
+          ],
+          "predicted_topk": [
+            "Logfire::get_logfire_records_schema",
+            "Logfire::arbitrary_query",
+            "Logfire::find_exceptions",
+            "Logfire::find_exceptions_in_file",
+            "Arize Phoenix::arize-phoenix-otel"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Langfuse Prompt Management::get-prompt"
+          ],
+          "predicted_topk": [
+            "Langfuse Prompt Management::get-prompt",
+            "Langfuse Prompt Management::get-prompts",
+            "llm-context::lc-prompt",
+            "Arize Phoenix::arize-phoenix-evals",
+            "Arize Phoenix::@arizeai/phoenix-mcp"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Lingo.dev::list-users"
+          ],
+          "predicted_topk": [
+            "Lingo.dev::list-users",
+            "Lingo.dev::start-server",
+            "Lingo.dev::status",
+            "Lingo.dev::add-user",
+            "Lingo.dev::stop-server"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        }
+      ],
+      "hop_acc_at_1": 1.0,
+      "hop_acc_at_k": 1.0,
+      "chain_success_at_k": true
+    }
+  ]
+}

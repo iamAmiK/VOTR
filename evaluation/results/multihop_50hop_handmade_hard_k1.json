@@ -1,0 +1,521 @@
+{
+  "summary": {
+    "num_cases": 1,
+    "k": 1,
+    "keep_memory": false,
+    "mean_hop_acc_at_1": 0.96,
+    "mean_hop_acc_at_k": 0.96,
+    "chain_success_rate_at_k": 0.0
+  },
+  "results": [
+    {
+      "case_id": "cross-app-50-hop-handmade-hard-unique-servers",
+      "description": "Final realistic-hard 50-hop strict benchmark with unique servers, natural app-aware phrasing, and concrete task intents",
+      "hops": [
+        {
+          "expected_labels": [
+            "AgentQL::extract-web-data"
+          ],
+          "predicted_topk": [
+            "AgentQL::extract-web-data"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Aiven::list_projects"
+          ],
+          "predicted_topk": [
+            "Aiven::list_projects"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Bloomberg::bdh"
+          ],
+          "predicted_topk": [
+            "Bloomberg::bdh"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Apache IoTDB::list_tables"
+          ],
+          "predicted_topk": [
+            "Apache IoTDB::list_tables"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Apify::get-actor-details"
+          ],
+          "predicted_topk": [
+            "Apify::get-actor-details"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "APIMatic MCP::validate-openapi-using-apimatic"
+          ],
+          "predicted_topk": [
+            "APIMatic MCP::validate-openapi-using-apimatic"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Slack::slack_add_reactionl"
+          ],
+          "predicted_topk": [
+            "Slack::slack_add_reaction"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Astra DB::ListRecords"
+          ],
+          "predicted_topk": [
+            "Astra DB::ListRecords"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Xero-mcp-server::list_quotes"
+          ],
+          "predicted_topk": [
+            "Xero-mcp-server::list_quotes"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "AWS::Search Documentation"
+          ],
+          "predicted_topk": [
+            "AWS::AWS and AWSCC Provider Documentation"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Axiom::listDatasets"
+          ],
+          "predicted_topk": [
+            "Axiom::listDatasets"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Azure::Query search indexes"
+          ],
+          "predicted_topk": [
+            "Azure::Query search indexes"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Airtable::search_records"
+          ],
+          "predicted_topk": [
+            "Airtable::search_records"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Bitrise::list_apps"
+          ],
+          "predicted_topk": [
+            "Bitrise::list_apps"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Box::box_search_tool"
+          ],
+          "predicted_topk": [
+            "Box::box_search_tool"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Chroma::chroma_list_collections"
+          ],
+          "predicted_topk": [
+            "Chroma::chroma_list_collections"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "CircleCI::get_job_test_results"
+          ],
+          "predicted_topk": [
+            "CircleCI::get_job_test_results"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "ClickHouse::list_tables"
+          ],
+          "predicted_topk": [
+            "ClickHouse::list_tables"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Codacy::codacy_list_repository_issues"
+          ],
+          "predicted_topk": [
+            "Codacy::codacy_list_repository_issues"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "CodeLogic::codelogic-method-impact"
+          ],
+          "predicted_topk": [
+            "CodeLogic::codelogic-method-impact"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Comet Opik::Traces"
+          ],
+          "predicted_topk": [
+            "Comet Opik::Traces"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Couchbase::get_document_by_id"
+          ],
+          "predicted_topk": [
+            "Couchbase::get_document_by_id"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Dart::list_docs"
+          ],
+          "predicted_topk": [
+            "Dart::list_docs"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "DevHub::get_locations"
+          ],
+          "predicted_topk": [
+            "DevHub::get_locations"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Dynatrace::list_problems"
+          ],
+          "predicted_topk": [
+            "Dynatrace::list_problems"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "EduBase::edubase_get_user"
+          ],
+          "predicted_topk": [
+            "EduBase::edubase_get_user"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Elasticsearch::search"
+          ],
+          "predicted_topk": [
+            "Elasticsearch::search"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "eSignatures::list_templates"
+          ],
+          "predicted_topk": [
+            "eSignatures::list_templates"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Exa::github_search"
+          ],
+          "predicted_topk": [
+            "Exa::github_search"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Fewsats::pay_offer"
+          ],
+          "predicted_topk": [
+            "Fewsats::pay_offer"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Fibery::list_databases"
+          ],
+          "predicted_topk": [
+            "Fibery::list_databases"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Financial Datasets::get_company_news"
+          ],
+          "predicted_topk": [
+            "Financial Datasets::get_company_news"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Firecrawl::firecrawl_search"
+          ],
+          "predicted_topk": [
+            "Firecrawl::firecrawl_search"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Gitee::search_users"
+          ],
+          "predicted_topk": [
+            "Gitee::search_users"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Gyazo::gyazo_search"
+          ],
+          "predicted_topk": [
+            "Gyazo::gyazo_search"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "gotoHuman::list-forms"
+          ],
+          "predicted_topk": [
+            "gotoHuman::list-forms"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Grafana::search_dashboards"
+          ],
+          "predicted_topk": [
+            "Grafana::search_dashboards"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Graphlit::Web Search (including Podcast Search)"
+          ],
+          "predicted_topk": [
+            "Graphlit::Web Search (including Podcast Search)"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "GreptimeDB::list_tools"
+          ],
+          "predicted_topk": [
+            "GreptimeDB::list_tools"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Heroku::ps_list"
+          ],
+          "predicted_topk": [
+            "Heroku::ps_list"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Hologres::get_query_plan"
+          ],
+          "predicted_topk": [
+            "Hologres::get_query_plan"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Hyperbrowser::search_with_bing"
+          ],
+          "predicted_topk": [
+            "Hyperbrowser::search_with_bing"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "ForeverVM::listMachines"
+          ],
+          "predicted_topk": [
+            "ForeverVM::listMachines"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Inkeep::search-product-content"
+          ],
+          "predicted_topk": [
+            "Inkeep::search-product-content"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Kagi Search::search"
+          ],
+          "predicted_topk": [
+            "Kagi Search::search"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Keboola::get_job_detail"
+          ],
+          "predicted_topk": [
+            "Keboola::get_job_detail"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Lara Translate::list_memories"
+          ],
+          "predicted_topk": [
+            "Lara Translate::list_memories"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Logfire::get_logfire_records_schema"
+          ],
+          "predicted_topk": [
+            "Logfire::get_logfire_records_schema"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Langfuse Prompt Management::get-prompt"
+          ],
+          "predicted_topk": [
+            "Langfuse Prompt Management::get-prompt"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        },
+        {
+          "expected_labels": [
+            "Lingo.dev::list-users"
+          ],
+          "predicted_topk": [
+            "Lingo.dev::list-users"
+          ],
+          "hit_at_1": true,
+          "hit_at_k": true
+        }
+      ],
+      "hop_acc_at_1": 0.96,
+      "hop_acc_at_k": 0.96,
+      "chain_success_at_k": false
+    }
+  ]
+}

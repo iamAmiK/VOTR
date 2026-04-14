@@ -1,0 +1,721 @@
+{
+  "summary": {
+    "num_cases": 1,
+    "k": 5,
+    "keep_memory": false,
+    "mean_hop_acc_at_1": 0.0,
+    "mean_hop_acc_at_k": 0.0,
+    "chain_success_rate_at_k": 0.0
+  },
+  "results": [
+    {
+      "case_id": "cross-app-50-hop-adversarial-unique-servers",
+      "description": "Adversarial 50-hop strict benchmark: unique servers with intentionally generic, overlapping intents",
+      "hops": [
+        {
+          "expected_labels": [
+            "AgentQL::extract-web-data"
+          ],
+          "predicted_topk": [
+            "Dart::list_tasks",
+            "Terminal-Control::execute_command",
+            "Dart::get_task",
+            "Dart::update_task",
+            "ClickUp::create_document"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Aiven::list_projects"
+          ],
+          "predicted_topk": [
+            "Dart::list_docs",
+            "Dart::list_tasks",
+            "Linear::linear_search_issues",
+            "Okta::list_groups",
+            "Okta::list_users"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Alibaba Cloud AnalyticDB for MySQL::get_query_plan"
+          ],
+          "predicted_topk": [
+            "Xero::list-organisation-details",
+            "Keboola::get_table_detail",
+            "Sqlite::describe-table",
+            "Xero-mcp-server::list_invoices",
+            "Xero-mcp-server::list_organisations"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Apache IoTDB::list_tables"
+          ],
+          "predicted_topk": [
+            "Keboola::retrieve_jobs",
+            "YouTube::playlists.getPlaylistItems",
+            "Okta::list_groups",
+            "Okta::list_users",
+            "Brave Search::brave_web_search"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Apify::get-actor-details"
+          ],
+          "predicted_topk": [
+            "Xero::list-organisation-details",
+            "Keboola::get_table_detail",
+            "Sqlite::describe-table",
+            "Xero-mcp-server::list_invoices",
+            "Xero-mcp-server::list_organisations"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "APIMatic MCP::validate-openapi-using-apimatic"
+          ],
+          "predicted_topk": [
+            "Puppeteer::puppeteer_evaluate",
+            "Puppeteer::puppeteer_select",
+            "Puppeteer::puppeteer_fill",
+            "Puppeteer::puppeteer_click",
+            "Puppeteer::puppeteer_navigate"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Arize Phoenix::arize-phoenix-otel"
+          ],
+          "predicted_topk": [
+            "Keboola::query_table",
+            "Verodat::execute-ai-query",
+            "Verodat::get-dataset-output",
+            "Keboola::start_job",
+            "Keboola::docs_query"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Astra DB::ListRecords"
+          ],
+          "predicted_topk": [
+            "Keboola::retrieve_jobs",
+            "Okta::list_groups",
+            "Okta::list_users",
+            "Brave Search::brave_web_search",
+            "Contentful-mcp::list_assets"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Audiense Insights::get-reports"
+          ],
+          "predicted_topk": [
+            "GitHub::get_pull_request",
+            "Fetch::fetch_markdown",
+            "Fetch::fetch_html",
+            "Fetch::fetch_json",
+            "Fetch::fetch_txt"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "AWS::Search Documentation"
+          ],
+          "predicted_topk": [
+            "Keboola::retrieve_jobs",
+            "Keboola::get_job_detail",
+            "YouTube::playlists.getPlaylistItems",
+            "Keboola::query_table",
+            "Meilisearch::get-tasks"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Axiom::listDatasets"
+          ],
+          "predicted_topk": [
+            "Dart::list_docs",
+            "Dart::list_tasks",
+            "Linear::linear_search_issues",
+            "Okta::list_groups",
+            "Okta::list_users"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Azure::Query search indexes"
+          ],
+          "predicted_topk": [
+            "Meilisearch::get-tasks",
+            "Home Assistant::search_entities_tool",
+            "Ghost::Browse Posts",
+            "MongoDB Lens::find-documents",
+            "whale-tracker-mcp::get_recent_transactions"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Bankless Onchain::get_proxy"
+          ],
+          "predicted_topk": [
+            "Keboola::get_table_detail",
+            "Keboola::get_bucket_detail",
+            "Keboola::retrieve_jobs",
+            "Keboola::get_component_details",
+            "Keboola::retrieve_bucket_tables"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Bitrise::list_apps"
+          ],
+          "predicted_topk": [
+            "Keboola::retrieve_jobs",
+            "YouTube::playlists.getPlaylistItems",
+            "Okta::list_groups",
+            "Okta::list_users",
+            "Brave Search::brave_web_search"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Box::box_search_tool"
+          ],
+          "predicted_topk": [
+            "Keboola::retrieve_jobs",
+            "Keboola::get_job_detail",
+            "YouTube::playlists.getPlaylistItems",
+            "Keboola::query_table",
+            "Meilisearch::get-tasks"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Chroma::chroma_list_collections"
+          ],
+          "predicted_topk": [
+            "Contentful-mcp::list_assets",
+            "Contentful-mcp::list_spaces",
+            "Contentful-mcp::list_content_types",
+            "Contentful-mcp::get_entry",
+            "Contentful-mcp::get_asset"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "CircleCI::get_job_test_results"
+          ],
+          "predicted_topk": [
+            "Keboola::get_table_detail",
+            "Keboola::get_bucket_detail",
+            "Keboola::retrieve_jobs",
+            "Keboola::get_component_details",
+            "Keboola::retrieve_bucket_tables"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "ClickHouse::list_tables"
+          ],
+          "predicted_topk": [
+            "Keboola::retrieve_jobs",
+            "YouTube::playlists.getPlaylistItems",
+            "Okta::list_groups",
+            "Okta::list_users",
+            "Brave Search::brave_web_search"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Codacy::codacy_search_repository_srm_items"
+          ],
+          "predicted_topk": [
+            "llm-context::lc-sel-files",
+            "Contentful-mcp::list_assets",
+            "llm-context::lc-sel-outlines",
+            "llm-context::lc-context",
+            "llm-context::lc-init"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "CodeLogic::codelogic-method-impact"
+          ],
+          "predicted_topk": [
+            "Keboola::query_table",
+            "Verodat::execute-ai-query",
+            "Verodat::get-dataset-output",
+            "Keboola::start_job",
+            "Keboola::docs_query"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Comet Opik::Traces"
+          ],
+          "predicted_topk": [
+            "Puppeteer::puppeteer_evaluate",
+            "Puppeteer::puppeteer_select",
+            "Puppeteer::puppeteer_fill",
+            "Puppeteer::puppeteer_click",
+            "Puppeteer::puppeteer_navigate"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Couchbase::get_document_by_id"
+          ],
+          "predicted_topk": [
+            "GitLab::create_or_update_file",
+            "Github Actions::get_workflow",
+            "Github Actions::get_workflow_run",
+            "Keboola::get_table_detail",
+            "Monday.com::monday-get-item-updates"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Dart::list_docs"
+          ],
+          "predicted_topk": [
+            "Keboola::retrieve_jobs",
+            "Okta::list_groups",
+            "Okta::list_users",
+            "Brave Search::brave_web_search",
+            "Contentful-mcp::list_assets"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "DevHub::get_locations"
+          ],
+          "predicted_topk": [
+            "ClickUp::get_list",
+            "ClickUp::get_folder",
+            "ClickUp::get_task",
+            "Monday.com::monday-get-item-updates",
+            "ClickUp::create_document"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Dynatrace::list_problems"
+          ],
+          "predicted_topk": [
+            "Keboola::retrieve_jobs",
+            "Okta::list_groups",
+            "Okta::list_users",
+            "Brave Search::brave_web_search",
+            "Contentful-mcp::list_assets"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "EduBase::edubase_get_user"
+          ],
+          "predicted_topk": [
+            "GitHub::get_pull_request",
+            "Fetch::fetch_markdown",
+            "Fetch::fetch_html",
+            "Fetch::fetch_json",
+            "Fetch::fetch_txt"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Elasticsearch::search"
+          ],
+          "predicted_topk": [
+            "Meilisearch::get-tasks",
+            "Video Editor::search-videos",
+            "Ghost::Browse Posts",
+            "Dart::list_docs",
+            "MongoDB Lens::find-documents"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "eSignatures::list_templates"
+          ],
+          "predicted_topk": [
+            "Keboola::retrieve_jobs",
+            "Okta::list_groups",
+            "Okta::list_users",
+            "Brave Search::brave_web_search",
+            "Contentful-mcp::list_assets"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Exa::github_search"
+          ],
+          "predicted_topk": [
+            "Dart::list_tasks",
+            "Astra DB::FindRecord",
+            "Meilisearch::get-tasks",
+            "Dart::list_docs",
+            "Meilisearch::create-index"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Fewsats::balance"
+          ],
+          "predicted_topk": [
+            "Terminal-Control::execute_command",
+            "Alibaba Cloud AnalyticDB for MySQL::execute_sql",
+            "Godot::run_project",
+            "Godot::get_debug_output",
+            "Azure::JSON output formatting"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Fibery::list_databases"
+          ],
+          "predicted_topk": [
+            "Keboola::retrieve_jobs",
+            "Okta::list_groups",
+            "Okta::list_users",
+            "Brave Search::brave_web_search",
+            "Contentful-mcp::list_assets"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Financial Datasets::get_company_news"
+          ],
+          "predicted_topk": [
+            "ClickUp::get_list",
+            "ClickUp::get_folder",
+            "ClickUp::get_task",
+            "Monday.com::monday-get-item-updates",
+            "ClickUp::create_document"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Firecrawl::firecrawl_search"
+          ],
+          "predicted_topk": [
+            "Keboola::retrieve_jobs",
+            "Keboola::get_job_detail",
+            "YouTube::playlists.getPlaylistItems",
+            "Keboola::query_table",
+            "Meilisearch::get-tasks"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Gitee::search_users"
+          ],
+          "predicted_topk": [
+            "llm-context::lc-sel-files",
+            "Contentful-mcp::list_assets",
+            "llm-context::lc-sel-outlines",
+            "llm-context::lc-context",
+            "llm-context::lc-init"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Gyazo::gyazo_search"
+          ],
+          "predicted_topk": [
+            "llm-context::lc-sel-files",
+            "Contentful-mcp::list_assets",
+            "llm-context::lc-sel-outlines",
+            "llm-context::lc-context",
+            "llm-context::lc-init"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "gotoHuman::list-forms"
+          ],
+          "predicted_topk": [
+            "Xero::list-items",
+            "Keboola::retrieve_jobs",
+            "SearXNG::searxng_web_search",
+            "Okta::list_groups",
+            "Okta::list_users"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Grafana::search_dashboards"
+          ],
+          "predicted_topk": [
+            "Xero::list-items",
+            "Meilisearch::get-tasks",
+            "Codacy::codacy_list_repository_issues",
+            "Ghost::Browse Posts",
+            "MongoDB Lens::find-documents"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Graphlit::Web Search (including Podcast Search)"
+          ],
+          "predicted_topk": [
+            "Meilisearch::get-tasks",
+            "Home Assistant::search_entities_tool",
+            "Ghost::Browse Posts",
+            "MongoDB Lens::find-documents",
+            "whale-tracker-mcp::get_recent_transactions"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "GreptimeDB::list_tools"
+          ],
+          "predicted_topk": [
+            "Contentful-mcp::list_assets",
+            "Contentful-mcp::list_spaces",
+            "Contentful-mcp::list_content_types",
+            "Contentful-mcp::get_entry",
+            "Contentful-mcp::get_asset"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Heroku::ps_list"
+          ],
+          "predicted_topk": [
+            "Dart::list_docs",
+            "Dart::list_tasks",
+            "Linear::linear_search_issues",
+            "Okta::list_groups",
+            "Okta::list_users"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Hologres::get_query_plan"
+          ],
+          "predicted_topk": [
+            "Keboola::get_table_detail",
+            "Puppeteer::puppeteer_screenshot",
+            "Keboola::retrieve_jobs",
+            "Monday.com::monday-get-item-updates",
+            "Raygun::get_application"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Hyperbrowser::search_with_bing"
+          ],
+          "predicted_topk": [
+            "Meilisearch::get-tasks",
+            "Video Editor::search-videos",
+            "Ghost::Browse Posts",
+            "Dart::list_docs",
+            "MongoDB Lens::find-documents"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "ForeverVM::listMachines"
+          ],
+          "predicted_topk": [
+            "Dart::list_tasks",
+            "Dart::list_docs",
+            "Outline::List Collections",
+            "Okta::list_groups",
+            "Okta::list_users"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Inkeep::search-product-content"
+          ],
+          "predicted_topk": [
+            "llm-context::lc-sel-files",
+            "Contentful-mcp::list_assets",
+            "llm-context::lc-sel-outlines",
+            "llm-context::lc-context",
+            "llm-context::lc-init"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Kagi Search::search"
+          ],
+          "predicted_topk": [
+            "Xero::list-items",
+            "Meilisearch::get-tasks",
+            "Codacy::codacy_list_repository_issues",
+            "Ghost::Browse Posts",
+            "MongoDB Lens::find-documents"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Keboola::get_job_detail"
+          ],
+          "predicted_topk": [
+            "Keboola::get_table_detail",
+            "Keboola::get_bucket_detail",
+            "Keboola::retrieve_jobs",
+            "Keboola::get_component_details",
+            "Keboola::retrieve_bucket_tables"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Lara Translate::list_memories"
+          ],
+          "predicted_topk": [
+            "Xero::list-items",
+            "Keboola::retrieve_jobs",
+            "SearXNG::searxng_web_search",
+            "Okta::list_groups",
+            "Okta::list_users"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Logfire::get_logfire_records_schema"
+          ],
+          "predicted_topk": [
+            "Xero::list-organisation-details",
+            "Keboola::get_table_detail",
+            "Sqlite::describe-table",
+            "Xero-mcp-server::list_invoices",
+            "Xero-mcp-server::list_organisations"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Langfuse Prompt Management::get-prompt"
+          ],
+          "predicted_topk": [
+            "ClickUp::get_list",
+            "ClickUp::get_folder",
+            "ClickUp::get_task",
+            "Monday.com::monday-get-item-updates",
+            "ClickUp::create_document"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        },
+        {
+          "expected_labels": [
+            "Lingo.dev::list-users"
+          ],
+          "predicted_topk": [
+            "Dart::list_tasks",
+            "Dart::list_docs",
+            "Outline::List Collections",
+            "Okta::list_groups",
+            "Okta::list_users"
+          ],
+          "hit_at_1": false,
+          "hit_at_k": false
+        }
+      ],
+      "hop_acc_at_1": 0.0,
+      "hop_acc_at_k": 0.0,
+      "chain_success_at_k": false
+    }
+  ]
+}

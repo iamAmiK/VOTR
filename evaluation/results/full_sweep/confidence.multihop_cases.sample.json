@@ -1,0 +1,97 @@
+{
+  "summary": {
+    "num_cases": 2,
+    "num_hops": 5,
+    "overall_top1_accuracy": 1.0,
+    "overall_handoff_accuracy_at_recommended_k": 1.0,
+    "confidence_buckets": {
+      "high": {
+        "count": 2,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "low": {
+        "count": 3,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      }
+    }
+  },
+  "rows": [
+    {
+      "case_id": "github-search-then-commits",
+      "hop_index": 0,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "GitHub::search_repositories"
+      ],
+      "predicted_top1": "GitHub::search_repositories",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "github-search-then-commits",
+      "hop_index": 1,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "GitHub::list_commits"
+      ],
+      "predicted_top1": "GitHub::list_commits",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.003582505221849483,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03494208494208494
+    },
+    {
+      "case_id": "clickup-xero-slack-three-hop",
+      "hop_index": 0,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "*::delete_task"
+      ],
+      "predicted_top1": "ClickUp::delete_task",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": -4.267813420821831e-05,
+      "top1_score": 0.03551656960334834,
+      "top2_score": 0.03555924773755656
+    },
+    {
+      "case_id": "clickup-xero-slack-three-hop",
+      "hop_index": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "expected_labels": [
+        "*::list_quotes"
+      ],
+      "predicted_top1": "Xero-mcp-server::list_quotes",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161
+    },
+    {
+      "case_id": "clickup-xero-slack-three-hop",
+      "hop_index": 2,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "expected_labels": [
+        "*::slack_add_reaction"
+      ],
+      "predicted_top1": "Slack::slack_add_reaction",
+      "hit_at_1": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.001301807905869909,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03722278225806452
+    }
+  ]
+}
