@@ -1,0 +1,32 @@
+{
+  "equivalent_tool_groups": [
+    [
+      "AWS S3::GetObject",
+      "AWS::s3_object_read"
+    ],
+    [
+      "code-executor::execute_code",
+      "Riza::execute_code"
+    ],
+    [
+      "FireCrawl::firecrawl_crawl",
+      "Firecrawl::firecrawl_crawl"
+    ],
+    [
+      "Quarkus::jdbc",
+      "JDBC::jdbc"
+    ],
+    [
+      "Google Sheets::list_spreadsheets",
+      "Google Sheets::listSpreadsheets"
+    ],
+    [
+      "Filesystem::list_directory",
+      "Golang Filesystem Server::list_directory"
+    ],
+    [
+      "Xero-mcp-server::list_quotes",
+      "Xero::list-quotes"
+    ]
+  ]
+}

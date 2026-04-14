@@ -1,0 +1,168 @@
+{
+  "summary": {
+    "num_items": 6,
+    "top1_accuracy": 1.0,
+    "top3_accuracy": 1.0,
+    "top5_accuracy": 1.0,
+    "handoff_accuracy_at_recommended_k": 1.0,
+    "avg_recommended_handoff_k": 5,
+    "confidence_buckets": {
+      "low": {
+        "count": 6,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      }
+    },
+    "num_cases": 2,
+    "all_targets_rate_at_1": 1.0,
+    "all_targets_rate_at_3": 1.0,
+    "all_targets_rate_at_5": 1.0
+  },
+  "results": [
+    {
+      "case_id": "mt-small-001",
+      "user_intent": "Search for a repository, get Bloomberg reference data, and send the result to a Telegram chat.",
+      "all_targets_at_1": true,
+      "all_targets_at_3": true,
+      "all_targets_at_5": true,
+      "subtasks": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Search for GitHub repositories",
+          "expected_tool_key": "GitHub::search_repositories",
+          "predicted_topk": [
+            "GitHub::search_repositories",
+            "GitHub::search_code",
+            "GitHub::search_users",
+            "GitHub::search_issues",
+            "GitHub::create_repository"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg reference data",
+          "expected_tool_key": "Bloomberg::bdp",
+          "predicted_topk": [
+            "Bloomberg::bdp",
+            "Bloomberg::bdh",
+            "Bloomberg::bdtick",
+            "Bloomberg::bds",
+            "Bloomberg::bdib"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Send a message to a specific chat.",
+          "expected_tool_key": "Telegram::send_message",
+          "predicted_topk": [
+            "Telegram::send_message",
+            "Telegram::search_messages",
+            "Telegram::get_direct_chat_by_contact",
+            "Telegram::get_chat",
+            "Telegram::archive_chat"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        }
+      ]
+    },
+    {
+      "case_id": "mt-small-002",
+      "user_intent": "Create a GitHub issue, pull Bloomberg historical data, and look up the right Telegram contact.",
+      "all_targets_at_1": true,
+      "all_targets_at_3": true,
+      "all_targets_at_5": true,
+      "subtasks": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a new issue",
+          "expected_tool_key": "GitHub::create_issue",
+          "predicted_topk": [
+            "GitHub::create_issue",
+            "GitHub::create_pull_request",
+            "GitHub::update_issue",
+            "GitHub::add_issue_comment",
+            "GitHub::create_branch"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg historical data",
+          "expected_tool_key": "Bloomberg::bdh",
+          "predicted_topk": [
+            "Bloomberg::bdh",
+            "Bloomberg::bdtick",
+            "Bloomberg::bdp",
+            "Bloomberg::bdib",
+            "Bloomberg::bds"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Search contacts.",
+          "expected_tool_key": "Telegram::search_contacts",
+          "predicted_topk": [
+            "Telegram::search_contacts",
+            "Telegram::list_contacts",
+            "Telegram::import_contacts",
+            "Telegram::add_contact",
+            "Telegram::delete_contact"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        }
+      ]
+    }
+  ],
+  "suite": "multi_tool.small_3.single_turn"
+}

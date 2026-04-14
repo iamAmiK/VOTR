@@ -1,0 +1,506 @@
+{
+  "summary": {
+    "num_items": 16,
+    "top1_accuracy": 0.625,
+    "top3_accuracy": 0.9375,
+    "top5_accuracy": 0.9375,
+    "handoff_accuracy_at_recommended_k": 0.875,
+    "avg_recommended_handoff_k": 3.375,
+    "confidence_buckets": {
+      "high": {
+        "count": 5,
+        "top1_accuracy": 0.8,
+        "handoff_accuracy_at_recommended_k": 0.8
+      },
+      "low": {
+        "count": 8,
+        "top1_accuracy": 0.375,
+        "handoff_accuracy_at_recommended_k": 0.875
+      },
+      "medium": {
+        "count": 3,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      }
+    },
+    "equivalence_aware": {
+      "num_items": 16,
+      "top1_accuracy": 0.625,
+      "top3_accuracy": 0.9375,
+      "top5_accuracy": 0.9375,
+      "handoff_accuracy_at_recommended_k": 0.875,
+      "avg_recommended_handoff_k": 3.375,
+      "confidence_buckets": {
+        "high": {
+          "count": 5,
+          "top1_accuracy": 0.8,
+          "handoff_accuracy_at_recommended_k": 0.8
+        },
+        "low": {
+          "count": 8,
+          "top1_accuracy": 0.375,
+          "handoff_accuracy_at_recommended_k": 0.875
+        },
+        "medium": {
+          "count": 3,
+          "top1_accuracy": 1.0,
+          "handoff_accuracy_at_recommended_k": 1.0
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "server_intent": "github repo ops",
+      "tool_intent": "list open prs for a repo pls",
+      "expected_tool_key": "GitHub::list_pull_requests",
+      "predicted_topk": [
+        "GitHub::get_pull_request_files",
+        "GitHub::list_issues",
+        "GitHub::list_pull_requests",
+        "GitHub::fork_repository",
+        "Github Actions::list_workflows"
+      ],
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0005899952840617909,
+      "top1_score": 0.033696467039430605,
+      "top2_score": 0.033106471755368815,
+      "equivalent_tool_keys": [
+        "GitHub::list_pull_requests"
+      ],
+      "equivalence_hit_at_1": false,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "github issue search",
+      "tool_intent": "srch issues about auth bug across repos",
+      "expected_tool_key": "GitHub::search_issues",
+      "predicted_topk": [
+        "GitHub::search_code",
+        "GitHub::search_issues",
+        "GitHub::list_issues",
+        "GitHub::search_repositories",
+        "GitHub::create_issue"
+      ],
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0005333652829190919,
+      "top1_score": 0.03775614754098361,
+      "top2_score": 0.03722278225806452,
+      "equivalent_tool_keys": [
+        "GitHub::search_issues"
+      ],
+      "equivalence_hit_at_1": false,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "slak messaging",
+      "tool_intent": "post a quick update in the proj channel",
+      "expected_tool_key": "Slack::slack_post_message",
+      "predicted_topk": [
+        "Slack::slack_post_message",
+        "Slack::slack_get_channel_history",
+        "Slack::slack_list_channels",
+        "Slack::slack_reply_to_thread",
+        "Slack::slack_add_reaction"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297,
+      "equivalent_tool_keys": [
+        "Slack::slack_post_message"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "slack thread replies",
+      "tool_intent": "answer in the thread instead of making a new channel post",
+      "expected_tool_key": "Slack::slack_reply_to_thread",
+      "predicted_topk": [
+        "Slack::slack_reply_to_thread",
+        "Slack::slack_get_thread_replies",
+        "Slack::slack_post_message",
+        "Slack::slack_get_channel_history",
+        "Slack::slack_list_channels"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.00041148863035431194,
+      "top1_score": 0.03816763617133792,
+      "top2_score": 0.03775614754098361,
+      "equivalent_tool_keys": [
+        "Slack::slack_reply_to_thread"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "gdrive files",
+      "tool_intent": "find docs abt q4 budget",
+      "expected_tool_key": "Google Drive::search",
+      "predicted_topk": [
+        "Google Drive::search",
+        "Golang Filesystem Server::read_multiple_files",
+        "Golang Filesystem Server::list_directory",
+        "Golang Filesystem Server::read_file",
+        "Golang Filesystem Server::get_file_info"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0005237960551089868,
+      "top1_score": 0.03174475385501416,
+      "top2_score": 0.03122095779990517,
+      "equivalent_tool_keys": [
+        "Google Drive::search"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "gsheets docs",
+      "tool_intent": "list my spreadsheets",
+      "expected_tool_key": "Google Sheets::listSpreadsheets",
+      "predicted_topk": [
+        "Google Sheets::listSpreadsheets",
+        "Google Sheets::list_spreadsheets",
+        "Google Sheets::get_multiple_spreadsheet_summary",
+        "Google Sheets::get_multiple_sheet_data",
+        "Google Sheets::copySheet"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0013007322721049208,
+      "top1_score": 0.03800416341399948,
+      "top2_score": 0.03670343114189456,
+      "equivalent_tool_keys": [
+        "Google Sheets::listSpreadsheets",
+        "Google Sheets::list_spreadsheets"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "goog tasks todos",
+      "tool_intent": "add todo: send client followup",
+      "expected_tool_key": "Google Tasks::create",
+      "predicted_topk": [
+        "Google Tasks::search",
+        "Google Tasks::create",
+        "ClickUp::create_task_comment",
+        "Google Tasks::update",
+        "Google Tasks::list"
+      ],
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.00028521559453949935,
+      "top1_score": 0.034234760673116836,
+      "top2_score": 0.03394954507857734,
+      "equivalent_tool_keys": [
+        "Google Tasks::create"
+      ],
+      "equivalence_hit_at_1": false,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "google tasks todos",
+      "tool_intent": "update the existing todo details or status",
+      "expected_tool_key": "Google Tasks::update",
+      "predicted_topk": [
+        "Google Tasks::update",
+        "Google Tasks::delete",
+        "Google Calendar::update_event",
+        "Google Tasks::create",
+        "Todoist::todoist_update_task"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0033542003618186877,
+      "top1_score": 0.038260179799048125,
+      "top2_score": 0.03490597943722944,
+      "equivalent_tool_keys": [
+        "Google Tasks::update"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "g tasks",
+      "tool_intent": "delete just that one task, not the whole list",
+      "expected_tool_key": "Google Tasks::delete",
+      "predicted_topk": [
+        "Google Tasks::delete",
+        "TickTick::delete_task",
+        "ClickUp::delete_list",
+        "Google Tasks::clear",
+        "ClickUp::get_tasks"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.002576951810161758,
+      "top1_score": 0.0383424408014572,
+      "top2_score": 0.03576548899129544,
+      "equivalent_tool_keys": [
+        "Google Tasks::delete"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "google tasks",
+      "tool_intent": "clear all completed tasks from the list",
+      "expected_tool_key": "Google Tasks::clear",
+      "predicted_topk": [
+        "Google Tasks::list",
+        "Google Tasks::clear",
+        "Google Tasks::search",
+        "Google Tasks::delete",
+        "Google Tasks::create"
+      ],
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.002134396011180782,
+      "top1_score": 0.04065898617511521,
+      "top2_score": 0.038524590163934426,
+      "equivalent_tool_keys": [
+        "Google Tasks::clear"
+      ],
+      "equivalence_hit_at_1": false,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": false
+    },
+    {
+      "server_intent": "fs operations",
+      "tool_intent": "ls ./data/index",
+      "expected_tool_key": "Filesystem::list_directory",
+      "predicted_topk": [
+        "crypto-feargreed-mcp::get_current_fng_tool",
+        "crypto-feargreed-mcp::get_historical_fng_tool",
+        "crypto-feargreed-mcp::analyze_fng_trend",
+        "Pinecone::describe-index",
+        "Pinecone::semantic-search"
+      ],
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.00017760480933074613,
+      "top1_score": 0.02186219262295082,
+      "top2_score": 0.021684587813620072,
+      "equivalent_tool_keys": [
+        "Filesystem::list_directory",
+        "Golang Filesystem Server::list_directory"
+      ],
+      "equivalence_hit_at_1": false,
+      "equivalence_hit_at_3": false,
+      "equivalence_hit_at_5": false,
+      "equivalence_hit_at_recommended_k": false
+    },
+    {
+      "server_intent": "filesystem read ops",
+      "tool_intent": "read file ./README.md",
+      "expected_tool_key": "Filesystem::read_file",
+      "predicted_topk": [
+        "Filesystem::read_file",
+        "Filesystem::read_multiple_files",
+        "Filesystem::list_directory",
+        "Filesystem::get_file_info",
+        "Filesystem::write_file"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297,
+      "equivalent_tool_keys": [
+        "Filesystem::read_file"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "filesystem read ops",
+      "tool_intent": "read these two files together in one request",
+      "expected_tool_key": "Filesystem::read_multiple_files",
+      "predicted_topk": [
+        "Filesystem::read_multiple_files",
+        "Filesystem::read_file",
+        "Filesystem::get_file_info",
+        "Filesystem::write_file",
+        "Filesystem::search_files"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297,
+      "equivalent_tool_keys": [
+        "Filesystem::read_multiple_files"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "linear issue tracking",
+      "tool_intent": "move issue ENG-44 to done pls",
+      "expected_tool_key": "Linear::linear_update_issue",
+      "predicted_topk": [
+        "Linear::linear_add_comment",
+        "Linear::linear_update_issue",
+        "Linear::linear_create_issue",
+        "Linear::linear_search_issues",
+        "Linear::linear_get_user_issues"
+      ],
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000166410650281619,
+      "top1_score": 0.038078030436570896,
+      "top2_score": 0.03791161978628928,
+      "equivalent_tool_keys": [
+        "Linear::linear_update_issue"
+      ],
+      "equivalence_hit_at_1": false,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "telegram msg ops",
+      "tool_intent": "send a quick message to that chat",
+      "expected_tool_key": "Telegram::send_message",
+      "predicted_topk": [
+        "Telegram::send_message",
+        "Telegram::archive_chat",
+        "Telegram::search_messages",
+        "Telegram::reply_to_message",
+        "Telegram::get_direct_chat_by_contact"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0013657812309319436,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03715880893300248,
+      "equivalent_tool_keys": [
+        "Telegram::send_message"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "telegram thread replies",
+      "tool_intent": "reply to that message instead of sending a fresh one",
+      "expected_tool_key": "Telegram::reply_to_message",
+      "predicted_topk": [
+        "Telegram::reply_to_message",
+        "Slack::slack_reply_to_thread",
+        "Telegram::edit_message",
+        "Slack::slack_get_thread_replies",
+        "Telegram::forward_message"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Telegram::reply_to_message"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    }
+  ],
+  "suite": "robustness_safety.priority",
+  "equivalence_map": "benchmarks\\functional_correctness\\equivalence_map.json"
+}

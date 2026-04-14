@@ -1,0 +1,157 @@
+{
+  "summary": {
+    "num_cases": 8,
+    "pass_rate": 1.0,
+    "confidence_distribution": {
+      "low": 8
+    },
+    "avg_recommended_handoff_k": 0,
+    "failed_assertions": {}
+  },
+  "rows": [
+    {
+      "id": "neg-clean-001",
+      "server_intent": "Travel reservations",
+      "tool_intent": "book round-trip commercial flights for next week",
+      "predicted_top5": [],
+      "predicted_servers_top5": [],
+      "confidence": "low",
+      "recommended_handoff_k": 0,
+      "null_route": true,
+      "score_gap": 0.0003565454923036976,
+      "checks": {
+        "max_confidence": true,
+        "max_recommended_handoff_k": true,
+        "require_null_route": true,
+        "require_empty": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-clean-002",
+      "server_intent": "Childcare services",
+      "tool_intent": "book an in-home babysitter for Friday evening",
+      "predicted_top5": [],
+      "predicted_servers_top5": [],
+      "confidence": "low",
+      "recommended_handoff_k": 0,
+      "null_route": true,
+      "score_gap": 0.002580209387552504,
+      "checks": {
+        "max_confidence": true,
+        "max_recommended_handoff_k": true,
+        "require_null_route": true,
+        "require_empty": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-clean-003",
+      "server_intent": "Restaurant delivery",
+      "tool_intent": "order dinner for office delivery",
+      "predicted_top5": [],
+      "predicted_servers_top5": [],
+      "confidence": "low",
+      "recommended_handoff_k": 0,
+      "null_route": true,
+      "score_gap": 0.00035695399259651206,
+      "checks": {
+        "max_confidence": true,
+        "max_recommended_handoff_k": true,
+        "require_null_route": true,
+        "require_empty": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-clean-004",
+      "server_intent": "Medical diagnosis",
+      "tool_intent": "diagnose the cause of chest pain from symptoms",
+      "predicted_top5": [],
+      "predicted_servers_top5": [],
+      "confidence": "low",
+      "recommended_handoff_k": 0,
+      "null_route": true,
+      "score_gap": 0.0012613524908606927,
+      "checks": {
+        "max_confidence": true,
+        "max_recommended_handoff_k": true,
+        "require_null_route": true,
+        "require_empty": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-clean-005",
+      "server_intent": "Psychological counseling",
+      "tool_intent": "provide grief counseling and emotional support",
+      "predicted_top5": [],
+      "predicted_servers_top5": [],
+      "confidence": "low",
+      "recommended_handoff_k": 0,
+      "null_route": true,
+      "score_gap": 0.00010428168322905093,
+      "checks": {
+        "max_confidence": true,
+        "max_recommended_handoff_k": true,
+        "require_null_route": true,
+        "require_empty": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-clean-006",
+      "server_intent": "Personal financial advice",
+      "tool_intent": "advise whether refinancing a mortgage is a good idea",
+      "predicted_top5": [],
+      "predicted_servers_top5": [],
+      "confidence": "low",
+      "recommended_handoff_k": 0,
+      "null_route": true,
+      "score_gap": 0.0003402694070571248,
+      "checks": {
+        "max_confidence": true,
+        "max_recommended_handoff_k": true,
+        "require_null_route": true,
+        "require_empty": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-clean-007",
+      "server_intent": "Operating system administration",
+      "tool_intent": "install a desktop browser and set it as the default application",
+      "predicted_top5": [],
+      "predicted_servers_top5": [],
+      "confidence": "low",
+      "recommended_handoff_k": 0,
+      "null_route": true,
+      "score_gap": 0.0004465597273635366,
+      "checks": {
+        "max_confidence": true,
+        "max_recommended_handoff_k": true,
+        "require_null_route": true,
+        "require_empty": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-clean-008",
+      "server_intent": "Academic tutoring",
+      "tool_intent": "teach introductory calculus concepts step by step",
+      "predicted_top5": [],
+      "predicted_servers_top5": [],
+      "confidence": "low",
+      "recommended_handoff_k": 0,
+      "null_route": true,
+      "score_gap": 0.0034551457194899812,
+      "checks": {
+        "max_confidence": true,
+        "max_recommended_handoff_k": true,
+        "require_null_route": true,
+        "require_empty": true
+      },
+      "passed": true
+    }
+  ]
+}

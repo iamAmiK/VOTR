@@ -1,0 +1,2521 @@
+{
+  "summary": {
+    "num_items": 88,
+    "top1_accuracy": 0.9886363636363636,
+    "top3_accuracy": 1.0,
+    "top5_accuracy": 1.0,
+    "handoff_accuracy_at_recommended_k": 1.0,
+    "avg_recommended_handoff_k": 2.659090909090909,
+    "confidence_buckets": {
+      "high": {
+        "count": 47,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "low": {
+        "count": 32,
+        "top1_accuracy": 0.96875,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "medium": {
+        "count": 9,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      }
+    },
+    "equivalence_aware": {
+      "num_items": 88,
+      "top1_accuracy": 0.9886363636363636,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "avg_recommended_handoff_k": 2.659090909090909,
+      "confidence_buckets": {
+        "high": {
+          "count": 47,
+          "top1_accuracy": 1.0,
+          "handoff_accuracy_at_recommended_k": 1.0
+        },
+        "low": {
+          "count": 32,
+          "top1_accuracy": 0.96875,
+          "handoff_accuracy_at_recommended_k": 1.0
+        },
+        "medium": {
+          "count": 9,
+          "top1_accuracy": 1.0,
+          "handoff_accuracy_at_recommended_k": 1.0
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "server_intent": "AgentQL operations",
+      "tool_intent": "extracts structured data from a given URL using a prompt to describe the data and fields to extract",
+      "expected_tool_key": "AgentQL::extract-web-data",
+      "predicted_topk": [
+        "AgentQL::extract-web-data",
+        "GreptimeDB::read_resource",
+        "GreptimeDB::get_prompt",
+        "GreptimeDB::list_prompts",
+        "GreptimeDB::list_tools"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.005256186745944379,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03326840341799005,
+      "equivalent_tool_keys": [
+        "AgentQL::extract-web-data"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Aiven operations",
+      "tool_intent": "list all projects on your Aiven account",
+      "expected_tool_key": "Aiven::list_projects",
+      "predicted_topk": [
+        "Aiven::list_projects",
+        "Aiven::list_services",
+        "Aiven::get_service_details",
+        "AWS::s3_bucket_list",
+        "Raygun::list_applications"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Aiven::list_projects"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Aiven operations",
+      "tool_intent": "list all services in a specific Aiven project",
+      "expected_tool_key": "Aiven::list_services",
+      "predicted_topk": [
+        "Aiven::list_services",
+        "Aiven::list_projects",
+        "Aiven::get_service_details",
+        "AWS::s3_bucket_list",
+        "AWS::s3_object_list"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009669864772984815,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037557603686635944,
+      "equivalent_tool_keys": [
+        "Aiven::list_services"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "APIMatic MCP operations",
+      "tool_intent": "validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary",
+      "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic",
+      "predicted_topk": [
+        "APIMatic MCP::validate-openapi-using-apimatic",
+        "Contentful-mcp::bulk_validate",
+        "OpenAPI Schema::search-schema",
+        "OpenAPI AnyApi::{prefix}_api_request_schema",
+        "OpenAPI Schema::get-component"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297,
+      "equivalent_tool_keys": [
+        "APIMatic MCP::validate-openapi-using-apimatic"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Arize Phoenix operations",
+      "tool_intent": "provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults",
+      "expected_tool_key": "Arize Phoenix::arize-phoenix-otel",
+      "predicted_topk": [
+        "Arize Phoenix::arize-phoenix-otel",
+        "Arize Phoenix::arize-phoenix-client",
+        "Arize Phoenix::@arizeai/phoenix-mcp",
+        "Arize Phoenix::@arizeai/phoenix-client",
+        "Arize Phoenix::arize-phoenix-evals"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Arize Phoenix::arize-phoenix-otel"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Arize Phoenix operations",
+      "tool_intent": "mCP server implementation for Arize Phoenix providing a unified interface to Phoenix's capabilities",
+      "expected_tool_key": "Arize Phoenix::@arizeai/phoenix-mcp",
+      "predicted_topk": [
+        "Arize Phoenix::@arizeai/phoenix-mcp",
+        "Arize Phoenix::@arizeai/phoenix-client",
+        "Arize Phoenix::arize-phoenix-client",
+        "Arize Phoenix::arize-phoenix-otel",
+        "Arize Phoenix::arize-phoenix-evals"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297,
+      "equivalent_tool_keys": [
+        "Arize Phoenix::@arizeai/phoenix-mcp"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Astra DB operations",
+      "tool_intent": "update an existing collection in the database",
+      "expected_tool_key": "Astra DB::UpdateCollection",
+      "predicted_topk": [
+        "Astra DB::UpdateCollection",
+        "Astra DB::UpdateRecord",
+        "Astra DB::CreateCollection",
+        "Astra DB::DeleteCollection",
+        "Astra DB::BulkUpdateRecords"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0007977756478053932,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03772681451612903,
+      "equivalent_tool_keys": [
+        "Astra DB::UpdateCollection"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Astra DB operations",
+      "tool_intent": "delete a collection from the database",
+      "expected_tool_key": "Astra DB::DeleteCollection",
+      "predicted_topk": [
+        "Astra DB::DeleteCollection",
+        "Astra DB::DeleteRecord",
+        "Astra DB::UpdateCollection",
+        "Astra DB::ListRecords",
+        "Astra DB::CreateCollection"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009634953447750921,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037561094819159334,
+      "equivalent_tool_keys": [
+        "Astra DB::DeleteCollection"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Audiense Insights operations",
+      "tool_intent": "retrieves available baseline audiences, optionally filtered by country",
+      "expected_tool_key": "Audiense Insights::get-baselines",
+      "predicted_topk": [
+        "Audiense Insights::get-baselines",
+        "Audiense Insights::compare-audience-influencers",
+        "Audiense Insights::get-categories",
+        "Audiense Insights::get-audience-insights",
+        "Audiense Insights::get-audience-content"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000710970092249838,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03781362007168459,
+      "equivalent_tool_keys": [
+        "Audiense Insights::get-baselines"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Audiense Insights operations",
+      "tool_intent": "retrieves the list of available affinity categories that can be used in influencer comparisons",
+      "expected_tool_key": "Audiense Insights::get-categories",
+      "predicted_topk": [
+        "Audiense Insights::get-categories",
+        "Audiense Insights::compare-audience-influencers",
+        "Audiense Insights::get-baselines",
+        "Audiense Insights::get-reports",
+        "Audiense Insights::get-audience-content"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000710970092249838,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03781362007168459,
+      "equivalent_tool_keys": [
+        "Audiense Insights::get-categories"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "AWS S3 storage operations",
+      "tool_intent": "list all S3 buckets in my AWS account",
+      "expected_tool_key": "AWS::s3_bucket_list",
+      "predicted_topk": [
+        "AWS::s3_bucket_list",
+        "AWS::s3_object_list",
+        "AWS S3::ListBuckets",
+        "AWS::s3_bucket_create",
+        "AWS::s3_bucket_delete"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011379266482386546,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03738666351569577,
+      "equivalent_tool_keys": [
+        "AWS::s3_bucket_list"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "AWS operations",
+      "tool_intent": "get content recommendations for AWS documentation pages",
+      "expected_tool_key": "AWS::Get Content Recommendations",
+      "predicted_topk": [
+        "AWS::Get Content Recommendations",
+        "AWS::s3_object_read",
+        "AWS::Search Documentation",
+        "AWS::AWS and AWSCC Provider Documentation",
+        "AWS::Convert Documentation to Markdown"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0021925194568637174,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03633207070707071,
+      "equivalent_tool_keys": [
+        "AWS::Get Content Recommendations"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Axiom operations",
+      "tool_intent": "execute APL queries against Axiom datasets",
+      "expected_tool_key": "Axiom::queryApl",
+      "predicted_topk": [
+        "Axiom::queryApl",
+        "Axiom::listDatasets",
+        "PostgreSQL::query",
+        "AWS Athena::run_query",
+        "AWS Athena::list_saved_queries"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Axiom::queryApl"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Axiom operations",
+      "tool_intent": "list available Axiom datasets",
+      "expected_tool_key": "Axiom::listDatasets",
+      "predicted_topk": [
+        "Axiom::listDatasets",
+        "Axiom::queryApl",
+        "Fibery::list_databases",
+        "Airflow::List Datasets",
+        "Verodat::get-datasets"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Axiom::listDatasets"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Azure operations",
+      "tool_intent": "samples rows from a Kusto table",
+      "expected_tool_key": "Azure::Sample rows from a Kusto table",
+      "predicted_topk": [
+        "Azure::Sample rows from a Kusto table",
+        "Azure::Get schema for a Kusto table",
+        "Azure::List tables in a Kusto database",
+        "Azure::Query Kusto databases using KQL",
+        "Azure::List Kusto clusters"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Azure::Sample rows from a Kusto table"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Azure operations",
+      "tool_intent": "lists, creates, and retrieves keys within an Azure Key Vault",
+      "expected_tool_key": "Azure::List, create, and get keys",
+      "predicted_topk": [
+        "Azure::List, create, and get keys",
+        "Azure::List, get configuration and get parameters for servers",
+        "Azure::List and query databases",
+        "Azure::List and query databases",
+        "Azure::List and query Storage tables"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0012150023503143537,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03730958781362007,
+      "equivalent_tool_keys": [
+        "Azure::List, create, and get keys"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Bitrise operations",
+      "tool_intent": "list Release Management installable artifacts of a connected app",
+      "expected_tool_key": "Bitrise::list_installable_artifacts",
+      "predicted_topk": [
+        "Bitrise::list_installable_artifacts",
+        "Bitrise::create_connected_app",
+        "Bitrise::list_connected_apps",
+        "Bitrise::get_connected_app",
+        "Bitrise::create_tester_group"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011253966155473291,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.0373991935483871,
+      "equivalent_tool_keys": [
+        "Bitrise::list_installable_artifacts"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Bitrise operations",
+      "tool_intent": "changes whether public install page should be available for the installable artifact",
+      "expected_tool_key": "Bitrise::set_installable_artifact_public_install_page",
+      "predicted_topk": [
+        "Bitrise::set_installable_artifact_public_install_page",
+        "Bitrise::get_installable_artifact_upload_and_processing_status",
+        "Bitrise::generate_installable_artifact_upload_url",
+        "Bitrise::list_installable_artifacts",
+        "Bitrise::list_build_distribution_versions"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009669864772984815,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037557603686635944,
+      "equivalent_tool_keys": [
+        "Bitrise::set_installable_artifact_public_install_page"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Box operations",
+      "tool_intent": "ask Box AI about a hub",
+      "expected_tool_key": "Box::box_hubs_ask_ai_tool",
+      "predicted_topk": [
+        "Box::box_hubs_ask_ai_tool",
+        "Box::box_ask_ai_tool",
+        "Box::box_download_file_tool",
+        "Box::box_search_tool",
+        "Box::box_read_tool"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.00043627710206240594,
+      "top1_score": 0.03843204653622422,
+      "top2_score": 0.037995769434161816,
+      "equivalent_tool_keys": [
+        "Box::box_hubs_ask_ai_tool"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Box operations",
+      "tool_intent": "list all Doc Gen jobs that used a specific template",
+      "expected_tool_key": "Box::box_docgen_template_list_jobs_tool",
+      "predicted_topk": [
+        "Box::box_docgen_template_list_jobs_tool",
+        "Box::box_docgen_list_jobs_tool",
+        "Box::box_docgen_list_jobs_by_batch_tool",
+        "Box::box_docgen_template_list_tags_tool",
+        "Box::box_docgen_template_get_by_id_tool"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011253966155473291,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.0373991935483871,
+      "equivalent_tool_keys": [
+        "Box::box_docgen_template_list_jobs_tool"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Chroma document retrieval operations",
+      "tool_intent": "read a Chroma document by document id",
+      "expected_tool_key": "Chroma::read_document",
+      "predicted_topk": [
+        "Chroma::read_document",
+        "Chroma::delete_document",
+        "Chroma::update_document",
+        "Chroma::create_document",
+        "Chroma::search_similar"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0012150023503143537,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03730958781362007,
+      "equivalent_tool_keys": [
+        "Chroma::read_document"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Chroma operations",
+      "tool_intent": "update existing documents' content, metadata, or embeddings",
+      "expected_tool_key": "Chroma::chroma_update_documents",
+      "predicted_topk": [
+        "Chroma::chroma_update_documents",
+        "Chroma::chroma_modify_collection",
+        "Chroma::update_document",
+        "Chroma::chroma_add_documents",
+        "Chroma::chroma_get_documents"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009669864772984815,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037557603686635944,
+      "equivalent_tool_keys": [
+        "Chroma::chroma_update_documents"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "CircleCI operations",
+      "tool_intent": "retrieves the status of the latest pipeline for a given branch",
+      "expected_tool_key": "CircleCI::get_latest_pipeline_status",
+      "predicted_topk": [
+        "CircleCI::get_latest_pipeline_status",
+        "CircleCI::get_job_test_results",
+        "CircleCI::get_build_failure_logs",
+        "GitHub::get_pull_request_status",
+        "Bitrise::get_pipeline"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.002665889573293806,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03585870059064062,
+      "equivalent_tool_keys": [
+        "CircleCI::get_latest_pipeline_status"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "CircleCI operations",
+      "tool_intent": "identifies flaky tests in a CircleCI project by analyzing test execution history",
+      "expected_tool_key": "CircleCI::find_flaky_tests",
+      "predicted_topk": [
+        "CircleCI::find_flaky_tests",
+        "CircleCI::get_job_test_results",
+        "CircleCI::get_build_failure_logs",
+        "CircleCI::get_latest_pipeline_status",
+        "CircleCI::config_helper"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009669864772984815,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037557603686635944,
+      "equivalent_tool_keys": [
+        "CircleCI::find_flaky_tests"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Codacy operations",
+      "tool_intent": "lists and filters code quality issues in a repository",
+      "expected_tool_key": "Codacy::codacy_list_repository_issues",
+      "predicted_topk": [
+        "Codacy::codacy_list_repository_issues",
+        "Codacy::codacy_search_repository_srm_items",
+        "Codacy::codacy_get_file_issues",
+        "Codacy::codacy_list_files",
+        "Codacy::codacy_list_repository_tool_patterns"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011379266482386546,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03738666351569577,
+      "equivalent_tool_keys": [
+        "Codacy::codacy_list_repository_issues"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Codacy operations",
+      "tool_intent": "get repository with analysis information, including metrics for Grade, Issues, Duplication, Complexity, and Coverage",
+      "expected_tool_key": "Codacy::codacy_get_repository_with_analysis",
+      "predicted_topk": [
+        "Codacy::codacy_get_repository_with_analysis",
+        "Codacy::codacy_get_file_with_analysis",
+        "Codacy::codacy_list_repository_tools",
+        "Codacy::codacy_get_file_clones",
+        "Codacy::codacy_list_repository_issues"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Codacy::codacy_get_repository_with_analysis"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "CodeLogic operations",
+      "tool_intent": "analyzes impacts between code and database entities",
+      "expected_tool_key": "CodeLogic::codelogic-database-impact",
+      "predicted_topk": [
+        "CodeLogic::codelogic-database-impact",
+        "CodeLogic::codelogic-method-impact",
+        "Riza::create_tool",
+        "Riza::execute_code",
+        "Riza::execute_tool"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "CodeLogic::codelogic-database-impact"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "CodeLogic operations",
+      "tool_intent": "pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class",
+      "expected_tool_key": "CodeLogic::codelogic-method-impact",
+      "predicted_topk": [
+        "CodeLogic::codelogic-method-impact",
+        "CodeLogic::codelogic-database-impact",
+        "Riza::execute_tool",
+        "Riza::execute_code",
+        "Riza::create_tool"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "CodeLogic::codelogic-method-impact"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Comet Opik operations",
+      "tool_intent": "track and analyze trace data",
+      "expected_tool_key": "Comet Opik::Traces",
+      "predicted_topk": [
+        "Comet Opik::Traces",
+        "Comet Opik::Metrics",
+        "Comet Opik::Projects/Workspaces Management",
+        "Comet Opik::Prompts Management",
+        "Logfire::find_exceptions_in_file"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Comet Opik::Traces"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Comet Opik operations",
+      "tool_intent": "organize and manage projects",
+      "expected_tool_key": "Comet Opik::Projects/Workspaces Management",
+      "predicted_topk": [
+        "Comet Opik::Projects/Workspaces Management",
+        "Comet Opik::Traces",
+        "Comet Opik::Prompts Management",
+        "Comet Opik::Metrics",
+        "obsidian-mcp::manage-tags"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0012150023503143537,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03730958781362007,
+      "equivalent_tool_keys": [
+        "Comet Opik::Projects/Workspaces Management"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Couchbase operations",
+      "tool_intent": "delete a document by ID from a specified scope and collection",
+      "expected_tool_key": "Couchbase::delete_document_by_id",
+      "predicted_topk": [
+        "Couchbase::delete_document_by_id",
+        "Couchbase::get_document_by_id",
+        "Couchbase::upsert_document_by_id",
+        "Astra DB::GetRecord",
+        "Couchbase::get_collection_structure"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Couchbase::delete_document_by_id"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Couchbase operations",
+      "tool_intent": "get a document by ID from a specified scope and collection",
+      "expected_tool_key": "Couchbase::get_document_by_id",
+      "predicted_topk": [
+        "Couchbase::get_document_by_id",
+        "Couchbase::delete_document_by_id",
+        "Couchbase::upsert_document_by_id",
+        "Couchbase::get_collection_structure",
+        "Couchbase::get_scopes_and_collections"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Couchbase::get_document_by_id"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Dart operations",
+      "tool_intent": "get information about the user's space, including available assignees, dartboards, folders, statuses, tags, priorities, and sizes",
+      "expected_tool_key": "Dart::get_config",
+      "predicted_topk": [
+        "Dart::get_config",
+        "Dart::create_task",
+        "Dart::update_task",
+        "Dart::update_doc",
+        "Dart::delete_task"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297,
+      "equivalent_tool_keys": [
+        "Dart::get_config"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Dart operations",
+      "tool_intent": "create a new doc with title, text content, and folder",
+      "expected_tool_key": "Dart::create_doc",
+      "predicted_topk": [
+        "Dart::create_doc",
+        "Dart::list_docs",
+        "Dart::create_task",
+        "Dart::update_doc",
+        "Dart::delete_doc"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Dart::create_doc"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "DevHub operations",
+      "tool_intent": "updates an existing blog post's title and/or content",
+      "expected_tool_key": "DevHub::update_blog_post",
+      "predicted_topk": [
+        "DevHub::update_blog_post",
+        "DevHub::get_blog_post",
+        "DevHub::create_blog_post",
+        "DevHub::update_hours",
+        "DevHub::upload_image"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297,
+      "equivalent_tool_keys": [
+        "DevHub::update_blog_post"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "DevHub operations",
+      "tool_intent": "gets all locations for a specific business",
+      "expected_tool_key": "DevHub::get_locations",
+      "predicted_topk": [
+        "DevHub::get_locations",
+        "DevHub::get_businesses",
+        "DevHub::get_hours_of_operation",
+        "DevHub::site_from_url",
+        "DevHub::get_nearest_location"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297,
+      "equivalent_tool_keys": [
+        "DevHub::get_locations"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Dynatrace operations",
+      "tool_intent": "sends Slack messages using the Slack Connector",
+      "expected_tool_key": "Dynatrace::send_slack_message",
+      "predicted_topk": [
+        "Dynatrace::send_slack_message",
+        "Dynatrace::set_up_notification_workflow",
+        "Dynatrace::execute_dql",
+        "Dynatrace::get_security_problems",
+        "Dynatrace::list_problems"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.004645467620568361,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.033879122543366065,
+      "equivalent_tool_keys": [
+        "Dynatrace::send_slack_message"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Dynatrace operations",
+      "tool_intent": "lists problem details from your services, such as Kubernetes",
+      "expected_tool_key": "Dynatrace::list_problems",
+      "predicted_topk": [
+        "Dynatrace::list_problems",
+        "Dynatrace::get_security_problems",
+        "Dynatrace::execute_dql",
+        "Dynatrace::set_up_notification_workflow",
+        "Dynatrace::get_ownership"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000710970092249838,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03781362007168459,
+      "equivalent_tool_keys": [
+        "Dynatrace::list_problems"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "EduBase operations",
+      "tool_intent": "retrieves user information from the EduBase platform",
+      "expected_tool_key": "EduBase::edubase_get_user",
+      "predicted_topk": [
+        "EduBase::edubase_get_user",
+        "OpenCTI::get_user_by_id",
+        "Okta::get_user",
+        "Okta::get_user_last_location",
+        "mcp_weather::get_weather"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.017006413000595973,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.021518177163338453,
+      "equivalent_tool_keys": [
+        "EduBase::edubase_get_user"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Elasticsearch index alias operations",
+      "tool_intent": "delete an alias from an Elasticsearch index",
+      "expected_tool_key": "Elasticsearch::delete_alias",
+      "predicted_topk": [
+        "Elasticsearch::delete_alias",
+        "Elasticsearch::put_alias",
+        "Elasticsearch::get_alias",
+        "Elasticsearch::delete_index",
+        "Elasticsearch::get_mappings"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Elasticsearch::delete_alias"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Elasticsearch document operations",
+      "tool_intent": "get an Elasticsearch document by id from an index",
+      "expected_tool_key": "Elasticsearch::get_document",
+      "predicted_topk": [
+        "Elasticsearch::get_document",
+        "Elasticsearch::delete_document",
+        "Elasticsearch::index_document",
+        "Elasticsearch::search",
+        "Elasticsearch::get_mappings"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297,
+      "equivalent_tool_keys": [
+        "Elasticsearch::get_document"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Exa operations",
+      "tool_intent": "specialized search focused on academic papers and research content",
+      "expected_tool_key": "Exa::research_paper_search",
+      "predicted_topk": [
+        "Exa::research_paper_search",
+        "Exa::company_research",
+        "Exa::web_search_exa",
+        "Exa::wikipedia_search_exa",
+        "Exa::github_search"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297,
+      "equivalent_tool_keys": [
+        "Exa::research_paper_search"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Exa operations",
+      "tool_intent": "performs real-time web searches with optimized results and content extraction",
+      "expected_tool_key": "Exa::web_search_exa",
+      "predicted_topk": [
+        "Exa::web_search_exa",
+        "Exa::github_search",
+        "Exa::crawling",
+        "Exa::research_paper_search",
+        "Exa::company_research"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0013657812309319436,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03715880893300248,
+      "equivalent_tool_keys": [
+        "Exa::web_search_exa"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Fibery operations",
+      "tool_intent": "retrieves a list of all databases available in your Fibery workspace",
+      "expected_tool_key": "Fibery::list_databases",
+      "predicted_topk": [
+        "Fibery::list_databases",
+        "Fibery::describe_database",
+        "Fibery::create_entity",
+        "Fibery::query_database",
+        "Fibery::update_entity"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0014675276028396078,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03705706256109482,
+      "equivalent_tool_keys": [
+        "Fibery::list_databases"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Fibery operations",
+      "tool_intent": "provides a detailed breakdown of a specific database's structure, showing all fields with their titles, names, and types",
+      "expected_tool_key": "Fibery::describe_database",
+      "predicted_topk": [
+        "Fibery::describe_database",
+        "Fibery::list_databases",
+        "Fibery::create_entity",
+        "Fibery::query_database",
+        "Fibery::create_entities_batch"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.001223002862347125,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.0373015873015873,
+      "equivalent_tool_keys": [
+        "Fibery::describe_database"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Firecrawl operations",
+      "tool_intent": "start an asynchronous crawl with advanced options",
+      "expected_tool_key": "Firecrawl::firecrawl_crawl",
+      "predicted_topk": [
+        "Firecrawl::firecrawl_crawl",
+        "FireCrawl::firecrawl_crawl",
+        "Firecrawl::firecrawl_scrape",
+        "FireCrawl::firecrawl_scrape",
+        "Firecrawl::firecrawl_batch_scrape"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "FireCrawl::firecrawl_crawl",
+        "Firecrawl::firecrawl_crawl"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Firecrawl operations",
+      "tool_intent": "search the web and optionally extract content from search results",
+      "expected_tool_key": "Firecrawl::firecrawl_search",
+      "predicted_topk": [
+        "Firecrawl::firecrawl_search",
+        "FireCrawl::firecrawl_search",
+        "Firecrawl::firecrawl_extract",
+        "Firecrawl::firecrawl_scrape",
+        "Firecrawl::firecrawl_deep_research"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.00043627710206240594,
+      "top1_score": 0.03843204653622422,
+      "top2_score": 0.037995769434161816,
+      "equivalent_tool_keys": [
+        "Firecrawl::firecrawl_search"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Gitee operations",
+      "tool_intent": "comment on an issue",
+      "expected_tool_key": "Gitee::comment_issue",
+      "predicted_topk": [
+        "Gitee::comment_issue",
+        "Gitee::list_issue_comments",
+        "Gitee::comment_pull",
+        "Gitee::create_issue",
+        "Gitee::update_issue"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297,
+      "equivalent_tool_keys": [
+        "Gitee::comment_issue"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Gitee operations",
+      "tool_intent": "create a pull request",
+      "expected_tool_key": "Gitee::create_pull",
+      "predicted_topk": [
+        "Gitee::create_pull",
+        "Gitee::update_pull",
+        "Gitee::merge_pull",
+        "Gitee::comment_pull",
+        "Gitee::create_release"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0016294288736118448,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03689516129032258,
+      "equivalent_tool_keys": [
+        "Gitee::create_pull"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Grafana operations",
+      "tool_intent": "list schedules from Grafana OnCall",
+      "expected_tool_key": "Grafana::list_oncall_schedules",
+      "predicted_topk": [
+        "Grafana::list_oncall_schedules",
+        "Grafana::list_oncall_teams",
+        "Grafana::list_oncall_users",
+        "Grafana::list_incidents",
+        "Grafana::list_datasources"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000710970092249838,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03781362007168459,
+      "equivalent_tool_keys": [
+        "Grafana::list_oncall_schedules"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Grafana operations",
+      "tool_intent": "list available metric names",
+      "expected_tool_key": "Grafana::list_prometheus_metric_names",
+      "predicted_topk": [
+        "Grafana::list_prometheus_metric_names",
+        "Grafana::list_prometheus_metric_metadata",
+        "Grafana::list_loki_label_names",
+        "Grafana::list_oncall_teams",
+        "Grafana::list_datasources"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009669864772984815,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037557603686635944,
+      "equivalent_tool_keys": [
+        "Grafana::list_prometheus_metric_names"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "GreptimeDB operations",
+      "tool_intent": "gets a prompt by name",
+      "expected_tool_key": "GreptimeDB::get_prompt",
+      "predicted_topk": [
+        "GreptimeDB::get_prompt",
+        "GreptimeDB::list_tools",
+        "GreptimeDB::list_prompts",
+        "GreptimeDB::read_resource",
+        "GreptimeDB::call_tool"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011333971275801005,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037391193036354325,
+      "equivalent_tool_keys": [
+        "GreptimeDB::get_prompt"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "GreptimeDB operations",
+      "tool_intent": "lists tables in the database",
+      "expected_tool_key": "GreptimeDB::list_resources",
+      "predicted_topk": [
+        "GreptimeDB::list_resources",
+        "GreptimeDB::list_tools",
+        "GreptimeDB::list_prompts",
+        "Neon::get_database_tables",
+        "GreptimeDB::read_resource"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0016314995943732674,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03689309056956116,
+      "equivalent_tool_keys": [
+        "GreptimeDB::list_resources"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Heroku operations",
+      "tool_intent": "list all add-ons for all apps or for a specific app",
+      "expected_tool_key": "Heroku::list_addons",
+      "predicted_topk": [
+        "Heroku::list_addons",
+        "Heroku::list_apps",
+        "Heroku::ps_list",
+        "Heroku::create_addon",
+        "Heroku::get_app_info"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0016884871987992017,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.036836102965135224,
+      "equivalent_tool_keys": [
+        "Heroku::list_addons"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Heroku operations",
+      "tool_intent": "view application logs",
+      "expected_tool_key": "Heroku::get_app_logs",
+      "predicted_topk": [
+        "Heroku::get_app_logs",
+        "Heroku::pg_ps",
+        "Heroku::pg_locks",
+        "Heroku::list_apps",
+        "Heroku::pipelines_list"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011253966155473291,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.0373991935483871,
+      "equivalent_tool_keys": [
+        "Heroku::get_app_logs"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Hologres operations",
+      "tool_intent": "execute a DML (INSERT, UPDATE, DELETE) SQL query on the Hologres server",
+      "expected_tool_key": "Hologres::execute_dml_sql",
+      "predicted_topk": [
+        "Hologres::execute_dml_sql",
+        "Hologres::execute_select_sql",
+        "Hologres::execute_ddl_sql",
+        "Hologres::get_query_plan",
+        "Hologres::get_execution_plan"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297,
+      "equivalent_tool_keys": [
+        "Hologres::execute_dml_sql"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Hologres operations",
+      "tool_intent": "collect table statistics",
+      "expected_tool_key": "Hologres::gather_table_statistics",
+      "predicted_topk": [
+        "Hologres::gather_table_statistics",
+        "Hologres::get_execution_plan",
+        "Hologres::execute_select_sql",
+        "Hologres::get_query_plan",
+        "Hologres::execute_dml_sql"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0010537920328540368,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03747079813108039,
+      "equivalent_tool_keys": [
+        "Hologres::gather_table_statistics"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Hyperbrowser operations",
+      "tool_intent": "complex browser tasks using Claude computer use",
+      "expected_tool_key": "Hyperbrowser::claude_computer_use_agent",
+      "predicted_topk": [
+        "Hyperbrowser::claude_computer_use_agent",
+        "Hyperbrowser::browser_use_agent",
+        "Hyperbrowser::list_profiles",
+        "Hyperbrowser::openai_computer_use_agent",
+        "Hyperbrowser::create_profile"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011379266482386546,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03738666351569577,
+      "equivalent_tool_keys": [
+        "Hyperbrowser::claude_computer_use_agent"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Hyperbrowser operations",
+      "tool_intent": "fast, lightweight browser automation with the Browser Use agent",
+      "expected_tool_key": "Hyperbrowser::browser_use_agent",
+      "predicted_topk": [
+        "Hyperbrowser::browser_use_agent",
+        "Hyperbrowser::claude_computer_use_agent",
+        "Hyperbrowser::create_profile",
+        "Hyperbrowser::openai_computer_use_agent",
+        "Hyperbrowser::search_with_bing"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0008819102631900111,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037642679900744415,
+      "equivalent_tool_keys": [
+        "Hyperbrowser::browser_use_agent"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Inkeep operations",
+      "tool_intent": "retrieves product documentation about Inkeep",
+      "expected_tool_key": "Inkeep::search-product-content",
+      "predicted_topk": [
+        "Inkeep::search-product-content",
+        "Stripe::createProduct",
+        "Productboard::get_product_detail",
+        "Tinybird::llms-tinybird-docs",
+        "Open Strategy Partners Marketing Tools::OSP Product Value Map Generator"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0123977212746053,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.026126868889329125,
+      "equivalent_tool_keys": [
+        "Inkeep::search-product-content"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Kagi Search operations",
+      "tool_intent": "performs a web search to find information based on the query provided",
+      "expected_tool_key": "Kagi Search::search",
+      "predicted_topk": [
+        "Kagi Search::search",
+        "Kagi Search::summarizer",
+        "Tavily::tavily-search",
+        "Milvus::milvus_delete_entities",
+        "Exa::github_search"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Kagi Search::search"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Kagi Search operations",
+      "tool_intent": "generates a summary of the content, such as a video, based on the URL provided",
+      "expected_tool_key": "Kagi Search::summarizer",
+      "predicted_topk": [
+        "Kagi Search::summarizer",
+        "Kagi Search::search",
+        "Video Editor::generate-edit-from-videos",
+        "DBHub::generate_sql",
+        "Box::box_read_tool"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Kagi Search::summarizer"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Keboola operations",
+      "tool_intent": "gets detailed information about a specific table including its DB identifier and column information",
+      "expected_tool_key": "Keboola::get_table_detail",
+      "predicted_topk": [
+        "Keboola::get_table_detail",
+        "Keboola::get_bucket_detail",
+        "Keboola::get_job_detail",
+        "Keboola::get_component_details",
+        "Keboola::update_table_description"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0013657812309319436,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03715880893300248,
+      "equivalent_tool_keys": [
+        "Keboola::get_table_detail"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Keboola operations",
+      "tool_intent": "retrieves detailed information about a specific job, identified by the job_id, including its status, parameters, results, and any relevant metadata",
+      "expected_tool_key": "Keboola::get_job_detail",
+      "predicted_topk": [
+        "Keboola::get_job_detail",
+        "Keboola::get_table_detail",
+        "Unstructured::get_job_info",
+        "Keboola::retrieve_components",
+        "Keboola::get_bucket_detail"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0022576429923589214,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.036266947171575505,
+      "equivalent_tool_keys": [
+        "Keboola::get_job_detail"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Redis operations",
+      "tool_intent": "tools to store field-value pairs within a single key",
+      "expected_tool_key": "Redis::hash",
+      "predicted_topk": [
+        "Redis::hash",
+        "Redis::set",
+        "Redis::get",
+        "Redis::set",
+        "Redis::list"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011194668242759803,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037405123339658446,
+      "equivalent_tool_keys": [
+        "Redis::hash"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Redis operations",
+      "tool_intent": "tools to add, remove and list set members",
+      "expected_tool_key": "Redis::set",
+      "predicted_topk": [
+        "Redis::set",
+        "Redis::set",
+        "Redis::list",
+        "Redis::delete",
+        "Redis::get"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.001223002862347125,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.0373015873015873,
+      "equivalent_tool_keys": [
+        "Redis::set"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Stripe operations",
+      "tool_intent": "creates a new invoice in Stripe",
+      "expected_tool_key": "Stripe::createInvoice",
+      "predicted_topk": [
+        "Stripe::createInvoice",
+        "Stripe::createInvoiceItem",
+        "Stripe::createProduct",
+        "Stripe::createCoupon",
+        "Stripe::createCustomer"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Stripe::createInvoice"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Stripe operations",
+      "tool_intent": "lists all subscriptions in Stripe",
+      "expected_tool_key": "Stripe::listSubscriptions",
+      "predicted_topk": [
+        "Stripe::listSubscriptions",
+        "Stripe::listProducts",
+        "Stripe::listCustomers",
+        "Stripe::listPrices",
+        "Stripe::listCoupons"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Stripe::listSubscriptions"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Airtable operations",
+      "tool_intent": "lists records from a specified Airtable table",
+      "expected_tool_key": "Airtable::list_records",
+      "predicted_topk": [
+        "Airtable::list_records",
+        "Airtable::delete_records",
+        "Airtable::update_records",
+        "Airtable::list_bases",
+        "Airtable::describe_table"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0013657812309319436,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03715880893300248,
+      "equivalent_tool_keys": [
+        "Airtable::list_records"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Airtable operations",
+      "tool_intent": "search for records containing specific text",
+      "expected_tool_key": "Airtable::search_records",
+      "predicted_topk": [
+        "Airtable::search_records",
+        "Airtable::get_record",
+        "Airtable::list_records",
+        "Airtable::list_tables",
+        "Airtable::describe_table"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009634953447750921,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037561094819159334,
+      "equivalent_tool_keys": [
+        "Airtable::search_records"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Chess.com operations",
+      "tool_intent": "get a player's profile from Chess.com",
+      "expected_tool_key": "Chess.com::get_player_profile",
+      "predicted_topk": [
+        "Chess.com::get_player_profile",
+        "Chess.com::get_player_stats",
+        "Chess.com::get_player_current_games",
+        "Chess.com::get_titled_players",
+        "Chess.com::get_player_games_by_month"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Chess.com::get_player_profile"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Chess.com operations",
+      "tool_intent": "get a player's stats from Chess.com",
+      "expected_tool_key": "Chess.com::get_player_stats",
+      "predicted_topk": [
+        "Chess.com::get_player_stats",
+        "Chess.com::get_player_profile",
+        "Chess.com::get_player_current_games",
+        "Chess.com::get_player_games_by_month",
+        "Chess.com::get_titled_players"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Chess.com::get_player_stats"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Datadog operations",
+      "tool_intent": "fetch events within a time range",
+      "expected_tool_key": "Datadog::get-events",
+      "predicted_topk": [
+        "Datadog::get-events",
+        "Datadog::get-monitors",
+        "Datadog::get-incidents",
+        "Datadog::get-metric-metadata",
+        "Datadog::get-dashboard"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009669864772984815,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037557603686635944,
+      "equivalent_tool_keys": [
+        "Datadog::get-events"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Datadog operations",
+      "tool_intent": "get metadata for a specific metric",
+      "expected_tool_key": "Datadog::get-metric-metadata",
+      "predicted_topk": [
+        "Datadog::get-metric-metadata",
+        "Datadog::get-monitor",
+        "Datadog::get-dashboard",
+        "Datadog::get-metrics",
+        "Grafana::list_prometheus_metric_metadata"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.001798208906303167,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03672638125763126,
+      "equivalent_tool_keys": [
+        "Datadog::get-metric-metadata"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Discord channel management",
+      "tool_intent": "delete a Discord channel by channel id",
+      "expected_tool_key": "Discord::delete_channel",
+      "predicted_topk": [
+        "Discord::send-message",
+        "Discord::delete_channel",
+        "Discord::delete_message",
+        "Discord::read-messages",
+        "Discord::find_channel"
+      ],
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.00043016523549310043,
+      "top1_score": 0.03800416341399948,
+      "top2_score": 0.03757399817850638,
+      "equivalent_tool_keys": [
+        "Discord::delete_channel"
+      ],
+      "equivalence_hit_at_1": false,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Discord direct messaging",
+      "tool_intent": "send a Discord direct message to a user",
+      "expected_tool_key": "Discord::send_private_message",
+      "predicted_topk": [
+        "Discord::send_private_message",
+        "Discord::send-message",
+        "Discord::send_message",
+        "Discord::delete_private_message",
+        "Discord::edit_private_message"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000710970092249838,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03781362007168459,
+      "equivalent_tool_keys": [
+        "Discord::send_private_message"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Docker operations",
+      "tool_intent": "creates a new Docker network",
+      "expected_tool_key": "Docker::create_network",
+      "predicted_topk": [
+        "Docker::create_network",
+        "Docker::remove_network",
+        "Docker::create_volume",
+        "Docker::create_container",
+        "Docker::build_image"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0012150023503143537,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03730958781362007,
+      "equivalent_tool_keys": [
+        "Docker::create_network"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Docker operations",
+      "tool_intent": "creates a new Docker volume",
+      "expected_tool_key": "Docker::create_volume",
+      "predicted_topk": [
+        "Docker::create_volume",
+        "Docker::remove_volume",
+        "Docker::create_network",
+        "Docker::create_container",
+        "Docker::build_image"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009669864772984815,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037557603686635944,
+      "equivalent_tool_keys": [
+        "Docker::create_volume"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Git operations",
+      "tool_intent": "lists all available Git repositories",
+      "expected_tool_key": "Git::git_list_repositories",
+      "predicted_topk": [
+        "Git::git_list_repositories",
+        "Git::git_init",
+        "Git::git_log",
+        "Git::git_status",
+        "Git::git_commit"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011333971275801005,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037391193036354325,
+      "equivalent_tool_keys": [
+        "Git::git_list_repositories"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Git operations",
+      "tool_intent": "creates a new branch",
+      "expected_tool_key": "Git::git_create_branch",
+      "predicted_topk": [
+        "Git::git_create_branch",
+        "Git::git_create_branch",
+        "GitLab::create_branch",
+        "GitHub::create_branch",
+        "GitLab::create_issue"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0005965758857747194,
+      "top1_score": 0.038260179799048125,
+      "top2_score": 0.037663603913273405,
+      "equivalent_tool_keys": [
+        "Git::git_create_branch"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "HubSpot operations",
+      "tool_intent": "retrieve recent conversation threads with messages",
+      "expected_tool_key": "HubSpot::hubspot_get_recent_conversations",
+      "predicted_topk": [
+        "HubSpot::hubspot_get_recent_conversations",
+        "HubSpot::hubspot_get_active_companies",
+        "HubSpot::hubspot_get_active_contacts",
+        "HubSpot::hubspot_get_company_activity",
+        "HubSpot::hubspot_search_data"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009669864772984815,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037557603686635944,
+      "equivalent_tool_keys": [
+        "HubSpot::hubspot_get_recent_conversations"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "HubSpot operations",
+      "tool_intent": "retrieve most recently active contacts",
+      "expected_tool_key": "HubSpot::hubspot_get_active_contacts",
+      "predicted_topk": [
+        "HubSpot::hubspot_get_active_contacts",
+        "HubSpot::hubspot_get_active_companies",
+        "HubSpot::hubspot_create_contact",
+        "HubSpot::hubspot_get_company_activity",
+        "HubSpot::hubspot_get_recent_conversations"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "HubSpot::hubspot_get_active_contacts"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Shopify operations",
+      "tool_intent": "get a specific order by ID",
+      "expected_tool_key": "Shopify::get-order-by-id",
+      "predicted_topk": [
+        "Shopify::get-order-by-id",
+        "Shopify::get-product-by-id",
+        "Shopify::get-customer-orders",
+        "Shopify::get-products",
+        "Shopify::update-order"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Shopify::get-order-by-id"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Shopify operations",
+      "tool_intent": "get customers or search by name/email",
+      "expected_tool_key": "Shopify::get-customers",
+      "predicted_topk": [
+        "Shopify::get-customers",
+        "Shopify::get-products",
+        "Shopify::get-orders",
+        "Shopify::get-product-by-id",
+        "Shopify::get-customer-orders"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Shopify::get-customers"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Talk To Figma operations",
+      "tool_intent": "get detailed information about multiple nodes by providing an array of node IDs",
+      "expected_tool_key": "Talk To Figma::get_nodes_info",
+      "predicted_topk": [
+        "Talk To Figma::get_nodes_info",
+        "Talk To Figma::get_node_info",
+        "Talk To Figma::read_my_design",
+        "Talk To Figma::delete_multiple_nodes",
+        "Talk To Figma::set_multiple_text_contents"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Talk To Figma::get_nodes_info"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Talk To Figma operations",
+      "tool_intent": "set horizontal and vertical sizing modes for auto-layout frames (FIXED, HUG, FILL)",
+      "expected_tool_key": "Talk To Figma::set_layout_sizing",
+      "predicted_topk": [
+        "Talk To Figma::set_layout_sizing",
+        "Talk To Figma::set_layout_mode",
+        "Talk To Figma::set_axis_align",
+        "Talk To Figma::set_padding",
+        "Talk To Figma::set_item_spacing"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000710970092249838,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03781362007168459,
+      "equivalent_tool_keys": [
+        "Talk To Figma::set_layout_sizing"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Telegram operations",
+      "tool_intent": "unblock a user",
+      "expected_tool_key": "Telegram::unblock_user",
+      "predicted_topk": [
+        "Telegram::unblock_user",
+        "Telegram::block_user",
+        "Telegram::unban_user",
+        "Telegram::ban_user",
+        "Telegram-Client::tg_read"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0018250234812189695,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.036699566682715457,
+      "equivalent_tool_keys": [
+        "Telegram::unblock_user"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    },
+    {
+      "server_intent": "Telegram operations",
+      "tool_intent": "bulk import contacts",
+      "expected_tool_key": "Telegram::import_contacts",
+      "predicted_topk": [
+        "Telegram::import_contacts",
+        "Telegram::search_contacts",
+        "Telegram::list_contacts",
+        "Telegram::export_contacts",
+        "Telegram::add_contact"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "equivalent_tool_keys": [
+        "Telegram::import_contacts"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true
+    }
+  ],
+  "suite": "single_tool.medium_50.clean",
+  "equivalence_map": "C:\\Users\\swaga\\Downloads\\Research Proj\\MCP-Router\\benchmarks\\functional_correctness\\equivalence_map.json"
+}

@@ -1,0 +1,728 @@
+{
+  "scale": "medium",
+  "summary": {
+    "num_items": 88,
+    "latency_ms": {
+      "p50": 344.0624999348074,
+      "p95": 447.63830001465976,
+      "mean": 355.95871590405955
+    },
+    "returned_tools_mean": 8,
+    "avg_recommended_handoff_k": 3.1363636363636362,
+    "compressed_candidate_chars": {
+      "mean": 905.0909090909091,
+      "p95": 1499
+    },
+    "estimated_compressed_tokens": {
+      "mean": 226.27272727272728,
+      "p95": 374.75
+    },
+    "embedding_api_calls_per_route": 2.0
+  },
+  "rows": [
+    {
+      "latency_ms": 666.0670998971909,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 904,
+      "estimated_compressed_tokens": 226.0,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 357.8272999729961,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 822,
+      "estimated_compressed_tokens": 205.5,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 336.65840001776814,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 926,
+      "estimated_compressed_tokens": 231.5,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 423.3650001697242,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 1137,
+      "estimated_compressed_tokens": 284.25,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 383.6662000976503,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 880,
+      "estimated_compressed_tokens": 220.0,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 369.7496000677347,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 1149,
+      "estimated_compressed_tokens": 287.25,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 343.0175001267344,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 627,
+      "estimated_compressed_tokens": 156.75,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 408.5574001073837,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 617,
+      "estimated_compressed_tokens": 154.25,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 405.36869992502034,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 1606,
+      "estimated_compressed_tokens": 401.5,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 339.5763000007719,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 1661,
+      "estimated_compressed_tokens": 415.25,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 363.46079991199076,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 763,
+      "estimated_compressed_tokens": 190.75,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 337.2072000056505,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 776,
+      "estimated_compressed_tokens": 194.0,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 358.40629995800555,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 856,
+      "estimated_compressed_tokens": 214.0,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 342.04420004971325,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 989,
+      "estimated_compressed_tokens": 247.25,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 356.2014999333769,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 702,
+      "estimated_compressed_tokens": 175.5,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 365.2694998309016,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 978,
+      "estimated_compressed_tokens": 244.5,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 345.2961000148207,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 1597,
+      "estimated_compressed_tokens": 399.25,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 352.1936999168247,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 1617,
+      "estimated_compressed_tokens": 404.25,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 390.6316999346018,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 959,
+      "estimated_compressed_tokens": 239.75,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 348.29859994351864,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 1050,
+      "estimated_compressed_tokens": 262.5,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 485.7743000611663,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 693,
+      "estimated_compressed_tokens": 173.25,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 539.2295999918133,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 746,
+      "estimated_compressed_tokens": 186.5,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 380.7769000995904,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 1364,
+      "estimated_compressed_tokens": 341.0,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 340.2825000230223,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 1419,
+      "estimated_compressed_tokens": 354.75,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 327.0626999437809,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 1197,
+      "estimated_compressed_tokens": 299.25,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 346.52489982545376,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 1321,
+      "estimated_compressed_tokens": 330.25,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 342.61639998294413,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 1372,
+      "estimated_compressed_tokens": 343.0,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 333.46859994344413,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 1120,
+      "estimated_compressed_tokens": 280.0,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 344.0624999348074,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 619,
+      "estimated_compressed_tokens": 154.75,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 340.8212000504136,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 636,
+      "estimated_compressed_tokens": 159.0,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 361.64819984696805,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 712,
+      "estimated_compressed_tokens": 178.0,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 344.96710007078946,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 866,
+      "estimated_compressed_tokens": 216.5,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 345.92450014315546,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 819,
+      "estimated_compressed_tokens": 204.75,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 339.5742999855429,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 663,
+      "estimated_compressed_tokens": 165.75,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 338.3647999726236,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 1264,
+      "estimated_compressed_tokens": 316.0,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 343.3912000618875,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 1220,
+      "estimated_compressed_tokens": 305.0,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 340.95630003139377,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 912,
+      "estimated_compressed_tokens": 228.0,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 344.01150001212955,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 737,
+      "estimated_compressed_tokens": 184.25,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 341.89960011281073,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 916,
+      "estimated_compressed_tokens": 229.0,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 328.5101999063045,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 649,
+      "estimated_compressed_tokens": 162.25,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 347.2658998798579,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 734,
+      "estimated_compressed_tokens": 183.5,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 346.9426999799907,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 1190,
+      "estimated_compressed_tokens": 297.5,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 366.66099983267486,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 1190,
+      "estimated_compressed_tokens": 297.5,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 343.9703001640737,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 968,
+      "estimated_compressed_tokens": 242.0,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 326.7780998721719,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 1114,
+      "estimated_compressed_tokens": 278.5,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 325.8104999549687,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 1488,
+      "estimated_compressed_tokens": 372.0,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 361.33389989845455,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 1499,
+      "estimated_compressed_tokens": 374.75,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 339.7790000308305,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 523,
+      "estimated_compressed_tokens": 130.75,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 330.58069995604455,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 457,
+      "estimated_compressed_tokens": 114.25,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 326.7447000835091,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 555,
+      "estimated_compressed_tokens": 138.75,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 306.9501002319157,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 594,
+      "estimated_compressed_tokens": 148.5,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 316.89679995179176,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 616,
+      "estimated_compressed_tokens": 154.0,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 331.43250015564263,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 565,
+      "estimated_compressed_tokens": 141.25,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 320.6227000337094,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 684,
+      "estimated_compressed_tokens": 171.0,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 447.63830001465976,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 596,
+      "estimated_compressed_tokens": 149.0,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 337.3818998225033,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 653,
+      "estimated_compressed_tokens": 163.25,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 384.82849998399615,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 625,
+      "estimated_compressed_tokens": 156.25,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 293.22950006462634,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 793,
+      "estimated_compressed_tokens": 198.25,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 329.9265999812633,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 793,
+      "estimated_compressed_tokens": 198.25,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 320.63339999876916,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 925,
+      "estimated_compressed_tokens": 231.25,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 303.6995001602918,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 1128,
+      "estimated_compressed_tokens": 282.0,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 337.63550012372434,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 937,
+      "estimated_compressed_tokens": 234.25,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 344.9851998593658,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 1172,
+      "estimated_compressed_tokens": 293.0,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 340.3268000110984,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 1235,
+      "estimated_compressed_tokens": 308.75,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 353.34939998574555,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 1258,
+      "estimated_compressed_tokens": 314.5,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 356.61970009095967,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 1354,
+      "estimated_compressed_tokens": 338.5,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 344.1085999365896,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 840,
+      "estimated_compressed_tokens": 210.0,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 363.9124999754131,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 613,
+      "estimated_compressed_tokens": 153.25,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 340.6241999473423,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 919,
+      "estimated_compressed_tokens": 229.75,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 354.9679999705404,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 992,
+      "estimated_compressed_tokens": 248.0,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 375.0213999301195,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 686,
+      "estimated_compressed_tokens": 171.5,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 400.4502999596298,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 686,
+      "estimated_compressed_tokens": 171.5,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 351.9027999136597,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 801,
+      "estimated_compressed_tokens": 200.25,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 337.07939996384084,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 672,
+      "estimated_compressed_tokens": 168.0,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 356.979199917987,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 826,
+      "estimated_compressed_tokens": 206.5,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 347.7386999875307,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 748,
+      "estimated_compressed_tokens": 187.0,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 343.4812000487,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 510,
+      "estimated_compressed_tokens": 127.5,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 357.3231000918895,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 518,
+      "estimated_compressed_tokens": 129.5,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 324.32630006223917,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 504,
+      "estimated_compressed_tokens": 126.0,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 331.4577001146972,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 800,
+      "estimated_compressed_tokens": 200.0,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 323.5435001552105,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 708,
+      "estimated_compressed_tokens": 177.0,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 342.82230003736913,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 714,
+      "estimated_compressed_tokens": 178.5,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 351.76320001482964,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 837,
+      "estimated_compressed_tokens": 209.25,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 333.188199903816,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 956,
+      "estimated_compressed_tokens": 239.0,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 348.69479993358254,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 785,
+      "estimated_compressed_tokens": 196.25,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 305.01329991966486,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 835,
+      "estimated_compressed_tokens": 208.75,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 496.13389978185296,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 593,
+      "estimated_compressed_tokens": 148.25,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 249.080799985677,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 598,
+      "estimated_compressed_tokens": 149.5,
+      "confidence": "low"
+    }
+  ]
+}

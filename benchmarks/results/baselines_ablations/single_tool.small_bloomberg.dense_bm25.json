@@ -1,0 +1,219 @@
+{
+  "summary": {
+    "num_items": 9,
+    "top1_accuracy": 1.0,
+    "top3_accuracy": 1.0,
+    "top5_accuracy": 1.0,
+    "handoff_accuracy_at_recommended_k": 1.0,
+    "avg_recommended_handoff_k": 4.333333333333333,
+    "confidence_buckets": {
+      "high": {
+        "count": 1,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "low": {
+        "count": 7,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "medium": {
+        "count": 1,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      }
+    }
+  },
+  "results": [
+    {
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg reference data",
+      "expected_tool_key": "Bloomberg::bdp",
+      "predicted_topk": [
+        "Bloomberg::bdp",
+        "Bloomberg::bdh",
+        "Bloomberg::bds",
+        "Bloomberg::bdtick",
+        "Bloomberg::bdib"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0007848371148212532,
+      "top1_score": 0.03278688524590164,
+      "top2_score": 0.03200204813108039
+    },
+    {
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg block data",
+      "expected_tool_key": "Bloomberg::bds",
+      "predicted_topk": [
+        "Bloomberg::bds",
+        "Bloomberg::bdh",
+        "Bloomberg::bdp",
+        "Bloomberg::bdtick",
+        "Bloomberg::bdib"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0007848371148212532,
+      "top1_score": 0.03278688524590164,
+      "top2_score": 0.03200204813108039
+    },
+    {
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg historical data",
+      "expected_tool_key": "Bloomberg::bdh",
+      "predicted_topk": [
+        "Bloomberg::bdh",
+        "Bloomberg::bdp",
+        "Bloomberg::bdtick",
+        "Bloomberg::bds",
+        "Bloomberg::bdib"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0007848371148212532,
+      "top1_score": 0.03278688524590164,
+      "top2_score": 0.03200204813108039
+    },
+    {
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg intraday bar data",
+      "expected_tool_key": "Bloomberg::bdib",
+      "predicted_topk": [
+        "Bloomberg::bdib",
+        "Bloomberg::bdh",
+        "Bloomberg::bdp",
+        "Bloomberg::bdtick",
+        "Bloomberg::bds"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0010328529878371254,
+      "top1_score": 0.03278688524590164,
+      "top2_score": 0.031754032258064516
+    },
+    {
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg tick data",
+      "expected_tool_key": "Bloomberg::bdtick",
+      "predicted_topk": [
+        "Bloomberg::bdtick",
+        "Bloomberg::bdh",
+        "Bloomberg::bdp",
+        "Bloomberg::bdib",
+        "Bloomberg::bds"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0007848371148212532,
+      "top1_score": 0.03278688524590164,
+      "top2_score": 0.03200204813108039
+    },
+    {
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg earning exposure by Geo or Products",
+      "expected_tool_key": "Bloomberg::earning",
+      "predicted_topk": [
+        "Bloomberg::earning",
+        "Bloomberg::bdp",
+        "Bloomberg::bdh",
+        "Bloomberg::bds",
+        "Bloomberg::beqs"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0007848371148212532,
+      "top1_score": 0.03278688524590164,
+      "top2_score": 0.03200204813108039
+    },
+    {
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg divident / split history",
+      "expected_tool_key": "Bloomberg::dividend",
+      "predicted_topk": [
+        "Bloomberg::dividend",
+        "Bloomberg::bdh",
+        "Bloomberg::bdp",
+        "Bloomberg::bdtick",
+        "Bloomberg::bds"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0007848371148212532,
+      "top1_score": 0.03278688524590164,
+      "top2_score": 0.03200204813108039
+    },
+    {
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg equity screening",
+      "expected_tool_key": "Bloomberg::beqs",
+      "predicted_topk": [
+        "Bloomberg::beqs",
+        "Bloomberg::bdh",
+        "Bloomberg::bdp",
+        "Bloomberg::bdtick",
+        "Bloomberg::bds"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0007848371148212532,
+      "top1_score": 0.03278688524590164,
+      "top2_score": 0.03200204813108039
+    },
+    {
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Calculate the adjusted turnover (in millions)",
+      "expected_tool_key": "Bloomberg::turnover",
+      "predicted_topk": [
+        "Bloomberg::turnover",
+        "Bloomberg::bdp",
+        "Bloomberg::dividend",
+        "Bloomberg::bdh",
+        "Bloomberg::bdtick"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0015063378363219734,
+      "top1_score": 0.03278688524590164,
+      "top2_score": 0.03128054740957967
+    }
+  ],
+  "suite": "single_tool.bloomberg.clean"
+}

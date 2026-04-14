@@ -1,0 +1,371 @@
+{
+  "summary": {
+    "num_items": 10,
+    "top1_accuracy": 1.0,
+    "top3_accuracy": 1.0,
+    "top5_accuracy": 1.0,
+    "handoff_accuracy_at_recommended_k": 1.0,
+    "avg_recommended_handoff_k": 4,
+    "confidence_buckets": {
+      "high": {
+        "count": 2,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "low": {
+        "count": 7,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "medium": {
+        "count": 1,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      }
+    },
+    "equivalence_aware": {
+      "num_items": 10,
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "avg_recommended_handoff_k": 4,
+      "confidence_buckets": {
+        "high": {
+          "count": 2,
+          "top1_accuracy": 1.0,
+          "handoff_accuracy_at_recommended_k": 1.0
+        },
+        "low": {
+          "count": 7,
+          "top1_accuracy": 1.0,
+          "handoff_accuracy_at_recommended_k": 1.0
+        },
+        "medium": {
+          "count": 1,
+          "top1_accuracy": 1.0,
+          "handoff_accuracy_at_recommended_k": 1.0
+        }
+      },
+      "num_cases": 2,
+      "chain_success_rate_at_1": 1.0,
+      "chain_success_rate_at_3": 1.0,
+      "chain_success_rate_at_5": 1.0
+    },
+    "num_cases": 2,
+    "chain_success_rate_at_1": 1.0,
+    "chain_success_rate_at_3": 1.0,
+    "chain_success_rate_at_5": 1.0
+  },
+  "results": [
+    {
+      "case_id": "mh-cross-001",
+      "description": "Five-hop cross-application workflow",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "GitHub repository operations",
+          "tool_intent": "search repositories by query",
+          "expected_tool_key": "GitHub::search_repositories",
+          "predicted_topk": [
+            "GitHub::search_repositories",
+            "GitHub::search_code",
+            "GitHub::search_users",
+            "GitHub::list_issues",
+            "GitHub::list_pull_requests"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006184264645396342,
+          "top1_score": 0.03843204653622422,
+          "top2_score": 0.03781362007168459,
+          "equivalent_tool_keys": [
+            "GitHub::search_repositories"
+          ],
+          "equivalence_hit_at_1": true,
+          "equivalence_hit_at_3": true,
+          "equivalence_hit_at_5": true,
+          "equivalence_hit_at_recommended_k": true
+        },
+        {
+          "server_intent": "Slack messaging operations",
+          "tool_intent": "post a message to a channel",
+          "expected_tool_key": "Slack::slack_post_message",
+          "predicted_topk": [
+            "Slack::slack_post_message",
+            "Slack::slack_get_channel_history",
+            "Slack::slack_reply_to_thread",
+            "Slack::slack_add_reaction",
+            "Slack::slack_list_channels"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161,
+          "equivalent_tool_keys": [
+            "Slack::slack_post_message"
+          ],
+          "equivalence_hit_at_1": true,
+          "equivalence_hit_at_3": true,
+          "equivalence_hit_at_5": true,
+          "equivalence_hit_at_recommended_k": true
+        },
+        {
+          "server_intent": "Google Tasks productivity",
+          "tool_intent": "list tasks in my task list",
+          "expected_tool_key": "Google Tasks::list",
+          "predicted_topk": [
+            "Google Tasks::list",
+            "Google Tasks::clear",
+            "Google Tasks::search",
+            "Google Tasks::create",
+            "Google Tasks::delete"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.000836960501159334,
+          "top1_score": 0.038260179799048125,
+          "top2_score": 0.03742321929788879,
+          "equivalent_tool_keys": [
+            "Google Tasks::list"
+          ],
+          "equivalence_hit_at_1": true,
+          "equivalence_hit_at_3": true,
+          "equivalence_hit_at_5": true,
+          "equivalence_hit_at_recommended_k": true
+        },
+        {
+          "server_intent": "Atlassian Jira issues",
+          "tool_intent": "search issues by JQL",
+          "expected_tool_key": "Atlassian::jira_search",
+          "predicted_topk": [
+            "Atlassian::jira_search",
+            "Atlassian::confluence_search",
+            "Atlassian::jira_create_issue",
+            "Atlassian::jira_update_issue",
+            "Atlassian::jira_get_issue"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0010426450507904708,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.037481945113143955,
+          "equivalent_tool_keys": [
+            "Atlassian::jira_search"
+          ],
+          "equivalence_hit_at_1": true,
+          "equivalence_hit_at_3": true,
+          "equivalence_hit_at_5": true,
+          "equivalence_hit_at_recommended_k": true
+        },
+        {
+          "server_intent": "Linear issue tracking",
+          "tool_intent": "update an issue status",
+          "expected_tool_key": "Linear::linear_update_issue",
+          "predicted_topk": [
+            "Linear::linear_update_issue",
+            "Linear::linear_create_issue",
+            "Linear::linear_add_comment",
+            "Linear (Go)::linear_update_issue",
+            "Linear::linear_get_user_issues"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0011253966155473291,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.0373991935483871,
+          "equivalent_tool_keys": [
+            "Linear::linear_update_issue"
+          ],
+          "equivalence_hit_at_1": true,
+          "equivalence_hit_at_3": true,
+          "equivalence_hit_at_5": true,
+          "equivalence_hit_at_recommended_k": true
+        }
+      ],
+      "equivalence_chain_success_at_1": true,
+      "equivalence_chain_success_at_3": true,
+      "equivalence_chain_success_at_5": true
+    },
+    {
+      "case_id": "mh-cross-002",
+      "description": "Five-hop mixed data and productivity workflow",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Bloomberg market data",
+          "tool_intent": "get point-in-time reference data for a ticker",
+          "expected_tool_key": "Bloomberg::bdp",
+          "predicted_topk": [
+            "Bloomberg::bdp",
+            "Bloomberg::bdtick",
+            "Bloomberg::bdh",
+            "Bloomberg::bds",
+            "Bloomberg::bdib"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026895491803278354,
+          "top1_score": 0.038260179799048125,
+          "top2_score": 0.03799122488101534,
+          "equivalent_tool_keys": [
+            "Bloomberg::bdp"
+          ],
+          "equivalence_hit_at_1": true,
+          "equivalence_hit_at_3": true,
+          "equivalence_hit_at_5": true,
+          "equivalence_hit_at_recommended_k": true
+        },
+        {
+          "server_intent": "Google Drive file operations",
+          "tool_intent": "search files in drive",
+          "expected_tool_key": "Google Drive::search",
+          "predicted_topk": [
+            "Google Drive::search",
+            "Filesystem::search_files",
+            "Filesystem::read_multiple_files",
+            "Filesystem::get_file_info",
+            "Filesystem::list_directory"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0026410936201556254,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.0358834965437788,
+          "equivalent_tool_keys": [
+            "Google Drive::search"
+          ],
+          "equivalence_hit_at_1": true,
+          "equivalence_hit_at_3": true,
+          "equivalence_hit_at_5": true,
+          "equivalence_hit_at_recommended_k": true
+        },
+        {
+          "server_intent": "Google Sheets documents",
+          "tool_intent": "list spreadsheets",
+          "expected_tool_key": "Google Sheets::list_spreadsheets",
+          "predicted_topk": [
+            "Google Sheets::list_spreadsheets",
+            "Google Sheets::get_multiple_spreadsheet_summary",
+            "Google Sheets::get_multiple_sheet_data",
+            "Google Sheets::list_sheets",
+            "Google Sheets::create_spreadsheet"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 8.960573476702455e-05,
+          "top1_score": 0.03791161978628928,
+          "top2_score": 0.03782201405152225,
+          "equivalent_tool_keys": [
+            "Google Sheets::listSpreadsheets",
+            "Google Sheets::list_spreadsheets"
+          ],
+          "equivalence_hit_at_1": true,
+          "equivalence_hit_at_3": true,
+          "equivalence_hit_at_5": true,
+          "equivalence_hit_at_recommended_k": true
+        },
+        {
+          "server_intent": "Xero accounting quotes",
+          "tool_intent": "list all sales quotes",
+          "expected_tool_key": "Xero-mcp-server::list_quotes",
+          "predicted_topk": [
+            "Xero-mcp-server::list_quotes",
+            "Xero::list-quotes",
+            "Xero-mcp-server::list_invoices",
+            "Xero::list-invoices",
+            "Xero::list-items"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 9.254362771020375e-05,
+          "top1_score": 0.038260179799048125,
+          "top2_score": 0.03816763617133792,
+          "equivalent_tool_keys": [
+            "Xero-mcp-server::list_quotes",
+            "Xero::list-quotes"
+          ],
+          "equivalence_hit_at_1": true,
+          "equivalence_hit_at_3": true,
+          "equivalence_hit_at_5": true,
+          "equivalence_hit_at_recommended_k": true
+        },
+        {
+          "server_intent": "Filesystem local files",
+          "tool_intent": "list directory contents",
+          "expected_tool_key": "Filesystem::list_directory",
+          "predicted_topk": [
+            "Filesystem::list_directory",
+            "Golang Filesystem Server::list_directory",
+            "Filesystem::get_file_info",
+            "Filesystem::read_file",
+            "Golang Filesystem Server::list_allowed_directories"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161,
+          "equivalent_tool_keys": [
+            "Filesystem::list_directory",
+            "Golang Filesystem Server::list_directory"
+          ],
+          "equivalence_hit_at_1": true,
+          "equivalence_hit_at_3": true,
+          "equivalence_hit_at_5": true,
+          "equivalence_hit_at_recommended_k": true
+        }
+      ],
+      "equivalence_chain_success_at_1": true,
+      "equivalence_chain_success_at_3": true,
+      "equivalence_chain_success_at_5": true
+    }
+  ],
+  "suite": "multi_hop.cross_app",
+  "equivalence_map": "C:\\Users\\swaga\\Downloads\\Research Proj\\MCP-Router\\benchmarks\\functional_correctness\\equivalence_map.json"
+}

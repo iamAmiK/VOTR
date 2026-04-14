@@ -1,0 +1,78 @@
+{
+  "suite": "negative_controls.priority",
+  "description": "Out-of-contract stress benchmark for unsupported raw user-style requests that should not produce a narrow, high-confidence router recommendation.",
+  "cases": [
+    {
+      "id": "neg-001",
+      "server_intent": "airline booking operations",
+      "tool_intent": "book a flight from NYC to SFO next Tuesday",
+      "max_confidence": "low",
+      "max_recommended_handoff_k": 0,
+      "require_empty": true,
+      "require_null_route": true
+    },
+    {
+      "id": "neg-002",
+      "server_intent": "childcare booking operations",
+      "tool_intent": "book a babysitter for Friday night",
+      "max_confidence": "low",
+      "max_recommended_handoff_k": 0,
+      "require_empty": true,
+      "require_null_route": true
+    },
+    {
+      "id": "neg-003",
+      "server_intent": "food delivery operations",
+      "tool_intent": "order sushi to my office",
+      "max_confidence": "low",
+      "max_recommended_handoff_k": 0,
+      "require_empty": true,
+      "require_null_route": true
+    },
+    {
+      "id": "neg-004",
+      "server_intent": "hardware control",
+      "tool_intent": "shut down my laptop right now",
+      "max_confidence": "low",
+      "max_recommended_handoff_k": 0,
+      "require_empty": true,
+      "require_null_route": true
+    },
+    {
+      "id": "neg-005",
+      "server_intent": "mental health counseling",
+      "tool_intent": "help me cope with grief after losing a loved one",
+      "max_confidence": "low",
+      "max_recommended_handoff_k": 0,
+      "require_empty": true,
+      "require_null_route": true
+    },
+    {
+      "id": "neg-006",
+      "server_intent": "medical diagnosis",
+      "tool_intent": "diagnose the cause of this chest pain",
+      "max_confidence": "low",
+      "max_recommended_handoff_k": 0,
+      "require_empty": true,
+      "require_null_route": true
+    },
+    {
+      "id": "neg-007",
+      "server_intent": "personal finance advice",
+      "tool_intent": "tell me whether I should refinance my mortgage",
+      "max_confidence": "low",
+      "max_recommended_handoff_k": 0,
+      "require_empty": true,
+      "require_null_route": true
+    },
+    {
+      "id": "neg-008",
+      "server_intent": "operating system administration",
+      "tool_intent": "install Chrome and make it the default browser",
+      "max_confidence": "low",
+      "max_recommended_handoff_k": 0,
+      "require_empty": true,
+      "require_null_route": true
+    }
+  ]
+}

@@ -1,0 +1,2314 @@
+{
+  "summary": {
+    "num_items": 100,
+    "top1_accuracy": 1.0,
+    "top3_accuracy": 1.0,
+    "top5_accuracy": 1.0,
+    "handoff_accuracy_at_recommended_k": 1.0,
+    "avg_recommended_handoff_k": 2.26,
+    "confidence_buckets": {
+      "high": {
+        "count": 67,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "low": {
+        "count": 30,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "medium": {
+        "count": 3,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      }
+    },
+    "num_cases": 20,
+    "chain_success_rate_at_1": 1.0,
+    "chain_success_rate_at_3": 1.0,
+    "chain_success_rate_at_5": 1.0
+  },
+  "results": [
+    {
+      "case_id": "multi_hop-small_100-cross_app-0001",
+      "description": "Cross-application chain (5 hops), case 1",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg reference data",
+          "expected_tool_key": "Bloomberg::bdp",
+          "predicted_topk": [
+            "Bloomberg::bdp",
+            "Bloomberg::bdh",
+            "Bloomberg::bds",
+            "Bloomberg::bdtick",
+            "Bloomberg::bdib"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0009669864772984815,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.037557603686635944
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg block data",
+          "expected_tool_key": "Bloomberg::bds",
+          "predicted_topk": [
+            "Bloomberg::bds",
+            "Bloomberg::bdh",
+            "Bloomberg::bdp",
+            "Bloomberg::bdtick",
+            "Bloomberg::bdib"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.000877380742531457,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03764720942140297
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg historical data",
+          "expected_tool_key": "Bloomberg::bdh",
+          "predicted_topk": [
+            "Bloomberg::bdh",
+            "Bloomberg::bdp",
+            "Bloomberg::bdtick",
+            "Bloomberg::bds",
+            "Bloomberg::bdib"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0010537920328540368,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03747079813108039
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg intraday bar data",
+          "expected_tool_key": "Bloomberg::bdib",
+          "predicted_topk": [
+            "Bloomberg::bdib",
+            "Bloomberg::bdh",
+            "Bloomberg::bdp",
+            "Bloomberg::bds",
+            "Bloomberg::bdtick"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0012150023503143537,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03730958781362007
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg tick data",
+          "expected_tool_key": "Bloomberg::bdtick",
+          "predicted_topk": [
+            "Bloomberg::bdtick",
+            "Bloomberg::bdh",
+            "Bloomberg::bdp",
+            "Bloomberg::bds",
+            "Bloomberg::bdib"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0009669864772984815,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.037557603686635944
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0002",
+      "description": "Cross-application chain (5 hops), case 2",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg earning exposure by Geo or Products",
+          "expected_tool_key": "Bloomberg::earning",
+          "predicted_topk": [
+            "Bloomberg::earning",
+            "Bloomberg::bdp",
+            "Bloomberg::bds",
+            "Bloomberg::bdh",
+            "Bloomberg::beqs"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0010537920328540368,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03747079813108039
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg divident / split history",
+          "expected_tool_key": "Bloomberg::dividend",
+          "predicted_topk": [
+            "Bloomberg::dividend",
+            "Bloomberg::bdh",
+            "Bloomberg::bdp",
+            "Bloomberg::bdtick",
+            "Bloomberg::bds"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0010537920328540368,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03747079813108039
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg equity screening",
+          "expected_tool_key": "Bloomberg::beqs",
+          "predicted_topk": [
+            "Bloomberg::beqs",
+            "Bloomberg::bdh",
+            "Bloomberg::bdp",
+            "Bloomberg::bds",
+            "Bloomberg::bdtick"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0009669864772984815,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.037557603686635944
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Calculate the adjusted turnover (in millions)",
+          "expected_tool_key": "Bloomberg::turnover",
+          "predicted_topk": [
+            "Bloomberg::turnover",
+            "Bloomberg::bdp",
+            "Bloomberg::bdtick",
+            "Bloomberg::bdh",
+            "Bloomberg::dividend"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0018594273697393748,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03666516279419505
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create or update a single file in a repository",
+          "expected_tool_key": "GitHub::create_or_update_file",
+          "predicted_topk": [
+            "GitHub::create_or_update_file",
+            "GitHub::push_files",
+            "GitHub::create_repository",
+            "GitHub::update_issue",
+            "GitHub::create_pull_request_review"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0012150023503143537,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03730958781362007
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0003",
+      "description": "Cross-application chain (5 hops), case 3",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Push multiple files in a single commit",
+          "expected_tool_key": "GitHub::push_files",
+          "predicted_topk": [
+            "GitHub::push_files",
+            "GitHub::create_or_update_file",
+            "GitHub::get_pull_request_files",
+            "GitHub::list_commits",
+            "GitHub::fork_repository"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Search for GitHub repositories",
+          "expected_tool_key": "GitHub::search_repositories",
+          "predicted_topk": [
+            "GitHub::search_repositories",
+            "GitHub::search_code",
+            "GitHub::search_users",
+            "GitHub::search_issues",
+            "GitHub::create_repository"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a new GitHub repository",
+          "expected_tool_key": "GitHub::create_repository",
+          "predicted_topk": [
+            "GitHub::create_repository",
+            "GitHub::create_branch",
+            "GitHub::create_pull_request",
+            "GitHub::create_issue",
+            "GitHub::create_or_update_file"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.001223002862347125,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.0373015873015873
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Get contents of a file or directory",
+          "expected_tool_key": "GitHub::get_file_contents",
+          "predicted_topk": [
+            "GitHub::get_file_contents",
+            "GitHub::get_issue",
+            "GitHub::get_pull_request_files",
+            "GitHub::create_or_update_file",
+            "GitHub::get_pull_request"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a new issue",
+          "expected_tool_key": "GitHub::create_issue",
+          "predicted_topk": [
+            "GitHub::create_issue",
+            "GitHub::create_pull_request",
+            "GitHub::create_branch",
+            "GitHub::create_repository",
+            "GitHub::add_issue_comment"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.001301807905869909,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03722278225806452
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0004",
+      "description": "Cross-application chain (5 hops), case 4",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a new pull request",
+          "expected_tool_key": "GitHub::create_pull_request",
+          "predicted_topk": [
+            "GitHub::create_pull_request",
+            "GitHub::create_pull_request_review",
+            "GitHub::create_issue",
+            "GitHub::create_repository",
+            "GitHub::create_branch"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0008819102631900111,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.037642679900744415
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Fork a repository",
+          "expected_tool_key": "GitHub::fork_repository",
+          "predicted_topk": [
+            "GitHub::fork_repository",
+            "GitHub::create_repository",
+            "GitHub::list_commits",
+            "GitHub::create_or_update_file",
+            "GitHub::create_branch"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0011253966155473291,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.0373991935483871
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a new branch",
+          "expected_tool_key": "GitHub::create_branch",
+          "predicted_topk": [
+            "GitHub::create_branch",
+            "GitHub::create_repository",
+            "GitHub::create_pull_request",
+            "GitHub::create_issue",
+            "GitHub::update_pull_request_branch"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0009669864772984815,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.037557603686635944
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "List and filter repository issues",
+          "expected_tool_key": "GitHub::list_issues",
+          "predicted_topk": [
+            "GitHub::list_issues",
+            "GitHub::list_pull_requests",
+            "GitHub::search_issues",
+            "GitHub::search_repositories",
+            "GitHub::get_pull_request_files"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Update an existing issue",
+          "expected_tool_key": "GitHub::update_issue",
+          "predicted_topk": [
+            "GitHub::update_issue",
+            "GitHub::add_issue_comment",
+            "GitHub::create_issue",
+            "GitHub::get_issue",
+            "GitHub::create_or_update_file"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0009669864772984815,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.037557603686635944
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0005",
+      "description": "Cross-application chain (5 hops), case 5",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Add a comment to an issue",
+          "expected_tool_key": "GitHub::add_issue_comment",
+          "predicted_topk": [
+            "GitHub::add_issue_comment",
+            "GitHub::create_issue",
+            "GitHub::update_issue",
+            "GitHub::get_issue",
+            "GitHub::create_pull_request_review"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.001223002862347125,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.0373015873015873
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Search for code across GitHub repositories",
+          "expected_tool_key": "GitHub::search_code",
+          "predicted_topk": [
+            "GitHub::search_code",
+            "GitHub::search_repositories",
+            "GitHub::search_users",
+            "GitHub::search_issues",
+            "GitHub::create_repository"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Search for issues and pull requests",
+          "expected_tool_key": "GitHub::search_issues",
+          "predicted_topk": [
+            "GitHub::search_issues",
+            "GitHub::list_issues",
+            "GitHub::list_pull_requests",
+            "GitHub::create_pull_request",
+            "GitHub::merge_pull_request"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0013939430332872982,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03713064713064713
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Search for GitHub users",
+          "expected_tool_key": "GitHub::search_users",
+          "predicted_topk": [
+            "GitHub::search_users",
+            "GitHub::search_repositories",
+            "GitHub::search_code",
+            "GitHub::search_issues",
+            "GitHub::create_repository"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Gets commits of a branch in a repository",
+          "expected_tool_key": "GitHub::list_commits",
+          "predicted_topk": [
+            "GitHub::list_commits",
+            "GitHub::get_issue",
+            "GitHub::update_pull_request_branch",
+            "GitHub::get_pull_request_files",
+            "GitHub::create_branch"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0006",
+      "description": "Cross-application chain (5 hops), case 6",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Gets the contents of an issue within a repository",
+          "expected_tool_key": "GitHub::get_issue",
+          "predicted_topk": [
+            "GitHub::get_issue",
+            "GitHub::list_commits",
+            "GitHub::get_file_contents",
+            "GitHub::update_issue",
+            "GitHub::get_pull_request"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0010537920328540368,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03747079813108039
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Get details of a specific pull request",
+          "expected_tool_key": "GitHub::get_pull_request",
+          "predicted_topk": [
+            "GitHub::get_pull_request",
+            "GitHub::get_pull_request_files",
+            "GitHub::get_pull_request_reviews",
+            "GitHub::get_pull_request_status",
+            "GitHub::get_pull_request_comments"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "List and filter repository pull requests",
+          "expected_tool_key": "GitHub::list_pull_requests",
+          "predicted_topk": [
+            "GitHub::list_pull_requests",
+            "GitHub::list_issues",
+            "GitHub::search_issues",
+            "GitHub::get_pull_request_files",
+            "GitHub::get_pull_request_reviews"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.000877380742531457,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03764720942140297
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a review on a pull request",
+          "expected_tool_key": "GitHub::create_pull_request_review",
+          "predicted_topk": [
+            "GitHub::create_pull_request_review",
+            "GitHub::get_pull_request_comments",
+            "GitHub::get_pull_request_reviews",
+            "GitHub::create_pull_request",
+            "GitHub::merge_pull_request"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.000877380742531457,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03764720942140297
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Merge a pull request",
+          "expected_tool_key": "GitHub::merge_pull_request",
+          "predicted_topk": [
+            "GitHub::merge_pull_request",
+            "GitHub::create_pull_request",
+            "GitHub::create_pull_request_review",
+            "GitHub::get_pull_request_reviews",
+            "GitHub::get_pull_request"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.000877380742531457,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03764720942140297
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0007",
+      "description": "Cross-application chain (5 hops), case 7",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Get the list of files changed in a pull request",
+          "expected_tool_key": "GitHub::get_pull_request_files",
+          "predicted_topk": [
+            "GitHub::get_pull_request_files",
+            "GitHub::get_pull_request",
+            "GitHub::get_pull_request_comments",
+            "GitHub::get_pull_request_reviews",
+            "GitHub::get_pull_request_status"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0011379266482386546,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03738666351569577
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Get the combined status of all status checks for a pull request",
+          "expected_tool_key": "GitHub::get_pull_request_status",
+          "predicted_topk": [
+            "GitHub::get_pull_request_status",
+            "GitHub::get_pull_request",
+            "GitHub::get_pull_request_reviews",
+            "GitHub::get_pull_request_comments",
+            "GitHub::get_pull_request_files"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0013859425212545268,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.0371386476426799
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Update a pull request branch with the latest changes from the base branch (equivalent to GitHub's 'Update branch' button)",
+          "expected_tool_key": "GitHub::update_pull_request_branch",
+          "predicted_topk": [
+            "GitHub::update_pull_request_branch",
+            "GitHub::merge_pull_request",
+            "GitHub::create_branch",
+            "GitHub::get_pull_request_reviews",
+            "GitHub::list_commits"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.002134119997373181,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.036390470166561245
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Get the review comments on a pull request",
+          "expected_tool_key": "GitHub::get_pull_request_comments",
+          "predicted_topk": [
+            "GitHub::get_pull_request_comments",
+            "GitHub::create_pull_request_review",
+            "GitHub::get_pull_request_reviews",
+            "GitHub::get_pull_request_files",
+            "GitHub::get_pull_request"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.000877380742531457,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03764720942140297
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Get the reviews on a pull request",
+          "expected_tool_key": "GitHub::get_pull_request_reviews",
+          "predicted_topk": [
+            "GitHub::get_pull_request_reviews",
+            "GitHub::get_pull_request_comments",
+            "GitHub::create_pull_request_review",
+            "GitHub::get_pull_request_files",
+            "GitHub::get_pull_request"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0008",
+      "description": "Cross-application chain (5 hops), case 8",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get a paginated list of chats.",
+          "expected_tool_key": "Telegram::get_chats",
+          "predicted_topk": [
+            "Telegram::get_chats",
+            "Telegram::get_contact_chats",
+            "Telegram::list_chats",
+            "Telegram::get_messages",
+            "Telegram::get_participants"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0015578242909185525,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.036966765873015874
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List chats with metadata and filtering.",
+          "expected_tool_key": "Telegram::list_chats",
+          "predicted_topk": [
+            "Telegram::list_chats",
+            "Telegram::get_contact_chats",
+            "Telegram::get_chats",
+            "Telegram::search_public_chats",
+            "Telegram::list_messages"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get detailed info about a chat.",
+          "expected_tool_key": "Telegram::get_chat",
+          "predicted_topk": [
+            "Telegram::get_chat",
+            "Telegram::get_bot_info",
+            "Telegram::get_history",
+            "Telegram::get_media_info",
+            "Telegram::get_recent_actions"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Create a new group.",
+          "expected_tool_key": "Telegram::create_group",
+          "predicted_topk": [
+            "Telegram::create_group",
+            "Telegram::create_channel",
+            "GitHub::create_issue",
+            "GitHub::create_branch",
+            "GitHub::create_repository"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0015337894910638916,
+          "top1_score": 0.037515762925598994,
+          "top2_score": 0.0359819734345351
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Create a channel or supergroup.",
+          "expected_tool_key": "Telegram::create_channel",
+          "predicted_topk": [
+            "Telegram::create_channel",
+            "Telegram::leave_chat",
+            "Telegram::get_invite_link",
+            "Telegram::create_group",
+            "Telegram::search_public_chats"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0013814130005959727,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03714317716333845
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0009",
+      "description": "Cross-application chain (5 hops), case 9",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Change chat/group/channel title.",
+          "expected_tool_key": "Telegram::edit_chat_title",
+          "predicted_topk": [
+            "Telegram::edit_chat_title",
+            "Telegram::delete_chat_photo",
+            "Telegram::search_public_chats",
+            "Telegram::leave_chat",
+            "Telegram::create_channel"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Remove chat/group/channel photo.",
+          "expected_tool_key": "Telegram::delete_chat_photo",
+          "predicted_topk": [
+            "Telegram::delete_chat_photo",
+            "Telegram::delete_profile_photo",
+            "Telegram::edit_chat_title",
+            "Telegram::leave_chat",
+            "Telegram::archive_chat"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.000710970092249838,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03781362007168459
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Leave a group or channel.",
+          "expected_tool_key": "Telegram::leave_chat",
+          "predicted_topk": [
+            "Telegram::leave_chat",
+            "Telegram::create_channel",
+            "Telegram::get_invite_link",
+            "Telegram::delete_chat_photo",
+            "Telegram::edit_chat_title"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.001223002862347125,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.0373015873015873
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List all participants in a chat.",
+          "expected_tool_key": "Telegram::get_participants",
+          "predicted_topk": [
+            "Telegram::get_participants",
+            "Telegram::get_admins",
+            "Telegram::get_banned_users",
+            "Telegram::get_contact_chats",
+            "Telegram::get_pinned_messages"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List all admins in a chat.",
+          "expected_tool_key": "Telegram::get_admins",
+          "predicted_topk": [
+            "Telegram::get_admins",
+            "Telegram::get_participants",
+            "Telegram::get_banned_users",
+            "Telegram::get_contact_chats",
+            "Telegram::get_pinned_messages"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0010",
+      "description": "Cross-application chain (5 hops), case 10",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List all banned users in a chat.",
+          "expected_tool_key": "Telegram::get_banned_users",
+          "predicted_topk": [
+            "Telegram::get_banned_users",
+            "Telegram::get_admins",
+            "Telegram::get_participants",
+            "Telegram::get_blocked_users",
+            "Telegram::get_contact_chats"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0009669864772984815,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.037557603686635944
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Promote user to admin.",
+          "expected_tool_key": "Telegram::promote_admin",
+          "predicted_topk": [
+            "Telegram::promote_admin",
+            "Telegram::demote_admin",
+            "Telegram::block_user",
+            "Telegram::unblock_user",
+            "Telegram::get_me"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Demote admin to user.",
+          "expected_tool_key": "Telegram::demote_admin",
+          "predicted_topk": [
+            "Telegram::demote_admin",
+            "Telegram::promote_admin",
+            "Telegram::block_user",
+            "Telegram::unblock_user",
+            "Telegram::ban_user"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Ban user from a chat.",
+          "expected_tool_key": "Telegram::ban_user",
+          "predicted_topk": [
+            "Telegram::ban_user",
+            "Telegram::unban_user",
+            "Telegram::block_user",
+            "Telegram::unblock_user",
+            "Telegram::archive_chat"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Unban user from a chat.",
+          "expected_tool_key": "Telegram::unban_user",
+          "predicted_topk": [
+            "Telegram::unban_user",
+            "Telegram::ban_user",
+            "Telegram::unblock_user",
+            "Telegram::block_user",
+            "Telegram::unarchive_chat"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0011",
+      "description": "Cross-application chain (5 hops), case 11",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get invite link for a group or channel.",
+          "expected_tool_key": "Telegram::get_invite_link",
+          "predicted_topk": [
+            "Telegram::get_invite_link",
+            "Telegram::export_chat_invite",
+            "Telegram::join_chat_by_link",
+            "Telegram::create_channel",
+            "Telegram::leave_chat"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Export invite link for a chat.",
+          "expected_tool_key": "Telegram::export_chat_invite",
+          "predicted_topk": [
+            "Telegram::export_chat_invite",
+            "Telegram::get_invite_link",
+            "Telegram::join_chat_by_link",
+            "Telegram::import_chat_invite",
+            "Telegram::archive_chat"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.000877380742531457,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03764720942140297
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Join chat by invite hash.",
+          "expected_tool_key": "Telegram::import_chat_invite",
+          "predicted_topk": [
+            "Telegram::import_chat_invite",
+            "Telegram::join_chat_by_link",
+            "Telegram::export_chat_invite",
+            "Telegram::get_invite_link",
+            "Telegram::archive_chat"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Join chat by invite link.",
+          "expected_tool_key": "Telegram::join_chat_by_link",
+          "predicted_topk": [
+            "Telegram::join_chat_by_link",
+            "Telegram::import_chat_invite",
+            "Telegram::export_chat_invite",
+            "Telegram::get_invite_link",
+            "Telegram::archive_chat"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get paginated messages.",
+          "expected_tool_key": "Telegram::get_messages",
+          "predicted_topk": [
+            "Telegram::get_messages",
+            "Telegram::list_messages",
+            "Telegram::get_chats",
+            "Telegram::search_messages",
+            "Telegram::get_pinned_messages"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0010537920328540368,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03747079813108039
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0012",
+      "description": "Cross-application chain (5 hops), case 12",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List filtered messages.",
+          "expected_tool_key": "Telegram::list_messages",
+          "predicted_topk": [
+            "Telegram::list_messages",
+            "Telegram::get_pinned_messages",
+            "Telegram::get_messages",
+            "Telegram::search_messages",
+            "Telegram::mark_as_read"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.000877380742531457,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03764720942140297
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Send a message to a specific chat.",
+          "expected_tool_key": "Telegram::send_message",
+          "predicted_topk": [
+            "Telegram::send_message",
+            "Telegram::archive_chat",
+            "Telegram::reply_to_message",
+            "Telegram::search_messages",
+            "Telegram::mute_chat"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0021998038391480984,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03632478632478633
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Reply to a message.",
+          "expected_tool_key": "Telegram::reply_to_message",
+          "predicted_topk": [
+            "Telegram::reply_to_message",
+            "Telegram::forward_message",
+            "Telegram::delete_message",
+            "Telegram::edit_message",
+            "Telegram::send_message"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0014710187353629972,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03705357142857143
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Edit a message.",
+          "expected_tool_key": "Telegram::edit_message",
+          "predicted_topk": [
+            "Telegram::edit_message",
+            "Telegram::delete_message",
+            "Telegram::forward_message",
+            "Telegram::reply_to_message",
+            "Telegram::unpin_message"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0011253966155473291,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.0373991935483871
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Delete a message.",
+          "expected_tool_key": "Telegram::delete_message",
+          "predicted_topk": [
+            "Telegram::delete_message",
+            "Telegram::delete_contact",
+            "Telegram::edit_message",
+            "Telegram::unpin_message",
+            "Telegram::forward_message"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.000877380742531457,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03764720942140297
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0013",
+      "description": "Cross-application chain (5 hops), case 13",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Forward a message.",
+          "expected_tool_key": "Telegram::forward_message",
+          "predicted_topk": [
+            "Telegram::forward_message",
+            "Telegram::edit_message",
+            "Telegram::delete_message",
+            "Telegram::reply_to_message",
+            "Telegram::pin_message"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.001223002862347125,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.0373015873015873
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Pin a message.",
+          "expected_tool_key": "Telegram::pin_message",
+          "predicted_topk": [
+            "Telegram::pin_message",
+            "Telegram::edit_message",
+            "Telegram::unpin_message",
+            "Telegram::delete_message",
+            "Telegram::forward_message"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0014710187353629972,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03705357142857143
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Unpin a message.",
+          "expected_tool_key": "Telegram::unpin_message",
+          "predicted_topk": [
+            "Telegram::unpin_message",
+            "Telegram::delete_message",
+            "Telegram::edit_message",
+            "Telegram::pin_message",
+            "Telegram::reply_to_message"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0013814130005959727,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03714317716333845
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Mark all messages as read in a chat.",
+          "expected_tool_key": "Telegram::mark_as_read",
+          "predicted_topk": [
+            "Telegram::mark_as_read",
+            "Telegram::search_messages",
+            "Telegram::get_pinned_messages",
+            "Telegram::get_participants",
+            "Telegram::get_admins"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.000877380742531457,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03764720942140297
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get context around a message.",
+          "expected_tool_key": "Telegram::get_message_context",
+          "predicted_topk": [
+            "Telegram::get_message_context",
+            "Telegram::get_media_info",
+            "Telegram::get_last_interaction",
+            "Telegram::get_chat",
+            "Telegram::get_messages"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0012665256478053971,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03725806451612903
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0014",
+      "description": "Cross-application chain (5 hops), case 14",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get full chat history.",
+          "expected_tool_key": "Telegram::get_history",
+          "predicted_topk": [
+            "Telegram::get_history",
+            "Telegram::get_chat",
+            "Telegram::get_recent_actions",
+            "Telegram::archive_chat",
+            "Telegram::get_messages"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0010537920328540368,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03747079813108039
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List pinned messages in a chat.",
+          "expected_tool_key": "Telegram::get_pinned_messages",
+          "predicted_topk": [
+            "Telegram::get_pinned_messages",
+            "Telegram::search_messages",
+            "Telegram::list_messages",
+            "Telegram::get_participants",
+            "Telegram::get_admins"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0011253966155473291,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.0373991935483871
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get the most recent message with a contact.",
+          "expected_tool_key": "Telegram::get_last_interaction",
+          "predicted_topk": [
+            "Telegram::get_last_interaction",
+            "Telegram::get_direct_chat_by_contact",
+            "Telegram::get_recent_actions",
+            "Telegram::get_contact_chats",
+            "Telegram::get_message_context"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0009669864772984815,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.037557603686635944
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List all contacts.",
+          "expected_tool_key": "Telegram::list_contacts",
+          "predicted_topk": [
+            "Telegram::list_contacts",
+            "Telegram::get_contact_ids",
+            "Telegram::export_contacts",
+            "Telegram::get_contact_chats",
+            "Telegram::get_participants"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0009669864772984815,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.037557603686635944
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Search contacts.",
+          "expected_tool_key": "Telegram::search_contacts",
+          "predicted_topk": [
+            "Telegram::search_contacts",
+            "Telegram::list_contacts",
+            "Telegram::import_contacts",
+            "Telegram::export_contacts",
+            "Telegram::search_messages"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0015",
+      "description": "Cross-application chain (5 hops), case 15",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Add a contact.",
+          "expected_tool_key": "Telegram::add_contact",
+          "predicted_topk": [
+            "Telegram::add_contact",
+            "Telegram::delete_contact",
+            "Telegram::get_direct_chat_by_contact",
+            "Telegram::get_contact_chats",
+            "Telegram::get_contact_ids"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0009669864772984815,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.037557603686635944
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Delete a contact.",
+          "expected_tool_key": "Telegram::delete_contact",
+          "predicted_topk": [
+            "Telegram::delete_contact",
+            "Telegram::delete_message",
+            "Telegram::add_contact",
+            "Telegram::get_direct_chat_by_contact",
+            "Telegram::get_last_interaction"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.000877380742531457,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03764720942140297
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Block a user.",
+          "expected_tool_key": "Telegram::block_user",
+          "predicted_topk": [
+            "Telegram::block_user",
+            "Telegram::unblock_user",
+            "Telegram::unban_user",
+            "Telegram::ban_user",
+            "Telegram::demote_admin"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0009669864772984815,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.037557603686635944
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Unblock a user.",
+          "expected_tool_key": "Telegram::unblock_user",
+          "predicted_topk": [
+            "Telegram::unblock_user",
+            "Telegram::block_user",
+            "Telegram::unban_user",
+            "Telegram::ban_user",
+            "Telegram::demote_admin"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Bulk import contacts.",
+          "expected_tool_key": "Telegram::import_contacts",
+          "predicted_topk": [
+            "Telegram::import_contacts",
+            "Telegram::search_contacts",
+            "Telegram::list_contacts",
+            "Telegram::export_contacts",
+            "Telegram::unarchive_chat"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0016",
+      "description": "Cross-application chain (5 hops), case 16",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Export all contacts as JSON.",
+          "expected_tool_key": "Telegram::export_contacts",
+          "predicted_topk": [
+            "Telegram::export_contacts",
+            "Telegram::list_contacts",
+            "Telegram::search_contacts",
+            "Telegram::import_contacts",
+            "Telegram::export_chat_invite"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.000877380742531457,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03764720942140297
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List blocked users.",
+          "expected_tool_key": "Telegram::get_blocked_users",
+          "predicted_topk": [
+            "Telegram::get_blocked_users",
+            "Telegram::get_banned_users",
+            "Telegram::list_messages",
+            "Telegram::list_contacts",
+            "Telegram::get_contact_ids"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.000877380742531457,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03764720942140297
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List all contact IDs.",
+          "expected_tool_key": "Telegram::get_contact_ids",
+          "predicted_topk": [
+            "Telegram::get_contact_ids",
+            "Telegram::list_contacts",
+            "Telegram::get_contact_chats",
+            "Telegram::get_participants",
+            "Telegram::get_admins"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0009669864772984815,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.037557603686635944
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Find direct chat with a contact.",
+          "expected_tool_key": "Telegram::get_direct_chat_by_contact",
+          "predicted_topk": [
+            "Telegram::get_direct_chat_by_contact",
+            "Telegram::get_contact_chats",
+            "Telegram::get_last_interaction",
+            "Telegram::add_contact",
+            "Telegram::delete_contact"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List all chats with a contact.",
+          "expected_tool_key": "Telegram::get_contact_chats",
+          "predicted_topk": [
+            "Telegram::get_contact_chats",
+            "Telegram::list_chats",
+            "Telegram::get_participants",
+            "Telegram::get_contact_ids",
+            "Telegram::get_chats"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0014710187353629972,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03705357142857143
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0017",
+      "description": "Cross-application chain (5 hops), case 17",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get your user info.",
+          "expected_tool_key": "Telegram::get_me",
+          "predicted_topk": [
+            "Telegram::get_me",
+            "Telegram::get_bot_info",
+            "Telegram::get_user_status",
+            "Telegram::get_chat",
+            "Telegram::get_user_photos"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0011253966155473291,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.0373991935483871
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Update your profile.",
+          "expected_tool_key": "Telegram::update_profile",
+          "predicted_topk": [
+            "Telegram::update_profile",
+            "Telegram::delete_profile_photo",
+            "Telegram::get_me",
+            "Telegram::get_user_photos",
+            "Telegram::search_contacts"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0011253966155473291,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.0373991935483871
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Remove your profile photo.",
+          "expected_tool_key": "Telegram::delete_profile_photo",
+          "predicted_topk": [
+            "Telegram::delete_profile_photo",
+            "Telegram::delete_chat_photo",
+            "Telegram::update_profile",
+            "Telegram::get_user_photos",
+            "Telegram::get_me"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.000710970092249838,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03781362007168459
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get a user's profile photos.",
+          "expected_tool_key": "Telegram::get_user_photos",
+          "predicted_topk": [
+            "Telegram::get_user_photos",
+            "Telegram::get_user_status",
+            "Telegram::get_me",
+            "Telegram::delete_profile_photo",
+            "Telegram::update_profile"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.000877380742531457,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03764720942140297
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get a user's online status.",
+          "expected_tool_key": "Telegram::get_user_status",
+          "predicted_topk": [
+            "Telegram::get_user_status",
+            "Telegram::get_user_photos",
+            "Telegram::get_me",
+            "Telegram::block_user",
+            "Telegram::unblock_user"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0011333971275801005,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.037391193036354325
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0018",
+      "description": "Cross-application chain (5 hops), case 18",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get info about media in a message.",
+          "expected_tool_key": "Telegram::get_media_info",
+          "predicted_topk": [
+            "Telegram::get_media_info",
+            "Telegram::get_chat",
+            "Telegram::get_bot_info",
+            "Telegram::get_me",
+            "Telegram::search_messages"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0009669864772984815,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.037557603686635944
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Search public chats, channels, or bots by username or title.",
+          "expected_tool_key": "Telegram::search_public_chats",
+          "predicted_topk": [
+            "Telegram::search_public_chats",
+            "Telegram::edit_chat_title",
+            "Telegram::create_channel",
+            "Telegram::list_chats",
+            "Telegram::get_contact_chats"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0027218113409624503,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.035802778822971976
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Search messages in a chat.",
+          "expected_tool_key": "Telegram::search_messages",
+          "predicted_topk": [
+            "Telegram::search_messages",
+            "Telegram::get_pinned_messages",
+            "Telegram::mark_as_read",
+            "Telegram::list_messages",
+            "Telegram::get_messages"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0011253966155473291,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.0373991935483871
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Resolve a username to ID.",
+          "expected_tool_key": "Telegram::resolve_username",
+          "predicted_topk": [
+            "Telegram::resolve_username",
+            "Telegram::search_public_chats",
+            "Telegram::unblock_user",
+            "Telegram::block_user",
+            "Telegram::reply_to_message"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0015988814640321772,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03692570869990225
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List sticker sets.",
+          "expected_tool_key": "Telegram::get_sticker_sets",
+          "predicted_topk": [
+            "Telegram::get_sticker_sets",
+            "Telegram::list_contacts",
+            "Telegram::get_blocked_users",
+            "Telegram::get_contact_ids",
+            "Telegram::get_pinned_messages"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.002130359394703657,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03639423076923077
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0019",
+      "description": "Cross-application chain (5 hops), case 19",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get info about a bot.",
+          "expected_tool_key": "Telegram::get_bot_info",
+          "predicted_topk": [
+            "Telegram::get_bot_info",
+            "Telegram::get_chat",
+            "Telegram::get_media_info",
+            "Telegram::get_me",
+            "Telegram::set_bot_commands"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.000710970092249838,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03781362007168459
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Set bot commands (bot accounts only).",
+          "expected_tool_key": "Telegram::set_bot_commands",
+          "predicted_topk": [
+            "Telegram::set_bot_commands",
+            "Telegram::get_bot_info",
+            "Telegram::set_privacy_settings",
+            "Telegram::block_user",
+            "Telegram::delete_message"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get privacy settings.",
+          "expected_tool_key": "Telegram::get_privacy_settings",
+          "predicted_topk": [
+            "Telegram::get_privacy_settings",
+            "Telegram::set_privacy_settings",
+            "Telegram::get_me",
+            "Telegram::get_messages",
+            "Telegram::get_user_photos"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Set privacy settings.",
+          "expected_tool_key": "Telegram::set_privacy_settings",
+          "predicted_topk": [
+            "Telegram::set_privacy_settings",
+            "Telegram::get_privacy_settings",
+            "Telegram::set_bot_commands",
+            "Telegram::search_contacts",
+            "Telegram::block_user"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Mute notifications for a chat.",
+          "expected_tool_key": "Telegram::mute_chat",
+          "predicted_topk": [
+            "Telegram::mute_chat",
+            "Telegram::unmute_chat",
+            "Telegram::archive_chat",
+            "Telegram::unarchive_chat",
+            "Telegram::send_message"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        }
+      ]
+    },
+    {
+      "case_id": "multi_hop-small_100-cross_app-0020",
+      "description": "Cross-application chain (5 hops), case 20",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Unmute notifications for a chat.",
+          "expected_tool_key": "Telegram::unmute_chat",
+          "predicted_topk": [
+            "Telegram::unmute_chat",
+            "Telegram::mute_chat",
+            "Telegram::unarchive_chat",
+            "Telegram::archive_chat",
+            "Telegram::unban_user"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Archive a chat.",
+          "expected_tool_key": "Telegram::archive_chat",
+          "predicted_topk": [
+            "Telegram::archive_chat",
+            "Telegram::unarchive_chat",
+            "Telegram::mute_chat",
+            "Telegram::send_message",
+            "Telegram::search_messages"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0015225420328540407,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.037002048131080385
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Unarchive a chat.",
+          "expected_tool_key": "Telegram::unarchive_chat",
+          "predicted_topk": [
+            "Telegram::unarchive_chat",
+            "Telegram::archive_chat",
+            "Telegram::unban_user",
+            "Telegram::search_messages",
+            "Telegram::unmute_chat"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0015225420328540407,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.037002048131080385
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get recent admin actions in a chat.",
+          "expected_tool_key": "Telegram::get_recent_actions",
+          "predicted_topk": [
+            "Telegram::get_recent_actions",
+            "Telegram::get_last_interaction",
+            "Telegram::get_admins",
+            "Telegram::search_messages",
+            "Telegram::get_pinned_messages"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0012150023503143537,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03730958781362007
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg reference data",
+          "expected_tool_key": "Bloomberg::bdp",
+          "predicted_topk": [
+            "Bloomberg::bdp",
+            "Bloomberg::bdh",
+            "Bloomberg::bds",
+            "Bloomberg::bdtick",
+            "Bloomberg::bdib"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0009669864772984815,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.037557603686635944
+        }
+      ]
+    }
+  ],
+  "suite": "multi_hop.small_100.cross_app"
+}

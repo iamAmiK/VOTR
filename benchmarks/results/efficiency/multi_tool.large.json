@@ -1,0 +1,80 @@
+{
+  "scale": "large",
+  "summary": {
+    "num_items": 7,
+    "latency_ms": {
+      "p50": 254.48599993251264,
+      "p95": 285.2842998690903,
+      "mean": 260.3808714276446
+    },
+    "returned_tools_mean": 8,
+    "avg_recommended_handoff_k": 2.4285714285714284,
+    "compressed_candidate_chars": {
+      "mean": 934,
+      "p95": 1151
+    },
+    "estimated_compressed_tokens": {
+      "mean": 233.5,
+      "p95": 287.75
+    },
+    "embedding_api_calls_per_route": 2.0
+  },
+  "rows": [
+    {
+      "latency_ms": 285.2842998690903,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 1075,
+      "estimated_compressed_tokens": 268.75,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 279.22730008140206,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 895,
+      "estimated_compressed_tokens": 223.75,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 249.45850018411875,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 812,
+      "estimated_compressed_tokens": 203.0,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 244.08500012941658,
+      "returned_tools": 8,
+      "recommended_handoff_k": 5,
+      "compressed_chars": 1015,
+      "estimated_compressed_tokens": 253.75,
+      "confidence": "low"
+    },
+    {
+      "latency_ms": 245.2378999441862,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 668,
+      "estimated_compressed_tokens": 167.0,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 264.88709985278547,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 1151,
+      "estimated_compressed_tokens": 287.75,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 254.48599993251264,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 922,
+      "estimated_compressed_tokens": 230.5,
+      "confidence": "high"
+    }
+  ]
+}

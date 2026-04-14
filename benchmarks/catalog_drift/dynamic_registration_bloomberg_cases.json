@@ -1,0 +1,144 @@
+{
+  "suite": "dynamic_registration.bloomberg",
+  "description": "Bloomberg-specific dynamic registration benchmark: start from an index without Bloomberg, verify miss-before and hit-after when Bloomberg is hot-registered.",
+  "control_probes": [
+    {
+      "id": "ctrl-gh-001",
+      "server_intent": "GitHub repository operations",
+      "tool_intent": "list pull requests for a repository",
+      "expected_tool_key": "GitHub::list_pull_requests"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "bloomberg-register-001",
+      "server": {
+        "name": "Bloomberg",
+        "description": "Bloomberg BLPAPI financial data tools",
+        "summary": "Bloomberg BLPAPI financial data tools",
+        "tools": [
+          {
+            "name": "bdp",
+            "description": "Get Bloomberg reference data",
+            "parameter": {
+              "tickers": "(array)",
+              "flds": "(array)",
+              "kwargs": "(object)"
+            }
+          },
+          {
+            "name": "bds",
+            "description": "Get Bloomberg block data",
+            "parameter": {
+              "tickers": "(array)",
+              "flds": "(array)",
+              "use_port": "(Optional, boolean)",
+              "kwargs": "(Optional, any)"
+            }
+          },
+          {
+            "name": "bdh",
+            "description": "Get Bloomberg historical data",
+            "parameter": {
+              "tickers": "(array)",
+              "flds": "(array)",
+              "start_date": "(Optional, any)",
+              "end_date": "(Optional, string)",
+              "adjust": "(Optional, any)",
+              "kwargs": "(Optional, any)"
+            }
+          },
+          {
+            "name": "bdib",
+            "description": "Get Bloomberg intraday bar data",
+            "parameter": {
+              "ticker": "(string)",
+              "dt": "(string)",
+              "session": "(Optional, string)",
+              "typ": "(Optional, string)",
+              "kwargs": "(Optional, any)"
+            }
+          },
+          {
+            "name": "bdtick",
+            "description": "Get Bloomberg tick data",
+            "parameter": {
+              "ticker": "(string)",
+              "dt": "(string)",
+              "session": "(Optional, string)",
+              "time_range": "(Optional, any)",
+              "types": "(Optional, any)",
+              "kwargs": "(Optional, any)"
+            }
+          },
+          {
+            "name": "earning",
+            "description": "Get Bloomberg earning exposure by Geo or Products",
+            "parameter": {
+              "ticker": "(string)",
+              "by": "(Optional, string)",
+              "typ": "(Optional, string)",
+              "ccy": "(Optional, any)",
+              "level": "(Optional, any)",
+              "kwargs": "(Optional, any)"
+            }
+          },
+          {
+            "name": "dividend",
+            "description": "Get Bloomberg divident / split history",
+            "parameter": {
+              "tickers": "(array)",
+              "typ": "(Optional, string)",
+              "start_date": "(Optional, any)",
+              "end_date": "(Optional, any)",
+              "kwargs": "(Optional, any)"
+            }
+          },
+          {
+            "name": "beqs",
+            "description": "Get Bloomberg equity screening",
+            "parameter": {
+              "screen": "(string)",
+              "asof": "(Optional, any)",
+              "typ": "(Optional, string)",
+              "group": "(Optional, string)",
+              "kwargs": "(Optional, any)"
+            }
+          },
+          {
+            "name": "turnover",
+            "description": "Calculate the adjusted turnover (in millions)",
+            "parameter": {
+              "tickers": "(array)",
+              "flds": "(Optional, string)",
+              "start_date": "(Optional, any)",
+              "end_date": "(Optional, any)",
+              "ccy": "(Optional, string)",
+              "factor": "(Optional, number)"
+            }
+          }
+        ]
+      },
+      "probes": [
+        {
+          "id": "bbg-probe-001",
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg reference data",
+          "expected_tool_key": "Bloomberg::bdp"
+        },
+        {
+          "id": "bbg-probe-002",
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg historical data",
+          "expected_tool_key": "Bloomberg::bdh"
+        },
+        {
+          "id": "bbg-probe-003",
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg equity screening",
+          "expected_tool_key": "Bloomberg::beqs"
+        }
+      ]
+    }
+  ]
+}

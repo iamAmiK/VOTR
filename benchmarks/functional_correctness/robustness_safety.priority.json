@@ -1,0 +1,102 @@
+{
+  "suite": "robustness_safety.priority",
+  "description": "High-priority robustness benchmark for noisy phrasing, typos, shorthand, and safety-critical single-vs-bulk or reply-vs-post distinctions.",
+  "cases": [
+    {
+      "id": "rob-001",
+      "server_intent": "github repo ops",
+      "tool_intent": "list open prs for a repo pls",
+      "expected_tool_key": "GitHub::list_pull_requests"
+    },
+    {
+      "id": "rob-002",
+      "server_intent": "github issue search",
+      "tool_intent": "srch issues about auth bug across repos",
+      "expected_tool_key": "GitHub::search_issues"
+    },
+    {
+      "id": "rob-003",
+      "server_intent": "slak messaging",
+      "tool_intent": "post a quick update in the proj channel",
+      "expected_tool_key": "Slack::slack_post_message"
+    },
+    {
+      "id": "rob-004",
+      "server_intent": "slack thread replies",
+      "tool_intent": "answer in the thread instead of making a new channel post",
+      "expected_tool_key": "Slack::slack_reply_to_thread"
+    },
+    {
+      "id": "rob-005",
+      "server_intent": "gdrive files",
+      "tool_intent": "find docs abt q4 budget",
+      "expected_tool_key": "Google Drive::search"
+    },
+    {
+      "id": "rob-006",
+      "server_intent": "gsheets docs",
+      "tool_intent": "list my spreadsheets",
+      "expected_tool_key": "Google Sheets::listSpreadsheets"
+    },
+    {
+      "id": "rob-007",
+      "server_intent": "goog tasks todos",
+      "tool_intent": "add todo: send client followup",
+      "expected_tool_key": "Google Tasks::create"
+    },
+    {
+      "id": "rob-008",
+      "server_intent": "google tasks todos",
+      "tool_intent": "update the existing todo details or status",
+      "expected_tool_key": "Google Tasks::update"
+    },
+    {
+      "id": "rob-009",
+      "server_intent": "g tasks",
+      "tool_intent": "delete just that one task, not the whole list",
+      "expected_tool_key": "Google Tasks::delete"
+    },
+    {
+      "id": "rob-010",
+      "server_intent": "google tasks",
+      "tool_intent": "clear all completed tasks from the list",
+      "expected_tool_key": "Google Tasks::clear"
+    },
+    {
+      "id": "rob-011",
+      "server_intent": "fs operations",
+      "tool_intent": "ls ./data/index",
+      "expected_tool_key": "Filesystem::list_directory"
+    },
+    {
+      "id": "rob-012",
+      "server_intent": "filesystem read ops",
+      "tool_intent": "read file ./README.md",
+      "expected_tool_key": "Filesystem::read_file"
+    },
+    {
+      "id": "rob-013",
+      "server_intent": "filesystem read ops",
+      "tool_intent": "read these two files together in one request",
+      "expected_tool_key": "Filesystem::read_multiple_files"
+    },
+    {
+      "id": "rob-014",
+      "server_intent": "linear issue tracking",
+      "tool_intent": "move issue ENG-44 to done pls",
+      "expected_tool_key": "Linear::linear_update_issue"
+    },
+    {
+      "id": "rob-015",
+      "server_intent": "telegram msg ops",
+      "tool_intent": "send a quick message to that chat",
+      "expected_tool_key": "Telegram::send_message"
+    },
+    {
+      "id": "rob-016",
+      "server_intent": "telegram thread replies",
+      "tool_intent": "reply to that message instead of sending a fresh one",
+      "expected_tool_key": "Telegram::reply_to_message"
+    }
+  ]
+}

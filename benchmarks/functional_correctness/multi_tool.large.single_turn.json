@@ -1,0 +1,3106 @@
+{
+  "suite": "multi_tool.large.single_turn",
+  "description": "Router-only multi-target single-turn suite for the full catalog (500 subtask evaluations).",
+  "cases": [
+    {
+      "id": "multi_tool-large-single_turn-0001",
+      "user_intent": "Single user turn #1: complete these intents in order: (1) extracts structured data from a given URL using a prompt to describe the data and fields to extract; (2) list all projects on your Aiven account; (3) list all services in a specific Aiven project; (4) execute a SQL query in the AnalyticDB for MySQL Cluster; (5) get the actual execution plan with runtime statistics for a SQL query",
+      "subtasks": [
+        {
+          "server_intent": "AgentQL operations",
+          "tool_intent": "extracts structured data from a given URL using a prompt to describe the data and fields to extract",
+          "expected_tool_key": "AgentQL::extract-web-data"
+        },
+        {
+          "server_intent": "Aiven operations",
+          "tool_intent": "list all projects on your Aiven account",
+          "expected_tool_key": "Aiven::list_projects"
+        },
+        {
+          "server_intent": "Aiven operations",
+          "tool_intent": "list all services in a specific Aiven project",
+          "expected_tool_key": "Aiven::list_services"
+        },
+        {
+          "server_intent": "Alibaba Cloud AnalyticDB for MySQL operations",
+          "tool_intent": "execute a SQL query in the AnalyticDB for MySQL Cluster",
+          "expected_tool_key": "Alibaba Cloud AnalyticDB for MySQL::execute_sql"
+        },
+        {
+          "server_intent": "Alibaba Cloud AnalyticDB for MySQL operations",
+          "tool_intent": "get the actual execution plan with runtime statistics for a SQL query",
+          "expected_tool_key": "Alibaba Cloud AnalyticDB for MySQL::get_execution_plan"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0002",
+      "user_intent": "Single user turn #2: complete these intents in order: (1) execute SELECT queries to read data from the database; (2) execute SHOW/COUNT queries to read metadata from the database; (3) retrieves documentation, input schema, and details about a specific Actor; (4) adds an Actor by name to the available tools list without executing it, requiring user consent to ru; (5) validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary",
+      "subtasks": [
+        {
+          "server_intent": "Apache IoTDB operations",
+          "tool_intent": "execute SELECT queries to read data from the database",
+          "expected_tool_key": "Apache IoTDB::select_query"
+        },
+        {
+          "server_intent": "Apache IoTDB operations",
+          "tool_intent": "execute SHOW/COUNT queries to read metadata from the database",
+          "expected_tool_key": "Apache IoTDB::metadata_query"
+        },
+        {
+          "server_intent": "Apify operations",
+          "tool_intent": "retrieves documentation, input schema, and details about a specific Actor",
+          "expected_tool_key": "Apify::get-actor-details"
+        },
+        {
+          "server_intent": "Apify operations",
+          "tool_intent": "adds an Actor by name to the available tools list without executing it, requiring user consent to run later",
+          "expected_tool_key": "Apify::add-actor-as-tool"
+        },
+        {
+          "server_intent": "APIMatic MCP operations",
+          "tool_intent": "validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary",
+          "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0003",
+      "user_intent": "Single user turn #3: complete these intents in order: (1) provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults; (2) mCP server implementation for Arize Phoenix providing a unified interface to Phoenix's capabilities; (3) update an existing collection in the database; (4) delete a collection from the database; (5) retrieves available baseline audiences, optionally filtered by country",
+      "subtasks": [
+        {
+          "server_intent": "Arize Phoenix operations",
+          "tool_intent": "provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults",
+          "expected_tool_key": "Arize Phoenix::arize-phoenix-otel"
+        },
+        {
+          "server_intent": "Arize Phoenix operations",
+          "tool_intent": "mCP server implementation for Arize Phoenix providing a unified interface to Phoenix's capabilities",
+          "expected_tool_key": "Arize Phoenix::@arizeai/phoenix-mcp"
+        },
+        {
+          "server_intent": "Astra DB operations",
+          "tool_intent": "update an existing collection in the database",
+          "expected_tool_key": "Astra DB::UpdateCollection"
+        },
+        {
+          "server_intent": "Astra DB operations",
+          "tool_intent": "delete a collection from the database",
+          "expected_tool_key": "Astra DB::DeleteCollection"
+        },
+        {
+          "server_intent": "Audiense Insights operations",
+          "tool_intent": "retrieves available baseline audiences, optionally filtered by country",
+          "expected_tool_key": "Audiense Insights::get-baselines"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0004",
+      "user_intent": "Single user turn #4: complete these intents in order: (1) retrieves the list of available affinity categories that can be used in influencer comparisons; (2) list all S3 buckets; (3) get content recommendations for AWS documentation pages; (4) execute APL queries against Axiom datasets; (5) list available Axiom datasets",
+      "subtasks": [
+        {
+          "server_intent": "Audiense Insights operations",
+          "tool_intent": "retrieves the list of available affinity categories that can be used in influencer comparisons",
+          "expected_tool_key": "Audiense Insights::get-categories"
+        },
+        {
+          "server_intent": "AWS operations",
+          "tool_intent": "list all S3 buckets",
+          "expected_tool_key": "AWS::s3_bucket_list"
+        },
+        {
+          "server_intent": "AWS operations",
+          "tool_intent": "get content recommendations for AWS documentation pages",
+          "expected_tool_key": "AWS::Get Content Recommendations"
+        },
+        {
+          "server_intent": "Axiom operations",
+          "tool_intent": "execute APL queries against Axiom datasets",
+          "expected_tool_key": "Axiom::queryApl"
+        },
+        {
+          "server_intent": "Axiom operations",
+          "tool_intent": "list available Axiom datasets",
+          "expected_tool_key": "Axiom::listDatasets"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0005",
+      "user_intent": "Single user turn #5: complete these intents in order: (1) samples rows from a Kusto table; (2) lists, creates, and retrieves keys within an Azure Key Vault; (3) fetch event logs for a contract based on topics; (4) read state from smart contracts on various blockchain networks; (5) list Release Management installable artifacts of a connected app",
+      "subtasks": [
+        {
+          "server_intent": "Azure operations",
+          "tool_intent": "samples rows from a Kusto table",
+          "expected_tool_key": "Azure::Sample rows from a Kusto table"
+        },
+        {
+          "server_intent": "Azure operations",
+          "tool_intent": "lists, creates, and retrieves keys within an Azure Key Vault",
+          "expected_tool_key": "Azure::List, create, and get keys"
+        },
+        {
+          "server_intent": "Bankless Onchain operations",
+          "tool_intent": "fetch event logs for a contract based on topics",
+          "expected_tool_key": "Bankless Onchain::get_events"
+        },
+        {
+          "server_intent": "Bankless Onchain operations",
+          "tool_intent": "read state from smart contracts on various blockchain networks",
+          "expected_tool_key": "Bankless Onchain::read_contract"
+        },
+        {
+          "server_intent": "Bitrise operations",
+          "tool_intent": "list Release Management installable artifacts of a connected app",
+          "expected_tool_key": "Bitrise::list_installable_artifacts"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0006",
+      "user_intent": "Single user turn #6: complete these intents in order: (1) changes whether public install page should be available for the installable artifact; (2) ask Box AI about a hub; (3) list all Doc Gen jobs that used a specific template; (4) retrieve a document by ID; (5) update existing documents' content, metadata, or embeddings",
+      "subtasks": [
+        {
+          "server_intent": "Bitrise operations",
+          "tool_intent": "changes whether public install page should be available for the installable artifact",
+          "expected_tool_key": "Bitrise::set_installable_artifact_public_install_page"
+        },
+        {
+          "server_intent": "Box operations",
+          "tool_intent": "ask Box AI about a hub",
+          "expected_tool_key": "Box::box_hubs_ask_ai_tool"
+        },
+        {
+          "server_intent": "Box operations",
+          "tool_intent": "list all Doc Gen jobs that used a specific template",
+          "expected_tool_key": "Box::box_docgen_template_list_jobs_tool"
+        },
+        {
+          "server_intent": "Chroma operations",
+          "tool_intent": "retrieve a document by ID",
+          "expected_tool_key": "Chroma::read_document"
+        },
+        {
+          "server_intent": "Chroma operations",
+          "tool_intent": "update existing documents' content, metadata, or embeddings",
+          "expected_tool_key": "Chroma::chroma_update_documents"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0007",
+      "user_intent": "Single user turn #7: complete these intents in order: (1) retrieves the status of the latest pipeline for a given branch; (2) identifies flaky tests in a CircleCI project by analyzing test execution history; (3) execute SQL queries on your ClickHouse cluster; (4) list all databases on your ClickHouse cluster; (5) lists and filters code quality issues in a repository",
+      "subtasks": [
+        {
+          "server_intent": "CircleCI operations",
+          "tool_intent": "retrieves the status of the latest pipeline for a given branch",
+          "expected_tool_key": "CircleCI::get_latest_pipeline_status"
+        },
+        {
+          "server_intent": "CircleCI operations",
+          "tool_intent": "identifies flaky tests in a CircleCI project by analyzing test execution history",
+          "expected_tool_key": "CircleCI::find_flaky_tests"
+        },
+        {
+          "server_intent": "ClickHouse operations",
+          "tool_intent": "execute SQL queries on your ClickHouse cluster",
+          "expected_tool_key": "ClickHouse::run_select_query"
+        },
+        {
+          "server_intent": "ClickHouse operations",
+          "tool_intent": "list all databases on your ClickHouse cluster",
+          "expected_tool_key": "ClickHouse::list_databases"
+        },
+        {
+          "server_intent": "Codacy operations",
+          "tool_intent": "lists and filters code quality issues in a repository",
+          "expected_tool_key": "Codacy::codacy_list_repository_issues"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0008",
+      "user_intent": "Single user turn #8: complete these intents in order: (1) get repository with analysis information, including metrics for Grade, Issues, Duplication, Complexi; (2) analyzes impacts between code and database entities; (3) pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class; (4) track and analyze trace data; (5) organize and manage projects",
+      "subtasks": [
+        {
+          "server_intent": "Codacy operations",
+          "tool_intent": "get repository with analysis information, including metrics for Grade, Issues, Duplication, Complexity, and Coverage",
+          "expected_tool_key": "Codacy::codacy_get_repository_with_analysis"
+        },
+        {
+          "server_intent": "CodeLogic operations",
+          "tool_intent": "analyzes impacts between code and database entities",
+          "expected_tool_key": "CodeLogic::codelogic-database-impact"
+        },
+        {
+          "server_intent": "CodeLogic operations",
+          "tool_intent": "pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class",
+          "expected_tool_key": "CodeLogic::codelogic-method-impact"
+        },
+        {
+          "server_intent": "Comet Opik operations",
+          "tool_intent": "track and analyze trace data",
+          "expected_tool_key": "Comet Opik::Traces"
+        },
+        {
+          "server_intent": "Comet Opik operations",
+          "tool_intent": "organize and manage projects",
+          "expected_tool_key": "Comet Opik::Projects/Workspaces Management"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0009",
+      "user_intent": "Single user turn #9: complete these intents in order: (1) delete a document by ID from a specified scope and collection; (2) get a document by ID from a specified scope and collection; (3) get information about the user's space, including available assignees, dartboards, folders, statuses; (4) create a new doc with title, text content, and folder; (5) updates an existing blog post's title and/or content",
+      "subtasks": [
+        {
+          "server_intent": "Couchbase operations",
+          "tool_intent": "delete a document by ID from a specified scope and collection",
+          "expected_tool_key": "Couchbase::delete_document_by_id"
+        },
+        {
+          "server_intent": "Couchbase operations",
+          "tool_intent": "get a document by ID from a specified scope and collection",
+          "expected_tool_key": "Couchbase::get_document_by_id"
+        },
+        {
+          "server_intent": "Dart operations",
+          "tool_intent": "get information about the user's space, including available assignees, dartboards, folders, statuses, tags, priorities, and sizes",
+          "expected_tool_key": "Dart::get_config"
+        },
+        {
+          "server_intent": "Dart operations",
+          "tool_intent": "create a new doc with title, text content, and folder",
+          "expected_tool_key": "Dart::create_doc"
+        },
+        {
+          "server_intent": "DevHub operations",
+          "tool_intent": "updates an existing blog post's title and/or content",
+          "expected_tool_key": "DevHub::update_blog_post"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0010",
+      "user_intent": "Single user turn #10: complete these intents in order: (1) gets all locations for a specific business; (2) sends Slack messages using the Slack Connector; (3) lists problem details from your services, such as Kubernetes; (4) retrieves user information from the EduBase platform; (5) delete an alias for a specific index",
+      "subtasks": [
+        {
+          "server_intent": "DevHub operations",
+          "tool_intent": "gets all locations for a specific business",
+          "expected_tool_key": "DevHub::get_locations"
+        },
+        {
+          "server_intent": "Dynatrace operations",
+          "tool_intent": "sends Slack messages using the Slack Connector",
+          "expected_tool_key": "Dynatrace::send_slack_message"
+        },
+        {
+          "server_intent": "Dynatrace operations",
+          "tool_intent": "lists problem details from your services, such as Kubernetes",
+          "expected_tool_key": "Dynatrace::list_problems"
+        },
+        {
+          "server_intent": "EduBase operations",
+          "tool_intent": "retrieves user information from the EduBase platform",
+          "expected_tool_key": "EduBase::edubase_get_user"
+        },
+        {
+          "server_intent": "Elasticsearch operations",
+          "tool_intent": "delete an alias for a specific index",
+          "expected_tool_key": "Elasticsearch::delete_alias"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0011",
+      "user_intent": "Single user turn #11: complete these intents in order: (1) get a document by ID; (2) list all your templates; (3) delete a draft or test contract; (4) specialized search focused on academic papers and research content; (5) performs real-time web searches with optimized results and content extraction",
+      "subtasks": [
+        {
+          "server_intent": "Elasticsearch operations",
+          "tool_intent": "get a document by ID",
+          "expected_tool_key": "Elasticsearch::get_document"
+        },
+        {
+          "server_intent": "eSignatures operations",
+          "tool_intent": "list all your templates",
+          "expected_tool_key": "eSignatures::list_templates"
+        },
+        {
+          "server_intent": "eSignatures operations",
+          "tool_intent": "delete a draft or test contract",
+          "expected_tool_key": "eSignatures::delete_contract"
+        },
+        {
+          "server_intent": "Exa operations",
+          "tool_intent": "specialized search focused on academic papers and research content",
+          "expected_tool_key": "Exa::research_paper_search"
+        },
+        {
+          "server_intent": "Exa operations",
+          "tool_intent": "performs real-time web searches with optimized results and content extraction",
+          "expected_tool_key": "Exa::web_search_exa"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0012",
+      "user_intent": "Single user turn #12: complete these intents in order: (1) retrieve the user's payment methods; (2) retrieve the details of a payment; (3) retrieves a list of all databases available in your Fibery workspace; (4) provides a detailed breakdown of a specific database's structure, showing all fields with their titl; (5) get balance sheets for a company",
+      "subtasks": [
+        {
+          "server_intent": "Fewsats operations",
+          "tool_intent": "retrieve the user's payment methods",
+          "expected_tool_key": "Fewsats::payment_methods"
+        },
+        {
+          "server_intent": "Fewsats operations",
+          "tool_intent": "retrieve the details of a payment",
+          "expected_tool_key": "Fewsats::payment_info"
+        },
+        {
+          "server_intent": "Fibery operations",
+          "tool_intent": "retrieves a list of all databases available in your Fibery workspace",
+          "expected_tool_key": "Fibery::list_databases"
+        },
+        {
+          "server_intent": "Fibery operations",
+          "tool_intent": "provides a detailed breakdown of a specific database's structure, showing all fields with their titles, names, and types",
+          "expected_tool_key": "Fibery::describe_database"
+        },
+        {
+          "server_intent": "Financial Datasets operations",
+          "tool_intent": "get balance sheets for a company",
+          "expected_tool_key": "Financial Datasets::get_balance_sheets"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0013",
+      "user_intent": "Single user turn #13: complete these intents in order: (1) gets all available crypto tickers; (2) start an asynchronous crawl with advanced options; (3) search the web and optionally extract content from search results; (4) comment on an issue; (5) create a pull request",
+      "subtasks": [
+        {
+          "server_intent": "Financial Datasets operations",
+          "tool_intent": "gets all available crypto tickers",
+          "expected_tool_key": "Financial Datasets::get_available_crypto_tickers"
+        },
+        {
+          "server_intent": "Firecrawl operations",
+          "tool_intent": "start an asynchronous crawl with advanced options",
+          "expected_tool_key": "Firecrawl::firecrawl_crawl"
+        },
+        {
+          "server_intent": "Firecrawl operations",
+          "tool_intent": "search the web and optionally extract content from search results",
+          "expected_tool_key": "Firecrawl::firecrawl_search"
+        },
+        {
+          "server_intent": "Gitee operations",
+          "tool_intent": "comment on an issue",
+          "expected_tool_key": "Gitee::comment_issue"
+        },
+        {
+          "server_intent": "Gitee operations",
+          "tool_intent": "create a pull request",
+          "expected_tool_key": "Gitee::create_pull"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0014",
+      "user_intent": "Single user turn #14: complete these intents in order: (1) fetch image content and metadata from Gyazo; (2) upload an image to Gyazo; (3) get the schema to use when requesting a human review for a given form; (4) list all available review forms; (5) list schedules from Grafana OnCall",
+      "subtasks": [
+        {
+          "server_intent": "Gyazo operations",
+          "tool_intent": "fetch image content and metadata from Gyazo",
+          "expected_tool_key": "Gyazo::gyazo_image"
+        },
+        {
+          "server_intent": "Gyazo operations",
+          "tool_intent": "upload an image to Gyazo",
+          "expected_tool_key": "Gyazo::gyazo_upload"
+        },
+        {
+          "server_intent": "gotoHuman operations",
+          "tool_intent": "get the schema to use when requesting a human review for a given form",
+          "expected_tool_key": "gotoHuman::get-form-schema"
+        },
+        {
+          "server_intent": "gotoHuman operations",
+          "tool_intent": "list all available review forms",
+          "expected_tool_key": "gotoHuman::list-forms"
+        },
+        {
+          "server_intent": "Grafana operations",
+          "tool_intent": "list schedules from Grafana OnCall",
+          "expected_tool_key": "Grafana::list_oncall_schedules"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0015",
+      "user_intent": "Single user turn #15: complete these intents in order: (1) list available metric names; (2) sends notifications to Twitter/X; (3) lists available folders within a SharePoint library; (4) gets a prompt by name; (5) lists tables in the database",
+      "subtasks": [
+        {
+          "server_intent": "Grafana operations",
+          "tool_intent": "list available metric names",
+          "expected_tool_key": "Grafana::list_prometheus_metric_names"
+        },
+        {
+          "server_intent": "Graphlit operations",
+          "tool_intent": "sends notifications to Twitter/X",
+          "expected_tool_key": "Graphlit::Twitter/X"
+        },
+        {
+          "server_intent": "Graphlit operations",
+          "tool_intent": "lists available folders within a SharePoint library",
+          "expected_tool_key": "Graphlit::List SharePoint Folders"
+        },
+        {
+          "server_intent": "GreptimeDB operations",
+          "tool_intent": "gets a prompt by name",
+          "expected_tool_key": "GreptimeDB::get_prompt"
+        },
+        {
+          "server_intent": "GreptimeDB operations",
+          "tool_intent": "lists tables in the database",
+          "expected_tool_key": "GreptimeDB::list_resources"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0016",
+      "user_intent": "Single user turn #16: complete these intents in order: (1) list all add-ons for all apps or for a specific app; (2) view application logs; (3) execute a DML (INSERT, UPDATE, DELETE) SQL query on the Hologres server; (4) collect table statistics; (5) complex browser tasks using Claude computer use",
+      "subtasks": [
+        {
+          "server_intent": "Heroku operations",
+          "tool_intent": "list all add-ons for all apps or for a specific app",
+          "expected_tool_key": "Heroku::list_addons"
+        },
+        {
+          "server_intent": "Heroku operations",
+          "tool_intent": "view application logs",
+          "expected_tool_key": "Heroku::get_app_logs"
+        },
+        {
+          "server_intent": "Hologres operations",
+          "tool_intent": "execute a DML (INSERT, UPDATE, DELETE) SQL query on the Hologres server",
+          "expected_tool_key": "Hologres::execute_dml_sql"
+        },
+        {
+          "server_intent": "Hologres operations",
+          "tool_intent": "collect table statistics",
+          "expected_tool_key": "Hologres::gather_table_statistics"
+        },
+        {
+          "server_intent": "Hyperbrowser operations",
+          "tool_intent": "complex browser tasks using Claude computer use",
+          "expected_tool_key": "Hyperbrowser::claude_computer_use_agent"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0017",
+      "user_intent": "Single user turn #17: complete these intents in order: (1) fast, lightweight browser automation with the Browser Use agent; (2) lists all machines, optionally filtered by tags; (3) connects to a new machine or an existing one by ID; (4) retrieves product documentation about Inkeep; (5) performs a web search to find information based on the query provided",
+      "subtasks": [
+        {
+          "server_intent": "Hyperbrowser operations",
+          "tool_intent": "fast, lightweight browser automation with the Browser Use agent",
+          "expected_tool_key": "Hyperbrowser::browser_use_agent"
+        },
+        {
+          "server_intent": "ForeverVM operations",
+          "tool_intent": "lists all machines, optionally filtered by tags",
+          "expected_tool_key": "ForeverVM::listMachines"
+        },
+        {
+          "server_intent": "ForeverVM operations",
+          "tool_intent": "connects to a new machine or an existing one by ID",
+          "expected_tool_key": "ForeverVM::repl"
+        },
+        {
+          "server_intent": "Inkeep operations",
+          "tool_intent": "retrieves product documentation about Inkeep",
+          "expected_tool_key": "Inkeep::search-product-content"
+        },
+        {
+          "server_intent": "Kagi Search operations",
+          "tool_intent": "performs a web search to find information based on the query provided",
+          "expected_tool_key": "Kagi Search::search"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0018",
+      "user_intent": "Single user turn #18: complete these intents in order: (1) generates a summary of the content, such as a video, based on the URL provided; (2) gets detailed information about a specific table including its DB identifier and column information; (3) retrieves detailed information about a specific job, identified by the job_id, including its status,; (4) add a translation unit to memory; (5) delete a translation unit from memory",
+      "subtasks": [
+        {
+          "server_intent": "Kagi Search operations",
+          "tool_intent": "generates a summary of the content, such as a video, based on the URL provided",
+          "expected_tool_key": "Kagi Search::summarizer"
+        },
+        {
+          "server_intent": "Keboola operations",
+          "tool_intent": "gets detailed information about a specific table including its DB identifier and column information",
+          "expected_tool_key": "Keboola::get_table_detail"
+        },
+        {
+          "server_intent": "Keboola operations",
+          "tool_intent": "retrieves detailed information about a specific job, identified by the job_id, including its status, parameters, results, and any relevant metadata",
+          "expected_tool_key": "Keboola::get_job_detail"
+        },
+        {
+          "server_intent": "Lara Translate operations",
+          "tool_intent": "add a translation unit to memory",
+          "expected_tool_key": "Lara Translate::add_translation"
+        },
+        {
+          "server_intent": "Lara Translate operations",
+          "tool_intent": "delete a translation unit from memory",
+          "expected_tool_key": "Lara Translate::delete_translation"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0019",
+      "user_intent": "Single user turn #19: complete these intents in order: (1) run custom SQL queries on your OpenTelemetry traces and metrics; (2) get exception counts from traces grouped by file; (3) list available prompts; (4) retrieve and compile a specific prompt; (5) stops the running MCP server",
+      "subtasks": [
+        {
+          "server_intent": "Logfire operations",
+          "tool_intent": "run custom SQL queries on your OpenTelemetry traces and metrics",
+          "expected_tool_key": "Logfire::arbitrary_query"
+        },
+        {
+          "server_intent": "Logfire operations",
+          "tool_intent": "get exception counts from traces grouped by file",
+          "expected_tool_key": "Logfire::find_exceptions"
+        },
+        {
+          "server_intent": "Langfuse Prompt Management operations",
+          "tool_intent": "list available prompts",
+          "expected_tool_key": "Langfuse Prompt Management::get-prompts"
+        },
+        {
+          "server_intent": "Langfuse Prompt Management operations",
+          "tool_intent": "retrieve and compile a specific prompt",
+          "expected_tool_key": "Langfuse Prompt Management::get-prompt"
+        },
+        {
+          "server_intent": "Lingo.dev operations",
+          "tool_intent": "stops the running MCP server",
+          "expected_tool_key": "Lingo.dev::stop-server"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0020",
+      "user_intent": "Single user turn #20: complete these intents in order: (1) lists all users registered with the MCP server; (2) search for hotels based on name; (3) get database statistics; (4) list tasks with optional filters; (5) query collection using filter expressions",
+      "subtasks": [
+        {
+          "server_intent": "Lingo.dev operations",
+          "tool_intent": "lists all users registered with the MCP server",
+          "expected_tool_key": "Lingo.dev::list-users"
+        },
+        {
+          "server_intent": "MCP Toolbox for Databases operations",
+          "tool_intent": "search for hotels based on name",
+          "expected_tool_key": "MCP Toolbox for Databases::search-hotels-by-name"
+        },
+        {
+          "server_intent": "Meilisearch operations",
+          "tool_intent": "get database statistics",
+          "expected_tool_key": "Meilisearch::get-stats"
+        },
+        {
+          "server_intent": "Meilisearch operations",
+          "tool_intent": "list tasks with optional filters",
+          "expected_tool_key": "Meilisearch::get-tasks"
+        },
+        {
+          "server_intent": "Milvus operations",
+          "tool_intent": "query collection using filter expressions",
+          "expected_tool_key": "Milvus::milvus_query"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0021",
+      "user_intent": "Single user turn #21: complete these intents in order: (1) create a new collection with specified schema; (2) sets the value in cache with a given Time To Live (TTL) seconds; (3) deletes a cache from your Momento account; (4) add new documents; (5) modify documents",
+      "subtasks": [
+        {
+          "server_intent": "Milvus operations",
+          "tool_intent": "create a new collection with specified schema",
+          "expected_tool_key": "Milvus::milvus_create_collection"
+        },
+        {
+          "server_intent": "Momento operations",
+          "tool_intent": "sets the value in cache with a given Time To Live (TTL) seconds",
+          "expected_tool_key": "Momento::set"
+        },
+        {
+          "server_intent": "Momento operations",
+          "tool_intent": "deletes a cache from your Momento account",
+          "expected_tool_key": "Momento::delete-cache"
+        },
+        {
+          "server_intent": "MongoDB operations",
+          "tool_intent": "add new documents",
+          "expected_tool_key": "MongoDB::insert"
+        },
+        {
+          "server_intent": "MongoDB operations",
+          "tool_intent": "modify documents",
+          "expected_tool_key": "MongoDB::update"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0022",
+      "user_intent": "Single user turn #22: complete these intents in order: (1) execute a SQL query on the DuckDB or MotherDuck database; (2) create a relationship between two existing nodes; (3) create a new node in the graph database; (4) retrieves details about a specific branch, such as its name, ID, and parent branch; (5) executes a series of SQL queries within a single transaction against a Neon database",
+      "subtasks": [
+        {
+          "server_intent": "MotherDuck operations",
+          "tool_intent": "execute a SQL query on the DuckDB or MotherDuck database",
+          "expected_tool_key": "MotherDuck::query"
+        },
+        {
+          "server_intent": "Neo4j operations",
+          "tool_intent": "create a relationship between two existing nodes",
+          "expected_tool_key": "Neo4j::create_relationship"
+        },
+        {
+          "server_intent": "Neo4j operations",
+          "tool_intent": "create a new node in the graph database",
+          "expected_tool_key": "Neo4j::create_node"
+        },
+        {
+          "server_intent": "Neon operations",
+          "tool_intent": "retrieves details about a specific branch, such as its name, ID, and parent branch",
+          "expected_tool_key": "Neon::describe_branch"
+        },
+        {
+          "server_intent": "Neon operations",
+          "tool_intent": "executes a series of SQL queries within a single transaction against a Neon database",
+          "expected_tool_key": "Neon::run_sql_transaction"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0023",
+      "user_intent": "Single user turn #23: complete these intents in order: (1) research M&A and IPO transactions; (2) research startup funding rounds and venture capital; (3) uses Oxylabs Web Scraper API for general website scraping with support for JavaScript rendering, par; (4) uses Oxylabs Web Unblocker for hard-to-access websites with support for JavaScript rendering and cle; (5) engage in a conversation with the Sonar API for live web searches",
+      "subtasks": [
+        {
+          "server_intent": "Octagon operations",
+          "tool_intent": "research M&A and IPO transactions",
+          "expected_tool_key": "Octagon::octagon-deals-agent"
+        },
+        {
+          "server_intent": "Octagon operations",
+          "tool_intent": "research startup funding rounds and venture capital",
+          "expected_tool_key": "Octagon::octagon-funding-agent"
+        },
+        {
+          "server_intent": "Oxylabs operations",
+          "tool_intent": "uses Oxylabs Web Scraper API for general website scraping with support for JavaScript rendering, parsed structured data, and cleaned HTML in Markdown format",
+          "expected_tool_key": "Oxylabs::oxylabs_scraper"
+        },
+        {
+          "server_intent": "Oxylabs operations",
+          "tool_intent": "uses Oxylabs Web Unblocker for hard-to-access websites with support for JavaScript rendering and cleaned HTML, but does not return parsed data",
+          "expected_tool_key": "Oxylabs::oxylabs_web_unblocker"
+        },
+        {
+          "server_intent": "Perplexity operations",
+          "tool_intent": "engage in a conversation with the Sonar API for live web searches",
+          "expected_tool_key": "Perplexity::perplexity_ask"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0024",
+      "user_intent": "Single user turn #24: complete these intents in order: (1) lists all Pinecone indexes; (2) get stats about the Pinecone index, including the number of records, dimensions, and namespaces; (3) tools to store field-value pairs within a single key; (4) tools to add, remove and list set members; (5) list all Pro subscriptions in your account",
+      "subtasks": [
+        {
+          "server_intent": "Pinecone operations",
+          "tool_intent": "lists all Pinecone indexes",
+          "expected_tool_key": "Pinecone::list-indexes"
+        },
+        {
+          "server_intent": "Pinecone operations",
+          "tool_intent": "get stats about the Pinecone index, including the number of records, dimensions, and namespaces",
+          "expected_tool_key": "Pinecone::pinecone-stats"
+        },
+        {
+          "server_intent": "Redis operations",
+          "tool_intent": "tools to store field-value pairs within a single key",
+          "expected_tool_key": "Redis::hash"
+        },
+        {
+          "server_intent": "Redis operations",
+          "tool_intent": "tools to add, remove and list set members",
+          "expected_tool_key": "Redis::set"
+        },
+        {
+          "server_intent": "Redis Cloud API operations",
+          "tool_intent": "list all Pro subscriptions in your account",
+          "expected_tool_key": "Redis Cloud API::get_pro_subscriptions"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0025",
+      "user_intent": "Single user turn #25: complete these intents in order: (1) list available Essential subscription plans (paginated); (2) store some information in the Qdrant database; (3) retrieve relevant information from the Qdrant database; (4) clears a table in the ephemeral database; (5) loads vendor bank accounts data",
+      "subtasks": [
+        {
+          "server_intent": "Redis Cloud API operations",
+          "tool_intent": "list available Essential subscription plans (paginated)",
+          "expected_tool_key": "Redis Cloud API::get_essentials_plans"
+        },
+        {
+          "server_intent": "Qdrant operations",
+          "tool_intent": "store some information in the Qdrant database",
+          "expected_tool_key": "Qdrant::qdrant-store"
+        },
+        {
+          "server_intent": "Qdrant operations",
+          "tool_intent": "retrieve relevant information from the Qdrant database",
+          "expected_tool_key": "Qdrant::qdrant-find"
+        },
+        {
+          "server_intent": "Ramp operations",
+          "tool_intent": "clears a table in the ephemeral database",
+          "expected_tool_key": "Ramp::clear_table"
+        },
+        {
+          "server_intent": "Ramp operations",
+          "tool_intent": "loads vendor bank accounts data",
+          "expected_tool_key": "Ramp::load_vendor_bank_accounts"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0026",
+      "user_intent": "Single user turn #26: complete these intents in order: (1) update source map information; (2) send a new team invitation; (3) creates flashcards with AI by taking a list of notes from Claude and generating a few flashcards for; (4) lists all available saved tools; (5) creates a new tool by writing code and saving it using the Riza Tools API",
+      "subtasks": [
+        {
+          "server_intent": "Raygun operations",
+          "tool_intent": "update source map information",
+          "expected_tool_key": "Raygun::update_source_map"
+        },
+        {
+          "server_intent": "Raygun operations",
+          "tool_intent": "send a new team invitation",
+          "expected_tool_key": "Raygun::send_invitation"
+        },
+        {
+          "server_intent": "Rember operations",
+          "tool_intent": "creates flashcards with AI by taking a list of notes from Claude and generating a few flashcards for each note using the Rember API",
+          "expected_tool_key": "Rember::create_flashcards"
+        },
+        {
+          "server_intent": "Riza operations",
+          "tool_intent": "lists all available saved tools",
+          "expected_tool_key": "Riza::list_tools"
+        },
+        {
+          "server_intent": "Riza operations",
+          "tool_intent": "creates a new tool by writing code and saving it using the Riza Tools API",
+          "expected_tool_key": "Riza::create_tool"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0027",
+      "user_intent": "Single user turn #27: complete these intents in order: (1) render a screenshot of a website and returns it as an image; (2) fetches the latest semgrep rule JSON Schema; (3) return the list of languages Semgrep supports; (4) get details about a specific job; (5) execute SQL operations on a connected workspace",
+      "subtasks": [
+        {
+          "server_intent": "ScreenshotOne operations",
+          "tool_intent": "render a screenshot of a website and returns it as an image",
+          "expected_tool_key": "ScreenshotOne::render-website-screenshot"
+        },
+        {
+          "server_intent": "Semgrep operations",
+          "tool_intent": "fetches the latest semgrep rule JSON Schema",
+          "expected_tool_key": "Semgrep::semgrep_rule_schema"
+        },
+        {
+          "server_intent": "Semgrep operations",
+          "tool_intent": "return the list of languages Semgrep supports",
+          "expected_tool_key": "Semgrep::supported_languages"
+        },
+        {
+          "server_intent": "SingleStore operations",
+          "tool_intent": "get details about a specific job",
+          "expected_tool_key": "SingleStore::get_job_details"
+        },
+        {
+          "server_intent": "SingleStore operations",
+          "tool_intent": "execute SQL operations on a connected workspace",
+          "expected_tool_key": "SingleStore::execute_sql"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0028",
+      "user_intent": "Single user turn #28: complete these intents in order: (1) executes a SQL query, loads the results into a Pandas DataFrame, and generates a Plotly chart using ; (2) execute a SELECT query or other commands that return a ResultSet (e.g., SHOW, DESCRIBE); (3) creates a new invoice in Stripe; (4) lists all subscriptions in Stripe; (5) performs real-time web searches with sophisticated filtering options and domain-specific search feat",
+      "subtasks": [
+        {
+          "server_intent": "StarRocks operations",
+          "tool_intent": "executes a SQL query, loads the results into a Pandas DataFrame, and generates a Plotly chart using a provided Python expression",
+          "expected_tool_key": "StarRocks::query_and_plotly_chart"
+        },
+        {
+          "server_intent": "StarRocks operations",
+          "tool_intent": "execute a SELECT query or other commands that return a ResultSet (e.g., SHOW, DESCRIBE)",
+          "expected_tool_key": "StarRocks::read_query"
+        },
+        {
+          "server_intent": "Stripe operations",
+          "tool_intent": "creates a new invoice in Stripe",
+          "expected_tool_key": "Stripe::createInvoice"
+        },
+        {
+          "server_intent": "Stripe operations",
+          "tool_intent": "lists all subscriptions in Stripe",
+          "expected_tool_key": "Stripe::listSubscriptions"
+        },
+        {
+          "server_intent": "Tavily operations",
+          "tool_intent": "performs real-time web searches with sophisticated filtering options and domain-specific search features",
+          "expected_tool_key": "Tavily::tavily-search"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0029",
+      "user_intent": "Single user turn #29: complete these intents in order: (1) extracts intelligent data from web pages, such as main content, images, and metadata; (2) retrieves a list of tools for AI agents, which can be used with different frameworks like LangChain ; (3) requests data from a Pipe Endpoint via an HTTP request; (4) sends an event to a Tinybird Data Source; (5) cancels a crawl job",
+      "subtasks": [
+        {
+          "server_intent": "Tavily operations",
+          "tool_intent": "extracts intelligent data from web pages, such as main content, images, and metadata",
+          "expected_tool_key": "Tavily::tavily-extract"
+        },
+        {
+          "server_intent": "Thirdweb operations",
+          "tool_intent": "retrieves a list of tools for AI agents, which can be used with different frameworks like LangChain and OpenAI Agents",
+          "expected_tool_key": "Thirdweb::get_tools"
+        },
+        {
+          "server_intent": "Tinybird operations",
+          "tool_intent": "requests data from a Pipe Endpoint via an HTTP request",
+          "expected_tool_key": "Tinybird::request-pipe-data"
+        },
+        {
+          "server_intent": "Tinybird operations",
+          "tool_intent": "sends an event to a Tinybird Data Source",
+          "expected_tool_key": "Tinybird::save-event"
+        },
+        {
+          "server_intent": "Unstructured operations",
+          "tool_intent": "cancels a crawl job",
+          "expected_tool_key": "Unstructured::cancel_crawlhtml_job"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0030",
+      "user_intent": "Single user turn #30: complete these intents in order: (1) lists available destinations from the Unstructured API; (2) generates a Private Deep Research from your pipeline; (3) performs vector search and retrieves documents; (4) retrieve field definitions for a dataset; (5) create a new dataset with defined schema",
+      "subtasks": [
+        {
+          "server_intent": "Unstructured operations",
+          "tool_intent": "lists available destinations from the Unstructured API",
+          "expected_tool_key": "Unstructured::list_destinations"
+        },
+        {
+          "server_intent": "Vectorize operations",
+          "tool_intent": "generates a Private Deep Research from your pipeline",
+          "expected_tool_key": "Vectorize::deep-research"
+        },
+        {
+          "server_intent": "Vectorize operations",
+          "tool_intent": "performs vector search and retrieves documents",
+          "expected_tool_key": "Vectorize::retrieve"
+        },
+        {
+          "server_intent": "Verodat operations",
+          "tool_intent": "retrieve field definitions for a dataset",
+          "expected_tool_key": "Verodat::get-dataset-targetfields"
+        },
+        {
+          "server_intent": "Verodat operations",
+          "tool_intent": "create a new dataset with defined schema",
+          "expected_tool_key": "Verodat::create-dataset"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0031",
+      "user_intent": "Single user turn #31: complete these intents in order: (1) retrieve a Payroll Employee's leave records; (2) retrieve a list of payments; (3) get detailed information about a specific Airbnb listing; (4) search for Airbnb listings; (5) general search of AI Agents for information, websites, content, and metric statistics of web traffic",
+      "subtasks": [
+        {
+          "server_intent": "Xero operations",
+          "tool_intent": "retrieve a Payroll Employee's leave records",
+          "expected_tool_key": "Xero::list-payroll-employee-leave"
+        },
+        {
+          "server_intent": "Xero operations",
+          "tool_intent": "retrieve a list of payments",
+          "expected_tool_key": "Xero::list-payments"
+        },
+        {
+          "server_intent": "Airbnb operations",
+          "tool_intent": "get detailed information about a specific Airbnb listing",
+          "expected_tool_key": "Airbnb::airbnb_listing_details"
+        },
+        {
+          "server_intent": "Airbnb operations",
+          "tool_intent": "search for Airbnb listings",
+          "expected_tool_key": "Airbnb::airbnb_search"
+        },
+        {
+          "server_intent": "AI Agent Marketplace Index operations",
+          "tool_intent": "general search of AI Agents for information, websites, content, and metric statistics of web traffic, etc",
+          "expected_tool_key": "AI Agent Marketplace Index::search_ai_agent"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0032",
+      "user_intent": "Single user turn #32: complete these intents in order: (1) lists all XCom entries for a specific task instance; (2) gets the health status of the server; (3) lists records from a specified Airtable table; (4) search for records containing specific text; (5) returns n number of cards currently due for review",
+      "subtasks": [
+        {
+          "server_intent": "Airflow operations",
+          "tool_intent": "lists all XCom entries for a specific task instance",
+          "expected_tool_key": "Airflow::List XComs"
+        },
+        {
+          "server_intent": "Airflow operations",
+          "tool_intent": "gets the health status of the server",
+          "expected_tool_key": "Airflow::Get Health Status"
+        },
+        {
+          "server_intent": "Airtable operations",
+          "tool_intent": "lists records from a specified Airtable table",
+          "expected_tool_key": "Airtable::list_records"
+        },
+        {
+          "server_intent": "Airtable operations",
+          "tool_intent": "search for records containing specific text",
+          "expected_tool_key": "Airtable::search_records"
+        },
+        {
+          "server_intent": "Anki operations",
+          "tool_intent": "returns n number of cards currently due for review",
+          "expected_tool_key": "Anki::get_due_cards"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0033",
+      "user_intent": "Single user turn #33: complete these intents in order: (1) creates a new card in the Default Anki deck; (2) relays a question to a configured AI Chat Provider; (3) get a list of catalogs with basic information; (4) get detailed table information by fully qualified name; (5) creates calendar events based on natural language input",
+      "subtasks": [
+        {
+          "server_intent": "Anki operations",
+          "tool_intent": "creates a new card in the Default Anki deck",
+          "expected_tool_key": "Anki::add_card"
+        },
+        {
+          "server_intent": "Any Chat Completions operations",
+          "tool_intent": "relays a question to a configured AI Chat Provider",
+          "expected_tool_key": "Any Chat Completions::chat"
+        },
+        {
+          "server_intent": "Apache Gravitino(incubating) operations",
+          "tool_intent": "get a list of catalogs with basic information",
+          "expected_tool_key": "Apache Gravitino(incubating)::get_list_of_catalogs"
+        },
+        {
+          "server_intent": "Apache Gravitino(incubating) operations",
+          "tool_intent": "get detailed table information by fully qualified name",
+          "expected_tool_key": "Apache Gravitino(incubating)::get_table_by_fqn"
+        },
+        {
+          "server_intent": "Apple Calendar operations",
+          "tool_intent": "creates calendar events based on natural language input",
+          "expected_tool_key": "Apple Calendar::Event Creation"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0034",
+      "user_intent": "Single user turn #34: complete these intents in order: (1) manages and provides information about available calendars; (2) get recent data from the local database; (3) set values in the configuration file; (4) create a new collection in the database; (5) execute AQL queries",
+      "subtasks": [
+        {
+          "server_intent": "Apple Calendar operations",
+          "tool_intent": "manages and provides information about available calendars",
+          "expected_tool_key": "Apple Calendar::Calendar Management"
+        },
+        {
+          "server_intent": "Aranet4 operations",
+          "tool_intent": "get recent data from the local database",
+          "expected_tool_key": "Aranet4::get_recent_data"
+        },
+        {
+          "server_intent": "Aranet4 operations",
+          "tool_intent": "set values in the configuration file",
+          "expected_tool_key": "Aranet4::set_configuration"
+        },
+        {
+          "server_intent": "ArangoDB operations",
+          "tool_intent": "create a new collection in the database",
+          "expected_tool_key": "ArangoDB::arango_create_collection"
+        },
+        {
+          "server_intent": "ArangoDB operations",
+          "tool_intent": "execute AQL queries",
+          "expected_tool_key": "ArangoDB::arango_query"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0035",
+      "user_intent": "Single user turn #35: complete these intents in order: (1) create a new page; (2) create a new issue; (3) check the status of a query execution; (4) list all saved (named) queries in Athena; (5) delivers a comprehensive analysis of costs by region, service, and instance type",
+      "subtasks": [
+        {
+          "server_intent": "Atlassian operations",
+          "tool_intent": "create a new page",
+          "expected_tool_key": "Atlassian::confluence_create_page"
+        },
+        {
+          "server_intent": "Atlassian operations",
+          "tool_intent": "create a new issue",
+          "expected_tool_key": "Atlassian::jira_create_issue"
+        },
+        {
+          "server_intent": "AWS Athena operations",
+          "tool_intent": "check the status of a query execution",
+          "expected_tool_key": "AWS Athena::get_status"
+        },
+        {
+          "server_intent": "AWS Athena operations",
+          "tool_intent": "list all saved (named) queries in Athena",
+          "expected_tool_key": "AWS Athena::list_saved_queries"
+        },
+        {
+          "server_intent": "AWS Cost Explorer operations",
+          "tool_intent": "delivers a comprehensive analysis of costs by region, service, and instance type",
+          "expected_tool_key": "AWS Cost Explorer::get_detailed_breakdown_by_day"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0036",
+      "user_intent": "Single user turn #36: complete these intents in order: (1) delivers a per-day per-hour breakdown of model usage by region and users; (2) execute a boto3 code snippet to query or modify AWS resources; (3) returns a list of all buckets owned by the authenticated sender of the request; (4) retrieves an object from Amazon S3; (5) get the schema for a specific table",
+      "subtasks": [
+        {
+          "server_intent": "AWS Cost Explorer operations",
+          "tool_intent": "delivers a per-day per-hour breakdown of model usage by region and users",
+          "expected_tool_key": "AWS Cost Explorer::get_bedrock_hourly_usage_stats"
+        },
+        {
+          "server_intent": "AWS Resources Operations operations",
+          "tool_intent": "execute a boto3 code snippet to query or modify AWS resources",
+          "expected_tool_key": "AWS Resources Operations::aws_resources_query_or_modify"
+        },
+        {
+          "server_intent": "AWS S3 operations",
+          "tool_intent": "returns a list of all buckets owned by the authenticated sender of the request",
+          "expected_tool_key": "AWS S3::ListBuckets"
+        },
+        {
+          "server_intent": "AWS S3 operations",
+          "tool_intent": "retrieves an object from Amazon S3",
+          "expected_tool_key": "AWS S3::GetObject"
+        },
+        {
+          "server_intent": "Azure ADX operations",
+          "tool_intent": "get the schema for a specific table",
+          "expected_tool_key": "Azure ADX::get_table_schema"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0037",
+      "user_intent": "Single user turn #37: complete these intents in order: (1) list all tables in the configured database; (2) access team iteration/sprint configurations; (3) retrieve the comment history for a work item; (4) \u7ed3\u5408\u767e\u5ea6\u641c\u7d22\u7684\u641c\u7d22\u5f15\u64ce\u6280\u672f\u548cERNIE\u6a21\u578b\u7684\u8bed\u4e49\u7406\u89e3\u80fd\u529b\uff0c\u63d0\u4f9b\u66f4\u51c6\u786e\u7684\u641c\u7d22\u7ed3\u679c\u3002; (5) \u7528\u4e8e\u8bbf\u95ee\u548c\u7ba1\u7406\u5728\u767e\u5ea6\u667a\u80fd\u4e91\u5343\u5e06AppBuilder\u7f51\u9875\u7aef\u53d1\u5e03\u7684AI\u539f\u751f\u5e94\u7528\uff0c\u652f\u6301\u521b\u5efa\u4f1a\u8bdd\u548c\u8fd0\u884c\u5e94\u7528\u3002",
+      "subtasks": [
+        {
+          "server_intent": "Azure ADX operations",
+          "tool_intent": "list all tables in the configured database",
+          "expected_tool_key": "Azure ADX::list_tables"
+        },
+        {
+          "server_intent": "Azure DevOps operations",
+          "tool_intent": "access team iteration/sprint configurations",
+          "expected_tool_key": "Azure DevOps::Team Iterations"
+        },
+        {
+          "server_intent": "Azure DevOps operations",
+          "tool_intent": "retrieve the comment history for a work item",
+          "expected_tool_key": "Azure DevOps::View Comments"
+        },
+        {
+          "server_intent": "Baidu AI Search operations",
+          "tool_intent": "\u7ed3\u5408\u767e\u5ea6\u641c\u7d22\u7684\u641c\u7d22\u5f15\u64ce\u6280\u672f\u548cERNIE\u6a21\u578b\u7684\u8bed\u4e49\u7406\u89e3\u80fd\u529b\uff0c\u63d0\u4f9b\u66f4\u51c6\u786e\u7684\u641c\u7d22\u7ed3\u679c\u3002",
+          "expected_tool_key": "Baidu AI Search::RagWithBaiduSearchPro"
+        },
+        {
+          "server_intent": "Baidu AI Search operations",
+          "tool_intent": "\u7528\u4e8e\u8bbf\u95ee\u548c\u7ba1\u7406\u5728\u767e\u5ea6\u667a\u80fd\u4e91\u5343\u5e06AppBuilder\u7f51\u9875\u7aef\u53d1\u5e03\u7684AI\u539f\u751f\u5e94\u7528\uff0c\u652f\u6301\u521b\u5efa\u4f1a\u8bdd\u548c\u8fd0\u884c\u5e94\u7528\u3002",
+          "expected_tool_key": "Baidu AI Search::AppBuilderClient"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0038",
+      "user_intent": "Single user turn #38: complete these intents in order: (1) analyzes the value of the purchased items and schedules a USDC transfer to the recipient via the Bas; (2) creates a new Coinbase MPC wallet address; (3) read notes by title or permalink; (4) create or update notes in the knowledge base; (5) calculates/evaluates the given expression",
+      "subtasks": [
+        {
+          "server_intent": "Base Free USDC Transfer operations",
+          "tool_intent": "analyzes the value of the purchased items and schedules a USDC transfer to the recipient via the Base chain",
+          "expected_tool_key": "Base Free USDC Transfer::tranfer-usdc"
+        },
+        {
+          "server_intent": "Base Free USDC Transfer operations",
+          "tool_intent": "creates a new Coinbase MPC wallet address",
+          "expected_tool_key": "Base Free USDC Transfer::create_coinbase_mpc_wallet"
+        },
+        {
+          "server_intent": "Basic Memory operations",
+          "tool_intent": "read notes by title or permalink",
+          "expected_tool_key": "Basic Memory::read_note"
+        },
+        {
+          "server_intent": "Basic Memory operations",
+          "tool_intent": "create or update notes in the knowledge base",
+          "expected_tool_key": "Basic Memory::write_note"
+        },
+        {
+          "server_intent": "Calculator operations",
+          "tool_intent": "calculates/evaluates the given expression",
+          "expected_tool_key": "Calculator::calculate"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0039",
+      "user_intent": "Single user turn #39: complete these intents in order: (1) retrieve game data; (2) query play-by-play data; (3) query chat messages with given parameters and summarize chat messages based on the query prompt; (4) get a player's profile from Chess.com; (5) get a player's stats from Chess.com",
+      "subtasks": [
+        {
+          "server_intent": "CFBD API operations",
+          "tool_intent": "retrieve game data",
+          "expected_tool_key": "CFBD API::get-games"
+        },
+        {
+          "server_intent": "CFBD API operations",
+          "tool_intent": "query play-by-play data",
+          "expected_tool_key": "CFBD API::get-plays"
+        },
+        {
+          "server_intent": "ChatSum operations",
+          "tool_intent": "query chat messages with given parameters and summarize chat messages based on the query prompt",
+          "expected_tool_key": "ChatSum::query_chat_messages"
+        },
+        {
+          "server_intent": "Chess.com operations",
+          "tool_intent": "get a player's profile from Chess.com",
+          "expected_tool_key": "Chess.com::get_player_profile"
+        },
+        {
+          "server_intent": "Chess.com operations",
+          "tool_intent": "get a player's stats from Chess.com",
+          "expected_tool_key": "Chess.com::get_player_stats"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0040",
+      "user_intent": "Single user turn #40: complete these intents in order: (1) list document pages; (2) modify task; (3) upload images and videos to Cloudinary; (4) executes Python code in the configured environment; (5) gets the current environment configuration",
+      "subtasks": [
+        {
+          "server_intent": "ClickUp operations",
+          "tool_intent": "list document pages",
+          "expected_tool_key": "ClickUp::list_document_pages"
+        },
+        {
+          "server_intent": "ClickUp operations",
+          "tool_intent": "modify task",
+          "expected_tool_key": "ClickUp::update_task"
+        },
+        {
+          "server_intent": "Cloudinary operations",
+          "tool_intent": "upload images and videos to Cloudinary",
+          "expected_tool_key": "Cloudinary::upload"
+        },
+        {
+          "server_intent": "code-executor operations",
+          "tool_intent": "executes Python code in the configured environment",
+          "expected_tool_key": "code-executor::execute_code"
+        },
+        {
+          "server_intent": "code-executor operations",
+          "tool_intent": "gets the current environment configuration",
+          "expected_tool_key": "code-executor::get_environment_config"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0041",
+      "user_intent": "Single user turn #41: complete these intents in order: (1) write a file to the sandboxed filesystem; (2) initialize a new compute environment for code execution; (3) creates prepared queries for efficient service discovery; (4) retrieves health check information for specific services; (5) generates a knowledge graph from the added data",
+      "subtasks": [
+        {
+          "server_intent": "code-sandbox-mcp operations",
+          "tool_intent": "write a file to the sandboxed filesystem",
+          "expected_tool_key": "code-sandbox-mcp::write_file"
+        },
+        {
+          "server_intent": "code-sandbox-mcp operations",
+          "tool_intent": "initialize a new compute environment for code execution",
+          "expected_tool_key": "code-sandbox-mcp::sandbox_initialize"
+        },
+        {
+          "server_intent": "consul-mcp operations",
+          "tool_intent": "creates prepared queries for efficient service discovery",
+          "expected_tool_key": "consul-mcp::Create prepared queries"
+        },
+        {
+          "server_intent": "consul-mcp operations",
+          "tool_intent": "retrieves health check information for specific services",
+          "expected_tool_key": "consul-mcp::Get health checks for services"
+        },
+        {
+          "server_intent": "cognee-mcp operations",
+          "tool_intent": "generates a knowledge graph from the added data",
+          "expected_tool_key": "cognee-mcp::cognify"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0042",
+      "user_intent": "Single user turn #42: complete these intents in order: (1) queries the knowledge graph with a given search term; (2) fetches a paginated list of all active cryptocurrencies with the latest market data; (3) fetches the latest market quotes for one or more cryptocurrencies; (4) get latest cryptocurrency posts; (5) get most visited cryptocurrencies",
+      "subtasks": [
+        {
+          "server_intent": "cognee-mcp operations",
+          "tool_intent": "queries the knowledge graph with a given search term",
+          "expected_tool_key": "cognee-mcp::search"
+        },
+        {
+          "server_intent": "coin_api_mcp operations",
+          "tool_intent": "fetches a paginated list of all active cryptocurrencies with the latest market data",
+          "expected_tool_key": "coin_api_mcp::listing-coins"
+        },
+        {
+          "server_intent": "coin_api_mcp operations",
+          "tool_intent": "fetches the latest market quotes for one or more cryptocurrencies",
+          "expected_tool_key": "coin_api_mcp::get-coin-quotes"
+        },
+        {
+          "server_intent": "CoinMarketCap operations",
+          "tool_intent": "get latest cryptocurrency posts",
+          "expected_tool_key": "CoinMarketCap::contentPostsLatest"
+        },
+        {
+          "server_intent": "CoinMarketCap operations",
+          "tool_intent": "get most visited cryptocurrencies",
+          "expected_tool_key": "CoinMarketCap::cryptoTrendingMostVisited"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0043",
+      "user_intent": "Single user turn #43: complete these intents in order: (1) perform a mouse drag operation from start point and drop to end point on a remote macOS machine, wit; (2) send keyboard input to a remote macOS machine; (3) update content type; (4) publish assets to delivery API; (5) fetches historical index values for a specified number of days",
+      "subtasks": [
+        {
+          "server_intent": "Computer-Use - Remote MacOS Use operations",
+          "tool_intent": "perform a mouse drag operation from start point and drop to end point on a remote macOS machine, with automatic coordinate scaling",
+          "expected_tool_key": "Computer-Use - Remote MacOS Use::remote_macos_mouse_drag_n_drop"
+        },
+        {
+          "server_intent": "Computer-Use - Remote MacOS Use operations",
+          "tool_intent": "send keyboard input to a remote macOS machine",
+          "expected_tool_key": "Computer-Use - Remote MacOS Use::remote_macos_send_keys"
+        },
+        {
+          "server_intent": "Contentful-mcp operations",
+          "tool_intent": "update content type",
+          "expected_tool_key": "Contentful-mcp::update_content_type"
+        },
+        {
+          "server_intent": "Contentful-mcp operations",
+          "tool_intent": "publish assets to delivery API",
+          "expected_tool_key": "Contentful-mcp::publish_asset"
+        },
+        {
+          "server_intent": "crypto-feargreed-mcp operations",
+          "tool_intent": "fetches historical index values for a specified number of days",
+          "expected_tool_key": "crypto-feargreed-mcp::get_historical_fng_tool"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0044",
+      "user_intent": "Single user turn #44: complete these intents in order: (1) retrieves the latest Fear & Greed Index value and classification; (2) fetches cryptocurrency news, analysis, or videos from CryptoPanic; (3) execute SQL queries on your Databricks SQL warehouse; (4) get the status of a specific Databricks job by ID; (5) fetch events within a time range",
+      "subtasks": [
+        {
+          "server_intent": "crypto-feargreed-mcp operations",
+          "tool_intent": "retrieves the latest Fear & Greed Index value and classification",
+          "expected_tool_key": "crypto-feargreed-mcp::get_current_fng_tool"
+        },
+        {
+          "server_intent": "cryptopanic-mcp-server operations",
+          "tool_intent": "fetches cryptocurrency news, analysis, or videos from CryptoPanic",
+          "expected_tool_key": "cryptopanic-mcp-server::get_crypto_news"
+        },
+        {
+          "server_intent": "Databricks operations",
+          "tool_intent": "execute SQL queries on your Databricks SQL warehouse",
+          "expected_tool_key": "Databricks::run_sql_query"
+        },
+        {
+          "server_intent": "Databricks operations",
+          "tool_intent": "get the status of a specific Databricks job by ID",
+          "expected_tool_key": "Databricks::get_job_status"
+        },
+        {
+          "server_intent": "Datadog operations",
+          "tool_intent": "fetch events within a time range",
+          "expected_tool_key": "Datadog::get-events"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0045",
+      "user_intent": "Single user turn #45: complete these intents in order: (1) get metadata for a specific metric; (2) executes a Python script; (3) loads a CSV file into a DataFrame; (4) imports a media file into the media pool; (5) gets the current page (e.g., Edit, Color, Fusion) in DaVinci Resolve",
+      "subtasks": [
+        {
+          "server_intent": "Datadog operations",
+          "tool_intent": "get metadata for a specific metric",
+          "expected_tool_key": "Datadog::get-metric-metadata"
+        },
+        {
+          "server_intent": "Data Exploration operations",
+          "tool_intent": "executes a Python script",
+          "expected_tool_key": "Data Exploration::run-script"
+        },
+        {
+          "server_intent": "Data Exploration operations",
+          "tool_intent": "loads a CSV file into a DataFrame",
+          "expected_tool_key": "Data Exploration::load-csv"
+        },
+        {
+          "server_intent": "DaVinci Resolve operations",
+          "tool_intent": "imports a media file into the media pool",
+          "expected_tool_key": "DaVinci Resolve::import_media_file"
+        },
+        {
+          "server_intent": "DaVinci Resolve operations",
+          "tool_intent": "gets the current page (e.g., Edit, Color, Fusion) in DaVinci Resolve",
+          "expected_tool_key": "DaVinci Resolve::get_current_page"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0046",
+      "user_intent": "Single user turn #46: complete these intents in order: (1) get detailed information about a dataset; (2) check if a dataset exists and is accessible; (3) explains database elements such as tables, indexes, and procedures; (4) generates SQL statements based on the provided context; (5) generates advanced text using the Deepseek R1 model with configurable parameters",
+      "subtasks": [
+        {
+          "server_intent": "Dataset Viewer operations",
+          "tool_intent": "get detailed information about a dataset",
+          "expected_tool_key": "Dataset Viewer::get_info"
+        },
+        {
+          "server_intent": "Dataset Viewer operations",
+          "tool_intent": "check if a dataset exists and is accessible",
+          "expected_tool_key": "Dataset Viewer::validate"
+        },
+        {
+          "server_intent": "DBHub operations",
+          "tool_intent": "explains database elements such as tables, indexes, and procedures",
+          "expected_tool_key": "DBHub::explain_db"
+        },
+        {
+          "server_intent": "DBHub operations",
+          "tool_intent": "generates SQL statements based on the provided context",
+          "expected_tool_key": "DBHub::generate_sql"
+        },
+        {
+          "server_intent": "Deepseek_R1 operations",
+          "tool_intent": "generates advanced text using the Deepseek R1 model with configurable parameters",
+          "expected_tool_key": "Deepseek_R1::deepseek_r1"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0047",
+      "user_intent": "Single user turn #47: complete these intents in order: (1) perform reasoning using the Deepseek model; (2) retrieves up to 10 user records from your Descope project; (3) retrieves up to 10 audit log entries from your Descope project; (4) allows copying of MCP settings to integrate with IDEs and AI-tools for database access; (5) enables opening specific database tables directly from external applications or links",
+      "subtasks": [
+        {
+          "server_intent": "deepseek-thinker-mcp operations",
+          "tool_intent": "perform reasoning using the Deepseek model",
+          "expected_tool_key": "deepseek-thinker-mcp::get-deepseek-thinker"
+        },
+        {
+          "server_intent": "Descope operations",
+          "tool_intent": "retrieves up to 10 user records from your Descope project",
+          "expected_tool_key": "Descope::search-users"
+        },
+        {
+          "server_intent": "Descope operations",
+          "tool_intent": "retrieves up to 10 audit log entries from your Descope project",
+          "expected_tool_key": "Descope::search-audits"
+        },
+        {
+          "server_intent": "DevDb operations",
+          "tool_intent": "allows copying of MCP settings to integrate with IDEs and AI-tools for database access",
+          "expected_tool_key": "DevDb::MCP Configuration"
+        },
+        {
+          "server_intent": "DevDb operations",
+          "tool_intent": "enables opening specific database tables directly from external applications or links",
+          "expected_tool_key": "DevDb::URI Handler"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0048",
+      "user_intent": "Single user turn #48: complete these intents in order: (1) search for information using the DevRev search API with the provided query and namespace; (2) get all information about a DevRev object using its ID; (3) locate series within a specific study using modality, series number/description, or Series UID; (4) retrieve a specific DICOM instance containing an encapsulated PDF and extract its text content; (5) delete a channel",
+      "subtasks": [
+        {
+          "server_intent": "DevRev operations",
+          "tool_intent": "search for information using the DevRev search API with the provided query and namespace",
+          "expected_tool_key": "DevRev::search"
+        },
+        {
+          "server_intent": "DevRev operations",
+          "tool_intent": "get all information about a DevRev object using its ID",
+          "expected_tool_key": "DevRev::get_object"
+        },
+        {
+          "server_intent": "Dicom operations",
+          "tool_intent": "locate series within a specific study using modality, series number/description, or Series UID",
+          "expected_tool_key": "Dicom::query_series"
+        },
+        {
+          "server_intent": "Dicom operations",
+          "tool_intent": "retrieve a specific DICOM instance containing an encapsulated PDF and extract its text content",
+          "expected_tool_key": "Dicom::extract_pdf_text_from_dicom"
+        },
+        {
+          "server_intent": "Discord operations",
+          "tool_intent": "delete a channel",
+          "expected_tool_key": "Discord::delete_channel"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0049",
+      "user_intent": "Single user turn #49: complete these intents in order: (1) send a private message to a specific user; (2) searches posts on a Discourse forum; (3) creates a new Docker network; (4) creates a new Docker volume; (5) search DBLP for publications using boolean queries",
+      "subtasks": [
+        {
+          "server_intent": "Discord operations",
+          "tool_intent": "send a private message to a specific user",
+          "expected_tool_key": "Discord::send_private_message"
+        },
+        {
+          "server_intent": "Discourse operations",
+          "tool_intent": "searches posts on a Discourse forum",
+          "expected_tool_key": "Discourse::search_posts"
+        },
+        {
+          "server_intent": "Docker operations",
+          "tool_intent": "creates a new Docker network",
+          "expected_tool_key": "Docker::create_network"
+        },
+        {
+          "server_intent": "Docker operations",
+          "tool_intent": "creates a new Docker volume",
+          "expected_tool_key": "Docker::create_volume"
+        },
+        {
+          "server_intent": "DPLP operations",
+          "tool_intent": "search DBLP for publications using boolean queries",
+          "expected_tool_key": "DPLP::search"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0050",
+      "user_intent": "Single user turn #50: complete these intents in order: (1) export BibTeX entries directly from DBLP to a local file; (2) retrieves the latest results of a specified Dune query; (3) executes a Dune query and returns the results; (4) deploys HTML content to EdgeOne Pages and returns a publicly accessible URL; (5) generate audio from a structured script with multiple voices and actors",
+      "subtasks": [
+        {
+          "server_intent": "DPLP operations",
+          "tool_intent": "export BibTeX entries directly from DBLP to a local file",
+          "expected_tool_key": "DPLP::export_bibtex"
+        },
+        {
+          "server_intent": "dune-analytics-mcp operations",
+          "tool_intent": "retrieves the latest results of a specified Dune query",
+          "expected_tool_key": "dune-analytics-mcp::get_latest_result"
+        },
+        {
+          "server_intent": "dune-analytics-mcp operations",
+          "tool_intent": "executes a Dune query and returns the results",
+          "expected_tool_key": "dune-analytics-mcp::run_query"
+        },
+        {
+          "server_intent": "EdgeOne Pages MCP operations",
+          "tool_intent": "deploys HTML content to EdgeOne Pages and returns a publicly accessible URL",
+          "expected_tool_key": "EdgeOne Pages MCP::deploy-html"
+        },
+        {
+          "server_intent": "ElevenLabs operations",
+          "tool_intent": "generate audio from a structured script with multiple voices and actors",
+          "expected_tool_key": "ElevenLabs::generate_audio_script"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0051",
+      "user_intent": "Single user turn #51: complete these intents in order: (1) get the audio file by its ID; (2) read smart contract state; (3) resolve ENS name to address; (4) search for files and folders across the system; (5) compare multiple players across various metrics",
+      "subtasks": [
+        {
+          "server_intent": "ElevenLabs operations",
+          "tool_intent": "get the audio file by its ID",
+          "expected_tool_key": "ElevenLabs::get_audio_file"
+        },
+        {
+          "server_intent": "EVM MCP Server operations",
+          "tool_intent": "read smart contract state",
+          "expected_tool_key": "EVM MCP Server::read-contract"
+        },
+        {
+          "server_intent": "EVM MCP Server operations",
+          "tool_intent": "resolve ENS name to address",
+          "expected_tool_key": "EVM MCP Server::resolve-ens"
+        },
+        {
+          "server_intent": "Everything Search operations",
+          "tool_intent": "search for files and folders across the system",
+          "expected_tool_key": "Everything Search::search"
+        },
+        {
+          "server_intent": "Fantasy PL operations",
+          "tool_intent": "compare multiple players across various metrics",
+          "expected_tool_key": "Fantasy PL::compare_players"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0052",
+      "user_intent": "Single user turn #52: complete these intents in order: (1) get precise information about current, previous, and next gameweeks; (2) fetch a JSON file from a URL; (3) fetch a website and return the content as Markdown; (4) upload files from text, base64 content, or local file paths; (5) delete a document",
+      "subtasks": [
+        {
+          "server_intent": "Fantasy PL operations",
+          "tool_intent": "get precise information about current, previous, and next gameweeks",
+          "expected_tool_key": "Fantasy PL::get_gameweek_status"
+        },
+        {
+          "server_intent": "Fetch operations",
+          "tool_intent": "fetch a JSON file from a URL",
+          "expected_tool_key": "Fetch::fetch_json"
+        },
+        {
+          "server_intent": "Fetch operations",
+          "tool_intent": "fetch a website and return the content as Markdown",
+          "expected_tool_key": "Fetch::fetch_markdown"
+        },
+        {
+          "server_intent": "Firebase operations",
+          "tool_intent": "upload files from text, base64 content, or local file paths",
+          "expected_tool_key": "Firebase::storage_upload"
+        },
+        {
+          "server_intent": "Firebase operations",
+          "tool_intent": "delete a document",
+          "expected_tool_key": "Firebase::firestore_delete_document"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0053",
+      "user_intent": "Single user turn #53: complete these intents in order: (1) start an asynchronous crawl with advanced options; (2) conduct deep web research on a query using intelligent crawling, search, and LLM analysis; (3) remove a tag; (4) update offer details; (5) lists all available Git repositories",
+      "subtasks": [
+        {
+          "server_intent": "FireCrawl operations",
+          "tool_intent": "start an asynchronous crawl with advanced options",
+          "expected_tool_key": "FireCrawl::firecrawl_crawl"
+        },
+        {
+          "server_intent": "FireCrawl operations",
+          "tool_intent": "conduct deep web research on a query using intelligent crawling, search, and LLM analysis",
+          "expected_tool_key": "FireCrawl::firecrawl_deep_research"
+        },
+        {
+          "server_intent": "Ghost operations",
+          "tool_intent": "remove a tag",
+          "expected_tool_key": "Ghost::Delete Tag"
+        },
+        {
+          "server_intent": "Ghost operations",
+          "tool_intent": "update offer details",
+          "expected_tool_key": "Ghost::Edit Offer"
+        },
+        {
+          "server_intent": "Git operations",
+          "tool_intent": "lists all available Git repositories",
+          "expected_tool_key": "Git::git_list_repositories"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0054",
+      "user_intent": "Single user turn #54: complete these intents in order: (1) creates a new branch; (2) re-run a workflow run; (3) cancel a workflow run; (4) provides a list of search results given a query; (5) enables Q&A interactions with a chatbot",
+      "subtasks": [
+        {
+          "server_intent": "Git operations",
+          "tool_intent": "creates a new branch",
+          "expected_tool_key": "Git::git_create_branch"
+        },
+        {
+          "server_intent": "Github Actions operations",
+          "tool_intent": "re-run a workflow run",
+          "expected_tool_key": "Github Actions::rerun_workflow"
+        },
+        {
+          "server_intent": "Github Actions operations",
+          "tool_intent": "cancel a workflow run",
+          "expected_tool_key": "Github Actions::cancel_workflow_run"
+        },
+        {
+          "server_intent": "Glean operations",
+          "tool_intent": "provides a list of search results given a query",
+          "expected_tool_key": "Glean::Search"
+        },
+        {
+          "server_intent": "Glean operations",
+          "tool_intent": "enables Q&A interactions with a chatbot",
+          "expected_tool_key": "Glean::Chat"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0055",
+      "user_intent": "Single user turn #55: complete these intents in order: (1) adds or removes labels from emails (move to different folders, archive, etc.); (2) searches for emails using Gmail search syntax; (3) refreshes the access token using the refresh token, client ID, and client secret; (4) retrieves the full content of an email in chunks of 1k characters; (5) enables interaction with SPL tokens",
+      "subtasks": [
+        {
+          "server_intent": "Gmail operations",
+          "tool_intent": "adds or removes labels from emails (move to different folders, archive, etc.)",
+          "expected_tool_key": "Gmail::modify_email"
+        },
+        {
+          "server_intent": "Gmail operations",
+          "tool_intent": "searches for emails using Gmail search syntax",
+          "expected_tool_key": "Gmail::search_emails"
+        },
+        {
+          "server_intent": "Gmail Headless operations",
+          "tool_intent": "refreshes the access token using the refresh token, client ID, and client secret",
+          "expected_tool_key": "Gmail Headless::gmail_refresh_token"
+        },
+        {
+          "server_intent": "Gmail Headless operations",
+          "tool_intent": "retrieves the full content of an email in chunks of 1k characters",
+          "expected_tool_key": "Gmail Headless::get_full_email_body_content"
+        },
+        {
+          "server_intent": "GOAT operations",
+          "tool_intent": "enables interaction with SPL tokens",
+          "expected_tool_key": "GOAT::Interact with SPL tokens"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0056",
+      "user_intent": "Single user turn #56: complete these intents in order: (1) enables voting on governance proposals on Mode; (2) open the Godot editor for a specific project; (3) save scenes with options for creating variants; (4) move or rename files and directories; (5) read complete contents of a file",
+      "subtasks": [
+        {
+          "server_intent": "GOAT operations",
+          "tool_intent": "enables voting on governance proposals on Mode",
+          "expected_tool_key": "GOAT::Vote on a governance proposal on Mode"
+        },
+        {
+          "server_intent": "Godot operations",
+          "tool_intent": "open the Godot editor for a specific project",
+          "expected_tool_key": "Godot::launch_editor"
+        },
+        {
+          "server_intent": "Godot operations",
+          "tool_intent": "save scenes with options for creating variants",
+          "expected_tool_key": "Godot::save_scene"
+        },
+        {
+          "server_intent": "Golang Filesystem Server operations",
+          "tool_intent": "move or rename files and directories",
+          "expected_tool_key": "Golang Filesystem Server::move_file"
+        },
+        {
+          "server_intent": "Golang Filesystem Server operations",
+          "tool_intent": "read complete contents of a file",
+          "expected_tool_key": "Golang Filesystem Server::read_file"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0057",
+      "user_intent": "Single user turn #57: complete these intents in order: (1) fetches and returns a list of good, positive, and uplifting news articles; (2) find available time slots in the calendar; (3) delete a calendar event; (4) perform web searches using Google Custom Search API; (5) extract content from any webpage",
+      "subtasks": [
+        {
+          "server_intent": "Goodnews operations",
+          "tool_intent": "fetches and returns a list of good, positive, and uplifting news articles",
+          "expected_tool_key": "Goodnews::fetch_list_of_goodnews"
+        },
+        {
+          "server_intent": "Google Calendar operations",
+          "tool_intent": "find available time slots in the calendar",
+          "expected_tool_key": "Google Calendar::find_free_time"
+        },
+        {
+          "server_intent": "Google Calendar operations",
+          "tool_intent": "delete a calendar event",
+          "expected_tool_key": "Google Calendar::delete_event"
+        },
+        {
+          "server_intent": "Google Custom Search operations",
+          "tool_intent": "perform web searches using Google Custom Search API",
+          "expected_tool_key": "Google Custom Search::search"
+        },
+        {
+          "server_intent": "Google Custom Search operations",
+          "tool_intent": "extract content from any webpage",
+          "expected_tool_key": "Google Custom Search::read_webpage"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0058",
+      "user_intent": "Single user turn #58: complete these intents in order: (1) fetches metadata (title, sheet IDs, grid properties) for a spreadsheet; (2) reads data from a range in a sheet; (3) list all tasks in Google Tasks; (4) search for tasks in Google Tasks; (5) searches documents using Vertex AI Search",
+      "subtasks": [
+        {
+          "server_intent": "Google Sheets operations",
+          "tool_intent": "fetches metadata (title, sheet IDs, grid properties) for a spreadsheet",
+          "expected_tool_key": "Google Sheets::spreadsheetInfo"
+        },
+        {
+          "server_intent": "Google Sheets operations",
+          "tool_intent": "reads data from a range in a sheet",
+          "expected_tool_key": "Google Sheets::get_sheet_data"
+        },
+        {
+          "server_intent": "Google Tasks operations",
+          "tool_intent": "list all tasks in Google Tasks",
+          "expected_tool_key": "Google Tasks::list"
+        },
+        {
+          "server_intent": "Google Tasks operations",
+          "tool_intent": "search for tasks in Google Tasks",
+          "expected_tool_key": "Google Tasks::search"
+        },
+        {
+          "server_intent": "Google Vertex AI Search operations",
+          "tool_intent": "searches documents using Vertex AI Search",
+          "expected_tool_key": "Google Vertex AI Search::search"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0059",
+      "user_intent": "Single user turn #59: complete these intents in order: (1) gets detailed definition for a specific mutation field in SDL format; (2) lists all types defined in the GraphQL schema (excluding internal types); (3) retrieve detailed profile information about a LinkedIn user; (4) retrieve a list of LinkedIn user connections; (5) get current trending tokens on Twitter",
+      "subtasks": [
+        {
+          "server_intent": "GraphQL Schema operations",
+          "tool_intent": "gets detailed definition for a specific mutation field in SDL format",
+          "expected_tool_key": "GraphQL Schema::get-mutation-field"
+        },
+        {
+          "server_intent": "GraphQL Schema operations",
+          "tool_intent": "lists all types defined in the GraphQL schema (excluding internal types)",
+          "expected_tool_key": "GraphQL Schema::list-types"
+        },
+        {
+          "server_intent": "HDW LinkedIn operations",
+          "tool_intent": "retrieve detailed profile information about a LinkedIn user",
+          "expected_tool_key": "HDW LinkedIn::get_linkedin_profile"
+        },
+        {
+          "server_intent": "HDW LinkedIn operations",
+          "tool_intent": "retrieve a list of LinkedIn user connections",
+          "expected_tool_key": "HDW LinkedIn::get_linkedin_user_connections"
+        },
+        {
+          "server_intent": "Heurist Mesh Agent operations",
+          "tool_intent": "get current trending tokens on Twitter",
+          "expected_tool_key": "Heurist Mesh Agent::get_trending_tokens"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0060",
+      "user_intent": "Single user turn #60: complete these intents in order: (1) search for mentions of specific tokens or topics on Twitter; (2) get details of a specific meeting; (3) list all tasks in the organization; (4) manages HACS packages; (5) call any Home Assistant service",
+      "subtasks": [
+        {
+          "server_intent": "Heurist Mesh Agent operations",
+          "tool_intent": "search for mentions of specific tokens or topics on Twitter",
+          "expected_tool_key": "Heurist Mesh Agent::search_mentions"
+        },
+        {
+          "server_intent": "Holaspirit operations",
+          "tool_intent": "get details of a specific meeting",
+          "expected_tool_key": "Holaspirit::holaspirit_get_meeting"
+        },
+        {
+          "server_intent": "Holaspirit operations",
+          "tool_intent": "list all tasks in the organization",
+          "expected_tool_key": "Holaspirit::holaspirit_list_tasks"
+        },
+        {
+          "server_intent": "Home Assistant operations",
+          "tool_intent": "manages HACS packages",
+          "expected_tool_key": "Home Assistant::package"
+        },
+        {
+          "server_intent": "Home Assistant operations",
+          "tool_intent": "call any Home Assistant service",
+          "expected_tool_key": "Home Assistant::call_service_tool"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0061",
+      "user_intent": "Single user turn #61: complete these intents in order: (1) retrieve recent conversation threads with messages; (2) retrieve most recently active contacts; (3) transcribes audio using the `hf-audio/whisper-large-v3-turbo` space; (4) performs vision tasks using the `DawnC/PawMatchAI` space, such as finding matches in images; (5) get historical candlestick data for any token",
+      "subtasks": [
+        {
+          "server_intent": "HubSpot operations",
+          "tool_intent": "retrieve recent conversation threads with messages",
+          "expected_tool_key": "HubSpot::hubspot_get_recent_conversations"
+        },
+        {
+          "server_intent": "HubSpot operations",
+          "tool_intent": "retrieve most recently active contacts",
+          "expected_tool_key": "HubSpot::hubspot_get_active_contacts"
+        },
+        {
+          "server_intent": "HuggingFace Spaces operations",
+          "tool_intent": "transcribes audio using the `hf-audio/whisper-large-v3-turbo` space",
+          "expected_tool_key": "HuggingFace Spaces::use whisper-large-v3-turbo"
+        },
+        {
+          "server_intent": "HuggingFace Spaces operations",
+          "tool_intent": "performs vision tasks using the `DawnC/PawMatchAI` space, such as finding matches in images",
+          "expected_tool_key": "HuggingFace Spaces::use PawMatchAI"
+        },
+        {
+          "server_intent": "Hyperliquid operations",
+          "tool_intent": "get historical candlestick data for any token",
+          "expected_tool_key": "Hyperliquid::get_candle_snapshot"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0062",
+      "user_intent": "Single user turn #62: complete these intents in order: (1) access the L2 order book for any token; (2) generates images using the Flux model based on text prompts; (3) create a new bucket; (4) write time-series data in line protocol format; (5) retrieve a specific profile by ID",
+      "subtasks": [
+        {
+          "server_intent": "Hyperliquid operations",
+          "tool_intent": "access the L2 order book for any token",
+          "expected_tool_key": "Hyperliquid::get_l2_book"
+        },
+        {
+          "server_intent": "Image Generation operations",
+          "tool_intent": "generates images using the Flux model based on text prompts",
+          "expected_tool_key": "Image Generation::generate_image"
+        },
+        {
+          "server_intent": "InfluxDB operations",
+          "tool_intent": "create a new bucket",
+          "expected_tool_key": "InfluxDB::create-bucket"
+        },
+        {
+          "server_intent": "InfluxDB operations",
+          "tool_intent": "write time-series data in line protocol format",
+          "expected_tool_key": "InfluxDB::write-data"
+        },
+        {
+          "server_intent": "Inoyu operations",
+          "tool_intent": "retrieve a specific profile by ID",
+          "expected_tool_key": "Inoyu::get_profile"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0063",
+      "user_intent": "Single user turn #63: complete these intents in order: (1) search for profiles using a query string and optional limit/offset parameters; (2) finds conversations for a specific customer; (3) retrieves tickets by their status; (4) processes a natural language instruction and performs the corresponding action on the iOS simulator; (5) reads the requested number of lines from the active iTerm terminal",
+      "subtasks": [
+        {
+          "server_intent": "Inoyu operations",
+          "tool_intent": "search for profiles using a query string and optional limit/offset parameters",
+          "expected_tool_key": "Inoyu::search_profiles"
+        },
+        {
+          "server_intent": "Intercom operations",
+          "tool_intent": "finds conversations for a specific customer",
+          "expected_tool_key": "Intercom::search_conversations_by_customer"
+        },
+        {
+          "server_intent": "Intercom operations",
+          "tool_intent": "retrieves tickets by their status",
+          "expected_tool_key": "Intercom::search_tickets_by_status"
+        },
+        {
+          "server_intent": "iOS Simulator operations",
+          "tool_intent": "processes a natural language instruction and performs the corresponding action on the iOS simulator",
+          "expected_tool_key": "iOS Simulator::processInstruction"
+        },
+        {
+          "server_intent": "iTerm MCP operations",
+          "tool_intent": "reads the requested number of lines from the active iTerm terminal",
+          "expected_tool_key": "iTerm MCP::read_terminal_output"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0064",
+      "user_intent": "Single user turn #64: complete these intents in order: (1) sends a control character to the active iTerm terminal; (2) a server for performing web searches optimized for use by a large language model through the Wolfram; (3) a server for storing and retrieving data from a database via a JDBC URL; (4) query JSON data using JSONPath syntax with extended operations; (5) filter JSON data using conditions",
+      "subtasks": [
+        {
+          "server_intent": "iTerm MCP operations",
+          "tool_intent": "sends a control character to the active iTerm terminal",
+          "expected_tool_key": "iTerm MCP::send_control_character"
+        },
+        {
+          "server_intent": "JDBC operations",
+          "tool_intent": "a server for performing web searches optimized for use by a large language model through the Wolfram Alpha LLM API",
+          "expected_tool_key": "JDBC::wolfram"
+        },
+        {
+          "server_intent": "JDBC operations",
+          "tool_intent": "a server for storing and retrieving data from a database via a JDBC URL",
+          "expected_tool_key": "JDBC::jdbc"
+        },
+        {
+          "server_intent": "JSON operations",
+          "tool_intent": "query JSON data using JSONPath syntax with extended operations",
+          "expected_tool_key": "JSON::query"
+        },
+        {
+          "server_intent": "JSON operations",
+          "tool_intent": "filter JSON data using conditions",
+          "expected_tool_key": "JSON::filter"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0065",
+      "user_intent": "Single user turn #65: complete these intents in order: (1) launches KiCad with a specific project; (2) runs design rule checks on a specified PCB project and compares results; (3) deletes a user from a specified realm; (4) lists all available realms; (5) list all consumers associated with a control plane",
+      "subtasks": [
+        {
+          "server_intent": "KiCad MCP operations",
+          "tool_intent": "launches KiCad with a specific project",
+          "expected_tool_key": "KiCad MCP::open_project"
+        },
+        {
+          "server_intent": "KiCad MCP operations",
+          "tool_intent": "runs design rule checks on a specified PCB project and compares results",
+          "expected_tool_key": "KiCad MCP::run_drc"
+        },
+        {
+          "server_intent": "Keycloak MCP operations",
+          "tool_intent": "deletes a user from a specified realm",
+          "expected_tool_key": "Keycloak MCP::delete-user"
+        },
+        {
+          "server_intent": "Keycloak MCP operations",
+          "tool_intent": "lists all available realms",
+          "expected_tool_key": "Keycloak MCP::list-realms"
+        },
+        {
+          "server_intent": "Kong Konnect operations",
+          "tool_intent": "list all consumers associated with a control plane",
+          "expected_tool_key": "Kong Konnect::List Consumers"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0066",
+      "user_intent": "Single user turn #66: complete these intents in order: (1) list all services associated with a control plane; (2) list Kubernetes resources and objects in the current cluster; (3) get a Kubernetes Pod in the current or provided namespace with the provided name; (4) query the document Q&A system; (5) list all charts in a project",
+      "subtasks": [
+        {
+          "server_intent": "Kong Konnect operations",
+          "tool_intent": "list all services associated with a control plane",
+          "expected_tool_key": "Kong Konnect::List Services"
+        },
+        {
+          "server_intent": "Kubernetes and OpenShift operations",
+          "tool_intent": "list Kubernetes resources and objects in the current cluster",
+          "expected_tool_key": "Kubernetes and OpenShift::resources_list"
+        },
+        {
+          "server_intent": "Kubernetes and OpenShift operations",
+          "tool_intent": "get a Kubernetes Pod in the current or provided namespace with the provided name",
+          "expected_tool_key": "Kubernetes and OpenShift::pods_get"
+        },
+        {
+          "server_intent": "Langflow-DOC-QA-SERVER operations",
+          "tool_intent": "query the document Q&A system",
+          "expected_tool_key": "Langflow-DOC-QA-SERVER::query_docs"
+        },
+        {
+          "server_intent": "Lightdash operations",
+          "tool_intent": "list all charts in a project",
+          "expected_tool_key": "Lightdash::list_charts"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0067",
+      "user_intent": "Single user turn #67: complete these intents in order: (1) get custom metrics for a project; (2) closes a file in the LSP server when you're done working with it; (3) gets code actions for a specific range in a file; (4) get issues assigned to a user; (5) search Linear issues with flexible filtering",
+      "subtasks": [
+        {
+          "server_intent": "Lightdash operations",
+          "tool_intent": "get custom metrics for a project",
+          "expected_tool_key": "Lightdash::get_custom_metrics"
+        },
+        {
+          "server_intent": "lsp-mcp operations",
+          "tool_intent": "closes a file in the LSP server when you're done working with it",
+          "expected_tool_key": "lsp-mcp::close_document"
+        },
+        {
+          "server_intent": "lsp-mcp operations",
+          "tool_intent": "gets code actions for a specific range in a file",
+          "expected_tool_key": "lsp-mcp::get_code_actions"
+        },
+        {
+          "server_intent": "Linear operations",
+          "tool_intent": "get issues assigned to a user",
+          "expected_tool_key": "Linear::linear_get_user_issues"
+        },
+        {
+          "server_intent": "Linear operations",
+          "tool_intent": "search Linear issues with flexible filtering",
+          "expected_tool_key": "Linear::linear_search_issues"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0068",
+      "user_intent": "Single user turn #68: complete these intents in order: (1) retrieves a single Linear issue by its ID; (2) adds a comment to an existing Linear issue; (3) generate outlines for code files; (4) initialize project configuration; (5) lists documents from the Lucene index",
+      "subtasks": [
+        {
+          "server_intent": "Linear (Go) operations",
+          "tool_intent": "retrieves a single Linear issue by its ID",
+          "expected_tool_key": "Linear (Go)::linear_get_issue"
+        },
+        {
+          "server_intent": "Linear (Go) operations",
+          "tool_intent": "adds a comment to an existing Linear issue",
+          "expected_tool_key": "Linear (Go)::linear_add_comment"
+        },
+        {
+          "server_intent": "llm-context operations",
+          "tool_intent": "generate outlines for code files",
+          "expected_tool_key": "llm-context::lc-outlines"
+        },
+        {
+          "server_intent": "llm-context operations",
+          "tool_intent": "initialize project configuration",
+          "expected_tool_key": "llm-context::lc-init"
+        },
+        {
+          "server_intent": "lucene-mcp-server operations",
+          "tool_intent": "lists documents from the Lucene index",
+          "expected_tool_key": "lucene-mcp-server::GET /mcp/v1/list"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0069",
+      "user_intent": "Single user turn #69: complete these intents in order: (1) queries the Lucene index; (2) retrieves recent messages from the macOS Messages app; (3) sends a new message through iMessage; (4) execute read-only operations against MariaDB; (5) create MCP server from template",
+      "subtasks": [
+        {
+          "server_intent": "lucene-mcp-server operations",
+          "tool_intent": "queries the Lucene index",
+          "expected_tool_key": "lucene-mcp-server::POST /mcp/v1/query"
+        },
+        {
+          "server_intent": "mac-messages-mcp operations",
+          "tool_intent": "retrieves recent messages from the macOS Messages app",
+          "expected_tool_key": "mac-messages-mcp::get_recent_messages"
+        },
+        {
+          "server_intent": "mac-messages-mcp operations",
+          "tool_intent": "sends a new message through iMessage",
+          "expected_tool_key": "mac-messages-mcp::send_message"
+        },
+        {
+          "server_intent": "MariaDB operations",
+          "tool_intent": "execute read-only operations against MariaDB",
+          "expected_tool_key": "MariaDB::query_database"
+        },
+        {
+          "server_intent": "MCP Create operations",
+          "tool_intent": "create MCP server from template",
+          "expected_tool_key": "MCP Create::create-server-from-template"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0070",
+      "user_intent": "Single user turn #70: complete these intents in order: (1) get list of running servers; (2) lists and retrieves any Kubernetes resources, including custom mappings for pods, services, and depl; (3) executes a command within a specified Kubernetes pod; (4) performs a web search to fetch the latest information and provides it to the model to enhance its re; (5) runs a proxy server from stdio that connects to a remote SSE server, allowing clients to communicate",
+      "subtasks": [
+        {
+          "server_intent": "MCP Create operations",
+          "tool_intent": "get list of running servers",
+          "expected_tool_key": "MCP Create::list-servers"
+        },
+        {
+          "server_intent": "mcp-k8s-go operations",
+          "tool_intent": "lists and retrieves any Kubernetes resources, including custom mappings for pods, services, and deployments",
+          "expected_tool_key": "mcp-k8s-go::List and get any Kubernetes resources"
+        },
+        {
+          "server_intent": "mcp-k8s-go operations",
+          "tool_intent": "executes a command within a specified Kubernetes pod",
+          "expected_tool_key": "mcp-k8s-go::Run command in Kubernetes pod"
+        },
+        {
+          "server_intent": "mcp-local-rag operations",
+          "tool_intent": "performs a web search to fetch the latest information and provides it to the model to enhance its responses",
+          "expected_tool_key": "mcp-local-rag::rag_search"
+        },
+        {
+          "server_intent": "mcp-proxy operations",
+          "tool_intent": "runs a proxy server from stdio that connects to a remote SSE server, allowing clients to communicate with the remote server over SSE",
+          "expected_tool_key": "mcp-proxy::stdio to SSE"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0071",
+      "user_intent": "Single user turn #71: complete these intents in order: (1) runs a proxy server exposing a SSE server that connects to a local stdio server, allowing remote con; (2) store code snippets, implementation details, and coding patterns with comprehensive context; (3) retrieve all stored coding preferences for analysis and review; (4) get the last n messages from the current conversation; (5) switch to a different conversation",
+      "subtasks": [
+        {
+          "server_intent": "mcp-proxy operations",
+          "tool_intent": "runs a proxy server exposing a SSE server that connects to a local stdio server, allowing remote connections to the local stdio server",
+          "expected_tool_key": "mcp-proxy::SSE to stdio"
+        },
+        {
+          "server_intent": "mem0-mcp operations",
+          "tool_intent": "store code snippets, implementation details, and coding patterns with comprehensive context",
+          "expected_tool_key": "mem0-mcp::add_coding_preference"
+        },
+        {
+          "server_intent": "mem0-mcp operations",
+          "tool_intent": "retrieve all stored coding preferences for analysis and review",
+          "expected_tool_key": "mem0-mcp::get_all_coding_preferences"
+        },
+        {
+          "server_intent": "Membase operations",
+          "tool_intent": "get the last n messages from the current conversation",
+          "expected_tool_key": "Membase::get_messages"
+        },
+        {
+          "server_intent": "Membase operations",
+          "tool_intent": "switch to a different conversation",
+          "expected_tool_key": "Membase::switch_conversation"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0072",
+      "user_intent": "Single user turn #72: complete these intents in order: (1) convert YouTube videos to Markdown; (2) convert PDF files to Markdown; (3) check for data inconsistencies; (4) perform geospatial queries with various operators; (5) moves a Monday.com item to a different group",
+      "subtasks": [
+        {
+          "server_intent": "Markdownify operations",
+          "tool_intent": "convert YouTube videos to Markdown",
+          "expected_tool_key": "Markdownify::youtube-to-markdown"
+        },
+        {
+          "server_intent": "Markdownify operations",
+          "tool_intent": "convert PDF files to Markdown",
+          "expected_tool_key": "Markdownify::pdf-to-markdown"
+        },
+        {
+          "server_intent": "MongoDB Lens operations",
+          "tool_intent": "check for data inconsistencies",
+          "expected_tool_key": "MongoDB Lens::validate-collection"
+        },
+        {
+          "server_intent": "MongoDB Lens operations",
+          "tool_intent": "perform geospatial queries with various operators",
+          "expected_tool_key": "MongoDB Lens::geo-query"
+        },
+        {
+          "server_intent": "Monday.com operations",
+          "tool_intent": "moves a Monday.com item to a different group",
+          "expected_tool_key": "Monday.com::monday-move-item-to-group"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0073",
+      "user_intent": "Single user turn #73: complete these intents in order: (1) creates a new item or sub-item in a Monday.com board; (2) retrieves resources from the current context (hub cluster); (3) retrieves resources from managed clusters; (4) gets details of a specific workflow; (5) lists executions for a workflow",
+      "subtasks": [
+        {
+          "server_intent": "Monday.com operations",
+          "tool_intent": "creates a new item or sub-item in a Monday.com board",
+          "expected_tool_key": "Monday.com::monday-create-item"
+        },
+        {
+          "server_intent": "Multicluster-MCP-Sever operations",
+          "tool_intent": "retrieves resources from the current context (hub cluster)",
+          "expected_tool_key": "Multicluster-MCP-Sever::Retrieve resources from the hub cluster"
+        },
+        {
+          "server_intent": "Multicluster-MCP-Sever operations",
+          "tool_intent": "retrieves resources from managed clusters",
+          "expected_tool_key": "Multicluster-MCP-Sever::Retrieve resources from the managed clusters"
+        },
+        {
+          "server_intent": "n8n operations",
+          "tool_intent": "gets details of a specific workflow",
+          "expected_tool_key": "n8n::workflow_get"
+        },
+        {
+          "server_intent": "n8n operations",
+          "tool_intent": "lists executions for a workflow",
+          "expected_tool_key": "n8n::execution_list"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0074",
+      "user_intent": "Single user turn #74: complete these intents in order: (1) get current alerts for national parks including closures, hazards, and important information; (2) get comprehensive information about a specific national park; (3) gets accurate pricing for single and return journeys, including travel classes and group pricing; (4) accesses comprehensive station information such as facilities, accessibility features, platform layo; (5) returns the current active buffer content with line numbers shown",
+      "subtasks": [
+        {
+          "server_intent": "National Parks operations",
+          "tool_intent": "get current alerts for national parks including closures, hazards, and important information",
+          "expected_tool_key": "National Parks::getAlerts"
+        },
+        {
+          "server_intent": "National Parks operations",
+          "tool_intent": "get comprehensive information about a specific national park",
+          "expected_tool_key": "National Parks::getParkDetails"
+        },
+        {
+          "server_intent": "NS Travel Information operations",
+          "tool_intent": "gets accurate pricing for single and return journeys, including travel classes and group pricing",
+          "expected_tool_key": "NS Travel Information::Ticket Prices"
+        },
+        {
+          "server_intent": "NS Travel Information operations",
+          "tool_intent": "accesses comprehensive station information such as facilities, accessibility features, platform layouts, OV-fiets availability, and location details",
+          "expected_tool_key": "NS Travel Information::Station Details"
+        },
+        {
+          "server_intent": "Neovim operations",
+          "tool_intent": "returns the current active buffer content with line numbers shown",
+          "expected_tool_key": "Neovim::vim_buffer"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0075",
+      "user_intent": "Single user turn #75: complete these intents in order: (1) creates a visual selection in the VIM editor; (2) lists variables with optional filtering and pagination; (3) creates a new variable with namespace support; (4) a tool for logging purposes; (5) remove tags from a note",
+      "subtasks": [
+        {
+          "server_intent": "Neovim operations",
+          "tool_intent": "creates a visual selection in the VIM editor",
+          "expected_tool_key": "Neovim::vim_visual"
+        },
+        {
+          "server_intent": "nomad-mcp operations",
+          "tool_intent": "lists variables with optional filtering and pagination",
+          "expected_tool_key": "nomad-mcp::list_variables"
+        },
+        {
+          "server_intent": "nomad-mcp operations",
+          "tool_intent": "creates a new variable with namespace support",
+          "expected_tool_key": "nomad-mcp::create_variable"
+        },
+        {
+          "server_intent": "oatpp-mcp operations",
+          "tool_intent": "a tool for logging purposes",
+          "expected_tool_key": "oatpp-mcp::Logger"
+        },
+        {
+          "server_intent": "obsidian-mcp operations",
+          "tool_intent": "remove tags from a note",
+          "expected_tool_key": "obsidian-mcp::remove-tags"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0076",
+      "user_intent": "Single user turn #76: complete these intents in order: (1) read the contents of a note; (2) assigns a user to a group in Okta; (3) unsuspends a previously suspended user in Okta; (4) call OpenAI websearch as a tool; (5) get API endpoint schemas that match your intent",
+      "subtasks": [
+        {
+          "server_intent": "obsidian-mcp operations",
+          "tool_intent": "read the contents of a note",
+          "expected_tool_key": "obsidian-mcp::read-note"
+        },
+        {
+          "server_intent": "Okta operations",
+          "tool_intent": "assigns a user to a group in Okta",
+          "expected_tool_key": "Okta::assign_user_to_group"
+        },
+        {
+          "server_intent": "Okta operations",
+          "tool_intent": "unsuspends a previously suspended user in Okta",
+          "expected_tool_key": "Okta::unsuspend_user"
+        },
+        {
+          "server_intent": "OpenAI WebSearch MCP operations",
+          "tool_intent": "call OpenAI websearch as a tool",
+          "expected_tool_key": "OpenAI WebSearch MCP::web_search"
+        },
+        {
+          "server_intent": "OpenAPI AnyApi operations",
+          "tool_intent": "get API endpoint schemas that match your intent",
+          "expected_tool_key": "OpenAPI AnyApi::{prefix}_api_request_schema"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0077",
+      "user_intent": "Single user turn #77: complete these intents in order: (1) essential for reliable execution with complex APIs where simplified implementations fail; (2) gets the parameters for a specific path; (3) lists all schema components (schemas, responses, parameters, etc.); (4) retrieves a specific report by its ID; (5) lists all marking definitions",
+      "subtasks": [
+        {
+          "server_intent": "OpenAPI AnyApi operations",
+          "tool_intent": "essential for reliable execution with complex APIs where simplified implementations fail",
+          "expected_tool_key": "OpenAPI AnyApi::{prefix}_make_request"
+        },
+        {
+          "server_intent": "OpenAPI Schema operations",
+          "tool_intent": "gets the parameters for a specific path",
+          "expected_tool_key": "OpenAPI Schema::get-path-parameters"
+        },
+        {
+          "server_intent": "OpenAPI Schema operations",
+          "tool_intent": "lists all schema components (schemas, responses, parameters, etc.)",
+          "expected_tool_key": "OpenAPI Schema::list-components"
+        },
+        {
+          "server_intent": "OpenCTI operations",
+          "tool_intent": "retrieves a specific report by its ID",
+          "expected_tool_key": "OpenCTI::get_report_by_id"
+        },
+        {
+          "server_intent": "OpenCTI operations",
+          "tool_intent": "lists all marking definitions",
+          "expected_tool_key": "OpenCTI::list_marking_definitions"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0078",
+      "user_intent": "Single user turn #78: complete these intents in order: (1) get player's overall stats totals; (2) search for players by name; (3) call arbitrary JSON-RPC methods; (4) discover available JSON-RPC methods; (5) applies OSP's semantic editing codes for comprehensive content review, including scope, flow, style,",
+      "subtasks": [
+        {
+          "server_intent": "OpenDota operations",
+          "tool_intent": "get player's overall stats totals",
+          "expected_tool_key": "OpenDota::get_player_totals"
+        },
+        {
+          "server_intent": "OpenDota operations",
+          "tool_intent": "search for players by name",
+          "expected_tool_key": "OpenDota::search_player"
+        },
+        {
+          "server_intent": "OpenRPC operations",
+          "tool_intent": "call arbitrary JSON-RPC methods",
+          "expected_tool_key": "OpenRPC::rpc_call"
+        },
+        {
+          "server_intent": "OpenRPC operations",
+          "tool_intent": "discover available JSON-RPC methods",
+          "expected_tool_key": "OpenRPC::rpc_discover"
+        },
+        {
+          "server_intent": "Open Strategy Partners Marketing Tools operations",
+          "tool_intent": "applies OSP's semantic editing codes for comprehensive content review, including scope, flow, style, and technical accuracy",
+          "expected_tool_key": "Open Strategy Partners Marketing Tools::OSP Content Editing Codes"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0079",
+      "user_intent": "Single user turn #79: complete these intents in order: (1) provides a systematic approach to creating high-quality technical content, including narrative struc; (2) create a new document in a specified collection with given content; (3) add a comment to a document; (4) transforms content between supported formats; (5) analyzes the current screen and provides structured information about UI elements",
+      "subtasks": [
+        {
+          "server_intent": "Open Strategy Partners Marketing Tools operations",
+          "tool_intent": "provides a systematic approach to creating high-quality technical content, including narrative structure, flow, style, and technical accuracy",
+          "expected_tool_key": "Open Strategy Partners Marketing Tools::OSP Technical Writing Guide"
+        },
+        {
+          "server_intent": "Outline operations",
+          "tool_intent": "create a new document in a specified collection with given content",
+          "expected_tool_key": "Outline::Create a New Document"
+        },
+        {
+          "server_intent": "Outline operations",
+          "tool_intent": "add a comment to a document",
+          "expected_tool_key": "Outline::Add a Comment"
+        },
+        {
+          "server_intent": "Pandoc operations",
+          "tool_intent": "transforms content between supported formats",
+          "expected_tool_key": "Pandoc::convert-contents"
+        },
+        {
+          "server_intent": "Phone MCP operations",
+          "tool_intent": "analyzes the current screen and provides structured information about UI elements",
+          "expected_tool_key": "Phone MCP::analyze_screen"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0080",
+      "user_intent": "Single user turn #80: complete these intents in order: (1) launches an activity using the Android intent system; (2) navigate and manage workspace context; (3) navigate and manage workspace context; (4) lists available Placid templates with filtering options; (5) generate static images by combining Placid templates with dynamic content like text and images",
+      "subtasks": [
+        {
+          "server_intent": "Phone MCP operations",
+          "tool_intent": "launches an activity using the Android intent system",
+          "expected_tool_key": "Phone MCP::launch_intent"
+        },
+        {
+          "server_intent": "PIF operations",
+          "tool_intent": "navigate and manage workspace context",
+          "expected_tool_key": "PIF::read"
+        },
+        {
+          "server_intent": "PIF operations",
+          "tool_intent": "navigate and manage workspace context",
+          "expected_tool_key": "PIF::move"
+        },
+        {
+          "server_intent": "Placid.app operations",
+          "tool_intent": "lists available Placid templates with filtering options",
+          "expected_tool_key": "Placid.app::placid_list_templates"
+        },
+        {
+          "server_intent": "Placid.app operations",
+          "tool_intent": "generate static images by combining Placid templates with dynamic content like text and images",
+          "expected_tool_key": "Placid.app::placid_generate_image"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0081",
+      "user_intent": "Single user turn #81: complete these intents in order: (1) runs a Postman collection and returns the test results; (2) retrieves the statuses of features from Productboard; (3) retrieves detailed information about a specific component; (4) list all available metrics in Prometheus; (5) execute a PromQL range query with start time, end time, and step interval",
+      "subtasks": [
+        {
+          "server_intent": "Postman operations",
+          "tool_intent": "runs a Postman collection and returns the test results",
+          "expected_tool_key": "Postman::run-collection"
+        },
+        {
+          "server_intent": "Productboard operations",
+          "tool_intent": "retrieves the statuses of features from Productboard",
+          "expected_tool_key": "Productboard::get_feature_statuses"
+        },
+        {
+          "server_intent": "Productboard operations",
+          "tool_intent": "retrieves detailed information about a specific component",
+          "expected_tool_key": "Productboard::get_component_detail"
+        },
+        {
+          "server_intent": "Prometheus operations",
+          "tool_intent": "list all available metrics in Prometheus",
+          "expected_tool_key": "Prometheus::list_metrics"
+        },
+        {
+          "server_intent": "Prometheus operations",
+          "tool_intent": "execute a PromQL range query with start time, end time, and step interval",
+          "expected_tool_key": "Prometheus::execute_range_query"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0082",
+      "user_intent": "Single user turn #82: complete these intents in order: (1) sends a notification via Pushover; (2) a server that exposes a canvas for making drawings using JavaFX; (3) a server for storing and retrieving data from a database via a JDBC URL; (4) render the current map view to an image file; (5) retrieve all layers in the current project",
+      "subtasks": [
+        {
+          "server_intent": "Pushover operations",
+          "tool_intent": "sends a notification via Pushover",
+          "expected_tool_key": "Pushover::send"
+        },
+        {
+          "server_intent": "Quarkus operations",
+          "tool_intent": "a server that exposes a canvas for making drawings using JavaFX",
+          "expected_tool_key": "Quarkus::jfx"
+        },
+        {
+          "server_intent": "Quarkus operations",
+          "tool_intent": "a server for storing and retrieving data from a database via a JDBC URL",
+          "expected_tool_key": "Quarkus::jdbc"
+        },
+        {
+          "server_intent": "QGIS operations",
+          "tool_intent": "render the current map view to an image file",
+          "expected_tool_key": "QGIS::render_map"
+        },
+        {
+          "server_intent": "QGIS operations",
+          "tool_intent": "retrieve all layers in the current project",
+          "expected_tool_key": "QGIS::get_layers"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0083",
+      "user_intent": "Single user turn #83: complete these intents in order: (1) generate a chart URL using QuickChart.io; (2) download a chart image to a local file; (3) generates text using the Qwen Max language model; (4) searches through bookmarks; (5) creates a new bookmark",
+      "subtasks": [
+        {
+          "server_intent": "QuickChart operations",
+          "tool_intent": "generate a chart URL using QuickChart.io",
+          "expected_tool_key": "QuickChart::generate_chart"
+        },
+        {
+          "server_intent": "QuickChart operations",
+          "tool_intent": "download a chart image to a local file",
+          "expected_tool_key": "QuickChart::download_chart"
+        },
+        {
+          "server_intent": "Qwen_Max operations",
+          "tool_intent": "generates text using the Qwen Max language model",
+          "expected_tool_key": "Qwen_Max::qwen_max"
+        },
+        {
+          "server_intent": "Raindrop.io operations",
+          "tool_intent": "searches through bookmarks",
+          "expected_tool_key": "Raindrop.io::search-bookmarks"
+        },
+        {
+          "server_intent": "Raindrop.io operations",
+          "tool_intent": "creates a new bookmark",
+          "expected_tool_key": "Raindrop.io::create-bookmark"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0084",
+      "user_intent": "Single user turn #84: complete these intents in order: (1) finds all Reaper projects in the directory specified in the config; (2) parses a Reaper project and returns a JSON object; (3) retrieves semantically similar matches from the connected Rememberizer personal/team internal knowle; (4) searches for documents in Rememberizer's personal/team internal knowledge and memory repository usin; (5) check a prediction's status",
+      "subtasks": [
+        {
+          "server_intent": "Reaper operations",
+          "tool_intent": "finds all Reaper projects in the directory specified in the config",
+          "expected_tool_key": "Reaper::find_reaper_projects"
+        },
+        {
+          "server_intent": "Reaper operations",
+          "tool_intent": "parses a Reaper project and returns a JSON object",
+          "expected_tool_key": "Reaper::parse_reaper_project"
+        },
+        {
+          "server_intent": "Rememberizer AI operations",
+          "tool_intent": "retrieves semantically similar matches from the connected Rememberizer personal/team internal knowledge and memory repository",
+          "expected_tool_key": "Rememberizer AI::retrieve_semantically_similar_internal_knowledge"
+        },
+        {
+          "server_intent": "Rememberizer AI operations",
+          "tool_intent": "searches for documents in Rememberizer's personal/team internal knowledge and memory repository using a simple query",
+          "expected_tool_key": "Rememberizer AI::smart_search_internal_knowledge"
+        },
+        {
+          "server_intent": "Replicate operations",
+          "tool_intent": "check a prediction's status",
+          "expected_tool_key": "Replicate::get_prediction"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0085",
+      "user_intent": "Single user turn #85: complete these intents in order: (1) run a model with your inputs; (2) partially update resources; (3) submit data via POST requests; (4) generate chronological timelines of artists' works, tracking artistic development, analyzing periods; (5) access high-resolution image data with deep zoom capabilities, including multiple zoom levels, tile-",
+      "subtasks": [
+        {
+          "server_intent": "Replicate operations",
+          "tool_intent": "run a model with your inputs",
+          "expected_tool_key": "Replicate::create_prediction"
+        },
+        {
+          "server_intent": "Rquest operations",
+          "tool_intent": "partially update resources",
+          "expected_tool_key": "Rquest::http_patch"
+        },
+        {
+          "server_intent": "Rquest operations",
+          "tool_intent": "submit data via POST requests",
+          "expected_tool_key": "Rquest::http_post"
+        },
+        {
+          "server_intent": "Rijksmuseum operations",
+          "tool_intent": "generate chronological timelines of artists' works, tracking artistic development, analyzing periods and styles, and studying career progression",
+          "expected_tool_key": "Rijksmuseum::get_artist_timeline"
+        },
+        {
+          "server_intent": "Rijksmuseum operations",
+          "tool_intent": "access high-resolution image data with deep zoom capabilities, including multiple zoom levels, tile-based image loading, full resolution support, and position information",
+          "expected_tool_key": "Rijksmuseum::get_artwork_image"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0086",
+      "user_intent": "Single user turn #86: complete these intents in order: (1) returns mastery details for a specific champion; (2) returns recent matches for the given summoner; (3) search arXiv for articles related to the given keyword; (4) retrieves complete web pages with pagination support; (5) extracts content matching regex patterns with surrounding context",
+      "subtasks": [
+        {
+          "server_intent": "Riot Games operations",
+          "tool_intent": "returns mastery details for a specific champion",
+          "expected_tool_key": "Riot Games::get_champion_mastery_tool"
+        },
+        {
+          "server_intent": "Riot Games operations",
+          "tool_intent": "returns recent matches for the given summoner",
+          "expected_tool_key": "Riot Games::get_recent_matches_tool"
+        },
+        {
+          "server_intent": "Scholarly operations",
+          "tool_intent": "search arXiv for articles related to the given keyword",
+          "expected_tool_key": "Scholarly::search-arxiv"
+        },
+        {
+          "server_intent": "scrapling-fetch operations",
+          "tool_intent": "retrieves complete web pages with pagination support",
+          "expected_tool_key": "scrapling-fetch::s-fetch-page"
+        },
+        {
+          "server_intent": "scrapling-fetch operations",
+          "tool_intent": "extracts content matching regex patterns with surrounding context",
+          "expected_tool_key": "scrapling-fetch::s-fetch-pattern"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0087",
+      "user_intent": "Single user turn #87: complete these intents in order: (1) read and convert the content from a URL to markdown; (2) execute web searches with pagination; (3) retrieve all facts for a company (full XBRL fact set) by CIK; (4) fetch a company's submissions (filings history) by CIK; (5) get a specific service catalog item from ServiceNow",
+      "subtasks": [
+        {
+          "server_intent": "SearXNG operations",
+          "tool_intent": "read and convert the content from a URL to markdown",
+          "expected_tool_key": "SearXNG::web_url_read"
+        },
+        {
+          "server_intent": "SearXNG operations",
+          "tool_intent": "execute web searches with pagination",
+          "expected_tool_key": "SearXNG::searxng_web_search"
+        },
+        {
+          "server_intent": "SEC EDGAR operations",
+          "tool_intent": "retrieve all facts for a company (full XBRL fact set) by CIK",
+          "expected_tool_key": "SEC EDGAR::get_company_facts"
+        },
+        {
+          "server_intent": "SEC EDGAR operations",
+          "tool_intent": "fetch a company's submissions (filings history) by CIK",
+          "expected_tool_key": "SEC EDGAR::get_submissions"
+        },
+        {
+          "server_intent": "ServiceNow operations",
+          "tool_intent": "get a specific service catalog item from ServiceNow",
+          "expected_tool_key": "ServiceNow::get_catalog_item"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0088",
+      "user_intent": "Single user turn #88: complete these intents in order: (1) update an existing changeset; (2) get a specific order by ID; (3) get customers or search by name/email; (4) runs a shortcut with optional input; (5) opens a shortcut in the Shortcuts app",
+      "subtasks": [
+        {
+          "server_intent": "ServiceNow operations",
+          "tool_intent": "update an existing changeset",
+          "expected_tool_key": "ServiceNow::update_changeset"
+        },
+        {
+          "server_intent": "Shopify operations",
+          "tool_intent": "get a specific order by ID",
+          "expected_tool_key": "Shopify::get-order-by-id"
+        },
+        {
+          "server_intent": "Shopify operations",
+          "tool_intent": "get customers or search by name/email",
+          "expected_tool_key": "Shopify::get-customers"
+        },
+        {
+          "server_intent": "Siri Shortcuts operations",
+          "tool_intent": "runs a shortcut with optional input",
+          "expected_tool_key": "Siri Shortcuts::run_shortcut"
+        },
+        {
+          "server_intent": "Siri Shortcuts operations",
+          "tool_intent": "opens a shortcut in the Shortcuts app",
+          "expected_tool_key": "Siri Shortcuts::open_shortcut"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0089",
+      "user_intent": "Single user turn #89: complete these intents in order: (1) get recent messages from a channel; (2) get list of workspace users with basic profile information; (3) execute INSERT, UPDATE, or DELETE queries; (4) list all databases in the Snowflake instance; (5) get current model content with numbered items",
+      "subtasks": [
+        {
+          "server_intent": "Slack operations",
+          "tool_intent": "get recent messages from a channel",
+          "expected_tool_key": "Slack::slack_get_channel_history"
+        },
+        {
+          "server_intent": "Slack operations",
+          "tool_intent": "get list of workspace users with basic profile information",
+          "expected_tool_key": "Slack::slack_get_users"
+        },
+        {
+          "server_intent": "Snowflake operations",
+          "tool_intent": "execute INSERT, UPDATE, or DELETE queries",
+          "expected_tool_key": "Snowflake::write_query"
+        },
+        {
+          "server_intent": "Snowflake operations",
+          "tool_intent": "list all databases in the Snowflake instance",
+          "expected_tool_key": "Snowflake::list_databases"
+        },
+        {
+          "server_intent": "Solver operations",
+          "tool_intent": "get current model content with numbered items",
+          "expected_tool_key": "Solver::get_model"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0090",
+      "user_intent": "Single user turn #90: complete these intents in order: (1) add new item at a specific index; (2) returns real-time information about ongoing football matches around the world; (3) creates a wrapped token on a target chain using Wormhole; (4) executes a deBridge order; (5) returns documentation links for Starwind UI components and guides",
+      "subtasks": [
+        {
+          "server_intent": "Solver operations",
+          "tool_intent": "add new item at a specific index",
+          "expected_tool_key": "Solver::add_item"
+        },
+        {
+          "server_intent": "SoccerDataAPI operations",
+          "tool_intent": "returns real-time information about ongoing football matches around the world",
+          "expected_tool_key": "SoccerDataAPI::get_livescores"
+        },
+        {
+          "server_intent": "Solana Agent Kit operations",
+          "tool_intent": "creates a wrapped token on a target chain using Wormhole",
+          "expected_tool_key": "Solana Agent Kit::createWrappedToken"
+        },
+        {
+          "server_intent": "Solana Agent Kit operations",
+          "tool_intent": "executes a deBridge order",
+          "expected_tool_key": "Solana Agent Kit::executeDebridgeOrder"
+        },
+        {
+          "server_intent": "Starwind UI operations",
+          "tool_intent": "returns documentation links for Starwind UI components and guides",
+          "expected_tool_key": "Starwind UI::get_documentation"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0091",
+      "user_intent": "Single user turn #91: complete these intents in order: (1) initializes a new Starwind UI project; (2) retrieves the laps recorded for a specific Strava activity; (3) fetches detailed information about a specific segment using its ID; (4) searches for shaders available on ShaderToy through a search prompt; (5) retrieves information on any shader on ShaderToy",
+      "subtasks": [
+        {
+          "server_intent": "Starwind UI operations",
+          "tool_intent": "initializes a new Starwind UI project",
+          "expected_tool_key": "Starwind UI::init_project"
+        },
+        {
+          "server_intent": "Strava operations",
+          "tool_intent": "retrieves the laps recorded for a specific Strava activity",
+          "expected_tool_key": "Strava::get-activity-laps"
+        },
+        {
+          "server_intent": "Strava operations",
+          "tool_intent": "fetches detailed information about a specific segment using its ID",
+          "expected_tool_key": "Strava::get-segment"
+        },
+        {
+          "server_intent": "ShaderToy operations",
+          "tool_intent": "searches for shaders available on ShaderToy through a search prompt",
+          "expected_tool_key": "ShaderToy::search_shader"
+        },
+        {
+          "server_intent": "ShaderToy operations",
+          "tool_intent": "retrieves information on any shader on ShaderToy",
+          "expected_tool_key": "ShaderToy::get_shader_info"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0092",
+      "user_intent": "Single user turn #92: complete these intents in order: (1) get detailed information about multiple nodes by providing an array of node IDs; (2) set horizontal and vertical sizing modes for auto-layout frames (FIXED, HUG, FILL); (3) get trending movies for a specified time window; (4) get movie recommendations based on a movie ID; (5) searches recent news articles with publication dates",
+      "subtasks": [
+        {
+          "server_intent": "Talk To Figma operations",
+          "tool_intent": "get detailed information about multiple nodes by providing an array of node IDs",
+          "expected_tool_key": "Talk To Figma::get_nodes_info"
+        },
+        {
+          "server_intent": "Talk To Figma operations",
+          "tool_intent": "set horizontal and vertical sizing modes for auto-layout frames (FIXED, HUG, FILL)",
+          "expected_tool_key": "Talk To Figma::set_layout_sizing"
+        },
+        {
+          "server_intent": "TMDB operations",
+          "tool_intent": "get trending movies for a specified time window",
+          "expected_tool_key": "TMDB::get_trending"
+        },
+        {
+          "server_intent": "TMDB operations",
+          "tool_intent": "get movie recommendations based on a movie ID",
+          "expected_tool_key": "TMDB::get_recommendations"
+        },
+        {
+          "server_intent": "Tavily search operations",
+          "tool_intent": "searches recent news articles with publication dates",
+          "expected_tool_key": "Tavily search::tavily_news_search"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0093",
+      "user_intent": "Single user turn #93: complete these intents in order: (1) performs comprehensive web searches with AI-powered content extraction; (2) unblock a user; (3) bulk import contacts; (4) retrieve messages from specific dialog; (5) mark dialog as read",
+      "subtasks": [
+        {
+          "server_intent": "Tavily search operations",
+          "tool_intent": "performs comprehensive web searches with AI-powered content extraction",
+          "expected_tool_key": "Tavily search::tavily_web_search"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "unblock a user",
+          "expected_tool_key": "Telegram::unblock_user"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "bulk import contacts",
+          "expected_tool_key": "Telegram::import_contacts"
+        },
+        {
+          "server_intent": "Telegram-Client operations",
+          "tool_intent": "retrieve messages from specific dialog",
+          "expected_tool_key": "Telegram-Client::tg_dialog"
+        },
+        {
+          "server_intent": "Telegram-Client operations",
+          "tool_intent": "mark dialog as read",
+          "expected_tool_key": "Telegram-Client::tg_read"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0094",
+      "user_intent": "Single user turn #94: complete these intents in order: (1) read content from a file with optional row selection; (2) list files and subdirectories in the specified directory; (3) get TFT match history for the current player; (4) get detailed information about a specific TFT match; (5) searches for events, venues, or attractions using various filters",
+      "subtasks": [
+        {
+          "server_intent": "Terminal-Control operations",
+          "tool_intent": "read content from a file with optional row selection",
+          "expected_tool_key": "Terminal-Control::read_file"
+        },
+        {
+          "server_intent": "Terminal-Control operations",
+          "tool_intent": "list files and subdirectories in the specified directory",
+          "expected_tool_key": "Terminal-Control::list_directory"
+        },
+        {
+          "server_intent": "TFT-Match-Analyzer operations",
+          "tool_intent": "get TFT match history for the current player",
+          "expected_tool_key": "TFT-Match-Analyzer::tft_match_history"
+        },
+        {
+          "server_intent": "TFT-Match-Analyzer operations",
+          "tool_intent": "get detailed information about a specific TFT match",
+          "expected_tool_key": "TFT-Match-Analyzer::tft_match_details"
+        },
+        {
+          "server_intent": "Ticketmaster operations",
+          "tool_intent": "searches for events, venues, or attractions using various filters",
+          "expected_tool_key": "Ticketmaster::search_ticketmaster"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0095",
+      "user_intent": "Single user turn #95: complete these intents in order: (1) delete a project; (2) get a specific project by ID; (3) retrieve and filter tasks; (4) update existing tasks using natural language search; (5) analyze collection structure and contents",
+      "subtasks": [
+        {
+          "server_intent": "TickTick operations",
+          "tool_intent": "delete a project",
+          "expected_tool_key": "TickTick::delete_project"
+        },
+        {
+          "server_intent": "TickTick operations",
+          "tool_intent": "get a specific project by ID",
+          "expected_tool_key": "TickTick::get_project_by_id"
+        },
+        {
+          "server_intent": "Todoist operations",
+          "tool_intent": "retrieve and filter tasks",
+          "expected_tool_key": "Todoist::todoist_get_tasks"
+        },
+        {
+          "server_intent": "Todoist operations",
+          "tool_intent": "update existing tasks using natural language search",
+          "expected_tool_key": "Todoist::todoist_update_task"
+        },
+        {
+          "server_intent": "Typesense operations",
+          "tool_intent": "analyze collection structure and contents",
+          "expected_tool_key": "Typesense::analyze_collection"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0096",
+      "user_intent": "Single user turn #96: complete these intents in order: (1) search for documents in Typesense collections with powerful filtering; (2) calculate route between two locations; (3) get detailed information about a specific place; (4) gets a function within a parent catalog and schema; (5) deletes a function within a parent catalog and schema",
+      "subtasks": [
+        {
+          "server_intent": "Typesense operations",
+          "tool_intent": "search for documents in Typesense collections with powerful filtering",
+          "expected_tool_key": "Typesense::typesense_query"
+        },
+        {
+          "server_intent": "Travel Planner operations",
+          "tool_intent": "calculate route between two locations",
+          "expected_tool_key": "Travel Planner::calculateRoute"
+        },
+        {
+          "server_intent": "Travel Planner operations",
+          "tool_intent": "get detailed information about a specific place",
+          "expected_tool_key": "Travel Planner::getPlaceDetails"
+        },
+        {
+          "server_intent": "Unity Catalog operations",
+          "tool_intent": "gets a function within a parent catalog and schema",
+          "expected_tool_key": "Unity Catalog::uc_get_function"
+        },
+        {
+          "server_intent": "Unity Catalog operations",
+          "tool_intent": "deletes a function within a parent catalog and schema",
+          "expected_tool_key": "Unity Catalog::uc_delete_function"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0097",
+      "user_intent": "Single user turn #97: complete these intents in order: (1) adds an asset from the AssetDatabase to the Unity scene; (2) runs tests using the Unity Test Runner; (3) get a listing of files and folders in a directory; (4) read multiple files at once; (5) visualize a table of data using Vega-Lite syntax",
+      "subtasks": [
+        {
+          "server_intent": "Unity3d Game Engine operations",
+          "tool_intent": "adds an asset from the AssetDatabase to the Unity scene",
+          "expected_tool_key": "Unity3d Game Engine::add_asset_to_scene"
+        },
+        {
+          "server_intent": "Unity3d Game Engine operations",
+          "tool_intent": "runs tests using the Unity Test Runner",
+          "expected_tool_key": "Unity3d Game Engine::run_tests"
+        },
+        {
+          "server_intent": "Unity Integration (Advanced) operations",
+          "tool_intent": "get a listing of files and folders in a directory",
+          "expected_tool_key": "Unity Integration (Advanced)::list_directory"
+        },
+        {
+          "server_intent": "Unity Integration (Advanced) operations",
+          "tool_intent": "read multiple files at once",
+          "expected_tool_key": "Unity Integration (Advanced)::read_multiple_files"
+        },
+        {
+          "server_intent": "Vega-Lite operations",
+          "tool_intent": "visualize a table of data using Vega-Lite syntax",
+          "expected_tool_key": "Vega-Lite::visualize_data"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0098",
+      "user_intent": "Single user turn #98: complete these intents in order: (1) save a table of data aggregations to the server for later visualization; (2) searches videos using embeddings and keywords to find relevant matches; (3) generates a rendered video edit from a set of video files based on specified criteria; (4) replies to the article with the specified id; (5) sets the destination of the travel avatar",
+      "subtasks": [
+        {
+          "server_intent": "Vega-Lite operations",
+          "tool_intent": "save a table of data aggregations to the server for later visualization",
+          "expected_tool_key": "Vega-Lite::save_data"
+        },
+        {
+          "server_intent": "Video Editor operations",
+          "tool_intent": "searches videos using embeddings and keywords to find relevant matches",
+          "expected_tool_key": "Video Editor::search-videos"
+        },
+        {
+          "server_intent": "Video Editor operations",
+          "tool_intent": "generates a rendered video edit from a set of video files based on specified criteria",
+          "expected_tool_key": "Video Editor::generate-edit-from-videos"
+        },
+        {
+          "server_intent": "Virtual location (Google Street View,etc.) operations",
+          "tool_intent": "replies to the article with the specified id",
+          "expected_tool_key": "Virtual location (Google Street View,etc.)::reply_sns_writer"
+        },
+        {
+          "server_intent": "Virtual location (Google Street View,etc.) operations",
+          "tool_intent": "sets the destination of the travel avatar",
+          "expected_tool_key": "Virtual location (Google Street View,etc.)::set_traveler_destination_address"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0099",
+      "user_intent": "Single user turn #99: complete these intents in order: (1) retrieves an object from volcengine TOS; (2) returns a list of all buckets owned by the authenticated sender of the request; (3) retrieves detailed information about a specific Webflow site by ID, returning the same detailed info; (4) retrieves a list of all Webflow sites accessible to the authenticated user, returning detailed infor; (5) fetch recent whale transactions with optional filters for blockchain, minimum value, and limit",
+      "subtasks": [
+        {
+          "server_intent": "VolcEngine TOS operations",
+          "tool_intent": "retrieves an object from volcengine TOS",
+          "expected_tool_key": "VolcEngine TOS::get_object"
+        },
+        {
+          "server_intent": "VolcEngine TOS operations",
+          "tool_intent": "returns a list of all buckets owned by the authenticated sender of the request",
+          "expected_tool_key": "VolcEngine TOS::list_buckets"
+        },
+        {
+          "server_intent": "Webflow operations",
+          "tool_intent": "retrieves detailed information about a specific Webflow site by ID, returning the same detailed information as get_sites for a single site",
+          "expected_tool_key": "Webflow::get_site"
+        },
+        {
+          "server_intent": "Webflow operations",
+          "tool_intent": "retrieves a list of all Webflow sites accessible to the authenticated user, returning detailed information such as display name, site ID, creation date, and more",
+          "expected_tool_key": "Webflow::get_sites"
+        },
+        {
+          "server_intent": "whale-tracker-mcp operations",
+          "tool_intent": "fetch recent whale transactions with optional filters for blockchain, minimum value, and limit",
+          "expected_tool_key": "whale-tracker-mcp::get_recent_transactions"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-large-single_turn-0100",
+      "user_intent": "Single user turn #100: complete these intents in order: (1) retrieve detailed information about a specific transaction by its ID; (2) looks up WHOIS information about the specified IP address; (3) looks up WHOIS information about the specified domain; (4) search for a Wikidata property ID by its query; (5) retrieve the label and description for a given Wikidata entity ID in a specified language",
+      "subtasks": [
+        {
+          "server_intent": "whale-tracker-mcp operations",
+          "tool_intent": "retrieve detailed information about a specific transaction by its ID",
+          "expected_tool_key": "whale-tracker-mcp::get_transaction_details"
+        },
+        {
+          "server_intent": "Whois MCP operations",
+          "tool_intent": "looks up WHOIS information about the specified IP address",
+          "expected_tool_key": "Whois MCP::whois_ip"
+        },
+        {
+          "server_intent": "Whois MCP operations",
+          "tool_intent": "looks up WHOIS information about the specified domain",
+          "expected_tool_key": "Whois MCP::whois_domain"
+        },
+        {
+          "server_intent": "Wikidata MCP operations",
+          "tool_intent": "search for a Wikidata property ID by its query",
+          "expected_tool_key": "Wikidata MCP::search_property"
+        },
+        {
+          "server_intent": "Wikidata MCP operations",
+          "tool_intent": "retrieve the label and description for a given Wikidata entity ID in a specified language",
+          "expected_tool_key": "Wikidata MCP::get_metadata"
+        }
+      ]
+    }
+  ]
+}

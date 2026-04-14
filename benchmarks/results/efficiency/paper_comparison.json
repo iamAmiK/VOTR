@@ -1,0 +1,52 @@
+{
+  "mcp_zero": {
+    "source": "MCP-Zero paper (arXiv:2506.01056v4)",
+    "servers": 308,
+    "tools": 2797,
+    "top1_accuracy_pct": 95.2,
+    "avg_prompt_tokens_full_single_turn_apibank": 111.0,
+    "token_reduction_pct_full_single_turn_apibank": 98.24,
+    "full_catalogue_tokens_mcp_tools": 248100.0,
+    "latency_p50_ms": null,
+    "features": {
+      "hybrid_sparse_dense": false,
+      "dynamic_registry": false,
+      "adaptive_confidence_gated_k": false,
+      "compressed_schema_format": false
+    },
+    "notes": [
+      "Published token and accuracy numbers come from MCP-Zero's reported experiments, not a rerun on the VOTR benchmark harness.",
+      "No directly comparable end-to-end routing latency was located in the MCP-Zero paper."
+    ]
+  },
+  "votr": {
+    "source": "Local VOTR benchmark artifacts",
+    "servers": 309,
+    "tools": 2806,
+    "top1_accuracy_pct": 96.4,
+    "handoff_accuracy_pct": 98.2,
+    "avg_prompt_tokens_single_tool_large": 230.27,
+    "latency_p50_ms": 312.37,
+    "latency_p95_ms": 392.69,
+    "avg_handoff_k": 3.36,
+    "features": {
+      "hybrid_sparse_dense": true,
+      "dynamic_registry": true,
+      "adaptive_confidence_gated_k": true,
+      "compressed_schema_format": true
+    }
+  },
+  "full_catalog_savings": {
+    "tool_count": 2806,
+    "full_catalog_mcp_zero_style_tokens_same_index": 262487.0,
+    "full_catalog_votr_compact_tokens_same_index": 73650.0,
+    "votr_avg_route_tokens": 230.27,
+    "reduction_vs_full_catalog_mcp_zero_style_pct": 99.912,
+    "reduction_vs_full_catalog_votr_compact_pct": 99.687
+  },
+  "deltas": {
+    "top1_accuracy_gain_vs_mcp_zero_pct_points": 1.2,
+    "server_count_delta": 1,
+    "tool_count_delta": 9
+  }
+}

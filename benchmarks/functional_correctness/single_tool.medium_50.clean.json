@@ -1,0 +1,534 @@
+{
+  "suite": "single_tool.medium_50.clean",
+  "description": "Single-tool clean benchmark filtered to the curated medium 50-server catalog.",
+  "cases": [
+    {
+      "id": "st-clean-001",
+      "server_intent": "AgentQL operations",
+      "tool_intent": "extracts structured data from a given URL using a prompt to describe the data and fields to extract",
+      "expected_tool_key": "AgentQL::extract-web-data"
+    },
+    {
+      "id": "st-clean-002",
+      "server_intent": "Aiven operations",
+      "tool_intent": "list all projects on your Aiven account",
+      "expected_tool_key": "Aiven::list_projects"
+    },
+    {
+      "id": "st-clean-003",
+      "server_intent": "Aiven operations",
+      "tool_intent": "list all services in a specific Aiven project",
+      "expected_tool_key": "Aiven::list_services"
+    },
+    {
+      "id": "st-clean-010",
+      "server_intent": "APIMatic MCP operations",
+      "tool_intent": "validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary",
+      "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic"
+    },
+    {
+      "id": "st-clean-011",
+      "server_intent": "Arize Phoenix operations",
+      "tool_intent": "provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults",
+      "expected_tool_key": "Arize Phoenix::arize-phoenix-otel"
+    },
+    {
+      "id": "st-clean-012",
+      "server_intent": "Arize Phoenix operations",
+      "tool_intent": "mCP server implementation for Arize Phoenix providing a unified interface to Phoenix's capabilities",
+      "expected_tool_key": "Arize Phoenix::@arizeai/phoenix-mcp"
+    },
+    {
+      "id": "st-clean-013",
+      "server_intent": "Astra DB operations",
+      "tool_intent": "update an existing collection in the database",
+      "expected_tool_key": "Astra DB::UpdateCollection"
+    },
+    {
+      "id": "st-clean-014",
+      "server_intent": "Astra DB operations",
+      "tool_intent": "delete a collection from the database",
+      "expected_tool_key": "Astra DB::DeleteCollection"
+    },
+    {
+      "id": "st-clean-015",
+      "server_intent": "Audiense Insights operations",
+      "tool_intent": "retrieves available baseline audiences, optionally filtered by country",
+      "expected_tool_key": "Audiense Insights::get-baselines"
+    },
+    {
+      "id": "st-clean-016",
+      "server_intent": "Audiense Insights operations",
+      "tool_intent": "retrieves the list of available affinity categories that can be used in influencer comparisons",
+      "expected_tool_key": "Audiense Insights::get-categories"
+    },
+    {
+      "id": "st-clean-017",
+      "server_intent": "AWS S3 storage operations",
+      "tool_intent": "list all S3 buckets in my AWS account",
+      "expected_tool_key": "AWS::s3_bucket_list"
+    },
+    {
+      "id": "st-clean-018",
+      "server_intent": "AWS operations",
+      "tool_intent": "get content recommendations for AWS documentation pages",
+      "expected_tool_key": "AWS::Get Content Recommendations"
+    },
+    {
+      "id": "st-clean-019",
+      "server_intent": "Axiom operations",
+      "tool_intent": "execute APL queries against Axiom datasets",
+      "expected_tool_key": "Axiom::queryApl"
+    },
+    {
+      "id": "st-clean-020",
+      "server_intent": "Axiom operations",
+      "tool_intent": "list available Axiom datasets",
+      "expected_tool_key": "Axiom::listDatasets"
+    },
+    {
+      "id": "st-clean-021",
+      "server_intent": "Azure operations",
+      "tool_intent": "samples rows from a Kusto table",
+      "expected_tool_key": "Azure::Sample rows from a Kusto table"
+    },
+    {
+      "id": "st-clean-022",
+      "server_intent": "Azure operations",
+      "tool_intent": "lists, creates, and retrieves keys within an Azure Key Vault",
+      "expected_tool_key": "Azure::List, create, and get keys"
+    },
+    {
+      "id": "st-clean-025",
+      "server_intent": "Bitrise operations",
+      "tool_intent": "list Release Management installable artifacts of a connected app",
+      "expected_tool_key": "Bitrise::list_installable_artifacts"
+    },
+    {
+      "id": "st-clean-026",
+      "server_intent": "Bitrise operations",
+      "tool_intent": "changes whether public install page should be available for the installable artifact",
+      "expected_tool_key": "Bitrise::set_installable_artifact_public_install_page"
+    },
+    {
+      "id": "st-clean-027",
+      "server_intent": "Box operations",
+      "tool_intent": "ask Box AI about a hub",
+      "expected_tool_key": "Box::box_hubs_ask_ai_tool"
+    },
+    {
+      "id": "st-clean-028",
+      "server_intent": "Box operations",
+      "tool_intent": "list all Doc Gen jobs that used a specific template",
+      "expected_tool_key": "Box::box_docgen_template_list_jobs_tool"
+    },
+    {
+      "id": "st-clean-029",
+      "server_intent": "Chroma document retrieval operations",
+      "tool_intent": "read a Chroma document by document id",
+      "expected_tool_key": "Chroma::read_document"
+    },
+    {
+      "id": "st-clean-030",
+      "server_intent": "Chroma operations",
+      "tool_intent": "update existing documents' content, metadata, or embeddings",
+      "expected_tool_key": "Chroma::chroma_update_documents"
+    },
+    {
+      "id": "st-clean-031",
+      "server_intent": "CircleCI operations",
+      "tool_intent": "retrieves the status of the latest pipeline for a given branch",
+      "expected_tool_key": "CircleCI::get_latest_pipeline_status"
+    },
+    {
+      "id": "st-clean-032",
+      "server_intent": "CircleCI operations",
+      "tool_intent": "identifies flaky tests in a CircleCI project by analyzing test execution history",
+      "expected_tool_key": "CircleCI::find_flaky_tests"
+    },
+    {
+      "id": "st-clean-035",
+      "server_intent": "Codacy operations",
+      "tool_intent": "lists and filters code quality issues in a repository",
+      "expected_tool_key": "Codacy::codacy_list_repository_issues"
+    },
+    {
+      "id": "st-clean-036",
+      "server_intent": "Codacy operations",
+      "tool_intent": "get repository with analysis information, including metrics for Grade, Issues, Duplication, Complexity, and Coverage",
+      "expected_tool_key": "Codacy::codacy_get_repository_with_analysis"
+    },
+    {
+      "id": "st-clean-037",
+      "server_intent": "CodeLogic operations",
+      "tool_intent": "analyzes impacts between code and database entities",
+      "expected_tool_key": "CodeLogic::codelogic-database-impact"
+    },
+    {
+      "id": "st-clean-038",
+      "server_intent": "CodeLogic operations",
+      "tool_intent": "pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class",
+      "expected_tool_key": "CodeLogic::codelogic-method-impact"
+    },
+    {
+      "id": "st-clean-039",
+      "server_intent": "Comet Opik operations",
+      "tool_intent": "track and analyze trace data",
+      "expected_tool_key": "Comet Opik::Traces"
+    },
+    {
+      "id": "st-clean-040",
+      "server_intent": "Comet Opik operations",
+      "tool_intent": "organize and manage projects",
+      "expected_tool_key": "Comet Opik::Projects/Workspaces Management"
+    },
+    {
+      "id": "st-clean-041",
+      "server_intent": "Couchbase operations",
+      "tool_intent": "delete a document by ID from a specified scope and collection",
+      "expected_tool_key": "Couchbase::delete_document_by_id"
+    },
+    {
+      "id": "st-clean-042",
+      "server_intent": "Couchbase operations",
+      "tool_intent": "get a document by ID from a specified scope and collection",
+      "expected_tool_key": "Couchbase::get_document_by_id"
+    },
+    {
+      "id": "st-clean-043",
+      "server_intent": "Dart operations",
+      "tool_intent": "get information about the user's space, including available assignees, dartboards, folders, statuses, tags, priorities, and sizes",
+      "expected_tool_key": "Dart::get_config"
+    },
+    {
+      "id": "st-clean-044",
+      "server_intent": "Dart operations",
+      "tool_intent": "create a new doc with title, text content, and folder",
+      "expected_tool_key": "Dart::create_doc"
+    },
+    {
+      "id": "st-clean-045",
+      "server_intent": "DevHub operations",
+      "tool_intent": "updates an existing blog post's title and/or content",
+      "expected_tool_key": "DevHub::update_blog_post"
+    },
+    {
+      "id": "st-clean-046",
+      "server_intent": "DevHub operations",
+      "tool_intent": "gets all locations for a specific business",
+      "expected_tool_key": "DevHub::get_locations"
+    },
+    {
+      "id": "st-clean-047",
+      "server_intent": "Dynatrace operations",
+      "tool_intent": "sends Slack messages using the Slack Connector",
+      "expected_tool_key": "Dynatrace::send_slack_message"
+    },
+    {
+      "id": "st-clean-048",
+      "server_intent": "Dynatrace operations",
+      "tool_intent": "lists problem details from your services, such as Kubernetes",
+      "expected_tool_key": "Dynatrace::list_problems"
+    },
+    {
+      "id": "st-clean-049",
+      "server_intent": "EduBase operations",
+      "tool_intent": "retrieves user information from the EduBase platform",
+      "expected_tool_key": "EduBase::edubase_get_user"
+    },
+    {
+      "id": "st-clean-050",
+      "server_intent": "Elasticsearch index alias operations",
+      "tool_intent": "delete an alias from an Elasticsearch index",
+      "expected_tool_key": "Elasticsearch::delete_alias"
+    },
+    {
+      "id": "st-clean-051",
+      "server_intent": "Elasticsearch document operations",
+      "tool_intent": "get an Elasticsearch document by id from an index",
+      "expected_tool_key": "Elasticsearch::get_document"
+    },
+    {
+      "id": "st-clean-054",
+      "server_intent": "Exa operations",
+      "tool_intent": "specialized search focused on academic papers and research content",
+      "expected_tool_key": "Exa::research_paper_search"
+    },
+    {
+      "id": "st-clean-055",
+      "server_intent": "Exa operations",
+      "tool_intent": "performs real-time web searches with optimized results and content extraction",
+      "expected_tool_key": "Exa::web_search_exa"
+    },
+    {
+      "id": "st-clean-058",
+      "server_intent": "Fibery operations",
+      "tool_intent": "retrieves a list of all databases available in your Fibery workspace",
+      "expected_tool_key": "Fibery::list_databases"
+    },
+    {
+      "id": "st-clean-059",
+      "server_intent": "Fibery operations",
+      "tool_intent": "provides a detailed breakdown of a specific database's structure, showing all fields with their titles, names, and types",
+      "expected_tool_key": "Fibery::describe_database"
+    },
+    {
+      "id": "st-clean-062",
+      "server_intent": "Firecrawl operations",
+      "tool_intent": "start an asynchronous crawl with advanced options",
+      "expected_tool_key": "Firecrawl::firecrawl_crawl"
+    },
+    {
+      "id": "st-clean-063",
+      "server_intent": "Firecrawl operations",
+      "tool_intent": "search the web and optionally extract content from search results",
+      "expected_tool_key": "Firecrawl::firecrawl_search"
+    },
+    {
+      "id": "st-clean-064",
+      "server_intent": "Gitee operations",
+      "tool_intent": "comment on an issue",
+      "expected_tool_key": "Gitee::comment_issue"
+    },
+    {
+      "id": "st-clean-065",
+      "server_intent": "Gitee operations",
+      "tool_intent": "create a pull request",
+      "expected_tool_key": "Gitee::create_pull"
+    },
+    {
+      "id": "st-clean-070",
+      "server_intent": "Grafana operations",
+      "tool_intent": "list schedules from Grafana OnCall",
+      "expected_tool_key": "Grafana::list_oncall_schedules"
+    },
+    {
+      "id": "st-clean-071",
+      "server_intent": "Grafana operations",
+      "tool_intent": "list available metric names",
+      "expected_tool_key": "Grafana::list_prometheus_metric_names"
+    },
+    {
+      "id": "st-clean-074",
+      "server_intent": "GreptimeDB operations",
+      "tool_intent": "gets a prompt by name",
+      "expected_tool_key": "GreptimeDB::get_prompt"
+    },
+    {
+      "id": "st-clean-075",
+      "server_intent": "GreptimeDB operations",
+      "tool_intent": "lists tables in the database",
+      "expected_tool_key": "GreptimeDB::list_resources"
+    },
+    {
+      "id": "st-clean-076",
+      "server_intent": "Heroku operations",
+      "tool_intent": "list all add-ons for all apps or for a specific app",
+      "expected_tool_key": "Heroku::list_addons"
+    },
+    {
+      "id": "st-clean-077",
+      "server_intent": "Heroku operations",
+      "tool_intent": "view application logs",
+      "expected_tool_key": "Heroku::get_app_logs"
+    },
+    {
+      "id": "st-clean-078",
+      "server_intent": "Hologres operations",
+      "tool_intent": "execute a DML (INSERT, UPDATE, DELETE) SQL query on the Hologres server",
+      "expected_tool_key": "Hologres::execute_dml_sql"
+    },
+    {
+      "id": "st-clean-079",
+      "server_intent": "Hologres operations",
+      "tool_intent": "collect table statistics",
+      "expected_tool_key": "Hologres::gather_table_statistics"
+    },
+    {
+      "id": "st-clean-080",
+      "server_intent": "Hyperbrowser operations",
+      "tool_intent": "complex browser tasks using Claude computer use",
+      "expected_tool_key": "Hyperbrowser::claude_computer_use_agent"
+    },
+    {
+      "id": "st-clean-081",
+      "server_intent": "Hyperbrowser operations",
+      "tool_intent": "fast, lightweight browser automation with the Browser Use agent",
+      "expected_tool_key": "Hyperbrowser::browser_use_agent"
+    },
+    {
+      "id": "st-clean-084",
+      "server_intent": "Inkeep operations",
+      "tool_intent": "retrieves product documentation about Inkeep",
+      "expected_tool_key": "Inkeep::search-product-content"
+    },
+    {
+      "id": "st-clean-085",
+      "server_intent": "Kagi Search operations",
+      "tool_intent": "performs a web search to find information based on the query provided",
+      "expected_tool_key": "Kagi Search::search"
+    },
+    {
+      "id": "st-clean-086",
+      "server_intent": "Kagi Search operations",
+      "tool_intent": "generates a summary of the content, such as a video, based on the URL provided",
+      "expected_tool_key": "Kagi Search::summarizer"
+    },
+    {
+      "id": "st-clean-087",
+      "server_intent": "Keboola operations",
+      "tool_intent": "gets detailed information about a specific table including its DB identifier and column information",
+      "expected_tool_key": "Keboola::get_table_detail"
+    },
+    {
+      "id": "st-clean-088",
+      "server_intent": "Keboola operations",
+      "tool_intent": "retrieves detailed information about a specific job, identified by the job_id, including its status, parameters, results, and any relevant metadata",
+      "expected_tool_key": "Keboola::get_job_detail"
+    },
+    {
+      "id": "st-clean-118",
+      "server_intent": "Redis operations",
+      "tool_intent": "tools to store field-value pairs within a single key",
+      "expected_tool_key": "Redis::hash"
+    },
+    {
+      "id": "st-clean-119",
+      "server_intent": "Redis operations",
+      "tool_intent": "tools to add, remove and list set members",
+      "expected_tool_key": "Redis::set"
+    },
+    {
+      "id": "st-clean-138",
+      "server_intent": "Stripe operations",
+      "tool_intent": "creates a new invoice in Stripe",
+      "expected_tool_key": "Stripe::createInvoice"
+    },
+    {
+      "id": "st-clean-139",
+      "server_intent": "Stripe operations",
+      "tool_intent": "lists all subscriptions in Stripe",
+      "expected_tool_key": "Stripe::listSubscriptions"
+    },
+    {
+      "id": "st-clean-158",
+      "server_intent": "Airtable operations",
+      "tool_intent": "lists records from a specified Airtable table",
+      "expected_tool_key": "Airtable::list_records"
+    },
+    {
+      "id": "st-clean-159",
+      "server_intent": "Airtable operations",
+      "tool_intent": "search for records containing specific text",
+      "expected_tool_key": "Airtable::search_records"
+    },
+    {
+      "id": "st-clean-194",
+      "server_intent": "Chess.com operations",
+      "tool_intent": "get a player's profile from Chess.com",
+      "expected_tool_key": "Chess.com::get_player_profile"
+    },
+    {
+      "id": "st-clean-195",
+      "server_intent": "Chess.com operations",
+      "tool_intent": "get a player's stats from Chess.com",
+      "expected_tool_key": "Chess.com::get_player_stats"
+    },
+    {
+      "id": "st-clean-220",
+      "server_intent": "Datadog operations",
+      "tool_intent": "fetch events within a time range",
+      "expected_tool_key": "Datadog::get-events"
+    },
+    {
+      "id": "st-clean-221",
+      "server_intent": "Datadog operations",
+      "tool_intent": "get metadata for a specific metric",
+      "expected_tool_key": "Datadog::get-metric-metadata"
+    },
+    {
+      "id": "st-clean-240",
+      "server_intent": "Discord channel management",
+      "tool_intent": "delete a Discord channel by channel id",
+      "expected_tool_key": "Discord::delete_channel"
+    },
+    {
+      "id": "st-clean-241",
+      "server_intent": "Discord direct messaging",
+      "tool_intent": "send a Discord direct message to a user",
+      "expected_tool_key": "Discord::send_private_message"
+    },
+    {
+      "id": "st-clean-243",
+      "server_intent": "Docker operations",
+      "tool_intent": "creates a new Docker network",
+      "expected_tool_key": "Docker::create_network"
+    },
+    {
+      "id": "st-clean-244",
+      "server_intent": "Docker operations",
+      "tool_intent": "creates a new Docker volume",
+      "expected_tool_key": "Docker::create_volume"
+    },
+    {
+      "id": "st-clean-265",
+      "server_intent": "Git operations",
+      "tool_intent": "lists all available Git repositories",
+      "expected_tool_key": "Git::git_list_repositories"
+    },
+    {
+      "id": "st-clean-266",
+      "server_intent": "Git operations",
+      "tool_intent": "creates a new branch",
+      "expected_tool_key": "Git::git_create_branch"
+    },
+    {
+      "id": "st-clean-301",
+      "server_intent": "HubSpot operations",
+      "tool_intent": "retrieve recent conversation threads with messages",
+      "expected_tool_key": "HubSpot::hubspot_get_recent_conversations"
+    },
+    {
+      "id": "st-clean-302",
+      "server_intent": "HubSpot operations",
+      "tool_intent": "retrieve most recently active contacts",
+      "expected_tool_key": "HubSpot::hubspot_get_active_contacts"
+    },
+    {
+      "id": "st-clean-437",
+      "server_intent": "Shopify operations",
+      "tool_intent": "get a specific order by ID",
+      "expected_tool_key": "Shopify::get-order-by-id"
+    },
+    {
+      "id": "st-clean-438",
+      "server_intent": "Shopify operations",
+      "tool_intent": "get customers or search by name/email",
+      "expected_tool_key": "Shopify::get-customers"
+    },
+    {
+      "id": "st-clean-456",
+      "server_intent": "Talk To Figma operations",
+      "tool_intent": "get detailed information about multiple nodes by providing an array of node IDs",
+      "expected_tool_key": "Talk To Figma::get_nodes_info"
+    },
+    {
+      "id": "st-clean-457",
+      "server_intent": "Talk To Figma operations",
+      "tool_intent": "set horizontal and vertical sizing modes for auto-layout frames (FIXED, HUG, FILL)",
+      "expected_tool_key": "Talk To Figma::set_layout_sizing"
+    },
+    {
+      "id": "st-clean-462",
+      "server_intent": "Telegram operations",
+      "tool_intent": "unblock a user",
+      "expected_tool_key": "Telegram::unblock_user"
+    },
+    {
+      "id": "st-clean-463",
+      "server_intent": "Telegram operations",
+      "tool_intent": "bulk import contacts",
+      "expected_tool_key": "Telegram::import_contacts"
+    }
+  ]
+}

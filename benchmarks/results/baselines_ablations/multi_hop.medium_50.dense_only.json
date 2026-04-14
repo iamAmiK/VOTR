@@ -1,0 +1,366 @@
+{
+  "summary": {
+    "num_items": 15,
+    "top1_accuracy": 0.9333333333333333,
+    "top3_accuracy": 1.0,
+    "top5_accuracy": 1.0,
+    "handoff_accuracy_at_recommended_k": 1.0,
+    "avg_recommended_handoff_k": 5,
+    "confidence_buckets": {
+      "low": {
+        "count": 15,
+        "top1_accuracy": 0.9333333333333333,
+        "handoff_accuracy_at_recommended_k": 1.0
+      }
+    },
+    "num_cases": 3,
+    "chain_success_rate_at_1": 0.6666666666666666,
+    "chain_success_rate_at_3": 1.0,
+    "chain_success_rate_at_5": 1.0
+  },
+  "results": [
+    {
+      "case_id": "mh-medium-001",
+      "description": "Five-hop service inventory, state storage, billing, infrastructure, and outreach workflow",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Aiven operations",
+          "tool_intent": "list all services in a specific Aiven project",
+          "expected_tool_key": "Aiven::list_services",
+          "predicted_topk": [
+            "Aiven::list_services",
+            "Aiven::list_projects",
+            "Aiven::get_service_details",
+            "Keboola::retrieve_buckets",
+            "Axiom::listDatasets"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Redis operations",
+          "tool_intent": "tools to add, remove and list set members",
+          "expected_tool_key": "Redis::set",
+          "predicted_topk": [
+            "Redis::set",
+            "Redis::query engine",
+            "Redis::list",
+            "Redis::hash",
+            "Redis::streams"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Stripe operations",
+          "tool_intent": "creates a new invoice in Stripe",
+          "expected_tool_key": "Stripe::createInvoice",
+          "predicted_topk": [
+            "Stripe::createInvoice",
+            "Stripe::createInvoiceItem",
+            "Stripe::createCustomer",
+            "Stripe::createProduct",
+            "Stripe::createCoupon"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Docker operations",
+          "tool_intent": "creates a new Docker network",
+          "expected_tool_key": "Docker::create_network",
+          "predicted_topk": [
+            "Docker::create_network",
+            "Docker::remove_network",
+            "Docker::list_networks",
+            "Docker::create_volume",
+            "Docker::create_container"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "bulk import contacts",
+          "expected_tool_key": "Telegram::import_contacts",
+          "predicted_topk": [
+            "Telegram::import_contacts",
+            "Telegram::search_contacts",
+            "Telegram::export_contacts",
+            "Telegram::list_contacts",
+            "Telegram::add_contact"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        }
+      ]
+    },
+    {
+      "case_id": "mh-medium-002",
+      "description": "Five-hop analytics, cloud query, record search, profile lookup, and direct message workflow",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Axiom operations",
+          "tool_intent": "list available Axiom datasets",
+          "expected_tool_key": "Axiom::listDatasets",
+          "predicted_topk": [
+            "Axiom::listDatasets",
+            "Axiom::queryApl",
+            "Astra DB::GetCollections",
+            "Fibery::list_databases",
+            "Astra DB::ListRecords"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Azure operations",
+          "tool_intent": "samples rows from a Kusto table",
+          "expected_tool_key": "Azure::Sample rows from a Kusto table",
+          "predicted_topk": [
+            "Azure::Sample rows from a Kusto table",
+            "Azure::Get schema for a Kusto table",
+            "Azure::List tables in a Kusto database",
+            "Azure::Query Kusto databases using KQL",
+            "Azure::Query logs using KQL"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Airtable operations",
+          "tool_intent": "search for records containing specific text",
+          "expected_tool_key": "Airtable::search_records",
+          "predicted_topk": [
+            "Airtable::search_records",
+            "Airtable::get_record",
+            "Airtable::list_records",
+            "Airtable::update_records",
+            "Astra DB::FindRecord"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Chess.com operations",
+          "tool_intent": "get a player's profile from Chess.com",
+          "expected_tool_key": "Chess.com::get_player_profile",
+          "predicted_topk": [
+            "Chess.com::get_player_profile",
+            "Chess.com::get_player_stats",
+            "Chess.com::get_player_current_games",
+            "Chess.com::get_titled_players",
+            "Chess.com::get_club_members"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Discord direct messaging",
+          "tool_intent": "send a Discord direct message to a user",
+          "expected_tool_key": "Discord::send-message",
+          "predicted_topk": [
+            "Discord::send-message",
+            "Discord::read-messages",
+            "Telegram::send_message",
+            "Telegram::get_direct_chat_by_contact",
+            "Bitrise::invite_member_to_workspace"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0007684426229508205,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.015625
+        }
+      ]
+    },
+    {
+      "case_id": "mh-medium-003",
+      "description": "Five-hop monitoring, source control, CRM, commerce, and design workflow",
+      "chain_success_at_1": false,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "Datadog operations",
+          "tool_intent": "fetch events within a time range",
+          "expected_tool_key": "Datadog::get-events",
+          "predicted_topk": [
+            "Datadog::get-events",
+            "Datadog::get-monitors",
+            "Datadog::get-incidents",
+            "Datadog::search-logs",
+            "Datadog::aggregate-logs"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Git operations",
+          "tool_intent": "creates a new branch",
+          "expected_tool_key": "Git::git_create_branch",
+          "predicted_topk": [
+            "GitHub::create_branch",
+            "Git::git_create_branch",
+            "Git::git_checkout",
+            "GitHub::create_pull_request",
+            "GitHub::create_repository"
+          ],
+          "hit_at_1": false,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "HubSpot operations",
+          "tool_intent": "retrieve most recently active contacts",
+          "expected_tool_key": "HubSpot::hubspot_get_active_contacts",
+          "predicted_topk": [
+            "HubSpot::hubspot_get_active_contacts",
+            "HubSpot::hubspot_get_active_companies",
+            "HubSpot::hubspot_get_recent_conversations",
+            "HubSpot::hubspot_get_company_activity",
+            "HubSpot::hubspot_create_contact"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Shopify operations",
+          "tool_intent": "get customers or search by name/email",
+          "expected_tool_key": "Shopify::get-customers",
+          "predicted_topk": [
+            "Shopify::get-customers",
+            "Shopify::get-products",
+            "Shopify::update-customer",
+            "Shopify::get-customer-orders",
+            "Shopify::get-orders"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Talk To Figma operations",
+          "tool_intent": "get detailed information about multiple nodes by providing an array of node IDs",
+          "expected_tool_key": "Talk To Figma::get_nodes_info",
+          "predicted_topk": [
+            "Talk To Figma::get_nodes_info",
+            "Talk To Figma::get_node_info",
+            "Talk To Figma::read_my_design",
+            "Talk To Figma::delete_multiple_nodes",
+            "Talk To Figma::set_multiple_text_contents"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        }
+      ]
+    }
+  ],
+  "suite": "multi_hop.medium_50.cross_app"
+}

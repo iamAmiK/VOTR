@@ -1,0 +1,99 @@
+{
+  "suite": "multi_hop.medium_50.cross_app",
+  "description": "Router-only multi-hop functional correctness benchmark for the curated medium 50-server catalog.",
+  "cases": [
+    {
+      "id": "mh-medium-001",
+      "description": "Five-hop service inventory, state storage, billing, infrastructure, and outreach workflow",
+      "hops": [
+        {
+          "server_intent": "Aiven operations",
+          "tool_intent": "list all services in a specific Aiven project",
+          "expected_tool_key": "Aiven::list_services"
+        },
+        {
+          "server_intent": "Redis operations",
+          "tool_intent": "tools to add, remove and list set members",
+          "expected_tool_key": "Redis::set"
+        },
+        {
+          "server_intent": "Stripe operations",
+          "tool_intent": "creates a new invoice in Stripe",
+          "expected_tool_key": "Stripe::createInvoice"
+        },
+        {
+          "server_intent": "Docker operations",
+          "tool_intent": "creates a new Docker network",
+          "expected_tool_key": "Docker::create_network"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "bulk import contacts",
+          "expected_tool_key": "Telegram::import_contacts"
+        }
+      ]
+    },
+    {
+      "id": "mh-medium-002",
+      "description": "Five-hop analytics, cloud query, record search, profile lookup, and direct message workflow",
+      "hops": [
+        {
+          "server_intent": "Axiom operations",
+          "tool_intent": "list available Axiom datasets",
+          "expected_tool_key": "Axiom::listDatasets"
+        },
+        {
+          "server_intent": "Azure operations",
+          "tool_intent": "samples rows from a Kusto table",
+          "expected_tool_key": "Azure::Sample rows from a Kusto table"
+        },
+        {
+          "server_intent": "Airtable operations",
+          "tool_intent": "search for records containing specific text",
+          "expected_tool_key": "Airtable::search_records"
+        },
+        {
+          "server_intent": "Chess.com operations",
+          "tool_intent": "get a player's profile from Chess.com",
+          "expected_tool_key": "Chess.com::get_player_profile"
+        },
+        {
+          "server_intent": "Discord direct messaging",
+          "tool_intent": "send a Discord direct message to a user",
+          "expected_tool_key": "Discord::send-message"
+        }
+      ]
+    },
+    {
+      "id": "mh-medium-003",
+      "description": "Five-hop monitoring, source control, CRM, commerce, and design workflow",
+      "hops": [
+        {
+          "server_intent": "Datadog operations",
+          "tool_intent": "fetch events within a time range",
+          "expected_tool_key": "Datadog::get-events"
+        },
+        {
+          "server_intent": "Git operations",
+          "tool_intent": "creates a new branch",
+          "expected_tool_key": "Git::git_create_branch"
+        },
+        {
+          "server_intent": "HubSpot operations",
+          "tool_intent": "retrieve most recently active contacts",
+          "expected_tool_key": "HubSpot::hubspot_get_active_contacts"
+        },
+        {
+          "server_intent": "Shopify operations",
+          "tool_intent": "get customers or search by name/email",
+          "expected_tool_key": "Shopify::get-customers"
+        },
+        {
+          "server_intent": "Talk To Figma operations",
+          "tool_intent": "get detailed information about multiple nodes by providing an array of node IDs",
+          "expected_tool_key": "Talk To Figma::get_nodes_info"
+        }
+      ]
+    }
+  ]
+}

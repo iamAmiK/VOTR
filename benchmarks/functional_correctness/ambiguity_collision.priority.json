@@ -1,0 +1,114 @@
+{
+  "suite": "ambiguity_collision.priority",
+  "description": "High-priority ambiguity and collision benchmark covering near-duplicate tools, same-server confusions, and overlapping cross-server capabilities.",
+  "cases": [
+    {
+      "id": "amb-001",
+      "server_intent": "Google Sheets documents",
+      "tool_intent": "list spreadsheets available in the account",
+      "expected_tool_key": "Google Sheets::listSpreadsheets"
+    },
+    {
+      "id": "amb-002",
+      "server_intent": "Google Sheets documents",
+      "tool_intent": "list tabs or sheets inside a spreadsheet",
+      "expected_tool_key": "Google Sheets::listSheets"
+    },
+    {
+      "id": "amb-003",
+      "server_intent": "Filesystem operations",
+      "tool_intent": "list the contents of a directory path",
+      "expected_tool_key": "Filesystem::list_directory"
+    },
+    {
+      "id": "amb-004",
+      "server_intent": "Filesystem operations",
+      "tool_intent": "show which directories this server is allowed to access",
+      "expected_tool_key": "Filesystem::list_allowed_directories"
+    },
+    {
+      "id": "amb-005",
+      "server_intent": "GitHub repository operations",
+      "tool_intent": "list pull requests for a repository",
+      "expected_tool_key": "GitHub::list_pull_requests"
+    },
+    {
+      "id": "amb-006",
+      "server_intent": "GitHub repository operations",
+      "tool_intent": "list issues in a specific repository",
+      "expected_tool_key": "GitHub::list_issues"
+    },
+    {
+      "id": "amb-007",
+      "server_intent": "GitHub repository operations",
+      "tool_intent": "search issues across repositories using keywords",
+      "expected_tool_key": "GitHub::search_issues"
+    },
+    {
+      "id": "amb-008",
+      "server_intent": "Slack messaging operations",
+      "tool_intent": "post a fresh message into a channel",
+      "expected_tool_key": "Slack::slack_post_message"
+    },
+    {
+      "id": "amb-009",
+      "server_intent": "Slack messaging operations",
+      "tool_intent": "reply to an existing thread instead of posting a new top-level message",
+      "expected_tool_key": "Slack::slack_reply_to_thread"
+    },
+    {
+      "id": "amb-010",
+      "server_intent": "Telegram messaging operations",
+      "tool_intent": "send a new message to a chat",
+      "expected_tool_key": "Telegram::send_message"
+    },
+    {
+      "id": "amb-011",
+      "server_intent": "Telegram messaging operations",
+      "tool_intent": "reply to a specific existing message in a chat",
+      "expected_tool_key": "Telegram::reply_to_message"
+    },
+    {
+      "id": "amb-012",
+      "server_intent": "Google Tasks todo operations",
+      "tool_intent": "delete one task from a task list",
+      "expected_tool_key": "Google Tasks::delete"
+    },
+    {
+      "id": "amb-013",
+      "server_intent": "Google Tasks todo operations",
+      "tool_intent": "clear completed tasks from a task list",
+      "expected_tool_key": "Google Tasks::clear"
+    },
+    {
+      "id": "amb-014",
+      "server_intent": "Linear issue tracking",
+      "tool_intent": "create a new issue",
+      "expected_tool_key": "Linear::linear_create_issue"
+    },
+    {
+      "id": "amb-015",
+      "server_intent": "Linear issue tracking",
+      "tool_intent": "update fields or status for an existing issue",
+      "expected_tool_key": "Linear::linear_update_issue"
+    },
+    {
+      "id": "amb-016",
+      "server_intent": "Xero accounting operations",
+      "tool_intent": "list quotes",
+      "expected_tool_key": "Xero::list-quotes"
+    },
+    {
+      "id": "amb-017",
+      "server_intent": "Xero accounting operations",
+      "tool_intent": "list invoices",
+      "expected_tool_key": "Xero::list-invoices"
+    },
+    {
+      "id": "amb-018",
+      "server_intent": "Google Drive file operations",
+      "tool_intent": "search files by name or content",
+      "expected_tool_key": "Google Drive::search"
+    }
+  ]
+}

@@ -1,0 +1,1506 @@
+{
+  "suite": "single_tool.medium_250.clean",
+  "description": "Router-only single-tool benchmark for the medium 50-server catalog (250 evaluation queries).",
+  "cases": [
+    {
+      "id": "st-medium-0001",
+      "server_intent": "AgentQL operations",
+      "tool_intent": "extracts structured data from a given URL using a prompt to describe the data and fields to extract",
+      "expected_tool_key": "AgentQL::extract-web-data"
+    },
+    {
+      "id": "st-medium-0002",
+      "server_intent": "Aiven operations",
+      "tool_intent": "list all projects on your Aiven account",
+      "expected_tool_key": "Aiven::list_projects"
+    },
+    {
+      "id": "st-medium-0003",
+      "server_intent": "Aiven operations",
+      "tool_intent": "list all services in a specific Aiven project",
+      "expected_tool_key": "Aiven::list_services"
+    },
+    {
+      "id": "st-medium-0004",
+      "server_intent": "APIMatic MCP operations",
+      "tool_intent": "validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary",
+      "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic"
+    },
+    {
+      "id": "st-medium-0005",
+      "server_intent": "Arize Phoenix operations",
+      "tool_intent": "provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults",
+      "expected_tool_key": "Arize Phoenix::arize-phoenix-otel"
+    },
+    {
+      "id": "st-medium-0006",
+      "server_intent": "Arize Phoenix operations",
+      "tool_intent": "mCP server implementation for Arize Phoenix providing a unified interface to Phoenix's capabilities",
+      "expected_tool_key": "Arize Phoenix::@arizeai/phoenix-mcp"
+    },
+    {
+      "id": "st-medium-0007",
+      "server_intent": "Astra DB operations",
+      "tool_intent": "update an existing collection in the database",
+      "expected_tool_key": "Astra DB::UpdateCollection"
+    },
+    {
+      "id": "st-medium-0008",
+      "server_intent": "Astra DB operations",
+      "tool_intent": "delete a collection from the database",
+      "expected_tool_key": "Astra DB::DeleteCollection"
+    },
+    {
+      "id": "st-medium-0009",
+      "server_intent": "Audiense Insights operations",
+      "tool_intent": "retrieves available baseline audiences, optionally filtered by country",
+      "expected_tool_key": "Audiense Insights::get-baselines"
+    },
+    {
+      "id": "st-medium-0010",
+      "server_intent": "Audiense Insights operations",
+      "tool_intent": "retrieves the list of available affinity categories that can be used in influencer comparisons",
+      "expected_tool_key": "Audiense Insights::get-categories"
+    },
+    {
+      "id": "st-medium-0011",
+      "server_intent": "AWS S3 storage operations",
+      "tool_intent": "list all S3 buckets in my AWS account",
+      "expected_tool_key": "AWS::s3_bucket_list"
+    },
+    {
+      "id": "st-medium-0012",
+      "server_intent": "AWS operations",
+      "tool_intent": "get content recommendations for AWS documentation pages",
+      "expected_tool_key": "AWS::Get Content Recommendations"
+    },
+    {
+      "id": "st-medium-0013",
+      "server_intent": "Axiom operations",
+      "tool_intent": "execute APL queries against Axiom datasets",
+      "expected_tool_key": "Axiom::queryApl"
+    },
+    {
+      "id": "st-medium-0014",
+      "server_intent": "Axiom operations",
+      "tool_intent": "list available Axiom datasets",
+      "expected_tool_key": "Axiom::listDatasets"
+    },
+    {
+      "id": "st-medium-0015",
+      "server_intent": "Azure operations",
+      "tool_intent": "samples rows from a Kusto table",
+      "expected_tool_key": "Azure::Sample rows from a Kusto table"
+    },
+    {
+      "id": "st-medium-0016",
+      "server_intent": "Azure operations",
+      "tool_intent": "lists, creates, and retrieves keys within an Azure Key Vault",
+      "expected_tool_key": "Azure::List, create, and get keys"
+    },
+    {
+      "id": "st-medium-0017",
+      "server_intent": "Bitrise operations",
+      "tool_intent": "list Release Management installable artifacts of a connected app",
+      "expected_tool_key": "Bitrise::list_installable_artifacts"
+    },
+    {
+      "id": "st-medium-0018",
+      "server_intent": "Bitrise operations",
+      "tool_intent": "changes whether public install page should be available for the installable artifact",
+      "expected_tool_key": "Bitrise::set_installable_artifact_public_install_page"
+    },
+    {
+      "id": "st-medium-0019",
+      "server_intent": "Box operations",
+      "tool_intent": "ask Box AI about a hub",
+      "expected_tool_key": "Box::box_hubs_ask_ai_tool"
+    },
+    {
+      "id": "st-medium-0020",
+      "server_intent": "Box operations",
+      "tool_intent": "list all Doc Gen jobs that used a specific template",
+      "expected_tool_key": "Box::box_docgen_template_list_jobs_tool"
+    },
+    {
+      "id": "st-medium-0021",
+      "server_intent": "Chroma document retrieval operations",
+      "tool_intent": "read a Chroma document by document id",
+      "expected_tool_key": "Chroma::read_document"
+    },
+    {
+      "id": "st-medium-0022",
+      "server_intent": "Chroma operations",
+      "tool_intent": "update existing documents' content, metadata, or embeddings",
+      "expected_tool_key": "Chroma::chroma_update_documents"
+    },
+    {
+      "id": "st-medium-0023",
+      "server_intent": "CircleCI operations",
+      "tool_intent": "retrieves the status of the latest pipeline for a given branch",
+      "expected_tool_key": "CircleCI::get_latest_pipeline_status"
+    },
+    {
+      "id": "st-medium-0024",
+      "server_intent": "CircleCI operations",
+      "tool_intent": "identifies flaky tests in a CircleCI project by analyzing test execution history",
+      "expected_tool_key": "CircleCI::find_flaky_tests"
+    },
+    {
+      "id": "st-medium-0025",
+      "server_intent": "Codacy operations",
+      "tool_intent": "lists and filters code quality issues in a repository",
+      "expected_tool_key": "Codacy::codacy_list_repository_issues"
+    },
+    {
+      "id": "st-medium-0026",
+      "server_intent": "Codacy operations",
+      "tool_intent": "get repository with analysis information, including metrics for Grade, Issues, Duplication, Complexity, and Coverage",
+      "expected_tool_key": "Codacy::codacy_get_repository_with_analysis"
+    },
+    {
+      "id": "st-medium-0027",
+      "server_intent": "CodeLogic operations",
+      "tool_intent": "analyzes impacts between code and database entities",
+      "expected_tool_key": "CodeLogic::codelogic-database-impact"
+    },
+    {
+      "id": "st-medium-0028",
+      "server_intent": "CodeLogic operations",
+      "tool_intent": "pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class",
+      "expected_tool_key": "CodeLogic::codelogic-method-impact"
+    },
+    {
+      "id": "st-medium-0029",
+      "server_intent": "Comet Opik operations",
+      "tool_intent": "track and analyze trace data",
+      "expected_tool_key": "Comet Opik::Traces"
+    },
+    {
+      "id": "st-medium-0030",
+      "server_intent": "Comet Opik operations",
+      "tool_intent": "organize and manage projects",
+      "expected_tool_key": "Comet Opik::Projects/Workspaces Management"
+    },
+    {
+      "id": "st-medium-0031",
+      "server_intent": "Couchbase operations",
+      "tool_intent": "delete a document by ID from a specified scope and collection",
+      "expected_tool_key": "Couchbase::delete_document_by_id"
+    },
+    {
+      "id": "st-medium-0032",
+      "server_intent": "Couchbase operations",
+      "tool_intent": "get a document by ID from a specified scope and collection",
+      "expected_tool_key": "Couchbase::get_document_by_id"
+    },
+    {
+      "id": "st-medium-0033",
+      "server_intent": "Dart operations",
+      "tool_intent": "get information about the user's space, including available assignees, dartboards, folders, statuses, tags, priorities, and sizes",
+      "expected_tool_key": "Dart::get_config"
+    },
+    {
+      "id": "st-medium-0034",
+      "server_intent": "Dart operations",
+      "tool_intent": "create a new doc with title, text content, and folder",
+      "expected_tool_key": "Dart::create_doc"
+    },
+    {
+      "id": "st-medium-0035",
+      "server_intent": "DevHub operations",
+      "tool_intent": "updates an existing blog post's title and/or content",
+      "expected_tool_key": "DevHub::update_blog_post"
+    },
+    {
+      "id": "st-medium-0036",
+      "server_intent": "DevHub operations",
+      "tool_intent": "gets all locations for a specific business",
+      "expected_tool_key": "DevHub::get_locations"
+    },
+    {
+      "id": "st-medium-0037",
+      "server_intent": "Dynatrace operations",
+      "tool_intent": "sends Slack messages using the Slack Connector",
+      "expected_tool_key": "Dynatrace::send_slack_message"
+    },
+    {
+      "id": "st-medium-0038",
+      "server_intent": "Dynatrace operations",
+      "tool_intent": "lists problem details from your services, such as Kubernetes",
+      "expected_tool_key": "Dynatrace::list_problems"
+    },
+    {
+      "id": "st-medium-0039",
+      "server_intent": "EduBase operations",
+      "tool_intent": "retrieves user information from the EduBase platform",
+      "expected_tool_key": "EduBase::edubase_get_user"
+    },
+    {
+      "id": "st-medium-0040",
+      "server_intent": "Elasticsearch index alias operations",
+      "tool_intent": "delete an alias from an Elasticsearch index",
+      "expected_tool_key": "Elasticsearch::delete_alias"
+    },
+    {
+      "id": "st-medium-0041",
+      "server_intent": "Elasticsearch document operations",
+      "tool_intent": "get an Elasticsearch document by id from an index",
+      "expected_tool_key": "Elasticsearch::get_document"
+    },
+    {
+      "id": "st-medium-0042",
+      "server_intent": "Exa operations",
+      "tool_intent": "specialized search focused on academic papers and research content",
+      "expected_tool_key": "Exa::research_paper_search"
+    },
+    {
+      "id": "st-medium-0043",
+      "server_intent": "Exa operations",
+      "tool_intent": "performs real-time web searches with optimized results and content extraction",
+      "expected_tool_key": "Exa::web_search_exa"
+    },
+    {
+      "id": "st-medium-0044",
+      "server_intent": "Fibery operations",
+      "tool_intent": "retrieves a list of all databases available in your Fibery workspace",
+      "expected_tool_key": "Fibery::list_databases"
+    },
+    {
+      "id": "st-medium-0045",
+      "server_intent": "Fibery operations",
+      "tool_intent": "provides a detailed breakdown of a specific database's structure, showing all fields with their titles, names, and types",
+      "expected_tool_key": "Fibery::describe_database"
+    },
+    {
+      "id": "st-medium-0046",
+      "server_intent": "Firecrawl operations",
+      "tool_intent": "start an asynchronous crawl with advanced options",
+      "expected_tool_key": "Firecrawl::firecrawl_crawl"
+    },
+    {
+      "id": "st-medium-0047",
+      "server_intent": "Firecrawl operations",
+      "tool_intent": "search the web and optionally extract content from search results",
+      "expected_tool_key": "Firecrawl::firecrawl_search"
+    },
+    {
+      "id": "st-medium-0048",
+      "server_intent": "Gitee operations",
+      "tool_intent": "comment on an issue",
+      "expected_tool_key": "Gitee::comment_issue"
+    },
+    {
+      "id": "st-medium-0049",
+      "server_intent": "Gitee operations",
+      "tool_intent": "create a pull request",
+      "expected_tool_key": "Gitee::create_pull"
+    },
+    {
+      "id": "st-medium-0050",
+      "server_intent": "Grafana operations",
+      "tool_intent": "list schedules from Grafana OnCall",
+      "expected_tool_key": "Grafana::list_oncall_schedules"
+    },
+    {
+      "id": "st-medium-0051",
+      "server_intent": "Grafana operations",
+      "tool_intent": "list available metric names",
+      "expected_tool_key": "Grafana::list_prometheus_metric_names"
+    },
+    {
+      "id": "st-medium-0052",
+      "server_intent": "GreptimeDB operations",
+      "tool_intent": "gets a prompt by name",
+      "expected_tool_key": "GreptimeDB::get_prompt"
+    },
+    {
+      "id": "st-medium-0053",
+      "server_intent": "GreptimeDB operations",
+      "tool_intent": "lists tables in the database",
+      "expected_tool_key": "GreptimeDB::list_resources"
+    },
+    {
+      "id": "st-medium-0054",
+      "server_intent": "Heroku operations",
+      "tool_intent": "list all add-ons for all apps or for a specific app",
+      "expected_tool_key": "Heroku::list_addons"
+    },
+    {
+      "id": "st-medium-0055",
+      "server_intent": "Heroku operations",
+      "tool_intent": "view application logs",
+      "expected_tool_key": "Heroku::get_app_logs"
+    },
+    {
+      "id": "st-medium-0056",
+      "server_intent": "Hologres operations",
+      "tool_intent": "execute a DML (INSERT, UPDATE, DELETE) SQL query on the Hologres server",
+      "expected_tool_key": "Hologres::execute_dml_sql"
+    },
+    {
+      "id": "st-medium-0057",
+      "server_intent": "Hologres operations",
+      "tool_intent": "collect table statistics",
+      "expected_tool_key": "Hologres::gather_table_statistics"
+    },
+    {
+      "id": "st-medium-0058",
+      "server_intent": "Hyperbrowser operations",
+      "tool_intent": "complex browser tasks using Claude computer use",
+      "expected_tool_key": "Hyperbrowser::claude_computer_use_agent"
+    },
+    {
+      "id": "st-medium-0059",
+      "server_intent": "Hyperbrowser operations",
+      "tool_intent": "fast, lightweight browser automation with the Browser Use agent",
+      "expected_tool_key": "Hyperbrowser::browser_use_agent"
+    },
+    {
+      "id": "st-medium-0060",
+      "server_intent": "Inkeep operations",
+      "tool_intent": "retrieves product documentation about Inkeep",
+      "expected_tool_key": "Inkeep::search-product-content"
+    },
+    {
+      "id": "st-medium-0061",
+      "server_intent": "Kagi Search operations",
+      "tool_intent": "performs a web search to find information based on the query provided",
+      "expected_tool_key": "Kagi Search::search"
+    },
+    {
+      "id": "st-medium-0062",
+      "server_intent": "Kagi Search operations",
+      "tool_intent": "generates a summary of the content, such as a video, based on the URL provided",
+      "expected_tool_key": "Kagi Search::summarizer"
+    },
+    {
+      "id": "st-medium-0063",
+      "server_intent": "Keboola operations",
+      "tool_intent": "gets detailed information about a specific table including its DB identifier and column information",
+      "expected_tool_key": "Keboola::get_table_detail"
+    },
+    {
+      "id": "st-medium-0064",
+      "server_intent": "Keboola operations",
+      "tool_intent": "retrieves detailed information about a specific job, identified by the job_id, including its status, parameters, results, and any relevant metadata",
+      "expected_tool_key": "Keboola::get_job_detail"
+    },
+    {
+      "id": "st-medium-0065",
+      "server_intent": "Redis operations",
+      "tool_intent": "tools to store field-value pairs within a single key",
+      "expected_tool_key": "Redis::hash"
+    },
+    {
+      "id": "st-medium-0066",
+      "server_intent": "Redis operations",
+      "tool_intent": "tools to add, remove and list set members",
+      "expected_tool_key": "Redis::set"
+    },
+    {
+      "id": "st-medium-0067",
+      "server_intent": "Stripe operations",
+      "tool_intent": "creates a new invoice in Stripe",
+      "expected_tool_key": "Stripe::createInvoice"
+    },
+    {
+      "id": "st-medium-0068",
+      "server_intent": "Stripe operations",
+      "tool_intent": "lists all subscriptions in Stripe",
+      "expected_tool_key": "Stripe::listSubscriptions"
+    },
+    {
+      "id": "st-medium-0069",
+      "server_intent": "Airtable operations",
+      "tool_intent": "lists records from a specified Airtable table",
+      "expected_tool_key": "Airtable::list_records"
+    },
+    {
+      "id": "st-medium-0070",
+      "server_intent": "Airtable operations",
+      "tool_intent": "search for records containing specific text",
+      "expected_tool_key": "Airtable::search_records"
+    },
+    {
+      "id": "st-medium-0071",
+      "server_intent": "Chess.com operations",
+      "tool_intent": "get a player's profile from Chess.com",
+      "expected_tool_key": "Chess.com::get_player_profile"
+    },
+    {
+      "id": "st-medium-0072",
+      "server_intent": "Chess.com operations",
+      "tool_intent": "get a player's stats from Chess.com",
+      "expected_tool_key": "Chess.com::get_player_stats"
+    },
+    {
+      "id": "st-medium-0073",
+      "server_intent": "Datadog operations",
+      "tool_intent": "fetch events within a time range",
+      "expected_tool_key": "Datadog::get-events"
+    },
+    {
+      "id": "st-medium-0074",
+      "server_intent": "Datadog operations",
+      "tool_intent": "get metadata for a specific metric",
+      "expected_tool_key": "Datadog::get-metric-metadata"
+    },
+    {
+      "id": "st-medium-0075",
+      "server_intent": "Discord channel management",
+      "tool_intent": "delete a Discord channel by channel id",
+      "expected_tool_key": "Discord::delete_channel"
+    },
+    {
+      "id": "st-medium-0076",
+      "server_intent": "Discord direct messaging",
+      "tool_intent": "send a Discord direct message to a user",
+      "expected_tool_key": "Discord::send_private_message"
+    },
+    {
+      "id": "st-medium-0077",
+      "server_intent": "Docker operations",
+      "tool_intent": "creates a new Docker network",
+      "expected_tool_key": "Docker::create_network"
+    },
+    {
+      "id": "st-medium-0078",
+      "server_intent": "Docker operations",
+      "tool_intent": "creates a new Docker volume",
+      "expected_tool_key": "Docker::create_volume"
+    },
+    {
+      "id": "st-medium-0079",
+      "server_intent": "Git operations",
+      "tool_intent": "lists all available Git repositories",
+      "expected_tool_key": "Git::git_list_repositories"
+    },
+    {
+      "id": "st-medium-0080",
+      "server_intent": "Git operations",
+      "tool_intent": "creates a new branch",
+      "expected_tool_key": "Git::git_create_branch"
+    },
+    {
+      "id": "st-medium-0081",
+      "server_intent": "HubSpot operations",
+      "tool_intent": "retrieve recent conversation threads with messages",
+      "expected_tool_key": "HubSpot::hubspot_get_recent_conversations"
+    },
+    {
+      "id": "st-medium-0082",
+      "server_intent": "HubSpot operations",
+      "tool_intent": "retrieve most recently active contacts",
+      "expected_tool_key": "HubSpot::hubspot_get_active_contacts"
+    },
+    {
+      "id": "st-medium-0083",
+      "server_intent": "Shopify operations",
+      "tool_intent": "get a specific order by ID",
+      "expected_tool_key": "Shopify::get-order-by-id"
+    },
+    {
+      "id": "st-medium-0084",
+      "server_intent": "Shopify operations",
+      "tool_intent": "get customers or search by name/email",
+      "expected_tool_key": "Shopify::get-customers"
+    },
+    {
+      "id": "st-medium-0085",
+      "server_intent": "Talk To Figma operations",
+      "tool_intent": "get detailed information about multiple nodes by providing an array of node IDs",
+      "expected_tool_key": "Talk To Figma::get_nodes_info"
+    },
+    {
+      "id": "st-medium-0086",
+      "server_intent": "Talk To Figma operations",
+      "tool_intent": "set horizontal and vertical sizing modes for auto-layout frames (FIXED, HUG, FILL)",
+      "expected_tool_key": "Talk To Figma::set_layout_sizing"
+    },
+    {
+      "id": "st-medium-0087",
+      "server_intent": "Telegram operations",
+      "tool_intent": "unblock a user",
+      "expected_tool_key": "Telegram::unblock_user"
+    },
+    {
+      "id": "st-medium-0088",
+      "server_intent": "Telegram operations",
+      "tool_intent": "bulk import contacts",
+      "expected_tool_key": "Telegram::import_contacts"
+    },
+    {
+      "id": "st-medium-0089",
+      "server_intent": "AgentQL operations",
+      "tool_intent": "extracts structured data from a given URL using a prompt to describe the data and fields to extract",
+      "expected_tool_key": "AgentQL::extract-web-data"
+    },
+    {
+      "id": "st-medium-0090",
+      "server_intent": "Aiven operations",
+      "tool_intent": "list all projects on your Aiven account",
+      "expected_tool_key": "Aiven::list_projects"
+    },
+    {
+      "id": "st-medium-0091",
+      "server_intent": "Aiven operations",
+      "tool_intent": "list all services in a specific Aiven project",
+      "expected_tool_key": "Aiven::list_services"
+    },
+    {
+      "id": "st-medium-0092",
+      "server_intent": "APIMatic MCP operations",
+      "tool_intent": "validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary",
+      "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic"
+    },
+    {
+      "id": "st-medium-0093",
+      "server_intent": "Arize Phoenix operations",
+      "tool_intent": "provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults",
+      "expected_tool_key": "Arize Phoenix::arize-phoenix-otel"
+    },
+    {
+      "id": "st-medium-0094",
+      "server_intent": "Arize Phoenix operations",
+      "tool_intent": "mCP server implementation for Arize Phoenix providing a unified interface to Phoenix's capabilities",
+      "expected_tool_key": "Arize Phoenix::@arizeai/phoenix-mcp"
+    },
+    {
+      "id": "st-medium-0095",
+      "server_intent": "Astra DB operations",
+      "tool_intent": "update an existing collection in the database",
+      "expected_tool_key": "Astra DB::UpdateCollection"
+    },
+    {
+      "id": "st-medium-0096",
+      "server_intent": "Astra DB operations",
+      "tool_intent": "delete a collection from the database",
+      "expected_tool_key": "Astra DB::DeleteCollection"
+    },
+    {
+      "id": "st-medium-0097",
+      "server_intent": "Audiense Insights operations",
+      "tool_intent": "retrieves available baseline audiences, optionally filtered by country",
+      "expected_tool_key": "Audiense Insights::get-baselines"
+    },
+    {
+      "id": "st-medium-0098",
+      "server_intent": "Audiense Insights operations",
+      "tool_intent": "retrieves the list of available affinity categories that can be used in influencer comparisons",
+      "expected_tool_key": "Audiense Insights::get-categories"
+    },
+    {
+      "id": "st-medium-0099",
+      "server_intent": "AWS S3 storage operations",
+      "tool_intent": "list all S3 buckets in my AWS account",
+      "expected_tool_key": "AWS::s3_bucket_list"
+    },
+    {
+      "id": "st-medium-0100",
+      "server_intent": "AWS operations",
+      "tool_intent": "get content recommendations for AWS documentation pages",
+      "expected_tool_key": "AWS::Get Content Recommendations"
+    },
+    {
+      "id": "st-medium-0101",
+      "server_intent": "Axiom operations",
+      "tool_intent": "execute APL queries against Axiom datasets",
+      "expected_tool_key": "Axiom::queryApl"
+    },
+    {
+      "id": "st-medium-0102",
+      "server_intent": "Axiom operations",
+      "tool_intent": "list available Axiom datasets",
+      "expected_tool_key": "Axiom::listDatasets"
+    },
+    {
+      "id": "st-medium-0103",
+      "server_intent": "Azure operations",
+      "tool_intent": "samples rows from a Kusto table",
+      "expected_tool_key": "Azure::Sample rows from a Kusto table"
+    },
+    {
+      "id": "st-medium-0104",
+      "server_intent": "Azure operations",
+      "tool_intent": "lists, creates, and retrieves keys within an Azure Key Vault",
+      "expected_tool_key": "Azure::List, create, and get keys"
+    },
+    {
+      "id": "st-medium-0105",
+      "server_intent": "Bitrise operations",
+      "tool_intent": "list Release Management installable artifacts of a connected app",
+      "expected_tool_key": "Bitrise::list_installable_artifacts"
+    },
+    {
+      "id": "st-medium-0106",
+      "server_intent": "Bitrise operations",
+      "tool_intent": "changes whether public install page should be available for the installable artifact",
+      "expected_tool_key": "Bitrise::set_installable_artifact_public_install_page"
+    },
+    {
+      "id": "st-medium-0107",
+      "server_intent": "Box operations",
+      "tool_intent": "ask Box AI about a hub",
+      "expected_tool_key": "Box::box_hubs_ask_ai_tool"
+    },
+    {
+      "id": "st-medium-0108",
+      "server_intent": "Box operations",
+      "tool_intent": "list all Doc Gen jobs that used a specific template",
+      "expected_tool_key": "Box::box_docgen_template_list_jobs_tool"
+    },
+    {
+      "id": "st-medium-0109",
+      "server_intent": "Chroma document retrieval operations",
+      "tool_intent": "read a Chroma document by document id",
+      "expected_tool_key": "Chroma::read_document"
+    },
+    {
+      "id": "st-medium-0110",
+      "server_intent": "Chroma operations",
+      "tool_intent": "update existing documents' content, metadata, or embeddings",
+      "expected_tool_key": "Chroma::chroma_update_documents"
+    },
+    {
+      "id": "st-medium-0111",
+      "server_intent": "CircleCI operations",
+      "tool_intent": "retrieves the status of the latest pipeline for a given branch",
+      "expected_tool_key": "CircleCI::get_latest_pipeline_status"
+    },
+    {
+      "id": "st-medium-0112",
+      "server_intent": "CircleCI operations",
+      "tool_intent": "identifies flaky tests in a CircleCI project by analyzing test execution history",
+      "expected_tool_key": "CircleCI::find_flaky_tests"
+    },
+    {
+      "id": "st-medium-0113",
+      "server_intent": "Codacy operations",
+      "tool_intent": "lists and filters code quality issues in a repository",
+      "expected_tool_key": "Codacy::codacy_list_repository_issues"
+    },
+    {
+      "id": "st-medium-0114",
+      "server_intent": "Codacy operations",
+      "tool_intent": "get repository with analysis information, including metrics for Grade, Issues, Duplication, Complexity, and Coverage",
+      "expected_tool_key": "Codacy::codacy_get_repository_with_analysis"
+    },
+    {
+      "id": "st-medium-0115",
+      "server_intent": "CodeLogic operations",
+      "tool_intent": "analyzes impacts between code and database entities",
+      "expected_tool_key": "CodeLogic::codelogic-database-impact"
+    },
+    {
+      "id": "st-medium-0116",
+      "server_intent": "CodeLogic operations",
+      "tool_intent": "pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class",
+      "expected_tool_key": "CodeLogic::codelogic-method-impact"
+    },
+    {
+      "id": "st-medium-0117",
+      "server_intent": "Comet Opik operations",
+      "tool_intent": "track and analyze trace data",
+      "expected_tool_key": "Comet Opik::Traces"
+    },
+    {
+      "id": "st-medium-0118",
+      "server_intent": "Comet Opik operations",
+      "tool_intent": "organize and manage projects",
+      "expected_tool_key": "Comet Opik::Projects/Workspaces Management"
+    },
+    {
+      "id": "st-medium-0119",
+      "server_intent": "Couchbase operations",
+      "tool_intent": "delete a document by ID from a specified scope and collection",
+      "expected_tool_key": "Couchbase::delete_document_by_id"
+    },
+    {
+      "id": "st-medium-0120",
+      "server_intent": "Couchbase operations",
+      "tool_intent": "get a document by ID from a specified scope and collection",
+      "expected_tool_key": "Couchbase::get_document_by_id"
+    },
+    {
+      "id": "st-medium-0121",
+      "server_intent": "Dart operations",
+      "tool_intent": "get information about the user's space, including available assignees, dartboards, folders, statuses, tags, priorities, and sizes",
+      "expected_tool_key": "Dart::get_config"
+    },
+    {
+      "id": "st-medium-0122",
+      "server_intent": "Dart operations",
+      "tool_intent": "create a new doc with title, text content, and folder",
+      "expected_tool_key": "Dart::create_doc"
+    },
+    {
+      "id": "st-medium-0123",
+      "server_intent": "DevHub operations",
+      "tool_intent": "updates an existing blog post's title and/or content",
+      "expected_tool_key": "DevHub::update_blog_post"
+    },
+    {
+      "id": "st-medium-0124",
+      "server_intent": "DevHub operations",
+      "tool_intent": "gets all locations for a specific business",
+      "expected_tool_key": "DevHub::get_locations"
+    },
+    {
+      "id": "st-medium-0125",
+      "server_intent": "Dynatrace operations",
+      "tool_intent": "sends Slack messages using the Slack Connector",
+      "expected_tool_key": "Dynatrace::send_slack_message"
+    },
+    {
+      "id": "st-medium-0126",
+      "server_intent": "Dynatrace operations",
+      "tool_intent": "lists problem details from your services, such as Kubernetes",
+      "expected_tool_key": "Dynatrace::list_problems"
+    },
+    {
+      "id": "st-medium-0127",
+      "server_intent": "EduBase operations",
+      "tool_intent": "retrieves user information from the EduBase platform",
+      "expected_tool_key": "EduBase::edubase_get_user"
+    },
+    {
+      "id": "st-medium-0128",
+      "server_intent": "Elasticsearch index alias operations",
+      "tool_intent": "delete an alias from an Elasticsearch index",
+      "expected_tool_key": "Elasticsearch::delete_alias"
+    },
+    {
+      "id": "st-medium-0129",
+      "server_intent": "Elasticsearch document operations",
+      "tool_intent": "get an Elasticsearch document by id from an index",
+      "expected_tool_key": "Elasticsearch::get_document"
+    },
+    {
+      "id": "st-medium-0130",
+      "server_intent": "Exa operations",
+      "tool_intent": "specialized search focused on academic papers and research content",
+      "expected_tool_key": "Exa::research_paper_search"
+    },
+    {
+      "id": "st-medium-0131",
+      "server_intent": "Exa operations",
+      "tool_intent": "performs real-time web searches with optimized results and content extraction",
+      "expected_tool_key": "Exa::web_search_exa"
+    },
+    {
+      "id": "st-medium-0132",
+      "server_intent": "Fibery operations",
+      "tool_intent": "retrieves a list of all databases available in your Fibery workspace",
+      "expected_tool_key": "Fibery::list_databases"
+    },
+    {
+      "id": "st-medium-0133",
+      "server_intent": "Fibery operations",
+      "tool_intent": "provides a detailed breakdown of a specific database's structure, showing all fields with their titles, names, and types",
+      "expected_tool_key": "Fibery::describe_database"
+    },
+    {
+      "id": "st-medium-0134",
+      "server_intent": "Firecrawl operations",
+      "tool_intent": "start an asynchronous crawl with advanced options",
+      "expected_tool_key": "Firecrawl::firecrawl_crawl"
+    },
+    {
+      "id": "st-medium-0135",
+      "server_intent": "Firecrawl operations",
+      "tool_intent": "search the web and optionally extract content from search results",
+      "expected_tool_key": "Firecrawl::firecrawl_search"
+    },
+    {
+      "id": "st-medium-0136",
+      "server_intent": "Gitee operations",
+      "tool_intent": "comment on an issue",
+      "expected_tool_key": "Gitee::comment_issue"
+    },
+    {
+      "id": "st-medium-0137",
+      "server_intent": "Gitee operations",
+      "tool_intent": "create a pull request",
+      "expected_tool_key": "Gitee::create_pull"
+    },
+    {
+      "id": "st-medium-0138",
+      "server_intent": "Grafana operations",
+      "tool_intent": "list schedules from Grafana OnCall",
+      "expected_tool_key": "Grafana::list_oncall_schedules"
+    },
+    {
+      "id": "st-medium-0139",
+      "server_intent": "Grafana operations",
+      "tool_intent": "list available metric names",
+      "expected_tool_key": "Grafana::list_prometheus_metric_names"
+    },
+    {
+      "id": "st-medium-0140",
+      "server_intent": "GreptimeDB operations",
+      "tool_intent": "gets a prompt by name",
+      "expected_tool_key": "GreptimeDB::get_prompt"
+    },
+    {
+      "id": "st-medium-0141",
+      "server_intent": "GreptimeDB operations",
+      "tool_intent": "lists tables in the database",
+      "expected_tool_key": "GreptimeDB::list_resources"
+    },
+    {
+      "id": "st-medium-0142",
+      "server_intent": "Heroku operations",
+      "tool_intent": "list all add-ons for all apps or for a specific app",
+      "expected_tool_key": "Heroku::list_addons"
+    },
+    {
+      "id": "st-medium-0143",
+      "server_intent": "Heroku operations",
+      "tool_intent": "view application logs",
+      "expected_tool_key": "Heroku::get_app_logs"
+    },
+    {
+      "id": "st-medium-0144",
+      "server_intent": "Hologres operations",
+      "tool_intent": "execute a DML (INSERT, UPDATE, DELETE) SQL query on the Hologres server",
+      "expected_tool_key": "Hologres::execute_dml_sql"
+    },
+    {
+      "id": "st-medium-0145",
+      "server_intent": "Hologres operations",
+      "tool_intent": "collect table statistics",
+      "expected_tool_key": "Hologres::gather_table_statistics"
+    },
+    {
+      "id": "st-medium-0146",
+      "server_intent": "Hyperbrowser operations",
+      "tool_intent": "complex browser tasks using Claude computer use",
+      "expected_tool_key": "Hyperbrowser::claude_computer_use_agent"
+    },
+    {
+      "id": "st-medium-0147",
+      "server_intent": "Hyperbrowser operations",
+      "tool_intent": "fast, lightweight browser automation with the Browser Use agent",
+      "expected_tool_key": "Hyperbrowser::browser_use_agent"
+    },
+    {
+      "id": "st-medium-0148",
+      "server_intent": "Inkeep operations",
+      "tool_intent": "retrieves product documentation about Inkeep",
+      "expected_tool_key": "Inkeep::search-product-content"
+    },
+    {
+      "id": "st-medium-0149",
+      "server_intent": "Kagi Search operations",
+      "tool_intent": "performs a web search to find information based on the query provided",
+      "expected_tool_key": "Kagi Search::search"
+    },
+    {
+      "id": "st-medium-0150",
+      "server_intent": "Kagi Search operations",
+      "tool_intent": "generates a summary of the content, such as a video, based on the URL provided",
+      "expected_tool_key": "Kagi Search::summarizer"
+    },
+    {
+      "id": "st-medium-0151",
+      "server_intent": "Keboola operations",
+      "tool_intent": "gets detailed information about a specific table including its DB identifier and column information",
+      "expected_tool_key": "Keboola::get_table_detail"
+    },
+    {
+      "id": "st-medium-0152",
+      "server_intent": "Keboola operations",
+      "tool_intent": "retrieves detailed information about a specific job, identified by the job_id, including its status, parameters, results, and any relevant metadata",
+      "expected_tool_key": "Keboola::get_job_detail"
+    },
+    {
+      "id": "st-medium-0153",
+      "server_intent": "Redis operations",
+      "tool_intent": "tools to store field-value pairs within a single key",
+      "expected_tool_key": "Redis::hash"
+    },
+    {
+      "id": "st-medium-0154",
+      "server_intent": "Redis operations",
+      "tool_intent": "tools to add, remove and list set members",
+      "expected_tool_key": "Redis::set"
+    },
+    {
+      "id": "st-medium-0155",
+      "server_intent": "Stripe operations",
+      "tool_intent": "creates a new invoice in Stripe",
+      "expected_tool_key": "Stripe::createInvoice"
+    },
+    {
+      "id": "st-medium-0156",
+      "server_intent": "Stripe operations",
+      "tool_intent": "lists all subscriptions in Stripe",
+      "expected_tool_key": "Stripe::listSubscriptions"
+    },
+    {
+      "id": "st-medium-0157",
+      "server_intent": "Airtable operations",
+      "tool_intent": "lists records from a specified Airtable table",
+      "expected_tool_key": "Airtable::list_records"
+    },
+    {
+      "id": "st-medium-0158",
+      "server_intent": "Airtable operations",
+      "tool_intent": "search for records containing specific text",
+      "expected_tool_key": "Airtable::search_records"
+    },
+    {
+      "id": "st-medium-0159",
+      "server_intent": "Chess.com operations",
+      "tool_intent": "get a player's profile from Chess.com",
+      "expected_tool_key": "Chess.com::get_player_profile"
+    },
+    {
+      "id": "st-medium-0160",
+      "server_intent": "Chess.com operations",
+      "tool_intent": "get a player's stats from Chess.com",
+      "expected_tool_key": "Chess.com::get_player_stats"
+    },
+    {
+      "id": "st-medium-0161",
+      "server_intent": "Datadog operations",
+      "tool_intent": "fetch events within a time range",
+      "expected_tool_key": "Datadog::get-events"
+    },
+    {
+      "id": "st-medium-0162",
+      "server_intent": "Datadog operations",
+      "tool_intent": "get metadata for a specific metric",
+      "expected_tool_key": "Datadog::get-metric-metadata"
+    },
+    {
+      "id": "st-medium-0163",
+      "server_intent": "Discord channel management",
+      "tool_intent": "delete a Discord channel by channel id",
+      "expected_tool_key": "Discord::delete_channel"
+    },
+    {
+      "id": "st-medium-0164",
+      "server_intent": "Discord direct messaging",
+      "tool_intent": "send a Discord direct message to a user",
+      "expected_tool_key": "Discord::send_private_message"
+    },
+    {
+      "id": "st-medium-0165",
+      "server_intent": "Docker operations",
+      "tool_intent": "creates a new Docker network",
+      "expected_tool_key": "Docker::create_network"
+    },
+    {
+      "id": "st-medium-0166",
+      "server_intent": "Docker operations",
+      "tool_intent": "creates a new Docker volume",
+      "expected_tool_key": "Docker::create_volume"
+    },
+    {
+      "id": "st-medium-0167",
+      "server_intent": "Git operations",
+      "tool_intent": "lists all available Git repositories",
+      "expected_tool_key": "Git::git_list_repositories"
+    },
+    {
+      "id": "st-medium-0168",
+      "server_intent": "Git operations",
+      "tool_intent": "creates a new branch",
+      "expected_tool_key": "Git::git_create_branch"
+    },
+    {
+      "id": "st-medium-0169",
+      "server_intent": "HubSpot operations",
+      "tool_intent": "retrieve recent conversation threads with messages",
+      "expected_tool_key": "HubSpot::hubspot_get_recent_conversations"
+    },
+    {
+      "id": "st-medium-0170",
+      "server_intent": "HubSpot operations",
+      "tool_intent": "retrieve most recently active contacts",
+      "expected_tool_key": "HubSpot::hubspot_get_active_contacts"
+    },
+    {
+      "id": "st-medium-0171",
+      "server_intent": "Shopify operations",
+      "tool_intent": "get a specific order by ID",
+      "expected_tool_key": "Shopify::get-order-by-id"
+    },
+    {
+      "id": "st-medium-0172",
+      "server_intent": "Shopify operations",
+      "tool_intent": "get customers or search by name/email",
+      "expected_tool_key": "Shopify::get-customers"
+    },
+    {
+      "id": "st-medium-0173",
+      "server_intent": "Talk To Figma operations",
+      "tool_intent": "get detailed information about multiple nodes by providing an array of node IDs",
+      "expected_tool_key": "Talk To Figma::get_nodes_info"
+    },
+    {
+      "id": "st-medium-0174",
+      "server_intent": "Talk To Figma operations",
+      "tool_intent": "set horizontal and vertical sizing modes for auto-layout frames (FIXED, HUG, FILL)",
+      "expected_tool_key": "Talk To Figma::set_layout_sizing"
+    },
+    {
+      "id": "st-medium-0175",
+      "server_intent": "Telegram operations",
+      "tool_intent": "unblock a user",
+      "expected_tool_key": "Telegram::unblock_user"
+    },
+    {
+      "id": "st-medium-0176",
+      "server_intent": "Telegram operations",
+      "tool_intent": "bulk import contacts",
+      "expected_tool_key": "Telegram::import_contacts"
+    },
+    {
+      "id": "st-medium-0177",
+      "server_intent": "AgentQL operations",
+      "tool_intent": "extracts structured data from a given URL using a prompt to describe the data and fields to extract",
+      "expected_tool_key": "AgentQL::extract-web-data"
+    },
+    {
+      "id": "st-medium-0178",
+      "server_intent": "Aiven operations",
+      "tool_intent": "list all projects on your Aiven account",
+      "expected_tool_key": "Aiven::list_projects"
+    },
+    {
+      "id": "st-medium-0179",
+      "server_intent": "Aiven operations",
+      "tool_intent": "list all services in a specific Aiven project",
+      "expected_tool_key": "Aiven::list_services"
+    },
+    {
+      "id": "st-medium-0180",
+      "server_intent": "APIMatic MCP operations",
+      "tool_intent": "validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary",
+      "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic"
+    },
+    {
+      "id": "st-medium-0181",
+      "server_intent": "Arize Phoenix operations",
+      "tool_intent": "provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults",
+      "expected_tool_key": "Arize Phoenix::arize-phoenix-otel"
+    },
+    {
+      "id": "st-medium-0182",
+      "server_intent": "Arize Phoenix operations",
+      "tool_intent": "mCP server implementation for Arize Phoenix providing a unified interface to Phoenix's capabilities",
+      "expected_tool_key": "Arize Phoenix::@arizeai/phoenix-mcp"
+    },
+    {
+      "id": "st-medium-0183",
+      "server_intent": "Astra DB operations",
+      "tool_intent": "update an existing collection in the database",
+      "expected_tool_key": "Astra DB::UpdateCollection"
+    },
+    {
+      "id": "st-medium-0184",
+      "server_intent": "Astra DB operations",
+      "tool_intent": "delete a collection from the database",
+      "expected_tool_key": "Astra DB::DeleteCollection"
+    },
+    {
+      "id": "st-medium-0185",
+      "server_intent": "Audiense Insights operations",
+      "tool_intent": "retrieves available baseline audiences, optionally filtered by country",
+      "expected_tool_key": "Audiense Insights::get-baselines"
+    },
+    {
+      "id": "st-medium-0186",
+      "server_intent": "Audiense Insights operations",
+      "tool_intent": "retrieves the list of available affinity categories that can be used in influencer comparisons",
+      "expected_tool_key": "Audiense Insights::get-categories"
+    },
+    {
+      "id": "st-medium-0187",
+      "server_intent": "AWS S3 storage operations",
+      "tool_intent": "list all S3 buckets in my AWS account",
+      "expected_tool_key": "AWS::s3_bucket_list"
+    },
+    {
+      "id": "st-medium-0188",
+      "server_intent": "AWS operations",
+      "tool_intent": "get content recommendations for AWS documentation pages",
+      "expected_tool_key": "AWS::Get Content Recommendations"
+    },
+    {
+      "id": "st-medium-0189",
+      "server_intent": "Axiom operations",
+      "tool_intent": "execute APL queries against Axiom datasets",
+      "expected_tool_key": "Axiom::queryApl"
+    },
+    {
+      "id": "st-medium-0190",
+      "server_intent": "Axiom operations",
+      "tool_intent": "list available Axiom datasets",
+      "expected_tool_key": "Axiom::listDatasets"
+    },
+    {
+      "id": "st-medium-0191",
+      "server_intent": "Azure operations",
+      "tool_intent": "samples rows from a Kusto table",
+      "expected_tool_key": "Azure::Sample rows from a Kusto table"
+    },
+    {
+      "id": "st-medium-0192",
+      "server_intent": "Azure operations",
+      "tool_intent": "lists, creates, and retrieves keys within an Azure Key Vault",
+      "expected_tool_key": "Azure::List, create, and get keys"
+    },
+    {
+      "id": "st-medium-0193",
+      "server_intent": "Bitrise operations",
+      "tool_intent": "list Release Management installable artifacts of a connected app",
+      "expected_tool_key": "Bitrise::list_installable_artifacts"
+    },
+    {
+      "id": "st-medium-0194",
+      "server_intent": "Bitrise operations",
+      "tool_intent": "changes whether public install page should be available for the installable artifact",
+      "expected_tool_key": "Bitrise::set_installable_artifact_public_install_page"
+    },
+    {
+      "id": "st-medium-0195",
+      "server_intent": "Box operations",
+      "tool_intent": "ask Box AI about a hub",
+      "expected_tool_key": "Box::box_hubs_ask_ai_tool"
+    },
+    {
+      "id": "st-medium-0196",
+      "server_intent": "Box operations",
+      "tool_intent": "list all Doc Gen jobs that used a specific template",
+      "expected_tool_key": "Box::box_docgen_template_list_jobs_tool"
+    },
+    {
+      "id": "st-medium-0197",
+      "server_intent": "Chroma document retrieval operations",
+      "tool_intent": "read a Chroma document by document id",
+      "expected_tool_key": "Chroma::read_document"
+    },
+    {
+      "id": "st-medium-0198",
+      "server_intent": "Chroma operations",
+      "tool_intent": "update existing documents' content, metadata, or embeddings",
+      "expected_tool_key": "Chroma::chroma_update_documents"
+    },
+    {
+      "id": "st-medium-0199",
+      "server_intent": "CircleCI operations",
+      "tool_intent": "retrieves the status of the latest pipeline for a given branch",
+      "expected_tool_key": "CircleCI::get_latest_pipeline_status"
+    },
+    {
+      "id": "st-medium-0200",
+      "server_intent": "CircleCI operations",
+      "tool_intent": "identifies flaky tests in a CircleCI project by analyzing test execution history",
+      "expected_tool_key": "CircleCI::find_flaky_tests"
+    },
+    {
+      "id": "st-medium-0201",
+      "server_intent": "Codacy operations",
+      "tool_intent": "lists and filters code quality issues in a repository",
+      "expected_tool_key": "Codacy::codacy_list_repository_issues"
+    },
+    {
+      "id": "st-medium-0202",
+      "server_intent": "Codacy operations",
+      "tool_intent": "get repository with analysis information, including metrics for Grade, Issues, Duplication, Complexity, and Coverage",
+      "expected_tool_key": "Codacy::codacy_get_repository_with_analysis"
+    },
+    {
+      "id": "st-medium-0203",
+      "server_intent": "CodeLogic operations",
+      "tool_intent": "analyzes impacts between code and database entities",
+      "expected_tool_key": "CodeLogic::codelogic-database-impact"
+    },
+    {
+      "id": "st-medium-0204",
+      "server_intent": "CodeLogic operations",
+      "tool_intent": "pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class",
+      "expected_tool_key": "CodeLogic::codelogic-method-impact"
+    },
+    {
+      "id": "st-medium-0205",
+      "server_intent": "Comet Opik operations",
+      "tool_intent": "track and analyze trace data",
+      "expected_tool_key": "Comet Opik::Traces"
+    },
+    {
+      "id": "st-medium-0206",
+      "server_intent": "Comet Opik operations",
+      "tool_intent": "organize and manage projects",
+      "expected_tool_key": "Comet Opik::Projects/Workspaces Management"
+    },
+    {
+      "id": "st-medium-0207",
+      "server_intent": "Couchbase operations",
+      "tool_intent": "delete a document by ID from a specified scope and collection",
+      "expected_tool_key": "Couchbase::delete_document_by_id"
+    },
+    {
+      "id": "st-medium-0208",
+      "server_intent": "Couchbase operations",
+      "tool_intent": "get a document by ID from a specified scope and collection",
+      "expected_tool_key": "Couchbase::get_document_by_id"
+    },
+    {
+      "id": "st-medium-0209",
+      "server_intent": "Dart operations",
+      "tool_intent": "get information about the user's space, including available assignees, dartboards, folders, statuses, tags, priorities, and sizes",
+      "expected_tool_key": "Dart::get_config"
+    },
+    {
+      "id": "st-medium-0210",
+      "server_intent": "Dart operations",
+      "tool_intent": "create a new doc with title, text content, and folder",
+      "expected_tool_key": "Dart::create_doc"
+    },
+    {
+      "id": "st-medium-0211",
+      "server_intent": "DevHub operations",
+      "tool_intent": "updates an existing blog post's title and/or content",
+      "expected_tool_key": "DevHub::update_blog_post"
+    },
+    {
+      "id": "st-medium-0212",
+      "server_intent": "DevHub operations",
+      "tool_intent": "gets all locations for a specific business",
+      "expected_tool_key": "DevHub::get_locations"
+    },
+    {
+      "id": "st-medium-0213",
+      "server_intent": "Dynatrace operations",
+      "tool_intent": "sends Slack messages using the Slack Connector",
+      "expected_tool_key": "Dynatrace::send_slack_message"
+    },
+    {
+      "id": "st-medium-0214",
+      "server_intent": "Dynatrace operations",
+      "tool_intent": "lists problem details from your services, such as Kubernetes",
+      "expected_tool_key": "Dynatrace::list_problems"
+    },
+    {
+      "id": "st-medium-0215",
+      "server_intent": "EduBase operations",
+      "tool_intent": "retrieves user information from the EduBase platform",
+      "expected_tool_key": "EduBase::edubase_get_user"
+    },
+    {
+      "id": "st-medium-0216",
+      "server_intent": "Elasticsearch index alias operations",
+      "tool_intent": "delete an alias from an Elasticsearch index",
+      "expected_tool_key": "Elasticsearch::delete_alias"
+    },
+    {
+      "id": "st-medium-0217",
+      "server_intent": "Elasticsearch document operations",
+      "tool_intent": "get an Elasticsearch document by id from an index",
+      "expected_tool_key": "Elasticsearch::get_document"
+    },
+    {
+      "id": "st-medium-0218",
+      "server_intent": "Exa operations",
+      "tool_intent": "specialized search focused on academic papers and research content",
+      "expected_tool_key": "Exa::research_paper_search"
+    },
+    {
+      "id": "st-medium-0219",
+      "server_intent": "Exa operations",
+      "tool_intent": "performs real-time web searches with optimized results and content extraction",
+      "expected_tool_key": "Exa::web_search_exa"
+    },
+    {
+      "id": "st-medium-0220",
+      "server_intent": "Fibery operations",
+      "tool_intent": "retrieves a list of all databases available in your Fibery workspace",
+      "expected_tool_key": "Fibery::list_databases"
+    },
+    {
+      "id": "st-medium-0221",
+      "server_intent": "Fibery operations",
+      "tool_intent": "provides a detailed breakdown of a specific database's structure, showing all fields with their titles, names, and types",
+      "expected_tool_key": "Fibery::describe_database"
+    },
+    {
+      "id": "st-medium-0222",
+      "server_intent": "Firecrawl operations",
+      "tool_intent": "start an asynchronous crawl with advanced options",
+      "expected_tool_key": "Firecrawl::firecrawl_crawl"
+    },
+    {
+      "id": "st-medium-0223",
+      "server_intent": "Firecrawl operations",
+      "tool_intent": "search the web and optionally extract content from search results",
+      "expected_tool_key": "Firecrawl::firecrawl_search"
+    },
+    {
+      "id": "st-medium-0224",
+      "server_intent": "Gitee operations",
+      "tool_intent": "comment on an issue",
+      "expected_tool_key": "Gitee::comment_issue"
+    },
+    {
+      "id": "st-medium-0225",
+      "server_intent": "Gitee operations",
+      "tool_intent": "create a pull request",
+      "expected_tool_key": "Gitee::create_pull"
+    },
+    {
+      "id": "st-medium-0226",
+      "server_intent": "Grafana operations",
+      "tool_intent": "list schedules from Grafana OnCall",
+      "expected_tool_key": "Grafana::list_oncall_schedules"
+    },
+    {
+      "id": "st-medium-0227",
+      "server_intent": "Grafana operations",
+      "tool_intent": "list available metric names",
+      "expected_tool_key": "Grafana::list_prometheus_metric_names"
+    },
+    {
+      "id": "st-medium-0228",
+      "server_intent": "GreptimeDB operations",
+      "tool_intent": "gets a prompt by name",
+      "expected_tool_key": "GreptimeDB::get_prompt"
+    },
+    {
+      "id": "st-medium-0229",
+      "server_intent": "GreptimeDB operations",
+      "tool_intent": "lists tables in the database",
+      "expected_tool_key": "GreptimeDB::list_resources"
+    },
+    {
+      "id": "st-medium-0230",
+      "server_intent": "Heroku operations",
+      "tool_intent": "list all add-ons for all apps or for a specific app",
+      "expected_tool_key": "Heroku::list_addons"
+    },
+    {
+      "id": "st-medium-0231",
+      "server_intent": "Heroku operations",
+      "tool_intent": "view application logs",
+      "expected_tool_key": "Heroku::get_app_logs"
+    },
+    {
+      "id": "st-medium-0232",
+      "server_intent": "Hologres operations",
+      "tool_intent": "execute a DML (INSERT, UPDATE, DELETE) SQL query on the Hologres server",
+      "expected_tool_key": "Hologres::execute_dml_sql"
+    },
+    {
+      "id": "st-medium-0233",
+      "server_intent": "Hologres operations",
+      "tool_intent": "collect table statistics",
+      "expected_tool_key": "Hologres::gather_table_statistics"
+    },
+    {
+      "id": "st-medium-0234",
+      "server_intent": "Hyperbrowser operations",
+      "tool_intent": "complex browser tasks using Claude computer use",
+      "expected_tool_key": "Hyperbrowser::claude_computer_use_agent"
+    },
+    {
+      "id": "st-medium-0235",
+      "server_intent": "Hyperbrowser operations",
+      "tool_intent": "fast, lightweight browser automation with the Browser Use agent",
+      "expected_tool_key": "Hyperbrowser::browser_use_agent"
+    },
+    {
+      "id": "st-medium-0236",
+      "server_intent": "Inkeep operations",
+      "tool_intent": "retrieves product documentation about Inkeep",
+      "expected_tool_key": "Inkeep::search-product-content"
+    },
+    {
+      "id": "st-medium-0237",
+      "server_intent": "Kagi Search operations",
+      "tool_intent": "performs a web search to find information based on the query provided",
+      "expected_tool_key": "Kagi Search::search"
+    },
+    {
+      "id": "st-medium-0238",
+      "server_intent": "Kagi Search operations",
+      "tool_intent": "generates a summary of the content, such as a video, based on the URL provided",
+      "expected_tool_key": "Kagi Search::summarizer"
+    },
+    {
+      "id": "st-medium-0239",
+      "server_intent": "Keboola operations",
+      "tool_intent": "gets detailed information about a specific table including its DB identifier and column information",
+      "expected_tool_key": "Keboola::get_table_detail"
+    },
+    {
+      "id": "st-medium-0240",
+      "server_intent": "Keboola operations",
+      "tool_intent": "retrieves detailed information about a specific job, identified by the job_id, including its status, parameters, results, and any relevant metadata",
+      "expected_tool_key": "Keboola::get_job_detail"
+    },
+    {
+      "id": "st-medium-0241",
+      "server_intent": "Redis operations",
+      "tool_intent": "tools to store field-value pairs within a single key",
+      "expected_tool_key": "Redis::hash"
+    },
+    {
+      "id": "st-medium-0242",
+      "server_intent": "Redis operations",
+      "tool_intent": "tools to add, remove and list set members",
+      "expected_tool_key": "Redis::set"
+    },
+    {
+      "id": "st-medium-0243",
+      "server_intent": "Stripe operations",
+      "tool_intent": "creates a new invoice in Stripe",
+      "expected_tool_key": "Stripe::createInvoice"
+    },
+    {
+      "id": "st-medium-0244",
+      "server_intent": "Stripe operations",
+      "tool_intent": "lists all subscriptions in Stripe",
+      "expected_tool_key": "Stripe::listSubscriptions"
+    },
+    {
+      "id": "st-medium-0245",
+      "server_intent": "Airtable operations",
+      "tool_intent": "lists records from a specified Airtable table",
+      "expected_tool_key": "Airtable::list_records"
+    },
+    {
+      "id": "st-medium-0246",
+      "server_intent": "Airtable operations",
+      "tool_intent": "search for records containing specific text",
+      "expected_tool_key": "Airtable::search_records"
+    },
+    {
+      "id": "st-medium-0247",
+      "server_intent": "Chess.com operations",
+      "tool_intent": "get a player's profile from Chess.com",
+      "expected_tool_key": "Chess.com::get_player_profile"
+    },
+    {
+      "id": "st-medium-0248",
+      "server_intent": "Chess.com operations",
+      "tool_intent": "get a player's stats from Chess.com",
+      "expected_tool_key": "Chess.com::get_player_stats"
+    },
+    {
+      "id": "st-medium-0249",
+      "server_intent": "Datadog operations",
+      "tool_intent": "fetch events within a time range",
+      "expected_tool_key": "Datadog::get-events"
+    },
+    {
+      "id": "st-medium-0250",
+      "server_intent": "Datadog operations",
+      "tool_intent": "get metadata for a specific metric",
+      "expected_tool_key": "Datadog::get-metric-metadata"
+    }
+  ]
+}

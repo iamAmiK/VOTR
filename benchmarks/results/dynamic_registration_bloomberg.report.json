@@ -1,0 +1,128 @@
+{
+  "summary": {
+    "num_control_probes": 1,
+    "baseline_controls_hit_at_1": 1.0,
+    "num_scenarios": 1,
+    "before_all_miss_at_5_rate": 1.0,
+    "after_all_hit_at_1_rate": 1.0,
+    "controls_preserved_at_1_rate": 1.0
+  },
+  "baseline_controls": [
+    {
+      "id": "ctrl-gh-001",
+      "expected_tool_key": "GitHub::list_pull_requests",
+      "predicted_top5": [
+        "GitHub::list_pull_requests",
+        "GitHub::list_issues",
+        "GitHub::get_pull_request_files",
+        "GitHub::search_issues",
+        "GitHub::get_pull_request"
+      ],
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "bloomberg-register-001",
+      "before": [
+        {
+          "id": "bbg-probe-001",
+          "expected_tool_key": "Bloomberg::bdp",
+          "predicted_top5": [],
+          "hit_at_1": false,
+          "hit_at_5": false,
+          "confidence": "low",
+          "recommended_handoff_k": 0
+        },
+        {
+          "id": "bbg-probe-002",
+          "expected_tool_key": "Bloomberg::bdh",
+          "predicted_top5": [],
+          "hit_at_1": false,
+          "hit_at_5": false,
+          "confidence": "low",
+          "recommended_handoff_k": 0
+        },
+        {
+          "id": "bbg-probe-003",
+          "expected_tool_key": "Bloomberg::beqs",
+          "predicted_top5": [],
+          "hit_at_1": false,
+          "hit_at_5": false,
+          "confidence": "low",
+          "recommended_handoff_k": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "bbg-probe-001",
+          "expected_tool_key": "Bloomberg::bdp",
+          "predicted_top5": [
+            "Bloomberg::bdp",
+            "Bloomberg::bdtick",
+            "Bloomberg::bdh",
+            "Bloomberg::bds",
+            "Bloomberg::bdib"
+          ],
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1
+        },
+        {
+          "id": "bbg-probe-002",
+          "expected_tool_key": "Bloomberg::bdh",
+          "predicted_top5": [
+            "Bloomberg::bdh",
+            "Bloomberg::bdtick",
+            "Bloomberg::bdp",
+            "Bloomberg::bds",
+            "Bloomberg::bdib"
+          ],
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "confidence": "medium",
+          "recommended_handoff_k": 3
+        },
+        {
+          "id": "bbg-probe-003",
+          "expected_tool_key": "Bloomberg::beqs",
+          "predicted_top5": [
+            "Bloomberg::beqs",
+            "Bloomberg::bdtick",
+            "Bloomberg::bdh",
+            "Bloomberg::bdp",
+            "Bloomberg::bds"
+          ],
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1
+        }
+      ],
+      "controls_after": [
+        {
+          "id": "ctrl-gh-001",
+          "expected_tool_key": "GitHub::list_pull_requests",
+          "predicted_top5": [
+            "GitHub::list_pull_requests",
+            "GitHub::list_issues",
+            "GitHub::get_pull_request_files",
+            "GitHub::search_issues",
+            "GitHub::get_pull_request"
+          ],
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1
+        }
+      ],
+      "before_all_miss_at_5": true,
+      "after_all_hit_at_1": true,
+      "controls_preserved_at_1": true
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "suite_paths": [
+    "C:\\Users\\swaga\\Downloads\\Research Proj\\MCP-Router\\benchmarks\\functional_correctness\\ambiguity_collision.priority.json",
+    "C:\\Users\\swaga\\Downloads\\Research Proj\\MCP-Router\\benchmarks\\functional_correctness\\robustness_safety.priority.json",
+    "C:\\Users\\swaga\\Downloads\\Research Proj\\MCP-Router\\benchmarks\\functional_correctness\\single_tool.medium_50.clean.json",
+    "C:\\Users\\swaga\\Downloads\\Research Proj\\MCP-Router\\benchmarks\\functional_correctness\\multi_tool.large.single_turn.json",
+    "C:\\Users\\swaga\\Downloads\\Research Proj\\MCP-Router\\benchmarks\\functional_correctness\\multi_hop.large.cross_app.json"
+  ],
+  "num_steps_total": 144,
+  "num_steps_dev": 22,
+  "num_steps_test": 122,
+  "current_config": {
+    "handoff_gap_high": 0.0010426450507904708,
+    "handoff_gap_medium": 0.000836960501159334,
+    "test_metrics": {
+      "num_steps": 122,
+      "handoff_accuracy": 0.9836065573770492,
+      "avg_recommended_k": 3.0655737704918034,
+      "bucket_counts": {
+        "high": 46,
+        "medium": 26,
+        "low": 50
+      },
+      "top1_precision_by_bucket": {
+        "high": 0.9565217391304348,
+        "medium": 1.0,
+        "low": 0.9
+      },
+      "by_suite": {
+        "ambiguity_collision.priority": {
+          "num_steps": 14,
+          "handoff_accuracy": 0.9285714285714286,
+          "avg_recommended_k": 3.0
+        },
+        "multi_hop.large.cross_app": {
+          "num_steps": 15,
+          "handoff_accuracy": 1.0,
+          "avg_recommended_k": 2.8666666666666667
+        },
+        "multi_tool.large.single_turn": {
+          "num_steps": 7,
+          "handoff_accuracy": 1.0,
+          "avg_recommended_k": 2.4285714285714284
+        },
+        "robustness_safety.priority": {
+          "num_steps": 12,
+          "handoff_accuracy": 0.9166666666666666,
+          "avg_recommended_k": 3.0
+        },
+        "single_tool.medium_50.clean": {
+          "num_steps": 74,
+          "handoff_accuracy": 1.0,
+          "avg_recommended_k": 3.189189189189189
+        }
+      }
+    }
+  },
+  "recommended_from_dev": {
+    "handoff_gap_high": 0.000877380742531457,
+    "handoff_gap_medium": 0.0005899952840617909,
+    "constraints_ok": true,
+    "dev_metrics": {
+      "num_steps": 22,
+      "handoff_accuracy": 0.9545454545454546,
+      "avg_recommended_k": 1.8181818181818181,
+      "bucket_counts": {
+        "high": 14,
+        "medium": 7,
+        "low": 1
+      },
+      "top1_precision_by_bucket": {
+        "high": 1.0,
+        "medium": 0.8571428571428571,
+        "low": 0.0
+      },
+      "by_suite": {
+        "ambiguity_collision.priority": {
+          "num_steps": 4,
+          "handoff_accuracy": 1.0,
+          "avg_recommended_k": 1.0
+        },
+        "robustness_safety.priority": {
+          "num_steps": 4,
+          "handoff_accuracy": 0.75,
+          "avg_recommended_k": 3.0
+        },
+        "single_tool.medium_50.clean": {
+          "num_steps": 14,
+          "handoff_accuracy": 1.0,
+          "avg_recommended_k": 1.7142857142857142
+        }
+      }
+    },
+    "test_metrics": {
+      "num_steps": 122,
+      "handoff_accuracy": 0.9754098360655737,
+      "avg_recommended_k": 2.081967213114754,
+      "bucket_counts": {
+        "high": 70,
+        "medium": 38,
+        "low": 14
+      },
+      "top1_precision_by_bucket": {
+        "high": 0.9714285714285714,
+        "medium": 0.9736842105263158,
+        "low": 0.7142857142857143
+      },
+      "by_suite": {
+        "ambiguity_collision.priority": {
+          "num_steps": 14,
+          "handoff_accuracy": 0.8571428571428571,
+          "avg_recommended_k": 2.142857142857143
+        },
+        "multi_hop.large.cross_app": {
+          "num_steps": 15,
+          "handoff_accuracy": 1.0,
+          "avg_recommended_k": 2.3333333333333335
+        },
+        "multi_tool.large.single_turn": {
+          "num_steps": 7,
+          "handoff_accuracy": 1.0,
+          "avg_recommended_k": 2.142857142857143
+        },
+        "robustness_safety.priority": {
+          "num_steps": 12,
+          "handoff_accuracy": 0.9166666666666666,
+          "avg_recommended_k": 2.6666666666666665
+        },
+        "single_tool.medium_50.clean": {
+          "num_steps": 74,
+          "handoff_accuracy": 1.0,
+          "avg_recommended_k": 1.9189189189189189
+        }
+      }
+    }
+  }
+}

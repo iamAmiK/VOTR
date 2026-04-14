@@ -1,0 +1,606 @@
+{
+  "suite": "single_tool.github.clean",
+  "description": "Router-only single-tool benchmark (100 evaluation queries), cycled from labeled catalog tools.",
+  "cases": [
+    {
+      "id": "st-github-0001",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create or update a single file in a repository",
+      "expected_tool_key": "GitHub::create_or_update_file"
+    },
+    {
+      "id": "st-github-0002",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Push multiple files in a single commit",
+      "expected_tool_key": "GitHub::push_files"
+    },
+    {
+      "id": "st-github-0003",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for GitHub repositories",
+      "expected_tool_key": "GitHub::search_repositories"
+    },
+    {
+      "id": "st-github-0004",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new GitHub repository",
+      "expected_tool_key": "GitHub::create_repository"
+    },
+    {
+      "id": "st-github-0005",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get contents of a file or directory",
+      "expected_tool_key": "GitHub::get_file_contents"
+    },
+    {
+      "id": "st-github-0006",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new issue",
+      "expected_tool_key": "GitHub::create_issue"
+    },
+    {
+      "id": "st-github-0007",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new pull request",
+      "expected_tool_key": "GitHub::create_pull_request"
+    },
+    {
+      "id": "st-github-0008",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Fork a repository",
+      "expected_tool_key": "GitHub::fork_repository"
+    },
+    {
+      "id": "st-github-0009",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new branch",
+      "expected_tool_key": "GitHub::create_branch"
+    },
+    {
+      "id": "st-github-0010",
+      "server_intent": "GitHub operations",
+      "tool_intent": "List and filter repository issues",
+      "expected_tool_key": "GitHub::list_issues"
+    },
+    {
+      "id": "st-github-0011",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Update an existing issue",
+      "expected_tool_key": "GitHub::update_issue"
+    },
+    {
+      "id": "st-github-0012",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Add a comment to an issue",
+      "expected_tool_key": "GitHub::add_issue_comment"
+    },
+    {
+      "id": "st-github-0013",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for code across GitHub repositories",
+      "expected_tool_key": "GitHub::search_code"
+    },
+    {
+      "id": "st-github-0014",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for issues and pull requests",
+      "expected_tool_key": "GitHub::search_issues"
+    },
+    {
+      "id": "st-github-0015",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for GitHub users",
+      "expected_tool_key": "GitHub::search_users"
+    },
+    {
+      "id": "st-github-0016",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Gets commits of a branch in a repository",
+      "expected_tool_key": "GitHub::list_commits"
+    },
+    {
+      "id": "st-github-0017",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Gets the contents of an issue within a repository",
+      "expected_tool_key": "GitHub::get_issue"
+    },
+    {
+      "id": "st-github-0018",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get details of a specific pull request",
+      "expected_tool_key": "GitHub::get_pull_request"
+    },
+    {
+      "id": "st-github-0019",
+      "server_intent": "GitHub operations",
+      "tool_intent": "List and filter repository pull requests",
+      "expected_tool_key": "GitHub::list_pull_requests"
+    },
+    {
+      "id": "st-github-0020",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a review on a pull request",
+      "expected_tool_key": "GitHub::create_pull_request_review"
+    },
+    {
+      "id": "st-github-0021",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Merge a pull request",
+      "expected_tool_key": "GitHub::merge_pull_request"
+    },
+    {
+      "id": "st-github-0022",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get the list of files changed in a pull request",
+      "expected_tool_key": "GitHub::get_pull_request_files"
+    },
+    {
+      "id": "st-github-0023",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get the combined status of all status checks for a pull request",
+      "expected_tool_key": "GitHub::get_pull_request_status"
+    },
+    {
+      "id": "st-github-0024",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Update a pull request branch with the latest changes from the base branch (equivalent to GitHub's 'Update branch' button)",
+      "expected_tool_key": "GitHub::update_pull_request_branch"
+    },
+    {
+      "id": "st-github-0025",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get the review comments on a pull request",
+      "expected_tool_key": "GitHub::get_pull_request_comments"
+    },
+    {
+      "id": "st-github-0026",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get the reviews on a pull request",
+      "expected_tool_key": "GitHub::get_pull_request_reviews"
+    },
+    {
+      "id": "st-github-0027",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create or update a single file in a repository",
+      "expected_tool_key": "GitHub::create_or_update_file"
+    },
+    {
+      "id": "st-github-0028",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Push multiple files in a single commit",
+      "expected_tool_key": "GitHub::push_files"
+    },
+    {
+      "id": "st-github-0029",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for GitHub repositories",
+      "expected_tool_key": "GitHub::search_repositories"
+    },
+    {
+      "id": "st-github-0030",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new GitHub repository",
+      "expected_tool_key": "GitHub::create_repository"
+    },
+    {
+      "id": "st-github-0031",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get contents of a file or directory",
+      "expected_tool_key": "GitHub::get_file_contents"
+    },
+    {
+      "id": "st-github-0032",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new issue",
+      "expected_tool_key": "GitHub::create_issue"
+    },
+    {
+      "id": "st-github-0033",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new pull request",
+      "expected_tool_key": "GitHub::create_pull_request"
+    },
+    {
+      "id": "st-github-0034",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Fork a repository",
+      "expected_tool_key": "GitHub::fork_repository"
+    },
+    {
+      "id": "st-github-0035",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new branch",
+      "expected_tool_key": "GitHub::create_branch"
+    },
+    {
+      "id": "st-github-0036",
+      "server_intent": "GitHub operations",
+      "tool_intent": "List and filter repository issues",
+      "expected_tool_key": "GitHub::list_issues"
+    },
+    {
+      "id": "st-github-0037",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Update an existing issue",
+      "expected_tool_key": "GitHub::update_issue"
+    },
+    {
+      "id": "st-github-0038",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Add a comment to an issue",
+      "expected_tool_key": "GitHub::add_issue_comment"
+    },
+    {
+      "id": "st-github-0039",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for code across GitHub repositories",
+      "expected_tool_key": "GitHub::search_code"
+    },
+    {
+      "id": "st-github-0040",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for issues and pull requests",
+      "expected_tool_key": "GitHub::search_issues"
+    },
+    {
+      "id": "st-github-0041",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for GitHub users",
+      "expected_tool_key": "GitHub::search_users"
+    },
+    {
+      "id": "st-github-0042",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Gets commits of a branch in a repository",
+      "expected_tool_key": "GitHub::list_commits"
+    },
+    {
+      "id": "st-github-0043",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Gets the contents of an issue within a repository",
+      "expected_tool_key": "GitHub::get_issue"
+    },
+    {
+      "id": "st-github-0044",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get details of a specific pull request",
+      "expected_tool_key": "GitHub::get_pull_request"
+    },
+    {
+      "id": "st-github-0045",
+      "server_intent": "GitHub operations",
+      "tool_intent": "List and filter repository pull requests",
+      "expected_tool_key": "GitHub::list_pull_requests"
+    },
+    {
+      "id": "st-github-0046",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a review on a pull request",
+      "expected_tool_key": "GitHub::create_pull_request_review"
+    },
+    {
+      "id": "st-github-0047",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Merge a pull request",
+      "expected_tool_key": "GitHub::merge_pull_request"
+    },
+    {
+      "id": "st-github-0048",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get the list of files changed in a pull request",
+      "expected_tool_key": "GitHub::get_pull_request_files"
+    },
+    {
+      "id": "st-github-0049",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get the combined status of all status checks for a pull request",
+      "expected_tool_key": "GitHub::get_pull_request_status"
+    },
+    {
+      "id": "st-github-0050",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Update a pull request branch with the latest changes from the base branch (equivalent to GitHub's 'Update branch' button)",
+      "expected_tool_key": "GitHub::update_pull_request_branch"
+    },
+    {
+      "id": "st-github-0051",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get the review comments on a pull request",
+      "expected_tool_key": "GitHub::get_pull_request_comments"
+    },
+    {
+      "id": "st-github-0052",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get the reviews on a pull request",
+      "expected_tool_key": "GitHub::get_pull_request_reviews"
+    },
+    {
+      "id": "st-github-0053",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create or update a single file in a repository",
+      "expected_tool_key": "GitHub::create_or_update_file"
+    },
+    {
+      "id": "st-github-0054",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Push multiple files in a single commit",
+      "expected_tool_key": "GitHub::push_files"
+    },
+    {
+      "id": "st-github-0055",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for GitHub repositories",
+      "expected_tool_key": "GitHub::search_repositories"
+    },
+    {
+      "id": "st-github-0056",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new GitHub repository",
+      "expected_tool_key": "GitHub::create_repository"
+    },
+    {
+      "id": "st-github-0057",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get contents of a file or directory",
+      "expected_tool_key": "GitHub::get_file_contents"
+    },
+    {
+      "id": "st-github-0058",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new issue",
+      "expected_tool_key": "GitHub::create_issue"
+    },
+    {
+      "id": "st-github-0059",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new pull request",
+      "expected_tool_key": "GitHub::create_pull_request"
+    },
+    {
+      "id": "st-github-0060",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Fork a repository",
+      "expected_tool_key": "GitHub::fork_repository"
+    },
+    {
+      "id": "st-github-0061",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new branch",
+      "expected_tool_key": "GitHub::create_branch"
+    },
+    {
+      "id": "st-github-0062",
+      "server_intent": "GitHub operations",
+      "tool_intent": "List and filter repository issues",
+      "expected_tool_key": "GitHub::list_issues"
+    },
+    {
+      "id": "st-github-0063",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Update an existing issue",
+      "expected_tool_key": "GitHub::update_issue"
+    },
+    {
+      "id": "st-github-0064",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Add a comment to an issue",
+      "expected_tool_key": "GitHub::add_issue_comment"
+    },
+    {
+      "id": "st-github-0065",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for code across GitHub repositories",
+      "expected_tool_key": "GitHub::search_code"
+    },
+    {
+      "id": "st-github-0066",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for issues and pull requests",
+      "expected_tool_key": "GitHub::search_issues"
+    },
+    {
+      "id": "st-github-0067",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for GitHub users",
+      "expected_tool_key": "GitHub::search_users"
+    },
+    {
+      "id": "st-github-0068",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Gets commits of a branch in a repository",
+      "expected_tool_key": "GitHub::list_commits"
+    },
+    {
+      "id": "st-github-0069",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Gets the contents of an issue within a repository",
+      "expected_tool_key": "GitHub::get_issue"
+    },
+    {
+      "id": "st-github-0070",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get details of a specific pull request",
+      "expected_tool_key": "GitHub::get_pull_request"
+    },
+    {
+      "id": "st-github-0071",
+      "server_intent": "GitHub operations",
+      "tool_intent": "List and filter repository pull requests",
+      "expected_tool_key": "GitHub::list_pull_requests"
+    },
+    {
+      "id": "st-github-0072",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a review on a pull request",
+      "expected_tool_key": "GitHub::create_pull_request_review"
+    },
+    {
+      "id": "st-github-0073",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Merge a pull request",
+      "expected_tool_key": "GitHub::merge_pull_request"
+    },
+    {
+      "id": "st-github-0074",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get the list of files changed in a pull request",
+      "expected_tool_key": "GitHub::get_pull_request_files"
+    },
+    {
+      "id": "st-github-0075",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get the combined status of all status checks for a pull request",
+      "expected_tool_key": "GitHub::get_pull_request_status"
+    },
+    {
+      "id": "st-github-0076",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Update a pull request branch with the latest changes from the base branch (equivalent to GitHub's 'Update branch' button)",
+      "expected_tool_key": "GitHub::update_pull_request_branch"
+    },
+    {
+      "id": "st-github-0077",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get the review comments on a pull request",
+      "expected_tool_key": "GitHub::get_pull_request_comments"
+    },
+    {
+      "id": "st-github-0078",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get the reviews on a pull request",
+      "expected_tool_key": "GitHub::get_pull_request_reviews"
+    },
+    {
+      "id": "st-github-0079",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create or update a single file in a repository",
+      "expected_tool_key": "GitHub::create_or_update_file"
+    },
+    {
+      "id": "st-github-0080",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Push multiple files in a single commit",
+      "expected_tool_key": "GitHub::push_files"
+    },
+    {
+      "id": "st-github-0081",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for GitHub repositories",
+      "expected_tool_key": "GitHub::search_repositories"
+    },
+    {
+      "id": "st-github-0082",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new GitHub repository",
+      "expected_tool_key": "GitHub::create_repository"
+    },
+    {
+      "id": "st-github-0083",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get contents of a file or directory",
+      "expected_tool_key": "GitHub::get_file_contents"
+    },
+    {
+      "id": "st-github-0084",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new issue",
+      "expected_tool_key": "GitHub::create_issue"
+    },
+    {
+      "id": "st-github-0085",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new pull request",
+      "expected_tool_key": "GitHub::create_pull_request"
+    },
+    {
+      "id": "st-github-0086",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Fork a repository",
+      "expected_tool_key": "GitHub::fork_repository"
+    },
+    {
+      "id": "st-github-0087",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new branch",
+      "expected_tool_key": "GitHub::create_branch"
+    },
+    {
+      "id": "st-github-0088",
+      "server_intent": "GitHub operations",
+      "tool_intent": "List and filter repository issues",
+      "expected_tool_key": "GitHub::list_issues"
+    },
+    {
+      "id": "st-github-0089",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Update an existing issue",
+      "expected_tool_key": "GitHub::update_issue"
+    },
+    {
+      "id": "st-github-0090",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Add a comment to an issue",
+      "expected_tool_key": "GitHub::add_issue_comment"
+    },
+    {
+      "id": "st-github-0091",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for code across GitHub repositories",
+      "expected_tool_key": "GitHub::search_code"
+    },
+    {
+      "id": "st-github-0092",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for issues and pull requests",
+      "expected_tool_key": "GitHub::search_issues"
+    },
+    {
+      "id": "st-github-0093",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for GitHub users",
+      "expected_tool_key": "GitHub::search_users"
+    },
+    {
+      "id": "st-github-0094",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Gets commits of a branch in a repository",
+      "expected_tool_key": "GitHub::list_commits"
+    },
+    {
+      "id": "st-github-0095",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Gets the contents of an issue within a repository",
+      "expected_tool_key": "GitHub::get_issue"
+    },
+    {
+      "id": "st-github-0096",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get details of a specific pull request",
+      "expected_tool_key": "GitHub::get_pull_request"
+    },
+    {
+      "id": "st-github-0097",
+      "server_intent": "GitHub operations",
+      "tool_intent": "List and filter repository pull requests",
+      "expected_tool_key": "GitHub::list_pull_requests"
+    },
+    {
+      "id": "st-github-0098",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a review on a pull request",
+      "expected_tool_key": "GitHub::create_pull_request_review"
+    },
+    {
+      "id": "st-github-0099",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Merge a pull request",
+      "expected_tool_key": "GitHub::merge_pull_request"
+    },
+    {
+      "id": "st-github-0100",
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get the list of files changed in a pull request",
+      "expected_tool_key": "GitHub::get_pull_request_files"
+    }
+  ]
+}

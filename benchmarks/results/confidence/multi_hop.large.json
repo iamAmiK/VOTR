@@ -1,0 +1,166 @@
+{
+  "scale": "large",
+  "summary": {
+    "num_items": 15,
+    "top1_accuracy": 1.0,
+    "handoff_accuracy_at_recommended_k": 1.0,
+    "avg_recommended_handoff_k": 3.2666666666666666,
+    "confidence_buckets": {
+      "high": {
+        "count": 6,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0,
+        "avg_recommended_handoff_k": 1
+      },
+      "low": {
+        "count": 8,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0,
+        "avg_recommended_handoff_k": 5
+      },
+      "medium": {
+        "count": 1,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0,
+        "avg_recommended_handoff_k": 3
+      }
+    }
+  },
+  "rows": [
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006184264645396342
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000836960501159334
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0010426450507904708
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011253966155473291
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.00026895491803278354
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0026410936201556254
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 8.960573476702455e-05
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 9.254362771020375e-05
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.001775292754354757
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0013814130005959727
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0010537920328540368
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009634953447750921
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0018058401639344246
+    }
+  ]
+}

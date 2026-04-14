@@ -1,0 +1,78 @@
+{
+  "suite": "negative_controls.policy_cleaned",
+  "description": "Policy-shaped unsupported-intent benchmark for router-format inputs that should remain low-confidence and wide-handoff despite being cleanly structured.",
+  "cases": [
+    {
+      "id": "neg-clean-001",
+      "server_intent": "Travel reservations",
+      "tool_intent": "book round-trip commercial flights for next week",
+      "max_confidence": "low",
+      "max_recommended_handoff_k": 0,
+      "require_empty": true,
+      "require_null_route": true
+    },
+    {
+      "id": "neg-clean-002",
+      "server_intent": "Childcare services",
+      "tool_intent": "book an in-home babysitter for Friday evening",
+      "max_confidence": "low",
+      "max_recommended_handoff_k": 0,
+      "require_empty": true,
+      "require_null_route": true
+    },
+    {
+      "id": "neg-clean-003",
+      "server_intent": "Restaurant delivery",
+      "tool_intent": "order dinner for office delivery",
+      "max_confidence": "low",
+      "max_recommended_handoff_k": 0,
+      "require_empty": true,
+      "require_null_route": true
+    },
+    {
+      "id": "neg-clean-004",
+      "server_intent": "Medical diagnosis",
+      "tool_intent": "diagnose the cause of chest pain from symptoms",
+      "max_confidence": "low",
+      "max_recommended_handoff_k": 0,
+      "require_empty": true,
+      "require_null_route": true
+    },
+    {
+      "id": "neg-clean-005",
+      "server_intent": "Psychological counseling",
+      "tool_intent": "provide grief counseling and emotional support",
+      "max_confidence": "low",
+      "max_recommended_handoff_k": 0,
+      "require_empty": true,
+      "require_null_route": true
+    },
+    {
+      "id": "neg-clean-006",
+      "server_intent": "Personal financial advice",
+      "tool_intent": "advise whether refinancing a mortgage is a good idea",
+      "max_confidence": "low",
+      "max_recommended_handoff_k": 0,
+      "require_empty": true,
+      "require_null_route": true
+    },
+    {
+      "id": "neg-clean-007",
+      "server_intent": "Operating system administration",
+      "tool_intent": "install a desktop browser and set it as the default application",
+      "max_confidence": "low",
+      "max_recommended_handoff_k": 0,
+      "require_empty": true,
+      "require_null_route": true
+    },
+    {
+      "id": "neg-clean-008",
+      "server_intent": "Academic tutoring",
+      "tool_intent": "teach introductory calculus concepts step by step",
+      "max_confidence": "low",
+      "max_recommended_handoff_k": 0,
+      "require_empty": true,
+      "require_null_route": true
+    }
+  ]
+}

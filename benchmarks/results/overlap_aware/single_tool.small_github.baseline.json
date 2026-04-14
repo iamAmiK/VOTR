@@ -1,0 +1,897 @@
+{
+  "summary": {
+    "num_items": 26,
+    "top1_accuracy": 1.0,
+    "top3_accuracy": 1.0,
+    "top5_accuracy": 1.0,
+    "handoff_accuracy_at_recommended_k": 1.0,
+    "avg_recommended_handoff_k": 2.4615384615384617,
+    "confidence_buckets": {
+      "high": {
+        "count": 16,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "low": {
+        "count": 9,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "medium": {
+        "count": 1,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      }
+    },
+    "equivalence_aware": {
+      "num_items": 26,
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "avg_recommended_handoff_k": 2.4615384615384617,
+      "confidence_buckets": {
+        "high": {
+          "count": 16,
+          "top1_accuracy": 1.0,
+          "handoff_accuracy_at_recommended_k": 1.0
+        },
+        "low": {
+          "count": 9,
+          "top1_accuracy": 1.0,
+          "handoff_accuracy_at_recommended_k": 1.0
+        },
+        "medium": {
+          "count": 1,
+          "top1_accuracy": 1.0,
+          "handoff_accuracy_at_recommended_k": 1.0
+        }
+      }
+    },
+    "overlap_aware": {
+      "ambiguous_count": 0,
+      "ambiguous_rate": 0.0,
+      "avg_overlap_set_size": 0.0,
+      "expected_or_equivalent_in_overlap_set_rate": 0.0,
+      "exact_top1_accuracy_on_ambiguous": 0.0,
+      "handoff_accuracy_on_ambiguous": 0.0,
+      "equivalence_top1_accuracy_on_ambiguous": 0.0,
+      "equivalence_handoff_accuracy_on_ambiguous": 0.0
+    }
+  },
+  "results": [
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create or update a single file in a repository",
+      "expected_tool_key": "GitHub::create_or_update_file",
+      "predicted_topk": [
+        "GitHub::create_or_update_file",
+        "GitHub::push_files",
+        "GitHub::create_repository",
+        "GitHub::update_issue",
+        "GitHub::list_commits"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0012150023503143537,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03730958781362007,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::create_or_update_file"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Push multiple files in a single commit",
+      "expected_tool_key": "GitHub::push_files",
+      "predicted_topk": [
+        "GitHub::push_files",
+        "GitHub::create_or_update_file",
+        "GitHub::get_pull_request_files",
+        "GitHub::list_commits",
+        "GitHub::fork_repository"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::push_files"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for GitHub repositories",
+      "expected_tool_key": "GitHub::search_repositories",
+      "predicted_topk": [
+        "GitHub::search_repositories",
+        "GitHub::search_code",
+        "GitHub::search_users",
+        "GitHub::search_issues",
+        "GitHub::create_repository"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::search_repositories"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new GitHub repository",
+      "expected_tool_key": "GitHub::create_repository",
+      "predicted_topk": [
+        "GitHub::create_repository",
+        "GitHub::create_branch",
+        "GitHub::create_pull_request",
+        "GitHub::create_issue",
+        "GitHub::create_or_update_file"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.001223002862347125,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.0373015873015873,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::create_repository"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get contents of a file or directory",
+      "expected_tool_key": "GitHub::get_file_contents",
+      "predicted_topk": [
+        "GitHub::get_file_contents",
+        "GitHub::get_issue",
+        "GitHub::create_or_update_file",
+        "GitHub::get_pull_request_files",
+        "GitHub::get_pull_request"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::get_file_contents"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new issue",
+      "expected_tool_key": "GitHub::create_issue",
+      "predicted_topk": [
+        "GitHub::create_issue",
+        "GitHub::create_pull_request",
+        "GitHub::create_branch",
+        "GitHub::create_repository",
+        "GitHub::add_issue_comment"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0012150023503143537,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03730958781362007,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::create_issue"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new pull request",
+      "expected_tool_key": "GitHub::create_pull_request",
+      "predicted_topk": [
+        "GitHub::create_pull_request",
+        "GitHub::create_issue",
+        "GitHub::create_pull_request_review",
+        "GitHub::create_branch",
+        "GitHub::create_repository"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::create_pull_request"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Fork a repository",
+      "expected_tool_key": "GitHub::fork_repository",
+      "predicted_topk": [
+        "GitHub::fork_repository",
+        "GitHub::create_repository",
+        "GitHub::create_branch",
+        "GitHub::create_or_update_file",
+        "GitHub::list_commits"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011253966155473291,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.0373991935483871,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::fork_repository"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a new branch",
+      "expected_tool_key": "GitHub::create_branch",
+      "predicted_topk": [
+        "GitHub::create_branch",
+        "GitHub::create_issue",
+        "GitHub::create_pull_request",
+        "GitHub::create_repository",
+        "GitHub::update_pull_request_branch"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011253966155473291,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.0373991935483871,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::create_branch"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "List and filter repository issues",
+      "expected_tool_key": "GitHub::list_issues",
+      "predicted_topk": [
+        "GitHub::list_issues",
+        "GitHub::list_pull_requests",
+        "GitHub::search_issues",
+        "GitHub::search_repositories",
+        "GitHub::get_pull_request_files"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::list_issues"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Update an existing issue",
+      "expected_tool_key": "GitHub::update_issue",
+      "predicted_topk": [
+        "GitHub::update_issue",
+        "GitHub::add_issue_comment",
+        "GitHub::get_issue",
+        "GitHub::create_issue",
+        "GitHub::create_or_update_file"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::update_issue"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Add a comment to an issue",
+      "expected_tool_key": "GitHub::add_issue_comment",
+      "predicted_topk": [
+        "GitHub::add_issue_comment",
+        "GitHub::update_issue",
+        "GitHub::create_issue",
+        "GitHub::get_issue",
+        "GitHub::create_pull_request_review"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009669864772984815,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.037557603686635944,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::add_issue_comment"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for code across GitHub repositories",
+      "expected_tool_key": "GitHub::search_code",
+      "predicted_topk": [
+        "GitHub::search_code",
+        "GitHub::search_repositories",
+        "GitHub::search_users",
+        "GitHub::search_issues",
+        "GitHub::create_repository"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::search_code"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for issues and pull requests",
+      "expected_tool_key": "GitHub::search_issues",
+      "predicted_topk": [
+        "GitHub::search_issues",
+        "GitHub::search_repositories",
+        "GitHub::list_issues",
+        "GitHub::list_pull_requests",
+        "GitHub::search_users"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0012150023503143537,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03730958781362007,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::search_issues"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Search for GitHub users",
+      "expected_tool_key": "GitHub::search_users",
+      "predicted_topk": [
+        "GitHub::search_users",
+        "GitHub::search_repositories",
+        "GitHub::search_code",
+        "GitHub::search_issues",
+        "GitHub::create_repository"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::search_users"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Gets commits of a branch in a repository",
+      "expected_tool_key": "GitHub::list_commits",
+      "predicted_topk": [
+        "GitHub::list_commits",
+        "GitHub::get_issue",
+        "GitHub::get_pull_request_files",
+        "GitHub::update_pull_request_branch",
+        "GitHub::create_branch"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000710970092249838,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03781362007168459,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::list_commits"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Gets the contents of an issue within a repository",
+      "expected_tool_key": "GitHub::get_issue",
+      "predicted_topk": [
+        "GitHub::get_issue",
+        "GitHub::list_commits",
+        "GitHub::get_file_contents",
+        "GitHub::update_issue",
+        "GitHub::get_pull_request"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011379266482386546,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03738666351569577,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::get_issue"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get details of a specific pull request",
+      "expected_tool_key": "GitHub::get_pull_request",
+      "predicted_topk": [
+        "GitHub::get_pull_request",
+        "GitHub::get_pull_request_files",
+        "GitHub::get_pull_request_reviews",
+        "GitHub::get_pull_request_status",
+        "GitHub::get_pull_request_comments"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::get_pull_request"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "List and filter repository pull requests",
+      "expected_tool_key": "GitHub::list_pull_requests",
+      "predicted_topk": [
+        "GitHub::list_pull_requests",
+        "GitHub::list_issues",
+        "GitHub::get_pull_request_files",
+        "GitHub::search_issues",
+        "GitHub::get_pull_request_reviews"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::list_pull_requests"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Create a review on a pull request",
+      "expected_tool_key": "GitHub::create_pull_request_review",
+      "predicted_topk": [
+        "GitHub::create_pull_request_review",
+        "GitHub::get_pull_request_comments",
+        "GitHub::get_pull_request_reviews",
+        "GitHub::create_pull_request",
+        "GitHub::merge_pull_request"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::create_pull_request_review"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Merge a pull request",
+      "expected_tool_key": "GitHub::merge_pull_request",
+      "predicted_topk": [
+        "GitHub::merge_pull_request",
+        "GitHub::create_pull_request",
+        "GitHub::create_pull_request_review",
+        "GitHub::get_pull_request_reviews",
+        "GitHub::get_pull_request"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::merge_pull_request"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get the list of files changed in a pull request",
+      "expected_tool_key": "GitHub::get_pull_request_files",
+      "predicted_topk": [
+        "GitHub::get_pull_request_files",
+        "GitHub::get_pull_request",
+        "GitHub::get_pull_request_comments",
+        "GitHub::get_pull_request_status",
+        "GitHub::get_pull_request_reviews"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0013939430332872982,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03713064713064713,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::get_pull_request_files"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get the combined status of all status checks for a pull request",
+      "expected_tool_key": "GitHub::get_pull_request_status",
+      "predicted_topk": [
+        "GitHub::get_pull_request_status",
+        "GitHub::get_pull_request",
+        "GitHub::get_pull_request_files",
+        "GitHub::get_pull_request_reviews",
+        "GitHub::get_pull_request_comments"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0013859425212545268,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.0371386476426799,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::get_pull_request_status"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Update a pull request branch with the latest changes from the base branch (equivalent to GitHub's 'Update branch' button)",
+      "expected_tool_key": "GitHub::update_pull_request_branch",
+      "predicted_topk": [
+        "GitHub::update_pull_request_branch",
+        "GitHub::create_branch",
+        "GitHub::merge_pull_request",
+        "GitHub::list_commits",
+        "GitHub::create_or_update_file"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.002665889573293806,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03585870059064062,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::update_pull_request_branch"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get the review comments on a pull request",
+      "expected_tool_key": "GitHub::get_pull_request_comments",
+      "predicted_topk": [
+        "GitHub::get_pull_request_comments",
+        "GitHub::get_pull_request_reviews",
+        "GitHub::create_pull_request_review",
+        "GitHub::get_pull_request_files",
+        "GitHub::get_pull_request"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03764720942140297,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::get_pull_request_comments"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    },
+    {
+      "server_intent": "GitHub operations",
+      "tool_intent": "Get the reviews on a pull request",
+      "expected_tool_key": "GitHub::get_pull_request_reviews",
+      "predicted_topk": [
+        "GitHub::get_pull_request_reviews",
+        "GitHub::get_pull_request_comments",
+        "GitHub::create_pull_request_review",
+        "GitHub::get_pull_request_files",
+        "GitHub::get_pull_request"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134,
+      "top1_score": 0.038524590163934426,
+      "top2_score": 0.03790322580645161,
+      "overlap_ambiguous": false,
+      "overlap_tool_keys": [],
+      "overlap_servers": [],
+      "equivalent_tool_keys": [
+        "GitHub::get_pull_request_reviews"
+      ],
+      "equivalence_hit_at_1": true,
+      "equivalence_hit_at_3": true,
+      "equivalence_hit_at_5": true,
+      "equivalence_hit_at_recommended_k": true,
+      "expected_or_equivalent_in_overlap_set": false
+    }
+  ],
+  "suite": "single_tool.github.clean"
+}

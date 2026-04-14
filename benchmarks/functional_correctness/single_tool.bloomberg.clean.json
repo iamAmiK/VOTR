@@ -1,0 +1,606 @@
+{
+  "suite": "single_tool.bloomberg.clean",
+  "description": "Router-only single-tool benchmark (100 evaluation queries), cycled from labeled catalog tools.",
+  "cases": [
+    {
+      "id": "st-bloomberg-0001",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg reference data",
+      "expected_tool_key": "Bloomberg::bdp"
+    },
+    {
+      "id": "st-bloomberg-0002",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg block data",
+      "expected_tool_key": "Bloomberg::bds"
+    },
+    {
+      "id": "st-bloomberg-0003",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg historical data",
+      "expected_tool_key": "Bloomberg::bdh"
+    },
+    {
+      "id": "st-bloomberg-0004",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg intraday bar data",
+      "expected_tool_key": "Bloomberg::bdib"
+    },
+    {
+      "id": "st-bloomberg-0005",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg tick data",
+      "expected_tool_key": "Bloomberg::bdtick"
+    },
+    {
+      "id": "st-bloomberg-0006",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg earning exposure by Geo or Products",
+      "expected_tool_key": "Bloomberg::earning"
+    },
+    {
+      "id": "st-bloomberg-0007",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg divident / split history",
+      "expected_tool_key": "Bloomberg::dividend"
+    },
+    {
+      "id": "st-bloomberg-0008",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg equity screening",
+      "expected_tool_key": "Bloomberg::beqs"
+    },
+    {
+      "id": "st-bloomberg-0009",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Calculate the adjusted turnover (in millions)",
+      "expected_tool_key": "Bloomberg::turnover"
+    },
+    {
+      "id": "st-bloomberg-0010",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg reference data",
+      "expected_tool_key": "Bloomberg::bdp"
+    },
+    {
+      "id": "st-bloomberg-0011",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg block data",
+      "expected_tool_key": "Bloomberg::bds"
+    },
+    {
+      "id": "st-bloomberg-0012",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg historical data",
+      "expected_tool_key": "Bloomberg::bdh"
+    },
+    {
+      "id": "st-bloomberg-0013",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg intraday bar data",
+      "expected_tool_key": "Bloomberg::bdib"
+    },
+    {
+      "id": "st-bloomberg-0014",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg tick data",
+      "expected_tool_key": "Bloomberg::bdtick"
+    },
+    {
+      "id": "st-bloomberg-0015",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg earning exposure by Geo or Products",
+      "expected_tool_key": "Bloomberg::earning"
+    },
+    {
+      "id": "st-bloomberg-0016",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg divident / split history",
+      "expected_tool_key": "Bloomberg::dividend"
+    },
+    {
+      "id": "st-bloomberg-0017",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg equity screening",
+      "expected_tool_key": "Bloomberg::beqs"
+    },
+    {
+      "id": "st-bloomberg-0018",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Calculate the adjusted turnover (in millions)",
+      "expected_tool_key": "Bloomberg::turnover"
+    },
+    {
+      "id": "st-bloomberg-0019",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg reference data",
+      "expected_tool_key": "Bloomberg::bdp"
+    },
+    {
+      "id": "st-bloomberg-0020",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg block data",
+      "expected_tool_key": "Bloomberg::bds"
+    },
+    {
+      "id": "st-bloomberg-0021",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg historical data",
+      "expected_tool_key": "Bloomberg::bdh"
+    },
+    {
+      "id": "st-bloomberg-0022",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg intraday bar data",
+      "expected_tool_key": "Bloomberg::bdib"
+    },
+    {
+      "id": "st-bloomberg-0023",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg tick data",
+      "expected_tool_key": "Bloomberg::bdtick"
+    },
+    {
+      "id": "st-bloomberg-0024",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg earning exposure by Geo or Products",
+      "expected_tool_key": "Bloomberg::earning"
+    },
+    {
+      "id": "st-bloomberg-0025",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg divident / split history",
+      "expected_tool_key": "Bloomberg::dividend"
+    },
+    {
+      "id": "st-bloomberg-0026",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg equity screening",
+      "expected_tool_key": "Bloomberg::beqs"
+    },
+    {
+      "id": "st-bloomberg-0027",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Calculate the adjusted turnover (in millions)",
+      "expected_tool_key": "Bloomberg::turnover"
+    },
+    {
+      "id": "st-bloomberg-0028",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg reference data",
+      "expected_tool_key": "Bloomberg::bdp"
+    },
+    {
+      "id": "st-bloomberg-0029",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg block data",
+      "expected_tool_key": "Bloomberg::bds"
+    },
+    {
+      "id": "st-bloomberg-0030",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg historical data",
+      "expected_tool_key": "Bloomberg::bdh"
+    },
+    {
+      "id": "st-bloomberg-0031",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg intraday bar data",
+      "expected_tool_key": "Bloomberg::bdib"
+    },
+    {
+      "id": "st-bloomberg-0032",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg tick data",
+      "expected_tool_key": "Bloomberg::bdtick"
+    },
+    {
+      "id": "st-bloomberg-0033",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg earning exposure by Geo or Products",
+      "expected_tool_key": "Bloomberg::earning"
+    },
+    {
+      "id": "st-bloomberg-0034",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg divident / split history",
+      "expected_tool_key": "Bloomberg::dividend"
+    },
+    {
+      "id": "st-bloomberg-0035",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg equity screening",
+      "expected_tool_key": "Bloomberg::beqs"
+    },
+    {
+      "id": "st-bloomberg-0036",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Calculate the adjusted turnover (in millions)",
+      "expected_tool_key": "Bloomberg::turnover"
+    },
+    {
+      "id": "st-bloomberg-0037",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg reference data",
+      "expected_tool_key": "Bloomberg::bdp"
+    },
+    {
+      "id": "st-bloomberg-0038",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg block data",
+      "expected_tool_key": "Bloomberg::bds"
+    },
+    {
+      "id": "st-bloomberg-0039",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg historical data",
+      "expected_tool_key": "Bloomberg::bdh"
+    },
+    {
+      "id": "st-bloomberg-0040",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg intraday bar data",
+      "expected_tool_key": "Bloomberg::bdib"
+    },
+    {
+      "id": "st-bloomberg-0041",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg tick data",
+      "expected_tool_key": "Bloomberg::bdtick"
+    },
+    {
+      "id": "st-bloomberg-0042",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg earning exposure by Geo or Products",
+      "expected_tool_key": "Bloomberg::earning"
+    },
+    {
+      "id": "st-bloomberg-0043",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg divident / split history",
+      "expected_tool_key": "Bloomberg::dividend"
+    },
+    {
+      "id": "st-bloomberg-0044",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg equity screening",
+      "expected_tool_key": "Bloomberg::beqs"
+    },
+    {
+      "id": "st-bloomberg-0045",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Calculate the adjusted turnover (in millions)",
+      "expected_tool_key": "Bloomberg::turnover"
+    },
+    {
+      "id": "st-bloomberg-0046",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg reference data",
+      "expected_tool_key": "Bloomberg::bdp"
+    },
+    {
+      "id": "st-bloomberg-0047",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg block data",
+      "expected_tool_key": "Bloomberg::bds"
+    },
+    {
+      "id": "st-bloomberg-0048",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg historical data",
+      "expected_tool_key": "Bloomberg::bdh"
+    },
+    {
+      "id": "st-bloomberg-0049",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg intraday bar data",
+      "expected_tool_key": "Bloomberg::bdib"
+    },
+    {
+      "id": "st-bloomberg-0050",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg tick data",
+      "expected_tool_key": "Bloomberg::bdtick"
+    },
+    {
+      "id": "st-bloomberg-0051",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg earning exposure by Geo or Products",
+      "expected_tool_key": "Bloomberg::earning"
+    },
+    {
+      "id": "st-bloomberg-0052",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg divident / split history",
+      "expected_tool_key": "Bloomberg::dividend"
+    },
+    {
+      "id": "st-bloomberg-0053",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg equity screening",
+      "expected_tool_key": "Bloomberg::beqs"
+    },
+    {
+      "id": "st-bloomberg-0054",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Calculate the adjusted turnover (in millions)",
+      "expected_tool_key": "Bloomberg::turnover"
+    },
+    {
+      "id": "st-bloomberg-0055",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg reference data",
+      "expected_tool_key": "Bloomberg::bdp"
+    },
+    {
+      "id": "st-bloomberg-0056",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg block data",
+      "expected_tool_key": "Bloomberg::bds"
+    },
+    {
+      "id": "st-bloomberg-0057",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg historical data",
+      "expected_tool_key": "Bloomberg::bdh"
+    },
+    {
+      "id": "st-bloomberg-0058",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg intraday bar data",
+      "expected_tool_key": "Bloomberg::bdib"
+    },
+    {
+      "id": "st-bloomberg-0059",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg tick data",
+      "expected_tool_key": "Bloomberg::bdtick"
+    },
+    {
+      "id": "st-bloomberg-0060",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg earning exposure by Geo or Products",
+      "expected_tool_key": "Bloomberg::earning"
+    },
+    {
+      "id": "st-bloomberg-0061",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg divident / split history",
+      "expected_tool_key": "Bloomberg::dividend"
+    },
+    {
+      "id": "st-bloomberg-0062",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg equity screening",
+      "expected_tool_key": "Bloomberg::beqs"
+    },
+    {
+      "id": "st-bloomberg-0063",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Calculate the adjusted turnover (in millions)",
+      "expected_tool_key": "Bloomberg::turnover"
+    },
+    {
+      "id": "st-bloomberg-0064",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg reference data",
+      "expected_tool_key": "Bloomberg::bdp"
+    },
+    {
+      "id": "st-bloomberg-0065",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg block data",
+      "expected_tool_key": "Bloomberg::bds"
+    },
+    {
+      "id": "st-bloomberg-0066",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg historical data",
+      "expected_tool_key": "Bloomberg::bdh"
+    },
+    {
+      "id": "st-bloomberg-0067",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg intraday bar data",
+      "expected_tool_key": "Bloomberg::bdib"
+    },
+    {
+      "id": "st-bloomberg-0068",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg tick data",
+      "expected_tool_key": "Bloomberg::bdtick"
+    },
+    {
+      "id": "st-bloomberg-0069",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg earning exposure by Geo or Products",
+      "expected_tool_key": "Bloomberg::earning"
+    },
+    {
+      "id": "st-bloomberg-0070",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg divident / split history",
+      "expected_tool_key": "Bloomberg::dividend"
+    },
+    {
+      "id": "st-bloomberg-0071",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg equity screening",
+      "expected_tool_key": "Bloomberg::beqs"
+    },
+    {
+      "id": "st-bloomberg-0072",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Calculate the adjusted turnover (in millions)",
+      "expected_tool_key": "Bloomberg::turnover"
+    },
+    {
+      "id": "st-bloomberg-0073",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg reference data",
+      "expected_tool_key": "Bloomberg::bdp"
+    },
+    {
+      "id": "st-bloomberg-0074",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg block data",
+      "expected_tool_key": "Bloomberg::bds"
+    },
+    {
+      "id": "st-bloomberg-0075",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg historical data",
+      "expected_tool_key": "Bloomberg::bdh"
+    },
+    {
+      "id": "st-bloomberg-0076",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg intraday bar data",
+      "expected_tool_key": "Bloomberg::bdib"
+    },
+    {
+      "id": "st-bloomberg-0077",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg tick data",
+      "expected_tool_key": "Bloomberg::bdtick"
+    },
+    {
+      "id": "st-bloomberg-0078",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg earning exposure by Geo or Products",
+      "expected_tool_key": "Bloomberg::earning"
+    },
+    {
+      "id": "st-bloomberg-0079",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg divident / split history",
+      "expected_tool_key": "Bloomberg::dividend"
+    },
+    {
+      "id": "st-bloomberg-0080",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg equity screening",
+      "expected_tool_key": "Bloomberg::beqs"
+    },
+    {
+      "id": "st-bloomberg-0081",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Calculate the adjusted turnover (in millions)",
+      "expected_tool_key": "Bloomberg::turnover"
+    },
+    {
+      "id": "st-bloomberg-0082",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg reference data",
+      "expected_tool_key": "Bloomberg::bdp"
+    },
+    {
+      "id": "st-bloomberg-0083",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg block data",
+      "expected_tool_key": "Bloomberg::bds"
+    },
+    {
+      "id": "st-bloomberg-0084",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg historical data",
+      "expected_tool_key": "Bloomberg::bdh"
+    },
+    {
+      "id": "st-bloomberg-0085",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg intraday bar data",
+      "expected_tool_key": "Bloomberg::bdib"
+    },
+    {
+      "id": "st-bloomberg-0086",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg tick data",
+      "expected_tool_key": "Bloomberg::bdtick"
+    },
+    {
+      "id": "st-bloomberg-0087",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg earning exposure by Geo or Products",
+      "expected_tool_key": "Bloomberg::earning"
+    },
+    {
+      "id": "st-bloomberg-0088",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg divident / split history",
+      "expected_tool_key": "Bloomberg::dividend"
+    },
+    {
+      "id": "st-bloomberg-0089",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg equity screening",
+      "expected_tool_key": "Bloomberg::beqs"
+    },
+    {
+      "id": "st-bloomberg-0090",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Calculate the adjusted turnover (in millions)",
+      "expected_tool_key": "Bloomberg::turnover"
+    },
+    {
+      "id": "st-bloomberg-0091",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg reference data",
+      "expected_tool_key": "Bloomberg::bdp"
+    },
+    {
+      "id": "st-bloomberg-0092",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg block data",
+      "expected_tool_key": "Bloomberg::bds"
+    },
+    {
+      "id": "st-bloomberg-0093",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg historical data",
+      "expected_tool_key": "Bloomberg::bdh"
+    },
+    {
+      "id": "st-bloomberg-0094",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg intraday bar data",
+      "expected_tool_key": "Bloomberg::bdib"
+    },
+    {
+      "id": "st-bloomberg-0095",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg tick data",
+      "expected_tool_key": "Bloomberg::bdtick"
+    },
+    {
+      "id": "st-bloomberg-0096",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg earning exposure by Geo or Products",
+      "expected_tool_key": "Bloomberg::earning"
+    },
+    {
+      "id": "st-bloomberg-0097",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg divident / split history",
+      "expected_tool_key": "Bloomberg::dividend"
+    },
+    {
+      "id": "st-bloomberg-0098",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg equity screening",
+      "expected_tool_key": "Bloomberg::beqs"
+    },
+    {
+      "id": "st-bloomberg-0099",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Calculate the adjusted turnover (in millions)",
+      "expected_tool_key": "Bloomberg::turnover"
+    },
+    {
+      "id": "st-bloomberg-0100",
+      "server_intent": "Bloomberg financial data operations",
+      "tool_intent": "Get Bloomberg reference data",
+      "expected_tool_key": "Bloomberg::bdp"
+    }
+  ]
+}

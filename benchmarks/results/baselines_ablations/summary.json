@@ -1,0 +1,705 @@
+{
+  "rows": [
+    {
+      "suite": "multi_hop.small_100",
+      "profile": "dense_only",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "case_metric_label": "chain@1",
+      "case_metric_value": 1.0
+    },
+    {
+      "suite": "multi_hop.small_100",
+      "profile": "bm25_only",
+      "top1_accuracy": 0.99,
+      "top3_accuracy": 0.99,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "case_metric_label": "chain@1",
+      "case_metric_value": 0.95
+    },
+    {
+      "suite": "multi_hop.small_100",
+      "profile": "dense_bm25",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "case_metric_label": "chain@1",
+      "case_metric_value": 1.0
+    },
+    {
+      "suite": "multi_hop.small_100",
+      "profile": "full_stack",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "case_metric_label": "chain@1",
+      "case_metric_value": 1.0
+    },
+    {
+      "suite": "multi_hop.small_100",
+      "profile": "no_handoff_policy",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "case_metric_label": "chain@1",
+      "case_metric_value": 1.0
+    },
+    {
+      "suite": "multi_hop.small_100",
+      "profile": "no_session_memory",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "case_metric_label": "chain@1",
+      "case_metric_value": 1.0
+    },
+    {
+      "suite": "multi_hop.medium_250",
+      "profile": "dense_only",
+      "top1_accuracy": 0.928,
+      "top3_accuracy": 0.936,
+      "top5_accuracy": 0.936,
+      "handoff_accuracy_at_recommended_k": 0.936,
+      "case_metric_label": "chain@1",
+      "case_metric_value": 0.72
+    },
+    {
+      "suite": "multi_hop.medium_250",
+      "profile": "bm25_only",
+      "top1_accuracy": 0.936,
+      "top3_accuracy": 0.936,
+      "top5_accuracy": 0.936,
+      "handoff_accuracy_at_recommended_k": 0.936,
+      "case_metric_label": "chain@1",
+      "case_metric_value": 0.74
+    },
+    {
+      "suite": "multi_hop.medium_250",
+      "profile": "dense_bm25",
+      "top1_accuracy": 0.928,
+      "top3_accuracy": 0.936,
+      "top5_accuracy": 0.936,
+      "handoff_accuracy_at_recommended_k": 0.936,
+      "case_metric_label": "chain@1",
+      "case_metric_value": 0.72
+    },
+    {
+      "suite": "multi_hop.medium_250",
+      "profile": "full_stack",
+      "top1_accuracy": 0.936,
+      "top3_accuracy": 0.936,
+      "top5_accuracy": 0.936,
+      "handoff_accuracy_at_recommended_k": 0.936,
+      "case_metric_label": "chain@1",
+      "case_metric_value": 0.74
+    },
+    {
+      "suite": "multi_hop.medium_250",
+      "profile": "no_handoff_policy",
+      "top1_accuracy": 0.936,
+      "top3_accuracy": 0.936,
+      "top5_accuracy": 0.936,
+      "handoff_accuracy_at_recommended_k": 0.936,
+      "case_metric_label": "chain@1",
+      "case_metric_value": 0.74
+    },
+    {
+      "suite": "multi_hop.medium_250",
+      "profile": "no_session_memory",
+      "top1_accuracy": 0.936,
+      "top3_accuracy": 0.936,
+      "top5_accuracy": 0.936,
+      "handoff_accuracy_at_recommended_k": 0.936,
+      "case_metric_label": "chain@1",
+      "case_metric_value": 0.74
+    },
+    {
+      "suite": "multi_hop.large",
+      "profile": "dense_only",
+      "top1_accuracy": 0.938,
+      "top3_accuracy": 0.95,
+      "top5_accuracy": 0.952,
+      "handoff_accuracy_at_recommended_k": 0.952,
+      "case_metric_label": "chain@1",
+      "case_metric_value": 0.79
+    },
+    {
+      "suite": "multi_hop.large",
+      "profile": "bm25_only",
+      "top1_accuracy": 0.99,
+      "top3_accuracy": 0.998,
+      "top5_accuracy": 0.998,
+      "handoff_accuracy_at_recommended_k": 0.998,
+      "case_metric_label": "chain@1",
+      "case_metric_value": 0.96
+    },
+    {
+      "suite": "multi_hop.large",
+      "profile": "dense_bm25",
+      "top1_accuracy": 0.942,
+      "top3_accuracy": 0.974,
+      "top5_accuracy": 0.986,
+      "handoff_accuracy_at_recommended_k": 0.98,
+      "case_metric_label": "chain@1",
+      "case_metric_value": 0.81
+    },
+    {
+      "suite": "multi_hop.large",
+      "profile": "full_stack",
+      "top1_accuracy": 0.964,
+      "top3_accuracy": 0.98,
+      "top5_accuracy": 0.99,
+      "handoff_accuracy_at_recommended_k": 0.982,
+      "case_metric_label": "chain@1",
+      "case_metric_value": 0.87
+    },
+    {
+      "suite": "multi_hop.large",
+      "profile": "no_handoff_policy",
+      "top1_accuracy": 0.964,
+      "top3_accuracy": 0.98,
+      "top5_accuracy": 0.99,
+      "handoff_accuracy_at_recommended_k": 0.992,
+      "case_metric_label": "chain@1",
+      "case_metric_value": 0.87
+    },
+    {
+      "suite": "multi_hop.large",
+      "profile": "no_session_memory",
+      "top1_accuracy": 0.964,
+      "top3_accuracy": 0.98,
+      "top5_accuracy": 0.99,
+      "handoff_accuracy_at_recommended_k": 0.982,
+      "case_metric_label": "chain@1",
+      "case_metric_value": 0.87
+    }
+  ],
+  "report": {
+    "suites": {
+      "multi_hop.small_100": {
+        "dense_only": {
+          "summary": {
+            "num_items": 100,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 5,
+            "confidence_buckets": {
+              "low": {
+                "count": 100,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "num_cases": 20,
+            "chain_success_rate_at_1": 1.0,
+            "chain_success_rate_at_3": 1.0,
+            "chain_success_rate_at_5": 1.0
+          },
+          "report_path": "benchmarks\\results\\baselines_ablations\\multi_hop.small_100.dense_only.json"
+        },
+        "bm25_only": {
+          "summary": {
+            "num_items": 100,
+            "top1_accuracy": 0.99,
+            "top3_accuracy": 0.99,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 4.94,
+            "confidence_buckets": {
+              "high": {
+                "count": 1,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 98,
+                "top1_accuracy": 0.9897959183673469,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "medium": {
+                "count": 1,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "num_cases": 20,
+            "chain_success_rate_at_1": 0.95,
+            "chain_success_rate_at_3": 0.95,
+            "chain_success_rate_at_5": 1.0
+          },
+          "report_path": "benchmarks\\results\\baselines_ablations\\multi_hop.small_100.bm25_only.json"
+        },
+        "dense_bm25": {
+          "summary": {
+            "num_items": 100,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 3.1,
+            "confidence_buckets": {
+              "high": {
+                "count": 30,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 35,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "medium": {
+                "count": 35,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "num_cases": 20,
+            "chain_success_rate_at_1": 1.0,
+            "chain_success_rate_at_3": 1.0,
+            "chain_success_rate_at_5": 1.0
+          },
+          "report_path": "benchmarks\\results\\baselines_ablations\\multi_hop.small_100.dense_bm25.json"
+        },
+        "full_stack": {
+          "summary": {
+            "num_items": 100,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 2.26,
+            "confidence_buckets": {
+              "high": {
+                "count": 67,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 30,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "medium": {
+                "count": 3,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "num_cases": 20,
+            "chain_success_rate_at_1": 1.0,
+            "chain_success_rate_at_3": 1.0,
+            "chain_success_rate_at_5": 1.0
+          },
+          "report_path": "benchmarks\\results\\baselines_ablations\\multi_hop.small_100.full_stack.json"
+        },
+        "no_handoff_policy": {
+          "summary": {
+            "num_items": 100,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 8,
+            "confidence_buckets": {
+              "disabled": {
+                "count": 100,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "num_cases": 20,
+            "chain_success_rate_at_1": 1.0,
+            "chain_success_rate_at_3": 1.0,
+            "chain_success_rate_at_5": 1.0
+          },
+          "report_path": "benchmarks\\results\\baselines_ablations\\multi_hop.small_100.no_handoff_policy.json"
+        },
+        "no_session_memory": {
+          "summary": {
+            "num_items": 100,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 2.26,
+            "confidence_buckets": {
+              "high": {
+                "count": 67,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 30,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "medium": {
+                "count": 3,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "num_cases": 20,
+            "chain_success_rate_at_1": 1.0,
+            "chain_success_rate_at_3": 1.0,
+            "chain_success_rate_at_5": 1.0
+          },
+          "report_path": "benchmarks\\results\\baselines_ablations\\multi_hop.small_100.no_session_memory.json"
+        }
+      },
+      "multi_hop.medium_250": {
+        "dense_only": {
+          "summary": {
+            "num_items": 250,
+            "top1_accuracy": 0.928,
+            "top3_accuracy": 0.936,
+            "top5_accuracy": 0.936,
+            "handoff_accuracy_at_recommended_k": 0.936,
+            "avg_recommended_handoff_k": 4.984,
+            "confidence_buckets": {
+              "low": {
+                "count": 248,
+                "top1_accuracy": 0.9354838709677419,
+                "handoff_accuracy_at_recommended_k": 0.9435483870967742
+              },
+              "medium": {
+                "count": 2,
+                "top1_accuracy": 0.0,
+                "handoff_accuracy_at_recommended_k": 0.0
+              }
+            },
+            "num_cases": 50,
+            "chain_success_rate_at_1": 0.72,
+            "chain_success_rate_at_3": 0.74,
+            "chain_success_rate_at_5": 0.74
+          },
+          "report_path": "benchmarks\\results\\baselines_ablations\\multi_hop.medium_250.dense_only.json"
+        },
+        "bm25_only": {
+          "summary": {
+            "num_items": 250,
+            "top1_accuracy": 0.936,
+            "top3_accuracy": 0.936,
+            "top5_accuracy": 0.936,
+            "handoff_accuracy_at_recommended_k": 0.936,
+            "avg_recommended_handoff_k": 5,
+            "confidence_buckets": {
+              "low": {
+                "count": 250,
+                "top1_accuracy": 0.936,
+                "handoff_accuracy_at_recommended_k": 0.936
+              }
+            },
+            "num_cases": 50,
+            "chain_success_rate_at_1": 0.74,
+            "chain_success_rate_at_3": 0.74,
+            "chain_success_rate_at_5": 0.74
+          },
+          "report_path": "benchmarks\\results\\baselines_ablations\\multi_hop.medium_250.bm25_only.json"
+        },
+        "dense_bm25": {
+          "summary": {
+            "num_items": 250,
+            "top1_accuracy": 0.928,
+            "top3_accuracy": 0.936,
+            "top5_accuracy": 0.936,
+            "handoff_accuracy_at_recommended_k": 0.936,
+            "avg_recommended_handoff_k": 3.232,
+            "confidence_buckets": {
+              "high": {
+                "count": 83,
+                "top1_accuracy": 0.8674698795180723,
+                "handoff_accuracy_at_recommended_k": 0.8674698795180723
+              },
+              "low": {
+                "count": 112,
+                "top1_accuracy": 0.9375,
+                "handoff_accuracy_at_recommended_k": 0.9553571428571429
+              },
+              "medium": {
+                "count": 55,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "num_cases": 50,
+            "chain_success_rate_at_1": 0.72,
+            "chain_success_rate_at_3": 0.74,
+            "chain_success_rate_at_5": 0.74
+          },
+          "report_path": "benchmarks\\results\\baselines_ablations\\multi_hop.medium_250.dense_bm25.json"
+        },
+        "full_stack": {
+          "summary": {
+            "num_items": 250,
+            "top1_accuracy": 0.936,
+            "top3_accuracy": 0.936,
+            "top5_accuracy": 0.936,
+            "handoff_accuracy_at_recommended_k": 0.936,
+            "avg_recommended_handoff_k": 2.6,
+            "confidence_buckets": {
+              "high": {
+                "count": 141,
+                "top1_accuracy": 0.9219858156028369,
+                "handoff_accuracy_at_recommended_k": 0.9219858156028369
+              },
+              "low": {
+                "count": 91,
+                "top1_accuracy": 0.945054945054945,
+                "handoff_accuracy_at_recommended_k": 0.945054945054945
+              },
+              "medium": {
+                "count": 18,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "num_cases": 50,
+            "chain_success_rate_at_1": 0.74,
+            "chain_success_rate_at_3": 0.74,
+            "chain_success_rate_at_5": 0.74
+          },
+          "report_path": "benchmarks\\results\\baselines_ablations\\multi_hop.medium_250.full_stack.json"
+        },
+        "no_handoff_policy": {
+          "summary": {
+            "num_items": 250,
+            "top1_accuracy": 0.936,
+            "top3_accuracy": 0.936,
+            "top5_accuracy": 0.936,
+            "handoff_accuracy_at_recommended_k": 0.936,
+            "avg_recommended_handoff_k": 8,
+            "confidence_buckets": {
+              "disabled": {
+                "count": 250,
+                "top1_accuracy": 0.936,
+                "handoff_accuracy_at_recommended_k": 0.936
+              }
+            },
+            "num_cases": 50,
+            "chain_success_rate_at_1": 0.74,
+            "chain_success_rate_at_3": 0.74,
+            "chain_success_rate_at_5": 0.74
+          },
+          "report_path": "benchmarks\\results\\baselines_ablations\\multi_hop.medium_250.no_handoff_policy.json"
+        },
+        "no_session_memory": {
+          "summary": {
+            "num_items": 250,
+            "top1_accuracy": 0.936,
+            "top3_accuracy": 0.936,
+            "top5_accuracy": 0.936,
+            "handoff_accuracy_at_recommended_k": 0.936,
+            "avg_recommended_handoff_k": 2.6,
+            "confidence_buckets": {
+              "high": {
+                "count": 141,
+                "top1_accuracy": 0.9219858156028369,
+                "handoff_accuracy_at_recommended_k": 0.9219858156028369
+              },
+              "low": {
+                "count": 91,
+                "top1_accuracy": 0.945054945054945,
+                "handoff_accuracy_at_recommended_k": 0.945054945054945
+              },
+              "medium": {
+                "count": 18,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "num_cases": 50,
+            "chain_success_rate_at_1": 0.74,
+            "chain_success_rate_at_3": 0.74,
+            "chain_success_rate_at_5": 0.74
+          },
+          "report_path": "benchmarks\\results\\baselines_ablations\\multi_hop.medium_250.no_session_memory.json"
+        }
+      },
+      "multi_hop.large": {
+        "dense_only": {
+          "summary": {
+            "num_items": 500,
+            "top1_accuracy": 0.938,
+            "top3_accuracy": 0.95,
+            "top5_accuracy": 0.952,
+            "handoff_accuracy_at_recommended_k": 0.952,
+            "avg_recommended_handoff_k": 4.984,
+            "confidence_buckets": {
+              "low": {
+                "count": 496,
+                "top1_accuracy": 0.9375,
+                "handoff_accuracy_at_recommended_k": 0.9516129032258065
+              },
+              "medium": {
+                "count": 4,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "num_cases": 100,
+            "chain_success_rate_at_1": 0.79,
+            "chain_success_rate_at_3": 0.83,
+            "chain_success_rate_at_5": 0.84
+          },
+          "report_path": "benchmarks\\results\\baselines_ablations\\multi_hop.large.dense_only.json"
+        },
+        "bm25_only": {
+          "summary": {
+            "num_items": 500,
+            "top1_accuracy": 0.99,
+            "top3_accuracy": 0.998,
+            "top5_accuracy": 0.998,
+            "handoff_accuracy_at_recommended_k": 0.998,
+            "avg_recommended_handoff_k": 4.996,
+            "confidence_buckets": {
+              "low": {
+                "count": 499,
+                "top1_accuracy": 0.9899799599198397,
+                "handoff_accuracy_at_recommended_k": 0.9979959919839679
+              },
+              "medium": {
+                "count": 1,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "num_cases": 100,
+            "chain_success_rate_at_1": 0.96,
+            "chain_success_rate_at_3": 0.99,
+            "chain_success_rate_at_5": 0.99
+          },
+          "report_path": "benchmarks\\results\\baselines_ablations\\multi_hop.large.bm25_only.json"
+        },
+        "dense_bm25": {
+          "summary": {
+            "num_items": 500,
+            "top1_accuracy": 0.942,
+            "top3_accuracy": 0.974,
+            "top5_accuracy": 0.986,
+            "handoff_accuracy_at_recommended_k": 0.98,
+            "avg_recommended_handoff_k": 3.576,
+            "confidence_buckets": {
+              "high": {
+                "count": 118,
+                "top1_accuracy": 0.9830508474576272,
+                "handoff_accuracy_at_recommended_k": 0.9830508474576272
+              },
+              "low": {
+                "count": 263,
+                "top1_accuracy": 0.908745247148289,
+                "handoff_accuracy_at_recommended_k": 0.9771863117870723
+              },
+              "medium": {
+                "count": 119,
+                "top1_accuracy": 0.9747899159663865,
+                "handoff_accuracy_at_recommended_k": 0.9831932773109243
+              }
+            },
+            "num_cases": 100,
+            "chain_success_rate_at_1": 0.81,
+            "chain_success_rate_at_3": 0.92,
+            "chain_success_rate_at_5": 0.94
+          },
+          "report_path": "benchmarks\\results\\baselines_ablations\\multi_hop.large.dense_bm25.json"
+        },
+        "full_stack": {
+          "summary": {
+            "num_items": 500,
+            "top1_accuracy": 0.964,
+            "top3_accuracy": 0.98,
+            "top5_accuracy": 0.99,
+            "handoff_accuracy_at_recommended_k": 0.982,
+            "avg_recommended_handoff_k": 2.906,
+            "confidence_buckets": {
+              "high": {
+                "count": 245,
+                "top1_accuracy": 0.9836734693877551,
+                "handoff_accuracy_at_recommended_k": 0.9836734693877551
+              },
+              "low": {
+                "count": 222,
+                "top1_accuracy": 0.9369369369369369,
+                "handoff_accuracy_at_recommended_k": 0.9774774774774775
+              },
+              "medium": {
+                "count": 33,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "num_cases": 100,
+            "chain_success_rate_at_1": 0.87,
+            "chain_success_rate_at_3": 0.92,
+            "chain_success_rate_at_5": 0.96
+          },
+          "report_path": "benchmarks\\results\\baselines_ablations\\multi_hop.large.full_stack.json"
+        },
+        "no_handoff_policy": {
+          "summary": {
+            "num_items": 500,
+            "top1_accuracy": 0.964,
+            "top3_accuracy": 0.98,
+            "top5_accuracy": 0.99,
+            "handoff_accuracy_at_recommended_k": 0.992,
+            "avg_recommended_handoff_k": 8,
+            "confidence_buckets": {
+              "disabled": {
+                "count": 500,
+                "top1_accuracy": 0.964,
+                "handoff_accuracy_at_recommended_k": 0.992
+              }
+            },
+            "num_cases": 100,
+            "chain_success_rate_at_1": 0.87,
+            "chain_success_rate_at_3": 0.92,
+            "chain_success_rate_at_5": 0.96
+          },
+          "report_path": "benchmarks\\results\\baselines_ablations\\multi_hop.large.no_handoff_policy.json"
+        },
+        "no_session_memory": {
+          "summary": {
+            "num_items": 500,
+            "top1_accuracy": 0.964,
+            "top3_accuracy": 0.98,
+            "top5_accuracy": 0.99,
+            "handoff_accuracy_at_recommended_k": 0.982,
+            "avg_recommended_handoff_k": 2.906,
+            "confidence_buckets": {
+              "high": {
+                "count": 245,
+                "top1_accuracy": 0.9836734693877551,
+                "handoff_accuracy_at_recommended_k": 0.9836734693877551
+              },
+              "low": {
+                "count": 222,
+                "top1_accuracy": 0.9369369369369369,
+                "handoff_accuracy_at_recommended_k": 0.9774774774774775
+              },
+              "medium": {
+                "count": 33,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "num_cases": 100,
+            "chain_success_rate_at_1": 0.87,
+            "chain_success_rate_at_3": 0.92,
+            "chain_success_rate_at_5": 0.96
+          },
+          "report_path": "benchmarks\\results\\baselines_ablations\\multi_hop.large.no_session_memory.json"
+        }
+      }
+    }
+  }
+}

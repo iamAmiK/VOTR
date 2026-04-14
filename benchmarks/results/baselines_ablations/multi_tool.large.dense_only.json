@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "num_items": 7,
+    "top1_accuracy": 0.8571428571428571,
+    "top3_accuracy": 1.0,
+    "top5_accuracy": 1.0,
+    "handoff_accuracy_at_recommended_k": 1.0,
+    "avg_recommended_handoff_k": 5,
+    "confidence_buckets": {
+      "low": {
+        "count": 7,
+        "top1_accuracy": 0.8571428571428571,
+        "handoff_accuracy_at_recommended_k": 1.0
+      }
+    },
+    "num_cases": 3,
+    "all_targets_rate_at_1": 0.6666666666666666,
+    "all_targets_rate_at_3": 1.0,
+    "all_targets_rate_at_5": 1.0
+  },
+  "results": [
+    {
+      "case_id": "mt-large-001",
+      "user_intent": "Check open pull requests in GitHub and post an update in Slack.",
+      "all_targets_at_1": false,
+      "all_targets_at_3": true,
+      "all_targets_at_5": true,
+      "subtasks": [
+        {
+          "server_intent": "GitHub repository operations",
+          "tool_intent": "list open pull requests for a repository",
+          "expected_tool_key": "GitHub::list_pull_requests",
+          "predicted_topk": [
+            "Gitee::list_repo_pulls",
+            "GitHub::list_pull_requests",
+            "GitHub::get_pull_request_files",
+            "GitHub::list_issues",
+            "GitHub::get_pull_request_reviews"
+          ],
+          "hit_at_1": false,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Slack messaging operations",
+          "tool_intent": "post a message to a channel",
+          "expected_tool_key": "Slack::slack_post_message",
+          "predicted_topk": [
+            "Slack::slack_post_message",
+            "Slack::slack_get_channel_history",
+            "Slack::slack_list_channels",
+            "Slack::slack_reply_to_thread",
+            "Slack::conversations_history"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        }
+      ]
+    },
+    {
+      "case_id": "mt-large-002",
+      "user_intent": "Find files in Google Drive and then list my spreadsheets in Google Sheets.",
+      "all_targets_at_1": true,
+      "all_targets_at_3": true,
+      "all_targets_at_5": true,
+      "subtasks": [
+        {
+          "server_intent": "Google Drive file operations",
+          "tool_intent": "search files in drive",
+          "expected_tool_key": "Google Drive::search",
+          "predicted_topk": [
+            "Google Drive::search",
+            "Filesystem::search_files",
+            "Golang Filesystem Server::search_files",
+            "Filesystem::read_multiple_files",
+            "Golang Filesystem Server::read_multiple_files"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Google Sheets documents",
+          "tool_intent": "list spreadsheets",
+          "expected_tool_key": "Google Sheets::list_spreadsheets",
+          "predicted_topk": [
+            "Google Sheets::list_spreadsheets",
+            "Google Sheets::list_sheets",
+            "Google Sheets::get_multiple_spreadsheet_summary",
+            "Google Sheets::create_spreadsheet",
+            "Google Sheets::get_multiple_sheet_data"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        }
+      ]
+    },
+    {
+      "case_id": "mt-large-003",
+      "user_intent": "Search Jira issues, update the related Linear status, and review recent Slack channel messages.",
+      "all_targets_at_1": true,
+      "all_targets_at_3": true,
+      "all_targets_at_5": true,
+      "subtasks": [
+        {
+          "server_intent": "Atlassian Jira issues",
+          "tool_intent": "search issues by JQL",
+          "expected_tool_key": "Atlassian::jira_search",
+          "predicted_topk": [
+            "Atlassian::jira_search",
+            "Atlassian::confluence_search",
+            "Atlassian::jira_get_issue",
+            "Atlassian::jira_create_issue",
+            "Atlassian::jira_update_issue"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Linear issue tracking",
+          "tool_intent": "update an issue status",
+          "expected_tool_key": "Linear::linear_update_issue",
+          "predicted_topk": [
+            "Linear::linear_update_issue",
+            "Linear (Go)::linear_update_issue",
+            "Linear::linear_add_comment",
+            "Linear::linear_create_issue",
+            "Raygun::resolve_error_group"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        },
+        {
+          "server_intent": "Slack operations",
+          "tool_intent": "get recent messages from a channel",
+          "expected_tool_key": "Slack::slack_get_channel_history",
+          "predicted_topk": [
+            "Slack::slack_get_channel_history",
+            "Slack::conversations_history",
+            "Slack::slack_post_message",
+            "Slack::slack_get_thread_replies",
+            "Slack::channels_list"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00026441036488630484,
+          "top1_score": 0.01639344262295082,
+          "top2_score": 0.016129032258064516
+        }
+      ]
+    }
+  ],
+  "suite": "multi_tool.large.single_turn"
+}

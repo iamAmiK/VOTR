@@ -1,0 +1,626 @@
+{
+  "suite": "multi_hop.small_100.cross_app",
+  "description": "Router-only multi-hop suite for the 3-server catalog (100 hop evaluations).",
+  "cases": [
+    {
+      "id": "multi_hop-small_100-cross_app-0001",
+      "description": "Cross-application chain (5 hops), case 1",
+      "hops": [
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg reference data",
+          "expected_tool_key": "Bloomberg::bdp"
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg block data",
+          "expected_tool_key": "Bloomberg::bds"
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg historical data",
+          "expected_tool_key": "Bloomberg::bdh"
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg intraday bar data",
+          "expected_tool_key": "Bloomberg::bdib"
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg tick data",
+          "expected_tool_key": "Bloomberg::bdtick"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0002",
+      "description": "Cross-application chain (5 hops), case 2",
+      "hops": [
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg earning exposure by Geo or Products",
+          "expected_tool_key": "Bloomberg::earning"
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg divident / split history",
+          "expected_tool_key": "Bloomberg::dividend"
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg equity screening",
+          "expected_tool_key": "Bloomberg::beqs"
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Calculate the adjusted turnover (in millions)",
+          "expected_tool_key": "Bloomberg::turnover"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create or update a single file in a repository",
+          "expected_tool_key": "GitHub::create_or_update_file"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0003",
+      "description": "Cross-application chain (5 hops), case 3",
+      "hops": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Push multiple files in a single commit",
+          "expected_tool_key": "GitHub::push_files"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Search for GitHub repositories",
+          "expected_tool_key": "GitHub::search_repositories"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a new GitHub repository",
+          "expected_tool_key": "GitHub::create_repository"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Get contents of a file or directory",
+          "expected_tool_key": "GitHub::get_file_contents"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a new issue",
+          "expected_tool_key": "GitHub::create_issue"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0004",
+      "description": "Cross-application chain (5 hops), case 4",
+      "hops": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a new pull request",
+          "expected_tool_key": "GitHub::create_pull_request"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Fork a repository",
+          "expected_tool_key": "GitHub::fork_repository"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a new branch",
+          "expected_tool_key": "GitHub::create_branch"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "List and filter repository issues",
+          "expected_tool_key": "GitHub::list_issues"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Update an existing issue",
+          "expected_tool_key": "GitHub::update_issue"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0005",
+      "description": "Cross-application chain (5 hops), case 5",
+      "hops": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Add a comment to an issue",
+          "expected_tool_key": "GitHub::add_issue_comment"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Search for code across GitHub repositories",
+          "expected_tool_key": "GitHub::search_code"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Search for issues and pull requests",
+          "expected_tool_key": "GitHub::search_issues"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Search for GitHub users",
+          "expected_tool_key": "GitHub::search_users"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Gets commits of a branch in a repository",
+          "expected_tool_key": "GitHub::list_commits"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0006",
+      "description": "Cross-application chain (5 hops), case 6",
+      "hops": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Gets the contents of an issue within a repository",
+          "expected_tool_key": "GitHub::get_issue"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Get details of a specific pull request",
+          "expected_tool_key": "GitHub::get_pull_request"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "List and filter repository pull requests",
+          "expected_tool_key": "GitHub::list_pull_requests"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a review on a pull request",
+          "expected_tool_key": "GitHub::create_pull_request_review"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Merge a pull request",
+          "expected_tool_key": "GitHub::merge_pull_request"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0007",
+      "description": "Cross-application chain (5 hops), case 7",
+      "hops": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Get the list of files changed in a pull request",
+          "expected_tool_key": "GitHub::get_pull_request_files"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Get the combined status of all status checks for a pull request",
+          "expected_tool_key": "GitHub::get_pull_request_status"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Update a pull request branch with the latest changes from the base branch (equivalent to GitHub's 'Update branch' button)",
+          "expected_tool_key": "GitHub::update_pull_request_branch"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Get the review comments on a pull request",
+          "expected_tool_key": "GitHub::get_pull_request_comments"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Get the reviews on a pull request",
+          "expected_tool_key": "GitHub::get_pull_request_reviews"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0008",
+      "description": "Cross-application chain (5 hops), case 8",
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get a paginated list of chats.",
+          "expected_tool_key": "Telegram::get_chats"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List chats with metadata and filtering.",
+          "expected_tool_key": "Telegram::list_chats"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get detailed info about a chat.",
+          "expected_tool_key": "Telegram::get_chat"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Create a new group.",
+          "expected_tool_key": "Telegram::create_group"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Create a channel or supergroup.",
+          "expected_tool_key": "Telegram::create_channel"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0009",
+      "description": "Cross-application chain (5 hops), case 9",
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Change chat/group/channel title.",
+          "expected_tool_key": "Telegram::edit_chat_title"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Remove chat/group/channel photo.",
+          "expected_tool_key": "Telegram::delete_chat_photo"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Leave a group or channel.",
+          "expected_tool_key": "Telegram::leave_chat"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List all participants in a chat.",
+          "expected_tool_key": "Telegram::get_participants"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List all admins in a chat.",
+          "expected_tool_key": "Telegram::get_admins"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0010",
+      "description": "Cross-application chain (5 hops), case 10",
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List all banned users in a chat.",
+          "expected_tool_key": "Telegram::get_banned_users"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Promote user to admin.",
+          "expected_tool_key": "Telegram::promote_admin"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Demote admin to user.",
+          "expected_tool_key": "Telegram::demote_admin"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Ban user from a chat.",
+          "expected_tool_key": "Telegram::ban_user"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Unban user from a chat.",
+          "expected_tool_key": "Telegram::unban_user"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0011",
+      "description": "Cross-application chain (5 hops), case 11",
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get invite link for a group or channel.",
+          "expected_tool_key": "Telegram::get_invite_link"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Export invite link for a chat.",
+          "expected_tool_key": "Telegram::export_chat_invite"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Join chat by invite hash.",
+          "expected_tool_key": "Telegram::import_chat_invite"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Join chat by invite link.",
+          "expected_tool_key": "Telegram::join_chat_by_link"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get paginated messages.",
+          "expected_tool_key": "Telegram::get_messages"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0012",
+      "description": "Cross-application chain (5 hops), case 12",
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List filtered messages.",
+          "expected_tool_key": "Telegram::list_messages"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Send a message to a specific chat.",
+          "expected_tool_key": "Telegram::send_message"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Reply to a message.",
+          "expected_tool_key": "Telegram::reply_to_message"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Edit a message.",
+          "expected_tool_key": "Telegram::edit_message"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Delete a message.",
+          "expected_tool_key": "Telegram::delete_message"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0013",
+      "description": "Cross-application chain (5 hops), case 13",
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Forward a message.",
+          "expected_tool_key": "Telegram::forward_message"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Pin a message.",
+          "expected_tool_key": "Telegram::pin_message"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Unpin a message.",
+          "expected_tool_key": "Telegram::unpin_message"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Mark all messages as read in a chat.",
+          "expected_tool_key": "Telegram::mark_as_read"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get context around a message.",
+          "expected_tool_key": "Telegram::get_message_context"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0014",
+      "description": "Cross-application chain (5 hops), case 14",
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get full chat history.",
+          "expected_tool_key": "Telegram::get_history"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List pinned messages in a chat.",
+          "expected_tool_key": "Telegram::get_pinned_messages"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get the most recent message with a contact.",
+          "expected_tool_key": "Telegram::get_last_interaction"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List all contacts.",
+          "expected_tool_key": "Telegram::list_contacts"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Search contacts.",
+          "expected_tool_key": "Telegram::search_contacts"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0015",
+      "description": "Cross-application chain (5 hops), case 15",
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Add a contact.",
+          "expected_tool_key": "Telegram::add_contact"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Delete a contact.",
+          "expected_tool_key": "Telegram::delete_contact"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Block a user.",
+          "expected_tool_key": "Telegram::block_user"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Unblock a user.",
+          "expected_tool_key": "Telegram::unblock_user"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Bulk import contacts.",
+          "expected_tool_key": "Telegram::import_contacts"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0016",
+      "description": "Cross-application chain (5 hops), case 16",
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Export all contacts as JSON.",
+          "expected_tool_key": "Telegram::export_contacts"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List blocked users.",
+          "expected_tool_key": "Telegram::get_blocked_users"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List all contact IDs.",
+          "expected_tool_key": "Telegram::get_contact_ids"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Find direct chat with a contact.",
+          "expected_tool_key": "Telegram::get_direct_chat_by_contact"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List all chats with a contact.",
+          "expected_tool_key": "Telegram::get_contact_chats"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0017",
+      "description": "Cross-application chain (5 hops), case 17",
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get your user info.",
+          "expected_tool_key": "Telegram::get_me"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Update your profile.",
+          "expected_tool_key": "Telegram::update_profile"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Remove your profile photo.",
+          "expected_tool_key": "Telegram::delete_profile_photo"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get a user's profile photos.",
+          "expected_tool_key": "Telegram::get_user_photos"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get a user's online status.",
+          "expected_tool_key": "Telegram::get_user_status"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0018",
+      "description": "Cross-application chain (5 hops), case 18",
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get info about media in a message.",
+          "expected_tool_key": "Telegram::get_media_info"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Search public chats, channels, or bots by username or title.",
+          "expected_tool_key": "Telegram::search_public_chats"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Search messages in a chat.",
+          "expected_tool_key": "Telegram::search_messages"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Resolve a username to ID.",
+          "expected_tool_key": "Telegram::resolve_username"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List sticker sets.",
+          "expected_tool_key": "Telegram::get_sticker_sets"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0019",
+      "description": "Cross-application chain (5 hops), case 19",
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get info about a bot.",
+          "expected_tool_key": "Telegram::get_bot_info"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Set bot commands (bot accounts only).",
+          "expected_tool_key": "Telegram::set_bot_commands"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get privacy settings.",
+          "expected_tool_key": "Telegram::get_privacy_settings"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Set privacy settings.",
+          "expected_tool_key": "Telegram::set_privacy_settings"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Mute notifications for a chat.",
+          "expected_tool_key": "Telegram::mute_chat"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-small_100-cross_app-0020",
+      "description": "Cross-application chain (5 hops), case 20",
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Unmute notifications for a chat.",
+          "expected_tool_key": "Telegram::unmute_chat"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Archive a chat.",
+          "expected_tool_key": "Telegram::archive_chat"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Unarchive a chat.",
+          "expected_tool_key": "Telegram::unarchive_chat"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get recent admin actions in a chat.",
+          "expected_tool_key": "Telegram::get_recent_actions"
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg reference data",
+          "expected_tool_key": "Bloomberg::bdp"
+        }
+      ]
+    }
+  ]
+}

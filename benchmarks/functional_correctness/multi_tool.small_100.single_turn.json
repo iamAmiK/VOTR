@@ -1,0 +1,626 @@
+{
+  "suite": "multi_tool.small_100.single_turn",
+  "description": "Router-only multi-target single-turn suite for the 3-server catalog (100 subtask evaluations).",
+  "cases": [
+    {
+      "id": "multi_tool-small_100-single_turn-0001",
+      "user_intent": "Single user turn #1: complete these intents in order: (1) Get Bloomberg reference data; (2) Get Bloomberg block data; (3) Get Bloomberg historical data; (4) Get Bloomberg intraday bar data; (5) Get Bloomberg tick data",
+      "subtasks": [
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg reference data",
+          "expected_tool_key": "Bloomberg::bdp"
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg block data",
+          "expected_tool_key": "Bloomberg::bds"
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg historical data",
+          "expected_tool_key": "Bloomberg::bdh"
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg intraday bar data",
+          "expected_tool_key": "Bloomberg::bdib"
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg tick data",
+          "expected_tool_key": "Bloomberg::bdtick"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0002",
+      "user_intent": "Single user turn #2: complete these intents in order: (1) Get Bloomberg earning exposure by Geo or Products; (2) Get Bloomberg divident / split history; (3) Get Bloomberg equity screening; (4) Calculate the adjusted turnover (in millions); (5) Create or update a single file in a repository",
+      "subtasks": [
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg earning exposure by Geo or Products",
+          "expected_tool_key": "Bloomberg::earning"
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg divident / split history",
+          "expected_tool_key": "Bloomberg::dividend"
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg equity screening",
+          "expected_tool_key": "Bloomberg::beqs"
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Calculate the adjusted turnover (in millions)",
+          "expected_tool_key": "Bloomberg::turnover"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create or update a single file in a repository",
+          "expected_tool_key": "GitHub::create_or_update_file"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0003",
+      "user_intent": "Single user turn #3: complete these intents in order: (1) Push multiple files in a single commit; (2) Search for GitHub repositories; (3) Create a new GitHub repository; (4) Get contents of a file or directory; (5) Create a new issue",
+      "subtasks": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Push multiple files in a single commit",
+          "expected_tool_key": "GitHub::push_files"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Search for GitHub repositories",
+          "expected_tool_key": "GitHub::search_repositories"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a new GitHub repository",
+          "expected_tool_key": "GitHub::create_repository"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Get contents of a file or directory",
+          "expected_tool_key": "GitHub::get_file_contents"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a new issue",
+          "expected_tool_key": "GitHub::create_issue"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0004",
+      "user_intent": "Single user turn #4: complete these intents in order: (1) Create a new pull request; (2) Fork a repository; (3) Create a new branch; (4) List and filter repository issues; (5) Update an existing issue",
+      "subtasks": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a new pull request",
+          "expected_tool_key": "GitHub::create_pull_request"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Fork a repository",
+          "expected_tool_key": "GitHub::fork_repository"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a new branch",
+          "expected_tool_key": "GitHub::create_branch"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "List and filter repository issues",
+          "expected_tool_key": "GitHub::list_issues"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Update an existing issue",
+          "expected_tool_key": "GitHub::update_issue"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0005",
+      "user_intent": "Single user turn #5: complete these intents in order: (1) Add a comment to an issue; (2) Search for code across GitHub repositories; (3) Search for issues and pull requests; (4) Search for GitHub users; (5) Gets commits of a branch in a repository",
+      "subtasks": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Add a comment to an issue",
+          "expected_tool_key": "GitHub::add_issue_comment"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Search for code across GitHub repositories",
+          "expected_tool_key": "GitHub::search_code"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Search for issues and pull requests",
+          "expected_tool_key": "GitHub::search_issues"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Search for GitHub users",
+          "expected_tool_key": "GitHub::search_users"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Gets commits of a branch in a repository",
+          "expected_tool_key": "GitHub::list_commits"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0006",
+      "user_intent": "Single user turn #6: complete these intents in order: (1) Gets the contents of an issue within a repository; (2) Get details of a specific pull request; (3) List and filter repository pull requests; (4) Create a review on a pull request; (5) Merge a pull request",
+      "subtasks": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Gets the contents of an issue within a repository",
+          "expected_tool_key": "GitHub::get_issue"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Get details of a specific pull request",
+          "expected_tool_key": "GitHub::get_pull_request"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "List and filter repository pull requests",
+          "expected_tool_key": "GitHub::list_pull_requests"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a review on a pull request",
+          "expected_tool_key": "GitHub::create_pull_request_review"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Merge a pull request",
+          "expected_tool_key": "GitHub::merge_pull_request"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0007",
+      "user_intent": "Single user turn #7: complete these intents in order: (1) Get the list of files changed in a pull request; (2) Get the combined status of all status checks for a pull request; (3) Update a pull request branch with the latest changes from the base branch (equivalent to GitHub's 'U; (4) Get the review comments on a pull request; (5) Get the reviews on a pull request",
+      "subtasks": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Get the list of files changed in a pull request",
+          "expected_tool_key": "GitHub::get_pull_request_files"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Get the combined status of all status checks for a pull request",
+          "expected_tool_key": "GitHub::get_pull_request_status"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Update a pull request branch with the latest changes from the base branch (equivalent to GitHub's 'Update branch' button)",
+          "expected_tool_key": "GitHub::update_pull_request_branch"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Get the review comments on a pull request",
+          "expected_tool_key": "GitHub::get_pull_request_comments"
+        },
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Get the reviews on a pull request",
+          "expected_tool_key": "GitHub::get_pull_request_reviews"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0008",
+      "user_intent": "Single user turn #8: complete these intents in order: (1) Get a paginated list of chats.; (2) List chats with metadata and filtering.; (3) Get detailed info about a chat.; (4) Create a new group.; (5) Create a channel or supergroup.",
+      "subtasks": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get a paginated list of chats.",
+          "expected_tool_key": "Telegram::get_chats"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List chats with metadata and filtering.",
+          "expected_tool_key": "Telegram::list_chats"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get detailed info about a chat.",
+          "expected_tool_key": "Telegram::get_chat"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Create a new group.",
+          "expected_tool_key": "Telegram::create_group"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Create a channel or supergroup.",
+          "expected_tool_key": "Telegram::create_channel"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0009",
+      "user_intent": "Single user turn #9: complete these intents in order: (1) Change chat/group/channel title.; (2) Remove chat/group/channel photo.; (3) Leave a group or channel.; (4) List all participants in a chat.; (5) List all admins in a chat.",
+      "subtasks": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Change chat/group/channel title.",
+          "expected_tool_key": "Telegram::edit_chat_title"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Remove chat/group/channel photo.",
+          "expected_tool_key": "Telegram::delete_chat_photo"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Leave a group or channel.",
+          "expected_tool_key": "Telegram::leave_chat"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List all participants in a chat.",
+          "expected_tool_key": "Telegram::get_participants"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List all admins in a chat.",
+          "expected_tool_key": "Telegram::get_admins"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0010",
+      "user_intent": "Single user turn #10: complete these intents in order: (1) List all banned users in a chat.; (2) Promote user to admin.; (3) Demote admin to user.; (4) Ban user from a chat.; (5) Unban user from a chat.",
+      "subtasks": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List all banned users in a chat.",
+          "expected_tool_key": "Telegram::get_banned_users"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Promote user to admin.",
+          "expected_tool_key": "Telegram::promote_admin"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Demote admin to user.",
+          "expected_tool_key": "Telegram::demote_admin"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Ban user from a chat.",
+          "expected_tool_key": "Telegram::ban_user"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Unban user from a chat.",
+          "expected_tool_key": "Telegram::unban_user"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0011",
+      "user_intent": "Single user turn #11: complete these intents in order: (1) Get invite link for a group or channel.; (2) Export invite link for a chat.; (3) Join chat by invite hash.; (4) Join chat by invite link.; (5) Get paginated messages.",
+      "subtasks": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get invite link for a group or channel.",
+          "expected_tool_key": "Telegram::get_invite_link"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Export invite link for a chat.",
+          "expected_tool_key": "Telegram::export_chat_invite"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Join chat by invite hash.",
+          "expected_tool_key": "Telegram::import_chat_invite"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Join chat by invite link.",
+          "expected_tool_key": "Telegram::join_chat_by_link"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get paginated messages.",
+          "expected_tool_key": "Telegram::get_messages"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0012",
+      "user_intent": "Single user turn #12: complete these intents in order: (1) List filtered messages.; (2) Send a message to a specific chat.; (3) Reply to a message.; (4) Edit a message.; (5) Delete a message.",
+      "subtasks": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List filtered messages.",
+          "expected_tool_key": "Telegram::list_messages"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Send a message to a specific chat.",
+          "expected_tool_key": "Telegram::send_message"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Reply to a message.",
+          "expected_tool_key": "Telegram::reply_to_message"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Edit a message.",
+          "expected_tool_key": "Telegram::edit_message"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Delete a message.",
+          "expected_tool_key": "Telegram::delete_message"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0013",
+      "user_intent": "Single user turn #13: complete these intents in order: (1) Forward a message.; (2) Pin a message.; (3) Unpin a message.; (4) Mark all messages as read in a chat.; (5) Get context around a message.",
+      "subtasks": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Forward a message.",
+          "expected_tool_key": "Telegram::forward_message"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Pin a message.",
+          "expected_tool_key": "Telegram::pin_message"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Unpin a message.",
+          "expected_tool_key": "Telegram::unpin_message"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Mark all messages as read in a chat.",
+          "expected_tool_key": "Telegram::mark_as_read"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get context around a message.",
+          "expected_tool_key": "Telegram::get_message_context"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0014",
+      "user_intent": "Single user turn #14: complete these intents in order: (1) Get full chat history.; (2) List pinned messages in a chat.; (3) Get the most recent message with a contact.; (4) List all contacts.; (5) Search contacts.",
+      "subtasks": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get full chat history.",
+          "expected_tool_key": "Telegram::get_history"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List pinned messages in a chat.",
+          "expected_tool_key": "Telegram::get_pinned_messages"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get the most recent message with a contact.",
+          "expected_tool_key": "Telegram::get_last_interaction"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List all contacts.",
+          "expected_tool_key": "Telegram::list_contacts"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Search contacts.",
+          "expected_tool_key": "Telegram::search_contacts"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0015",
+      "user_intent": "Single user turn #15: complete these intents in order: (1) Add a contact.; (2) Delete a contact.; (3) Block a user.; (4) Unblock a user.; (5) Bulk import contacts.",
+      "subtasks": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Add a contact.",
+          "expected_tool_key": "Telegram::add_contact"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Delete a contact.",
+          "expected_tool_key": "Telegram::delete_contact"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Block a user.",
+          "expected_tool_key": "Telegram::block_user"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Unblock a user.",
+          "expected_tool_key": "Telegram::unblock_user"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Bulk import contacts.",
+          "expected_tool_key": "Telegram::import_contacts"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0016",
+      "user_intent": "Single user turn #16: complete these intents in order: (1) Export all contacts as JSON.; (2) List blocked users.; (3) List all contact IDs.; (4) Find direct chat with a contact.; (5) List all chats with a contact.",
+      "subtasks": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Export all contacts as JSON.",
+          "expected_tool_key": "Telegram::export_contacts"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List blocked users.",
+          "expected_tool_key": "Telegram::get_blocked_users"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List all contact IDs.",
+          "expected_tool_key": "Telegram::get_contact_ids"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Find direct chat with a contact.",
+          "expected_tool_key": "Telegram::get_direct_chat_by_contact"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List all chats with a contact.",
+          "expected_tool_key": "Telegram::get_contact_chats"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0017",
+      "user_intent": "Single user turn #17: complete these intents in order: (1) Get your user info.; (2) Update your profile.; (3) Remove your profile photo.; (4) Get a user's profile photos.; (5) Get a user's online status.",
+      "subtasks": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get your user info.",
+          "expected_tool_key": "Telegram::get_me"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Update your profile.",
+          "expected_tool_key": "Telegram::update_profile"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Remove your profile photo.",
+          "expected_tool_key": "Telegram::delete_profile_photo"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get a user's profile photos.",
+          "expected_tool_key": "Telegram::get_user_photos"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get a user's online status.",
+          "expected_tool_key": "Telegram::get_user_status"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0018",
+      "user_intent": "Single user turn #18: complete these intents in order: (1) Get info about media in a message.; (2) Search public chats, channels, or bots by username or title.; (3) Search messages in a chat.; (4) Resolve a username to ID.; (5) List sticker sets.",
+      "subtasks": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get info about media in a message.",
+          "expected_tool_key": "Telegram::get_media_info"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Search public chats, channels, or bots by username or title.",
+          "expected_tool_key": "Telegram::search_public_chats"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Search messages in a chat.",
+          "expected_tool_key": "Telegram::search_messages"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Resolve a username to ID.",
+          "expected_tool_key": "Telegram::resolve_username"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "List sticker sets.",
+          "expected_tool_key": "Telegram::get_sticker_sets"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0019",
+      "user_intent": "Single user turn #19: complete these intents in order: (1) Get info about a bot.; (2) Set bot commands (bot accounts only).; (3) Get privacy settings.; (4) Set privacy settings.; (5) Mute notifications for a chat.",
+      "subtasks": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get info about a bot.",
+          "expected_tool_key": "Telegram::get_bot_info"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Set bot commands (bot accounts only).",
+          "expected_tool_key": "Telegram::set_bot_commands"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get privacy settings.",
+          "expected_tool_key": "Telegram::get_privacy_settings"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Set privacy settings.",
+          "expected_tool_key": "Telegram::set_privacy_settings"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Mute notifications for a chat.",
+          "expected_tool_key": "Telegram::mute_chat"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-small_100-single_turn-0020",
+      "user_intent": "Single user turn #20: complete these intents in order: (1) Unmute notifications for a chat.; (2) Archive a chat.; (3) Unarchive a chat.; (4) Get recent admin actions in a chat.; (5) Get Bloomberg reference data",
+      "subtasks": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Unmute notifications for a chat.",
+          "expected_tool_key": "Telegram::unmute_chat"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Archive a chat.",
+          "expected_tool_key": "Telegram::archive_chat"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Unarchive a chat.",
+          "expected_tool_key": "Telegram::unarchive_chat"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Get recent admin actions in a chat.",
+          "expected_tool_key": "Telegram::get_recent_actions"
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg reference data",
+          "expected_tool_key": "Bloomberg::bdp"
+        }
+      ]
+    }
+  ]
+}

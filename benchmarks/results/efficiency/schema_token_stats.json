@@ -1,0 +1,22 @@
+{
+  "index_dir": "C:\\Users\\swaga\\Downloads\\Research Proj\\MCP-Router\\data\\index",
+  "encoding": "cl100k_base",
+  "tool_count": 2806,
+  "compressed_votr": {
+    "mean": 26.247327156094084,
+    "median": 23.0,
+    "stdev": 10.173334740090338,
+    "p90": 40.0,
+    "min": 13.0,
+    "max": 98.0
+  },
+  "full_json_mcp_zero_style": {
+    "mean": 93.54490377761938,
+    "median": 70.0,
+    "stdev": 46.43634725695248,
+    "p90": 154.0,
+    "min": 56.0,
+    "max": 428.0
+  },
+  "ratio_mean_mcp_zero_over_compressed": 3.56397827562797
+}

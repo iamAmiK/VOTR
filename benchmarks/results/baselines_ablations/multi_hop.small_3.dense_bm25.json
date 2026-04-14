@@ -1,0 +1,178 @@
+{
+  "summary": {
+    "num_items": 6,
+    "top1_accuracy": 1.0,
+    "top3_accuracy": 1.0,
+    "top5_accuracy": 1.0,
+    "handoff_accuracy_at_recommended_k": 1.0,
+    "avg_recommended_handoff_k": 4,
+    "confidence_buckets": {
+      "high": {
+        "count": 1,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "low": {
+        "count": 4,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "medium": {
+        "count": 1,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      }
+    },
+    "num_cases": 2,
+    "chain_success_rate_at_1": 1.0,
+    "chain_success_rate_at_3": 1.0,
+    "chain_success_rate_at_5": 1.0
+  },
+  "results": [
+    {
+      "case_id": "mh-small-001",
+      "description": "Three-hop repo research, market lookup, and outbound message workflow",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Search for GitHub repositories",
+          "expected_tool_key": "GitHub::search_repositories",
+          "predicted_topk": [
+            "GitHub::search_repositories",
+            "GitHub::search_code",
+            "GitHub::search_users",
+            "GitHub::search_issues",
+            "GitHub::create_repository"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0005288207297726097,
+          "top1_score": 0.03278688524590164,
+          "top2_score": 0.03225806451612903
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg reference data",
+          "expected_tool_key": "Bloomberg::bdp",
+          "predicted_topk": [
+            "Bloomberg::bdp",
+            "Bloomberg::bdh",
+            "Bloomberg::bds",
+            "Bloomberg::bdtick",
+            "Bloomberg::bdib"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0007848371148212532,
+          "top1_score": 0.03278688524590164,
+          "top2_score": 0.03200204813108039
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Send a message to a specific chat.",
+          "expected_tool_key": "Telegram::send_message",
+          "predicted_topk": [
+            "Telegram::send_message",
+            "Telegram::archive_chat",
+            "Telegram::reply_to_message",
+            "Telegram::mute_chat",
+            "Telegram::search_messages"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.00201765447667087,
+          "top1_score": 0.03278688524590164,
+          "top2_score": 0.03076923076923077
+        }
+      ]
+    },
+    {
+      "case_id": "mh-small-002",
+      "description": "Three-hop issue filing, historical data lookup, and contact search workflow",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a new issue",
+          "expected_tool_key": "GitHub::create_issue",
+          "predicted_topk": [
+            "GitHub::create_issue",
+            "GitHub::create_pull_request",
+            "GitHub::create_branch",
+            "GitHub::create_repository",
+            "GitHub::add_issue_comment"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0010328529878371254,
+          "top1_score": 0.03278688524590164,
+          "top2_score": 0.031754032258064516
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg historical data",
+          "expected_tool_key": "Bloomberg::bdh",
+          "predicted_topk": [
+            "Bloomberg::bdh",
+            "Bloomberg::bdp",
+            "Bloomberg::bdtick",
+            "Bloomberg::bds",
+            "Bloomberg::bdib"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0007848371148212532,
+          "top1_score": 0.03278688524590164,
+          "top2_score": 0.03200204813108039
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Search contacts.",
+          "expected_tool_key": "Telegram::search_contacts",
+          "predicted_topk": [
+            "Telegram::search_contacts",
+            "Telegram::list_contacts",
+            "Telegram::import_contacts",
+            "Telegram::export_contacts",
+            "Telegram::add_contact"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0005288207297726097,
+          "top1_score": 0.03278688524590164,
+          "top2_score": 0.03225806451612903
+        }
+      ]
+    }
+  ],
+  "suite": "multi_hop.small_3.cross_app"
+}

@@ -1,0 +1,1650 @@
+{
+  "rows": [
+    {
+      "suite": "single_tool.small_bloomberg",
+      "profile": "baseline",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\single_tool.small_bloomberg.baseline.json",
+      "equivalence_top1_accuracy": 1.0
+    },
+    {
+      "suite": "single_tool.small_bloomberg",
+      "profile": "overlap_aware",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\single_tool.small_bloomberg.overlap_aware.json",
+      "equivalence_top1_accuracy": 1.0
+    },
+    {
+      "suite": "single_tool.small_github",
+      "profile": "baseline",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\single_tool.small_github.baseline.json",
+      "equivalence_top1_accuracy": 1.0
+    },
+    {
+      "suite": "single_tool.small_github",
+      "profile": "overlap_aware",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\single_tool.small_github.overlap_aware.json",
+      "equivalence_top1_accuracy": 1.0
+    },
+    {
+      "suite": "single_tool.small_telegram",
+      "profile": "baseline",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\single_tool.small_telegram.baseline.json",
+      "equivalence_top1_accuracy": 1.0
+    },
+    {
+      "suite": "single_tool.small_telegram",
+      "profile": "overlap_aware",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\single_tool.small_telegram.overlap_aware.json",
+      "equivalence_top1_accuracy": 1.0
+    },
+    {
+      "suite": "single_tool.medium_50",
+      "profile": "baseline",
+      "top1_accuracy": 0.9318181818181818,
+      "top3_accuracy": 0.9318181818181818,
+      "top5_accuracy": 0.9318181818181818,
+      "handoff_accuracy_at_recommended_k": 0.9318181818181818,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\single_tool.medium_50.baseline.json",
+      "equivalence_top1_accuracy": 0.9318181818181818
+    },
+    {
+      "suite": "single_tool.medium_50",
+      "profile": "overlap_aware",
+      "top1_accuracy": 0.9318181818181818,
+      "top3_accuracy": 0.9318181818181818,
+      "top5_accuracy": 0.9318181818181818,
+      "handoff_accuracy_at_recommended_k": 0.9318181818181818,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\single_tool.medium_50.overlap_aware.json",
+      "equivalence_top1_accuracy": 0.9318181818181818
+    },
+    {
+      "suite": "single_tool.large",
+      "profile": "baseline",
+      "top1_accuracy": 0.964,
+      "top3_accuracy": 0.98,
+      "top5_accuracy": 0.99,
+      "handoff_accuracy_at_recommended_k": 0.982,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\single_tool.large.baseline.json",
+      "equivalence_top1_accuracy": 0.972
+    },
+    {
+      "suite": "single_tool.large",
+      "profile": "overlap_aware",
+      "top1_accuracy": 0.964,
+      "top3_accuracy": 0.98,
+      "top5_accuracy": 0.99,
+      "handoff_accuracy_at_recommended_k": 0.982,
+      "ambiguous_rate": 0.012,
+      "exact_top1_on_ambiguous": 1.0,
+      "equivalence_top1_on_ambiguous": 1.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\single_tool.large.overlap_aware.json",
+      "equivalence_top1_accuracy": 0.972
+    },
+    {
+      "suite": "multi_hop.small_3",
+      "profile": "baseline",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\multi_hop.small_3.baseline.json",
+      "equivalence_top1_accuracy": 1.0
+    },
+    {
+      "suite": "multi_hop.small_3",
+      "profile": "overlap_aware",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\multi_hop.small_3.overlap_aware.json",
+      "equivalence_top1_accuracy": 1.0
+    },
+    {
+      "suite": "multi_hop.medium_50",
+      "profile": "baseline",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\multi_hop.medium_50.baseline.json",
+      "equivalence_top1_accuracy": 1.0
+    },
+    {
+      "suite": "multi_hop.medium_50",
+      "profile": "overlap_aware",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\multi_hop.medium_50.overlap_aware.json",
+      "equivalence_top1_accuracy": 1.0
+    },
+    {
+      "suite": "multi_hop.large",
+      "profile": "baseline",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\multi_hop.large.baseline.json",
+      "equivalence_top1_accuracy": 1.0
+    },
+    {
+      "suite": "multi_hop.large",
+      "profile": "overlap_aware",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "ambiguous_rate": 0.2,
+      "exact_top1_on_ambiguous": 1.0,
+      "equivalence_top1_on_ambiguous": 1.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\multi_hop.large.overlap_aware.json",
+      "equivalence_top1_accuracy": 1.0
+    },
+    {
+      "suite": "multi_tool.small_3",
+      "profile": "baseline",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\multi_tool.small_3.baseline.json",
+      "equivalence_top1_accuracy": 1.0
+    },
+    {
+      "suite": "multi_tool.small_3",
+      "profile": "overlap_aware",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\multi_tool.small_3.overlap_aware.json",
+      "equivalence_top1_accuracy": 1.0
+    },
+    {
+      "suite": "multi_tool.medium_50",
+      "profile": "baseline",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\multi_tool.medium_50.baseline.json",
+      "equivalence_top1_accuracy": 1.0
+    },
+    {
+      "suite": "multi_tool.medium_50",
+      "profile": "overlap_aware",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\multi_tool.medium_50.overlap_aware.json",
+      "equivalence_top1_accuracy": 1.0
+    },
+    {
+      "suite": "multi_tool.large",
+      "profile": "baseline",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\multi_tool.large.baseline.json",
+      "equivalence_top1_accuracy": 1.0
+    },
+    {
+      "suite": "multi_tool.large",
+      "profile": "overlap_aware",
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "ambiguous_rate": 0.0,
+      "exact_top1_on_ambiguous": 0.0,
+      "equivalence_top1_on_ambiguous": 0.0,
+      "report_path": "benchmarks\\results\\overlap_aware\\multi_tool.large.overlap_aware.json",
+      "equivalence_top1_accuracy": 1.0
+    }
+  ],
+  "report": {
+    "suites": {
+      "single_tool.small_bloomberg": {
+        "baseline": {
+          "summary": {
+            "num_items": 9,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 1,
+            "confidence_buckets": {
+              "high": {
+                "count": 9,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 9,
+              "top1_accuracy": 1.0,
+              "top3_accuracy": 1.0,
+              "top5_accuracy": 1.0,
+              "handoff_accuracy_at_recommended_k": 1.0,
+              "avg_recommended_handoff_k": 1,
+              "confidence_buckets": {
+                "high": {
+                  "count": 9,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            }
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\single_tool.small_bloomberg.baseline.json"
+        },
+        "overlap_aware": {
+          "summary": {
+            "num_items": 9,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 1,
+            "confidence_buckets": {
+              "high": {
+                "count": 9,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 9,
+              "top1_accuracy": 1.0,
+              "top3_accuracy": 1.0,
+              "top5_accuracy": 1.0,
+              "handoff_accuracy_at_recommended_k": 1.0,
+              "avg_recommended_handoff_k": 1,
+              "confidence_buckets": {
+                "high": {
+                  "count": 9,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            }
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\single_tool.small_bloomberg.overlap_aware.json"
+        }
+      },
+      "single_tool.small_github": {
+        "baseline": {
+          "summary": {
+            "num_items": 26,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 2.4615384615384617,
+            "confidence_buckets": {
+              "high": {
+                "count": 16,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 9,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "medium": {
+                "count": 1,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 26,
+              "top1_accuracy": 1.0,
+              "top3_accuracy": 1.0,
+              "top5_accuracy": 1.0,
+              "handoff_accuracy_at_recommended_k": 1.0,
+              "avg_recommended_handoff_k": 2.4615384615384617,
+              "confidence_buckets": {
+                "high": {
+                  "count": 16,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "low": {
+                  "count": 9,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "medium": {
+                  "count": 1,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            }
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\single_tool.small_github.baseline.json"
+        },
+        "overlap_aware": {
+          "summary": {
+            "num_items": 26,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 2.4615384615384617,
+            "confidence_buckets": {
+              "high": {
+                "count": 16,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 9,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "medium": {
+                "count": 1,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 26,
+              "top1_accuracy": 1.0,
+              "top3_accuracy": 1.0,
+              "top5_accuracy": 1.0,
+              "handoff_accuracy_at_recommended_k": 1.0,
+              "avg_recommended_handoff_k": 2.4615384615384617,
+              "confidence_buckets": {
+                "high": {
+                  "count": 16,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "low": {
+                  "count": 9,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "medium": {
+                  "count": 1,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            }
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\single_tool.small_github.overlap_aware.json"
+        }
+      },
+      "single_tool.small_telegram": {
+        "baseline": {
+          "summary": {
+            "num_items": 64,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 2.5625,
+            "confidence_buckets": {
+              "high": {
+                "count": 37,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 23,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "medium": {
+                "count": 4,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 64,
+              "top1_accuracy": 1.0,
+              "top3_accuracy": 1.0,
+              "top5_accuracy": 1.0,
+              "handoff_accuracy_at_recommended_k": 1.0,
+              "avg_recommended_handoff_k": 2.5625,
+              "confidence_buckets": {
+                "high": {
+                  "count": 37,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "low": {
+                  "count": 23,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "medium": {
+                  "count": 4,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            }
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\single_tool.small_telegram.baseline.json"
+        },
+        "overlap_aware": {
+          "summary": {
+            "num_items": 64,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 2.5625,
+            "confidence_buckets": {
+              "high": {
+                "count": 37,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 23,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "medium": {
+                "count": 4,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 64,
+              "top1_accuracy": 1.0,
+              "top3_accuracy": 1.0,
+              "top5_accuracy": 1.0,
+              "handoff_accuracy_at_recommended_k": 1.0,
+              "avg_recommended_handoff_k": 2.5625,
+              "confidence_buckets": {
+                "high": {
+                  "count": 37,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "low": {
+                  "count": 23,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "medium": {
+                  "count": 4,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            }
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\single_tool.small_telegram.overlap_aware.json"
+        }
+      },
+      "single_tool.medium_50": {
+        "baseline": {
+          "summary": {
+            "num_items": 88,
+            "top1_accuracy": 0.9318181818181818,
+            "top3_accuracy": 0.9318181818181818,
+            "top5_accuracy": 0.9318181818181818,
+            "handoff_accuracy_at_recommended_k": 0.9318181818181818,
+            "avg_recommended_handoff_k": 2.6363636363636362,
+            "confidence_buckets": {
+              "high": {
+                "count": 49,
+                "top1_accuracy": 0.9183673469387755,
+                "handoff_accuracy_at_recommended_k": 0.9183673469387755
+              },
+              "low": {
+                "count": 33,
+                "top1_accuracy": 0.9393939393939394,
+                "handoff_accuracy_at_recommended_k": 0.9393939393939394
+              },
+              "medium": {
+                "count": 6,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 88,
+              "top1_accuracy": 0.9318181818181818,
+              "top3_accuracy": 0.9318181818181818,
+              "top5_accuracy": 0.9318181818181818,
+              "handoff_accuracy_at_recommended_k": 0.9318181818181818,
+              "avg_recommended_handoff_k": 2.6363636363636362,
+              "confidence_buckets": {
+                "high": {
+                  "count": 49,
+                  "top1_accuracy": 0.9183673469387755,
+                  "handoff_accuracy_at_recommended_k": 0.9183673469387755
+                },
+                "low": {
+                  "count": 33,
+                  "top1_accuracy": 0.9393939393939394,
+                  "handoff_accuracy_at_recommended_k": 0.9393939393939394
+                },
+                "medium": {
+                  "count": 6,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            }
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\single_tool.medium_50.baseline.json"
+        },
+        "overlap_aware": {
+          "summary": {
+            "num_items": 88,
+            "top1_accuracy": 0.9318181818181818,
+            "top3_accuracy": 0.9318181818181818,
+            "top5_accuracy": 0.9318181818181818,
+            "handoff_accuracy_at_recommended_k": 0.9318181818181818,
+            "avg_recommended_handoff_k": 2.6363636363636362,
+            "confidence_buckets": {
+              "high": {
+                "count": 49,
+                "top1_accuracy": 0.9183673469387755,
+                "handoff_accuracy_at_recommended_k": 0.9183673469387755
+              },
+              "low": {
+                "count": 33,
+                "top1_accuracy": 0.9393939393939394,
+                "handoff_accuracy_at_recommended_k": 0.9393939393939394
+              },
+              "medium": {
+                "count": 6,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 88,
+              "top1_accuracy": 0.9318181818181818,
+              "top3_accuracy": 0.9318181818181818,
+              "top5_accuracy": 0.9318181818181818,
+              "handoff_accuracy_at_recommended_k": 0.9318181818181818,
+              "avg_recommended_handoff_k": 2.6363636363636362,
+              "confidence_buckets": {
+                "high": {
+                  "count": 49,
+                  "top1_accuracy": 0.9183673469387755,
+                  "handoff_accuracy_at_recommended_k": 0.9183673469387755
+                },
+                "low": {
+                  "count": 33,
+                  "top1_accuracy": 0.9393939393939394,
+                  "handoff_accuracy_at_recommended_k": 0.9393939393939394
+                },
+                "medium": {
+                  "count": 6,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            }
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\single_tool.medium_50.overlap_aware.json"
+        }
+      },
+      "single_tool.large": {
+        "baseline": {
+          "summary": {
+            "num_items": 500,
+            "top1_accuracy": 0.964,
+            "top3_accuracy": 0.98,
+            "top5_accuracy": 0.99,
+            "handoff_accuracy_at_recommended_k": 0.982,
+            "avg_recommended_handoff_k": 2.904,
+            "confidence_buckets": {
+              "high": {
+                "count": 246,
+                "top1_accuracy": 0.983739837398374,
+                "handoff_accuracy_at_recommended_k": 0.983739837398374
+              },
+              "low": {
+                "count": 222,
+                "top1_accuracy": 0.9369369369369369,
+                "handoff_accuracy_at_recommended_k": 0.9774774774774775
+              },
+              "medium": {
+                "count": 32,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 500,
+              "top1_accuracy": 0.972,
+              "top3_accuracy": 0.982,
+              "top5_accuracy": 0.99,
+              "handoff_accuracy_at_recommended_k": 0.982,
+              "avg_recommended_handoff_k": 2.904,
+              "confidence_buckets": {
+                "high": {
+                  "count": 246,
+                  "top1_accuracy": 0.983739837398374,
+                  "handoff_accuracy_at_recommended_k": 0.983739837398374
+                },
+                "low": {
+                  "count": 222,
+                  "top1_accuracy": 0.954954954954955,
+                  "handoff_accuracy_at_recommended_k": 0.9774774774774775
+                },
+                "medium": {
+                  "count": 32,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            }
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\single_tool.large.baseline.json"
+        },
+        "overlap_aware": {
+          "summary": {
+            "num_items": 500,
+            "top1_accuracy": 0.964,
+            "top3_accuracy": 0.98,
+            "top5_accuracy": 0.99,
+            "handoff_accuracy_at_recommended_k": 0.982,
+            "avg_recommended_handoff_k": 2.906,
+            "confidence_buckets": {
+              "high": {
+                "count": 245,
+                "top1_accuracy": 0.9836734693877551,
+                "handoff_accuracy_at_recommended_k": 0.9836734693877551
+              },
+              "low": {
+                "count": 222,
+                "top1_accuracy": 0.9369369369369369,
+                "handoff_accuracy_at_recommended_k": 0.9774774774774775
+              },
+              "medium": {
+                "count": 33,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 500,
+              "top1_accuracy": 0.972,
+              "top3_accuracy": 0.982,
+              "top5_accuracy": 0.99,
+              "handoff_accuracy_at_recommended_k": 0.982,
+              "avg_recommended_handoff_k": 2.906,
+              "confidence_buckets": {
+                "high": {
+                  "count": 245,
+                  "top1_accuracy": 0.9836734693877551,
+                  "handoff_accuracy_at_recommended_k": 0.9836734693877551
+                },
+                "low": {
+                  "count": 222,
+                  "top1_accuracy": 0.954954954954955,
+                  "handoff_accuracy_at_recommended_k": 0.9774774774774775
+                },
+                "medium": {
+                  "count": 33,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 6,
+              "ambiguous_rate": 0.012,
+              "avg_overlap_set_size": 2,
+              "expected_or_equivalent_in_overlap_set_rate": 1.0,
+              "exact_top1_accuracy_on_ambiguous": 1.0,
+              "handoff_accuracy_on_ambiguous": 1.0,
+              "equivalence_top1_accuracy_on_ambiguous": 1.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 1.0
+            }
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\single_tool.large.overlap_aware.json"
+        }
+      },
+      "multi_hop.small_3": {
+        "baseline": {
+          "summary": {
+            "num_items": 6,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 2.3333333333333335,
+            "confidence_buckets": {
+              "high": {
+                "count": 4,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 2,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 6,
+              "top1_accuracy": 1.0,
+              "top3_accuracy": 1.0,
+              "top5_accuracy": 1.0,
+              "handoff_accuracy_at_recommended_k": 1.0,
+              "avg_recommended_handoff_k": 2.3333333333333335,
+              "confidence_buckets": {
+                "high": {
+                  "count": 4,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "low": {
+                  "count": 2,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            },
+            "num_cases": 2,
+            "chain_success_rate_at_1": 1.0,
+            "chain_success_rate_at_3": 1.0,
+            "chain_success_rate_at_5": 1.0
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\multi_hop.small_3.baseline.json"
+        },
+        "overlap_aware": {
+          "summary": {
+            "num_items": 6,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 2.3333333333333335,
+            "confidence_buckets": {
+              "high": {
+                "count": 4,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 2,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 6,
+              "top1_accuracy": 1.0,
+              "top3_accuracy": 1.0,
+              "top5_accuracy": 1.0,
+              "handoff_accuracy_at_recommended_k": 1.0,
+              "avg_recommended_handoff_k": 2.3333333333333335,
+              "confidence_buckets": {
+                "high": {
+                  "count": 4,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "low": {
+                  "count": 2,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            },
+            "num_cases": 2,
+            "chain_success_rate_at_1": 1.0,
+            "chain_success_rate_at_3": 1.0,
+            "chain_success_rate_at_5": 1.0
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\multi_hop.small_3.overlap_aware.json"
+        }
+      },
+      "multi_hop.medium_50": {
+        "baseline": {
+          "summary": {
+            "num_items": 15,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 3.8,
+            "confidence_buckets": {
+              "high": {
+                "count": 4,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 10,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "medium": {
+                "count": 1,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 15,
+              "top1_accuracy": 1.0,
+              "top3_accuracy": 1.0,
+              "top5_accuracy": 1.0,
+              "handoff_accuracy_at_recommended_k": 1.0,
+              "avg_recommended_handoff_k": 3.8,
+              "confidence_buckets": {
+                "high": {
+                  "count": 4,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "low": {
+                  "count": 10,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "medium": {
+                  "count": 1,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            },
+            "num_cases": 3,
+            "chain_success_rate_at_1": 1.0,
+            "chain_success_rate_at_3": 1.0,
+            "chain_success_rate_at_5": 1.0
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\multi_hop.medium_50.baseline.json"
+        },
+        "overlap_aware": {
+          "summary": {
+            "num_items": 15,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 3.8,
+            "confidence_buckets": {
+              "high": {
+                "count": 4,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 10,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "medium": {
+                "count": 1,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 15,
+              "top1_accuracy": 1.0,
+              "top3_accuracy": 1.0,
+              "top5_accuracy": 1.0,
+              "handoff_accuracy_at_recommended_k": 1.0,
+              "avg_recommended_handoff_k": 3.8,
+              "confidence_buckets": {
+                "high": {
+                  "count": 4,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "low": {
+                  "count": 10,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "medium": {
+                  "count": 1,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            },
+            "num_cases": 3,
+            "chain_success_rate_at_1": 1.0,
+            "chain_success_rate_at_3": 1.0,
+            "chain_success_rate_at_5": 1.0
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\multi_hop.medium_50.overlap_aware.json"
+        }
+      },
+      "multi_hop.large": {
+        "baseline": {
+          "summary": {
+            "num_items": 15,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 3.2666666666666666,
+            "confidence_buckets": {
+              "high": {
+                "count": 6,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 8,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "medium": {
+                "count": 1,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 15,
+              "top1_accuracy": 1.0,
+              "top3_accuracy": 1.0,
+              "top5_accuracy": 1.0,
+              "handoff_accuracy_at_recommended_k": 1.0,
+              "avg_recommended_handoff_k": 3.2666666666666666,
+              "confidence_buckets": {
+                "high": {
+                  "count": 6,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "low": {
+                  "count": 8,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "medium": {
+                  "count": 1,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            },
+            "num_cases": 3,
+            "chain_success_rate_at_1": 1.0,
+            "chain_success_rate_at_3": 1.0,
+            "chain_success_rate_at_5": 1.0
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\multi_hop.large.baseline.json"
+        },
+        "overlap_aware": {
+          "summary": {
+            "num_items": 15,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 3.2666666666666666,
+            "confidence_buckets": {
+              "high": {
+                "count": 6,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 8,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "medium": {
+                "count": 1,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 15,
+              "top1_accuracy": 1.0,
+              "top3_accuracy": 1.0,
+              "top5_accuracy": 1.0,
+              "handoff_accuracy_at_recommended_k": 1.0,
+              "avg_recommended_handoff_k": 3.2666666666666666,
+              "confidence_buckets": {
+                "high": {
+                  "count": 6,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "low": {
+                  "count": 8,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "medium": {
+                  "count": 1,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 3,
+              "ambiguous_rate": 0.2,
+              "avg_overlap_set_size": 2,
+              "expected_or_equivalent_in_overlap_set_rate": 1.0,
+              "exact_top1_accuracy_on_ambiguous": 1.0,
+              "handoff_accuracy_on_ambiguous": 1.0,
+              "equivalence_top1_accuracy_on_ambiguous": 1.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 1.0
+            },
+            "num_cases": 3,
+            "chain_success_rate_at_1": 1.0,
+            "chain_success_rate_at_3": 1.0,
+            "chain_success_rate_at_5": 1.0
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\multi_hop.large.overlap_aware.json"
+        }
+      },
+      "multi_tool.small_3": {
+        "baseline": {
+          "summary": {
+            "num_items": 6,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 2.3333333333333335,
+            "confidence_buckets": {
+              "high": {
+                "count": 4,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 2,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 6,
+              "top1_accuracy": 1.0,
+              "top3_accuracy": 1.0,
+              "top5_accuracy": 1.0,
+              "handoff_accuracy_at_recommended_k": 1.0,
+              "avg_recommended_handoff_k": 2.3333333333333335,
+              "confidence_buckets": {
+                "high": {
+                  "count": 4,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "low": {
+                  "count": 2,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            },
+            "num_cases": 2,
+            "all_targets_rate_at_1": 1.0,
+            "all_targets_rate_at_3": 1.0,
+            "all_targets_rate_at_5": 1.0
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\multi_tool.small_3.baseline.json"
+        },
+        "overlap_aware": {
+          "summary": {
+            "num_items": 6,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 2.3333333333333335,
+            "confidence_buckets": {
+              "high": {
+                "count": 4,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 2,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 6,
+              "top1_accuracy": 1.0,
+              "top3_accuracy": 1.0,
+              "top5_accuracy": 1.0,
+              "handoff_accuracy_at_recommended_k": 1.0,
+              "avg_recommended_handoff_k": 2.3333333333333335,
+              "confidence_buckets": {
+                "high": {
+                  "count": 4,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "low": {
+                  "count": 2,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            },
+            "num_cases": 2,
+            "all_targets_rate_at_1": 1.0,
+            "all_targets_rate_at_3": 1.0,
+            "all_targets_rate_at_5": 1.0
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\multi_tool.small_3.overlap_aware.json"
+        }
+      },
+      "multi_tool.medium_50": {
+        "baseline": {
+          "summary": {
+            "num_items": 9,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 3.4444444444444446,
+            "confidence_buckets": {
+              "high": {
+                "count": 3,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 5,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "medium": {
+                "count": 1,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 9,
+              "top1_accuracy": 1.0,
+              "top3_accuracy": 1.0,
+              "top5_accuracy": 1.0,
+              "handoff_accuracy_at_recommended_k": 1.0,
+              "avg_recommended_handoff_k": 3.4444444444444446,
+              "confidence_buckets": {
+                "high": {
+                  "count": 3,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "low": {
+                  "count": 5,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "medium": {
+                  "count": 1,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            },
+            "num_cases": 3,
+            "all_targets_rate_at_1": 1.0,
+            "all_targets_rate_at_3": 1.0,
+            "all_targets_rate_at_5": 1.0
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\multi_tool.medium_50.baseline.json"
+        },
+        "overlap_aware": {
+          "summary": {
+            "num_items": 9,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 3.4444444444444446,
+            "confidence_buckets": {
+              "high": {
+                "count": 3,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 5,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "medium": {
+                "count": 1,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 9,
+              "top1_accuracy": 1.0,
+              "top3_accuracy": 1.0,
+              "top5_accuracy": 1.0,
+              "handoff_accuracy_at_recommended_k": 1.0,
+              "avg_recommended_handoff_k": 3.4444444444444446,
+              "confidence_buckets": {
+                "high": {
+                  "count": 3,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "low": {
+                  "count": 5,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "medium": {
+                  "count": 1,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            },
+            "num_cases": 3,
+            "all_targets_rate_at_1": 1.0,
+            "all_targets_rate_at_3": 1.0,
+            "all_targets_rate_at_5": 1.0
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\multi_tool.medium_50.overlap_aware.json"
+        }
+      },
+      "multi_tool.large": {
+        "baseline": {
+          "summary": {
+            "num_items": 7,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 3.2857142857142856,
+            "confidence_buckets": {
+              "high": {
+                "count": 3,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 4,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 7,
+              "top1_accuracy": 1.0,
+              "top3_accuracy": 1.0,
+              "top5_accuracy": 1.0,
+              "handoff_accuracy_at_recommended_k": 1.0,
+              "avg_recommended_handoff_k": 3.2857142857142856,
+              "confidence_buckets": {
+                "high": {
+                  "count": 3,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "low": {
+                  "count": 4,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            },
+            "num_cases": 3,
+            "all_targets_rate_at_1": 1.0,
+            "all_targets_rate_at_3": 1.0,
+            "all_targets_rate_at_5": 1.0
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\multi_tool.large.baseline.json"
+        },
+        "overlap_aware": {
+          "summary": {
+            "num_items": 7,
+            "top1_accuracy": 1.0,
+            "top3_accuracy": 1.0,
+            "top5_accuracy": 1.0,
+            "handoff_accuracy_at_recommended_k": 1.0,
+            "avg_recommended_handoff_k": 3.2857142857142856,
+            "confidence_buckets": {
+              "high": {
+                "count": 3,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              },
+              "low": {
+                "count": 4,
+                "top1_accuracy": 1.0,
+                "handoff_accuracy_at_recommended_k": 1.0
+              }
+            },
+            "equivalence_aware": {
+              "num_items": 7,
+              "top1_accuracy": 1.0,
+              "top3_accuracy": 1.0,
+              "top5_accuracy": 1.0,
+              "handoff_accuracy_at_recommended_k": 1.0,
+              "avg_recommended_handoff_k": 3.2857142857142856,
+              "confidence_buckets": {
+                "high": {
+                  "count": 3,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                },
+                "low": {
+                  "count": 4,
+                  "top1_accuracy": 1.0,
+                  "handoff_accuracy_at_recommended_k": 1.0
+                }
+              }
+            },
+            "overlap_aware": {
+              "ambiguous_count": 0,
+              "ambiguous_rate": 0.0,
+              "avg_overlap_set_size": 0.0,
+              "expected_or_equivalent_in_overlap_set_rate": 0.0,
+              "exact_top1_accuracy_on_ambiguous": 0.0,
+              "handoff_accuracy_on_ambiguous": 0.0,
+              "equivalence_top1_accuracy_on_ambiguous": 0.0,
+              "equivalence_handoff_accuracy_on_ambiguous": 0.0
+            },
+            "num_cases": 3,
+            "all_targets_rate_at_1": 1.0,
+            "all_targets_rate_at_3": 1.0,
+            "all_targets_rate_at_5": 1.0
+          },
+          "report_path": "benchmarks\\results\\overlap_aware\\multi_tool.large.overlap_aware.json"
+        }
+      }
+    }
+  }
+}

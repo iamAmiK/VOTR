@@ -1,0 +1,96 @@
+{
+  "scale": "small",
+  "summary": {
+    "num_items": 9,
+    "latency_ms": {
+      "p50": 251.30270002409816,
+      "p95": 566.4721000939608,
+      "mean": 283.7461333256215
+    },
+    "returned_tools_mean": 8,
+    "avg_recommended_handoff_k": 2.5555555555555554,
+    "compressed_candidate_chars": {
+      "mean": 1027.5555555555557,
+      "p95": 1064
+    },
+    "estimated_compressed_tokens": {
+      "mean": 256.8888888888889,
+      "p95": 266.0
+    },
+    "embedding_api_calls_per_route": 2.0
+  },
+  "rows": [
+    {
+      "latency_ms": 566.4721000939608,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 1023,
+      "estimated_compressed_tokens": 255.75,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 242.00219986960292,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 1023,
+      "estimated_compressed_tokens": 255.75,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 246.79929995909333,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 1023,
+      "estimated_compressed_tokens": 255.75,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 252.98360013402998,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 1023,
+      "estimated_compressed_tokens": 255.75,
+      "confidence": "high"
+    },
+    {
+      "latency_ms": 251.30270002409816,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 1023,
+      "estimated_compressed_tokens": 255.75,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 238.68689988739789,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 1023,
+      "estimated_compressed_tokens": 255.75,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 259.5255000051111,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 1023,
+      "estimated_compressed_tokens": 255.75,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 256.631099851802,
+      "returned_tools": 8,
+      "recommended_handoff_k": 3,
+      "compressed_chars": 1023,
+      "estimated_compressed_tokens": 255.75,
+      "confidence": "medium"
+    },
+    {
+      "latency_ms": 239.31180010549724,
+      "returned_tools": 8,
+      "recommended_handoff_k": 1,
+      "compressed_chars": 1064,
+      "estimated_compressed_tokens": 266.0,
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "summary": {
+    "num_items": 9,
+    "top1_accuracy": 0.8888888888888888,
+    "top3_accuracy": 1.0,
+    "top5_accuracy": 1.0,
+    "handoff_accuracy_at_recommended_k": 1.0,
+    "avg_recommended_handoff_k": 4.777777777777778,
+    "confidence_buckets": {
+      "low": {
+        "count": 8,
+        "top1_accuracy": 0.875,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "medium": {
+        "count": 1,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      }
+    },
+    "num_cases": 3,
+    "all_targets_rate_at_1": 0.6666666666666666,
+    "all_targets_rate_at_3": 1.0,
+    "all_targets_rate_at_5": 1.0
+  },
+  "results": [
+    {
+      "case_id": "mt-medium-001",
+      "user_intent": "List Aiven services, store the identifiers in Redis, and create a Stripe invoice for the customer.",
+      "all_targets_at_1": true,
+      "all_targets_at_3": true,
+      "all_targets_at_5": true,
+      "subtasks": [
+        {
+          "server_intent": "Aiven operations",
+          "tool_intent": "list all services in a specific Aiven project",
+          "expected_tool_key": "Aiven::list_services",
+          "predicted_topk": [
+            "Aiven::list_services",
+            "Aiven::list_projects",
+            "Aiven::get_service_details",
+            "Keboola::retrieve_jobs",
+            "Keboola::retrieve_bucket_tables"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0007848371148212532,
+          "top1_score": 0.03278688524590164,
+          "top2_score": 0.03200204813108039
+        },
+        {
+          "server_intent": "Redis operations",
+          "tool_intent": "tools to add, remove and list set members",
+          "expected_tool_key": "Redis::set",
+          "predicted_topk": [
+            "Redis::set",
+            "Redis::list",
+            "Redis::query engine",
+            "Redis::string",
+            "Redis::streams"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0007848371148212532,
+          "top1_score": 0.03278688524590164,
+          "top2_score": 0.03200204813108039
+        },
+        {
+          "server_intent": "Stripe operations",
+          "tool_intent": "creates a new invoice in Stripe",
+          "expected_tool_key": "Stripe::createInvoice",
+          "predicted_topk": [
+            "Stripe::createInvoice",
+            "Stripe::createInvoiceItem",
+            "Stripe::createCustomer",
+            "Stripe::createRefund",
+            "Stripe::createPrice"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0005288207297726097,
+          "top1_score": 0.03278688524590164,
+          "top2_score": 0.03225806451612903
+        }
+      ]
+    },
+    {
+      "case_id": "mt-medium-002",
+      "user_intent": "Fetch Datadog events, open a Git branch for the fix, and message the user directly in Discord.",
+      "all_targets_at_1": false,
+      "all_targets_at_3": true,
+      "all_targets_at_5": true,
+      "subtasks": [
+        {
+          "server_intent": "Datadog operations",
+          "tool_intent": "fetch events within a time range",
+          "expected_tool_key": "Datadog::get-events",
+          "predicted_topk": [
+            "Datadog::get-events",
+            "Datadog::get-monitors",
+            "Dynatrace::execute_dql",
+            "Datadog::get-incidents",
+            "Datadog::get-metric-metadata"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0005288207297726097,
+          "top1_score": 0.03278688524590164,
+          "top2_score": 0.03225806451612903
+        },
+        {
+          "server_intent": "Git operations",
+          "tool_intent": "creates a new branch",
+          "expected_tool_key": "Git::git_create_branch",
+          "predicted_topk": [
+            "GitHub::create_branch",
+            "Git::git_create_branch",
+            "GitHub::list_commits",
+            "Git::git_checkout",
+            "Git::git_init"
+          ],
+          "hit_at_1": false,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0,
+          "top1_score": 0.03252247488101534,
+          "top2_score": 0.03252247488101534
+        },
+        {
+          "server_intent": "Discord direct messaging",
+          "tool_intent": "send a Discord direct message to a user",
+          "expected_tool_key": "Discord::send-message",
+          "predicted_topk": [
+            "Discord::send-message",
+            "Discord::read-messages",
+            "Telegram::send_message",
+            "Telegram::get_direct_chat_by_contact",
+            "Telegram::block_user"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0010328529878371254,
+          "top1_score": 0.03278688524590164,
+          "top2_score": 0.031754032258064516
+        }
+      ]
+    },
+    {
+      "case_id": "mt-medium-003",
+      "user_intent": "Search Airtable records, review the customer in HubSpot, and unblock them in Telegram.",
+      "all_targets_at_1": true,
+      "all_targets_at_3": true,
+      "all_targets_at_5": true,
+      "subtasks": [
+        {
+          "server_intent": "Airtable operations",
+          "tool_intent": "search for records containing specific text",
+          "expected_tool_key": "Airtable::search_records",
+          "predicted_topk": [
+            "Airtable::search_records",
+            "Airtable::get_record",
+            "Airtable::list_records",
+            "Airtable::update_records",
+            "Airtable::describe_table"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0005288207297726097,
+          "top1_score": 0.03278688524590164,
+          "top2_score": 0.03225806451612903
+        },
+        {
+          "server_intent": "HubSpot operations",
+          "tool_intent": "retrieve most recently active contacts",
+          "expected_tool_key": "HubSpot::hubspot_get_active_contacts",
+          "predicted_topk": [
+            "HubSpot::hubspot_get_active_contacts",
+            "HubSpot::hubspot_get_active_companies",
+            "HubSpot::hubspot_get_company_activity",
+            "HubSpot::hubspot_get_recent_conversations",
+            "HubSpot::hubspot_create_contact"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0005288207297726097,
+          "top1_score": 0.03278688524590164,
+          "top2_score": 0.03225806451612903
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "unblock a user",
+          "expected_tool_key": "Telegram::unblock_user",
+          "predicted_topk": [
+            "Telegram::unblock_user",
+            "Telegram::block_user",
+            "Telegram::unban_user",
+            "Telegram::ban_user",
+            "Telegram::promote_admin"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0005288207297726097,
+          "top1_score": 0.03278688524590164,
+          "top2_score": 0.03225806451612903
+        }
+      ]
+    }
+  ],
+  "suite": "multi_tool.medium_50.single_turn"
+}

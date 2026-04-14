@@ -1,0 +1,234 @@
+{
+  "summary": {
+    "num_cases": 8,
+    "pass_rate": 0.625,
+    "confidence_distribution": {
+      "high": 2,
+      "low": 5,
+      "medium": 1
+    },
+    "avg_recommended_handoff_k": 3.75,
+    "failed_assertions": {
+      "max_confidence": 3,
+      "min_recommended_handoff_k": 3
+    }
+  },
+  "rows": [
+    {
+      "id": "neg-001",
+      "server_intent": "airline booking operations",
+      "tool_intent": "book a flight from NYC to SFO next Tuesday",
+      "predicted_top5": [
+        "Hyperliquid::get_l2_book",
+        "Hyperliquid::get_candle_snapshot",
+        "Fantasy PL::get_gameweek_status",
+        "Hyperliquid::get_all_mids",
+        "Hyperbrowser::create_profile"
+      ],
+      "predicted_servers_top5": [
+        "Hyperliquid",
+        "Hyperliquid",
+        "Fantasy PL",
+        "Hyperliquid",
+        "Hyperbrowser"
+      ],
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "score_gap": 0.0006129703776451556,
+      "checks": {
+        "max_confidence": true,
+        "min_recommended_handoff_k": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-002",
+      "server_intent": "childcare booking operations",
+      "tool_intent": "book a babysitter for Friday night",
+      "predicted_top5": [
+        "Hyperliquid::get_l2_book",
+        "Hyperliquid::get_candle_snapshot",
+        "Hyperliquid::get_all_mids",
+        "AWS::dynamodb_describe_ttl",
+        "AWS::dynamodb_update_ttl"
+      ],
+      "predicted_servers_top5": [
+        "Hyperliquid",
+        "Hyperliquid",
+        "Hyperliquid",
+        "AWS",
+        "AWS"
+      ],
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "score_gap": 0.00035695399259651206,
+      "checks": {
+        "max_confidence": true,
+        "min_recommended_handoff_k": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-003",
+      "server_intent": "food delivery operations",
+      "tool_intent": "order sushi to my office",
+      "predicted_top5": [
+        "Shopify::update-order",
+        "Shopify::get-order-by-id",
+        "Shopify::get-orders",
+        "Shopify::get-customer-orders",
+        "Shopify::get-customers"
+      ],
+      "predicted_servers_top5": [
+        "Shopify",
+        "Shopify",
+        "Shopify",
+        "Shopify",
+        "Shopify"
+      ],
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "score_gap": 0.0006213643574828134,
+      "checks": {
+        "max_confidence": true,
+        "min_recommended_handoff_k": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-004",
+      "server_intent": "hardware control",
+      "tool_intent": "shut down my laptop right now",
+      "predicted_top5": [
+        "Heroku::ps_scale",
+        "DaVinci Resolve::save_current_project",
+        "Home Assistant::control",
+        "DaVinci Resolve::switch_to_timeline",
+        "DaVinci Resolve::switch_page"
+      ],
+      "predicted_servers_top5": [
+        "Heroku",
+        "DaVinci Resolve",
+        "Home Assistant",
+        "DaVinci Resolve",
+        "DaVinci Resolve"
+      ],
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "score_gap": 0.00038056680161943635,
+      "checks": {
+        "max_confidence": true,
+        "min_recommended_handoff_k": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-005",
+      "server_intent": "mental health counseling",
+      "tool_intent": "help me cope with grief after losing a loved one",
+      "predicted_top5": [
+        "Airflow::Get Health",
+        "Google Sheets::add_rows",
+        "Airflow::Get Health Status",
+        "consul-mcp::Deregister health checks",
+        "consul-mcp::Register health checks"
+      ],
+      "predicted_servers_top5": [
+        "Airflow",
+        "Google Sheets",
+        "Airflow",
+        "consul-mcp",
+        "consul-mcp"
+      ],
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "score_gap": 0.0002336921019068655,
+      "checks": {
+        "max_confidence": true,
+        "min_recommended_handoff_k": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-006",
+      "server_intent": "medical diagnosis",
+      "tool_intent": "diagnose the cause of this chest pain",
+      "predicted_top5": [
+        "Dicom::verify_connection",
+        "Dicom::list_dicom_nodes",
+        "Dicom::switch_dicom_node",
+        "Dicom::move_series",
+        "Dicom::extract_pdf_text_from_dicom"
+      ],
+      "predicted_servers_top5": [
+        "Dicom",
+        "Dicom",
+        "Dicom",
+        "Dicom",
+        "Dicom"
+      ],
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "score_gap": 0.0008552481785063792,
+      "checks": {
+        "max_confidence": false,
+        "min_recommended_handoff_k": false
+      },
+      "passed": false
+    },
+    {
+      "id": "neg-007",
+      "server_intent": "personal finance advice",
+      "tool_intent": "tell me whether I should refinance my mortgage",
+      "predicted_top5": [
+        "GOAT::Bet on Polymarket",
+        "Bitrise::set_installable_artifact_public_install_page",
+        "DevHub::create_blog_post",
+        "Bitrise::me",
+        "Inkeep::search-product-content"
+      ],
+      "predicted_servers_top5": [
+        "GOAT",
+        "Bitrise",
+        "DevHub",
+        "Bitrise",
+        "Inkeep"
+      ],
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "score_gap": 0.002764733465881377,
+      "checks": {
+        "max_confidence": false,
+        "min_recommended_handoff_k": false
+      },
+      "passed": false
+    },
+    {
+      "id": "neg-008",
+      "server_intent": "operating system administration",
+      "tool_intent": "install Chrome and make it the default browser",
+      "predicted_top5": [
+        "Lingo.dev::start-server",
+        "Lingo.dev::add-user",
+        "Lingo.dev::status",
+        "Bitrise::set_installable_artifact_public_install_page",
+        "Puppeteer::puppeteer_evaluate"
+      ],
+      "predicted_servers_top5": [
+        "Lingo.dev",
+        "Lingo.dev",
+        "Lingo.dev",
+        "Bitrise",
+        "Puppeteer"
+      ],
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "score_gap": 0.0026739494493842643,
+      "checks": {
+        "max_confidence": false,
+        "min_recommended_handoff_k": false
+      },
+      "passed": false
+    }
+  ]
+}

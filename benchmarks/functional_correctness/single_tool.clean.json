@@ -1,0 +1,3006 @@
+{
+  "suite": "single_tool.clean",
+  "description": "Router-only single-tool benchmark with one correct expected_tool_key per case.",
+  "cases": [
+    {
+      "id": "st-clean-001",
+      "server_intent": "AgentQL operations",
+      "tool_intent": "extracts structured data from a given URL using a prompt to describe the data and fields to extract",
+      "expected_tool_key": "AgentQL::extract-web-data"
+    },
+    {
+      "id": "st-clean-002",
+      "server_intent": "Aiven operations",
+      "tool_intent": "list all projects on your Aiven account",
+      "expected_tool_key": "Aiven::list_projects"
+    },
+    {
+      "id": "st-clean-003",
+      "server_intent": "Aiven operations",
+      "tool_intent": "list all services in a specific Aiven project",
+      "expected_tool_key": "Aiven::list_services"
+    },
+    {
+      "id": "st-clean-004",
+      "server_intent": "Alibaba Cloud AnalyticDB for MySQL operations",
+      "tool_intent": "execute a SQL query in the AnalyticDB for MySQL Cluster",
+      "expected_tool_key": "Alibaba Cloud AnalyticDB for MySQL::execute_sql"
+    },
+    {
+      "id": "st-clean-005",
+      "server_intent": "Alibaba Cloud AnalyticDB for MySQL operations",
+      "tool_intent": "get the actual execution plan with runtime statistics for a SQL query",
+      "expected_tool_key": "Alibaba Cloud AnalyticDB for MySQL::get_execution_plan"
+    },
+    {
+      "id": "st-clean-006",
+      "server_intent": "Apache IoTDB operations",
+      "tool_intent": "execute SELECT queries to read data from the database",
+      "expected_tool_key": "Apache IoTDB::select_query"
+    },
+    {
+      "id": "st-clean-007",
+      "server_intent": "Apache IoTDB operations",
+      "tool_intent": "execute SHOW/COUNT queries to read metadata from the database",
+      "expected_tool_key": "Apache IoTDB::metadata_query"
+    },
+    {
+      "id": "st-clean-008",
+      "server_intent": "Apify operations",
+      "tool_intent": "retrieves documentation, input schema, and details about a specific Actor",
+      "expected_tool_key": "Apify::get-actor-details"
+    },
+    {
+      "id": "st-clean-009",
+      "server_intent": "Apify operations",
+      "tool_intent": "adds an Actor by name to the available tools list without executing it, requiring user consent to run later",
+      "expected_tool_key": "Apify::add-actor-as-tool"
+    },
+    {
+      "id": "st-clean-010",
+      "server_intent": "APIMatic MCP operations",
+      "tool_intent": "validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary",
+      "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic"
+    },
+    {
+      "id": "st-clean-011",
+      "server_intent": "Arize Phoenix operations",
+      "tool_intent": "provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults",
+      "expected_tool_key": "Arize Phoenix::arize-phoenix-otel"
+    },
+    {
+      "id": "st-clean-012",
+      "server_intent": "Arize Phoenix operations",
+      "tool_intent": "mCP server implementation for Arize Phoenix providing a unified interface to Phoenix's capabilities",
+      "expected_tool_key": "Arize Phoenix::@arizeai/phoenix-mcp"
+    },
+    {
+      "id": "st-clean-013",
+      "server_intent": "Astra DB operations",
+      "tool_intent": "update an existing collection in the database",
+      "expected_tool_key": "Astra DB::UpdateCollection"
+    },
+    {
+      "id": "st-clean-014",
+      "server_intent": "Astra DB operations",
+      "tool_intent": "delete a collection from the database",
+      "expected_tool_key": "Astra DB::DeleteCollection"
+    },
+    {
+      "id": "st-clean-015",
+      "server_intent": "Audiense Insights operations",
+      "tool_intent": "retrieves available baseline audiences, optionally filtered by country",
+      "expected_tool_key": "Audiense Insights::get-baselines"
+    },
+    {
+      "id": "st-clean-016",
+      "server_intent": "Audiense Insights operations",
+      "tool_intent": "retrieves the list of available affinity categories that can be used in influencer comparisons",
+      "expected_tool_key": "Audiense Insights::get-categories"
+    },
+    {
+      "id": "st-clean-017",
+      "server_intent": "AWS operations",
+      "tool_intent": "list all S3 buckets",
+      "expected_tool_key": "AWS::s3_bucket_list"
+    },
+    {
+      "id": "st-clean-018",
+      "server_intent": "AWS operations",
+      "tool_intent": "get content recommendations for AWS documentation pages",
+      "expected_tool_key": "AWS::Get Content Recommendations"
+    },
+    {
+      "id": "st-clean-019",
+      "server_intent": "Axiom operations",
+      "tool_intent": "execute APL queries against Axiom datasets",
+      "expected_tool_key": "Axiom::queryApl"
+    },
+    {
+      "id": "st-clean-020",
+      "server_intent": "Axiom operations",
+      "tool_intent": "list available Axiom datasets",
+      "expected_tool_key": "Axiom::listDatasets"
+    },
+    {
+      "id": "st-clean-021",
+      "server_intent": "Azure operations",
+      "tool_intent": "samples rows from a Kusto table",
+      "expected_tool_key": "Azure::Sample rows from a Kusto table"
+    },
+    {
+      "id": "st-clean-022",
+      "server_intent": "Azure operations",
+      "tool_intent": "lists, creates, and retrieves keys within an Azure Key Vault",
+      "expected_tool_key": "Azure::List, create, and get keys"
+    },
+    {
+      "id": "st-clean-023",
+      "server_intent": "Bankless Onchain operations",
+      "tool_intent": "fetch event logs for a contract based on topics",
+      "expected_tool_key": "Bankless Onchain::get_events"
+    },
+    {
+      "id": "st-clean-024",
+      "server_intent": "Bankless Onchain operations",
+      "tool_intent": "read state from smart contracts on various blockchain networks",
+      "expected_tool_key": "Bankless Onchain::read_contract"
+    },
+    {
+      "id": "st-clean-025",
+      "server_intent": "Bitrise operations",
+      "tool_intent": "list Release Management installable artifacts of a connected app",
+      "expected_tool_key": "Bitrise::list_installable_artifacts"
+    },
+    {
+      "id": "st-clean-026",
+      "server_intent": "Bitrise operations",
+      "tool_intent": "changes whether public install page should be available for the installable artifact",
+      "expected_tool_key": "Bitrise::set_installable_artifact_public_install_page"
+    },
+    {
+      "id": "st-clean-027",
+      "server_intent": "Box operations",
+      "tool_intent": "ask Box AI about a hub",
+      "expected_tool_key": "Box::box_hubs_ask_ai_tool"
+    },
+    {
+      "id": "st-clean-028",
+      "server_intent": "Box operations",
+      "tool_intent": "list all Doc Gen jobs that used a specific template",
+      "expected_tool_key": "Box::box_docgen_template_list_jobs_tool"
+    },
+    {
+      "id": "st-clean-029",
+      "server_intent": "Chroma operations",
+      "tool_intent": "retrieve a document by ID",
+      "expected_tool_key": "Chroma::read_document"
+    },
+    {
+      "id": "st-clean-030",
+      "server_intent": "Chroma operations",
+      "tool_intent": "update existing documents' content, metadata, or embeddings",
+      "expected_tool_key": "Chroma::chroma_update_documents"
+    },
+    {
+      "id": "st-clean-031",
+      "server_intent": "CircleCI operations",
+      "tool_intent": "retrieves the status of the latest pipeline for a given branch",
+      "expected_tool_key": "CircleCI::get_latest_pipeline_status"
+    },
+    {
+      "id": "st-clean-032",
+      "server_intent": "CircleCI operations",
+      "tool_intent": "identifies flaky tests in a CircleCI project by analyzing test execution history",
+      "expected_tool_key": "CircleCI::find_flaky_tests"
+    },
+    {
+      "id": "st-clean-033",
+      "server_intent": "ClickHouse operations",
+      "tool_intent": "execute SQL queries on your ClickHouse cluster",
+      "expected_tool_key": "ClickHouse::run_select_query"
+    },
+    {
+      "id": "st-clean-034",
+      "server_intent": "ClickHouse operations",
+      "tool_intent": "list all databases on your ClickHouse cluster",
+      "expected_tool_key": "ClickHouse::list_databases"
+    },
+    {
+      "id": "st-clean-035",
+      "server_intent": "Codacy operations",
+      "tool_intent": "lists and filters code quality issues in a repository",
+      "expected_tool_key": "Codacy::codacy_list_repository_issues"
+    },
+    {
+      "id": "st-clean-036",
+      "server_intent": "Codacy operations",
+      "tool_intent": "get repository with analysis information, including metrics for Grade, Issues, Duplication, Complexity, and Coverage",
+      "expected_tool_key": "Codacy::codacy_get_repository_with_analysis"
+    },
+    {
+      "id": "st-clean-037",
+      "server_intent": "CodeLogic operations",
+      "tool_intent": "analyzes impacts between code and database entities",
+      "expected_tool_key": "CodeLogic::codelogic-database-impact"
+    },
+    {
+      "id": "st-clean-038",
+      "server_intent": "CodeLogic operations",
+      "tool_intent": "pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class",
+      "expected_tool_key": "CodeLogic::codelogic-method-impact"
+    },
+    {
+      "id": "st-clean-039",
+      "server_intent": "Comet Opik operations",
+      "tool_intent": "track and analyze trace data",
+      "expected_tool_key": "Comet Opik::Traces"
+    },
+    {
+      "id": "st-clean-040",
+      "server_intent": "Comet Opik operations",
+      "tool_intent": "organize and manage projects",
+      "expected_tool_key": "Comet Opik::Projects/Workspaces Management"
+    },
+    {
+      "id": "st-clean-041",
+      "server_intent": "Couchbase operations",
+      "tool_intent": "delete a document by ID from a specified scope and collection",
+      "expected_tool_key": "Couchbase::delete_document_by_id"
+    },
+    {
+      "id": "st-clean-042",
+      "server_intent": "Couchbase operations",
+      "tool_intent": "get a document by ID from a specified scope and collection",
+      "expected_tool_key": "Couchbase::get_document_by_id"
+    },
+    {
+      "id": "st-clean-043",
+      "server_intent": "Dart operations",
+      "tool_intent": "get information about the user's space, including available assignees, dartboards, folders, statuses, tags, priorities, and sizes",
+      "expected_tool_key": "Dart::get_config"
+    },
+    {
+      "id": "st-clean-044",
+      "server_intent": "Dart operations",
+      "tool_intent": "create a new doc with title, text content, and folder",
+      "expected_tool_key": "Dart::create_doc"
+    },
+    {
+      "id": "st-clean-045",
+      "server_intent": "DevHub operations",
+      "tool_intent": "updates an existing blog post's title and/or content",
+      "expected_tool_key": "DevHub::update_blog_post"
+    },
+    {
+      "id": "st-clean-046",
+      "server_intent": "DevHub operations",
+      "tool_intent": "gets all locations for a specific business",
+      "expected_tool_key": "DevHub::get_locations"
+    },
+    {
+      "id": "st-clean-047",
+      "server_intent": "Dynatrace operations",
+      "tool_intent": "sends Slack messages using the Slack Connector",
+      "expected_tool_key": "Dynatrace::send_slack_message"
+    },
+    {
+      "id": "st-clean-048",
+      "server_intent": "Dynatrace operations",
+      "tool_intent": "lists problem details from your services, such as Kubernetes",
+      "expected_tool_key": "Dynatrace::list_problems"
+    },
+    {
+      "id": "st-clean-049",
+      "server_intent": "EduBase operations",
+      "tool_intent": "retrieves user information from the EduBase platform",
+      "expected_tool_key": "EduBase::edubase_get_user"
+    },
+    {
+      "id": "st-clean-050",
+      "server_intent": "Elasticsearch operations",
+      "tool_intent": "delete an alias for a specific index",
+      "expected_tool_key": "Elasticsearch::delete_alias"
+    },
+    {
+      "id": "st-clean-051",
+      "server_intent": "Elasticsearch operations",
+      "tool_intent": "get a document by ID",
+      "expected_tool_key": "Elasticsearch::get_document"
+    },
+    {
+      "id": "st-clean-052",
+      "server_intent": "eSignatures operations",
+      "tool_intent": "list all your templates",
+      "expected_tool_key": "eSignatures::list_templates"
+    },
+    {
+      "id": "st-clean-053",
+      "server_intent": "eSignatures operations",
+      "tool_intent": "delete a draft or test contract",
+      "expected_tool_key": "eSignatures::delete_contract"
+    },
+    {
+      "id": "st-clean-054",
+      "server_intent": "Exa operations",
+      "tool_intent": "specialized search focused on academic papers and research content",
+      "expected_tool_key": "Exa::research_paper_search"
+    },
+    {
+      "id": "st-clean-055",
+      "server_intent": "Exa operations",
+      "tool_intent": "performs real-time web searches with optimized results and content extraction",
+      "expected_tool_key": "Exa::web_search_exa"
+    },
+    {
+      "id": "st-clean-056",
+      "server_intent": "Fewsats operations",
+      "tool_intent": "retrieve the user's payment methods",
+      "expected_tool_key": "Fewsats::payment_methods"
+    },
+    {
+      "id": "st-clean-057",
+      "server_intent": "Fewsats operations",
+      "tool_intent": "retrieve the details of a payment",
+      "expected_tool_key": "Fewsats::payment_info"
+    },
+    {
+      "id": "st-clean-058",
+      "server_intent": "Fibery operations",
+      "tool_intent": "retrieves a list of all databases available in your Fibery workspace",
+      "expected_tool_key": "Fibery::list_databases"
+    },
+    {
+      "id": "st-clean-059",
+      "server_intent": "Fibery operations",
+      "tool_intent": "provides a detailed breakdown of a specific database's structure, showing all fields with their titles, names, and types",
+      "expected_tool_key": "Fibery::describe_database"
+    },
+    {
+      "id": "st-clean-060",
+      "server_intent": "Financial Datasets operations",
+      "tool_intent": "get balance sheets for a company",
+      "expected_tool_key": "Financial Datasets::get_balance_sheets"
+    },
+    {
+      "id": "st-clean-061",
+      "server_intent": "Financial Datasets operations",
+      "tool_intent": "gets all available crypto tickers",
+      "expected_tool_key": "Financial Datasets::get_available_crypto_tickers"
+    },
+    {
+      "id": "st-clean-062",
+      "server_intent": "Firecrawl operations",
+      "tool_intent": "start an asynchronous crawl with advanced options",
+      "expected_tool_key": "Firecrawl::firecrawl_crawl"
+    },
+    {
+      "id": "st-clean-063",
+      "server_intent": "Firecrawl operations",
+      "tool_intent": "search the web and optionally extract content from search results",
+      "expected_tool_key": "Firecrawl::firecrawl_search"
+    },
+    {
+      "id": "st-clean-064",
+      "server_intent": "Gitee operations",
+      "tool_intent": "comment on an issue",
+      "expected_tool_key": "Gitee::comment_issue"
+    },
+    {
+      "id": "st-clean-065",
+      "server_intent": "Gitee operations",
+      "tool_intent": "create a pull request",
+      "expected_tool_key": "Gitee::create_pull"
+    },
+    {
+      "id": "st-clean-066",
+      "server_intent": "Gyazo operations",
+      "tool_intent": "fetch image content and metadata from Gyazo",
+      "expected_tool_key": "Gyazo::gyazo_image"
+    },
+    {
+      "id": "st-clean-067",
+      "server_intent": "Gyazo operations",
+      "tool_intent": "upload an image to Gyazo",
+      "expected_tool_key": "Gyazo::gyazo_upload"
+    },
+    {
+      "id": "st-clean-068",
+      "server_intent": "gotoHuman operations",
+      "tool_intent": "get the schema to use when requesting a human review for a given form",
+      "expected_tool_key": "gotoHuman::get-form-schema"
+    },
+    {
+      "id": "st-clean-069",
+      "server_intent": "gotoHuman operations",
+      "tool_intent": "list all available review forms",
+      "expected_tool_key": "gotoHuman::list-forms"
+    },
+    {
+      "id": "st-clean-070",
+      "server_intent": "Grafana operations",
+      "tool_intent": "list schedules from Grafana OnCall",
+      "expected_tool_key": "Grafana::list_oncall_schedules"
+    },
+    {
+      "id": "st-clean-071",
+      "server_intent": "Grafana operations",
+      "tool_intent": "list available metric names",
+      "expected_tool_key": "Grafana::list_prometheus_metric_names"
+    },
+    {
+      "id": "st-clean-072",
+      "server_intent": "Graphlit operations",
+      "tool_intent": "sends notifications to Twitter/X",
+      "expected_tool_key": "Graphlit::Twitter/X"
+    },
+    {
+      "id": "st-clean-073",
+      "server_intent": "Graphlit operations",
+      "tool_intent": "lists available folders within a SharePoint library",
+      "expected_tool_key": "Graphlit::List SharePoint Folders"
+    },
+    {
+      "id": "st-clean-074",
+      "server_intent": "GreptimeDB operations",
+      "tool_intent": "gets a prompt by name",
+      "expected_tool_key": "GreptimeDB::get_prompt"
+    },
+    {
+      "id": "st-clean-075",
+      "server_intent": "GreptimeDB operations",
+      "tool_intent": "lists tables in the database",
+      "expected_tool_key": "GreptimeDB::list_resources"
+    },
+    {
+      "id": "st-clean-076",
+      "server_intent": "Heroku operations",
+      "tool_intent": "list all add-ons for all apps or for a specific app",
+      "expected_tool_key": "Heroku::list_addons"
+    },
+    {
+      "id": "st-clean-077",
+      "server_intent": "Heroku operations",
+      "tool_intent": "view application logs",
+      "expected_tool_key": "Heroku::get_app_logs"
+    },
+    {
+      "id": "st-clean-078",
+      "server_intent": "Hologres operations",
+      "tool_intent": "execute a DML (INSERT, UPDATE, DELETE) SQL query on the Hologres server",
+      "expected_tool_key": "Hologres::execute_dml_sql"
+    },
+    {
+      "id": "st-clean-079",
+      "server_intent": "Hologres operations",
+      "tool_intent": "collect table statistics",
+      "expected_tool_key": "Hologres::gather_table_statistics"
+    },
+    {
+      "id": "st-clean-080",
+      "server_intent": "Hyperbrowser operations",
+      "tool_intent": "complex browser tasks using Claude computer use",
+      "expected_tool_key": "Hyperbrowser::claude_computer_use_agent"
+    },
+    {
+      "id": "st-clean-081",
+      "server_intent": "Hyperbrowser operations",
+      "tool_intent": "fast, lightweight browser automation with the Browser Use agent",
+      "expected_tool_key": "Hyperbrowser::browser_use_agent"
+    },
+    {
+      "id": "st-clean-082",
+      "server_intent": "ForeverVM operations",
+      "tool_intent": "lists all machines, optionally filtered by tags",
+      "expected_tool_key": "ForeverVM::listMachines"
+    },
+    {
+      "id": "st-clean-083",
+      "server_intent": "ForeverVM operations",
+      "tool_intent": "connects to a new machine or an existing one by ID",
+      "expected_tool_key": "ForeverVM::repl"
+    },
+    {
+      "id": "st-clean-084",
+      "server_intent": "Inkeep operations",
+      "tool_intent": "retrieves product documentation about Inkeep",
+      "expected_tool_key": "Inkeep::search-product-content"
+    },
+    {
+      "id": "st-clean-085",
+      "server_intent": "Kagi Search operations",
+      "tool_intent": "performs a web search to find information based on the query provided",
+      "expected_tool_key": "Kagi Search::search"
+    },
+    {
+      "id": "st-clean-086",
+      "server_intent": "Kagi Search operations",
+      "tool_intent": "generates a summary of the content, such as a video, based on the URL provided",
+      "expected_tool_key": "Kagi Search::summarizer"
+    },
+    {
+      "id": "st-clean-087",
+      "server_intent": "Keboola operations",
+      "tool_intent": "gets detailed information about a specific table including its DB identifier and column information",
+      "expected_tool_key": "Keboola::get_table_detail"
+    },
+    {
+      "id": "st-clean-088",
+      "server_intent": "Keboola operations",
+      "tool_intent": "retrieves detailed information about a specific job, identified by the job_id, including its status, parameters, results, and any relevant metadata",
+      "expected_tool_key": "Keboola::get_job_detail"
+    },
+    {
+      "id": "st-clean-089",
+      "server_intent": "Lara Translate operations",
+      "tool_intent": "add a translation unit to memory",
+      "expected_tool_key": "Lara Translate::add_translation"
+    },
+    {
+      "id": "st-clean-090",
+      "server_intent": "Lara Translate operations",
+      "tool_intent": "delete a translation unit from memory",
+      "expected_tool_key": "Lara Translate::delete_translation"
+    },
+    {
+      "id": "st-clean-091",
+      "server_intent": "Logfire operations",
+      "tool_intent": "run custom SQL queries on your OpenTelemetry traces and metrics",
+      "expected_tool_key": "Logfire::arbitrary_query"
+    },
+    {
+      "id": "st-clean-092",
+      "server_intent": "Logfire operations",
+      "tool_intent": "get exception counts from traces grouped by file",
+      "expected_tool_key": "Logfire::find_exceptions"
+    },
+    {
+      "id": "st-clean-093",
+      "server_intent": "Langfuse Prompt Management operations",
+      "tool_intent": "list available prompts",
+      "expected_tool_key": "Langfuse Prompt Management::get-prompts"
+    },
+    {
+      "id": "st-clean-094",
+      "server_intent": "Langfuse Prompt Management operations",
+      "tool_intent": "retrieve and compile a specific prompt",
+      "expected_tool_key": "Langfuse Prompt Management::get-prompt"
+    },
+    {
+      "id": "st-clean-095",
+      "server_intent": "Lingo.dev operations",
+      "tool_intent": "stops the running MCP server",
+      "expected_tool_key": "Lingo.dev::stop-server"
+    },
+    {
+      "id": "st-clean-096",
+      "server_intent": "Lingo.dev operations",
+      "tool_intent": "lists all users registered with the MCP server",
+      "expected_tool_key": "Lingo.dev::list-users"
+    },
+    {
+      "id": "st-clean-097",
+      "server_intent": "MCP Toolbox for Databases operations",
+      "tool_intent": "search for hotels based on name",
+      "expected_tool_key": "MCP Toolbox for Databases::search-hotels-by-name"
+    },
+    {
+      "id": "st-clean-098",
+      "server_intent": "Meilisearch operations",
+      "tool_intent": "get database statistics",
+      "expected_tool_key": "Meilisearch::get-stats"
+    },
+    {
+      "id": "st-clean-099",
+      "server_intent": "Meilisearch operations",
+      "tool_intent": "list tasks with optional filters",
+      "expected_tool_key": "Meilisearch::get-tasks"
+    },
+    {
+      "id": "st-clean-100",
+      "server_intent": "Milvus operations",
+      "tool_intent": "query collection using filter expressions",
+      "expected_tool_key": "Milvus::milvus_query"
+    },
+    {
+      "id": "st-clean-101",
+      "server_intent": "Milvus operations",
+      "tool_intent": "create a new collection with specified schema",
+      "expected_tool_key": "Milvus::milvus_create_collection"
+    },
+    {
+      "id": "st-clean-102",
+      "server_intent": "Momento operations",
+      "tool_intent": "sets the value in cache with a given Time To Live (TTL) seconds",
+      "expected_tool_key": "Momento::set"
+    },
+    {
+      "id": "st-clean-103",
+      "server_intent": "Momento operations",
+      "tool_intent": "deletes a cache from your Momento account",
+      "expected_tool_key": "Momento::delete-cache"
+    },
+    {
+      "id": "st-clean-104",
+      "server_intent": "MongoDB operations",
+      "tool_intent": "add new documents",
+      "expected_tool_key": "MongoDB::insert"
+    },
+    {
+      "id": "st-clean-105",
+      "server_intent": "MongoDB operations",
+      "tool_intent": "modify documents",
+      "expected_tool_key": "MongoDB::update"
+    },
+    {
+      "id": "st-clean-106",
+      "server_intent": "MotherDuck operations",
+      "tool_intent": "execute a SQL query on the DuckDB or MotherDuck database",
+      "expected_tool_key": "MotherDuck::query"
+    },
+    {
+      "id": "st-clean-107",
+      "server_intent": "Neo4j operations",
+      "tool_intent": "create a relationship between two existing nodes",
+      "expected_tool_key": "Neo4j::create_relationship"
+    },
+    {
+      "id": "st-clean-108",
+      "server_intent": "Neo4j operations",
+      "tool_intent": "create a new node in the graph database",
+      "expected_tool_key": "Neo4j::create_node"
+    },
+    {
+      "id": "st-clean-109",
+      "server_intent": "Neon operations",
+      "tool_intent": "retrieves details about a specific branch, such as its name, ID, and parent branch",
+      "expected_tool_key": "Neon::describe_branch"
+    },
+    {
+      "id": "st-clean-110",
+      "server_intent": "Neon operations",
+      "tool_intent": "executes a series of SQL queries within a single transaction against a Neon database",
+      "expected_tool_key": "Neon::run_sql_transaction"
+    },
+    {
+      "id": "st-clean-111",
+      "server_intent": "Octagon operations",
+      "tool_intent": "research M&A and IPO transactions",
+      "expected_tool_key": "Octagon::octagon-deals-agent"
+    },
+    {
+      "id": "st-clean-112",
+      "server_intent": "Octagon operations",
+      "tool_intent": "research startup funding rounds and venture capital",
+      "expected_tool_key": "Octagon::octagon-funding-agent"
+    },
+    {
+      "id": "st-clean-113",
+      "server_intent": "Oxylabs operations",
+      "tool_intent": "uses Oxylabs Web Scraper API for general website scraping with support for JavaScript rendering, parsed structured data, and cleaned HTML in Markdown format",
+      "expected_tool_key": "Oxylabs::oxylabs_scraper"
+    },
+    {
+      "id": "st-clean-114",
+      "server_intent": "Oxylabs operations",
+      "tool_intent": "uses Oxylabs Web Unblocker for hard-to-access websites with support for JavaScript rendering and cleaned HTML, but does not return parsed data",
+      "expected_tool_key": "Oxylabs::oxylabs_web_unblocker"
+    },
+    {
+      "id": "st-clean-115",
+      "server_intent": "Perplexity operations",
+      "tool_intent": "engage in a conversation with the Sonar API for live web searches",
+      "expected_tool_key": "Perplexity::perplexity_ask"
+    },
+    {
+      "id": "st-clean-116",
+      "server_intent": "Pinecone operations",
+      "tool_intent": "lists all Pinecone indexes",
+      "expected_tool_key": "Pinecone::list-indexes"
+    },
+    {
+      "id": "st-clean-117",
+      "server_intent": "Pinecone operations",
+      "tool_intent": "get stats about the Pinecone index, including the number of records, dimensions, and namespaces",
+      "expected_tool_key": "Pinecone::pinecone-stats"
+    },
+    {
+      "id": "st-clean-118",
+      "server_intent": "Redis operations",
+      "tool_intent": "tools to store field-value pairs within a single key",
+      "expected_tool_key": "Redis::hash"
+    },
+    {
+      "id": "st-clean-119",
+      "server_intent": "Redis operations",
+      "tool_intent": "tools to add, remove and list set members",
+      "expected_tool_key": "Redis::set"
+    },
+    {
+      "id": "st-clean-120",
+      "server_intent": "Redis Cloud API operations",
+      "tool_intent": "list all Pro subscriptions in your account",
+      "expected_tool_key": "Redis Cloud API::get_pro_subscriptions"
+    },
+    {
+      "id": "st-clean-121",
+      "server_intent": "Redis Cloud API operations",
+      "tool_intent": "list available Essential subscription plans (paginated)",
+      "expected_tool_key": "Redis Cloud API::get_essentials_plans"
+    },
+    {
+      "id": "st-clean-122",
+      "server_intent": "Qdrant operations",
+      "tool_intent": "store some information in the Qdrant database",
+      "expected_tool_key": "Qdrant::qdrant-store"
+    },
+    {
+      "id": "st-clean-123",
+      "server_intent": "Qdrant operations",
+      "tool_intent": "retrieve relevant information from the Qdrant database",
+      "expected_tool_key": "Qdrant::qdrant-find"
+    },
+    {
+      "id": "st-clean-124",
+      "server_intent": "Ramp operations",
+      "tool_intent": "clears a table in the ephemeral database",
+      "expected_tool_key": "Ramp::clear_table"
+    },
+    {
+      "id": "st-clean-125",
+      "server_intent": "Ramp operations",
+      "tool_intent": "loads vendor bank accounts data",
+      "expected_tool_key": "Ramp::load_vendor_bank_accounts"
+    },
+    {
+      "id": "st-clean-126",
+      "server_intent": "Raygun operations",
+      "tool_intent": "update source map information",
+      "expected_tool_key": "Raygun::update_source_map"
+    },
+    {
+      "id": "st-clean-127",
+      "server_intent": "Raygun operations",
+      "tool_intent": "send a new team invitation",
+      "expected_tool_key": "Raygun::send_invitation"
+    },
+    {
+      "id": "st-clean-128",
+      "server_intent": "Rember operations",
+      "tool_intent": "creates flashcards with AI by taking a list of notes from Claude and generating a few flashcards for each note using the Rember API",
+      "expected_tool_key": "Rember::create_flashcards"
+    },
+    {
+      "id": "st-clean-129",
+      "server_intent": "Riza operations",
+      "tool_intent": "lists all available saved tools",
+      "expected_tool_key": "Riza::list_tools"
+    },
+    {
+      "id": "st-clean-130",
+      "server_intent": "Riza operations",
+      "tool_intent": "creates a new tool by writing code and saving it using the Riza Tools API",
+      "expected_tool_key": "Riza::create_tool"
+    },
+    {
+      "id": "st-clean-131",
+      "server_intent": "ScreenshotOne operations",
+      "tool_intent": "render a screenshot of a website and returns it as an image",
+      "expected_tool_key": "ScreenshotOne::render-website-screenshot"
+    },
+    {
+      "id": "st-clean-132",
+      "server_intent": "Semgrep operations",
+      "tool_intent": "fetches the latest semgrep rule JSON Schema",
+      "expected_tool_key": "Semgrep::semgrep_rule_schema"
+    },
+    {
+      "id": "st-clean-133",
+      "server_intent": "Semgrep operations",
+      "tool_intent": "return the list of languages Semgrep supports",
+      "expected_tool_key": "Semgrep::supported_languages"
+    },
+    {
+      "id": "st-clean-134",
+      "server_intent": "SingleStore operations",
+      "tool_intent": "get details about a specific job",
+      "expected_tool_key": "SingleStore::get_job_details"
+    },
+    {
+      "id": "st-clean-135",
+      "server_intent": "SingleStore operations",
+      "tool_intent": "execute SQL operations on a connected workspace",
+      "expected_tool_key": "SingleStore::execute_sql"
+    },
+    {
+      "id": "st-clean-136",
+      "server_intent": "StarRocks operations",
+      "tool_intent": "executes a SQL query, loads the results into a Pandas DataFrame, and generates a Plotly chart using a provided Python expression",
+      "expected_tool_key": "StarRocks::query_and_plotly_chart"
+    },
+    {
+      "id": "st-clean-137",
+      "server_intent": "StarRocks operations",
+      "tool_intent": "execute a SELECT query or other commands that return a ResultSet (e.g., SHOW, DESCRIBE)",
+      "expected_tool_key": "StarRocks::read_query"
+    },
+    {
+      "id": "st-clean-138",
+      "server_intent": "Stripe operations",
+      "tool_intent": "creates a new invoice in Stripe",
+      "expected_tool_key": "Stripe::createInvoice"
+    },
+    {
+      "id": "st-clean-139",
+      "server_intent": "Stripe operations",
+      "tool_intent": "lists all subscriptions in Stripe",
+      "expected_tool_key": "Stripe::listSubscriptions"
+    },
+    {
+      "id": "st-clean-140",
+      "server_intent": "Tavily operations",
+      "tool_intent": "performs real-time web searches with sophisticated filtering options and domain-specific search features",
+      "expected_tool_key": "Tavily::tavily-search"
+    },
+    {
+      "id": "st-clean-141",
+      "server_intent": "Tavily operations",
+      "tool_intent": "extracts intelligent data from web pages, such as main content, images, and metadata",
+      "expected_tool_key": "Tavily::tavily-extract"
+    },
+    {
+      "id": "st-clean-142",
+      "server_intent": "Thirdweb operations",
+      "tool_intent": "retrieves a list of tools for AI agents, which can be used with different frameworks like LangChain and OpenAI Agents",
+      "expected_tool_key": "Thirdweb::get_tools"
+    },
+    {
+      "id": "st-clean-143",
+      "server_intent": "Tinybird operations",
+      "tool_intent": "requests data from a Pipe Endpoint via an HTTP request",
+      "expected_tool_key": "Tinybird::request-pipe-data"
+    },
+    {
+      "id": "st-clean-144",
+      "server_intent": "Tinybird operations",
+      "tool_intent": "sends an event to a Tinybird Data Source",
+      "expected_tool_key": "Tinybird::save-event"
+    },
+    {
+      "id": "st-clean-145",
+      "server_intent": "Unstructured operations",
+      "tool_intent": "cancels a crawl job",
+      "expected_tool_key": "Unstructured::cancel_crawlhtml_job"
+    },
+    {
+      "id": "st-clean-146",
+      "server_intent": "Unstructured operations",
+      "tool_intent": "lists available destinations from the Unstructured API",
+      "expected_tool_key": "Unstructured::list_destinations"
+    },
+    {
+      "id": "st-clean-147",
+      "server_intent": "Vectorize operations",
+      "tool_intent": "generates a Private Deep Research from your pipeline",
+      "expected_tool_key": "Vectorize::deep-research"
+    },
+    {
+      "id": "st-clean-148",
+      "server_intent": "Vectorize operations",
+      "tool_intent": "performs vector search and retrieves documents",
+      "expected_tool_key": "Vectorize::retrieve"
+    },
+    {
+      "id": "st-clean-149",
+      "server_intent": "Verodat operations",
+      "tool_intent": "retrieve field definitions for a dataset",
+      "expected_tool_key": "Verodat::get-dataset-targetfields"
+    },
+    {
+      "id": "st-clean-150",
+      "server_intent": "Verodat operations",
+      "tool_intent": "create a new dataset with defined schema",
+      "expected_tool_key": "Verodat::create-dataset"
+    },
+    {
+      "id": "st-clean-151",
+      "server_intent": "Xero operations",
+      "tool_intent": "retrieve a Payroll Employee's leave records",
+      "expected_tool_key": "Xero::list-payroll-employee-leave"
+    },
+    {
+      "id": "st-clean-152",
+      "server_intent": "Xero operations",
+      "tool_intent": "retrieve a list of payments",
+      "expected_tool_key": "Xero::list-payments"
+    },
+    {
+      "id": "st-clean-153",
+      "server_intent": "Airbnb operations",
+      "tool_intent": "get detailed information about a specific Airbnb listing",
+      "expected_tool_key": "Airbnb::airbnb_listing_details"
+    },
+    {
+      "id": "st-clean-154",
+      "server_intent": "Airbnb operations",
+      "tool_intent": "search for Airbnb listings",
+      "expected_tool_key": "Airbnb::airbnb_search"
+    },
+    {
+      "id": "st-clean-155",
+      "server_intent": "AI Agent Marketplace Index operations",
+      "tool_intent": "general search of AI Agents for information, websites, content, and metric statistics of web traffic, etc",
+      "expected_tool_key": "AI Agent Marketplace Index::search_ai_agent"
+    },
+    {
+      "id": "st-clean-156",
+      "server_intent": "Airflow operations",
+      "tool_intent": "lists all XCom entries for a specific task instance",
+      "expected_tool_key": "Airflow::List XComs"
+    },
+    {
+      "id": "st-clean-157",
+      "server_intent": "Airflow operations",
+      "tool_intent": "gets the health status of the server",
+      "expected_tool_key": "Airflow::Get Health Status"
+    },
+    {
+      "id": "st-clean-158",
+      "server_intent": "Airtable operations",
+      "tool_intent": "lists records from a specified Airtable table",
+      "expected_tool_key": "Airtable::list_records"
+    },
+    {
+      "id": "st-clean-159",
+      "server_intent": "Airtable operations",
+      "tool_intent": "search for records containing specific text",
+      "expected_tool_key": "Airtable::search_records"
+    },
+    {
+      "id": "st-clean-160",
+      "server_intent": "Anki operations",
+      "tool_intent": "returns n number of cards currently due for review",
+      "expected_tool_key": "Anki::get_due_cards"
+    },
+    {
+      "id": "st-clean-161",
+      "server_intent": "Anki operations",
+      "tool_intent": "creates a new card in the Default Anki deck",
+      "expected_tool_key": "Anki::add_card"
+    },
+    {
+      "id": "st-clean-162",
+      "server_intent": "Any Chat Completions operations",
+      "tool_intent": "relays a question to a configured AI Chat Provider",
+      "expected_tool_key": "Any Chat Completions::chat"
+    },
+    {
+      "id": "st-clean-163",
+      "server_intent": "Apache Gravitino(incubating) operations",
+      "tool_intent": "get a list of catalogs with basic information",
+      "expected_tool_key": "Apache Gravitino(incubating)::get_list_of_catalogs"
+    },
+    {
+      "id": "st-clean-164",
+      "server_intent": "Apache Gravitino(incubating) operations",
+      "tool_intent": "get detailed table information by fully qualified name",
+      "expected_tool_key": "Apache Gravitino(incubating)::get_table_by_fqn"
+    },
+    {
+      "id": "st-clean-165",
+      "server_intent": "Apple Calendar operations",
+      "tool_intent": "creates calendar events based on natural language input",
+      "expected_tool_key": "Apple Calendar::Event Creation"
+    },
+    {
+      "id": "st-clean-166",
+      "server_intent": "Apple Calendar operations",
+      "tool_intent": "manages and provides information about available calendars",
+      "expected_tool_key": "Apple Calendar::Calendar Management"
+    },
+    {
+      "id": "st-clean-167",
+      "server_intent": "Aranet4 operations",
+      "tool_intent": "get recent data from the local database",
+      "expected_tool_key": "Aranet4::get_recent_data"
+    },
+    {
+      "id": "st-clean-168",
+      "server_intent": "Aranet4 operations",
+      "tool_intent": "set values in the configuration file",
+      "expected_tool_key": "Aranet4::set_configuration"
+    },
+    {
+      "id": "st-clean-169",
+      "server_intent": "ArangoDB operations",
+      "tool_intent": "create a new collection in the database",
+      "expected_tool_key": "ArangoDB::arango_create_collection"
+    },
+    {
+      "id": "st-clean-170",
+      "server_intent": "ArangoDB operations",
+      "tool_intent": "execute AQL queries",
+      "expected_tool_key": "ArangoDB::arango_query"
+    },
+    {
+      "id": "st-clean-171",
+      "server_intent": "Atlassian operations",
+      "tool_intent": "create a new page",
+      "expected_tool_key": "Atlassian::confluence_create_page"
+    },
+    {
+      "id": "st-clean-172",
+      "server_intent": "Atlassian operations",
+      "tool_intent": "create a new issue",
+      "expected_tool_key": "Atlassian::jira_create_issue"
+    },
+    {
+      "id": "st-clean-173",
+      "server_intent": "AWS Athena operations",
+      "tool_intent": "check the status of a query execution",
+      "expected_tool_key": "AWS Athena::get_status"
+    },
+    {
+      "id": "st-clean-174",
+      "server_intent": "AWS Athena operations",
+      "tool_intent": "list all saved (named) queries in Athena",
+      "expected_tool_key": "AWS Athena::list_saved_queries"
+    },
+    {
+      "id": "st-clean-175",
+      "server_intent": "AWS Cost Explorer operations",
+      "tool_intent": "delivers a comprehensive analysis of costs by region, service, and instance type",
+      "expected_tool_key": "AWS Cost Explorer::get_detailed_breakdown_by_day"
+    },
+    {
+      "id": "st-clean-176",
+      "server_intent": "AWS Cost Explorer operations",
+      "tool_intent": "delivers a per-day per-hour breakdown of model usage by region and users",
+      "expected_tool_key": "AWS Cost Explorer::get_bedrock_hourly_usage_stats"
+    },
+    {
+      "id": "st-clean-177",
+      "server_intent": "AWS Resources Operations operations",
+      "tool_intent": "execute a boto3 code snippet to query or modify AWS resources",
+      "expected_tool_key": "AWS Resources Operations::aws_resources_query_or_modify"
+    },
+    {
+      "id": "st-clean-178",
+      "server_intent": "AWS S3 operations",
+      "tool_intent": "returns a list of all buckets owned by the authenticated sender of the request",
+      "expected_tool_key": "AWS S3::ListBuckets"
+    },
+    {
+      "id": "st-clean-179",
+      "server_intent": "AWS S3 operations",
+      "tool_intent": "retrieves an object from Amazon S3",
+      "expected_tool_key": "AWS S3::GetObject"
+    },
+    {
+      "id": "st-clean-180",
+      "server_intent": "Azure ADX operations",
+      "tool_intent": "get the schema for a specific table",
+      "expected_tool_key": "Azure ADX::get_table_schema"
+    },
+    {
+      "id": "st-clean-181",
+      "server_intent": "Azure ADX operations",
+      "tool_intent": "list all tables in the configured database",
+      "expected_tool_key": "Azure ADX::list_tables"
+    },
+    {
+      "id": "st-clean-182",
+      "server_intent": "Azure DevOps operations",
+      "tool_intent": "access team iteration/sprint configurations",
+      "expected_tool_key": "Azure DevOps::Team Iterations"
+    },
+    {
+      "id": "st-clean-183",
+      "server_intent": "Azure DevOps operations",
+      "tool_intent": "retrieve the comment history for a work item",
+      "expected_tool_key": "Azure DevOps::View Comments"
+    },
+    {
+      "id": "st-clean-184",
+      "server_intent": "Baidu AI Search operations",
+      "tool_intent": "\u7ed3\u5408\u767e\u5ea6\u641c\u7d22\u7684\u641c\u7d22\u5f15\u64ce\u6280\u672f\u548cERNIE\u6a21\u578b\u7684\u8bed\u4e49\u7406\u89e3\u80fd\u529b\uff0c\u63d0\u4f9b\u66f4\u51c6\u786e\u7684\u641c\u7d22\u7ed3\u679c\u3002",
+      "expected_tool_key": "Baidu AI Search::RagWithBaiduSearchPro"
+    },
+    {
+      "id": "st-clean-185",
+      "server_intent": "Baidu AI Search operations",
+      "tool_intent": "\u7528\u4e8e\u8bbf\u95ee\u548c\u7ba1\u7406\u5728\u767e\u5ea6\u667a\u80fd\u4e91\u5343\u5e06AppBuilder\u7f51\u9875\u7aef\u53d1\u5e03\u7684AI\u539f\u751f\u5e94\u7528\uff0c\u652f\u6301\u521b\u5efa\u4f1a\u8bdd\u548c\u8fd0\u884c\u5e94\u7528\u3002",
+      "expected_tool_key": "Baidu AI Search::AppBuilderClient"
+    },
+    {
+      "id": "st-clean-186",
+      "server_intent": "Base Free USDC Transfer operations",
+      "tool_intent": "analyzes the value of the purchased items and schedules a USDC transfer to the recipient via the Base chain",
+      "expected_tool_key": "Base Free USDC Transfer::tranfer-usdc"
+    },
+    {
+      "id": "st-clean-187",
+      "server_intent": "Base Free USDC Transfer operations",
+      "tool_intent": "creates a new Coinbase MPC wallet address",
+      "expected_tool_key": "Base Free USDC Transfer::create_coinbase_mpc_wallet"
+    },
+    {
+      "id": "st-clean-188",
+      "server_intent": "Basic Memory operations",
+      "tool_intent": "read notes by title or permalink",
+      "expected_tool_key": "Basic Memory::read_note"
+    },
+    {
+      "id": "st-clean-189",
+      "server_intent": "Basic Memory operations",
+      "tool_intent": "create or update notes in the knowledge base",
+      "expected_tool_key": "Basic Memory::write_note"
+    },
+    {
+      "id": "st-clean-190",
+      "server_intent": "Calculator operations",
+      "tool_intent": "calculates/evaluates the given expression",
+      "expected_tool_key": "Calculator::calculate"
+    },
+    {
+      "id": "st-clean-191",
+      "server_intent": "CFBD API operations",
+      "tool_intent": "retrieve game data",
+      "expected_tool_key": "CFBD API::get-games"
+    },
+    {
+      "id": "st-clean-192",
+      "server_intent": "CFBD API operations",
+      "tool_intent": "query play-by-play data",
+      "expected_tool_key": "CFBD API::get-plays"
+    },
+    {
+      "id": "st-clean-193",
+      "server_intent": "ChatSum operations",
+      "tool_intent": "query chat messages with given parameters and summarize chat messages based on the query prompt",
+      "expected_tool_key": "ChatSum::query_chat_messages"
+    },
+    {
+      "id": "st-clean-194",
+      "server_intent": "Chess.com operations",
+      "tool_intent": "get a player's profile from Chess.com",
+      "expected_tool_key": "Chess.com::get_player_profile"
+    },
+    {
+      "id": "st-clean-195",
+      "server_intent": "Chess.com operations",
+      "tool_intent": "get a player's stats from Chess.com",
+      "expected_tool_key": "Chess.com::get_player_stats"
+    },
+    {
+      "id": "st-clean-196",
+      "server_intent": "ClickUp operations",
+      "tool_intent": "list document pages",
+      "expected_tool_key": "ClickUp::list_document_pages"
+    },
+    {
+      "id": "st-clean-197",
+      "server_intent": "ClickUp operations",
+      "tool_intent": "modify task",
+      "expected_tool_key": "ClickUp::update_task"
+    },
+    {
+      "id": "st-clean-198",
+      "server_intent": "Cloudinary operations",
+      "tool_intent": "upload images and videos to Cloudinary",
+      "expected_tool_key": "Cloudinary::upload"
+    },
+    {
+      "id": "st-clean-199",
+      "server_intent": "code-executor operations",
+      "tool_intent": "executes Python code in the configured environment",
+      "expected_tool_key": "code-executor::execute_code"
+    },
+    {
+      "id": "st-clean-200",
+      "server_intent": "code-executor operations",
+      "tool_intent": "gets the current environment configuration",
+      "expected_tool_key": "code-executor::get_environment_config"
+    },
+    {
+      "id": "st-clean-201",
+      "server_intent": "code-sandbox-mcp operations",
+      "tool_intent": "write a file to the sandboxed filesystem",
+      "expected_tool_key": "code-sandbox-mcp::write_file"
+    },
+    {
+      "id": "st-clean-202",
+      "server_intent": "code-sandbox-mcp operations",
+      "tool_intent": "initialize a new compute environment for code execution",
+      "expected_tool_key": "code-sandbox-mcp::sandbox_initialize"
+    },
+    {
+      "id": "st-clean-203",
+      "server_intent": "consul-mcp operations",
+      "tool_intent": "creates prepared queries for efficient service discovery",
+      "expected_tool_key": "consul-mcp::Create prepared queries"
+    },
+    {
+      "id": "st-clean-204",
+      "server_intent": "consul-mcp operations",
+      "tool_intent": "retrieves health check information for specific services",
+      "expected_tool_key": "consul-mcp::Get health checks for services"
+    },
+    {
+      "id": "st-clean-205",
+      "server_intent": "cognee-mcp operations",
+      "tool_intent": "generates a knowledge graph from the added data",
+      "expected_tool_key": "cognee-mcp::cognify"
+    },
+    {
+      "id": "st-clean-206",
+      "server_intent": "cognee-mcp operations",
+      "tool_intent": "queries the knowledge graph with a given search term",
+      "expected_tool_key": "cognee-mcp::search"
+    },
+    {
+      "id": "st-clean-207",
+      "server_intent": "coin_api_mcp operations",
+      "tool_intent": "fetches a paginated list of all active cryptocurrencies with the latest market data",
+      "expected_tool_key": "coin_api_mcp::listing-coins"
+    },
+    {
+      "id": "st-clean-208",
+      "server_intent": "coin_api_mcp operations",
+      "tool_intent": "fetches the latest market quotes for one or more cryptocurrencies",
+      "expected_tool_key": "coin_api_mcp::get-coin-quotes"
+    },
+    {
+      "id": "st-clean-209",
+      "server_intent": "CoinMarketCap operations",
+      "tool_intent": "get latest cryptocurrency posts",
+      "expected_tool_key": "CoinMarketCap::contentPostsLatest"
+    },
+    {
+      "id": "st-clean-210",
+      "server_intent": "CoinMarketCap operations",
+      "tool_intent": "get most visited cryptocurrencies",
+      "expected_tool_key": "CoinMarketCap::cryptoTrendingMostVisited"
+    },
+    {
+      "id": "st-clean-211",
+      "server_intent": "Computer-Use - Remote MacOS Use operations",
+      "tool_intent": "perform a mouse drag operation from start point and drop to end point on a remote macOS machine, with automatic coordinate scaling",
+      "expected_tool_key": "Computer-Use - Remote MacOS Use::remote_macos_mouse_drag_n_drop"
+    },
+    {
+      "id": "st-clean-212",
+      "server_intent": "Computer-Use - Remote MacOS Use operations",
+      "tool_intent": "send keyboard input to a remote macOS machine",
+      "expected_tool_key": "Computer-Use - Remote MacOS Use::remote_macos_send_keys"
+    },
+    {
+      "id": "st-clean-213",
+      "server_intent": "Contentful-mcp operations",
+      "tool_intent": "update content type",
+      "expected_tool_key": "Contentful-mcp::update_content_type"
+    },
+    {
+      "id": "st-clean-214",
+      "server_intent": "Contentful-mcp operations",
+      "tool_intent": "publish assets to delivery API",
+      "expected_tool_key": "Contentful-mcp::publish_asset"
+    },
+    {
+      "id": "st-clean-215",
+      "server_intent": "crypto-feargreed-mcp operations",
+      "tool_intent": "fetches historical index values for a specified number of days",
+      "expected_tool_key": "crypto-feargreed-mcp::get_historical_fng_tool"
+    },
+    {
+      "id": "st-clean-216",
+      "server_intent": "crypto-feargreed-mcp operations",
+      "tool_intent": "retrieves the latest Fear & Greed Index value and classification",
+      "expected_tool_key": "crypto-feargreed-mcp::get_current_fng_tool"
+    },
+    {
+      "id": "st-clean-217",
+      "server_intent": "cryptopanic-mcp-server operations",
+      "tool_intent": "fetches cryptocurrency news, analysis, or videos from CryptoPanic",
+      "expected_tool_key": "cryptopanic-mcp-server::get_crypto_news"
+    },
+    {
+      "id": "st-clean-218",
+      "server_intent": "Databricks operations",
+      "tool_intent": "execute SQL queries on your Databricks SQL warehouse",
+      "expected_tool_key": "Databricks::run_sql_query"
+    },
+    {
+      "id": "st-clean-219",
+      "server_intent": "Databricks operations",
+      "tool_intent": "get the status of a specific Databricks job by ID",
+      "expected_tool_key": "Databricks::get_job_status"
+    },
+    {
+      "id": "st-clean-220",
+      "server_intent": "Datadog operations",
+      "tool_intent": "fetch events within a time range",
+      "expected_tool_key": "Datadog::get-events"
+    },
+    {
+      "id": "st-clean-221",
+      "server_intent": "Datadog operations",
+      "tool_intent": "get metadata for a specific metric",
+      "expected_tool_key": "Datadog::get-metric-metadata"
+    },
+    {
+      "id": "st-clean-222",
+      "server_intent": "Data Exploration operations",
+      "tool_intent": "executes a Python script",
+      "expected_tool_key": "Data Exploration::run-script"
+    },
+    {
+      "id": "st-clean-223",
+      "server_intent": "Data Exploration operations",
+      "tool_intent": "loads a CSV file into a DataFrame",
+      "expected_tool_key": "Data Exploration::load-csv"
+    },
+    {
+      "id": "st-clean-224",
+      "server_intent": "DaVinci Resolve operations",
+      "tool_intent": "imports a media file into the media pool",
+      "expected_tool_key": "DaVinci Resolve::import_media_file"
+    },
+    {
+      "id": "st-clean-225",
+      "server_intent": "DaVinci Resolve operations",
+      "tool_intent": "gets the current page (e.g., Edit, Color, Fusion) in DaVinci Resolve",
+      "expected_tool_key": "DaVinci Resolve::get_current_page"
+    },
+    {
+      "id": "st-clean-226",
+      "server_intent": "Dataset Viewer operations",
+      "tool_intent": "get detailed information about a dataset",
+      "expected_tool_key": "Dataset Viewer::get_info"
+    },
+    {
+      "id": "st-clean-227",
+      "server_intent": "Dataset Viewer operations",
+      "tool_intent": "check if a dataset exists and is accessible",
+      "expected_tool_key": "Dataset Viewer::validate"
+    },
+    {
+      "id": "st-clean-228",
+      "server_intent": "DBHub operations",
+      "tool_intent": "explains database elements such as tables, indexes, and procedures",
+      "expected_tool_key": "DBHub::explain_db"
+    },
+    {
+      "id": "st-clean-229",
+      "server_intent": "DBHub operations",
+      "tool_intent": "generates SQL statements based on the provided context",
+      "expected_tool_key": "DBHub::generate_sql"
+    },
+    {
+      "id": "st-clean-230",
+      "server_intent": "Deepseek_R1 operations",
+      "tool_intent": "generates advanced text using the Deepseek R1 model with configurable parameters",
+      "expected_tool_key": "Deepseek_R1::deepseek_r1"
+    },
+    {
+      "id": "st-clean-231",
+      "server_intent": "deepseek-thinker-mcp operations",
+      "tool_intent": "perform reasoning using the Deepseek model",
+      "expected_tool_key": "deepseek-thinker-mcp::get-deepseek-thinker"
+    },
+    {
+      "id": "st-clean-232",
+      "server_intent": "Descope operations",
+      "tool_intent": "retrieves up to 10 user records from your Descope project",
+      "expected_tool_key": "Descope::search-users"
+    },
+    {
+      "id": "st-clean-233",
+      "server_intent": "Descope operations",
+      "tool_intent": "retrieves up to 10 audit log entries from your Descope project",
+      "expected_tool_key": "Descope::search-audits"
+    },
+    {
+      "id": "st-clean-234",
+      "server_intent": "DevDb operations",
+      "tool_intent": "allows copying of MCP settings to integrate with IDEs and AI-tools for database access",
+      "expected_tool_key": "DevDb::MCP Configuration"
+    },
+    {
+      "id": "st-clean-235",
+      "server_intent": "DevDb operations",
+      "tool_intent": "enables opening specific database tables directly from external applications or links",
+      "expected_tool_key": "DevDb::URI Handler"
+    },
+    {
+      "id": "st-clean-236",
+      "server_intent": "DevRev operations",
+      "tool_intent": "search for information using the DevRev search API with the provided query and namespace",
+      "expected_tool_key": "DevRev::search"
+    },
+    {
+      "id": "st-clean-237",
+      "server_intent": "DevRev operations",
+      "tool_intent": "get all information about a DevRev object using its ID",
+      "expected_tool_key": "DevRev::get_object"
+    },
+    {
+      "id": "st-clean-238",
+      "server_intent": "Dicom operations",
+      "tool_intent": "locate series within a specific study using modality, series number/description, or Series UID",
+      "expected_tool_key": "Dicom::query_series"
+    },
+    {
+      "id": "st-clean-239",
+      "server_intent": "Dicom operations",
+      "tool_intent": "retrieve a specific DICOM instance containing an encapsulated PDF and extract its text content",
+      "expected_tool_key": "Dicom::extract_pdf_text_from_dicom"
+    },
+    {
+      "id": "st-clean-240",
+      "server_intent": "Discord operations",
+      "tool_intent": "delete a channel",
+      "expected_tool_key": "Discord::delete_channel"
+    },
+    {
+      "id": "st-clean-241",
+      "server_intent": "Discord operations",
+      "tool_intent": "send a private message to a specific user",
+      "expected_tool_key": "Discord::send_private_message"
+    },
+    {
+      "id": "st-clean-242",
+      "server_intent": "Discourse operations",
+      "tool_intent": "searches posts on a Discourse forum",
+      "expected_tool_key": "Discourse::search_posts"
+    },
+    {
+      "id": "st-clean-243",
+      "server_intent": "Docker operations",
+      "tool_intent": "creates a new Docker network",
+      "expected_tool_key": "Docker::create_network"
+    },
+    {
+      "id": "st-clean-244",
+      "server_intent": "Docker operations",
+      "tool_intent": "creates a new Docker volume",
+      "expected_tool_key": "Docker::create_volume"
+    },
+    {
+      "id": "st-clean-245",
+      "server_intent": "DPLP operations",
+      "tool_intent": "search DBLP for publications using boolean queries",
+      "expected_tool_key": "DPLP::search"
+    },
+    {
+      "id": "st-clean-246",
+      "server_intent": "DPLP operations",
+      "tool_intent": "export BibTeX entries directly from DBLP to a local file",
+      "expected_tool_key": "DPLP::export_bibtex"
+    },
+    {
+      "id": "st-clean-247",
+      "server_intent": "dune-analytics-mcp operations",
+      "tool_intent": "retrieves the latest results of a specified Dune query",
+      "expected_tool_key": "dune-analytics-mcp::get_latest_result"
+    },
+    {
+      "id": "st-clean-248",
+      "server_intent": "dune-analytics-mcp operations",
+      "tool_intent": "executes a Dune query and returns the results",
+      "expected_tool_key": "dune-analytics-mcp::run_query"
+    },
+    {
+      "id": "st-clean-249",
+      "server_intent": "EdgeOne Pages MCP operations",
+      "tool_intent": "deploys HTML content to EdgeOne Pages and returns a publicly accessible URL",
+      "expected_tool_key": "EdgeOne Pages MCP::deploy-html"
+    },
+    {
+      "id": "st-clean-250",
+      "server_intent": "ElevenLabs operations",
+      "tool_intent": "generate audio from a structured script with multiple voices and actors",
+      "expected_tool_key": "ElevenLabs::generate_audio_script"
+    },
+    {
+      "id": "st-clean-251",
+      "server_intent": "ElevenLabs operations",
+      "tool_intent": "get the audio file by its ID",
+      "expected_tool_key": "ElevenLabs::get_audio_file"
+    },
+    {
+      "id": "st-clean-252",
+      "server_intent": "EVM MCP Server operations",
+      "tool_intent": "read smart contract state",
+      "expected_tool_key": "EVM MCP Server::read-contract"
+    },
+    {
+      "id": "st-clean-253",
+      "server_intent": "EVM MCP Server operations",
+      "tool_intent": "resolve ENS name to address",
+      "expected_tool_key": "EVM MCP Server::resolve-ens"
+    },
+    {
+      "id": "st-clean-254",
+      "server_intent": "Everything Search operations",
+      "tool_intent": "search for files and folders across the system",
+      "expected_tool_key": "Everything Search::search"
+    },
+    {
+      "id": "st-clean-255",
+      "server_intent": "Fantasy PL operations",
+      "tool_intent": "compare multiple players across various metrics",
+      "expected_tool_key": "Fantasy PL::compare_players"
+    },
+    {
+      "id": "st-clean-256",
+      "server_intent": "Fantasy PL operations",
+      "tool_intent": "get precise information about current, previous, and next gameweeks",
+      "expected_tool_key": "Fantasy PL::get_gameweek_status"
+    },
+    {
+      "id": "st-clean-257",
+      "server_intent": "Fetch operations",
+      "tool_intent": "fetch a JSON file from a URL",
+      "expected_tool_key": "Fetch::fetch_json"
+    },
+    {
+      "id": "st-clean-258",
+      "server_intent": "Fetch operations",
+      "tool_intent": "fetch a website and return the content as Markdown",
+      "expected_tool_key": "Fetch::fetch_markdown"
+    },
+    {
+      "id": "st-clean-259",
+      "server_intent": "Firebase operations",
+      "tool_intent": "upload files from text, base64 content, or local file paths",
+      "expected_tool_key": "Firebase::storage_upload"
+    },
+    {
+      "id": "st-clean-260",
+      "server_intent": "Firebase operations",
+      "tool_intent": "delete a document",
+      "expected_tool_key": "Firebase::firestore_delete_document"
+    },
+    {
+      "id": "st-clean-261",
+      "server_intent": "FireCrawl operations",
+      "tool_intent": "start an asynchronous crawl with advanced options",
+      "expected_tool_key": "FireCrawl::firecrawl_crawl"
+    },
+    {
+      "id": "st-clean-262",
+      "server_intent": "FireCrawl operations",
+      "tool_intent": "conduct deep web research on a query using intelligent crawling, search, and LLM analysis",
+      "expected_tool_key": "FireCrawl::firecrawl_deep_research"
+    },
+    {
+      "id": "st-clean-263",
+      "server_intent": "Ghost operations",
+      "tool_intent": "remove a tag",
+      "expected_tool_key": "Ghost::Delete Tag"
+    },
+    {
+      "id": "st-clean-264",
+      "server_intent": "Ghost operations",
+      "tool_intent": "update offer details",
+      "expected_tool_key": "Ghost::Edit Offer"
+    },
+    {
+      "id": "st-clean-265",
+      "server_intent": "Git operations",
+      "tool_intent": "lists all available Git repositories",
+      "expected_tool_key": "Git::git_list_repositories"
+    },
+    {
+      "id": "st-clean-266",
+      "server_intent": "Git operations",
+      "tool_intent": "creates a new branch",
+      "expected_tool_key": "Git::git_create_branch"
+    },
+    {
+      "id": "st-clean-267",
+      "server_intent": "Github Actions operations",
+      "tool_intent": "re-run a workflow run",
+      "expected_tool_key": "Github Actions::rerun_workflow"
+    },
+    {
+      "id": "st-clean-268",
+      "server_intent": "Github Actions operations",
+      "tool_intent": "cancel a workflow run",
+      "expected_tool_key": "Github Actions::cancel_workflow_run"
+    },
+    {
+      "id": "st-clean-269",
+      "server_intent": "Glean operations",
+      "tool_intent": "provides a list of search results given a query",
+      "expected_tool_key": "Glean::Search"
+    },
+    {
+      "id": "st-clean-270",
+      "server_intent": "Glean operations",
+      "tool_intent": "enables Q&A interactions with a chatbot",
+      "expected_tool_key": "Glean::Chat"
+    },
+    {
+      "id": "st-clean-271",
+      "server_intent": "Gmail operations",
+      "tool_intent": "adds or removes labels from emails (move to different folders, archive, etc.)",
+      "expected_tool_key": "Gmail::modify_email"
+    },
+    {
+      "id": "st-clean-272",
+      "server_intent": "Gmail operations",
+      "tool_intent": "searches for emails using Gmail search syntax",
+      "expected_tool_key": "Gmail::search_emails"
+    },
+    {
+      "id": "st-clean-273",
+      "server_intent": "Gmail Headless operations",
+      "tool_intent": "refreshes the access token using the refresh token, client ID, and client secret",
+      "expected_tool_key": "Gmail Headless::gmail_refresh_token"
+    },
+    {
+      "id": "st-clean-274",
+      "server_intent": "Gmail Headless operations",
+      "tool_intent": "retrieves the full content of an email in chunks of 1k characters",
+      "expected_tool_key": "Gmail Headless::get_full_email_body_content"
+    },
+    {
+      "id": "st-clean-275",
+      "server_intent": "GOAT operations",
+      "tool_intent": "enables interaction with SPL tokens",
+      "expected_tool_key": "GOAT::Interact with SPL tokens"
+    },
+    {
+      "id": "st-clean-276",
+      "server_intent": "GOAT operations",
+      "tool_intent": "enables voting on governance proposals on Mode",
+      "expected_tool_key": "GOAT::Vote on a governance proposal on Mode"
+    },
+    {
+      "id": "st-clean-277",
+      "server_intent": "Godot operations",
+      "tool_intent": "open the Godot editor for a specific project",
+      "expected_tool_key": "Godot::launch_editor"
+    },
+    {
+      "id": "st-clean-278",
+      "server_intent": "Godot operations",
+      "tool_intent": "save scenes with options for creating variants",
+      "expected_tool_key": "Godot::save_scene"
+    },
+    {
+      "id": "st-clean-279",
+      "server_intent": "Golang Filesystem Server operations",
+      "tool_intent": "move or rename files and directories",
+      "expected_tool_key": "Golang Filesystem Server::move_file"
+    },
+    {
+      "id": "st-clean-280",
+      "server_intent": "Golang Filesystem Server operations",
+      "tool_intent": "read complete contents of a file",
+      "expected_tool_key": "Golang Filesystem Server::read_file"
+    },
+    {
+      "id": "st-clean-281",
+      "server_intent": "Goodnews operations",
+      "tool_intent": "fetches and returns a list of good, positive, and uplifting news articles",
+      "expected_tool_key": "Goodnews::fetch_list_of_goodnews"
+    },
+    {
+      "id": "st-clean-282",
+      "server_intent": "Google Calendar operations",
+      "tool_intent": "find available time slots in the calendar",
+      "expected_tool_key": "Google Calendar::find_free_time"
+    },
+    {
+      "id": "st-clean-283",
+      "server_intent": "Google Calendar operations",
+      "tool_intent": "delete a calendar event",
+      "expected_tool_key": "Google Calendar::delete_event"
+    },
+    {
+      "id": "st-clean-284",
+      "server_intent": "Google Custom Search operations",
+      "tool_intent": "perform web searches using Google Custom Search API",
+      "expected_tool_key": "Google Custom Search::search"
+    },
+    {
+      "id": "st-clean-285",
+      "server_intent": "Google Custom Search operations",
+      "tool_intent": "extract content from any webpage",
+      "expected_tool_key": "Google Custom Search::read_webpage"
+    },
+    {
+      "id": "st-clean-286",
+      "server_intent": "Google Sheets operations",
+      "tool_intent": "fetches metadata (title, sheet IDs, grid properties) for a spreadsheet",
+      "expected_tool_key": "Google Sheets::spreadsheetInfo"
+    },
+    {
+      "id": "st-clean-287",
+      "server_intent": "Google Sheets operations",
+      "tool_intent": "reads data from a range in a sheet",
+      "expected_tool_key": "Google Sheets::get_sheet_data"
+    },
+    {
+      "id": "st-clean-288",
+      "server_intent": "Google Tasks operations",
+      "tool_intent": "list all tasks in Google Tasks",
+      "expected_tool_key": "Google Tasks::list"
+    },
+    {
+      "id": "st-clean-289",
+      "server_intent": "Google Tasks operations",
+      "tool_intent": "search for tasks in Google Tasks",
+      "expected_tool_key": "Google Tasks::search"
+    },
+    {
+      "id": "st-clean-290",
+      "server_intent": "Google Vertex AI Search operations",
+      "tool_intent": "searches documents using Vertex AI Search",
+      "expected_tool_key": "Google Vertex AI Search::search"
+    },
+    {
+      "id": "st-clean-291",
+      "server_intent": "GraphQL Schema operations",
+      "tool_intent": "gets detailed definition for a specific mutation field in SDL format",
+      "expected_tool_key": "GraphQL Schema::get-mutation-field"
+    },
+    {
+      "id": "st-clean-292",
+      "server_intent": "GraphQL Schema operations",
+      "tool_intent": "lists all types defined in the GraphQL schema (excluding internal types)",
+      "expected_tool_key": "GraphQL Schema::list-types"
+    },
+    {
+      "id": "st-clean-293",
+      "server_intent": "HDW LinkedIn operations",
+      "tool_intent": "retrieve detailed profile information about a LinkedIn user",
+      "expected_tool_key": "HDW LinkedIn::get_linkedin_profile"
+    },
+    {
+      "id": "st-clean-294",
+      "server_intent": "HDW LinkedIn operations",
+      "tool_intent": "retrieve a list of LinkedIn user connections",
+      "expected_tool_key": "HDW LinkedIn::get_linkedin_user_connections"
+    },
+    {
+      "id": "st-clean-295",
+      "server_intent": "Heurist Mesh Agent operations",
+      "tool_intent": "get current trending tokens on Twitter",
+      "expected_tool_key": "Heurist Mesh Agent::get_trending_tokens"
+    },
+    {
+      "id": "st-clean-296",
+      "server_intent": "Heurist Mesh Agent operations",
+      "tool_intent": "search for mentions of specific tokens or topics on Twitter",
+      "expected_tool_key": "Heurist Mesh Agent::search_mentions"
+    },
+    {
+      "id": "st-clean-297",
+      "server_intent": "Holaspirit operations",
+      "tool_intent": "get details of a specific meeting",
+      "expected_tool_key": "Holaspirit::holaspirit_get_meeting"
+    },
+    {
+      "id": "st-clean-298",
+      "server_intent": "Holaspirit operations",
+      "tool_intent": "list all tasks in the organization",
+      "expected_tool_key": "Holaspirit::holaspirit_list_tasks"
+    },
+    {
+      "id": "st-clean-299",
+      "server_intent": "Home Assistant operations",
+      "tool_intent": "manages HACS packages",
+      "expected_tool_key": "Home Assistant::package"
+    },
+    {
+      "id": "st-clean-300",
+      "server_intent": "Home Assistant operations",
+      "tool_intent": "call any Home Assistant service",
+      "expected_tool_key": "Home Assistant::call_service_tool"
+    },
+    {
+      "id": "st-clean-301",
+      "server_intent": "HubSpot operations",
+      "tool_intent": "retrieve recent conversation threads with messages",
+      "expected_tool_key": "HubSpot::hubspot_get_recent_conversations"
+    },
+    {
+      "id": "st-clean-302",
+      "server_intent": "HubSpot operations",
+      "tool_intent": "retrieve most recently active contacts",
+      "expected_tool_key": "HubSpot::hubspot_get_active_contacts"
+    },
+    {
+      "id": "st-clean-303",
+      "server_intent": "HuggingFace Spaces operations",
+      "tool_intent": "transcribes audio using the `hf-audio/whisper-large-v3-turbo` space",
+      "expected_tool_key": "HuggingFace Spaces::use whisper-large-v3-turbo"
+    },
+    {
+      "id": "st-clean-304",
+      "server_intent": "HuggingFace Spaces operations",
+      "tool_intent": "performs vision tasks using the `DawnC/PawMatchAI` space, such as finding matches in images",
+      "expected_tool_key": "HuggingFace Spaces::use PawMatchAI"
+    },
+    {
+      "id": "st-clean-305",
+      "server_intent": "Hyperliquid operations",
+      "tool_intent": "get historical candlestick data for any token",
+      "expected_tool_key": "Hyperliquid::get_candle_snapshot"
+    },
+    {
+      "id": "st-clean-306",
+      "server_intent": "Hyperliquid operations",
+      "tool_intent": "access the L2 order book for any token",
+      "expected_tool_key": "Hyperliquid::get_l2_book"
+    },
+    {
+      "id": "st-clean-307",
+      "server_intent": "Image Generation operations",
+      "tool_intent": "generates images using the Flux model based on text prompts",
+      "expected_tool_key": "Image Generation::generate_image"
+    },
+    {
+      "id": "st-clean-308",
+      "server_intent": "InfluxDB operations",
+      "tool_intent": "create a new bucket",
+      "expected_tool_key": "InfluxDB::create-bucket"
+    },
+    {
+      "id": "st-clean-309",
+      "server_intent": "InfluxDB operations",
+      "tool_intent": "write time-series data in line protocol format",
+      "expected_tool_key": "InfluxDB::write-data"
+    },
+    {
+      "id": "st-clean-310",
+      "server_intent": "Inoyu operations",
+      "tool_intent": "retrieve a specific profile by ID",
+      "expected_tool_key": "Inoyu::get_profile"
+    },
+    {
+      "id": "st-clean-311",
+      "server_intent": "Inoyu operations",
+      "tool_intent": "search for profiles using a query string and optional limit/offset parameters",
+      "expected_tool_key": "Inoyu::search_profiles"
+    },
+    {
+      "id": "st-clean-312",
+      "server_intent": "Intercom operations",
+      "tool_intent": "finds conversations for a specific customer",
+      "expected_tool_key": "Intercom::search_conversations_by_customer"
+    },
+    {
+      "id": "st-clean-313",
+      "server_intent": "Intercom operations",
+      "tool_intent": "retrieves tickets by their status",
+      "expected_tool_key": "Intercom::search_tickets_by_status"
+    },
+    {
+      "id": "st-clean-314",
+      "server_intent": "iOS Simulator operations",
+      "tool_intent": "processes a natural language instruction and performs the corresponding action on the iOS simulator",
+      "expected_tool_key": "iOS Simulator::processInstruction"
+    },
+    {
+      "id": "st-clean-315",
+      "server_intent": "iTerm MCP operations",
+      "tool_intent": "reads the requested number of lines from the active iTerm terminal",
+      "expected_tool_key": "iTerm MCP::read_terminal_output"
+    },
+    {
+      "id": "st-clean-316",
+      "server_intent": "iTerm MCP operations",
+      "tool_intent": "sends a control character to the active iTerm terminal",
+      "expected_tool_key": "iTerm MCP::send_control_character"
+    },
+    {
+      "id": "st-clean-317",
+      "server_intent": "JDBC operations",
+      "tool_intent": "a server for performing web searches optimized for use by a large language model through the Wolfram Alpha LLM API",
+      "expected_tool_key": "JDBC::wolfram"
+    },
+    {
+      "id": "st-clean-318",
+      "server_intent": "JDBC operations",
+      "tool_intent": "a server for storing and retrieving data from a database via a JDBC URL",
+      "expected_tool_key": "JDBC::jdbc"
+    },
+    {
+      "id": "st-clean-319",
+      "server_intent": "JSON operations",
+      "tool_intent": "query JSON data using JSONPath syntax with extended operations",
+      "expected_tool_key": "JSON::query"
+    },
+    {
+      "id": "st-clean-320",
+      "server_intent": "JSON operations",
+      "tool_intent": "filter JSON data using conditions",
+      "expected_tool_key": "JSON::filter"
+    },
+    {
+      "id": "st-clean-321",
+      "server_intent": "KiCad MCP operations",
+      "tool_intent": "launches KiCad with a specific project",
+      "expected_tool_key": "KiCad MCP::open_project"
+    },
+    {
+      "id": "st-clean-322",
+      "server_intent": "KiCad MCP operations",
+      "tool_intent": "runs design rule checks on a specified PCB project and compares results",
+      "expected_tool_key": "KiCad MCP::run_drc"
+    },
+    {
+      "id": "st-clean-323",
+      "server_intent": "Keycloak MCP operations",
+      "tool_intent": "deletes a user from a specified realm",
+      "expected_tool_key": "Keycloak MCP::delete-user"
+    },
+    {
+      "id": "st-clean-324",
+      "server_intent": "Keycloak MCP operations",
+      "tool_intent": "lists all available realms",
+      "expected_tool_key": "Keycloak MCP::list-realms"
+    },
+    {
+      "id": "st-clean-325",
+      "server_intent": "Kong Konnect operations",
+      "tool_intent": "list all consumers associated with a control plane",
+      "expected_tool_key": "Kong Konnect::List Consumers"
+    },
+    {
+      "id": "st-clean-326",
+      "server_intent": "Kong Konnect operations",
+      "tool_intent": "list all services associated with a control plane",
+      "expected_tool_key": "Kong Konnect::List Services"
+    },
+    {
+      "id": "st-clean-327",
+      "server_intent": "Kubernetes and OpenShift operations",
+      "tool_intent": "list Kubernetes resources and objects in the current cluster",
+      "expected_tool_key": "Kubernetes and OpenShift::resources_list"
+    },
+    {
+      "id": "st-clean-328",
+      "server_intent": "Kubernetes and OpenShift operations",
+      "tool_intent": "get a Kubernetes Pod in the current or provided namespace with the provided name",
+      "expected_tool_key": "Kubernetes and OpenShift::pods_get"
+    },
+    {
+      "id": "st-clean-329",
+      "server_intent": "Langflow-DOC-QA-SERVER operations",
+      "tool_intent": "query the document Q&A system",
+      "expected_tool_key": "Langflow-DOC-QA-SERVER::query_docs"
+    },
+    {
+      "id": "st-clean-330",
+      "server_intent": "Lightdash operations",
+      "tool_intent": "list all charts in a project",
+      "expected_tool_key": "Lightdash::list_charts"
+    },
+    {
+      "id": "st-clean-331",
+      "server_intent": "Lightdash operations",
+      "tool_intent": "get custom metrics for a project",
+      "expected_tool_key": "Lightdash::get_custom_metrics"
+    },
+    {
+      "id": "st-clean-332",
+      "server_intent": "lsp-mcp operations",
+      "tool_intent": "closes a file in the LSP server when you're done working with it",
+      "expected_tool_key": "lsp-mcp::close_document"
+    },
+    {
+      "id": "st-clean-333",
+      "server_intent": "lsp-mcp operations",
+      "tool_intent": "gets code actions for a specific range in a file",
+      "expected_tool_key": "lsp-mcp::get_code_actions"
+    },
+    {
+      "id": "st-clean-334",
+      "server_intent": "Linear operations",
+      "tool_intent": "get issues assigned to a user",
+      "expected_tool_key": "Linear::linear_get_user_issues"
+    },
+    {
+      "id": "st-clean-335",
+      "server_intent": "Linear operations",
+      "tool_intent": "search Linear issues with flexible filtering",
+      "expected_tool_key": "Linear::linear_search_issues"
+    },
+    {
+      "id": "st-clean-336",
+      "server_intent": "Linear (Go) operations",
+      "tool_intent": "retrieves a single Linear issue by its ID",
+      "expected_tool_key": "Linear (Go)::linear_get_issue"
+    },
+    {
+      "id": "st-clean-337",
+      "server_intent": "Linear (Go) operations",
+      "tool_intent": "adds a comment to an existing Linear issue",
+      "expected_tool_key": "Linear (Go)::linear_add_comment"
+    },
+    {
+      "id": "st-clean-338",
+      "server_intent": "llm-context operations",
+      "tool_intent": "generate outlines for code files",
+      "expected_tool_key": "llm-context::lc-outlines"
+    },
+    {
+      "id": "st-clean-339",
+      "server_intent": "llm-context operations",
+      "tool_intent": "initialize project configuration",
+      "expected_tool_key": "llm-context::lc-init"
+    },
+    {
+      "id": "st-clean-340",
+      "server_intent": "lucene-mcp-server operations",
+      "tool_intent": "lists documents from the Lucene index",
+      "expected_tool_key": "lucene-mcp-server::GET /mcp/v1/list"
+    },
+    {
+      "id": "st-clean-341",
+      "server_intent": "lucene-mcp-server operations",
+      "tool_intent": "queries the Lucene index",
+      "expected_tool_key": "lucene-mcp-server::POST /mcp/v1/query"
+    },
+    {
+      "id": "st-clean-342",
+      "server_intent": "mac-messages-mcp operations",
+      "tool_intent": "retrieves recent messages from the macOS Messages app",
+      "expected_tool_key": "mac-messages-mcp::get_recent_messages"
+    },
+    {
+      "id": "st-clean-343",
+      "server_intent": "mac-messages-mcp operations",
+      "tool_intent": "sends a new message through iMessage",
+      "expected_tool_key": "mac-messages-mcp::send_message"
+    },
+    {
+      "id": "st-clean-344",
+      "server_intent": "MariaDB operations",
+      "tool_intent": "execute read-only operations against MariaDB",
+      "expected_tool_key": "MariaDB::query_database"
+    },
+    {
+      "id": "st-clean-345",
+      "server_intent": "MCP Create operations",
+      "tool_intent": "create MCP server from template",
+      "expected_tool_key": "MCP Create::create-server-from-template"
+    },
+    {
+      "id": "st-clean-346",
+      "server_intent": "MCP Create operations",
+      "tool_intent": "get list of running servers",
+      "expected_tool_key": "MCP Create::list-servers"
+    },
+    {
+      "id": "st-clean-347",
+      "server_intent": "mcp-k8s-go operations",
+      "tool_intent": "lists and retrieves any Kubernetes resources, including custom mappings for pods, services, and deployments",
+      "expected_tool_key": "mcp-k8s-go::List and get any Kubernetes resources"
+    },
+    {
+      "id": "st-clean-348",
+      "server_intent": "mcp-k8s-go operations",
+      "tool_intent": "executes a command within a specified Kubernetes pod",
+      "expected_tool_key": "mcp-k8s-go::Run command in Kubernetes pod"
+    },
+    {
+      "id": "st-clean-349",
+      "server_intent": "mcp-local-rag operations",
+      "tool_intent": "performs a web search to fetch the latest information and provides it to the model to enhance its responses",
+      "expected_tool_key": "mcp-local-rag::rag_search"
+    },
+    {
+      "id": "st-clean-350",
+      "server_intent": "mcp-proxy operations",
+      "tool_intent": "runs a proxy server from stdio that connects to a remote SSE server, allowing clients to communicate with the remote server over SSE",
+      "expected_tool_key": "mcp-proxy::stdio to SSE"
+    },
+    {
+      "id": "st-clean-351",
+      "server_intent": "mcp-proxy operations",
+      "tool_intent": "runs a proxy server exposing a SSE server that connects to a local stdio server, allowing remote connections to the local stdio server",
+      "expected_tool_key": "mcp-proxy::SSE to stdio"
+    },
+    {
+      "id": "st-clean-352",
+      "server_intent": "mem0-mcp operations",
+      "tool_intent": "store code snippets, implementation details, and coding patterns with comprehensive context",
+      "expected_tool_key": "mem0-mcp::add_coding_preference"
+    },
+    {
+      "id": "st-clean-353",
+      "server_intent": "mem0-mcp operations",
+      "tool_intent": "retrieve all stored coding preferences for analysis and review",
+      "expected_tool_key": "mem0-mcp::get_all_coding_preferences"
+    },
+    {
+      "id": "st-clean-354",
+      "server_intent": "Membase operations",
+      "tool_intent": "get the last n messages from the current conversation",
+      "expected_tool_key": "Membase::get_messages"
+    },
+    {
+      "id": "st-clean-355",
+      "server_intent": "Membase operations",
+      "tool_intent": "switch to a different conversation",
+      "expected_tool_key": "Membase::switch_conversation"
+    },
+    {
+      "id": "st-clean-356",
+      "server_intent": "Markdownify operations",
+      "tool_intent": "convert YouTube videos to Markdown",
+      "expected_tool_key": "Markdownify::youtube-to-markdown"
+    },
+    {
+      "id": "st-clean-357",
+      "server_intent": "Markdownify operations",
+      "tool_intent": "convert PDF files to Markdown",
+      "expected_tool_key": "Markdownify::pdf-to-markdown"
+    },
+    {
+      "id": "st-clean-358",
+      "server_intent": "MongoDB Lens operations",
+      "tool_intent": "check for data inconsistencies",
+      "expected_tool_key": "MongoDB Lens::validate-collection"
+    },
+    {
+      "id": "st-clean-359",
+      "server_intent": "MongoDB Lens operations",
+      "tool_intent": "perform geospatial queries with various operators",
+      "expected_tool_key": "MongoDB Lens::geo-query"
+    },
+    {
+      "id": "st-clean-360",
+      "server_intent": "Monday.com operations",
+      "tool_intent": "moves a Monday.com item to a different group",
+      "expected_tool_key": "Monday.com::monday-move-item-to-group"
+    },
+    {
+      "id": "st-clean-361",
+      "server_intent": "Monday.com operations",
+      "tool_intent": "creates a new item or sub-item in a Monday.com board",
+      "expected_tool_key": "Monday.com::monday-create-item"
+    },
+    {
+      "id": "st-clean-362",
+      "server_intent": "Multicluster-MCP-Sever operations",
+      "tool_intent": "retrieves resources from the current context (hub cluster)",
+      "expected_tool_key": "Multicluster-MCP-Sever::Retrieve resources from the hub cluster"
+    },
+    {
+      "id": "st-clean-363",
+      "server_intent": "Multicluster-MCP-Sever operations",
+      "tool_intent": "retrieves resources from managed clusters",
+      "expected_tool_key": "Multicluster-MCP-Sever::Retrieve resources from the managed clusters"
+    },
+    {
+      "id": "st-clean-364",
+      "server_intent": "n8n operations",
+      "tool_intent": "gets details of a specific workflow",
+      "expected_tool_key": "n8n::workflow_get"
+    },
+    {
+      "id": "st-clean-365",
+      "server_intent": "n8n operations",
+      "tool_intent": "lists executions for a workflow",
+      "expected_tool_key": "n8n::execution_list"
+    },
+    {
+      "id": "st-clean-366",
+      "server_intent": "National Parks operations",
+      "tool_intent": "get current alerts for national parks including closures, hazards, and important information",
+      "expected_tool_key": "National Parks::getAlerts"
+    },
+    {
+      "id": "st-clean-367",
+      "server_intent": "National Parks operations",
+      "tool_intent": "get comprehensive information about a specific national park",
+      "expected_tool_key": "National Parks::getParkDetails"
+    },
+    {
+      "id": "st-clean-368",
+      "server_intent": "NS Travel Information operations",
+      "tool_intent": "gets accurate pricing for single and return journeys, including travel classes and group pricing",
+      "expected_tool_key": "NS Travel Information::Ticket Prices"
+    },
+    {
+      "id": "st-clean-369",
+      "server_intent": "NS Travel Information operations",
+      "tool_intent": "accesses comprehensive station information such as facilities, accessibility features, platform layouts, OV-fiets availability, and location details",
+      "expected_tool_key": "NS Travel Information::Station Details"
+    },
+    {
+      "id": "st-clean-370",
+      "server_intent": "Neovim operations",
+      "tool_intent": "returns the current active buffer content with line numbers shown",
+      "expected_tool_key": "Neovim::vim_buffer"
+    },
+    {
+      "id": "st-clean-371",
+      "server_intent": "Neovim operations",
+      "tool_intent": "creates a visual selection in the VIM editor",
+      "expected_tool_key": "Neovim::vim_visual"
+    },
+    {
+      "id": "st-clean-372",
+      "server_intent": "nomad-mcp operations",
+      "tool_intent": "lists variables with optional filtering and pagination",
+      "expected_tool_key": "nomad-mcp::list_variables"
+    },
+    {
+      "id": "st-clean-373",
+      "server_intent": "nomad-mcp operations",
+      "tool_intent": "creates a new variable with namespace support",
+      "expected_tool_key": "nomad-mcp::create_variable"
+    },
+    {
+      "id": "st-clean-374",
+      "server_intent": "oatpp-mcp operations",
+      "tool_intent": "a tool for logging purposes",
+      "expected_tool_key": "oatpp-mcp::Logger"
+    },
+    {
+      "id": "st-clean-375",
+      "server_intent": "obsidian-mcp operations",
+      "tool_intent": "remove tags from a note",
+      "expected_tool_key": "obsidian-mcp::remove-tags"
+    },
+    {
+      "id": "st-clean-376",
+      "server_intent": "obsidian-mcp operations",
+      "tool_intent": "read the contents of a note",
+      "expected_tool_key": "obsidian-mcp::read-note"
+    },
+    {
+      "id": "st-clean-377",
+      "server_intent": "Okta operations",
+      "tool_intent": "assigns a user to a group in Okta",
+      "expected_tool_key": "Okta::assign_user_to_group"
+    },
+    {
+      "id": "st-clean-378",
+      "server_intent": "Okta operations",
+      "tool_intent": "unsuspends a previously suspended user in Okta",
+      "expected_tool_key": "Okta::unsuspend_user"
+    },
+    {
+      "id": "st-clean-379",
+      "server_intent": "OpenAI WebSearch MCP operations",
+      "tool_intent": "call OpenAI websearch as a tool",
+      "expected_tool_key": "OpenAI WebSearch MCP::web_search"
+    },
+    {
+      "id": "st-clean-380",
+      "server_intent": "OpenAPI AnyApi operations",
+      "tool_intent": "get API endpoint schemas that match your intent",
+      "expected_tool_key": "OpenAPI AnyApi::{prefix}_api_request_schema"
+    },
+    {
+      "id": "st-clean-381",
+      "server_intent": "OpenAPI AnyApi operations",
+      "tool_intent": "essential for reliable execution with complex APIs where simplified implementations fail",
+      "expected_tool_key": "OpenAPI AnyApi::{prefix}_make_request"
+    },
+    {
+      "id": "st-clean-382",
+      "server_intent": "OpenAPI Schema operations",
+      "tool_intent": "gets the parameters for a specific path",
+      "expected_tool_key": "OpenAPI Schema::get-path-parameters"
+    },
+    {
+      "id": "st-clean-383",
+      "server_intent": "OpenAPI Schema operations",
+      "tool_intent": "lists all schema components (schemas, responses, parameters, etc.)",
+      "expected_tool_key": "OpenAPI Schema::list-components"
+    },
+    {
+      "id": "st-clean-384",
+      "server_intent": "OpenCTI operations",
+      "tool_intent": "retrieves a specific report by its ID",
+      "expected_tool_key": "OpenCTI::get_report_by_id"
+    },
+    {
+      "id": "st-clean-385",
+      "server_intent": "OpenCTI operations",
+      "tool_intent": "lists all marking definitions",
+      "expected_tool_key": "OpenCTI::list_marking_definitions"
+    },
+    {
+      "id": "st-clean-386",
+      "server_intent": "OpenDota operations",
+      "tool_intent": "get player's overall stats totals",
+      "expected_tool_key": "OpenDota::get_player_totals"
+    },
+    {
+      "id": "st-clean-387",
+      "server_intent": "OpenDota operations",
+      "tool_intent": "search for players by name",
+      "expected_tool_key": "OpenDota::search_player"
+    },
+    {
+      "id": "st-clean-388",
+      "server_intent": "OpenRPC operations",
+      "tool_intent": "call arbitrary JSON-RPC methods",
+      "expected_tool_key": "OpenRPC::rpc_call"
+    },
+    {
+      "id": "st-clean-389",
+      "server_intent": "OpenRPC operations",
+      "tool_intent": "discover available JSON-RPC methods",
+      "expected_tool_key": "OpenRPC::rpc_discover"
+    },
+    {
+      "id": "st-clean-390",
+      "server_intent": "Open Strategy Partners Marketing Tools operations",
+      "tool_intent": "applies OSP's semantic editing codes for comprehensive content review, including scope, flow, style, and technical accuracy",
+      "expected_tool_key": "Open Strategy Partners Marketing Tools::OSP Content Editing Codes"
+    },
+    {
+      "id": "st-clean-391",
+      "server_intent": "Open Strategy Partners Marketing Tools operations",
+      "tool_intent": "provides a systematic approach to creating high-quality technical content, including narrative structure, flow, style, and technical accuracy",
+      "expected_tool_key": "Open Strategy Partners Marketing Tools::OSP Technical Writing Guide"
+    },
+    {
+      "id": "st-clean-392",
+      "server_intent": "Outline operations",
+      "tool_intent": "create a new document in a specified collection with given content",
+      "expected_tool_key": "Outline::Create a New Document"
+    },
+    {
+      "id": "st-clean-393",
+      "server_intent": "Outline operations",
+      "tool_intent": "add a comment to a document",
+      "expected_tool_key": "Outline::Add a Comment"
+    },
+    {
+      "id": "st-clean-394",
+      "server_intent": "Pandoc operations",
+      "tool_intent": "transforms content between supported formats",
+      "expected_tool_key": "Pandoc::convert-contents"
+    },
+    {
+      "id": "st-clean-395",
+      "server_intent": "Phone MCP operations",
+      "tool_intent": "analyzes the current screen and provides structured information about UI elements",
+      "expected_tool_key": "Phone MCP::analyze_screen"
+    },
+    {
+      "id": "st-clean-396",
+      "server_intent": "Phone MCP operations",
+      "tool_intent": "launches an activity using the Android intent system",
+      "expected_tool_key": "Phone MCP::launch_intent"
+    },
+    {
+      "id": "st-clean-397",
+      "server_intent": "PIF operations",
+      "tool_intent": "navigate and manage workspace context",
+      "expected_tool_key": "PIF::read"
+    },
+    {
+      "id": "st-clean-398",
+      "server_intent": "PIF operations",
+      "tool_intent": "navigate and manage workspace context",
+      "expected_tool_key": "PIF::move"
+    },
+    {
+      "id": "st-clean-399",
+      "server_intent": "Placid.app operations",
+      "tool_intent": "lists available Placid templates with filtering options",
+      "expected_tool_key": "Placid.app::placid_list_templates"
+    },
+    {
+      "id": "st-clean-400",
+      "server_intent": "Placid.app operations",
+      "tool_intent": "generate static images by combining Placid templates with dynamic content like text and images",
+      "expected_tool_key": "Placid.app::placid_generate_image"
+    },
+    {
+      "id": "st-clean-401",
+      "server_intent": "Postman operations",
+      "tool_intent": "runs a Postman collection and returns the test results",
+      "expected_tool_key": "Postman::run-collection"
+    },
+    {
+      "id": "st-clean-402",
+      "server_intent": "Productboard operations",
+      "tool_intent": "retrieves the statuses of features from Productboard",
+      "expected_tool_key": "Productboard::get_feature_statuses"
+    },
+    {
+      "id": "st-clean-403",
+      "server_intent": "Productboard operations",
+      "tool_intent": "retrieves detailed information about a specific component",
+      "expected_tool_key": "Productboard::get_component_detail"
+    },
+    {
+      "id": "st-clean-404",
+      "server_intent": "Prometheus operations",
+      "tool_intent": "list all available metrics in Prometheus",
+      "expected_tool_key": "Prometheus::list_metrics"
+    },
+    {
+      "id": "st-clean-405",
+      "server_intent": "Prometheus operations",
+      "tool_intent": "execute a PromQL range query with start time, end time, and step interval",
+      "expected_tool_key": "Prometheus::execute_range_query"
+    },
+    {
+      "id": "st-clean-406",
+      "server_intent": "Pushover operations",
+      "tool_intent": "sends a notification via Pushover",
+      "expected_tool_key": "Pushover::send"
+    },
+    {
+      "id": "st-clean-407",
+      "server_intent": "Quarkus operations",
+      "tool_intent": "a server that exposes a canvas for making drawings using JavaFX",
+      "expected_tool_key": "Quarkus::jfx"
+    },
+    {
+      "id": "st-clean-408",
+      "server_intent": "Quarkus operations",
+      "tool_intent": "a server for storing and retrieving data from a database via a JDBC URL",
+      "expected_tool_key": "Quarkus::jdbc"
+    },
+    {
+      "id": "st-clean-409",
+      "server_intent": "QGIS operations",
+      "tool_intent": "render the current map view to an image file",
+      "expected_tool_key": "QGIS::render_map"
+    },
+    {
+      "id": "st-clean-410",
+      "server_intent": "QGIS operations",
+      "tool_intent": "retrieve all layers in the current project",
+      "expected_tool_key": "QGIS::get_layers"
+    },
+    {
+      "id": "st-clean-411",
+      "server_intent": "QuickChart operations",
+      "tool_intent": "generate a chart URL using QuickChart.io",
+      "expected_tool_key": "QuickChart::generate_chart"
+    },
+    {
+      "id": "st-clean-412",
+      "server_intent": "QuickChart operations",
+      "tool_intent": "download a chart image to a local file",
+      "expected_tool_key": "QuickChart::download_chart"
+    },
+    {
+      "id": "st-clean-413",
+      "server_intent": "Qwen_Max operations",
+      "tool_intent": "generates text using the Qwen Max language model",
+      "expected_tool_key": "Qwen_Max::qwen_max"
+    },
+    {
+      "id": "st-clean-414",
+      "server_intent": "Raindrop.io operations",
+      "tool_intent": "searches through bookmarks",
+      "expected_tool_key": "Raindrop.io::search-bookmarks"
+    },
+    {
+      "id": "st-clean-415",
+      "server_intent": "Raindrop.io operations",
+      "tool_intent": "creates a new bookmark",
+      "expected_tool_key": "Raindrop.io::create-bookmark"
+    },
+    {
+      "id": "st-clean-416",
+      "server_intent": "Reaper operations",
+      "tool_intent": "finds all Reaper projects in the directory specified in the config",
+      "expected_tool_key": "Reaper::find_reaper_projects"
+    },
+    {
+      "id": "st-clean-417",
+      "server_intent": "Reaper operations",
+      "tool_intent": "parses a Reaper project and returns a JSON object",
+      "expected_tool_key": "Reaper::parse_reaper_project"
+    },
+    {
+      "id": "st-clean-418",
+      "server_intent": "Rememberizer AI operations",
+      "tool_intent": "retrieves semantically similar matches from the connected Rememberizer personal/team internal knowledge and memory repository",
+      "expected_tool_key": "Rememberizer AI::retrieve_semantically_similar_internal_knowledge"
+    },
+    {
+      "id": "st-clean-419",
+      "server_intent": "Rememberizer AI operations",
+      "tool_intent": "searches for documents in Rememberizer's personal/team internal knowledge and memory repository using a simple query",
+      "expected_tool_key": "Rememberizer AI::smart_search_internal_knowledge"
+    },
+    {
+      "id": "st-clean-420",
+      "server_intent": "Replicate operations",
+      "tool_intent": "check a prediction's status",
+      "expected_tool_key": "Replicate::get_prediction"
+    },
+    {
+      "id": "st-clean-421",
+      "server_intent": "Replicate operations",
+      "tool_intent": "run a model with your inputs",
+      "expected_tool_key": "Replicate::create_prediction"
+    },
+    {
+      "id": "st-clean-422",
+      "server_intent": "Rquest operations",
+      "tool_intent": "partially update resources",
+      "expected_tool_key": "Rquest::http_patch"
+    },
+    {
+      "id": "st-clean-423",
+      "server_intent": "Rquest operations",
+      "tool_intent": "submit data via POST requests",
+      "expected_tool_key": "Rquest::http_post"
+    },
+    {
+      "id": "st-clean-424",
+      "server_intent": "Rijksmuseum operations",
+      "tool_intent": "generate chronological timelines of artists' works, tracking artistic development, analyzing periods and styles, and studying career progression",
+      "expected_tool_key": "Rijksmuseum::get_artist_timeline"
+    },
+    {
+      "id": "st-clean-425",
+      "server_intent": "Rijksmuseum operations",
+      "tool_intent": "access high-resolution image data with deep zoom capabilities, including multiple zoom levels, tile-based image loading, full resolution support, and position information",
+      "expected_tool_key": "Rijksmuseum::get_artwork_image"
+    },
+    {
+      "id": "st-clean-426",
+      "server_intent": "Riot Games operations",
+      "tool_intent": "returns mastery details for a specific champion",
+      "expected_tool_key": "Riot Games::get_champion_mastery_tool"
+    },
+    {
+      "id": "st-clean-427",
+      "server_intent": "Riot Games operations",
+      "tool_intent": "returns recent matches for the given summoner",
+      "expected_tool_key": "Riot Games::get_recent_matches_tool"
+    },
+    {
+      "id": "st-clean-428",
+      "server_intent": "Scholarly operations",
+      "tool_intent": "search arXiv for articles related to the given keyword",
+      "expected_tool_key": "Scholarly::search-arxiv"
+    },
+    {
+      "id": "st-clean-429",
+      "server_intent": "scrapling-fetch operations",
+      "tool_intent": "retrieves complete web pages with pagination support",
+      "expected_tool_key": "scrapling-fetch::s-fetch-page"
+    },
+    {
+      "id": "st-clean-430",
+      "server_intent": "scrapling-fetch operations",
+      "tool_intent": "extracts content matching regex patterns with surrounding context",
+      "expected_tool_key": "scrapling-fetch::s-fetch-pattern"
+    },
+    {
+      "id": "st-clean-431",
+      "server_intent": "SearXNG operations",
+      "tool_intent": "read and convert the content from a URL to markdown",
+      "expected_tool_key": "SearXNG::web_url_read"
+    },
+    {
+      "id": "st-clean-432",
+      "server_intent": "SearXNG operations",
+      "tool_intent": "execute web searches with pagination",
+      "expected_tool_key": "SearXNG::searxng_web_search"
+    },
+    {
+      "id": "st-clean-433",
+      "server_intent": "SEC EDGAR operations",
+      "tool_intent": "retrieve all facts for a company (full XBRL fact set) by CIK",
+      "expected_tool_key": "SEC EDGAR::get_company_facts"
+    },
+    {
+      "id": "st-clean-434",
+      "server_intent": "SEC EDGAR operations",
+      "tool_intent": "fetch a company's submissions (filings history) by CIK",
+      "expected_tool_key": "SEC EDGAR::get_submissions"
+    },
+    {
+      "id": "st-clean-435",
+      "server_intent": "ServiceNow operations",
+      "tool_intent": "get a specific service catalog item from ServiceNow",
+      "expected_tool_key": "ServiceNow::get_catalog_item"
+    },
+    {
+      "id": "st-clean-436",
+      "server_intent": "ServiceNow operations",
+      "tool_intent": "update an existing changeset",
+      "expected_tool_key": "ServiceNow::update_changeset"
+    },
+    {
+      "id": "st-clean-437",
+      "server_intent": "Shopify operations",
+      "tool_intent": "get a specific order by ID",
+      "expected_tool_key": "Shopify::get-order-by-id"
+    },
+    {
+      "id": "st-clean-438",
+      "server_intent": "Shopify operations",
+      "tool_intent": "get customers or search by name/email",
+      "expected_tool_key": "Shopify::get-customers"
+    },
+    {
+      "id": "st-clean-439",
+      "server_intent": "Siri Shortcuts operations",
+      "tool_intent": "runs a shortcut with optional input",
+      "expected_tool_key": "Siri Shortcuts::run_shortcut"
+    },
+    {
+      "id": "st-clean-440",
+      "server_intent": "Siri Shortcuts operations",
+      "tool_intent": "opens a shortcut in the Shortcuts app",
+      "expected_tool_key": "Siri Shortcuts::open_shortcut"
+    },
+    {
+      "id": "st-clean-441",
+      "server_intent": "Slack operations",
+      "tool_intent": "get recent messages from a channel",
+      "expected_tool_key": "Slack::slack_get_channel_history"
+    },
+    {
+      "id": "st-clean-442",
+      "server_intent": "Slack operations",
+      "tool_intent": "get list of workspace users with basic profile information",
+      "expected_tool_key": "Slack::slack_get_users"
+    },
+    {
+      "id": "st-clean-443",
+      "server_intent": "Snowflake operations",
+      "tool_intent": "execute INSERT, UPDATE, or DELETE queries",
+      "expected_tool_key": "Snowflake::write_query"
+    },
+    {
+      "id": "st-clean-444",
+      "server_intent": "Snowflake operations",
+      "tool_intent": "list all databases in the Snowflake instance",
+      "expected_tool_key": "Snowflake::list_databases"
+    },
+    {
+      "id": "st-clean-445",
+      "server_intent": "Solver operations",
+      "tool_intent": "get current model content with numbered items",
+      "expected_tool_key": "Solver::get_model"
+    },
+    {
+      "id": "st-clean-446",
+      "server_intent": "Solver operations",
+      "tool_intent": "add new item at a specific index",
+      "expected_tool_key": "Solver::add_item"
+    },
+    {
+      "id": "st-clean-447",
+      "server_intent": "SoccerDataAPI operations",
+      "tool_intent": "returns real-time information about ongoing football matches around the world",
+      "expected_tool_key": "SoccerDataAPI::get_livescores"
+    },
+    {
+      "id": "st-clean-448",
+      "server_intent": "Solana Agent Kit operations",
+      "tool_intent": "creates a wrapped token on a target chain using Wormhole",
+      "expected_tool_key": "Solana Agent Kit::createWrappedToken"
+    },
+    {
+      "id": "st-clean-449",
+      "server_intent": "Solana Agent Kit operations",
+      "tool_intent": "executes a deBridge order",
+      "expected_tool_key": "Solana Agent Kit::executeDebridgeOrder"
+    },
+    {
+      "id": "st-clean-450",
+      "server_intent": "Starwind UI operations",
+      "tool_intent": "returns documentation links for Starwind UI components and guides",
+      "expected_tool_key": "Starwind UI::get_documentation"
+    },
+    {
+      "id": "st-clean-451",
+      "server_intent": "Starwind UI operations",
+      "tool_intent": "initializes a new Starwind UI project",
+      "expected_tool_key": "Starwind UI::init_project"
+    },
+    {
+      "id": "st-clean-452",
+      "server_intent": "Strava operations",
+      "tool_intent": "retrieves the laps recorded for a specific Strava activity",
+      "expected_tool_key": "Strava::get-activity-laps"
+    },
+    {
+      "id": "st-clean-453",
+      "server_intent": "Strava operations",
+      "tool_intent": "fetches detailed information about a specific segment using its ID",
+      "expected_tool_key": "Strava::get-segment"
+    },
+    {
+      "id": "st-clean-454",
+      "server_intent": "ShaderToy operations",
+      "tool_intent": "searches for shaders available on ShaderToy through a search prompt",
+      "expected_tool_key": "ShaderToy::search_shader"
+    },
+    {
+      "id": "st-clean-455",
+      "server_intent": "ShaderToy operations",
+      "tool_intent": "retrieves information on any shader on ShaderToy",
+      "expected_tool_key": "ShaderToy::get_shader_info"
+    },
+    {
+      "id": "st-clean-456",
+      "server_intent": "Talk To Figma operations",
+      "tool_intent": "get detailed information about multiple nodes by providing an array of node IDs",
+      "expected_tool_key": "Talk To Figma::get_nodes_info"
+    },
+    {
+      "id": "st-clean-457",
+      "server_intent": "Talk To Figma operations",
+      "tool_intent": "set horizontal and vertical sizing modes for auto-layout frames (FIXED, HUG, FILL)",
+      "expected_tool_key": "Talk To Figma::set_layout_sizing"
+    },
+    {
+      "id": "st-clean-458",
+      "server_intent": "TMDB operations",
+      "tool_intent": "get trending movies for a specified time window",
+      "expected_tool_key": "TMDB::get_trending"
+    },
+    {
+      "id": "st-clean-459",
+      "server_intent": "TMDB operations",
+      "tool_intent": "get movie recommendations based on a movie ID",
+      "expected_tool_key": "TMDB::get_recommendations"
+    },
+    {
+      "id": "st-clean-460",
+      "server_intent": "Tavily search operations",
+      "tool_intent": "searches recent news articles with publication dates",
+      "expected_tool_key": "Tavily search::tavily_news_search"
+    },
+    {
+      "id": "st-clean-461",
+      "server_intent": "Tavily search operations",
+      "tool_intent": "performs comprehensive web searches with AI-powered content extraction",
+      "expected_tool_key": "Tavily search::tavily_web_search"
+    },
+    {
+      "id": "st-clean-462",
+      "server_intent": "Telegram operations",
+      "tool_intent": "unblock a user",
+      "expected_tool_key": "Telegram::unblock_user"
+    },
+    {
+      "id": "st-clean-463",
+      "server_intent": "Telegram operations",
+      "tool_intent": "bulk import contacts",
+      "expected_tool_key": "Telegram::import_contacts"
+    },
+    {
+      "id": "st-clean-464",
+      "server_intent": "Telegram-Client operations",
+      "tool_intent": "retrieve messages from specific dialog",
+      "expected_tool_key": "Telegram-Client::tg_dialog"
+    },
+    {
+      "id": "st-clean-465",
+      "server_intent": "Telegram-Client operations",
+      "tool_intent": "mark dialog as read",
+      "expected_tool_key": "Telegram-Client::tg_read"
+    },
+    {
+      "id": "st-clean-466",
+      "server_intent": "Terminal-Control operations",
+      "tool_intent": "read content from a file with optional row selection",
+      "expected_tool_key": "Terminal-Control::read_file"
+    },
+    {
+      "id": "st-clean-467",
+      "server_intent": "Terminal-Control operations",
+      "tool_intent": "list files and subdirectories in the specified directory",
+      "expected_tool_key": "Terminal-Control::list_directory"
+    },
+    {
+      "id": "st-clean-468",
+      "server_intent": "TFT-Match-Analyzer operations",
+      "tool_intent": "get TFT match history for the current player",
+      "expected_tool_key": "TFT-Match-Analyzer::tft_match_history"
+    },
+    {
+      "id": "st-clean-469",
+      "server_intent": "TFT-Match-Analyzer operations",
+      "tool_intent": "get detailed information about a specific TFT match",
+      "expected_tool_key": "TFT-Match-Analyzer::tft_match_details"
+    },
+    {
+      "id": "st-clean-470",
+      "server_intent": "Ticketmaster operations",
+      "tool_intent": "searches for events, venues, or attractions using various filters",
+      "expected_tool_key": "Ticketmaster::search_ticketmaster"
+    },
+    {
+      "id": "st-clean-471",
+      "server_intent": "TickTick operations",
+      "tool_intent": "delete a project",
+      "expected_tool_key": "TickTick::delete_project"
+    },
+    {
+      "id": "st-clean-472",
+      "server_intent": "TickTick operations",
+      "tool_intent": "get a specific project by ID",
+      "expected_tool_key": "TickTick::get_project_by_id"
+    },
+    {
+      "id": "st-clean-473",
+      "server_intent": "Todoist operations",
+      "tool_intent": "retrieve and filter tasks",
+      "expected_tool_key": "Todoist::todoist_get_tasks"
+    },
+    {
+      "id": "st-clean-474",
+      "server_intent": "Todoist operations",
+      "tool_intent": "update existing tasks using natural language search",
+      "expected_tool_key": "Todoist::todoist_update_task"
+    },
+    {
+      "id": "st-clean-475",
+      "server_intent": "Typesense operations",
+      "tool_intent": "analyze collection structure and contents",
+      "expected_tool_key": "Typesense::analyze_collection"
+    },
+    {
+      "id": "st-clean-476",
+      "server_intent": "Typesense operations",
+      "tool_intent": "search for documents in Typesense collections with powerful filtering",
+      "expected_tool_key": "Typesense::typesense_query"
+    },
+    {
+      "id": "st-clean-477",
+      "server_intent": "Travel Planner operations",
+      "tool_intent": "calculate route between two locations",
+      "expected_tool_key": "Travel Planner::calculateRoute"
+    },
+    {
+      "id": "st-clean-478",
+      "server_intent": "Travel Planner operations",
+      "tool_intent": "get detailed information about a specific place",
+      "expected_tool_key": "Travel Planner::getPlaceDetails"
+    },
+    {
+      "id": "st-clean-479",
+      "server_intent": "Unity Catalog operations",
+      "tool_intent": "gets a function within a parent catalog and schema",
+      "expected_tool_key": "Unity Catalog::uc_get_function"
+    },
+    {
+      "id": "st-clean-480",
+      "server_intent": "Unity Catalog operations",
+      "tool_intent": "deletes a function within a parent catalog and schema",
+      "expected_tool_key": "Unity Catalog::uc_delete_function"
+    },
+    {
+      "id": "st-clean-481",
+      "server_intent": "Unity3d Game Engine operations",
+      "tool_intent": "adds an asset from the AssetDatabase to the Unity scene",
+      "expected_tool_key": "Unity3d Game Engine::add_asset_to_scene"
+    },
+    {
+      "id": "st-clean-482",
+      "server_intent": "Unity3d Game Engine operations",
+      "tool_intent": "runs tests using the Unity Test Runner",
+      "expected_tool_key": "Unity3d Game Engine::run_tests"
+    },
+    {
+      "id": "st-clean-483",
+      "server_intent": "Unity Integration (Advanced) operations",
+      "tool_intent": "get a listing of files and folders in a directory",
+      "expected_tool_key": "Unity Integration (Advanced)::list_directory"
+    },
+    {
+      "id": "st-clean-484",
+      "server_intent": "Unity Integration (Advanced) operations",
+      "tool_intent": "read multiple files at once",
+      "expected_tool_key": "Unity Integration (Advanced)::read_multiple_files"
+    },
+    {
+      "id": "st-clean-485",
+      "server_intent": "Vega-Lite operations",
+      "tool_intent": "visualize a table of data using Vega-Lite syntax",
+      "expected_tool_key": "Vega-Lite::visualize_data"
+    },
+    {
+      "id": "st-clean-486",
+      "server_intent": "Vega-Lite operations",
+      "tool_intent": "save a table of data aggregations to the server for later visualization",
+      "expected_tool_key": "Vega-Lite::save_data"
+    },
+    {
+      "id": "st-clean-487",
+      "server_intent": "Video Editor operations",
+      "tool_intent": "searches videos using embeddings and keywords to find relevant matches",
+      "expected_tool_key": "Video Editor::search-videos"
+    },
+    {
+      "id": "st-clean-488",
+      "server_intent": "Video Editor operations",
+      "tool_intent": "generates a rendered video edit from a set of video files based on specified criteria",
+      "expected_tool_key": "Video Editor::generate-edit-from-videos"
+    },
+    {
+      "id": "st-clean-489",
+      "server_intent": "Virtual location (Google Street View,etc.) operations",
+      "tool_intent": "replies to the article with the specified id",
+      "expected_tool_key": "Virtual location (Google Street View,etc.)::reply_sns_writer"
+    },
+    {
+      "id": "st-clean-490",
+      "server_intent": "Virtual location (Google Street View,etc.) operations",
+      "tool_intent": "sets the destination of the travel avatar",
+      "expected_tool_key": "Virtual location (Google Street View,etc.)::set_traveler_destination_address"
+    },
+    {
+      "id": "st-clean-491",
+      "server_intent": "VolcEngine TOS operations",
+      "tool_intent": "retrieves an object from volcengine TOS",
+      "expected_tool_key": "VolcEngine TOS::get_object"
+    },
+    {
+      "id": "st-clean-492",
+      "server_intent": "VolcEngine TOS operations",
+      "tool_intent": "returns a list of all buckets owned by the authenticated sender of the request",
+      "expected_tool_key": "VolcEngine TOS::list_buckets"
+    },
+    {
+      "id": "st-clean-493",
+      "server_intent": "Webflow operations",
+      "tool_intent": "retrieves detailed information about a specific Webflow site by ID, returning the same detailed information as get_sites for a single site",
+      "expected_tool_key": "Webflow::get_site"
+    },
+    {
+      "id": "st-clean-494",
+      "server_intent": "Webflow operations",
+      "tool_intent": "retrieves a list of all Webflow sites accessible to the authenticated user, returning detailed information such as display name, site ID, creation date, and more",
+      "expected_tool_key": "Webflow::get_sites"
+    },
+    {
+      "id": "st-clean-495",
+      "server_intent": "whale-tracker-mcp operations",
+      "tool_intent": "fetch recent whale transactions with optional filters for blockchain, minimum value, and limit",
+      "expected_tool_key": "whale-tracker-mcp::get_recent_transactions"
+    },
+    {
+      "id": "st-clean-496",
+      "server_intent": "whale-tracker-mcp operations",
+      "tool_intent": "retrieve detailed information about a specific transaction by its ID",
+      "expected_tool_key": "whale-tracker-mcp::get_transaction_details"
+    },
+    {
+      "id": "st-clean-497",
+      "server_intent": "Whois MCP operations",
+      "tool_intent": "looks up WHOIS information about the specified IP address",
+      "expected_tool_key": "Whois MCP::whois_ip"
+    },
+    {
+      "id": "st-clean-498",
+      "server_intent": "Whois MCP operations",
+      "tool_intent": "looks up WHOIS information about the specified domain",
+      "expected_tool_key": "Whois MCP::whois_domain"
+    },
+    {
+      "id": "st-clean-499",
+      "server_intent": "Wikidata MCP operations",
+      "tool_intent": "search for a Wikidata property ID by its query",
+      "expected_tool_key": "Wikidata MCP::search_property"
+    },
+    {
+      "id": "st-clean-500",
+      "server_intent": "Wikidata MCP operations",
+      "tool_intent": "retrieve the label and description for a given Wikidata entity ID in a specified language",
+      "expected_tool_key": "Wikidata MCP::get_metadata"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "suite": "dynamic_registration.priority",
+  "description": "High-priority benchmark for hot registration and catalog-shift behavior using temporary synthetic servers and unchanged control probes.",
+  "control_probes": [
+    {
+      "id": "ctrl-001",
+      "server_intent": "GitHub repository operations",
+      "tool_intent": "list pull requests for a repository",
+      "expected_tool_key": "GitHub::list_pull_requests"
+    },
+    {
+      "id": "ctrl-002",
+      "server_intent": "Slack messaging operations",
+      "tool_intent": "post a new message in a channel",
+      "expected_tool_key": "Slack::slack_post_message"
+    },
+    {
+      "id": "ctrl-003",
+      "server_intent": "Filesystem operations",
+      "tool_intent": "list the contents of a directory path",
+      "expected_tool_key": "Filesystem::list_directory"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "drift-001",
+      "server": {
+        "name": "QuantLedger",
+        "description": "QuantLedger manages portfolio risk buckets, VaR segments, factor exposures, and market-neutral trading books.",
+        "summary": "Portfolio risk and factor analytics operations for quant teams.",
+        "tools": [
+          {
+            "name": "list_risk_buckets",
+            "description": "List VaR risk buckets and portfolio risk segments for a trading book.",
+            "parameter": {
+              "book_id": "Trading book identifier"
+            }
+          }
+        ]
+      },
+      "probes": [
+        {
+          "id": "probe-001",
+          "server_intent": "QuantLedger portfolio risk operations",
+          "tool_intent": "list VaR risk buckets for a trading book",
+          "expected_tool_key": "QuantLedger::list_risk_buckets"
+        }
+      ]
+    },
+    {
+      "id": "drift-002",
+      "server": {
+        "name": "Runbook Vault",
+        "description": "Runbook Vault stores incident runbooks, remediation playbooks, and postmortem operations guides for SRE teams.",
+        "summary": "Incident runbook search and retrieval for operations teams.",
+        "tools": [
+          {
+            "name": "search_runbooks",
+            "description": "Search incident runbooks and remediation playbooks by service, topic, or failure mode.",
+            "parameter": {
+              "query": "Incident topic or service name"
+            }
+          }
+        ]
+      },
+      "probes": [
+        {
+          "id": "probe-002",
+          "server_intent": "Runbook Vault incident operations",
+          "tool_intent": "search remediation runbooks for checkout latency incidents",
+          "expected_tool_key": "Runbook Vault::search_runbooks"
+        }
+      ]
+    },
+    {
+      "id": "drift-003",
+      "server": {
+        "name": "Partner CRM",
+        "description": "Partner CRM manages reseller accounts, channel partner records, and partner onboarding workflows.",
+        "summary": "Partner account creation and lookup for channel sales operations.",
+        "tools": [
+          {
+            "name": "create_partner_account",
+            "description": "Create a new channel partner account for reseller onboarding.",
+            "parameter": {
+              "partner_name": "Name of the new partner account"
+            }
+          }
+        ]
+      },
+      "probes": [
+        {
+          "id": "probe-003",
+          "server_intent": "Partner CRM channel sales operations",
+          "tool_intent": "create a new reseller partner account",
+          "expected_tool_key": "Partner CRM::create_partner_account"
+        }
+      ]
+    }
+  ]
+}

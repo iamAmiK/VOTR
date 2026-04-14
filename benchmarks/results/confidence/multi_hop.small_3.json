@@ -1,0 +1,79 @@
+{
+  "scale": "small",
+  "summary": {
+    "num_items": 6,
+    "top1_accuracy": 1.0,
+    "handoff_accuracy_at_recommended_k": 1.0,
+    "avg_recommended_handoff_k": 2.3333333333333335,
+    "confidence_buckets": {
+      "high": {
+        "count": 4,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0,
+        "avg_recommended_handoff_k": 1
+      },
+      "low": {
+        "count": 2,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0,
+        "avg_recommended_handoff_k": 5
+      }
+    }
+  },
+  "rows": [
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009669864772984815
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0021998038391480984
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.001301807905869909
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0010537920328540368
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    }
+  ]
+}

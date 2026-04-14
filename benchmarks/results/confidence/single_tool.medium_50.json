@@ -1,0 +1,823 @@
+{
+  "scale": "medium",
+  "summary": {
+    "num_items": 88,
+    "top1_accuracy": 0.9318181818181818,
+    "handoff_accuracy_at_recommended_k": 0.9318181818181818,
+    "avg_recommended_handoff_k": 2.6363636363636362,
+    "confidence_buckets": {
+      "high": {
+        "count": 49,
+        "top1_accuracy": 0.9183673469387755,
+        "handoff_accuracy_at_recommended_k": 0.9183673469387755,
+        "avg_recommended_handoff_k": 1
+      },
+      "low": {
+        "count": 33,
+        "top1_accuracy": 0.9393939393939394,
+        "handoff_accuracy_at_recommended_k": 0.9393939393939394,
+        "avg_recommended_handoff_k": 5
+      },
+      "medium": {
+        "count": 6,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0,
+        "avg_recommended_handoff_k": 3
+      }
+    }
+  },
+  "rows": [
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0026038912392032446
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009669864772984815
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.006327143661506808
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457
+    },
+    {
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0007977756478053932
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0008819102631900111
+    },
+    {
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000710970092249838
+    },
+    {
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000710970092249838
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0017858233836056392
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0012150023503143537
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0012150023503143537
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011253966155473291
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009669864772984815
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009669864772984815
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0009795449286739005
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.002861507726658441
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009669864772984815
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011253966155473291
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009669864772984815
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0010537920328540368
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.006939220731825034
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0013045967312840245
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0003165337512243821
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0013657812309319436
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0012195117298237357
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0015421925212545234
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0014710187353629972
+    },
+    {
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000710970092249838
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0016419589063031703
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0013098084179026803
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0016884871987992017
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011253966155473291
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.000877380742531457
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011253966155473291
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0011379266482386546
+    },
+    {
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0007977756478053932
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0030494770417624772
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0013814130005959727
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0015988814640321772
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009669864772984815
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0012986614358391144
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0013657812309319436
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0013657812309319436
+    },
+    {
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0007977756478053932
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0015988814640321772
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "hit_at_recommended_k": false,
+      "score_gap": 0.0011253966155473291
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0012150023503143537
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0009669864772984815
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0021706456010346376
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 9.254362771020375e-05
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0012150023503143537
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "high",
+      "recommended_handoff_k": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0010537920328540368
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    },
+    {
+      "confidence": "low",
+      "recommended_handoff_k": 5,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "hit_at_recommended_k": true,
+      "score_gap": 0.0006213643574828134
+    }
+  ]
+}

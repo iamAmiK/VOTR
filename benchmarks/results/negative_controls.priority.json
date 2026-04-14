@@ -1,0 +1,157 @@
+{
+  "summary": {
+    "num_cases": 8,
+    "pass_rate": 1.0,
+    "confidence_distribution": {
+      "low": 8
+    },
+    "avg_recommended_handoff_k": 0,
+    "failed_assertions": {}
+  },
+  "rows": [
+    {
+      "id": "neg-001",
+      "server_intent": "airline booking operations",
+      "tool_intent": "book a flight from NYC to SFO next Tuesday",
+      "predicted_top5": [],
+      "predicted_servers_top5": [],
+      "confidence": "low",
+      "recommended_handoff_k": 0,
+      "null_route": true,
+      "score_gap": 0.0006129703776451556,
+      "checks": {
+        "max_confidence": true,
+        "max_recommended_handoff_k": true,
+        "require_null_route": true,
+        "require_empty": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-002",
+      "server_intent": "childcare booking operations",
+      "tool_intent": "book a babysitter for Friday night",
+      "predicted_top5": [],
+      "predicted_servers_top5": [],
+      "confidence": "low",
+      "recommended_handoff_k": 0,
+      "null_route": true,
+      "score_gap": 0.00035695399259651206,
+      "checks": {
+        "max_confidence": true,
+        "max_recommended_handoff_k": true,
+        "require_null_route": true,
+        "require_empty": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-003",
+      "server_intent": "food delivery operations",
+      "tool_intent": "order sushi to my office",
+      "predicted_top5": [],
+      "predicted_servers_top5": [],
+      "confidence": "low",
+      "recommended_handoff_k": 0,
+      "null_route": true,
+      "score_gap": 0.0006213643574828134,
+      "checks": {
+        "max_confidence": true,
+        "max_recommended_handoff_k": true,
+        "require_null_route": true,
+        "require_empty": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-004",
+      "server_intent": "hardware control",
+      "tool_intent": "shut down my laptop right now",
+      "predicted_top5": [],
+      "predicted_servers_top5": [],
+      "confidence": "low",
+      "recommended_handoff_k": 0,
+      "null_route": true,
+      "score_gap": 0.00038056680161943635,
+      "checks": {
+        "max_confidence": true,
+        "max_recommended_handoff_k": true,
+        "require_null_route": true,
+        "require_empty": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-005",
+      "server_intent": "mental health counseling",
+      "tool_intent": "help me cope with grief after losing a loved one",
+      "predicted_top5": [],
+      "predicted_servers_top5": [],
+      "confidence": "low",
+      "recommended_handoff_k": 0,
+      "null_route": true,
+      "score_gap": 0.0002336921019068655,
+      "checks": {
+        "max_confidence": true,
+        "max_recommended_handoff_k": true,
+        "require_null_route": true,
+        "require_empty": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-006",
+      "server_intent": "medical diagnosis",
+      "tool_intent": "diagnose the cause of this chest pain",
+      "predicted_top5": [],
+      "predicted_servers_top5": [],
+      "confidence": "low",
+      "recommended_handoff_k": 0,
+      "null_route": true,
+      "score_gap": 0.0008552481785063792,
+      "checks": {
+        "max_confidence": true,
+        "max_recommended_handoff_k": true,
+        "require_null_route": true,
+        "require_empty": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-007",
+      "server_intent": "personal finance advice",
+      "tool_intent": "tell me whether I should refinance my mortgage",
+      "predicted_top5": [],
+      "predicted_servers_top5": [],
+      "confidence": "low",
+      "recommended_handoff_k": 0,
+      "null_route": true,
+      "score_gap": 0.002764733465881377,
+      "checks": {
+        "max_confidence": true,
+        "max_recommended_handoff_k": true,
+        "require_null_route": true,
+        "require_empty": true
+      },
+      "passed": true
+    },
+    {
+      "id": "neg-008",
+      "server_intent": "operating system administration",
+      "tool_intent": "install Chrome and make it the default browser",
+      "predicted_top5": [],
+      "predicted_servers_top5": [],
+      "confidence": "low",
+      "recommended_handoff_k": 0,
+      "null_route": true,
+      "score_gap": 0.0026739494493842643,
+      "checks": {
+        "max_confidence": true,
+        "max_recommended_handoff_k": true,
+        "require_null_route": true,
+        "require_empty": true
+      },
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "summary": {
+    "num_items": 6,
+    "top1_accuracy": 1.0,
+    "top3_accuracy": 1.0,
+    "top5_accuracy": 1.0,
+    "handoff_accuracy_at_recommended_k": 1.0,
+    "avg_recommended_handoff_k": 2.6666666666666665,
+    "confidence_buckets": {
+      "high": {
+        "count": 3,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "low": {
+        "count": 2,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      },
+      "medium": {
+        "count": 1,
+        "top1_accuracy": 1.0,
+        "handoff_accuracy_at_recommended_k": 1.0
+      }
+    },
+    "equivalence_aware": {
+      "num_items": 6,
+      "top1_accuracy": 1.0,
+      "top3_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "handoff_accuracy_at_recommended_k": 1.0,
+      "avg_recommended_handoff_k": 2.6666666666666665,
+      "confidence_buckets": {
+        "high": {
+          "count": 3,
+          "top1_accuracy": 1.0,
+          "handoff_accuracy_at_recommended_k": 1.0
+        },
+        "low": {
+          "count": 2,
+          "top1_accuracy": 1.0,
+          "handoff_accuracy_at_recommended_k": 1.0
+        },
+        "medium": {
+          "count": 1,
+          "top1_accuracy": 1.0,
+          "handoff_accuracy_at_recommended_k": 1.0
+        }
+      },
+      "num_cases": 2,
+      "chain_success_rate_at_1": 1.0,
+      "chain_success_rate_at_3": 1.0,
+      "chain_success_rate_at_5": 1.0
+    },
+    "num_cases": 2,
+    "chain_success_rate_at_1": 1.0,
+    "chain_success_rate_at_3": 1.0,
+    "chain_success_rate_at_5": 1.0
+  },
+  "results": [
+    {
+      "case_id": "mh-small-001",
+      "description": "Three-hop repo research, market lookup, and outbound message workflow",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Search for GitHub repositories",
+          "expected_tool_key": "GitHub::search_repositories",
+          "predicted_topk": [
+            "GitHub::search_repositories",
+            "GitHub::search_code",
+            "GitHub::search_users",
+            "GitHub::search_issues",
+            "GitHub::create_repository"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.000710970092249838,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03781362007168459,
+          "equivalent_tool_keys": [
+            "GitHub::search_repositories"
+          ],
+          "equivalence_hit_at_1": true,
+          "equivalence_hit_at_3": true,
+          "equivalence_hit_at_5": true,
+          "equivalence_hit_at_recommended_k": true
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg reference data",
+          "expected_tool_key": "Bloomberg::bdp",
+          "predicted_topk": [
+            "Bloomberg::bdp",
+            "Bloomberg::bdh",
+            "Bloomberg::bds",
+            "Bloomberg::bdtick",
+            "Bloomberg::bdib"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0011253966155473291,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.0373991935483871,
+          "equivalent_tool_keys": [
+            "Bloomberg::bdp"
+          ],
+          "equivalence_hit_at_1": true,
+          "equivalence_hit_at_3": true,
+          "equivalence_hit_at_5": true,
+          "equivalence_hit_at_recommended_k": true
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Send a message to a specific chat.",
+          "expected_tool_key": "Telegram::send_message",
+          "predicted_topk": [
+            "Telegram::send_message",
+            "Telegram::archive_chat",
+            "Telegram::search_messages",
+            "Telegram::mute_chat",
+            "Telegram::reply_to_message"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.002085569386926167,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03643902077700826,
+          "equivalent_tool_keys": [
+            "Telegram::send_message"
+          ],
+          "equivalence_hit_at_1": true,
+          "equivalence_hit_at_3": true,
+          "equivalence_hit_at_5": true,
+          "equivalence_hit_at_recommended_k": true
+        }
+      ],
+      "equivalence_chain_success_at_1": true,
+      "equivalence_chain_success_at_3": true,
+      "equivalence_chain_success_at_5": true
+    },
+    {
+      "case_id": "mh-small-002",
+      "description": "Three-hop issue filing, historical data lookup, and contact search workflow",
+      "chain_success_at_1": true,
+      "chain_success_at_3": true,
+      "chain_success_at_5": true,
+      "hops": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a new issue",
+          "expected_tool_key": "GitHub::create_issue",
+          "predicted_topk": [
+            "GitHub::create_issue",
+            "GitHub::create_pull_request",
+            "GitHub::create_repository",
+            "GitLab::create_issue",
+            "GitHub::create_branch"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0018058401639344246,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03671875,
+          "equivalent_tool_keys": [
+            "GitHub::create_issue"
+          ],
+          "equivalence_hit_at_1": true,
+          "equivalence_hit_at_3": true,
+          "equivalence_hit_at_5": true,
+          "equivalence_hit_at_recommended_k": true
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg historical data",
+          "expected_tool_key": "Bloomberg::bdh",
+          "predicted_topk": [
+            "Bloomberg::bdh",
+            "Bloomberg::bdtick",
+            "Bloomberg::bdp",
+            "Bloomberg::bds",
+            "Bloomberg::bdib"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0007977756478053932,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03772681451612903,
+          "equivalent_tool_keys": [
+            "Bloomberg::bdh"
+          ],
+          "equivalence_hit_at_1": true,
+          "equivalence_hit_at_3": true,
+          "equivalence_hit_at_5": true,
+          "equivalence_hit_at_recommended_k": true
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Search contacts.",
+          "expected_tool_key": "Telegram::search_contacts",
+          "predicted_topk": [
+            "Telegram::search_contacts",
+            "Telegram::list_contacts",
+            "Telegram::import_contacts",
+            "Telegram::export_contacts",
+            "Telegram::search_messages"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
+          "hit_at_recommended_k": true,
+          "score_gap": 0.0006213643574828134,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.03790322580645161,
+          "equivalent_tool_keys": [
+            "Telegram::search_contacts"
+          ],
+          "equivalence_hit_at_1": true,
+          "equivalence_hit_at_3": true,
+          "equivalence_hit_at_5": true,
+          "equivalence_hit_at_recommended_k": true
+        }
+      ],
+      "equivalence_chain_success_at_1": true,
+      "equivalence_chain_success_at_3": true,
+      "equivalence_chain_success_at_5": true
+    }
+  ],
+  "suite": "multi_hop.small_3.cross_app",
+  "equivalence_map": "C:\\Users\\swaga\\Downloads\\Research Proj\\MCP-Router\\benchmarks\\functional_correctness\\equivalence_map.json"
+}

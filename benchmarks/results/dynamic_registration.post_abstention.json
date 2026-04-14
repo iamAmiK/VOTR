@@ -1,0 +1,320 @@
+{
+  "summary": {
+    "num_control_probes": 3,
+    "baseline_controls_hit_at_1": 1.0,
+    "num_scenarios": 3,
+    "before_all_miss_at_5_rate": 1.0,
+    "after_all_hit_at_1_rate": 1.0,
+    "controls_preserved_at_1_rate": 1.0
+  },
+  "baseline_controls": [
+    {
+      "id": "ctrl-001",
+      "expected_tool_key": "GitHub::list_pull_requests",
+      "predicted_top5": [
+        "GitHub::list_pull_requests",
+        "Gitee::list_repo_pulls",
+        "GitHub::get_pull_request_files",
+        "GitHub::search_issues",
+        "GitHub::get_pull_request"
+      ],
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5
+    },
+    {
+      "id": "ctrl-002",
+      "expected_tool_key": "Slack::slack_post_message",
+      "predicted_top5": [
+        "Slack::slack_post_message",
+        "Slack::slack_get_channel_history",
+        "Slack::slack_reply_to_thread",
+        "Slack::slack_get_thread_replies",
+        "Slack::slack_add_reaction"
+      ],
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "confidence": "medium",
+      "recommended_handoff_k": 3
+    },
+    {
+      "id": "ctrl-003",
+      "expected_tool_key": "Filesystem::list_directory",
+      "predicted_top5": [
+        "Filesystem::list_directory",
+        "Golang Filesystem Server::list_directory",
+        "GitHub::get_file_contents",
+        "Filesystem::read_file",
+        "Golang Filesystem Server::read_file"
+      ],
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "confidence": "low",
+      "recommended_handoff_k": 5
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "drift-001",
+      "before": [
+        {
+          "id": "probe-001",
+          "expected_tool_key": "QuantLedger::list_risk_buckets",
+          "predicted_top5": [
+            "Codacy::codacy_search_organization_srm_items",
+            "Thirdweb::get_tools",
+            "VolcEngine TOS::list_buckets",
+            "AWS::s3_bucket_list",
+            "Hyperliquid::get_l2_book"
+          ],
+          "hit_at_1": false,
+          "hit_at_5": false,
+          "confidence": "low",
+          "recommended_handoff_k": 5
+        }
+      ],
+      "after": [
+        {
+          "id": "probe-001",
+          "expected_tool_key": "QuantLedger::list_risk_buckets",
+          "predicted_top5": [
+            "QuantLedger::list_risk_buckets",
+            "Codacy::codacy_search_organization_srm_items",
+            "Thirdweb::get_tools",
+            "VolcEngine TOS::list_buckets",
+            "AWS::s3_bucket_list"
+          ],
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1
+        }
+      ],
+      "controls_after": [
+        {
+          "id": "ctrl-001",
+          "expected_tool_key": "GitHub::list_pull_requests",
+          "predicted_top5": [
+            "GitHub::list_pull_requests",
+            "Gitee::list_repo_pulls",
+            "GitHub::get_pull_request_files",
+            "GitHub::search_issues",
+            "GitHub::get_pull_request"
+          ],
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5
+        },
+        {
+          "id": "ctrl-002",
+          "expected_tool_key": "Slack::slack_post_message",
+          "predicted_top5": [
+            "Slack::slack_post_message",
+            "Slack::slack_get_channel_history",
+            "Slack::slack_reply_to_thread",
+            "Slack::slack_get_thread_replies",
+            "Slack::slack_add_reaction"
+          ],
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "confidence": "medium",
+          "recommended_handoff_k": 3
+        },
+        {
+          "id": "ctrl-003",
+          "expected_tool_key": "Filesystem::list_directory",
+          "predicted_top5": [
+            "Filesystem::list_directory",
+            "Golang Filesystem Server::list_directory",
+            "GitHub::get_file_contents",
+            "Filesystem::read_file",
+            "Golang Filesystem Server::read_file"
+          ],
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5
+        }
+      ],
+      "before_all_miss_at_5": true,
+      "after_all_hit_at_1": true,
+      "controls_preserved_at_1": true
+    },
+    {
+      "id": "drift-002",
+      "before": [
+        {
+          "id": "probe-002",
+          "expected_tool_key": "Runbook Vault::search_runbooks",
+          "predicted_top5": [
+            "obsidian-mcp::search-vault",
+            "Grafana::resolve_incident",
+            "Grafana::create_incident",
+            "Grafana::add_activity_to_incident",
+            "Grafana::list_incidents"
+          ],
+          "hit_at_1": false,
+          "hit_at_5": false,
+          "confidence": "low",
+          "recommended_handoff_k": 5
+        }
+      ],
+      "after": [
+        {
+          "id": "probe-002",
+          "expected_tool_key": "Runbook Vault::search_runbooks",
+          "predicted_top5": [
+            "Runbook Vault::search_runbooks",
+            "Grafana::resolve_incident",
+            "Grafana::create_incident",
+            "Grafana::add_activity_to_incident",
+            "Grafana::list_incidents"
+          ],
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1
+        }
+      ],
+      "controls_after": [
+        {
+          "id": "ctrl-001",
+          "expected_tool_key": "GitHub::list_pull_requests",
+          "predicted_top5": [
+            "GitHub::list_pull_requests",
+            "Gitee::list_repo_pulls",
+            "GitHub::get_pull_request_files",
+            "GitHub::search_issues",
+            "GitHub::get_pull_request"
+          ],
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5
+        },
+        {
+          "id": "ctrl-002",
+          "expected_tool_key": "Slack::slack_post_message",
+          "predicted_top5": [
+            "Slack::slack_post_message",
+            "Slack::slack_get_channel_history",
+            "Slack::slack_reply_to_thread",
+            "Slack::slack_get_thread_replies",
+            "Slack::slack_add_reaction"
+          ],
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "confidence": "medium",
+          "recommended_handoff_k": 3
+        },
+        {
+          "id": "ctrl-003",
+          "expected_tool_key": "Filesystem::list_directory",
+          "predicted_top5": [
+            "Filesystem::list_directory",
+            "Golang Filesystem Server::list_directory",
+            "GitHub::get_file_contents",
+            "Filesystem::read_file",
+            "Golang Filesystem Server::read_file"
+          ],
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5
+        }
+      ],
+      "before_all_miss_at_5": true,
+      "after_all_hit_at_1": true,
+      "controls_preserved_at_1": true
+    },
+    {
+      "id": "drift-003",
+      "before": [
+        {
+          "id": "probe-003",
+          "expected_tool_key": "Partner CRM::create_partner_account",
+          "predicted_top5": [
+            "HubSpot::hubspot_create_company",
+            "HubSpot::hubspot_create_contact",
+            "HubSpot::hubspot_get_active_companies",
+            "Slack::slack_post_message",
+            "HubSpot::hubspot_get_company_activity"
+          ],
+          "hit_at_1": false,
+          "hit_at_5": false,
+          "confidence": "low",
+          "recommended_handoff_k": 5
+        }
+      ],
+      "after": [
+        {
+          "id": "probe-003",
+          "expected_tool_key": "Partner CRM::create_partner_account",
+          "predicted_top5": [
+            "Partner CRM::create_partner_account",
+            "HubSpot::hubspot_create_company",
+            "HubSpot::hubspot_create_contact",
+            "Slack::slack_post_message",
+            "HubSpot::hubspot_get_active_companies"
+          ],
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "confidence": "high",
+          "recommended_handoff_k": 1
+        }
+      ],
+      "controls_after": [
+        {
+          "id": "ctrl-001",
+          "expected_tool_key": "GitHub::list_pull_requests",
+          "predicted_top5": [
+            "GitHub::list_pull_requests",
+            "Gitee::list_repo_pulls",
+            "GitHub::get_pull_request_files",
+            "GitHub::search_issues",
+            "GitHub::get_pull_request"
+          ],
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5
+        },
+        {
+          "id": "ctrl-002",
+          "expected_tool_key": "Slack::slack_post_message",
+          "predicted_top5": [
+            "Slack::slack_post_message",
+            "Slack::slack_get_channel_history",
+            "Slack::slack_reply_to_thread",
+            "Slack::slack_get_thread_replies",
+            "Slack::slack_add_reaction"
+          ],
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "confidence": "medium",
+          "recommended_handoff_k": 3
+        },
+        {
+          "id": "ctrl-003",
+          "expected_tool_key": "Filesystem::list_directory",
+          "predicted_top5": [
+            "Filesystem::list_directory",
+            "Golang Filesystem Server::list_directory",
+            "GitHub::get_file_contents",
+            "Filesystem::read_file",
+            "Golang Filesystem Server::read_file"
+          ],
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "confidence": "low",
+          "recommended_handoff_k": 5
+        }
+      ],
+      "before_all_miss_at_5": true,
+      "after_all_hit_at_1": true,
+      "controls_preserved_at_1": true
+    }
+  ]
+}

@@ -1,0 +1,1556 @@
+{
+  "suite": "multi_hop.medium_250.cross_app",
+  "description": "Router-only multi-hop suite for the medium 50-server catalog (250 hop evaluations).",
+  "cases": [
+    {
+      "id": "multi_hop-medium_250-cross_app-0001",
+      "description": "Cross-application chain (5 hops), case 1",
+      "hops": [
+        {
+          "server_intent": "AgentQL operations",
+          "tool_intent": "extracts structured data from a given URL using a prompt to describe the data and fields to extract",
+          "expected_tool_key": "AgentQL::extract-web-data"
+        },
+        {
+          "server_intent": "Aiven operations",
+          "tool_intent": "list all projects on your Aiven account",
+          "expected_tool_key": "Aiven::list_projects"
+        },
+        {
+          "server_intent": "Aiven operations",
+          "tool_intent": "list all services in a specific Aiven project",
+          "expected_tool_key": "Aiven::list_services"
+        },
+        {
+          "server_intent": "APIMatic MCP operations",
+          "tool_intent": "validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary",
+          "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic"
+        },
+        {
+          "server_intent": "Arize Phoenix operations",
+          "tool_intent": "provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults",
+          "expected_tool_key": "Arize Phoenix::arize-phoenix-otel"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0002",
+      "description": "Cross-application chain (5 hops), case 2",
+      "hops": [
+        {
+          "server_intent": "Arize Phoenix operations",
+          "tool_intent": "mCP server implementation for Arize Phoenix providing a unified interface to Phoenix's capabilities",
+          "expected_tool_key": "Arize Phoenix::@arizeai/phoenix-mcp"
+        },
+        {
+          "server_intent": "Astra DB operations",
+          "tool_intent": "update an existing collection in the database",
+          "expected_tool_key": "Astra DB::UpdateCollection"
+        },
+        {
+          "server_intent": "Astra DB operations",
+          "tool_intent": "delete a collection from the database",
+          "expected_tool_key": "Astra DB::DeleteCollection"
+        },
+        {
+          "server_intent": "Audiense Insights operations",
+          "tool_intent": "retrieves available baseline audiences, optionally filtered by country",
+          "expected_tool_key": "Audiense Insights::get-baselines"
+        },
+        {
+          "server_intent": "Audiense Insights operations",
+          "tool_intent": "retrieves the list of available affinity categories that can be used in influencer comparisons",
+          "expected_tool_key": "Audiense Insights::get-categories"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0003",
+      "description": "Cross-application chain (5 hops), case 3",
+      "hops": [
+        {
+          "server_intent": "AWS S3 storage operations",
+          "tool_intent": "list all S3 buckets in my AWS account",
+          "expected_tool_key": "AWS::s3_bucket_list"
+        },
+        {
+          "server_intent": "AWS operations",
+          "tool_intent": "get content recommendations for AWS documentation pages",
+          "expected_tool_key": "AWS::Get Content Recommendations"
+        },
+        {
+          "server_intent": "Axiom operations",
+          "tool_intent": "execute APL queries against Axiom datasets",
+          "expected_tool_key": "Axiom::queryApl"
+        },
+        {
+          "server_intent": "Axiom operations",
+          "tool_intent": "list available Axiom datasets",
+          "expected_tool_key": "Axiom::listDatasets"
+        },
+        {
+          "server_intent": "Azure operations",
+          "tool_intent": "samples rows from a Kusto table",
+          "expected_tool_key": "Azure::Sample rows from a Kusto table"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0004",
+      "description": "Cross-application chain (5 hops), case 4",
+      "hops": [
+        {
+          "server_intent": "Azure operations",
+          "tool_intent": "lists, creates, and retrieves keys within an Azure Key Vault",
+          "expected_tool_key": "Azure::List, create, and get keys"
+        },
+        {
+          "server_intent": "Bitrise operations",
+          "tool_intent": "list Release Management installable artifacts of a connected app",
+          "expected_tool_key": "Bitrise::list_installable_artifacts"
+        },
+        {
+          "server_intent": "Bitrise operations",
+          "tool_intent": "changes whether public install page should be available for the installable artifact",
+          "expected_tool_key": "Bitrise::set_installable_artifact_public_install_page"
+        },
+        {
+          "server_intent": "Box operations",
+          "tool_intent": "ask Box AI about a hub",
+          "expected_tool_key": "Box::box_hubs_ask_ai_tool"
+        },
+        {
+          "server_intent": "Box operations",
+          "tool_intent": "list all Doc Gen jobs that used a specific template",
+          "expected_tool_key": "Box::box_docgen_template_list_jobs_tool"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0005",
+      "description": "Cross-application chain (5 hops), case 5",
+      "hops": [
+        {
+          "server_intent": "Chroma document retrieval operations",
+          "tool_intent": "read a Chroma document by document id",
+          "expected_tool_key": "Chroma::read_document"
+        },
+        {
+          "server_intent": "Chroma operations",
+          "tool_intent": "update existing documents' content, metadata, or embeddings",
+          "expected_tool_key": "Chroma::chroma_update_documents"
+        },
+        {
+          "server_intent": "CircleCI operations",
+          "tool_intent": "retrieves the status of the latest pipeline for a given branch",
+          "expected_tool_key": "CircleCI::get_latest_pipeline_status"
+        },
+        {
+          "server_intent": "CircleCI operations",
+          "tool_intent": "identifies flaky tests in a CircleCI project by analyzing test execution history",
+          "expected_tool_key": "CircleCI::find_flaky_tests"
+        },
+        {
+          "server_intent": "Codacy operations",
+          "tool_intent": "lists and filters code quality issues in a repository",
+          "expected_tool_key": "Codacy::codacy_list_repository_issues"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0006",
+      "description": "Cross-application chain (5 hops), case 6",
+      "hops": [
+        {
+          "server_intent": "Codacy operations",
+          "tool_intent": "get repository with analysis information, including metrics for Grade, Issues, Duplication, Complexity, and Coverage",
+          "expected_tool_key": "Codacy::codacy_get_repository_with_analysis"
+        },
+        {
+          "server_intent": "CodeLogic operations",
+          "tool_intent": "analyzes impacts between code and database entities",
+          "expected_tool_key": "CodeLogic::codelogic-database-impact"
+        },
+        {
+          "server_intent": "CodeLogic operations",
+          "tool_intent": "pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class",
+          "expected_tool_key": "CodeLogic::codelogic-method-impact"
+        },
+        {
+          "server_intent": "Comet Opik operations",
+          "tool_intent": "track and analyze trace data",
+          "expected_tool_key": "Comet Opik::Traces"
+        },
+        {
+          "server_intent": "Comet Opik operations",
+          "tool_intent": "organize and manage projects",
+          "expected_tool_key": "Comet Opik::Projects/Workspaces Management"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0007",
+      "description": "Cross-application chain (5 hops), case 7",
+      "hops": [
+        {
+          "server_intent": "Couchbase operations",
+          "tool_intent": "delete a document by ID from a specified scope and collection",
+          "expected_tool_key": "Couchbase::delete_document_by_id"
+        },
+        {
+          "server_intent": "Couchbase operations",
+          "tool_intent": "get a document by ID from a specified scope and collection",
+          "expected_tool_key": "Couchbase::get_document_by_id"
+        },
+        {
+          "server_intent": "Dart operations",
+          "tool_intent": "get information about the user's space, including available assignees, dartboards, folders, statuses, tags, priorities, and sizes",
+          "expected_tool_key": "Dart::get_config"
+        },
+        {
+          "server_intent": "Dart operations",
+          "tool_intent": "create a new doc with title, text content, and folder",
+          "expected_tool_key": "Dart::create_doc"
+        },
+        {
+          "server_intent": "DevHub operations",
+          "tool_intent": "updates an existing blog post's title and/or content",
+          "expected_tool_key": "DevHub::update_blog_post"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0008",
+      "description": "Cross-application chain (5 hops), case 8",
+      "hops": [
+        {
+          "server_intent": "DevHub operations",
+          "tool_intent": "gets all locations for a specific business",
+          "expected_tool_key": "DevHub::get_locations"
+        },
+        {
+          "server_intent": "Dynatrace operations",
+          "tool_intent": "sends Slack messages using the Slack Connector",
+          "expected_tool_key": "Dynatrace::send_slack_message"
+        },
+        {
+          "server_intent": "Dynatrace operations",
+          "tool_intent": "lists problem details from your services, such as Kubernetes",
+          "expected_tool_key": "Dynatrace::list_problems"
+        },
+        {
+          "server_intent": "EduBase operations",
+          "tool_intent": "retrieves user information from the EduBase platform",
+          "expected_tool_key": "EduBase::edubase_get_user"
+        },
+        {
+          "server_intent": "Elasticsearch index alias operations",
+          "tool_intent": "delete an alias from an Elasticsearch index",
+          "expected_tool_key": "Elasticsearch::delete_alias"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0009",
+      "description": "Cross-application chain (5 hops), case 9",
+      "hops": [
+        {
+          "server_intent": "Elasticsearch document operations",
+          "tool_intent": "get an Elasticsearch document by id from an index",
+          "expected_tool_key": "Elasticsearch::get_document"
+        },
+        {
+          "server_intent": "Exa operations",
+          "tool_intent": "specialized search focused on academic papers and research content",
+          "expected_tool_key": "Exa::research_paper_search"
+        },
+        {
+          "server_intent": "Exa operations",
+          "tool_intent": "performs real-time web searches with optimized results and content extraction",
+          "expected_tool_key": "Exa::web_search_exa"
+        },
+        {
+          "server_intent": "Fibery operations",
+          "tool_intent": "retrieves a list of all databases available in your Fibery workspace",
+          "expected_tool_key": "Fibery::list_databases"
+        },
+        {
+          "server_intent": "Fibery operations",
+          "tool_intent": "provides a detailed breakdown of a specific database's structure, showing all fields with their titles, names, and types",
+          "expected_tool_key": "Fibery::describe_database"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0010",
+      "description": "Cross-application chain (5 hops), case 10",
+      "hops": [
+        {
+          "server_intent": "Firecrawl operations",
+          "tool_intent": "start an asynchronous crawl with advanced options",
+          "expected_tool_key": "Firecrawl::firecrawl_crawl"
+        },
+        {
+          "server_intent": "Firecrawl operations",
+          "tool_intent": "search the web and optionally extract content from search results",
+          "expected_tool_key": "Firecrawl::firecrawl_search"
+        },
+        {
+          "server_intent": "Gitee operations",
+          "tool_intent": "comment on an issue",
+          "expected_tool_key": "Gitee::comment_issue"
+        },
+        {
+          "server_intent": "Gitee operations",
+          "tool_intent": "create a pull request",
+          "expected_tool_key": "Gitee::create_pull"
+        },
+        {
+          "server_intent": "Grafana operations",
+          "tool_intent": "list schedules from Grafana OnCall",
+          "expected_tool_key": "Grafana::list_oncall_schedules"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0011",
+      "description": "Cross-application chain (5 hops), case 11",
+      "hops": [
+        {
+          "server_intent": "Grafana operations",
+          "tool_intent": "list available metric names",
+          "expected_tool_key": "Grafana::list_prometheus_metric_names"
+        },
+        {
+          "server_intent": "GreptimeDB operations",
+          "tool_intent": "gets a prompt by name",
+          "expected_tool_key": "GreptimeDB::get_prompt"
+        },
+        {
+          "server_intent": "GreptimeDB operations",
+          "tool_intent": "lists tables in the database",
+          "expected_tool_key": "GreptimeDB::list_resources"
+        },
+        {
+          "server_intent": "Heroku operations",
+          "tool_intent": "list all add-ons for all apps or for a specific app",
+          "expected_tool_key": "Heroku::list_addons"
+        },
+        {
+          "server_intent": "Heroku operations",
+          "tool_intent": "view application logs",
+          "expected_tool_key": "Heroku::get_app_logs"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0012",
+      "description": "Cross-application chain (5 hops), case 12",
+      "hops": [
+        {
+          "server_intent": "Hologres operations",
+          "tool_intent": "execute a DML (INSERT, UPDATE, DELETE) SQL query on the Hologres server",
+          "expected_tool_key": "Hologres::execute_dml_sql"
+        },
+        {
+          "server_intent": "Hologres operations",
+          "tool_intent": "collect table statistics",
+          "expected_tool_key": "Hologres::gather_table_statistics"
+        },
+        {
+          "server_intent": "Hyperbrowser operations",
+          "tool_intent": "complex browser tasks using Claude computer use",
+          "expected_tool_key": "Hyperbrowser::claude_computer_use_agent"
+        },
+        {
+          "server_intent": "Hyperbrowser operations",
+          "tool_intent": "fast, lightweight browser automation with the Browser Use agent",
+          "expected_tool_key": "Hyperbrowser::browser_use_agent"
+        },
+        {
+          "server_intent": "Inkeep operations",
+          "tool_intent": "retrieves product documentation about Inkeep",
+          "expected_tool_key": "Inkeep::search-product-content"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0013",
+      "description": "Cross-application chain (5 hops), case 13",
+      "hops": [
+        {
+          "server_intent": "Kagi Search operations",
+          "tool_intent": "performs a web search to find information based on the query provided",
+          "expected_tool_key": "Kagi Search::search"
+        },
+        {
+          "server_intent": "Kagi Search operations",
+          "tool_intent": "generates a summary of the content, such as a video, based on the URL provided",
+          "expected_tool_key": "Kagi Search::summarizer"
+        },
+        {
+          "server_intent": "Keboola operations",
+          "tool_intent": "gets detailed information about a specific table including its DB identifier and column information",
+          "expected_tool_key": "Keboola::get_table_detail"
+        },
+        {
+          "server_intent": "Keboola operations",
+          "tool_intent": "retrieves detailed information about a specific job, identified by the job_id, including its status, parameters, results, and any relevant metadata",
+          "expected_tool_key": "Keboola::get_job_detail"
+        },
+        {
+          "server_intent": "Redis operations",
+          "tool_intent": "tools to store field-value pairs within a single key",
+          "expected_tool_key": "Redis::hash"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0014",
+      "description": "Cross-application chain (5 hops), case 14",
+      "hops": [
+        {
+          "server_intent": "Redis operations",
+          "tool_intent": "tools to add, remove and list set members",
+          "expected_tool_key": "Redis::set"
+        },
+        {
+          "server_intent": "Stripe operations",
+          "tool_intent": "creates a new invoice in Stripe",
+          "expected_tool_key": "Stripe::createInvoice"
+        },
+        {
+          "server_intent": "Stripe operations",
+          "tool_intent": "lists all subscriptions in Stripe",
+          "expected_tool_key": "Stripe::listSubscriptions"
+        },
+        {
+          "server_intent": "Airtable operations",
+          "tool_intent": "lists records from a specified Airtable table",
+          "expected_tool_key": "Airtable::list_records"
+        },
+        {
+          "server_intent": "Airtable operations",
+          "tool_intent": "search for records containing specific text",
+          "expected_tool_key": "Airtable::search_records"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0015",
+      "description": "Cross-application chain (5 hops), case 15",
+      "hops": [
+        {
+          "server_intent": "Chess.com operations",
+          "tool_intent": "get a player's profile from Chess.com",
+          "expected_tool_key": "Chess.com::get_player_profile"
+        },
+        {
+          "server_intent": "Chess.com operations",
+          "tool_intent": "get a player's stats from Chess.com",
+          "expected_tool_key": "Chess.com::get_player_stats"
+        },
+        {
+          "server_intent": "Datadog operations",
+          "tool_intent": "fetch events within a time range",
+          "expected_tool_key": "Datadog::get-events"
+        },
+        {
+          "server_intent": "Datadog operations",
+          "tool_intent": "get metadata for a specific metric",
+          "expected_tool_key": "Datadog::get-metric-metadata"
+        },
+        {
+          "server_intent": "Discord channel management",
+          "tool_intent": "delete a Discord channel by channel id",
+          "expected_tool_key": "Discord::delete_channel"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0016",
+      "description": "Cross-application chain (5 hops), case 16",
+      "hops": [
+        {
+          "server_intent": "Discord direct messaging",
+          "tool_intent": "send a Discord direct message to a user",
+          "expected_tool_key": "Discord::send_private_message"
+        },
+        {
+          "server_intent": "Docker operations",
+          "tool_intent": "creates a new Docker network",
+          "expected_tool_key": "Docker::create_network"
+        },
+        {
+          "server_intent": "Docker operations",
+          "tool_intent": "creates a new Docker volume",
+          "expected_tool_key": "Docker::create_volume"
+        },
+        {
+          "server_intent": "Git operations",
+          "tool_intent": "lists all available Git repositories",
+          "expected_tool_key": "Git::git_list_repositories"
+        },
+        {
+          "server_intent": "Git operations",
+          "tool_intent": "creates a new branch",
+          "expected_tool_key": "Git::git_create_branch"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0017",
+      "description": "Cross-application chain (5 hops), case 17",
+      "hops": [
+        {
+          "server_intent": "HubSpot operations",
+          "tool_intent": "retrieve recent conversation threads with messages",
+          "expected_tool_key": "HubSpot::hubspot_get_recent_conversations"
+        },
+        {
+          "server_intent": "HubSpot operations",
+          "tool_intent": "retrieve most recently active contacts",
+          "expected_tool_key": "HubSpot::hubspot_get_active_contacts"
+        },
+        {
+          "server_intent": "Shopify operations",
+          "tool_intent": "get a specific order by ID",
+          "expected_tool_key": "Shopify::get-order-by-id"
+        },
+        {
+          "server_intent": "Shopify operations",
+          "tool_intent": "get customers or search by name/email",
+          "expected_tool_key": "Shopify::get-customers"
+        },
+        {
+          "server_intent": "Talk To Figma operations",
+          "tool_intent": "get detailed information about multiple nodes by providing an array of node IDs",
+          "expected_tool_key": "Talk To Figma::get_nodes_info"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0018",
+      "description": "Cross-application chain (5 hops), case 18",
+      "hops": [
+        {
+          "server_intent": "Talk To Figma operations",
+          "tool_intent": "set horizontal and vertical sizing modes for auto-layout frames (FIXED, HUG, FILL)",
+          "expected_tool_key": "Talk To Figma::set_layout_sizing"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "unblock a user",
+          "expected_tool_key": "Telegram::unblock_user"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "bulk import contacts",
+          "expected_tool_key": "Telegram::import_contacts"
+        },
+        {
+          "server_intent": "AgentQL operations",
+          "tool_intent": "extracts structured data from a given URL using a prompt to describe the data and fields to extract",
+          "expected_tool_key": "AgentQL::extract-web-data"
+        },
+        {
+          "server_intent": "Aiven operations",
+          "tool_intent": "list all projects on your Aiven account",
+          "expected_tool_key": "Aiven::list_projects"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0019",
+      "description": "Cross-application chain (5 hops), case 19",
+      "hops": [
+        {
+          "server_intent": "Aiven operations",
+          "tool_intent": "list all services in a specific Aiven project",
+          "expected_tool_key": "Aiven::list_services"
+        },
+        {
+          "server_intent": "APIMatic MCP operations",
+          "tool_intent": "validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary",
+          "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic"
+        },
+        {
+          "server_intent": "Arize Phoenix operations",
+          "tool_intent": "provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults",
+          "expected_tool_key": "Arize Phoenix::arize-phoenix-otel"
+        },
+        {
+          "server_intent": "Arize Phoenix operations",
+          "tool_intent": "mCP server implementation for Arize Phoenix providing a unified interface to Phoenix's capabilities",
+          "expected_tool_key": "Arize Phoenix::@arizeai/phoenix-mcp"
+        },
+        {
+          "server_intent": "Astra DB operations",
+          "tool_intent": "update an existing collection in the database",
+          "expected_tool_key": "Astra DB::UpdateCollection"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0020",
+      "description": "Cross-application chain (5 hops), case 20",
+      "hops": [
+        {
+          "server_intent": "Astra DB operations",
+          "tool_intent": "delete a collection from the database",
+          "expected_tool_key": "Astra DB::DeleteCollection"
+        },
+        {
+          "server_intent": "Audiense Insights operations",
+          "tool_intent": "retrieves available baseline audiences, optionally filtered by country",
+          "expected_tool_key": "Audiense Insights::get-baselines"
+        },
+        {
+          "server_intent": "Audiense Insights operations",
+          "tool_intent": "retrieves the list of available affinity categories that can be used in influencer comparisons",
+          "expected_tool_key": "Audiense Insights::get-categories"
+        },
+        {
+          "server_intent": "AWS S3 storage operations",
+          "tool_intent": "list all S3 buckets in my AWS account",
+          "expected_tool_key": "AWS::s3_bucket_list"
+        },
+        {
+          "server_intent": "AWS operations",
+          "tool_intent": "get content recommendations for AWS documentation pages",
+          "expected_tool_key": "AWS::Get Content Recommendations"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0021",
+      "description": "Cross-application chain (5 hops), case 21",
+      "hops": [
+        {
+          "server_intent": "Axiom operations",
+          "tool_intent": "execute APL queries against Axiom datasets",
+          "expected_tool_key": "Axiom::queryApl"
+        },
+        {
+          "server_intent": "Axiom operations",
+          "tool_intent": "list available Axiom datasets",
+          "expected_tool_key": "Axiom::listDatasets"
+        },
+        {
+          "server_intent": "Azure operations",
+          "tool_intent": "samples rows from a Kusto table",
+          "expected_tool_key": "Azure::Sample rows from a Kusto table"
+        },
+        {
+          "server_intent": "Azure operations",
+          "tool_intent": "lists, creates, and retrieves keys within an Azure Key Vault",
+          "expected_tool_key": "Azure::List, create, and get keys"
+        },
+        {
+          "server_intent": "Bitrise operations",
+          "tool_intent": "list Release Management installable artifacts of a connected app",
+          "expected_tool_key": "Bitrise::list_installable_artifacts"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0022",
+      "description": "Cross-application chain (5 hops), case 22",
+      "hops": [
+        {
+          "server_intent": "Bitrise operations",
+          "tool_intent": "changes whether public install page should be available for the installable artifact",
+          "expected_tool_key": "Bitrise::set_installable_artifact_public_install_page"
+        },
+        {
+          "server_intent": "Box operations",
+          "tool_intent": "ask Box AI about a hub",
+          "expected_tool_key": "Box::box_hubs_ask_ai_tool"
+        },
+        {
+          "server_intent": "Box operations",
+          "tool_intent": "list all Doc Gen jobs that used a specific template",
+          "expected_tool_key": "Box::box_docgen_template_list_jobs_tool"
+        },
+        {
+          "server_intent": "Chroma document retrieval operations",
+          "tool_intent": "read a Chroma document by document id",
+          "expected_tool_key": "Chroma::read_document"
+        },
+        {
+          "server_intent": "Chroma operations",
+          "tool_intent": "update existing documents' content, metadata, or embeddings",
+          "expected_tool_key": "Chroma::chroma_update_documents"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0023",
+      "description": "Cross-application chain (5 hops), case 23",
+      "hops": [
+        {
+          "server_intent": "CircleCI operations",
+          "tool_intent": "retrieves the status of the latest pipeline for a given branch",
+          "expected_tool_key": "CircleCI::get_latest_pipeline_status"
+        },
+        {
+          "server_intent": "CircleCI operations",
+          "tool_intent": "identifies flaky tests in a CircleCI project by analyzing test execution history",
+          "expected_tool_key": "CircleCI::find_flaky_tests"
+        },
+        {
+          "server_intent": "Codacy operations",
+          "tool_intent": "lists and filters code quality issues in a repository",
+          "expected_tool_key": "Codacy::codacy_list_repository_issues"
+        },
+        {
+          "server_intent": "Codacy operations",
+          "tool_intent": "get repository with analysis information, including metrics for Grade, Issues, Duplication, Complexity, and Coverage",
+          "expected_tool_key": "Codacy::codacy_get_repository_with_analysis"
+        },
+        {
+          "server_intent": "CodeLogic operations",
+          "tool_intent": "analyzes impacts between code and database entities",
+          "expected_tool_key": "CodeLogic::codelogic-database-impact"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0024",
+      "description": "Cross-application chain (5 hops), case 24",
+      "hops": [
+        {
+          "server_intent": "CodeLogic operations",
+          "tool_intent": "pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class",
+          "expected_tool_key": "CodeLogic::codelogic-method-impact"
+        },
+        {
+          "server_intent": "Comet Opik operations",
+          "tool_intent": "track and analyze trace data",
+          "expected_tool_key": "Comet Opik::Traces"
+        },
+        {
+          "server_intent": "Comet Opik operations",
+          "tool_intent": "organize and manage projects",
+          "expected_tool_key": "Comet Opik::Projects/Workspaces Management"
+        },
+        {
+          "server_intent": "Couchbase operations",
+          "tool_intent": "delete a document by ID from a specified scope and collection",
+          "expected_tool_key": "Couchbase::delete_document_by_id"
+        },
+        {
+          "server_intent": "Couchbase operations",
+          "tool_intent": "get a document by ID from a specified scope and collection",
+          "expected_tool_key": "Couchbase::get_document_by_id"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0025",
+      "description": "Cross-application chain (5 hops), case 25",
+      "hops": [
+        {
+          "server_intent": "Dart operations",
+          "tool_intent": "get information about the user's space, including available assignees, dartboards, folders, statuses, tags, priorities, and sizes",
+          "expected_tool_key": "Dart::get_config"
+        },
+        {
+          "server_intent": "Dart operations",
+          "tool_intent": "create a new doc with title, text content, and folder",
+          "expected_tool_key": "Dart::create_doc"
+        },
+        {
+          "server_intent": "DevHub operations",
+          "tool_intent": "updates an existing blog post's title and/or content",
+          "expected_tool_key": "DevHub::update_blog_post"
+        },
+        {
+          "server_intent": "DevHub operations",
+          "tool_intent": "gets all locations for a specific business",
+          "expected_tool_key": "DevHub::get_locations"
+        },
+        {
+          "server_intent": "Dynatrace operations",
+          "tool_intent": "sends Slack messages using the Slack Connector",
+          "expected_tool_key": "Dynatrace::send_slack_message"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0026",
+      "description": "Cross-application chain (5 hops), case 26",
+      "hops": [
+        {
+          "server_intent": "Dynatrace operations",
+          "tool_intent": "lists problem details from your services, such as Kubernetes",
+          "expected_tool_key": "Dynatrace::list_problems"
+        },
+        {
+          "server_intent": "EduBase operations",
+          "tool_intent": "retrieves user information from the EduBase platform",
+          "expected_tool_key": "EduBase::edubase_get_user"
+        },
+        {
+          "server_intent": "Elasticsearch index alias operations",
+          "tool_intent": "delete an alias from an Elasticsearch index",
+          "expected_tool_key": "Elasticsearch::delete_alias"
+        },
+        {
+          "server_intent": "Elasticsearch document operations",
+          "tool_intent": "get an Elasticsearch document by id from an index",
+          "expected_tool_key": "Elasticsearch::get_document"
+        },
+        {
+          "server_intent": "Exa operations",
+          "tool_intent": "specialized search focused on academic papers and research content",
+          "expected_tool_key": "Exa::research_paper_search"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0027",
+      "description": "Cross-application chain (5 hops), case 27",
+      "hops": [
+        {
+          "server_intent": "Exa operations",
+          "tool_intent": "performs real-time web searches with optimized results and content extraction",
+          "expected_tool_key": "Exa::web_search_exa"
+        },
+        {
+          "server_intent": "Fibery operations",
+          "tool_intent": "retrieves a list of all databases available in your Fibery workspace",
+          "expected_tool_key": "Fibery::list_databases"
+        },
+        {
+          "server_intent": "Fibery operations",
+          "tool_intent": "provides a detailed breakdown of a specific database's structure, showing all fields with their titles, names, and types",
+          "expected_tool_key": "Fibery::describe_database"
+        },
+        {
+          "server_intent": "Firecrawl operations",
+          "tool_intent": "start an asynchronous crawl with advanced options",
+          "expected_tool_key": "Firecrawl::firecrawl_crawl"
+        },
+        {
+          "server_intent": "Firecrawl operations",
+          "tool_intent": "search the web and optionally extract content from search results",
+          "expected_tool_key": "Firecrawl::firecrawl_search"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0028",
+      "description": "Cross-application chain (5 hops), case 28",
+      "hops": [
+        {
+          "server_intent": "Gitee operations",
+          "tool_intent": "comment on an issue",
+          "expected_tool_key": "Gitee::comment_issue"
+        },
+        {
+          "server_intent": "Gitee operations",
+          "tool_intent": "create a pull request",
+          "expected_tool_key": "Gitee::create_pull"
+        },
+        {
+          "server_intent": "Grafana operations",
+          "tool_intent": "list schedules from Grafana OnCall",
+          "expected_tool_key": "Grafana::list_oncall_schedules"
+        },
+        {
+          "server_intent": "Grafana operations",
+          "tool_intent": "list available metric names",
+          "expected_tool_key": "Grafana::list_prometheus_metric_names"
+        },
+        {
+          "server_intent": "GreptimeDB operations",
+          "tool_intent": "gets a prompt by name",
+          "expected_tool_key": "GreptimeDB::get_prompt"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0029",
+      "description": "Cross-application chain (5 hops), case 29",
+      "hops": [
+        {
+          "server_intent": "GreptimeDB operations",
+          "tool_intent": "lists tables in the database",
+          "expected_tool_key": "GreptimeDB::list_resources"
+        },
+        {
+          "server_intent": "Heroku operations",
+          "tool_intent": "list all add-ons for all apps or for a specific app",
+          "expected_tool_key": "Heroku::list_addons"
+        },
+        {
+          "server_intent": "Heroku operations",
+          "tool_intent": "view application logs",
+          "expected_tool_key": "Heroku::get_app_logs"
+        },
+        {
+          "server_intent": "Hologres operations",
+          "tool_intent": "execute a DML (INSERT, UPDATE, DELETE) SQL query on the Hologres server",
+          "expected_tool_key": "Hologres::execute_dml_sql"
+        },
+        {
+          "server_intent": "Hologres operations",
+          "tool_intent": "collect table statistics",
+          "expected_tool_key": "Hologres::gather_table_statistics"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0030",
+      "description": "Cross-application chain (5 hops), case 30",
+      "hops": [
+        {
+          "server_intent": "Hyperbrowser operations",
+          "tool_intent": "complex browser tasks using Claude computer use",
+          "expected_tool_key": "Hyperbrowser::claude_computer_use_agent"
+        },
+        {
+          "server_intent": "Hyperbrowser operations",
+          "tool_intent": "fast, lightweight browser automation with the Browser Use agent",
+          "expected_tool_key": "Hyperbrowser::browser_use_agent"
+        },
+        {
+          "server_intent": "Inkeep operations",
+          "tool_intent": "retrieves product documentation about Inkeep",
+          "expected_tool_key": "Inkeep::search-product-content"
+        },
+        {
+          "server_intent": "Kagi Search operations",
+          "tool_intent": "performs a web search to find information based on the query provided",
+          "expected_tool_key": "Kagi Search::search"
+        },
+        {
+          "server_intent": "Kagi Search operations",
+          "tool_intent": "generates a summary of the content, such as a video, based on the URL provided",
+          "expected_tool_key": "Kagi Search::summarizer"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0031",
+      "description": "Cross-application chain (5 hops), case 31",
+      "hops": [
+        {
+          "server_intent": "Keboola operations",
+          "tool_intent": "gets detailed information about a specific table including its DB identifier and column information",
+          "expected_tool_key": "Keboola::get_table_detail"
+        },
+        {
+          "server_intent": "Keboola operations",
+          "tool_intent": "retrieves detailed information about a specific job, identified by the job_id, including its status, parameters, results, and any relevant metadata",
+          "expected_tool_key": "Keboola::get_job_detail"
+        },
+        {
+          "server_intent": "Redis operations",
+          "tool_intent": "tools to store field-value pairs within a single key",
+          "expected_tool_key": "Redis::hash"
+        },
+        {
+          "server_intent": "Redis operations",
+          "tool_intent": "tools to add, remove and list set members",
+          "expected_tool_key": "Redis::set"
+        },
+        {
+          "server_intent": "Stripe operations",
+          "tool_intent": "creates a new invoice in Stripe",
+          "expected_tool_key": "Stripe::createInvoice"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0032",
+      "description": "Cross-application chain (5 hops), case 32",
+      "hops": [
+        {
+          "server_intent": "Stripe operations",
+          "tool_intent": "lists all subscriptions in Stripe",
+          "expected_tool_key": "Stripe::listSubscriptions"
+        },
+        {
+          "server_intent": "Airtable operations",
+          "tool_intent": "lists records from a specified Airtable table",
+          "expected_tool_key": "Airtable::list_records"
+        },
+        {
+          "server_intent": "Airtable operations",
+          "tool_intent": "search for records containing specific text",
+          "expected_tool_key": "Airtable::search_records"
+        },
+        {
+          "server_intent": "Chess.com operations",
+          "tool_intent": "get a player's profile from Chess.com",
+          "expected_tool_key": "Chess.com::get_player_profile"
+        },
+        {
+          "server_intent": "Chess.com operations",
+          "tool_intent": "get a player's stats from Chess.com",
+          "expected_tool_key": "Chess.com::get_player_stats"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0033",
+      "description": "Cross-application chain (5 hops), case 33",
+      "hops": [
+        {
+          "server_intent": "Datadog operations",
+          "tool_intent": "fetch events within a time range",
+          "expected_tool_key": "Datadog::get-events"
+        },
+        {
+          "server_intent": "Datadog operations",
+          "tool_intent": "get metadata for a specific metric",
+          "expected_tool_key": "Datadog::get-metric-metadata"
+        },
+        {
+          "server_intent": "Discord channel management",
+          "tool_intent": "delete a Discord channel by channel id",
+          "expected_tool_key": "Discord::delete_channel"
+        },
+        {
+          "server_intent": "Discord direct messaging",
+          "tool_intent": "send a Discord direct message to a user",
+          "expected_tool_key": "Discord::send_private_message"
+        },
+        {
+          "server_intent": "Docker operations",
+          "tool_intent": "creates a new Docker network",
+          "expected_tool_key": "Docker::create_network"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0034",
+      "description": "Cross-application chain (5 hops), case 34",
+      "hops": [
+        {
+          "server_intent": "Docker operations",
+          "tool_intent": "creates a new Docker volume",
+          "expected_tool_key": "Docker::create_volume"
+        },
+        {
+          "server_intent": "Git operations",
+          "tool_intent": "lists all available Git repositories",
+          "expected_tool_key": "Git::git_list_repositories"
+        },
+        {
+          "server_intent": "Git operations",
+          "tool_intent": "creates a new branch",
+          "expected_tool_key": "Git::git_create_branch"
+        },
+        {
+          "server_intent": "HubSpot operations",
+          "tool_intent": "retrieve recent conversation threads with messages",
+          "expected_tool_key": "HubSpot::hubspot_get_recent_conversations"
+        },
+        {
+          "server_intent": "HubSpot operations",
+          "tool_intent": "retrieve most recently active contacts",
+          "expected_tool_key": "HubSpot::hubspot_get_active_contacts"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0035",
+      "description": "Cross-application chain (5 hops), case 35",
+      "hops": [
+        {
+          "server_intent": "Shopify operations",
+          "tool_intent": "get a specific order by ID",
+          "expected_tool_key": "Shopify::get-order-by-id"
+        },
+        {
+          "server_intent": "Shopify operations",
+          "tool_intent": "get customers or search by name/email",
+          "expected_tool_key": "Shopify::get-customers"
+        },
+        {
+          "server_intent": "Talk To Figma operations",
+          "tool_intent": "get detailed information about multiple nodes by providing an array of node IDs",
+          "expected_tool_key": "Talk To Figma::get_nodes_info"
+        },
+        {
+          "server_intent": "Talk To Figma operations",
+          "tool_intent": "set horizontal and vertical sizing modes for auto-layout frames (FIXED, HUG, FILL)",
+          "expected_tool_key": "Talk To Figma::set_layout_sizing"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "unblock a user",
+          "expected_tool_key": "Telegram::unblock_user"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0036",
+      "description": "Cross-application chain (5 hops), case 36",
+      "hops": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "bulk import contacts",
+          "expected_tool_key": "Telegram::import_contacts"
+        },
+        {
+          "server_intent": "AgentQL operations",
+          "tool_intent": "extracts structured data from a given URL using a prompt to describe the data and fields to extract",
+          "expected_tool_key": "AgentQL::extract-web-data"
+        },
+        {
+          "server_intent": "Aiven operations",
+          "tool_intent": "list all projects on your Aiven account",
+          "expected_tool_key": "Aiven::list_projects"
+        },
+        {
+          "server_intent": "Aiven operations",
+          "tool_intent": "list all services in a specific Aiven project",
+          "expected_tool_key": "Aiven::list_services"
+        },
+        {
+          "server_intent": "APIMatic MCP operations",
+          "tool_intent": "validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary",
+          "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0037",
+      "description": "Cross-application chain (5 hops), case 37",
+      "hops": [
+        {
+          "server_intent": "Arize Phoenix operations",
+          "tool_intent": "provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults",
+          "expected_tool_key": "Arize Phoenix::arize-phoenix-otel"
+        },
+        {
+          "server_intent": "Arize Phoenix operations",
+          "tool_intent": "mCP server implementation for Arize Phoenix providing a unified interface to Phoenix's capabilities",
+          "expected_tool_key": "Arize Phoenix::@arizeai/phoenix-mcp"
+        },
+        {
+          "server_intent": "Astra DB operations",
+          "tool_intent": "update an existing collection in the database",
+          "expected_tool_key": "Astra DB::UpdateCollection"
+        },
+        {
+          "server_intent": "Astra DB operations",
+          "tool_intent": "delete a collection from the database",
+          "expected_tool_key": "Astra DB::DeleteCollection"
+        },
+        {
+          "server_intent": "Audiense Insights operations",
+          "tool_intent": "retrieves available baseline audiences, optionally filtered by country",
+          "expected_tool_key": "Audiense Insights::get-baselines"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0038",
+      "description": "Cross-application chain (5 hops), case 38",
+      "hops": [
+        {
+          "server_intent": "Audiense Insights operations",
+          "tool_intent": "retrieves the list of available affinity categories that can be used in influencer comparisons",
+          "expected_tool_key": "Audiense Insights::get-categories"
+        },
+        {
+          "server_intent": "AWS S3 storage operations",
+          "tool_intent": "list all S3 buckets in my AWS account",
+          "expected_tool_key": "AWS::s3_bucket_list"
+        },
+        {
+          "server_intent": "AWS operations",
+          "tool_intent": "get content recommendations for AWS documentation pages",
+          "expected_tool_key": "AWS::Get Content Recommendations"
+        },
+        {
+          "server_intent": "Axiom operations",
+          "tool_intent": "execute APL queries against Axiom datasets",
+          "expected_tool_key": "Axiom::queryApl"
+        },
+        {
+          "server_intent": "Axiom operations",
+          "tool_intent": "list available Axiom datasets",
+          "expected_tool_key": "Axiom::listDatasets"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0039",
+      "description": "Cross-application chain (5 hops), case 39",
+      "hops": [
+        {
+          "server_intent": "Azure operations",
+          "tool_intent": "samples rows from a Kusto table",
+          "expected_tool_key": "Azure::Sample rows from a Kusto table"
+        },
+        {
+          "server_intent": "Azure operations",
+          "tool_intent": "lists, creates, and retrieves keys within an Azure Key Vault",
+          "expected_tool_key": "Azure::List, create, and get keys"
+        },
+        {
+          "server_intent": "Bitrise operations",
+          "tool_intent": "list Release Management installable artifacts of a connected app",
+          "expected_tool_key": "Bitrise::list_installable_artifacts"
+        },
+        {
+          "server_intent": "Bitrise operations",
+          "tool_intent": "changes whether public install page should be available for the installable artifact",
+          "expected_tool_key": "Bitrise::set_installable_artifact_public_install_page"
+        },
+        {
+          "server_intent": "Box operations",
+          "tool_intent": "ask Box AI about a hub",
+          "expected_tool_key": "Box::box_hubs_ask_ai_tool"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0040",
+      "description": "Cross-application chain (5 hops), case 40",
+      "hops": [
+        {
+          "server_intent": "Box operations",
+          "tool_intent": "list all Doc Gen jobs that used a specific template",
+          "expected_tool_key": "Box::box_docgen_template_list_jobs_tool"
+        },
+        {
+          "server_intent": "Chroma document retrieval operations",
+          "tool_intent": "read a Chroma document by document id",
+          "expected_tool_key": "Chroma::read_document"
+        },
+        {
+          "server_intent": "Chroma operations",
+          "tool_intent": "update existing documents' content, metadata, or embeddings",
+          "expected_tool_key": "Chroma::chroma_update_documents"
+        },
+        {
+          "server_intent": "CircleCI operations",
+          "tool_intent": "retrieves the status of the latest pipeline for a given branch",
+          "expected_tool_key": "CircleCI::get_latest_pipeline_status"
+        },
+        {
+          "server_intent": "CircleCI operations",
+          "tool_intent": "identifies flaky tests in a CircleCI project by analyzing test execution history",
+          "expected_tool_key": "CircleCI::find_flaky_tests"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0041",
+      "description": "Cross-application chain (5 hops), case 41",
+      "hops": [
+        {
+          "server_intent": "Codacy operations",
+          "tool_intent": "lists and filters code quality issues in a repository",
+          "expected_tool_key": "Codacy::codacy_list_repository_issues"
+        },
+        {
+          "server_intent": "Codacy operations",
+          "tool_intent": "get repository with analysis information, including metrics for Grade, Issues, Duplication, Complexity, and Coverage",
+          "expected_tool_key": "Codacy::codacy_get_repository_with_analysis"
+        },
+        {
+          "server_intent": "CodeLogic operations",
+          "tool_intent": "analyzes impacts between code and database entities",
+          "expected_tool_key": "CodeLogic::codelogic-database-impact"
+        },
+        {
+          "server_intent": "CodeLogic operations",
+          "tool_intent": "pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class",
+          "expected_tool_key": "CodeLogic::codelogic-method-impact"
+        },
+        {
+          "server_intent": "Comet Opik operations",
+          "tool_intent": "track and analyze trace data",
+          "expected_tool_key": "Comet Opik::Traces"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0042",
+      "description": "Cross-application chain (5 hops), case 42",
+      "hops": [
+        {
+          "server_intent": "Comet Opik operations",
+          "tool_intent": "organize and manage projects",
+          "expected_tool_key": "Comet Opik::Projects/Workspaces Management"
+        },
+        {
+          "server_intent": "Couchbase operations",
+          "tool_intent": "delete a document by ID from a specified scope and collection",
+          "expected_tool_key": "Couchbase::delete_document_by_id"
+        },
+        {
+          "server_intent": "Couchbase operations",
+          "tool_intent": "get a document by ID from a specified scope and collection",
+          "expected_tool_key": "Couchbase::get_document_by_id"
+        },
+        {
+          "server_intent": "Dart operations",
+          "tool_intent": "get information about the user's space, including available assignees, dartboards, folders, statuses, tags, priorities, and sizes",
+          "expected_tool_key": "Dart::get_config"
+        },
+        {
+          "server_intent": "Dart operations",
+          "tool_intent": "create a new doc with title, text content, and folder",
+          "expected_tool_key": "Dart::create_doc"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0043",
+      "description": "Cross-application chain (5 hops), case 43",
+      "hops": [
+        {
+          "server_intent": "DevHub operations",
+          "tool_intent": "updates an existing blog post's title and/or content",
+          "expected_tool_key": "DevHub::update_blog_post"
+        },
+        {
+          "server_intent": "DevHub operations",
+          "tool_intent": "gets all locations for a specific business",
+          "expected_tool_key": "DevHub::get_locations"
+        },
+        {
+          "server_intent": "Dynatrace operations",
+          "tool_intent": "sends Slack messages using the Slack Connector",
+          "expected_tool_key": "Dynatrace::send_slack_message"
+        },
+        {
+          "server_intent": "Dynatrace operations",
+          "tool_intent": "lists problem details from your services, such as Kubernetes",
+          "expected_tool_key": "Dynatrace::list_problems"
+        },
+        {
+          "server_intent": "EduBase operations",
+          "tool_intent": "retrieves user information from the EduBase platform",
+          "expected_tool_key": "EduBase::edubase_get_user"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0044",
+      "description": "Cross-application chain (5 hops), case 44",
+      "hops": [
+        {
+          "server_intent": "Elasticsearch index alias operations",
+          "tool_intent": "delete an alias from an Elasticsearch index",
+          "expected_tool_key": "Elasticsearch::delete_alias"
+        },
+        {
+          "server_intent": "Elasticsearch document operations",
+          "tool_intent": "get an Elasticsearch document by id from an index",
+          "expected_tool_key": "Elasticsearch::get_document"
+        },
+        {
+          "server_intent": "Exa operations",
+          "tool_intent": "specialized search focused on academic papers and research content",
+          "expected_tool_key": "Exa::research_paper_search"
+        },
+        {
+          "server_intent": "Exa operations",
+          "tool_intent": "performs real-time web searches with optimized results and content extraction",
+          "expected_tool_key": "Exa::web_search_exa"
+        },
+        {
+          "server_intent": "Fibery operations",
+          "tool_intent": "retrieves a list of all databases available in your Fibery workspace",
+          "expected_tool_key": "Fibery::list_databases"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0045",
+      "description": "Cross-application chain (5 hops), case 45",
+      "hops": [
+        {
+          "server_intent": "Fibery operations",
+          "tool_intent": "provides a detailed breakdown of a specific database's structure, showing all fields with their titles, names, and types",
+          "expected_tool_key": "Fibery::describe_database"
+        },
+        {
+          "server_intent": "Firecrawl operations",
+          "tool_intent": "start an asynchronous crawl with advanced options",
+          "expected_tool_key": "Firecrawl::firecrawl_crawl"
+        },
+        {
+          "server_intent": "Firecrawl operations",
+          "tool_intent": "search the web and optionally extract content from search results",
+          "expected_tool_key": "Firecrawl::firecrawl_search"
+        },
+        {
+          "server_intent": "Gitee operations",
+          "tool_intent": "comment on an issue",
+          "expected_tool_key": "Gitee::comment_issue"
+        },
+        {
+          "server_intent": "Gitee operations",
+          "tool_intent": "create a pull request",
+          "expected_tool_key": "Gitee::create_pull"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0046",
+      "description": "Cross-application chain (5 hops), case 46",
+      "hops": [
+        {
+          "server_intent": "Grafana operations",
+          "tool_intent": "list schedules from Grafana OnCall",
+          "expected_tool_key": "Grafana::list_oncall_schedules"
+        },
+        {
+          "server_intent": "Grafana operations",
+          "tool_intent": "list available metric names",
+          "expected_tool_key": "Grafana::list_prometheus_metric_names"
+        },
+        {
+          "server_intent": "GreptimeDB operations",
+          "tool_intent": "gets a prompt by name",
+          "expected_tool_key": "GreptimeDB::get_prompt"
+        },
+        {
+          "server_intent": "GreptimeDB operations",
+          "tool_intent": "lists tables in the database",
+          "expected_tool_key": "GreptimeDB::list_resources"
+        },
+        {
+          "server_intent": "Heroku operations",
+          "tool_intent": "list all add-ons for all apps or for a specific app",
+          "expected_tool_key": "Heroku::list_addons"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0047",
+      "description": "Cross-application chain (5 hops), case 47",
+      "hops": [
+        {
+          "server_intent": "Heroku operations",
+          "tool_intent": "view application logs",
+          "expected_tool_key": "Heroku::get_app_logs"
+        },
+        {
+          "server_intent": "Hologres operations",
+          "tool_intent": "execute a DML (INSERT, UPDATE, DELETE) SQL query on the Hologres server",
+          "expected_tool_key": "Hologres::execute_dml_sql"
+        },
+        {
+          "server_intent": "Hologres operations",
+          "tool_intent": "collect table statistics",
+          "expected_tool_key": "Hologres::gather_table_statistics"
+        },
+        {
+          "server_intent": "Hyperbrowser operations",
+          "tool_intent": "complex browser tasks using Claude computer use",
+          "expected_tool_key": "Hyperbrowser::claude_computer_use_agent"
+        },
+        {
+          "server_intent": "Hyperbrowser operations",
+          "tool_intent": "fast, lightweight browser automation with the Browser Use agent",
+          "expected_tool_key": "Hyperbrowser::browser_use_agent"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0048",
+      "description": "Cross-application chain (5 hops), case 48",
+      "hops": [
+        {
+          "server_intent": "Inkeep operations",
+          "tool_intent": "retrieves product documentation about Inkeep",
+          "expected_tool_key": "Inkeep::search-product-content"
+        },
+        {
+          "server_intent": "Kagi Search operations",
+          "tool_intent": "performs a web search to find information based on the query provided",
+          "expected_tool_key": "Kagi Search::search"
+        },
+        {
+          "server_intent": "Kagi Search operations",
+          "tool_intent": "generates a summary of the content, such as a video, based on the URL provided",
+          "expected_tool_key": "Kagi Search::summarizer"
+        },
+        {
+          "server_intent": "Keboola operations",
+          "tool_intent": "gets detailed information about a specific table including its DB identifier and column information",
+          "expected_tool_key": "Keboola::get_table_detail"
+        },
+        {
+          "server_intent": "Keboola operations",
+          "tool_intent": "retrieves detailed information about a specific job, identified by the job_id, including its status, parameters, results, and any relevant metadata",
+          "expected_tool_key": "Keboola::get_job_detail"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0049",
+      "description": "Cross-application chain (5 hops), case 49",
+      "hops": [
+        {
+          "server_intent": "Redis operations",
+          "tool_intent": "tools to store field-value pairs within a single key",
+          "expected_tool_key": "Redis::hash"
+        },
+        {
+          "server_intent": "Redis operations",
+          "tool_intent": "tools to add, remove and list set members",
+          "expected_tool_key": "Redis::set"
+        },
+        {
+          "server_intent": "Stripe operations",
+          "tool_intent": "creates a new invoice in Stripe",
+          "expected_tool_key": "Stripe::createInvoice"
+        },
+        {
+          "server_intent": "Stripe operations",
+          "tool_intent": "lists all subscriptions in Stripe",
+          "expected_tool_key": "Stripe::listSubscriptions"
+        },
+        {
+          "server_intent": "Airtable operations",
+          "tool_intent": "lists records from a specified Airtable table",
+          "expected_tool_key": "Airtable::list_records"
+        }
+      ]
+    },
+    {
+      "id": "multi_hop-medium_250-cross_app-0050",
+      "description": "Cross-application chain (5 hops), case 50",
+      "hops": [
+        {
+          "server_intent": "Airtable operations",
+          "tool_intent": "search for records containing specific text",
+          "expected_tool_key": "Airtable::search_records"
+        },
+        {
+          "server_intent": "Chess.com operations",
+          "tool_intent": "get a player's profile from Chess.com",
+          "expected_tool_key": "Chess.com::get_player_profile"
+        },
+        {
+          "server_intent": "Chess.com operations",
+          "tool_intent": "get a player's stats from Chess.com",
+          "expected_tool_key": "Chess.com::get_player_stats"
+        },
+        {
+          "server_intent": "Datadog operations",
+          "tool_intent": "fetch events within a time range",
+          "expected_tool_key": "Datadog::get-events"
+        },
+        {
+          "server_intent": "Datadog operations",
+          "tool_intent": "get metadata for a specific metric",
+          "expected_tool_key": "Datadog::get-metric-metadata"
+        }
+      ]
+    }
+  ]
+}

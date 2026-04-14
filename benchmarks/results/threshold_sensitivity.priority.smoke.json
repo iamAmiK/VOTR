@@ -1,0 +1,99 @@
+{
+  "suite_paths": [
+    "benchmarks\\functional_correctness\\ambiguity_collision.priority.json",
+    "benchmarks\\functional_correctness\\robustness_safety.priority.json"
+  ],
+  "num_steps_total": 34,
+  "num_steps_dev": 8,
+  "num_steps_test": 26,
+  "current_config": {
+    "handoff_gap_high": 0.0010426450507904708,
+    "handoff_gap_medium": 0.000836960501159334,
+    "test_metrics": {
+      "num_steps": 26,
+      "handoff_accuracy": 0.9230769230769231,
+      "avg_recommended_k": 3.0,
+      "bucket_counts": {
+        "high": 11,
+        "medium": 4,
+        "low": 11
+      },
+      "top1_precision_by_bucket": {
+        "high": 0.8181818181818182,
+        "medium": 1.0,
+        "low": 0.6363636363636364
+      },
+      "by_suite": {
+        "ambiguity_collision.priority": {
+          "num_steps": 14,
+          "handoff_accuracy": 0.9285714285714286,
+          "avg_recommended_k": 3.0
+        },
+        "robustness_safety.priority": {
+          "num_steps": 12,
+          "handoff_accuracy": 0.9166666666666666,
+          "avg_recommended_k": 3.0
+        }
+      }
+    }
+  },
+  "recommended_from_dev": {
+    "handoff_gap_high": 0.0010133717914819138,
+    "handoff_gap_medium": 0.0006213643574828134,
+    "constraints_ok": true,
+    "dev_metrics": {
+      "num_steps": 8,
+      "handoff_accuracy": 0.75,
+      "avg_recommended_k": 2.5,
+      "bucket_counts": {
+        "high": 4,
+        "medium": 2,
+        "low": 2
+      },
+      "top1_precision_by_bucket": {
+        "high": 1.0,
+        "medium": 1.0,
+        "low": 0.0
+      },
+      "by_suite": {
+        "ambiguity_collision.priority": {
+          "num_steps": 4,
+          "handoff_accuracy": 1.0,
+          "avg_recommended_k": 1.0
+        },
+        "robustness_safety.priority": {
+          "num_steps": 4,
+          "handoff_accuracy": 0.5,
+          "avg_recommended_k": 4.0
+        }
+      }
+    },
+    "test_metrics": {
+      "num_steps": 26,
+      "handoff_accuracy": 0.9230769230769231,
+      "avg_recommended_k": 2.769230769230769,
+      "bucket_counts": {
+        "high": 11,
+        "medium": 7,
+        "low": 8
+      },
+      "top1_precision_by_bucket": {
+        "high": 0.8181818181818182,
+        "medium": 1.0,
+        "low": 0.5
+      },
+      "by_suite": {
+        "ambiguity_collision.priority": {
+          "num_steps": 14,
+          "handoff_accuracy": 0.9285714285714286,
+          "avg_recommended_k": 2.5714285714285716
+        },
+        "robustness_safety.priority": {
+          "num_steps": 12,
+          "handoff_accuracy": 0.9166666666666666,
+          "avg_recommended_k": 3.0
+        }
+      }
+    }
+  }
+}

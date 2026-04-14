@@ -1,0 +1,1421 @@
+{
+  "suite": "single_tool.medium_50.tool_only_query.ablation",
+  "summary": {
+    "num_items": 88,
+    "top1_accuracy": 0.9318181818181818,
+    "top3_accuracy": 0.9318181818181818,
+    "top5_accuracy": 0.9318181818181818,
+    "handoff_accuracy_at_recommended_k": 0.9318181818181818,
+    "avg_recommended_handoff_k": 2.7045454545454546
+  },
+  "results": [
+    {
+      "id": "st-clean-001",
+      "expected_tool_key": "AgentQL::extract-web-data",
+      "predicted_topk": [
+        "AgentQL::extract-web-data",
+        "GreptimeDB::get_prompt",
+        "GreptimeDB::read_resource",
+        "Redis::hash",
+        "GreptimeDB::list_prompts"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-002",
+      "expected_tool_key": "Aiven::list_projects",
+      "predicted_topk": [
+        "Aiven::list_projects",
+        "Aiven::list_services",
+        "Aiven::get_service_details",
+        "Axiom::listDatasets",
+        "Keboola::retrieve_buckets"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-003",
+      "expected_tool_key": "Aiven::list_services",
+      "predicted_topk": [
+        "Aiven::list_services",
+        "Aiven::get_service_details",
+        "Aiven::list_projects",
+        "Keboola::retrieve_bucket_tables",
+        "Keboola::retrieve_jobs"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-010",
+      "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic",
+      "predicted_topk": [
+        "APIMatic MCP::validate-openapi-using-apimatic",
+        "GitHub::create_or_update_file",
+        "GitHub::get_pull_request_status",
+        "GitHub::create_pull_request_review",
+        "GitHub::get_pull_request_reviews"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-011",
+      "expected_tool_key": "Arize Phoenix::arize-phoenix-otel",
+      "predicted_topk": [
+        "Arize Phoenix::arize-phoenix-otel",
+        "Arize Phoenix::arize-phoenix-client",
+        "Arize Phoenix::@arizeai/phoenix-mcp",
+        "Arize Phoenix::@arizeai/phoenix-client",
+        "Arize Phoenix::arize-phoenix-evals"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-012",
+      "expected_tool_key": "Arize Phoenix::@arizeai/phoenix-mcp",
+      "predicted_topk": [
+        "Arize Phoenix::@arizeai/phoenix-mcp",
+        "Arize Phoenix::@arizeai/phoenix-client",
+        "Arize Phoenix::arize-phoenix-client",
+        "Arize Phoenix::arize-phoenix-otel",
+        "Arize Phoenix::arize-phoenix-evals"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-013",
+      "expected_tool_key": "Astra DB::UpdateCollection",
+      "predicted_topk": [
+        "Astra DB::UpdateCollection",
+        "Astra DB::UpdateRecord",
+        "Astra DB::CreateCollection",
+        "Astra DB::DeleteCollection",
+        "Astra DB::ListRecords"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-014",
+      "expected_tool_key": "Astra DB::DeleteCollection",
+      "predicted_topk": [
+        "Astra DB::DeleteCollection",
+        "Astra DB::DeleteRecord",
+        "Astra DB::ListRecords",
+        "Astra DB::UpdateCollection",
+        "Astra DB::CreateCollection"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-015",
+      "expected_tool_key": "Audiense Insights::get-baselines",
+      "predicted_topk": [
+        "Audiense Insights::get-baselines",
+        "Audiense Insights::compare-audience-influencers",
+        "Keboola::retrieve_transformations",
+        "Audiense Insights::get-categories",
+        "Keboola::retrieve_components"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-016",
+      "expected_tool_key": "Audiense Insights::get-categories",
+      "predicted_topk": [
+        "Audiense Insights::get-categories",
+        "Audiense Insights::compare-audience-influencers",
+        "Audiense Insights::get-reports",
+        "Audiense Insights::get-baselines",
+        "Audiense Insights::get-audience-content"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-017",
+      "expected_tool_key": "AWS::s3_bucket_list",
+      "predicted_topk": [
+        "AWS::GitHub Repository Search in AWS Organizations",
+        "Aiven::list_projects",
+        "AWS::Search Documentation",
+        "AWS::Analyze and Visualize Costs",
+        "AWS::AWS and AWSCC Provider Documentation"
+      ],
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": false
+    },
+    {
+      "id": "st-clean-018",
+      "expected_tool_key": "AWS::Get Content Recommendations",
+      "predicted_topk": [
+        "AWS::Get Content Recommendations",
+        "AWS::Search Documentation",
+        "AWS::AWS and AWSCC Provider Documentation",
+        "AWS::Convert Documentation to Markdown",
+        "AWS::CDK Construct Recommendations"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-019",
+      "expected_tool_key": "Axiom::queryApl",
+      "predicted_topk": [
+        "Axiom::queryApl",
+        "Axiom::listDatasets",
+        "Arize Phoenix::@arizeai/phoenix-client",
+        "Arize Phoenix::arize-phoenix-evals",
+        "Arize Phoenix::arize-phoenix-client"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-020",
+      "expected_tool_key": "Axiom::listDatasets",
+      "predicted_topk": [
+        "Axiom::listDatasets",
+        "Axiom::queryApl",
+        "Fibery::list_databases",
+        "Arize Phoenix::@arizeai/phoenix-client",
+        "Arize Phoenix::arize-phoenix-evals"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-021",
+      "expected_tool_key": "Azure::Sample rows from a Kusto table",
+      "predicted_topk": [
+        "Azure::Sample rows from a Kusto table",
+        "Azure::Get schema for a Kusto table",
+        "Azure::List tables in a Kusto database",
+        "Azure::List databases in a Kusto cluster",
+        "Azure::Query Kusto databases using KQL"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-022",
+      "expected_tool_key": "Azure::List, create, and get keys",
+      "predicted_topk": [
+        "Azure::List, create, and get keys",
+        "Azure::List, get configuration and get parameters for servers",
+        "Azure::List and query databases",
+        "Azure::List and query databases",
+        "Azure::List and query Storage tables"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-025",
+      "expected_tool_key": "Bitrise::list_installable_artifacts",
+      "predicted_topk": [
+        "Bitrise::list_installable_artifacts",
+        "Bitrise::list_connected_apps",
+        "Bitrise::create_connected_app",
+        "Bitrise::create_tester_group",
+        "Bitrise::get_connected_app"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-026",
+      "expected_tool_key": "Bitrise::set_installable_artifact_public_install_page",
+      "predicted_topk": [
+        "Bitrise::set_installable_artifact_public_install_page",
+        "Bitrise::generate_installable_artifact_upload_url",
+        "Bitrise::get_installable_artifact_upload_and_processing_status",
+        "Bitrise::list_installable_artifacts",
+        "Bitrise::list_build_distribution_versions"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-027",
+      "expected_tool_key": "Box::box_hubs_ask_ai_tool",
+      "predicted_topk": [
+        "Box::box_hubs_ask_ai_tool",
+        "Box::box_ask_ai_tool",
+        "Box::box_download_file_tool",
+        "Box::box_search_tool",
+        "Box::box_docgen_template_create_tool"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-028",
+      "expected_tool_key": "Box::box_docgen_template_list_jobs_tool",
+      "predicted_topk": [
+        "Box::box_docgen_template_list_jobs_tool",
+        "Box::box_docgen_list_jobs_by_batch_tool",
+        "Box::box_docgen_list_jobs_tool",
+        "Box::box_docgen_template_get_by_id_tool",
+        "Box::box_docgen_template_list_tags_tool"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-029",
+      "expected_tool_key": "Chroma::read_document",
+      "predicted_topk": [
+        "Chroma::chroma_peek_collection",
+        "Chroma::chroma_get_documents",
+        "Couchbase::get_document_by_id",
+        "Chroma::chroma_delete_documents",
+        "Chroma::chroma_delete_collection"
+      ],
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": false
+    },
+    {
+      "id": "st-clean-030",
+      "expected_tool_key": "Chroma::chroma_update_documents",
+      "predicted_topk": [
+        "Chroma::chroma_update_documents",
+        "Chroma::chroma_modify_collection",
+        "Chroma::chroma_add_documents",
+        "Chroma::chroma_get_documents",
+        "Chroma::chroma_delete_documents"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-031",
+      "expected_tool_key": "CircleCI::get_latest_pipeline_status",
+      "predicted_topk": [
+        "CircleCI::get_latest_pipeline_status",
+        "GitHub::get_pull_request_status",
+        "Bitrise::get_pipeline",
+        "GitHub::update_pull_request_branch",
+        "GitHub::list_commits"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-032",
+      "expected_tool_key": "CircleCI::find_flaky_tests",
+      "predicted_topk": [
+        "CircleCI::find_flaky_tests",
+        "CircleCI::get_job_test_results",
+        "CircleCI::get_build_failure_logs",
+        "CircleCI::get_latest_pipeline_status",
+        "CircleCI::config_helper"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-035",
+      "expected_tool_key": "Codacy::codacy_list_repository_issues",
+      "predicted_topk": [
+        "Codacy::codacy_list_repository_issues",
+        "Codacy::codacy_get_file_issues",
+        "Codacy::codacy_search_repository_srm_items",
+        "Codacy::codacy_get_file_clones",
+        "Codacy::codacy_list_files"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-036",
+      "expected_tool_key": "Codacy::codacy_get_repository_with_analysis",
+      "predicted_topk": [
+        "Codacy::codacy_get_repository_with_analysis",
+        "Codacy::codacy_get_file_with_analysis",
+        "Codacy::codacy_list_repository_tools",
+        "Codacy::codacy_get_file_clones",
+        "Codacy::codacy_list_repository_issues"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-037",
+      "expected_tool_key": "CodeLogic::codelogic-database-impact",
+      "predicted_topk": [
+        "CodeLogic::codelogic-database-impact",
+        "CodeLogic::codelogic-method-impact",
+        "Codacy::codacy_list_tools",
+        "Fibery::update_entity",
+        "Codacy::codacy_list_repository_issues"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-038",
+      "expected_tool_key": "CodeLogic::codelogic-method-impact",
+      "predicted_topk": [
+        "CodeLogic::codelogic-method-impact",
+        "CodeLogic::codelogic-database-impact",
+        "Codacy::codacy_list_repository_issues",
+        "Codacy::codacy_list_repository_pull_requests",
+        "Codacy::codacy_get_file_clones"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-039",
+      "expected_tool_key": "Comet Opik::Traces",
+      "predicted_topk": [
+        "Comet Opik::Traces",
+        "Comet Opik::Metrics",
+        "Axiom::queryApl",
+        "Comet Opik::Projects/Workspaces Management",
+        "Comet Opik::Prompts Management"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-040",
+      "expected_tool_key": "Comet Opik::Projects/Workspaces Management",
+      "predicted_topk": [
+        "Comet Opik::Projects/Workspaces Management",
+        "Aiven::list_projects",
+        "Aiven::list_services",
+        "Aiven::get_service_details",
+        "Docker::recreate_container"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-041",
+      "expected_tool_key": "Couchbase::delete_document_by_id",
+      "predicted_topk": [
+        "Couchbase::delete_document_by_id",
+        "Couchbase::get_document_by_id",
+        "Couchbase::upsert_document_by_id",
+        "Astra DB::GetRecord",
+        "Astra DB::DeleteRecord"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-042",
+      "expected_tool_key": "Couchbase::get_document_by_id",
+      "predicted_topk": [
+        "Couchbase::get_document_by_id",
+        "Couchbase::delete_document_by_id",
+        "Couchbase::upsert_document_by_id",
+        "Astra DB::GetRecord",
+        "Couchbase::run_sqlpp_query"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-043",
+      "expected_tool_key": "Dart::get_config",
+      "predicted_topk": [
+        "Dart::get_config",
+        "Dart::create_task",
+        "Heroku::get_app_info",
+        "Box::box_who_am_i",
+        "Heroku::get_addon_info"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-044",
+      "expected_tool_key": "Dart::create_doc",
+      "predicted_topk": [
+        "Dart::create_doc",
+        "Dart::list_docs",
+        "Dart::create_task",
+        "Astra DB::CreateRecord",
+        "Astra DB::CreateCollection"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-045",
+      "expected_tool_key": "DevHub::update_blog_post",
+      "predicted_topk": [
+        "DevHub::update_blog_post",
+        "DevHub::get_blog_post",
+        "DevHub::create_blog_post",
+        "DevHub::update_hours",
+        "DevHub::upload_image"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-046",
+      "expected_tool_key": "DevHub::get_locations",
+      "predicted_topk": [
+        "DevHub::get_locations",
+        "DevHub::get_businesses",
+        "DevHub::get_hours_of_operation",
+        "DevHub::site_from_url",
+        "DevHub::update_hours"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-047",
+      "expected_tool_key": "Dynatrace::send_slack_message",
+      "predicted_topk": [
+        "Dynatrace::send_slack_message",
+        "Dynatrace::set_up_notification_workflow",
+        "Discord::send-message",
+        "Talk To Figma::set_default_connector",
+        "Discord::read-messages"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-048",
+      "expected_tool_key": "Dynatrace::list_problems",
+      "predicted_topk": [
+        "Dynatrace::list_problems",
+        "Dynatrace::get_security_problems",
+        "Aiven::list_services",
+        "Grafana::get_oncall_shift",
+        "Aiven::list_projects"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-049",
+      "expected_tool_key": "EduBase::edubase_get_user",
+      "predicted_topk": [
+        "EduBase::edubase_get_user",
+        "Keboola::retrieve_buckets",
+        "Keboola::get_job_detail",
+        "Keboola::query_table",
+        "Keboola::get_table_detail"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-050",
+      "expected_tool_key": "Elasticsearch::delete_alias",
+      "predicted_topk": [
+        "Elasticsearch::get_mappings",
+        "Elasticsearch::search",
+        "Astra DB::DeleteCollection",
+        "Chroma::chroma_delete_documents",
+        "Astra DB::DeleteRecord"
+      ],
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": false
+    },
+    {
+      "id": "st-clean-051",
+      "expected_tool_key": "Elasticsearch::get_document",
+      "predicted_topk": [
+        "Couchbase::get_document_by_id",
+        "Elasticsearch::search",
+        "Elasticsearch::get_mappings",
+        "Dart::get_doc",
+        "Couchbase::delete_document_by_id"
+      ],
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": false
+    },
+    {
+      "id": "st-clean-054",
+      "expected_tool_key": "Exa::research_paper_search",
+      "predicted_topk": [
+        "Exa::research_paper_search",
+        "Exa::company_research",
+        "Box::box_search_tool",
+        "Heroku::get_addon_info",
+        "Exa::web_search_exa"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-055",
+      "expected_tool_key": "Exa::web_search_exa",
+      "predicted_topk": [
+        "Exa::web_search_exa",
+        "Exa::github_search",
+        "Exa::research_paper_search",
+        "Exa::crawling",
+        "Exa::company_research"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-058",
+      "expected_tool_key": "Fibery::list_databases",
+      "predicted_topk": [
+        "Fibery::list_databases",
+        "Fibery::describe_database",
+        "Fibery::create_entity",
+        "Fibery::update_entity",
+        "Fibery::query_database"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-059",
+      "expected_tool_key": "Fibery::describe_database",
+      "predicted_topk": [
+        "Fibery::describe_database",
+        "Keboola::retrieve_bucket_tables",
+        "Keboola::get_table_detail",
+        "Keboola::create_sql_transformation",
+        "Keboola::get_bucket_detail"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-062",
+      "expected_tool_key": "Firecrawl::firecrawl_crawl",
+      "predicted_topk": [
+        "Firecrawl::firecrawl_crawl",
+        "Firecrawl::firecrawl_scrape",
+        "Firecrawl::firecrawl_extract",
+        "Firecrawl::firecrawl_batch_scrape",
+        "Firecrawl::firecrawl_check_batch_status"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-063",
+      "expected_tool_key": "Firecrawl::firecrawl_search",
+      "predicted_topk": [
+        "Firecrawl::firecrawl_search",
+        "Firecrawl::firecrawl_extract",
+        "Exa::web_search_exa",
+        "Firecrawl::firecrawl_scrape",
+        "Firecrawl::firecrawl_deep_research"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-064",
+      "expected_tool_key": "Gitee::comment_issue",
+      "predicted_topk": [
+        "Gitee::comment_issue",
+        "Gitee::list_issue_comments",
+        "GitHub::add_issue_comment",
+        "Gitee::comment_pull",
+        "Gitee::create_issue"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-065",
+      "expected_tool_key": "Gitee::create_pull",
+      "predicted_topk": [
+        "Gitee::create_pull",
+        "Gitee::merge_pull",
+        "Gitee::update_pull",
+        "Gitee::comment_pull",
+        "Gitee::create_release"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-070",
+      "expected_tool_key": "Grafana::list_oncall_schedules",
+      "predicted_topk": [
+        "Grafana::list_oncall_schedules",
+        "Grafana::list_oncall_teams",
+        "Grafana::list_oncall_users",
+        "Grafana::list_incidents",
+        "Grafana::list_datasources"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-071",
+      "expected_tool_key": "Grafana::list_prometheus_metric_names",
+      "predicted_topk": [
+        "Grafana::list_prometheus_metric_names",
+        "Grafana::list_loki_label_names",
+        "Grafana::list_prometheus_metric_metadata",
+        "Grafana::list_prometheus_label_names",
+        "Grafana::query_loki_logs"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-074",
+      "expected_tool_key": "GreptimeDB::get_prompt",
+      "predicted_topk": [
+        "GreptimeDB::get_prompt",
+        "Airtable::get_record",
+        "Airtable::update_field",
+        "Airtable::update_table",
+        "Airtable::describe_table"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-075",
+      "expected_tool_key": "GreptimeDB::list_resources",
+      "predicted_topk": [
+        "GreptimeDB::list_resources",
+        "Airtable::list_tables",
+        "Astra DB::GetCollections",
+        "Astra DB::ListRecords",
+        "Airtable::list_bases"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-076",
+      "expected_tool_key": "Heroku::list_addons",
+      "predicted_topk": [
+        "Heroku::list_addons",
+        "Heroku::list_apps",
+        "Heroku::ps_list",
+        "Heroku::create_addon",
+        "Heroku::get_addon_info"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-077",
+      "expected_tool_key": "Heroku::get_app_logs",
+      "predicted_topk": [
+        "Heroku::get_app_logs",
+        "Heroku::pg_ps",
+        "Heroku::pg_locks",
+        "Bitrise::register_webhook",
+        "Datadog::search-logs"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-078",
+      "expected_tool_key": "Hologres::execute_dml_sql",
+      "predicted_topk": [
+        "Hologres::execute_dml_sql",
+        "Hologres::execute_select_sql",
+        "Hologres::execute_ddl_sql",
+        "Hologres::get_query_plan",
+        "Hologres::get_execution_plan"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-079",
+      "expected_tool_key": "Hologres::gather_table_statistics",
+      "predicted_topk": [
+        "Hologres::gather_table_statistics",
+        "Hologres::get_execution_plan",
+        "Hologres::get_query_plan",
+        "Hologres::execute_select_sql",
+        "Hologres::execute_dml_sql"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-080",
+      "expected_tool_key": "Hyperbrowser::claude_computer_use_agent",
+      "predicted_topk": [
+        "Hyperbrowser::claude_computer_use_agent",
+        "Hyperbrowser::browser_use_agent",
+        "Hyperbrowser::openai_computer_use_agent",
+        "Hyperbrowser::list_profiles",
+        "Hyperbrowser::create_profile"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-081",
+      "expected_tool_key": "Hyperbrowser::browser_use_agent",
+      "predicted_topk": [
+        "Hyperbrowser::browser_use_agent",
+        "Hyperbrowser::claude_computer_use_agent",
+        "Hyperbrowser::openai_computer_use_agent",
+        "Hyperbrowser::create_profile",
+        "Hyperbrowser::search_with_bing"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-084",
+      "expected_tool_key": "Inkeep::search-product-content",
+      "predicted_topk": [
+        "Inkeep::search-product-content",
+        "Stripe::createProduct",
+        "Keboola::retrieve_buckets",
+        "Keboola::get_job_detail",
+        "Keboola::docs_query"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-085",
+      "expected_tool_key": "Kagi Search::search",
+      "predicted_topk": [
+        "Kagi Search::search",
+        "Kagi Search::summarizer",
+        "Exa::web_search_exa",
+        "Exa::wikipedia_search_exa",
+        "Exa::research_paper_search"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-086",
+      "expected_tool_key": "Kagi Search::summarizer",
+      "predicted_topk": [
+        "Kagi Search::summarizer",
+        "Kagi Search::search",
+        "Box::box_read_tool",
+        "Box::box_upload_file_from_content_tool",
+        "Box::box_docgen_template_create_tool"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-087",
+      "expected_tool_key": "Keboola::get_table_detail",
+      "predicted_topk": [
+        "Keboola::get_table_detail",
+        "Keboola::get_bucket_detail",
+        "Keboola::get_job_detail",
+        "Keboola::get_component_details",
+        "Keboola::retrieve_buckets"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-088",
+      "expected_tool_key": "Keboola::get_job_detail",
+      "predicted_topk": [
+        "Keboola::get_job_detail",
+        "Keboola::get_table_detail",
+        "Keboola::retrieve_components",
+        "Keboola::get_bucket_detail",
+        "Keboola::retrieve_jobs"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-118",
+      "expected_tool_key": "Redis::hash",
+      "predicted_topk": [
+        "Redis::hash",
+        "Astra DB::FindRecord",
+        "Redis::JSON",
+        "Airtable::create_field",
+        "Airtable::update_field"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-119",
+      "expected_tool_key": "Redis::set",
+      "predicted_topk": [
+        "Redis::set",
+        "Heroku::list_addons",
+        "Box::box_docgen_template_delete_tool",
+        "Box::box_docgen_list_jobs_by_batch_tool",
+        "Redis::streams"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-138",
+      "expected_tool_key": "Stripe::createInvoice",
+      "predicted_topk": [
+        "Stripe::createInvoice",
+        "Stripe::createInvoiceItem",
+        "Stripe::createProduct",
+        "Stripe::createCustomer",
+        "Stripe::createPrice"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-139",
+      "expected_tool_key": "Stripe::listSubscriptions",
+      "predicted_topk": [
+        "Stripe::listSubscriptions",
+        "Stripe::listProducts",
+        "Stripe::listPrices",
+        "Stripe::listCustomers",
+        "Stripe::listCoupons"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-158",
+      "expected_tool_key": "Airtable::list_records",
+      "predicted_topk": [
+        "Airtable::list_records",
+        "Airtable::delete_records",
+        "Airtable::update_records",
+        "Airtable::create_record",
+        "Airtable::list_bases"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-159",
+      "expected_tool_key": "Airtable::search_records",
+      "predicted_topk": [
+        "Airtable::search_records",
+        "Airtable::get_record",
+        "Airtable::list_tables",
+        "Airtable::describe_table",
+        "Chess.com::get_player_games_by_month"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-194",
+      "expected_tool_key": "Chess.com::get_player_profile",
+      "predicted_topk": [
+        "Chess.com::get_player_profile",
+        "Chess.com::get_player_stats",
+        "Chess.com::get_player_current_games",
+        "Chess.com::get_titled_players",
+        "Chess.com::get_player_games_by_month"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-195",
+      "expected_tool_key": "Chess.com::get_player_stats",
+      "predicted_topk": [
+        "Chess.com::get_player_stats",
+        "Chess.com::get_player_profile",
+        "Chess.com::get_player_current_games",
+        "Chess.com::get_titled_players",
+        "Chess.com::get_player_games_by_month"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-220",
+      "expected_tool_key": "Datadog::get-events",
+      "predicted_topk": [
+        "Datadog::get-events",
+        "Datadog::get-monitors",
+        "Dynatrace::execute_dql",
+        "Datadog::get-metric-metadata",
+        "Datadog::get-dashboard"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-221",
+      "expected_tool_key": "Datadog::get-metric-metadata",
+      "predicted_topk": [
+        "Datadog::get-metric-metadata",
+        "Grafana::list_prometheus_metric_metadata",
+        "Grafana::list_prometheus_metric_names",
+        "Datadog::get-dashboard",
+        "Datadog::get-monitor"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-240",
+      "expected_tool_key": "Discord::delete_channel",
+      "predicted_topk": [
+        "Discord::send-message",
+        "Discord::read-messages",
+        "Telegram::leave_chat",
+        "Telegram::create_channel",
+        "Telegram::delete_chat_photo"
+      ],
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": false
+    },
+    {
+      "id": "st-clean-241",
+      "expected_tool_key": "Discord::send_private_message",
+      "predicted_topk": [
+        "Discord::send-message",
+        "Telegram::send_message",
+        "Discord::read-messages",
+        "Telegram::get_direct_chat_by_contact",
+        "Telegram::block_user"
+      ],
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": false
+    },
+    {
+      "id": "st-clean-243",
+      "expected_tool_key": "Docker::create_network",
+      "predicted_topk": [
+        "Docker::create_network",
+        "Docker::create_volume",
+        "Docker::remove_network",
+        "Docker::create_container",
+        "Docker::build_image"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-244",
+      "expected_tool_key": "Docker::create_volume",
+      "predicted_topk": [
+        "Docker::create_volume",
+        "Docker::create_network",
+        "Docker::remove_volume",
+        "Docker::create_container",
+        "Docker::build_image"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-265",
+      "expected_tool_key": "Git::git_list_repositories",
+      "predicted_topk": [
+        "Git::git_list_repositories",
+        "Git::git_init",
+        "Git::git_log",
+        "Git::git_status",
+        "Git::git_show"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-266",
+      "expected_tool_key": "Git::git_create_branch",
+      "predicted_topk": [
+        "Git::git_create_branch",
+        "GitHub::create_branch",
+        "GitHub::update_pull_request_branch",
+        "GitHub::list_commits",
+        "GitHub::create_pull_request"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-301",
+      "expected_tool_key": "HubSpot::hubspot_get_recent_conversations",
+      "predicted_topk": [
+        "HubSpot::hubspot_get_recent_conversations",
+        "HubSpot::hubspot_get_active_contacts",
+        "HubSpot::hubspot_get_active_companies",
+        "HubSpot::hubspot_get_company_activity",
+        "HubSpot::hubspot_create_contact"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-302",
+      "expected_tool_key": "HubSpot::hubspot_get_active_contacts",
+      "predicted_topk": [
+        "HubSpot::hubspot_get_active_contacts",
+        "HubSpot::hubspot_get_active_companies",
+        "HubSpot::hubspot_get_company_activity",
+        "HubSpot::hubspot_get_recent_conversations",
+        "HubSpot::hubspot_create_contact"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-437",
+      "expected_tool_key": "Shopify::get-order-by-id",
+      "predicted_topk": [
+        "Shopify::get-order-by-id",
+        "Shopify::get-product-by-id",
+        "Shopify::get-customer-orders",
+        "Astra DB::GetRecord",
+        "Shopify::update-order"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-438",
+      "expected_tool_key": "Shopify::get-customers",
+      "predicted_topk": [
+        "Shopify::get-customers",
+        "Shopify::get-products",
+        "Shopify::get-product-by-id",
+        "Shopify::get-order-by-id",
+        "Shopify::get-orders"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-456",
+      "expected_tool_key": "Talk To Figma::get_nodes_info",
+      "predicted_topk": [
+        "Talk To Figma::get_nodes_info",
+        "Talk To Figma::get_node_info",
+        "Talk To Figma::read_my_design",
+        "Talk To Figma::delete_multiple_nodes",
+        "Talk To Figma::set_multiple_text_contents"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 5,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-457",
+      "expected_tool_key": "Talk To Figma::set_layout_sizing",
+      "predicted_topk": [
+        "Talk To Figma::set_layout_sizing",
+        "Talk To Figma::set_layout_mode",
+        "Talk To Figma::set_axis_align",
+        "Talk To Figma::set_padding",
+        "Talk To Figma::set_item_spacing"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 3,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-462",
+      "expected_tool_key": "Telegram::unblock_user",
+      "predicted_topk": [
+        "Telegram::unblock_user",
+        "Telegram::block_user",
+        "Telegram::unban_user",
+        "Telegram::ban_user",
+        "Telegram::get_user_status"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    },
+    {
+      "id": "st-clean-463",
+      "expected_tool_key": "Telegram::import_contacts",
+      "predicted_topk": [
+        "Telegram::import_contacts",
+        "Telegram::search_contacts",
+        "Telegram::list_contacts",
+        "Telegram::export_contacts",
+        "HubSpot::hubspot_create_contact"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "recommended_handoff_k": 1,
+      "hit_at_recommended_k": true
+    }
+  ]
+}

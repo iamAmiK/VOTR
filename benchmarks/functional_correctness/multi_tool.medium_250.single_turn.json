@@ -1,0 +1,1556 @@
+{
+  "suite": "multi_tool.medium_250.single_turn",
+  "description": "Router-only multi-target single-turn suite for the medium catalog (250 subtask evaluations).",
+  "cases": [
+    {
+      "id": "multi_tool-medium_250-single_turn-0001",
+      "user_intent": "Single user turn #1: complete these intents in order: (1) extracts structured data from a given URL using a prompt to describe the data and fields to extract; (2) list all projects on your Aiven account; (3) list all services in a specific Aiven project; (4) validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary; (5) provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults",
+      "subtasks": [
+        {
+          "server_intent": "AgentQL operations",
+          "tool_intent": "extracts structured data from a given URL using a prompt to describe the data and fields to extract",
+          "expected_tool_key": "AgentQL::extract-web-data"
+        },
+        {
+          "server_intent": "Aiven operations",
+          "tool_intent": "list all projects on your Aiven account",
+          "expected_tool_key": "Aiven::list_projects"
+        },
+        {
+          "server_intent": "Aiven operations",
+          "tool_intent": "list all services in a specific Aiven project",
+          "expected_tool_key": "Aiven::list_services"
+        },
+        {
+          "server_intent": "APIMatic MCP operations",
+          "tool_intent": "validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary",
+          "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic"
+        },
+        {
+          "server_intent": "Arize Phoenix operations",
+          "tool_intent": "provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults",
+          "expected_tool_key": "Arize Phoenix::arize-phoenix-otel"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0002",
+      "user_intent": "Single user turn #2: complete these intents in order: (1) mCP server implementation for Arize Phoenix providing a unified interface to Phoenix's capabilities; (2) update an existing collection in the database; (3) delete a collection from the database; (4) retrieves available baseline audiences, optionally filtered by country; (5) retrieves the list of available affinity categories that can be used in influencer comparisons",
+      "subtasks": [
+        {
+          "server_intent": "Arize Phoenix operations",
+          "tool_intent": "mCP server implementation for Arize Phoenix providing a unified interface to Phoenix's capabilities",
+          "expected_tool_key": "Arize Phoenix::@arizeai/phoenix-mcp"
+        },
+        {
+          "server_intent": "Astra DB operations",
+          "tool_intent": "update an existing collection in the database",
+          "expected_tool_key": "Astra DB::UpdateCollection"
+        },
+        {
+          "server_intent": "Astra DB operations",
+          "tool_intent": "delete a collection from the database",
+          "expected_tool_key": "Astra DB::DeleteCollection"
+        },
+        {
+          "server_intent": "Audiense Insights operations",
+          "tool_intent": "retrieves available baseline audiences, optionally filtered by country",
+          "expected_tool_key": "Audiense Insights::get-baselines"
+        },
+        {
+          "server_intent": "Audiense Insights operations",
+          "tool_intent": "retrieves the list of available affinity categories that can be used in influencer comparisons",
+          "expected_tool_key": "Audiense Insights::get-categories"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0003",
+      "user_intent": "Single user turn #3: complete these intents in order: (1) list all S3 buckets in my AWS account; (2) get content recommendations for AWS documentation pages; (3) execute APL queries against Axiom datasets; (4) list available Axiom datasets; (5) samples rows from a Kusto table",
+      "subtasks": [
+        {
+          "server_intent": "AWS S3 storage operations",
+          "tool_intent": "list all S3 buckets in my AWS account",
+          "expected_tool_key": "AWS::s3_bucket_list"
+        },
+        {
+          "server_intent": "AWS operations",
+          "tool_intent": "get content recommendations for AWS documentation pages",
+          "expected_tool_key": "AWS::Get Content Recommendations"
+        },
+        {
+          "server_intent": "Axiom operations",
+          "tool_intent": "execute APL queries against Axiom datasets",
+          "expected_tool_key": "Axiom::queryApl"
+        },
+        {
+          "server_intent": "Axiom operations",
+          "tool_intent": "list available Axiom datasets",
+          "expected_tool_key": "Axiom::listDatasets"
+        },
+        {
+          "server_intent": "Azure operations",
+          "tool_intent": "samples rows from a Kusto table",
+          "expected_tool_key": "Azure::Sample rows from a Kusto table"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0004",
+      "user_intent": "Single user turn #4: complete these intents in order: (1) lists, creates, and retrieves keys within an Azure Key Vault; (2) list Release Management installable artifacts of a connected app; (3) changes whether public install page should be available for the installable artifact; (4) ask Box AI about a hub; (5) list all Doc Gen jobs that used a specific template",
+      "subtasks": [
+        {
+          "server_intent": "Azure operations",
+          "tool_intent": "lists, creates, and retrieves keys within an Azure Key Vault",
+          "expected_tool_key": "Azure::List, create, and get keys"
+        },
+        {
+          "server_intent": "Bitrise operations",
+          "tool_intent": "list Release Management installable artifacts of a connected app",
+          "expected_tool_key": "Bitrise::list_installable_artifacts"
+        },
+        {
+          "server_intent": "Bitrise operations",
+          "tool_intent": "changes whether public install page should be available for the installable artifact",
+          "expected_tool_key": "Bitrise::set_installable_artifact_public_install_page"
+        },
+        {
+          "server_intent": "Box operations",
+          "tool_intent": "ask Box AI about a hub",
+          "expected_tool_key": "Box::box_hubs_ask_ai_tool"
+        },
+        {
+          "server_intent": "Box operations",
+          "tool_intent": "list all Doc Gen jobs that used a specific template",
+          "expected_tool_key": "Box::box_docgen_template_list_jobs_tool"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0005",
+      "user_intent": "Single user turn #5: complete these intents in order: (1) read a Chroma document by document id; (2) update existing documents' content, metadata, or embeddings; (3) retrieves the status of the latest pipeline for a given branch; (4) identifies flaky tests in a CircleCI project by analyzing test execution history; (5) lists and filters code quality issues in a repository",
+      "subtasks": [
+        {
+          "server_intent": "Chroma document retrieval operations",
+          "tool_intent": "read a Chroma document by document id",
+          "expected_tool_key": "Chroma::read_document"
+        },
+        {
+          "server_intent": "Chroma operations",
+          "tool_intent": "update existing documents' content, metadata, or embeddings",
+          "expected_tool_key": "Chroma::chroma_update_documents"
+        },
+        {
+          "server_intent": "CircleCI operations",
+          "tool_intent": "retrieves the status of the latest pipeline for a given branch",
+          "expected_tool_key": "CircleCI::get_latest_pipeline_status"
+        },
+        {
+          "server_intent": "CircleCI operations",
+          "tool_intent": "identifies flaky tests in a CircleCI project by analyzing test execution history",
+          "expected_tool_key": "CircleCI::find_flaky_tests"
+        },
+        {
+          "server_intent": "Codacy operations",
+          "tool_intent": "lists and filters code quality issues in a repository",
+          "expected_tool_key": "Codacy::codacy_list_repository_issues"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0006",
+      "user_intent": "Single user turn #6: complete these intents in order: (1) get repository with analysis information, including metrics for Grade, Issues, Duplication, Complexi; (2) analyzes impacts between code and database entities; (3) pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class; (4) track and analyze trace data; (5) organize and manage projects",
+      "subtasks": [
+        {
+          "server_intent": "Codacy operations",
+          "tool_intent": "get repository with analysis information, including metrics for Grade, Issues, Duplication, Complexity, and Coverage",
+          "expected_tool_key": "Codacy::codacy_get_repository_with_analysis"
+        },
+        {
+          "server_intent": "CodeLogic operations",
+          "tool_intent": "analyzes impacts between code and database entities",
+          "expected_tool_key": "CodeLogic::codelogic-database-impact"
+        },
+        {
+          "server_intent": "CodeLogic operations",
+          "tool_intent": "pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class",
+          "expected_tool_key": "CodeLogic::codelogic-method-impact"
+        },
+        {
+          "server_intent": "Comet Opik operations",
+          "tool_intent": "track and analyze trace data",
+          "expected_tool_key": "Comet Opik::Traces"
+        },
+        {
+          "server_intent": "Comet Opik operations",
+          "tool_intent": "organize and manage projects",
+          "expected_tool_key": "Comet Opik::Projects/Workspaces Management"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0007",
+      "user_intent": "Single user turn #7: complete these intents in order: (1) delete a document by ID from a specified scope and collection; (2) get a document by ID from a specified scope and collection; (3) get information about the user's space, including available assignees, dartboards, folders, statuses; (4) create a new doc with title, text content, and folder; (5) updates an existing blog post's title and/or content",
+      "subtasks": [
+        {
+          "server_intent": "Couchbase operations",
+          "tool_intent": "delete a document by ID from a specified scope and collection",
+          "expected_tool_key": "Couchbase::delete_document_by_id"
+        },
+        {
+          "server_intent": "Couchbase operations",
+          "tool_intent": "get a document by ID from a specified scope and collection",
+          "expected_tool_key": "Couchbase::get_document_by_id"
+        },
+        {
+          "server_intent": "Dart operations",
+          "tool_intent": "get information about the user's space, including available assignees, dartboards, folders, statuses, tags, priorities, and sizes",
+          "expected_tool_key": "Dart::get_config"
+        },
+        {
+          "server_intent": "Dart operations",
+          "tool_intent": "create a new doc with title, text content, and folder",
+          "expected_tool_key": "Dart::create_doc"
+        },
+        {
+          "server_intent": "DevHub operations",
+          "tool_intent": "updates an existing blog post's title and/or content",
+          "expected_tool_key": "DevHub::update_blog_post"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0008",
+      "user_intent": "Single user turn #8: complete these intents in order: (1) gets all locations for a specific business; (2) sends Slack messages using the Slack Connector; (3) lists problem details from your services, such as Kubernetes; (4) retrieves user information from the EduBase platform; (5) delete an alias from an Elasticsearch index",
+      "subtasks": [
+        {
+          "server_intent": "DevHub operations",
+          "tool_intent": "gets all locations for a specific business",
+          "expected_tool_key": "DevHub::get_locations"
+        },
+        {
+          "server_intent": "Dynatrace operations",
+          "tool_intent": "sends Slack messages using the Slack Connector",
+          "expected_tool_key": "Dynatrace::send_slack_message"
+        },
+        {
+          "server_intent": "Dynatrace operations",
+          "tool_intent": "lists problem details from your services, such as Kubernetes",
+          "expected_tool_key": "Dynatrace::list_problems"
+        },
+        {
+          "server_intent": "EduBase operations",
+          "tool_intent": "retrieves user information from the EduBase platform",
+          "expected_tool_key": "EduBase::edubase_get_user"
+        },
+        {
+          "server_intent": "Elasticsearch index alias operations",
+          "tool_intent": "delete an alias from an Elasticsearch index",
+          "expected_tool_key": "Elasticsearch::delete_alias"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0009",
+      "user_intent": "Single user turn #9: complete these intents in order: (1) get an Elasticsearch document by id from an index; (2) specialized search focused on academic papers and research content; (3) performs real-time web searches with optimized results and content extraction; (4) retrieves a list of all databases available in your Fibery workspace; (5) provides a detailed breakdown of a specific database's structure, showing all fields with their titl",
+      "subtasks": [
+        {
+          "server_intent": "Elasticsearch document operations",
+          "tool_intent": "get an Elasticsearch document by id from an index",
+          "expected_tool_key": "Elasticsearch::get_document"
+        },
+        {
+          "server_intent": "Exa operations",
+          "tool_intent": "specialized search focused on academic papers and research content",
+          "expected_tool_key": "Exa::research_paper_search"
+        },
+        {
+          "server_intent": "Exa operations",
+          "tool_intent": "performs real-time web searches with optimized results and content extraction",
+          "expected_tool_key": "Exa::web_search_exa"
+        },
+        {
+          "server_intent": "Fibery operations",
+          "tool_intent": "retrieves a list of all databases available in your Fibery workspace",
+          "expected_tool_key": "Fibery::list_databases"
+        },
+        {
+          "server_intent": "Fibery operations",
+          "tool_intent": "provides a detailed breakdown of a specific database's structure, showing all fields with their titles, names, and types",
+          "expected_tool_key": "Fibery::describe_database"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0010",
+      "user_intent": "Single user turn #10: complete these intents in order: (1) start an asynchronous crawl with advanced options; (2) search the web and optionally extract content from search results; (3) comment on an issue; (4) create a pull request; (5) list schedules from Grafana OnCall",
+      "subtasks": [
+        {
+          "server_intent": "Firecrawl operations",
+          "tool_intent": "start an asynchronous crawl with advanced options",
+          "expected_tool_key": "Firecrawl::firecrawl_crawl"
+        },
+        {
+          "server_intent": "Firecrawl operations",
+          "tool_intent": "search the web and optionally extract content from search results",
+          "expected_tool_key": "Firecrawl::firecrawl_search"
+        },
+        {
+          "server_intent": "Gitee operations",
+          "tool_intent": "comment on an issue",
+          "expected_tool_key": "Gitee::comment_issue"
+        },
+        {
+          "server_intent": "Gitee operations",
+          "tool_intent": "create a pull request",
+          "expected_tool_key": "Gitee::create_pull"
+        },
+        {
+          "server_intent": "Grafana operations",
+          "tool_intent": "list schedules from Grafana OnCall",
+          "expected_tool_key": "Grafana::list_oncall_schedules"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0011",
+      "user_intent": "Single user turn #11: complete these intents in order: (1) list available metric names; (2) gets a prompt by name; (3) lists tables in the database; (4) list all add-ons for all apps or for a specific app; (5) view application logs",
+      "subtasks": [
+        {
+          "server_intent": "Grafana operations",
+          "tool_intent": "list available metric names",
+          "expected_tool_key": "Grafana::list_prometheus_metric_names"
+        },
+        {
+          "server_intent": "GreptimeDB operations",
+          "tool_intent": "gets a prompt by name",
+          "expected_tool_key": "GreptimeDB::get_prompt"
+        },
+        {
+          "server_intent": "GreptimeDB operations",
+          "tool_intent": "lists tables in the database",
+          "expected_tool_key": "GreptimeDB::list_resources"
+        },
+        {
+          "server_intent": "Heroku operations",
+          "tool_intent": "list all add-ons for all apps or for a specific app",
+          "expected_tool_key": "Heroku::list_addons"
+        },
+        {
+          "server_intent": "Heroku operations",
+          "tool_intent": "view application logs",
+          "expected_tool_key": "Heroku::get_app_logs"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0012",
+      "user_intent": "Single user turn #12: complete these intents in order: (1) execute a DML (INSERT, UPDATE, DELETE) SQL query on the Hologres server; (2) collect table statistics; (3) complex browser tasks using Claude computer use; (4) fast, lightweight browser automation with the Browser Use agent; (5) retrieves product documentation about Inkeep",
+      "subtasks": [
+        {
+          "server_intent": "Hologres operations",
+          "tool_intent": "execute a DML (INSERT, UPDATE, DELETE) SQL query on the Hologres server",
+          "expected_tool_key": "Hologres::execute_dml_sql"
+        },
+        {
+          "server_intent": "Hologres operations",
+          "tool_intent": "collect table statistics",
+          "expected_tool_key": "Hologres::gather_table_statistics"
+        },
+        {
+          "server_intent": "Hyperbrowser operations",
+          "tool_intent": "complex browser tasks using Claude computer use",
+          "expected_tool_key": "Hyperbrowser::claude_computer_use_agent"
+        },
+        {
+          "server_intent": "Hyperbrowser operations",
+          "tool_intent": "fast, lightweight browser automation with the Browser Use agent",
+          "expected_tool_key": "Hyperbrowser::browser_use_agent"
+        },
+        {
+          "server_intent": "Inkeep operations",
+          "tool_intent": "retrieves product documentation about Inkeep",
+          "expected_tool_key": "Inkeep::search-product-content"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0013",
+      "user_intent": "Single user turn #13: complete these intents in order: (1) performs a web search to find information based on the query provided; (2) generates a summary of the content, such as a video, based on the URL provided; (3) gets detailed information about a specific table including its DB identifier and column information; (4) retrieves detailed information about a specific job, identified by the job_id, including its status,; (5) tools to store field-value pairs within a single key",
+      "subtasks": [
+        {
+          "server_intent": "Kagi Search operations",
+          "tool_intent": "performs a web search to find information based on the query provided",
+          "expected_tool_key": "Kagi Search::search"
+        },
+        {
+          "server_intent": "Kagi Search operations",
+          "tool_intent": "generates a summary of the content, such as a video, based on the URL provided",
+          "expected_tool_key": "Kagi Search::summarizer"
+        },
+        {
+          "server_intent": "Keboola operations",
+          "tool_intent": "gets detailed information about a specific table including its DB identifier and column information",
+          "expected_tool_key": "Keboola::get_table_detail"
+        },
+        {
+          "server_intent": "Keboola operations",
+          "tool_intent": "retrieves detailed information about a specific job, identified by the job_id, including its status, parameters, results, and any relevant metadata",
+          "expected_tool_key": "Keboola::get_job_detail"
+        },
+        {
+          "server_intent": "Redis operations",
+          "tool_intent": "tools to store field-value pairs within a single key",
+          "expected_tool_key": "Redis::hash"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0014",
+      "user_intent": "Single user turn #14: complete these intents in order: (1) tools to add, remove and list set members; (2) creates a new invoice in Stripe; (3) lists all subscriptions in Stripe; (4) lists records from a specified Airtable table; (5) search for records containing specific text",
+      "subtasks": [
+        {
+          "server_intent": "Redis operations",
+          "tool_intent": "tools to add, remove and list set members",
+          "expected_tool_key": "Redis::set"
+        },
+        {
+          "server_intent": "Stripe operations",
+          "tool_intent": "creates a new invoice in Stripe",
+          "expected_tool_key": "Stripe::createInvoice"
+        },
+        {
+          "server_intent": "Stripe operations",
+          "tool_intent": "lists all subscriptions in Stripe",
+          "expected_tool_key": "Stripe::listSubscriptions"
+        },
+        {
+          "server_intent": "Airtable operations",
+          "tool_intent": "lists records from a specified Airtable table",
+          "expected_tool_key": "Airtable::list_records"
+        },
+        {
+          "server_intent": "Airtable operations",
+          "tool_intent": "search for records containing specific text",
+          "expected_tool_key": "Airtable::search_records"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0015",
+      "user_intent": "Single user turn #15: complete these intents in order: (1) get a player's profile from Chess.com; (2) get a player's stats from Chess.com; (3) fetch events within a time range; (4) get metadata for a specific metric; (5) delete a Discord channel by channel id",
+      "subtasks": [
+        {
+          "server_intent": "Chess.com operations",
+          "tool_intent": "get a player's profile from Chess.com",
+          "expected_tool_key": "Chess.com::get_player_profile"
+        },
+        {
+          "server_intent": "Chess.com operations",
+          "tool_intent": "get a player's stats from Chess.com",
+          "expected_tool_key": "Chess.com::get_player_stats"
+        },
+        {
+          "server_intent": "Datadog operations",
+          "tool_intent": "fetch events within a time range",
+          "expected_tool_key": "Datadog::get-events"
+        },
+        {
+          "server_intent": "Datadog operations",
+          "tool_intent": "get metadata for a specific metric",
+          "expected_tool_key": "Datadog::get-metric-metadata"
+        },
+        {
+          "server_intent": "Discord channel management",
+          "tool_intent": "delete a Discord channel by channel id",
+          "expected_tool_key": "Discord::delete_channel"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0016",
+      "user_intent": "Single user turn #16: complete these intents in order: (1) send a Discord direct message to a user; (2) creates a new Docker network; (3) creates a new Docker volume; (4) lists all available Git repositories; (5) creates a new branch",
+      "subtasks": [
+        {
+          "server_intent": "Discord direct messaging",
+          "tool_intent": "send a Discord direct message to a user",
+          "expected_tool_key": "Discord::send_private_message"
+        },
+        {
+          "server_intent": "Docker operations",
+          "tool_intent": "creates a new Docker network",
+          "expected_tool_key": "Docker::create_network"
+        },
+        {
+          "server_intent": "Docker operations",
+          "tool_intent": "creates a new Docker volume",
+          "expected_tool_key": "Docker::create_volume"
+        },
+        {
+          "server_intent": "Git operations",
+          "tool_intent": "lists all available Git repositories",
+          "expected_tool_key": "Git::git_list_repositories"
+        },
+        {
+          "server_intent": "Git operations",
+          "tool_intent": "creates a new branch",
+          "expected_tool_key": "Git::git_create_branch"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0017",
+      "user_intent": "Single user turn #17: complete these intents in order: (1) retrieve recent conversation threads with messages; (2) retrieve most recently active contacts; (3) get a specific order by ID; (4) get customers or search by name/email; (5) get detailed information about multiple nodes by providing an array of node IDs",
+      "subtasks": [
+        {
+          "server_intent": "HubSpot operations",
+          "tool_intent": "retrieve recent conversation threads with messages",
+          "expected_tool_key": "HubSpot::hubspot_get_recent_conversations"
+        },
+        {
+          "server_intent": "HubSpot operations",
+          "tool_intent": "retrieve most recently active contacts",
+          "expected_tool_key": "HubSpot::hubspot_get_active_contacts"
+        },
+        {
+          "server_intent": "Shopify operations",
+          "tool_intent": "get a specific order by ID",
+          "expected_tool_key": "Shopify::get-order-by-id"
+        },
+        {
+          "server_intent": "Shopify operations",
+          "tool_intent": "get customers or search by name/email",
+          "expected_tool_key": "Shopify::get-customers"
+        },
+        {
+          "server_intent": "Talk To Figma operations",
+          "tool_intent": "get detailed information about multiple nodes by providing an array of node IDs",
+          "expected_tool_key": "Talk To Figma::get_nodes_info"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0018",
+      "user_intent": "Single user turn #18: complete these intents in order: (1) set horizontal and vertical sizing modes for auto-layout frames (FIXED, HUG, FILL); (2) unblock a user; (3) bulk import contacts; (4) extracts structured data from a given URL using a prompt to describe the data and fields to extract; (5) list all projects on your Aiven account",
+      "subtasks": [
+        {
+          "server_intent": "Talk To Figma operations",
+          "tool_intent": "set horizontal and vertical sizing modes for auto-layout frames (FIXED, HUG, FILL)",
+          "expected_tool_key": "Talk To Figma::set_layout_sizing"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "unblock a user",
+          "expected_tool_key": "Telegram::unblock_user"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "bulk import contacts",
+          "expected_tool_key": "Telegram::import_contacts"
+        },
+        {
+          "server_intent": "AgentQL operations",
+          "tool_intent": "extracts structured data from a given URL using a prompt to describe the data and fields to extract",
+          "expected_tool_key": "AgentQL::extract-web-data"
+        },
+        {
+          "server_intent": "Aiven operations",
+          "tool_intent": "list all projects on your Aiven account",
+          "expected_tool_key": "Aiven::list_projects"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0019",
+      "user_intent": "Single user turn #19: complete these intents in order: (1) list all services in a specific Aiven project; (2) validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary; (3) provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults; (4) mCP server implementation for Arize Phoenix providing a unified interface to Phoenix's capabilities; (5) update an existing collection in the database",
+      "subtasks": [
+        {
+          "server_intent": "Aiven operations",
+          "tool_intent": "list all services in a specific Aiven project",
+          "expected_tool_key": "Aiven::list_services"
+        },
+        {
+          "server_intent": "APIMatic MCP operations",
+          "tool_intent": "validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary",
+          "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic"
+        },
+        {
+          "server_intent": "Arize Phoenix operations",
+          "tool_intent": "provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults",
+          "expected_tool_key": "Arize Phoenix::arize-phoenix-otel"
+        },
+        {
+          "server_intent": "Arize Phoenix operations",
+          "tool_intent": "mCP server implementation for Arize Phoenix providing a unified interface to Phoenix's capabilities",
+          "expected_tool_key": "Arize Phoenix::@arizeai/phoenix-mcp"
+        },
+        {
+          "server_intent": "Astra DB operations",
+          "tool_intent": "update an existing collection in the database",
+          "expected_tool_key": "Astra DB::UpdateCollection"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0020",
+      "user_intent": "Single user turn #20: complete these intents in order: (1) delete a collection from the database; (2) retrieves available baseline audiences, optionally filtered by country; (3) retrieves the list of available affinity categories that can be used in influencer comparisons; (4) list all S3 buckets in my AWS account; (5) get content recommendations for AWS documentation pages",
+      "subtasks": [
+        {
+          "server_intent": "Astra DB operations",
+          "tool_intent": "delete a collection from the database",
+          "expected_tool_key": "Astra DB::DeleteCollection"
+        },
+        {
+          "server_intent": "Audiense Insights operations",
+          "tool_intent": "retrieves available baseline audiences, optionally filtered by country",
+          "expected_tool_key": "Audiense Insights::get-baselines"
+        },
+        {
+          "server_intent": "Audiense Insights operations",
+          "tool_intent": "retrieves the list of available affinity categories that can be used in influencer comparisons",
+          "expected_tool_key": "Audiense Insights::get-categories"
+        },
+        {
+          "server_intent": "AWS S3 storage operations",
+          "tool_intent": "list all S3 buckets in my AWS account",
+          "expected_tool_key": "AWS::s3_bucket_list"
+        },
+        {
+          "server_intent": "AWS operations",
+          "tool_intent": "get content recommendations for AWS documentation pages",
+          "expected_tool_key": "AWS::Get Content Recommendations"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0021",
+      "user_intent": "Single user turn #21: complete these intents in order: (1) execute APL queries against Axiom datasets; (2) list available Axiom datasets; (3) samples rows from a Kusto table; (4) lists, creates, and retrieves keys within an Azure Key Vault; (5) list Release Management installable artifacts of a connected app",
+      "subtasks": [
+        {
+          "server_intent": "Axiom operations",
+          "tool_intent": "execute APL queries against Axiom datasets",
+          "expected_tool_key": "Axiom::queryApl"
+        },
+        {
+          "server_intent": "Axiom operations",
+          "tool_intent": "list available Axiom datasets",
+          "expected_tool_key": "Axiom::listDatasets"
+        },
+        {
+          "server_intent": "Azure operations",
+          "tool_intent": "samples rows from a Kusto table",
+          "expected_tool_key": "Azure::Sample rows from a Kusto table"
+        },
+        {
+          "server_intent": "Azure operations",
+          "tool_intent": "lists, creates, and retrieves keys within an Azure Key Vault",
+          "expected_tool_key": "Azure::List, create, and get keys"
+        },
+        {
+          "server_intent": "Bitrise operations",
+          "tool_intent": "list Release Management installable artifacts of a connected app",
+          "expected_tool_key": "Bitrise::list_installable_artifacts"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0022",
+      "user_intent": "Single user turn #22: complete these intents in order: (1) changes whether public install page should be available for the installable artifact; (2) ask Box AI about a hub; (3) list all Doc Gen jobs that used a specific template; (4) read a Chroma document by document id; (5) update existing documents' content, metadata, or embeddings",
+      "subtasks": [
+        {
+          "server_intent": "Bitrise operations",
+          "tool_intent": "changes whether public install page should be available for the installable artifact",
+          "expected_tool_key": "Bitrise::set_installable_artifact_public_install_page"
+        },
+        {
+          "server_intent": "Box operations",
+          "tool_intent": "ask Box AI about a hub",
+          "expected_tool_key": "Box::box_hubs_ask_ai_tool"
+        },
+        {
+          "server_intent": "Box operations",
+          "tool_intent": "list all Doc Gen jobs that used a specific template",
+          "expected_tool_key": "Box::box_docgen_template_list_jobs_tool"
+        },
+        {
+          "server_intent": "Chroma document retrieval operations",
+          "tool_intent": "read a Chroma document by document id",
+          "expected_tool_key": "Chroma::read_document"
+        },
+        {
+          "server_intent": "Chroma operations",
+          "tool_intent": "update existing documents' content, metadata, or embeddings",
+          "expected_tool_key": "Chroma::chroma_update_documents"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0023",
+      "user_intent": "Single user turn #23: complete these intents in order: (1) retrieves the status of the latest pipeline for a given branch; (2) identifies flaky tests in a CircleCI project by analyzing test execution history; (3) lists and filters code quality issues in a repository; (4) get repository with analysis information, including metrics for Grade, Issues, Duplication, Complexi; (5) analyzes impacts between code and database entities",
+      "subtasks": [
+        {
+          "server_intent": "CircleCI operations",
+          "tool_intent": "retrieves the status of the latest pipeline for a given branch",
+          "expected_tool_key": "CircleCI::get_latest_pipeline_status"
+        },
+        {
+          "server_intent": "CircleCI operations",
+          "tool_intent": "identifies flaky tests in a CircleCI project by analyzing test execution history",
+          "expected_tool_key": "CircleCI::find_flaky_tests"
+        },
+        {
+          "server_intent": "Codacy operations",
+          "tool_intent": "lists and filters code quality issues in a repository",
+          "expected_tool_key": "Codacy::codacy_list_repository_issues"
+        },
+        {
+          "server_intent": "Codacy operations",
+          "tool_intent": "get repository with analysis information, including metrics for Grade, Issues, Duplication, Complexity, and Coverage",
+          "expected_tool_key": "Codacy::codacy_get_repository_with_analysis"
+        },
+        {
+          "server_intent": "CodeLogic operations",
+          "tool_intent": "analyzes impacts between code and database entities",
+          "expected_tool_key": "CodeLogic::codelogic-database-impact"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0024",
+      "user_intent": "Single user turn #24: complete these intents in order: (1) pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class; (2) track and analyze trace data; (3) organize and manage projects; (4) delete a document by ID from a specified scope and collection; (5) get a document by ID from a specified scope and collection",
+      "subtasks": [
+        {
+          "server_intent": "CodeLogic operations",
+          "tool_intent": "pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class",
+          "expected_tool_key": "CodeLogic::codelogic-method-impact"
+        },
+        {
+          "server_intent": "Comet Opik operations",
+          "tool_intent": "track and analyze trace data",
+          "expected_tool_key": "Comet Opik::Traces"
+        },
+        {
+          "server_intent": "Comet Opik operations",
+          "tool_intent": "organize and manage projects",
+          "expected_tool_key": "Comet Opik::Projects/Workspaces Management"
+        },
+        {
+          "server_intent": "Couchbase operations",
+          "tool_intent": "delete a document by ID from a specified scope and collection",
+          "expected_tool_key": "Couchbase::delete_document_by_id"
+        },
+        {
+          "server_intent": "Couchbase operations",
+          "tool_intent": "get a document by ID from a specified scope and collection",
+          "expected_tool_key": "Couchbase::get_document_by_id"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0025",
+      "user_intent": "Single user turn #25: complete these intents in order: (1) get information about the user's space, including available assignees, dartboards, folders, statuses; (2) create a new doc with title, text content, and folder; (3) updates an existing blog post's title and/or content; (4) gets all locations for a specific business; (5) sends Slack messages using the Slack Connector",
+      "subtasks": [
+        {
+          "server_intent": "Dart operations",
+          "tool_intent": "get information about the user's space, including available assignees, dartboards, folders, statuses, tags, priorities, and sizes",
+          "expected_tool_key": "Dart::get_config"
+        },
+        {
+          "server_intent": "Dart operations",
+          "tool_intent": "create a new doc with title, text content, and folder",
+          "expected_tool_key": "Dart::create_doc"
+        },
+        {
+          "server_intent": "DevHub operations",
+          "tool_intent": "updates an existing blog post's title and/or content",
+          "expected_tool_key": "DevHub::update_blog_post"
+        },
+        {
+          "server_intent": "DevHub operations",
+          "tool_intent": "gets all locations for a specific business",
+          "expected_tool_key": "DevHub::get_locations"
+        },
+        {
+          "server_intent": "Dynatrace operations",
+          "tool_intent": "sends Slack messages using the Slack Connector",
+          "expected_tool_key": "Dynatrace::send_slack_message"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0026",
+      "user_intent": "Single user turn #26: complete these intents in order: (1) lists problem details from your services, such as Kubernetes; (2) retrieves user information from the EduBase platform; (3) delete an alias from an Elasticsearch index; (4) get an Elasticsearch document by id from an index; (5) specialized search focused on academic papers and research content",
+      "subtasks": [
+        {
+          "server_intent": "Dynatrace operations",
+          "tool_intent": "lists problem details from your services, such as Kubernetes",
+          "expected_tool_key": "Dynatrace::list_problems"
+        },
+        {
+          "server_intent": "EduBase operations",
+          "tool_intent": "retrieves user information from the EduBase platform",
+          "expected_tool_key": "EduBase::edubase_get_user"
+        },
+        {
+          "server_intent": "Elasticsearch index alias operations",
+          "tool_intent": "delete an alias from an Elasticsearch index",
+          "expected_tool_key": "Elasticsearch::delete_alias"
+        },
+        {
+          "server_intent": "Elasticsearch document operations",
+          "tool_intent": "get an Elasticsearch document by id from an index",
+          "expected_tool_key": "Elasticsearch::get_document"
+        },
+        {
+          "server_intent": "Exa operations",
+          "tool_intent": "specialized search focused on academic papers and research content",
+          "expected_tool_key": "Exa::research_paper_search"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0027",
+      "user_intent": "Single user turn #27: complete these intents in order: (1) performs real-time web searches with optimized results and content extraction; (2) retrieves a list of all databases available in your Fibery workspace; (3) provides a detailed breakdown of a specific database's structure, showing all fields with their titl; (4) start an asynchronous crawl with advanced options; (5) search the web and optionally extract content from search results",
+      "subtasks": [
+        {
+          "server_intent": "Exa operations",
+          "tool_intent": "performs real-time web searches with optimized results and content extraction",
+          "expected_tool_key": "Exa::web_search_exa"
+        },
+        {
+          "server_intent": "Fibery operations",
+          "tool_intent": "retrieves a list of all databases available in your Fibery workspace",
+          "expected_tool_key": "Fibery::list_databases"
+        },
+        {
+          "server_intent": "Fibery operations",
+          "tool_intent": "provides a detailed breakdown of a specific database's structure, showing all fields with their titles, names, and types",
+          "expected_tool_key": "Fibery::describe_database"
+        },
+        {
+          "server_intent": "Firecrawl operations",
+          "tool_intent": "start an asynchronous crawl with advanced options",
+          "expected_tool_key": "Firecrawl::firecrawl_crawl"
+        },
+        {
+          "server_intent": "Firecrawl operations",
+          "tool_intent": "search the web and optionally extract content from search results",
+          "expected_tool_key": "Firecrawl::firecrawl_search"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0028",
+      "user_intent": "Single user turn #28: complete these intents in order: (1) comment on an issue; (2) create a pull request; (3) list schedules from Grafana OnCall; (4) list available metric names; (5) gets a prompt by name",
+      "subtasks": [
+        {
+          "server_intent": "Gitee operations",
+          "tool_intent": "comment on an issue",
+          "expected_tool_key": "Gitee::comment_issue"
+        },
+        {
+          "server_intent": "Gitee operations",
+          "tool_intent": "create a pull request",
+          "expected_tool_key": "Gitee::create_pull"
+        },
+        {
+          "server_intent": "Grafana operations",
+          "tool_intent": "list schedules from Grafana OnCall",
+          "expected_tool_key": "Grafana::list_oncall_schedules"
+        },
+        {
+          "server_intent": "Grafana operations",
+          "tool_intent": "list available metric names",
+          "expected_tool_key": "Grafana::list_prometheus_metric_names"
+        },
+        {
+          "server_intent": "GreptimeDB operations",
+          "tool_intent": "gets a prompt by name",
+          "expected_tool_key": "GreptimeDB::get_prompt"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0029",
+      "user_intent": "Single user turn #29: complete these intents in order: (1) lists tables in the database; (2) list all add-ons for all apps or for a specific app; (3) view application logs; (4) execute a DML (INSERT, UPDATE, DELETE) SQL query on the Hologres server; (5) collect table statistics",
+      "subtasks": [
+        {
+          "server_intent": "GreptimeDB operations",
+          "tool_intent": "lists tables in the database",
+          "expected_tool_key": "GreptimeDB::list_resources"
+        },
+        {
+          "server_intent": "Heroku operations",
+          "tool_intent": "list all add-ons for all apps or for a specific app",
+          "expected_tool_key": "Heroku::list_addons"
+        },
+        {
+          "server_intent": "Heroku operations",
+          "tool_intent": "view application logs",
+          "expected_tool_key": "Heroku::get_app_logs"
+        },
+        {
+          "server_intent": "Hologres operations",
+          "tool_intent": "execute a DML (INSERT, UPDATE, DELETE) SQL query on the Hologres server",
+          "expected_tool_key": "Hologres::execute_dml_sql"
+        },
+        {
+          "server_intent": "Hologres operations",
+          "tool_intent": "collect table statistics",
+          "expected_tool_key": "Hologres::gather_table_statistics"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0030",
+      "user_intent": "Single user turn #30: complete these intents in order: (1) complex browser tasks using Claude computer use; (2) fast, lightweight browser automation with the Browser Use agent; (3) retrieves product documentation about Inkeep; (4) performs a web search to find information based on the query provided; (5) generates a summary of the content, such as a video, based on the URL provided",
+      "subtasks": [
+        {
+          "server_intent": "Hyperbrowser operations",
+          "tool_intent": "complex browser tasks using Claude computer use",
+          "expected_tool_key": "Hyperbrowser::claude_computer_use_agent"
+        },
+        {
+          "server_intent": "Hyperbrowser operations",
+          "tool_intent": "fast, lightweight browser automation with the Browser Use agent",
+          "expected_tool_key": "Hyperbrowser::browser_use_agent"
+        },
+        {
+          "server_intent": "Inkeep operations",
+          "tool_intent": "retrieves product documentation about Inkeep",
+          "expected_tool_key": "Inkeep::search-product-content"
+        },
+        {
+          "server_intent": "Kagi Search operations",
+          "tool_intent": "performs a web search to find information based on the query provided",
+          "expected_tool_key": "Kagi Search::search"
+        },
+        {
+          "server_intent": "Kagi Search operations",
+          "tool_intent": "generates a summary of the content, such as a video, based on the URL provided",
+          "expected_tool_key": "Kagi Search::summarizer"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0031",
+      "user_intent": "Single user turn #31: complete these intents in order: (1) gets detailed information about a specific table including its DB identifier and column information; (2) retrieves detailed information about a specific job, identified by the job_id, including its status,; (3) tools to store field-value pairs within a single key; (4) tools to add, remove and list set members; (5) creates a new invoice in Stripe",
+      "subtasks": [
+        {
+          "server_intent": "Keboola operations",
+          "tool_intent": "gets detailed information about a specific table including its DB identifier and column information",
+          "expected_tool_key": "Keboola::get_table_detail"
+        },
+        {
+          "server_intent": "Keboola operations",
+          "tool_intent": "retrieves detailed information about a specific job, identified by the job_id, including its status, parameters, results, and any relevant metadata",
+          "expected_tool_key": "Keboola::get_job_detail"
+        },
+        {
+          "server_intent": "Redis operations",
+          "tool_intent": "tools to store field-value pairs within a single key",
+          "expected_tool_key": "Redis::hash"
+        },
+        {
+          "server_intent": "Redis operations",
+          "tool_intent": "tools to add, remove and list set members",
+          "expected_tool_key": "Redis::set"
+        },
+        {
+          "server_intent": "Stripe operations",
+          "tool_intent": "creates a new invoice in Stripe",
+          "expected_tool_key": "Stripe::createInvoice"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0032",
+      "user_intent": "Single user turn #32: complete these intents in order: (1) lists all subscriptions in Stripe; (2) lists records from a specified Airtable table; (3) search for records containing specific text; (4) get a player's profile from Chess.com; (5) get a player's stats from Chess.com",
+      "subtasks": [
+        {
+          "server_intent": "Stripe operations",
+          "tool_intent": "lists all subscriptions in Stripe",
+          "expected_tool_key": "Stripe::listSubscriptions"
+        },
+        {
+          "server_intent": "Airtable operations",
+          "tool_intent": "lists records from a specified Airtable table",
+          "expected_tool_key": "Airtable::list_records"
+        },
+        {
+          "server_intent": "Airtable operations",
+          "tool_intent": "search for records containing specific text",
+          "expected_tool_key": "Airtable::search_records"
+        },
+        {
+          "server_intent": "Chess.com operations",
+          "tool_intent": "get a player's profile from Chess.com",
+          "expected_tool_key": "Chess.com::get_player_profile"
+        },
+        {
+          "server_intent": "Chess.com operations",
+          "tool_intent": "get a player's stats from Chess.com",
+          "expected_tool_key": "Chess.com::get_player_stats"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0033",
+      "user_intent": "Single user turn #33: complete these intents in order: (1) fetch events within a time range; (2) get metadata for a specific metric; (3) delete a Discord channel by channel id; (4) send a Discord direct message to a user; (5) creates a new Docker network",
+      "subtasks": [
+        {
+          "server_intent": "Datadog operations",
+          "tool_intent": "fetch events within a time range",
+          "expected_tool_key": "Datadog::get-events"
+        },
+        {
+          "server_intent": "Datadog operations",
+          "tool_intent": "get metadata for a specific metric",
+          "expected_tool_key": "Datadog::get-metric-metadata"
+        },
+        {
+          "server_intent": "Discord channel management",
+          "tool_intent": "delete a Discord channel by channel id",
+          "expected_tool_key": "Discord::delete_channel"
+        },
+        {
+          "server_intent": "Discord direct messaging",
+          "tool_intent": "send a Discord direct message to a user",
+          "expected_tool_key": "Discord::send_private_message"
+        },
+        {
+          "server_intent": "Docker operations",
+          "tool_intent": "creates a new Docker network",
+          "expected_tool_key": "Docker::create_network"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0034",
+      "user_intent": "Single user turn #34: complete these intents in order: (1) creates a new Docker volume; (2) lists all available Git repositories; (3) creates a new branch; (4) retrieve recent conversation threads with messages; (5) retrieve most recently active contacts",
+      "subtasks": [
+        {
+          "server_intent": "Docker operations",
+          "tool_intent": "creates a new Docker volume",
+          "expected_tool_key": "Docker::create_volume"
+        },
+        {
+          "server_intent": "Git operations",
+          "tool_intent": "lists all available Git repositories",
+          "expected_tool_key": "Git::git_list_repositories"
+        },
+        {
+          "server_intent": "Git operations",
+          "tool_intent": "creates a new branch",
+          "expected_tool_key": "Git::git_create_branch"
+        },
+        {
+          "server_intent": "HubSpot operations",
+          "tool_intent": "retrieve recent conversation threads with messages",
+          "expected_tool_key": "HubSpot::hubspot_get_recent_conversations"
+        },
+        {
+          "server_intent": "HubSpot operations",
+          "tool_intent": "retrieve most recently active contacts",
+          "expected_tool_key": "HubSpot::hubspot_get_active_contacts"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0035",
+      "user_intent": "Single user turn #35: complete these intents in order: (1) get a specific order by ID; (2) get customers or search by name/email; (3) get detailed information about multiple nodes by providing an array of node IDs; (4) set horizontal and vertical sizing modes for auto-layout frames (FIXED, HUG, FILL); (5) unblock a user",
+      "subtasks": [
+        {
+          "server_intent": "Shopify operations",
+          "tool_intent": "get a specific order by ID",
+          "expected_tool_key": "Shopify::get-order-by-id"
+        },
+        {
+          "server_intent": "Shopify operations",
+          "tool_intent": "get customers or search by name/email",
+          "expected_tool_key": "Shopify::get-customers"
+        },
+        {
+          "server_intent": "Talk To Figma operations",
+          "tool_intent": "get detailed information about multiple nodes by providing an array of node IDs",
+          "expected_tool_key": "Talk To Figma::get_nodes_info"
+        },
+        {
+          "server_intent": "Talk To Figma operations",
+          "tool_intent": "set horizontal and vertical sizing modes for auto-layout frames (FIXED, HUG, FILL)",
+          "expected_tool_key": "Talk To Figma::set_layout_sizing"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "unblock a user",
+          "expected_tool_key": "Telegram::unblock_user"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0036",
+      "user_intent": "Single user turn #36: complete these intents in order: (1) bulk import contacts; (2) extracts structured data from a given URL using a prompt to describe the data and fields to extract; (3) list all projects on your Aiven account; (4) list all services in a specific Aiven project; (5) validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary",
+      "subtasks": [
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "bulk import contacts",
+          "expected_tool_key": "Telegram::import_contacts"
+        },
+        {
+          "server_intent": "AgentQL operations",
+          "tool_intent": "extracts structured data from a given URL using a prompt to describe the data and fields to extract",
+          "expected_tool_key": "AgentQL::extract-web-data"
+        },
+        {
+          "server_intent": "Aiven operations",
+          "tool_intent": "list all projects on your Aiven account",
+          "expected_tool_key": "Aiven::list_projects"
+        },
+        {
+          "server_intent": "Aiven operations",
+          "tool_intent": "list all services in a specific Aiven project",
+          "expected_tool_key": "Aiven::list_services"
+        },
+        {
+          "server_intent": "APIMatic MCP operations",
+          "tool_intent": "validates an OpenAPI file using APIMatic\u2019s API and returns a validation summary",
+          "expected_tool_key": "APIMatic MCP::validate-openapi-using-apimatic"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0037",
+      "user_intent": "Single user turn #37: complete these intents in order: (1) provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults; (2) mCP server implementation for Arize Phoenix providing a unified interface to Phoenix's capabilities; (3) update an existing collection in the database; (4) delete a collection from the database; (5) retrieves available baseline audiences, optionally filtered by country",
+      "subtasks": [
+        {
+          "server_intent": "Arize Phoenix operations",
+          "tool_intent": "provides a lightweight wrapper around OpenTelemetry primitives with Phoenix-aware defaults",
+          "expected_tool_key": "Arize Phoenix::arize-phoenix-otel"
+        },
+        {
+          "server_intent": "Arize Phoenix operations",
+          "tool_intent": "mCP server implementation for Arize Phoenix providing a unified interface to Phoenix's capabilities",
+          "expected_tool_key": "Arize Phoenix::@arizeai/phoenix-mcp"
+        },
+        {
+          "server_intent": "Astra DB operations",
+          "tool_intent": "update an existing collection in the database",
+          "expected_tool_key": "Astra DB::UpdateCollection"
+        },
+        {
+          "server_intent": "Astra DB operations",
+          "tool_intent": "delete a collection from the database",
+          "expected_tool_key": "Astra DB::DeleteCollection"
+        },
+        {
+          "server_intent": "Audiense Insights operations",
+          "tool_intent": "retrieves available baseline audiences, optionally filtered by country",
+          "expected_tool_key": "Audiense Insights::get-baselines"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0038",
+      "user_intent": "Single user turn #38: complete these intents in order: (1) retrieves the list of available affinity categories that can be used in influencer comparisons; (2) list all S3 buckets in my AWS account; (3) get content recommendations for AWS documentation pages; (4) execute APL queries against Axiom datasets; (5) list available Axiom datasets",
+      "subtasks": [
+        {
+          "server_intent": "Audiense Insights operations",
+          "tool_intent": "retrieves the list of available affinity categories that can be used in influencer comparisons",
+          "expected_tool_key": "Audiense Insights::get-categories"
+        },
+        {
+          "server_intent": "AWS S3 storage operations",
+          "tool_intent": "list all S3 buckets in my AWS account",
+          "expected_tool_key": "AWS::s3_bucket_list"
+        },
+        {
+          "server_intent": "AWS operations",
+          "tool_intent": "get content recommendations for AWS documentation pages",
+          "expected_tool_key": "AWS::Get Content Recommendations"
+        },
+        {
+          "server_intent": "Axiom operations",
+          "tool_intent": "execute APL queries against Axiom datasets",
+          "expected_tool_key": "Axiom::queryApl"
+        },
+        {
+          "server_intent": "Axiom operations",
+          "tool_intent": "list available Axiom datasets",
+          "expected_tool_key": "Axiom::listDatasets"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0039",
+      "user_intent": "Single user turn #39: complete these intents in order: (1) samples rows from a Kusto table; (2) lists, creates, and retrieves keys within an Azure Key Vault; (3) list Release Management installable artifacts of a connected app; (4) changes whether public install page should be available for the installable artifact; (5) ask Box AI about a hub",
+      "subtasks": [
+        {
+          "server_intent": "Azure operations",
+          "tool_intent": "samples rows from a Kusto table",
+          "expected_tool_key": "Azure::Sample rows from a Kusto table"
+        },
+        {
+          "server_intent": "Azure operations",
+          "tool_intent": "lists, creates, and retrieves keys within an Azure Key Vault",
+          "expected_tool_key": "Azure::List, create, and get keys"
+        },
+        {
+          "server_intent": "Bitrise operations",
+          "tool_intent": "list Release Management installable artifacts of a connected app",
+          "expected_tool_key": "Bitrise::list_installable_artifacts"
+        },
+        {
+          "server_intent": "Bitrise operations",
+          "tool_intent": "changes whether public install page should be available for the installable artifact",
+          "expected_tool_key": "Bitrise::set_installable_artifact_public_install_page"
+        },
+        {
+          "server_intent": "Box operations",
+          "tool_intent": "ask Box AI about a hub",
+          "expected_tool_key": "Box::box_hubs_ask_ai_tool"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0040",
+      "user_intent": "Single user turn #40: complete these intents in order: (1) list all Doc Gen jobs that used a specific template; (2) read a Chroma document by document id; (3) update existing documents' content, metadata, or embeddings; (4) retrieves the status of the latest pipeline for a given branch; (5) identifies flaky tests in a CircleCI project by analyzing test execution history",
+      "subtasks": [
+        {
+          "server_intent": "Box operations",
+          "tool_intent": "list all Doc Gen jobs that used a specific template",
+          "expected_tool_key": "Box::box_docgen_template_list_jobs_tool"
+        },
+        {
+          "server_intent": "Chroma document retrieval operations",
+          "tool_intent": "read a Chroma document by document id",
+          "expected_tool_key": "Chroma::read_document"
+        },
+        {
+          "server_intent": "Chroma operations",
+          "tool_intent": "update existing documents' content, metadata, or embeddings",
+          "expected_tool_key": "Chroma::chroma_update_documents"
+        },
+        {
+          "server_intent": "CircleCI operations",
+          "tool_intent": "retrieves the status of the latest pipeline for a given branch",
+          "expected_tool_key": "CircleCI::get_latest_pipeline_status"
+        },
+        {
+          "server_intent": "CircleCI operations",
+          "tool_intent": "identifies flaky tests in a CircleCI project by analyzing test execution history",
+          "expected_tool_key": "CircleCI::find_flaky_tests"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0041",
+      "user_intent": "Single user turn #41: complete these intents in order: (1) lists and filters code quality issues in a repository; (2) get repository with analysis information, including metrics for Grade, Issues, Duplication, Complexi; (3) analyzes impacts between code and database entities; (4) pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class; (5) track and analyze trace data",
+      "subtasks": [
+        {
+          "server_intent": "Codacy operations",
+          "tool_intent": "lists and filters code quality issues in a repository",
+          "expected_tool_key": "Codacy::codacy_list_repository_issues"
+        },
+        {
+          "server_intent": "Codacy operations",
+          "tool_intent": "get repository with analysis information, including metrics for Grade, Issues, Duplication, Complexity, and Coverage",
+          "expected_tool_key": "Codacy::codacy_get_repository_with_analysis"
+        },
+        {
+          "server_intent": "CodeLogic operations",
+          "tool_intent": "analyzes impacts between code and database entities",
+          "expected_tool_key": "CodeLogic::codelogic-database-impact"
+        },
+        {
+          "server_intent": "CodeLogic operations",
+          "tool_intent": "pulls an impact assessment from the CodeLogic server's APIs for the specified code method and class",
+          "expected_tool_key": "CodeLogic::codelogic-method-impact"
+        },
+        {
+          "server_intent": "Comet Opik operations",
+          "tool_intent": "track and analyze trace data",
+          "expected_tool_key": "Comet Opik::Traces"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0042",
+      "user_intent": "Single user turn #42: complete these intents in order: (1) organize and manage projects; (2) delete a document by ID from a specified scope and collection; (3) get a document by ID from a specified scope and collection; (4) get information about the user's space, including available assignees, dartboards, folders, statuses; (5) create a new doc with title, text content, and folder",
+      "subtasks": [
+        {
+          "server_intent": "Comet Opik operations",
+          "tool_intent": "organize and manage projects",
+          "expected_tool_key": "Comet Opik::Projects/Workspaces Management"
+        },
+        {
+          "server_intent": "Couchbase operations",
+          "tool_intent": "delete a document by ID from a specified scope and collection",
+          "expected_tool_key": "Couchbase::delete_document_by_id"
+        },
+        {
+          "server_intent": "Couchbase operations",
+          "tool_intent": "get a document by ID from a specified scope and collection",
+          "expected_tool_key": "Couchbase::get_document_by_id"
+        },
+        {
+          "server_intent": "Dart operations",
+          "tool_intent": "get information about the user's space, including available assignees, dartboards, folders, statuses, tags, priorities, and sizes",
+          "expected_tool_key": "Dart::get_config"
+        },
+        {
+          "server_intent": "Dart operations",
+          "tool_intent": "create a new doc with title, text content, and folder",
+          "expected_tool_key": "Dart::create_doc"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0043",
+      "user_intent": "Single user turn #43: complete these intents in order: (1) updates an existing blog post's title and/or content; (2) gets all locations for a specific business; (3) sends Slack messages using the Slack Connector; (4) lists problem details from your services, such as Kubernetes; (5) retrieves user information from the EduBase platform",
+      "subtasks": [
+        {
+          "server_intent": "DevHub operations",
+          "tool_intent": "updates an existing blog post's title and/or content",
+          "expected_tool_key": "DevHub::update_blog_post"
+        },
+        {
+          "server_intent": "DevHub operations",
+          "tool_intent": "gets all locations for a specific business",
+          "expected_tool_key": "DevHub::get_locations"
+        },
+        {
+          "server_intent": "Dynatrace operations",
+          "tool_intent": "sends Slack messages using the Slack Connector",
+          "expected_tool_key": "Dynatrace::send_slack_message"
+        },
+        {
+          "server_intent": "Dynatrace operations",
+          "tool_intent": "lists problem details from your services, such as Kubernetes",
+          "expected_tool_key": "Dynatrace::list_problems"
+        },
+        {
+          "server_intent": "EduBase operations",
+          "tool_intent": "retrieves user information from the EduBase platform",
+          "expected_tool_key": "EduBase::edubase_get_user"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0044",
+      "user_intent": "Single user turn #44: complete these intents in order: (1) delete an alias from an Elasticsearch index; (2) get an Elasticsearch document by id from an index; (3) specialized search focused on academic papers and research content; (4) performs real-time web searches with optimized results and content extraction; (5) retrieves a list of all databases available in your Fibery workspace",
+      "subtasks": [
+        {
+          "server_intent": "Elasticsearch index alias operations",
+          "tool_intent": "delete an alias from an Elasticsearch index",
+          "expected_tool_key": "Elasticsearch::delete_alias"
+        },
+        {
+          "server_intent": "Elasticsearch document operations",
+          "tool_intent": "get an Elasticsearch document by id from an index",
+          "expected_tool_key": "Elasticsearch::get_document"
+        },
+        {
+          "server_intent": "Exa operations",
+          "tool_intent": "specialized search focused on academic papers and research content",
+          "expected_tool_key": "Exa::research_paper_search"
+        },
+        {
+          "server_intent": "Exa operations",
+          "tool_intent": "performs real-time web searches with optimized results and content extraction",
+          "expected_tool_key": "Exa::web_search_exa"
+        },
+        {
+          "server_intent": "Fibery operations",
+          "tool_intent": "retrieves a list of all databases available in your Fibery workspace",
+          "expected_tool_key": "Fibery::list_databases"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0045",
+      "user_intent": "Single user turn #45: complete these intents in order: (1) provides a detailed breakdown of a specific database's structure, showing all fields with their titl; (2) start an asynchronous crawl with advanced options; (3) search the web and optionally extract content from search results; (4) comment on an issue; (5) create a pull request",
+      "subtasks": [
+        {
+          "server_intent": "Fibery operations",
+          "tool_intent": "provides a detailed breakdown of a specific database's structure, showing all fields with their titles, names, and types",
+          "expected_tool_key": "Fibery::describe_database"
+        },
+        {
+          "server_intent": "Firecrawl operations",
+          "tool_intent": "start an asynchronous crawl with advanced options",
+          "expected_tool_key": "Firecrawl::firecrawl_crawl"
+        },
+        {
+          "server_intent": "Firecrawl operations",
+          "tool_intent": "search the web and optionally extract content from search results",
+          "expected_tool_key": "Firecrawl::firecrawl_search"
+        },
+        {
+          "server_intent": "Gitee operations",
+          "tool_intent": "comment on an issue",
+          "expected_tool_key": "Gitee::comment_issue"
+        },
+        {
+          "server_intent": "Gitee operations",
+          "tool_intent": "create a pull request",
+          "expected_tool_key": "Gitee::create_pull"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0046",
+      "user_intent": "Single user turn #46: complete these intents in order: (1) list schedules from Grafana OnCall; (2) list available metric names; (3) gets a prompt by name; (4) lists tables in the database; (5) list all add-ons for all apps or for a specific app",
+      "subtasks": [
+        {
+          "server_intent": "Grafana operations",
+          "tool_intent": "list schedules from Grafana OnCall",
+          "expected_tool_key": "Grafana::list_oncall_schedules"
+        },
+        {
+          "server_intent": "Grafana operations",
+          "tool_intent": "list available metric names",
+          "expected_tool_key": "Grafana::list_prometheus_metric_names"
+        },
+        {
+          "server_intent": "GreptimeDB operations",
+          "tool_intent": "gets a prompt by name",
+          "expected_tool_key": "GreptimeDB::get_prompt"
+        },
+        {
+          "server_intent": "GreptimeDB operations",
+          "tool_intent": "lists tables in the database",
+          "expected_tool_key": "GreptimeDB::list_resources"
+        },
+        {
+          "server_intent": "Heroku operations",
+          "tool_intent": "list all add-ons for all apps or for a specific app",
+          "expected_tool_key": "Heroku::list_addons"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0047",
+      "user_intent": "Single user turn #47: complete these intents in order: (1) view application logs; (2) execute a DML (INSERT, UPDATE, DELETE) SQL query on the Hologres server; (3) collect table statistics; (4) complex browser tasks using Claude computer use; (5) fast, lightweight browser automation with the Browser Use agent",
+      "subtasks": [
+        {
+          "server_intent": "Heroku operations",
+          "tool_intent": "view application logs",
+          "expected_tool_key": "Heroku::get_app_logs"
+        },
+        {
+          "server_intent": "Hologres operations",
+          "tool_intent": "execute a DML (INSERT, UPDATE, DELETE) SQL query on the Hologres server",
+          "expected_tool_key": "Hologres::execute_dml_sql"
+        },
+        {
+          "server_intent": "Hologres operations",
+          "tool_intent": "collect table statistics",
+          "expected_tool_key": "Hologres::gather_table_statistics"
+        },
+        {
+          "server_intent": "Hyperbrowser operations",
+          "tool_intent": "complex browser tasks using Claude computer use",
+          "expected_tool_key": "Hyperbrowser::claude_computer_use_agent"
+        },
+        {
+          "server_intent": "Hyperbrowser operations",
+          "tool_intent": "fast, lightweight browser automation with the Browser Use agent",
+          "expected_tool_key": "Hyperbrowser::browser_use_agent"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0048",
+      "user_intent": "Single user turn #48: complete these intents in order: (1) retrieves product documentation about Inkeep; (2) performs a web search to find information based on the query provided; (3) generates a summary of the content, such as a video, based on the URL provided; (4) gets detailed information about a specific table including its DB identifier and column information; (5) retrieves detailed information about a specific job, identified by the job_id, including its status,",
+      "subtasks": [
+        {
+          "server_intent": "Inkeep operations",
+          "tool_intent": "retrieves product documentation about Inkeep",
+          "expected_tool_key": "Inkeep::search-product-content"
+        },
+        {
+          "server_intent": "Kagi Search operations",
+          "tool_intent": "performs a web search to find information based on the query provided",
+          "expected_tool_key": "Kagi Search::search"
+        },
+        {
+          "server_intent": "Kagi Search operations",
+          "tool_intent": "generates a summary of the content, such as a video, based on the URL provided",
+          "expected_tool_key": "Kagi Search::summarizer"
+        },
+        {
+          "server_intent": "Keboola operations",
+          "tool_intent": "gets detailed information about a specific table including its DB identifier and column information",
+          "expected_tool_key": "Keboola::get_table_detail"
+        },
+        {
+          "server_intent": "Keboola operations",
+          "tool_intent": "retrieves detailed information about a specific job, identified by the job_id, including its status, parameters, results, and any relevant metadata",
+          "expected_tool_key": "Keboola::get_job_detail"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0049",
+      "user_intent": "Single user turn #49: complete these intents in order: (1) tools to store field-value pairs within a single key; (2) tools to add, remove and list set members; (3) creates a new invoice in Stripe; (4) lists all subscriptions in Stripe; (5) lists records from a specified Airtable table",
+      "subtasks": [
+        {
+          "server_intent": "Redis operations",
+          "tool_intent": "tools to store field-value pairs within a single key",
+          "expected_tool_key": "Redis::hash"
+        },
+        {
+          "server_intent": "Redis operations",
+          "tool_intent": "tools to add, remove and list set members",
+          "expected_tool_key": "Redis::set"
+        },
+        {
+          "server_intent": "Stripe operations",
+          "tool_intent": "creates a new invoice in Stripe",
+          "expected_tool_key": "Stripe::createInvoice"
+        },
+        {
+          "server_intent": "Stripe operations",
+          "tool_intent": "lists all subscriptions in Stripe",
+          "expected_tool_key": "Stripe::listSubscriptions"
+        },
+        {
+          "server_intent": "Airtable operations",
+          "tool_intent": "lists records from a specified Airtable table",
+          "expected_tool_key": "Airtable::list_records"
+        }
+      ]
+    },
+    {
+      "id": "multi_tool-medium_250-single_turn-0050",
+      "user_intent": "Single user turn #50: complete these intents in order: (1) search for records containing specific text; (2) get a player's profile from Chess.com; (3) get a player's stats from Chess.com; (4) fetch events within a time range; (5) get metadata for a specific metric",
+      "subtasks": [
+        {
+          "server_intent": "Airtable operations",
+          "tool_intent": "search for records containing specific text",
+          "expected_tool_key": "Airtable::search_records"
+        },
+        {
+          "server_intent": "Chess.com operations",
+          "tool_intent": "get a player's profile from Chess.com",
+          "expected_tool_key": "Chess.com::get_player_profile"
+        },
+        {
+          "server_intent": "Chess.com operations",
+          "tool_intent": "get a player's stats from Chess.com",
+          "expected_tool_key": "Chess.com::get_player_stats"
+        },
+        {
+          "server_intent": "Datadog operations",
+          "tool_intent": "fetch events within a time range",
+          "expected_tool_key": "Datadog::get-events"
+        },
+        {
+          "server_intent": "Datadog operations",
+          "tool_intent": "get metadata for a specific metric",
+          "expected_tool_key": "Datadog::get-metric-metadata"
+        }
+      ]
+    }
+  ]
+}

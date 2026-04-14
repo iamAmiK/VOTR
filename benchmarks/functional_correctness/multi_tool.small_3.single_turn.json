@@ -1,0 +1,48 @@
+{
+  "suite": "multi_tool.small_3.single_turn",
+  "description": "Router-only benchmark for one user turn that implies multiple tool targets in the small 3-server catalog.",
+  "cases": [
+    {
+      "id": "mt-small-001",
+      "user_intent": "Search for a repository, get Bloomberg reference data, and send the result to a Telegram chat.",
+      "subtasks": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Search for GitHub repositories",
+          "expected_tool_key": "GitHub::search_repositories"
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg reference data",
+          "expected_tool_key": "Bloomberg::bdp"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Send a message to a specific chat.",
+          "expected_tool_key": "Telegram::send_message"
+        }
+      ]
+    },
+    {
+      "id": "mt-small-002",
+      "user_intent": "Create a GitHub issue, pull Bloomberg historical data, and look up the right Telegram contact.",
+      "subtasks": [
+        {
+          "server_intent": "GitHub operations",
+          "tool_intent": "Create a new issue",
+          "expected_tool_key": "GitHub::create_issue"
+        },
+        {
+          "server_intent": "Bloomberg financial data operations",
+          "tool_intent": "Get Bloomberg historical data",
+          "expected_tool_key": "Bloomberg::bdh"
+        },
+        {
+          "server_intent": "Telegram operations",
+          "tool_intent": "Search contacts.",
+          "expected_tool_key": "Telegram::search_contacts"
+        }
+      ]
+    }
+  ]
+}
