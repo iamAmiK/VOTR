@@ -1,0 +1,348 @@
+Metadata-Version: 2.4
+Name: mcp-router
+Version: 0.1.0
+Summary: Hierarchical hybrid tool router for MCP applications
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.110.0
+Requires-Dist: uvicorn[standard]>=0.27.0
+Requires-Dist: pydantic>=2.5.0
+Requires-Dist: pydantic-settings>=2.1.0
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: openai>=1.40.0
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: rank-bm25>=0.2.2
+Requires-Dist: scikit-learn>=1.3.0
+Requires-Dist: ijson>=3.2.3
+Requires-Dist: httpx>=0.27.0
+Provides-Extra: qdrant
+Requires-Dist: qdrant-client>=1.9.0; extra == "qdrant"
+Provides-Extra: mcp
+Requires-Dist: mcp>=1.0.0; extra == "mcp"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: ruff>=0.4.0; extra == "dev"
+
+# MCP-Router: Dynamic Hierarchical Tool Routing for Real-World MCP Applications
+
+> Extending [MCP-Zero](https://arxiv.org/abs/2506.01056) from a research retrieval prototype to a production-grade tool routing system for live MCP server ecosystems.
+
+---
+
+## 1. Problem Statement
+
+MCP-Zero demonstrated that proactive, embedding-based tool retrieval can cut token consumption by ~98% while maintaining high accuracy in benchmark settings. However, it cannot be deployed in real applications today because:
+
+- **Static index**: The tool catalog (`mcp_tools_with_embedding.json`) is a frozen snapshot. Adding or removing MCP servers requires full manual rebuild.
+- **No live MCP integration**: The retrieval pipeline is disconnected from actual MCP server execution (stdio/SSE transport).
+- **Flat vector search at scale**: Brute-force cosine similarity over all servers degrades as catalogs grow beyond the paper's 308-server test set.
+- **Fixed top-k**: Returning a static number of candidates regardless of confidence leads to either too many irrelevant tools (wasted tokens) or missed relevant ones (accuracy loss).
+- **No feedback loop**: The system never learns which tools were actually selected or succeeded, missing an opportunity to improve ranking over time.
+
+## 2. Our Contributions
+
+| # | Contribution | MCP-Zero Baseline | Our Improvement |
+|---|---|---|---|
+| 1 | **Live MCP Router Service** | Offline experiment scripts | FastAPI service with `/route`, `/execute`, `/register` endpoints |
+| 2 | **Dynamic Index with Hot Registration** | Static 10M-line JSON file | On-disk NumPy index + BM25; optional Qdrant for large-scale deployments |
+| 3 | **Hybrid Retrieval** | Pure embedding cosine similarity | BM25 keyword matching + embedding similarity (reciprocal rank fusion) |
+| 4 | **Adaptive Top-K with Confidence Gating** | Fixed top_servers=5, top_tools=1-3 | Score-gap-based dynamic cutoff — inject fewer tools when confident, more when ambiguous |
+| 5 | **Compressed Schema Injection** | Full tool JSON schema in context | Minimal schema representation (name + one-line description + required params only) |
+| 6 | **Usage-Weighted Re-ranking** | No learning signal | Track tool selection + execution success rates; boost proven tools over time |
+| 7 | **Multi-turn Context Carryover** | Independent retrieval per turn | Maintain session tool memory — avoid re-retrieving tools already in context |
+
+## 3. Architecture Overview
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                      Client / Agent App                      │
+│  (sends user query, receives tool suggestions or results)    │
+└────────────────────────────┬────────────────────────────────┘
+                             │
+                     ┌───────▼───────┐
+                     │  MCP-Router   │
+                     │   (FastAPI)   │
+                     └───┬───┬───┬───┘
+                         │   │   │
+            ┌────────────┘   │   └────────────┐
+            ▼                ▼                ▼
+   ┌────────────────┐ ┌──────────┐  ┌──────────────────┐
+   │ Retrieval Layer │ │ Registry │  │  Execution Proxy │
+   │                │ │          │  │                  │
+   │ • Vector index │ │ • Add    │  │ • stdio/SSE MCP  │
+   │ • BM25 index   │ │ • Remove │  │   client calls   │
+   │ • Hybrid fuse  │ │ • Update │  │ • Result caching │
+   │ • Adaptive K   │ │ • Embed  │  │ • Error handling │
+   └────────────────┘ └──────────┘  └──────────────────┘
+            │                │                │
+            └────────────────┼────────────────┘
+                             ▼
+                    ┌────────────────┐
+                    │  Vector Store  │
+                    │  (.npy + meta  │
+                    │   or Qdrant)   │
+                    └────────────────┘
+```
+
+## 4. Detailed Component Design
+
+### 4.1 Retrieval Layer — Hybrid Search with Confidence Gating
+
+**MCP-Zero approach**: embed query → cosine similarity against all server embeddings → top-5 servers → cosine against tool embeddings → top-k tools.
+
+**Our approach**:
+
+1. **BM25 keyword index** over server names, descriptions, summaries, tool names, and tool descriptions. Catches exact name matches that embeddings sometimes miss (e.g., user says "GitHub" — BM25 will find the GitHub MCP server instantly).
+
+2. **Embedding similarity** (same as MCP-Zero) using precomputed vectors; server routing uses matrix ops over all servers (hundreds), then tool scoring on the candidate subset only.
+
+3. **Reciprocal Rank Fusion (RRF)** to merge BM25 and embedding rankings:
+   ```
+   RRF_score(tool) = 1/(k + rank_bm25) + 1/(k + rank_embed)
+   ```
+   where k=60 is a standard constant.
+
+4. **Adaptive top-K via score gap detection**: instead of always returning top-3 tools, examine the score distribution. If there is a clear winner (large gap between rank-1 and rank-2), return only 1 tool. If scores are tightly clustered, return more candidates. This directly reduces token injection when the router is confident.
+
+### 4.2 Dynamic Registry — Hot Server Registration
+
+When a user adds a new MCP server:
+
+1. **Discover**: connect to the MCP server via stdio/SSE, call `tools/list` to get tool schemas.
+2. **Extract**: normalize tool names, descriptions, parameters into our standard format.
+3. **Summarize** (optional): use LLM to generate an enhanced server summary from tool list (like MCP-Zero's Qwen step, but on-demand per server instead of batch).
+4. **Embed**: call embedding API for server description, server summary, and each tool description.
+5. **Upsert**: add vectors to FAISS index + metadata to the registry store.
+6. **Available immediately**: next query hits the updated index with zero downtime.
+
+### 4.3 Compressed Schema Injection
+
+MCP-Zero returns full tool JSON schemas to the model. We reduce token cost further:
+
+- **Full schema** (MCP-Zero): ~143 tokens per tool (from paper's Figure 2)
+- **Compressed schema**: ~40-60 tokens per tool
+
+Format:
+```
+[server: GitHub] search_repositories(query: str, page?: int, perPage?: int)
+  → Search for GitHub repositories matching a query.
+```
+
+vs the original 15+ line JSON-Schema block. The model can still generate correct function calls from this.
+
+### 4.4 Usage-Weighted Re-ranking
+
+Track per-tool signals over time:
+- Was this tool actually selected by the model after being suggested?
+- Did the tool call succeed or error?
+- How frequently is this tool retrieved?
+
+Maintain a lightweight score modifier:
+```
+final_score = retrieval_score * (1 + α * success_rate)
+```
+
+This creates a feedback loop: tools that consistently deliver results get ranked higher. Novel/untested tools aren't penalized — they just don't get boosted.
+
+### 4.5 Multi-turn Session Memory
+
+MCP-Zero retrieves tools independently each turn. In a real conversation:
+- Turn 1: user asks to read a file → router retrieves `filesystem.read_file`.
+- Turn 2: user asks to edit the file → router retrieves `filesystem.edit_file`.
+- Turn 3: user asks to run the file → router should NOT re-retrieve filesystem tools already in context.
+
+We maintain a **session tool set** — tools already injected in prior turns are tracked and excluded from re-injection (saving tokens), while still available to the model via conversation history.
+
+### 4.6 Execution Proxy (optional module)
+
+For end-to-end operation, optionally proxy actual MCP tool calls:
+- Maintain a registry of connected MCP servers (transport config: stdio command, SSE URL).
+- After model selects a tool, route the call to the correct MCP server.
+- Return result to the model for next-step reasoning.
+
+## 5. Evaluation Plan
+
+### 5.1 Reproduce MCP-Zero Baselines
+- Needle-in-a-haystack on MCP-tools dataset (308 servers, 2,797 tools).
+- APIBank single-turn and multi-turn.
+
+### 5.2 Our Metrics
+| Metric | What it measures |
+|---|---|
+| **Retrieval Accuracy @1, @3, @5** | Correct tool in top-K results |
+| **Tokens Injected** | Average tokens added to context per routing decision |
+| **Latency (p50, p99)** | End-to-end routing time |
+| **Dynamic Registration Accuracy** | Accuracy on tools added after initial index build |
+| **Multi-turn Token Savings** | Cumulative token reduction from session memory |
+
+### 5.3 Ablation Studies
+- Hybrid (BM25+embed) vs embedding-only vs BM25-only.
+- Adaptive-K vs fixed-K.
+- Compressed vs full schema injection.
+- With/without usage re-ranking.
+
+## 6. Project structure (as implemented)
+
+```
+MCP-Router/
+├── README.md
+├── requirements.txt
+├── pyproject.toml
+├── config.yaml
+├── src/mcp_router/
+│   ├── router.py              # FastAPI app
+│   ├── config.py
+│   ├── retrieval/             # hybrid, embedder, engine, tool_index (numpy), adaptive_k
+│   ├── registry/              # schema, manager, mcp_discovery (helpers)
+│   ├── ranking/               # usage_tracker, reranker
+│   ├── session/memory.py
+│   ├── schema_compress/
+│   ├── stores/qdrant_store.py # stub adapter
+│   └── execution/proxy.py     # stub (retrieval-only)
+├── scripts/
+│   ├── build_index.py         # Stream-parse MCP-Zero JSON → data/index
+│   └── migrate_mcpzero.py
+├── evaluation/metrics.py      # stub metrics for benchmarks
+└── data/index/                # built artifacts (gitignored except .gitkeep)
+```
+
+## 7. Design Decisions (Resolved)
+
+| Decision | Choice | Rationale |
+|---|---|---|
+| **LLM Provider** | Pluggable — all providers (OpenAI, Anthropic, local, etc.) | Router is provider-agnostic. Works through Claude, Cursor, custom agents, etc. |
+| **Embedding Model** | OpenAI `text-embedding-3-large` | Best retrieval quality; matches MCP-Zero baseline for fair comparison |
+| **Vector Store** | NumPy on-disk index + Qdrant stub for production | Simple reproducible baseline; swap in Qdrant when you need multi-replica or huge catalogs |
+| **Execution Proxy** | Retrieval/ranking only | Router stays focused on discovery + ranking. Callers handle MCP execution. |
+| **Evaluation Scope** | Full system — reproduce baselines + new benchmarks + live MCP server demo | Strongest paper contribution: show it works end-to-end with real servers |
+
+---
+
+## Appendix: Key Differences from MCP-Zero
+
+| Aspect | MCP-Zero | MCP-Router (ours) |
+|---|---|---|
+| Purpose | Research evaluation | Production-deployable service |
+| Index format | Single giant JSON (~1.3GB) | `meta.json` + `.npy` shards (optional Qdrant) |
+| Search method | Brute-force cosine | Hybrid BM25 + embedding (hierarchical candidates) |
+| Top-K strategy | Fixed (5 servers, 1-3 tools) | Adaptive confidence-gated |
+| Schema injection | Full JSON-Schema | Compressed one-liner format |
+| New server support | Manual full rebuild | Hot registration via API |
+| Learning signal | None | Usage-weighted re-ranking |
+| Multi-turn | Independent per turn | Session tool memory |
+| Live MCP execution | None | Optional execution proxy |
+
+---
+
+## 8. Quickstart (implementation)
+
+### Install
+
+```bash
+cd MCP-Router
+pip install -e .
+```
+
+### Build the index from MCP-Zero `mcp_tools_with_embedding.json`
+
+Uses streaming (`ijson`) so the full file does not need to fit in RAM as a single Python string.
+
+```bash
+python scripts/build_index.py --input "../MCP-Zero/MCP-tools/mcp_tools_with_embedding.json" --output data/index
+```
+
+For a small dev index:
+
+```bash
+python scripts/build_index.py --input "../MCP-Zero/MCP-tools/mcp_tools_with_embedding.json" --output data/index --max-servers 20
+```
+
+### Run the API
+
+Requires `OPENAI_API_KEY` (query-time embeddings for `server_intent` / `tool_intent`).
+
+```bash
+set OPENAI_API_KEY=sk-...
+python -m uvicorn mcp_router.router:app --host 0.0.0.0 --port 8765
+```
+
+### Example requests
+
+`POST /route` — hybrid retrieval + adaptive top-k + compressed tool lines:
+
+```json
+{
+  "server_intent": "GitHub repositories and API",
+  "tool_intent": "search for repositories matching a query string",
+  "session_id": "user-123"
+}
+```
+
+`POST /register` — append a new MCP server (re-embeds only the new server + its tools; existing vectors preserved):
+
+```json
+{
+  "server": {
+    "name": "MyServer",
+    "description": "Does X",
+    "summary": "Short summary for routing",
+    "tools": [
+      {"name": "do_x", "description": "Runs X", "parameter": {}}
+    ],
+    "source": "user"
+  }
+}
+```
+
+`POST /register/discover` — discover a live stdio MCP server (`initialize` + `tools/list`) and register it:
+
+```json
+{
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-filesystem", "C:\\\\repo"],
+  "server_name": "Filesystem",
+  "server_description": "Read and write files in a local workspace",
+  "timeout_seconds": 30
+}
+```
+
+`POST /register/discover/sse` — discover via HTTP JSON-RPC endpoint and register:
+
+```json
+{
+  "url": "https://your-mcp-host.example.com/mcp",
+  "server_name": "RemoteGitHub",
+  "server_description": "Remote MCP endpoint for GitHub workflows",
+  "timeout_seconds": 30
+}
+```
+
+Notes:
+- This expects a JSON-RPC HTTP endpoint accepting `initialize` and `tools/list`.
+- Some MCP deployments expose SSE streams or custom wrappers; in those cases you may need a small adapter endpoint.
+
+`POST /usage/feedback` — optional learning signal:
+
+```json
+{ "tool_key": "MyServer::do_x", "selected": true, "success": true }
+```
+
+### Multi-hop accuracy test
+
+Use the included evaluator:
+
+```bash
+python evaluation/multihop_eval.py --base-url "http://127.0.0.1:8765" --cases evaluation/cases/multihop_cases.sample.json --k 5 --out evaluation/results/multihop_sample_report.json
+```
+
+Case format:
+- each case has `hops[]`
+- each hop provides `server_intent`, `tool_intent`, and one of:
+  - `expected_tool_key` (exact, e.g. `GitHub::search_repositories`)
+  - `expected_tool_keys` (multiple acceptable exact keys)
+  - `expected_tool_name` (name-only fallback, e.g. `delete_task`)
+- script reports:
+  - per-hop Hit@1 and Hit@k
+  - mean hop Accuracy@1 / @k
+  - chain success rate (all hops hit@k)
