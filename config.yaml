@@ -1,0 +1,59 @@
+# MCP-Router — copy to config.local.yaml and override paths if needed.
+
+embedding_model: text-embedding-3-large
+embedding_dimensions: 3072
+
+# Built by scripts/build_index.py (FAISS + metadata + BM25 corpus)
+index_dir: ./data/index
+
+# Per-session tool memory (in-process; use Redis in production)
+session_ttl_seconds: 86400
+
+# Retrieval defaults (adaptive_k may shrink the final list)
+default_top_servers: 8
+bm25_candidate_multiplier: 4
+rrf_k: 60
+dense_retrieval_enabled: true
+bm25_retrieval_enabled: true
+dense_rrf_weight: 1.0
+bm25_rrf_weight: 1.0
+# OpenAI API key via environment
+openai_api_key_env: OPENAI_API_KEY
+
+# Adaptive top-k thresholds (cosine-style scores in [0,1])
+adaptive_gap_confident: 0.12
+adaptive_min_tools: 1
+adaptive_max_tools: 8
+bulk_penalty_singular: 0.82
+bulk_boost_plural: 1.08
+splade_enabled: true
+splade_candidate_multiplier: 4
+splade_rrf_weight: 0.35
+handoff_enabled: true
+server_score_max_weight: 1.0
+server_score_mean_weight: 0.0
+handoff_gap_high: 0.0010426450507904708
+handoff_gap_medium: 0.000836960501159334
+handoff_k_high: 1
+handoff_k_medium: 3
+handoff_k_low: 5
+field_aware_enabled: true
+field_aware_rerank_head: 24
+field_aware_score_window: 0.003
+field_bonus_scale: 0.0015
+field_weight_server_name: 0.18
+field_weight_server_summary: 0.08
+field_weight_tool_name: 0.35
+field_weight_tool_description: 0.18
+field_weight_parameters: 0.12
+explicit_server_boost: 0.22
+abstention_guard_enabled: true
+abstention_query_support_threshold: 0.18
+abstention_server_support_threshold: 0.12
+null_route_enabled: true
+null_route_query_support_threshold: 0.213
+null_route_server_support_threshold: 0.08
+null_route_tool_support_threshold: 0.4
+overlap_aware_enabled: true
+overlap_score_window: 0.0025
+overlap_max_group_tools: 3

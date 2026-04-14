@@ -1,0 +1,46 @@
+# Python caches / builds
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local secrets / machine-specific config
+.env
+.env.*
+!.env_template
+config.local.yaml
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Generated indexes and local runtime data
+data/index/
+data/index.bak/
+data/index_*/
+data/server_exports/
+data/usage_stats.json
+
+# Generated evaluation artifacts
+benchmarks/results/
+evaluation/results/
+
+# LiveMCPBench baseline/evaluator outputs (if copied/linked into this repo)
+**/output/
