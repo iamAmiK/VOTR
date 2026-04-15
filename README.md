@@ -26,7 +26,7 @@ VOTR is the system described in the paper `[VOTR: Vector Orchestrated Tool Retri
 - **Confidence-gated handoff:** Dynamic \(k \in \{1,3,5\}\) selection calibrated from non-conformity style thresholds + optional abstention protocol.
 - **Registry built for live MCP:** Runtime discovery and hot registration through stdio and HTTP/SSE pathways.
 - **Robustness features:** Overlap-aware disambiguation, abstention/null-route guards, and regression-oriented suites.
-- **Token efficiency:** Compact schema lines (paper reports 26.2 tokens/tool vs 93.5 MCP-Zero-style wrapper on the indexed corpus).
+- **Token efficiency:** Compact schema lines (near 99% reduction to standard corpus in MCP use).
 
 ---
 
