@@ -47,11 +47,11 @@ This repository is the **core VOTR router implementation**.
 - `scripts/`: index/data preparation and result table generation
 - `docs/`: implementation notes and policy documentation
 
-### Paper companion
+### Paper Companions
 
-An interactive, static paper companion article lives at [`Interactive Companion Paper`](https://iamamik.github.io/VOTR/).
+An interactive paper companion article lives at [`Interactive Companion Paper`](https://iamamik.github.io/VOTR/).
 
-Companion integration loop (optional, separate repo):
+A Companion Orchestration integration loop is at:
 - [`VOTR-Orchestrator`](https://github.com/iamAmiK/VOTR-Orchestrator)
 
 `VOTR-Orchestrator` is used for E2E integration testing around the router. In practice, it acts as the execution harness that sends routed tool candidates into a production-style multi-step agent loop, then validates tool-calling behavior across full conversations and chained tasks.
