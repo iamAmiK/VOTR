@@ -10,7 +10,7 @@
 [![Paper](https://img.shields.io/badge/Paper-VOTR-blue?style=for-the-badge)](https://github.com/iamAmiK/VOTR/blob/main/docs/(Draft)%20VOTR%20-%20Vector%20Orchestrated%20Tool%20Retrieval%20for%20Scalable%20Multi-Agent%20Systems.pdf)
 [![HuggingFace](https://img.shields.io/badge/HuggingFace-assets-ffcc4d?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/datasets/a13awd/VOTR)
 [![Orchestrator](https://img.shields.io/badge/Orchestrator-VOTR--Orchestrator-8a2be2?style=for-the-badge)](https://github.com/iamAmiK/VOTR-Orchestrator)
-[![Interactive](https://img.shields.io/badge/Interactive-VOTR--Paper-2DE2A6?style=for-the-badge&labelColor=2B3A67)](https://iamamik.github.io/VOTR/)
+[![Interactive](https://img.shields.io/badge/Interactive-Companion--Paper-2DE2A6?style=for-the-badge&labelColor=2B3A67)](https://iamamik.github.io/VOTR/)
 
 </div>
 
