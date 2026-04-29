@@ -46,6 +46,10 @@ This repository is the **core VOTR router implementation**.
 - `scripts/`: index/data preparation and result table generation
 - `docs/`: implementation notes and policy documentation
 
+### Paper companion (GitHub Pages)
+
+An interactive, static paper companion article lives at [`docs/index.html`](docs/index.html).
+
 Companion integration loop (optional, separate repo):
 - [`VOTR-Orchestrator`](https://github.com/iamAmiK/VOTR-Orchestrator)
 

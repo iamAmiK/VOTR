@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>VOTR — Interactive Paper Companion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#06070a;
+  --bg1:#0c0e14;
+  --bg2:#111520;
+  --bg3:#161b28;
+  --border:#1e2535;
+  --border2:#2a3348;
+  --text:#e2e8f8;
+  --muted:#6b7a99;
+  --dim:#3d4d6a;
+  --blue:#4f8fff;
+  --blue2:#7ab3ff;
+  --green:#3ddba8;
+  --purple:#b06fff;
+  --orange:#f0874a;
+  --red:#f06a6a;
+  --yellow:#e8c84a;
+  --mono:'Space Mono',monospace;
+  --sans:'Space Grotesk',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(6,7,10,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:1rem;height:52px}
+.nav-logo{font-family:var(--mono);font-weight:700;font-size:1rem;color:var(--blue);letter-spacing:0.05em}
+.nav-links{display:flex;gap:0.25rem;flex-wrap:wrap}
+.nav-links a{font-family:var(--mono);font-size:0.7rem;color:var(--muted);text-decoration:none;padding:0.25rem 0.5rem;border-radius:4px;letter-spacing:0.05em;transition:color .2s,background .2s}
+.nav-links a:hover{color:var(--text);background:var(--bg2)}
+.nav-links a.active{color:var(--text);background:var(--bg2);border:1px solid rgba(79,143,255,0.35)}
+
+/* Scroll depth (sticky nav) */
+.nav-progress{position:absolute;left:-2rem;right:-2rem;bottom:0;height:3px;background:rgba(154,165,191,0.15)}
+.nav-progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--green));transition:width 80ms linear}
+
+/* LAYOUT */
+.page{max-width:1200px;margin:0 auto;padding:80px 2rem 4rem}
+
+/* HERO (exact typography/style from index.html top block) */
+.hero{max-width:840px;margin:0 auto 56px;text-align:center}
+.eyebrow{margin:0 0 1.2rem;font-family:"JetBrains Mono",monospace;font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--green)}
+.hero h1{margin:0 0 1.25rem;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:clamp(42px,8vw,82px);line-height:0.92;letter-spacing:-0.04em;font-weight:700;color:#f2f5ff}
+.hero p{max-width:680px;margin:0 auto 2rem;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#c5cce0;font-size:clamp(1.06rem,2vw,1.24rem)}
+.link-row{display:flex;flex-wrap:wrap;justify-content:center;gap:0.7rem;margin-bottom:2.5rem}
+.pill{display:inline-flex;align-items:center;gap:0.45rem;border:1px solid rgba(154,165,191,0.18);background:rgba(18,22,34,0.74);color:#f2f5ff;border-radius:999px;padding:0.55rem 0.9rem;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:0.9rem;text-decoration:none;box-shadow:0 12px 40px rgba(0,0,0,0.16)}
+.pill:hover{border-color:rgba(128,167,255,0.7);text-decoration:none}
+
+/* STATS BAR */
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:4rem}
+.stat{background:var(--bg1);padding:1.25rem;text-align:center}
+.stat-n{font-family:var(--mono);font-size:1.9rem;font-weight:700;color:var(--blue);letter-spacing:-0.04em}
+.stat-label{font-size:0.78rem;color:var(--muted);margin-top:0.2rem}
+
+/* SECTION */
+section{margin-bottom:5rem;scroll-margin-top:64px}
+.sec-header{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem}
+.sec-num{font-family:var(--mono);font-size:0.7rem;color:var(--blue);letter-spacing:0.1em}
+.sec-title{font-size:1.6rem;font-weight:700;letter-spacing:-0.03em}
+.sec-desc{color:var(--muted);font-size:0.92rem;line-height:1.7;margin-bottom:1.5rem;max-width:720px}
+
+/* CARDS / PANELS */
+.panel{background:var(--bg1);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.panel-head{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1rem;border-bottom:1px solid var(--border);background:rgba(255,255,255,0.02)}
+.panel-title{font-family:var(--mono);font-size:0.72rem;color:var(--muted);letter-spacing:0.06em}
+.panel-body{padding:1.25rem}
+
+/* GRID LAYOUTS */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+.grid-col-left{display:grid;grid-template-columns:1fr 1.4fr;gap:1rem;align-items:start}
+.grid-col-right{display:grid;grid-template-columns:1.4fr 1fr;gap:1rem;align-items:start}
+
+/* MONO TEXT */
+.mono{font-family:var(--mono);font-size:0.8rem}
+code{font-family:var(--mono);font-size:0.82em;color:var(--blue2);background:rgba(79,143,255,0.1);border:1px solid rgba(79,143,255,0.2);border-radius:4px;padding:0.05rem 0.28rem}
+
+/* CONTROLS */
+label.ctrl{display:block;font-family:var(--mono);font-size:0.7rem;color:var(--muted);letter-spacing:0.06em;margin-bottom:0.3rem}
+input[type=range]{width:100%;accent-color:var(--blue);height:4px;margin:0.4rem 0}
+.seg{display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:0.75rem}
+.seg button{font-family:var(--mono);font-size:0.7rem;padding:0.3rem 0.65rem;border:1px solid var(--border2);background:transparent;color:var(--muted);border-radius:6px;cursor:pointer;transition:all .2s}
+.seg button:hover{border-color:var(--blue);color:var(--blue2)}
+.seg button.on{border-color:var(--green);color:var(--green);background:rgba(61,219,168,0.08)}
+button.run-btn{font-family:var(--mono);font-size:0.72rem;padding:0.4rem 0.9rem;border:1px solid var(--blue);background:rgba(79,143,255,0.08);color:var(--blue2);border-radius:6px;cursor:pointer;transition:all .2s}
+button.run-btn:hover{background:rgba(79,143,255,0.16)}
+
+/* TAG/CHIP */
+.tag{display:inline-block;font-family:var(--mono);font-size:0.65rem;padding:0.15rem 0.4rem;border-radius:4px;border:1px solid var(--border2);color:var(--muted)}
+.tag.hit{border-color:rgba(61,219,168,0.4);color:var(--green);background:rgba(61,219,168,0.08)}
+.tag.miss{border-color:rgba(240,106,106,0.4);color:var(--red);background:rgba(240,106,106,0.06)}
+.tag.blue{border-color:rgba(79,143,255,0.4);color:var(--blue2);background:rgba(79,143,255,0.08)}
+.tag.purple{border-color:rgba(176,111,255,0.4);color:var(--purple);background:rgba(176,111,255,0.08)}
+.tag.orange{border-color:rgba(240,135,74,0.4);color:var(--orange);background:rgba(240,135,74,0.08)}
+
+/* SCORE BAR */
+.score-bar-wrap{background:rgba(0,0,0,0.3);border-radius:4px;overflow:hidden;height:10px}
+.score-bar{height:100%;border-radius:4px;transition:width .5s ease}
+
+/* RESULT ROW */
+.result-row{display:grid;grid-template-columns:1.8rem 1fr auto;gap:0.5rem;align-items:center;padding:0.4rem 0;border-bottom:1px solid var(--border)}
+.result-row:last-child{border:none}
+.result-rank{font-family:var(--mono);font-size:0.7rem;color:var(--dim);text-align:center}
+.result-name{font-size:0.83rem;color:var(--text)}
+.result-score{font-family:var(--mono);font-size:0.7rem;color:var(--muted)}
+
+/* FORMULA */
+.formula{font-family:var(--mono);font-size:0.8rem;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:0.75rem 1rem;color:var(--blue2);text-align:center;margin:0.75rem 0}
+
+/* PIPELINE VIZ */
+.pipe-flow{display:flex;flex-direction:column;gap:0}
+.pipe-node{display:grid;grid-template-columns:40px 1fr;gap:0.75rem;padding:0.85rem;border-bottom:1px solid var(--border);transition:background .2s;cursor:pointer}
+.pipe-node:last-child{border:none}
+.pipe-node:hover{background:rgba(79,143,255,0.04)}
+.pipe-node.active-node{background:rgba(79,143,255,0.07)}
+.pipe-dot-col{display:flex;flex-direction:column;align-items:center;gap:0}
+.pipe-dot2{width:12px;height:12px;border-radius:50%;border:2px solid var(--border2);background:var(--bg);transition:all .3s;flex-shrink:0}
+.pipe-node.active-node .pipe-dot2{border-color:var(--blue);background:var(--blue);box-shadow:0 0 12px rgba(79,143,255,0.5)}
+.pipe-node.done-node .pipe-dot2{border-color:var(--green);background:var(--green)}
+.pipe-line{width:2px;flex:1;background:var(--border);margin:3px 0}
+.pipe-node-title{font-size:0.88rem;font-weight:600;margin-bottom:0.2rem}
+.pipe-node-desc{font-size:0.78rem;color:var(--muted);line-height:1.5}
+.pipe-node-detail{margin-top:0.6rem;font-size:0.75rem;color:var(--muted);display:none;border-top:1px solid var(--border);padding-top:0.6rem}
+.pipe-node.active-node .pipe-node-detail{display:block}
+
+/* NOTICE */
+.notice{border-left:2px solid rgba(79,143,255,0.5);padding:0.6rem 0.8rem;background:rgba(79,143,255,0.05);border-radius:0 6px 6px 0;font-size:0.82rem;color:var(--muted);margin:0.75rem 0}
+.notice strong{color:var(--blue2)}
+.notice.green{border-color:rgba(61,219,168,0.5);background:rgba(61,219,168,0.05)}
+.notice.green strong{color:var(--green)}
+.notice.orange{border-color:rgba(240,135,74,0.5);background:rgba(240,135,74,0.05)}
+.notice.orange strong{color:var(--orange)}
+
+/* TABLE */
+.data-table{width:100%;border-collapse:collapse;font-size:0.78rem}
+.data-table th{font-family:var(--mono);font-size:0.65rem;color:var(--muted);text-align:left;padding:0.5rem 0.75rem;border-bottom:1px solid var(--border);font-weight:500;letter-spacing:0.05em}
+.data-table td{padding:0.5rem 0.75rem;border-bottom:1px solid var(--border);color:var(--text)}
+.data-table tr:last-child td{border:none}
+.data-table tr:hover td{background:rgba(255,255,255,0.02)}
+.num-cell{font-family:var(--mono);color:var(--blue2)}
+.green-cell{font-family:var(--mono);color:var(--green)}
+.red-cell{font-family:var(--mono);color:var(--red)}
+
+/* CONFIDENCE TIERS */
+.tier-high{color:var(--green)}
+.tier-med{color:var(--yellow)}
+.tier-low{color:var(--orange)}
+
+/* ANIMATED ELEMENTS */
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.fade-in{animation:fadeIn 0.3s ease}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+
+@media(max-width:900px){
+  .grid-2,.grid-3,.grid-col-left,.grid-col-right{grid-template-columns:1fr}
+  .stats-bar{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:clamp(42px,8vw,82px)}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#retrieval">Retrieval</a>
+      <a href="#rrf">Fusion</a>
+      <a href="#rerank">Rerank</a>
+      <a href="#confidence">Confidence</a>
+      <a href="#compression">Compression</a>
+      <a href="#registration">Registry</a>
+      <a href="#evaluation">Evaluation</a>
+      <a href="#ablation">Ablation</a>
+    </div>
+  </div>
+  <div class="nav-progress" aria-hidden="true"><div class="nav-progress-fill" id="scroll-progress-fill"></div></div>
+</nav>
+
+<div class="page">
+
+<!-- HERO -->
+<div class="hero">
+  <h1>VOTR</h1>
+  <p class="eyebrow">Vector Orchestrated Tool Retrieval for Scalable Multi-Agent Systems</p>
+  <p>A large multi-agent system can know about thousands of MCP tools, but a model should not have to read every schema before deciding what to do. VOTR turns that problem into retrieval: find the right tools first, then hand only a compact candidate set to the agent.</p>
+  <div class="link-row">
+    <a class="pill" href="https://github.com/iamAmiK/VOTR/blob/main/docs/(Draft)%20VOTR%20-%20Vector%20Orchestrated%20Tool%20Retrieval%20for%20Scalable%20Multi-Agent%20Systems.pdf">Paper</a>
+    <a class="pill" href="https://github.com/iamAmiK/VOTR">VOTR</a>
+    <a class="pill" href="https://huggingface.co/datasets/a13awd/VOTR">Dataset</a>
+    <a class="pill" href="https://github.com/iamAmiK/VOTR-Orchestrator">VOTR Orchestrator</a>
+  </div>
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-n">309</div><div class="stat-label">MCP Servers indexed</div></div>
+    <div class="stat"><div class="stat-n">2,806</div><div class="stat-label">Tool schemas</div></div>
+    <div class="stat"><div class="stat-n">96.4%</div><div class="stat-label">Top-1 accuracy (large)</div></div>
+    <div class="stat"><div class="stat-n">99.91%</div><div class="stat-label">Token reduction</div></div>
+  </div>
+</div>
+
+<!-- 01 THE PROBLEM -->
+<section id="problem">
+  <div class="sec-header"><span class="sec-num">01</span><h2 class="sec-title">The Catalog Problem</h2></div>
+  <p class="sec-desc">A 309-server MCP deployment with 2,806 tools would require <strong>~262,487 tokens</strong> to inject all schemas into a model's context — before any reasoning begins. Full injection degrades reasoning quality even when the window is large enough. VOTR inserts a retrieval stage before model invocation.</p>
+  
+  <div class="grid-col-left">
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">CONTEXT PRESSURE SIMULATOR</span><span id="pressure-badge" class="tag blue">2,806 tools</span></div>
+      <div class="panel-body">
+        <div style="margin-bottom:0.75rem">
+          <label class="ctrl">CATALOG SIZE — drag to simulate growth</label>
+          <input type="range" id="cat-slider" min="5" max="2806" value="2806"/>
+        </div>
+        <div class="grid-3" style="margin-bottom:1rem">
+          <div style="text-align:center;border:1px solid var(--border);border-radius:8px;padding:0.75rem">
+            <div style="font-family:var(--mono);font-size:1.4rem;color:var(--red)" id="ctx-tokens">262,487</div>
+            <div style="font-size:0.72rem;color:var(--muted)">full-inject tokens</div>
+          </div>
+          <div style="text-align:center;border:1px solid var(--border);border-radius:8px;padding:0.75rem">
+            <div style="font-family:var(--mono);font-size:1.4rem;color:var(--green)" id="votr-tokens">230</div>
+            <div style="font-size:0.72rem;color:var(--muted)">VOTR avg tokens</div>
+          </div>
+          <div style="text-align:center;border:1px solid var(--border);border-radius:8px;padding:0.75rem">
+            <div style="font-family:var(--mono);font-size:1.4rem;color:var(--blue2)" id="reduction-pct">99.91%</div>
+            <div style="font-size:0.72rem;color:var(--muted)">reduction</div>
+          </div>
+        </div>
+        <!-- Visual token fill -->
+        <div style="margin-bottom:1rem">
+          <div style="font-family:var(--mono);font-size:0.65rem;color:var(--muted);margin-bottom:0.3rem">VOTR compressed route (26.2 tokens/tool, avg k≈2.9)</div>
+          <div class="score-bar-wrap" style="height:16px">
+            <div class="score-bar" id="votr-bar" style="background:linear-gradient(90deg,var(--blue),var(--green));width:0.09%"></div>
+          </div>
+        </div>
+        <div class="notice"><strong>Schema injection comparison:</strong> Normal full-catalog injection adds about 262,487 schema tokens on the 2,806-tool index, while VOTR injects only the routed set (about 230 tokens total per route on average).</div>
+        <div class="notice green" style="margin-top:0.45rem">
+          <strong>Why “230”?:</strong> VOTR’s compact format averages ~26.2 tokens per returned tool line and returns ~k≈2.9 tools per route, so schema-only tokens are ~26.2×2.9≈76, plus formatting/routing metadata brings the total to ~230 tokens per route call.
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">REQUEST ANATOMY — POST /route</span></div>
+      <div class="panel-body">
+        <div class="seg" id="req-tabs">
+          <button class="on" data-r="github">GitHub PR</button>
+          <button data-r="slack">Slack</button>
+          <button data-r="bloomberg">Bloomberg</button>
+          <button data-r="ambiguous">Ambiguous</button>
+        </div>
+        <pre id="req-pre" style="font-family:var(--mono);font-size:0.72rem;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:0.9rem;overflow-x:auto;color:#a8c4ff;line-height:1.7"></pre>
+        <div style="margin-top:0.75rem;display:grid;gap:0.4rem">
+          <div style="border:1px solid var(--border);border-radius:6px;padding:0.5rem 0.7rem;font-size:0.8rem"><code>server_intent</code> <span style="color:var(--muted)">— domain/capability hint for server-level scoring</span></div>
+          <div style="border:1px solid var(--border);border-radius:6px;padding:0.5rem 0.7rem;font-size:0.8rem"><code>tool_intent</code> <span style="color:var(--muted)">— specific operation for tool-level scoring</span></div>
+          <div style="border:1px solid var(--border);border-radius:6px;padding:0.5rem 0.7rem;font-size:0.8rem"><code>session_id</code> <span style="color:var(--muted)">— enables multi-turn memory (TTL 24h, lazy GC)</span></div>
+          <div style="border:1px solid var(--border);border-radius:6px;padding:0.5rem 0.7rem;font-size:0.8rem"><code>skip_session_filter</code> <span style="color:var(--muted)">— bypass session tool suppression</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 ARCHITECTURE -->
+<section id="architecture">
+  <div class="sec-header"><span class="sec-num">02</span><h2 class="sec-title">System Architecture & Pipeline</h2></div>
+  <p class="sec-desc">VOTR is a three-tier service: Agent/Client → Router Core (FastAPI) → Registry + Execution Proxy. Click each pipeline step to see what happens. Embedding the query (OpenAI text-embedding-3-large, 3072-dim) dominates latency at ~200–280ms; all local computation runs in &lt;20ms.</p>
+
+  <div class="grid-col-right">
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">ROUTING PIPELINE — click steps</span><button class="run-btn" id="pipe-play">▶ Auto-play</button></div>
+      <div class="panel-body" style="padding:0">
+        <div class="pipe-flow" id="pipeline">
+          <div class="pipe-node active-node" data-step="0">
+            <div class="pipe-dot-col"><div class="pipe-dot2"></div><div class="pipe-line"></div></div>
+            <div>
+              <div class="pipe-node-title">① Intents In</div>
+              <div class="pipe-node-desc"><code>server_intent</code> + <code>tool_intent</code> + optional session_id</div>
+              <div class="pipe-node-detail">Two natural-language fields split the routing signal. <code>server_intent</code> navigates the domain of servers (e.g. "GitHub repository operations"). <code>tool_intent</code> describes the specific action (e.g. "list open pull requests"). This decomposition is intentional: VOTR applies hierarchical scoring; server-level first, then tool-level within candidate servers.</div>
+            </div>
+          </div>
+          <div class="pipe-node" data-step="1">
+            <div class="pipe-dot-col"><div class="pipe-dot2"></div><div class="pipe-line"></div></div>
+            <div>
+              <div class="pipe-node-title">② Embedding (OpenAI)</div>
+              <div class="pipe-node-desc">text-embedding-3-large → q_s ∈ ℝ³⁰⁷², q_t ∈ ℝ³⁰⁷² (~200–280ms)</div>
+              <div class="pipe-node-detail">Both intent strings are embedded separately. <strong>q_s</strong> is used for server-level cosine scoring: σᵢ = max(cos(q_s, e_desc_i), cos(q_s, e_sum_i)). <strong>q_t</strong> is used for tool-level scoring within candidate servers. Embeddings are L2-normalised and stored as .npy shards (not a monolithic JSON like MCP-Zero). The round-trip dominates total latency.</div>
+            </div>
+          </div>
+          <div class="pipe-node" data-step="2">
+            <div class="pipe-dot-col"><div class="pipe-dot2"></div><div class="pipe-line"></div></div>
+            <div>
+              <div class="pipe-node-title">③ Hybrid Retrieval (parallel)</div>
+              <div class="pipe-node-desc">Dense (hierarchical) + BM25 + SPLADE-lite run in parallel</div>
+              <div class="pipe-node-detail"><strong>Dense:</strong> Server scoring selects top-N=8 servers; tool scoring within those gives L_dense. Hierarchical score τⱼ = σ_π(j) · tⱼ · max(σ_π(j), tⱼ) — penalises tools on wrong servers.<br/><strong>BM25:</strong> Each tool = doc concatenating server name + summary + description + tool name + description. Exact lexical matches (e.g. "search_repositories") rank with high precision. BM25-only achieves 99.0% top-1 — higher than dense-only (93.8%) — but degrades to 80.0% on paraphrastic multi-hop queries.<br/><strong>SPLADE-lite:</strong> TF-IDF with bigram features + sublinear TF scaling. Captures compound terms ("send message", "list branches") without a full SPLADE model. Weight w=0.35 vs 1.0 for dense and BM25.</div>
+            </div>
+          </div>
+          <div class="pipe-node" data-step="3">
+            <div class="pipe-dot-col"><div class="pipe-dot2"></div><div class="pipe-line"></div></div>
+            <div>
+              <div class="pipe-node-title">④ Weighted RRF Fusion</div>
+              <div class="pipe-node-desc">RRF(j) = Σ wₗ/(k+rₗ(j)), k=60, weights [1.0, 1.0, 0.35]</div>
+              <div class="pipe-node-detail">The three ranked lists vote into a single merged ranking. k=60 (standard RRF smoothing constant) prevents top-1 over-dominance. Tools absent from a list get rₗ(j)=∞ (contribute 0). Weights: dense=1.0, BM25=1.0, SPLADE-lite=0.35. RRF is robust to score-scale mismatches between sparse and dense retrievers — no normalisation needed.</div>
+            </div>
+          </div>
+          <div class="pipe-node" data-step="4">
+            <div class="pipe-dot-col"><div class="pipe-dot2"></div><div class="pipe-line"></div></div>
+            <div>
+              <div class="pipe-node-title">⑤ Field-Aware Rerank</div>
+              <div class="pipe-node-desc">Sørensen-Dice overlap on top-H=24 candidates within δ=0.003 window</div>
+              <div class="pipe-node-detail">Computes token-level Sørensen-Dice coefficient across 5 structured fields: tool name (w=0.35), server name (w=0.25), tool desc (w=0.20), params (w=0.12), server summary (w=0.08). Explicit server name match bonus: +0.22. Final score: τ̂ⱼ = RRF(j) + 0.0015 · Bⱼ. Resolves near-tie ambiguities that global retrieval signals cannot distinguish (e.g. github.list_pull_requests vs gitlab.list_merge_requests).</div>
+            </div>
+          </div>
+          <div class="pipe-node" data-step="5">
+            <div class="pipe-dot-col"><div class="pipe-dot2"></div><div class="pipe-line"></div></div>
+            <div>
+              <div class="pipe-node-title">⑥ Intent Disambiguation</div>
+              <div class="pipe-node-desc">Singular/destructive → bulk penalty ×0.82 · Plural/batch → bulk boost ×1.08</div>
+              <div class="pipe-node-detail">Detects two patterns: (1) Singular destructive intent (delete/remove/clear without plural qualifiers) → penalises bulk-operation tools by 0.82. (2) Plural/batch intent (all/batch/every/multiple) → boosts bulk-capable tools by 1.08. Tiebreaker only — small adjustments to avoid wrong bulk-vs-single matching.</div>
+            </div>
+          </div>
+          <div class="pipe-node" data-step="6">
+            <div class="pipe-dot-col"><div class="pipe-dot2"></div><div class="pipe-line"></div></div>
+            <div>
+              <div class="pipe-node-title">⑦ Confidence & Handoff-k</div>
+              <div class="pipe-node-desc">Non-conformity score → tier {high/med/low} → k ∈ {1, 3, 5}</div>
+              <div class="pipe-node-detail">nc(q) = -log₁₀(gap) + 0.5·(s₂/s₁ - 0.975) - 0.3·[explicit server match]. Three tiers: high (k=1, nc≤τ₁), medium (k=3), low (k=5, nc>τ₃). Thresholds calibrated on held-out data for target coverage. Overlap detector flags ambiguous cross-server capability collisions. Abstention guard returns empty list if query support < θ_null = 0.213.</div>
+            </div>
+          </div>
+          <div class="pipe-node" data-step="7">
+            <div class="pipe-dot-col"><div class="pipe-dot2"></div></div>
+            <div>
+              <div class="pipe-node-title">⑧ Compressed Schemas Out</div>
+              <div class="pipe-node-desc">26.2 tokens/tool avg vs 93.5 for MCP-Zero JSON blocks</div>
+              <div class="pipe-node-detail">Format: <code>[server: Name] tool_fn(param: type, opt?: type) → Short description.</code> Retains the three pieces the model needs: server name (routing), function signature with types (arg construction), description (intent verification). tiktoken cl100k_base measured. At k≈2.9, ~76 schema tokens + ~154 routing metadata = ~230 tokens total per route call.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="panel" style="margin-bottom:1rem">
+        <div class="panel-head"><span class="panel-title">LATENCY BREAKDOWN</span></div>
+        <div class="panel-body">
+          <div style="margin-bottom:0.6rem">
+            <div style="display:flex;justify-content:space-between;font-family:var(--mono);font-size:0.7rem;margin-bottom:0.25rem"><span style="color:var(--muted)">OpenAI embed API</span><span style="color:var(--orange)">~200–280ms</span></div>
+            <div class="score-bar-wrap"><div class="score-bar" style="width:82%;background:var(--orange)"></div></div>
+          </div>
+          <div style="margin-bottom:0.6rem">
+            <div style="display:flex;justify-content:space-between;font-family:var(--mono);font-size:0.7rem;margin-bottom:0.25rem"><span style="color:var(--muted)">Dense retrieval (matvec)</span><span style="color:var(--blue2)">&lt;5ms</span></div>
+            <div class="score-bar-wrap"><div class="score-bar" style="width:5%;background:var(--blue)"></div></div>
+          </div>
+          <div style="margin-bottom:0.6rem">
+            <div style="display:flex;justify-content:space-between;font-family:var(--mono);font-size:0.7rem;margin-bottom:0.25rem"><span style="color:var(--muted)">BM25 + SPLADE-lite</span><span style="color:var(--blue2)">&lt;8ms</span></div>
+            <div class="score-bar-wrap"><div class="score-bar" style="width:8%;background:var(--blue)"></div></div>
+          </div>
+          <div style="margin-bottom:0.6rem">
+            <div style="display:flex;justify-content:space-between;font-family:var(--mono);font-size:0.7rem;margin-bottom:0.25rem"><span style="color:var(--muted)">RRF + rerank + confidence</span><span style="color:var(--blue2)">&lt;7ms</span></div>
+            <div class="score-bar-wrap"><div class="score-bar" style="width:7%;background:var(--purple)"></div></div>
+          </div>
+          <div class="notice" style="margin-top:0.75rem"><strong>P50:</strong> 312ms (large) · <strong>P95:</strong> 393ms</div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><span class="panel-title">MCP-ZERO vs VOTR</span></div>
+        <div class="panel-body">
+          <table class="data-table">
+            <tr><th>Aspect</th><th>MCP-Zero</th><th>VOTR</th></tr>
+            <tr><td>Storage</td><td style="color:var(--red)">326MB JSON</td><td style="color:var(--green)">meta.json + .npy shards</td></tr>
+            <tr><td>Rebuild</td><td style="color:var(--red)">Full manual</td><td style="color:var(--green)">Hot registration</td></tr>
+            <tr><td>Embedding storage</td><td>Inline JSON</td><td>Binary arrays</td></tr>
+            <tr><td>Memory</td><td>Entire file in RAM</td><td>Memory-mapped</td></tr>
+            <tr><td>Top-k</td><td style="color:var(--red)">Fixed</td><td style="color:var(--green)">Adaptive (1/3/5)</td></tr>
+            <tr><td>Live MCP</td><td style="color:var(--red)">None</td><td style="color:var(--green)">stdio + SSE</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 RETRIEVAL -->
+<section id="retrieval">
+  <div class="sec-header"><span class="sec-num">03</span><h2 class="sec-title">Hybrid Retrieval: Three Lenses</h2></div>
+  <p class="sec-desc">Dense embedding, BM25, and SPLADE-lite run in parallel and capture different signals. The key insight: BM25-only achieves 99.0% top-1 on single-tool queries (vs 93.8% dense-only) because MCP tool names are strongly lexical, but BM25 drops to 80.0% on paraphrastic multi-hop chains where dense semantic matching is essential.</p>
+
+  <div class="panel" style="margin-bottom:1rem">
+    <div class="panel-head"><span class="panel-title">RETRIEVAL PIPELINE SUMMARY</span></div>
+    <div class="panel-body">
+      <table class="data-table">
+        <tr><th>Stage</th><th>What it does</th><th>Key settings from paper/code</th><th>Why it matters</th></tr>
+        <tr>
+          <td><strong>Hierarchical dense</strong></td>
+          <td>Ranks servers first using embeddings from server summary + description, then ranks tools inside the selected servers.</td>
+          <td>Embedding model: text-embedding-3-large (3072 dims); hierarchical server-to-tool scoring.</td>
+          <td>Semantic recall under paraphrases; avoids flat brute-force over entire catalog.</td>
+        </tr>
+        <tr>
+          <td><strong>BM25 sparse</strong></td>
+          <td>Builds one lexical “document” per tool by concatenating server text + tool text.</td>
+          <td>BM25 over concatenated fields: server name/summary/description + tool name/description.</td>
+          <td>Strong exact-name/id precision (tool/server keywords).</td>
+        </tr>
+        <tr>
+          <td><strong>SPLADE-lite</strong></td>
+          <td>TF-IDF style sparse expansion with unigram + bigram features (SPLADE-lite approximation).</td>
+          <td>SPLADE-lite fusion weight w_splade = 0.35 (dense = 1.0, BM25 = 1.0).</td>
+          <td>Recovers compound/rare term matches without the full SPLADE model cost.</td>
+        </tr>
+        <tr>
+          <td><strong>Weighted RRF fusion</strong></td>
+          <td>Merges dense/BM25/SPLADE ranked lists with reciprocal-rank voting.</td>
+          <td>RRF(j) = sum over lists [ w_l / (60 + rank_l(j)) ].</td>
+          <td>Robust to score-scale differences; rewards tools that rank well across multiple lenses.</td>
+        </tr>
+        <tr>
+          <td><strong>Field-aware rerank</strong></td>
+          <td>Adds structured overlap bonus on top candidates.</td>
+          <td>Sørensen-Dice overlap across structured fields (server name/summary, tool name/description, parameters). Applied near the head of the fused list (head = 24) with a small score window (0.003).</td>
+          <td>Breaks near ties RRF alone cannot resolve.</td>
+        </tr>
+        <tr>
+          <td><strong>Intent disambiguation</strong></td>
+          <td>Adjusts ranking for singular destructive vs plural/batch intent.</td>
+          <td>Bulk penalty = 0.82 for singular destructive; bulk boost = 1.08 for plural/batch.</td>
+          <td>Prevents wrong single-vs-bulk tool selection.</td>
+        </tr>
+        <tr>
+          <td><strong>Confidence-gated handoff</strong></td>
+          <td>Selects candidate count by uncertainty tier.</td>
+          <td>Adaptive handoff size k in {1, 3, 5}, chosen from a non-conformity score (conformal calibration) or gap thresholds.</td>
+          <td>Keeps prompt small when clear, widens safely when ambiguous.</td>
+        </tr>
+        <tr>
+          <td><strong>Retrieval guardrails</strong></td>
+          <td>Applies abstention/null-route and overlap-aware expansion.</td>
+          <td>If query/tool support is too low, null-route returns an empty candidate list (abstention). If overlap is detected, it expands an overlap cluster and may downgrade confidence; if overlap handling is triggered too aggressively, it can widen prompts toward similar/colliding tools and hurt precision.</td>
+          <td>Avoids high-confidence wrong tools when support is weak or capabilities overlap.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head"><span class="panel-title">LIVE RETRIEVAL COMPARISON — try different queries</span></div>
+    <div class="panel-body">
+      <div class="seg" id="query-tabs">
+        <button class="on" data-q="pr">List PRs (lexical)</button>
+        <button data-q="notify">Manage notifications (semantic)</button>
+        <button data-q="market">Historical market data</button>
+        <button data-q="batch">Batch delete records</button>
+      </div>
+      <div id="query-info" style="border:1px solid rgba(79,143,255,0.25);background:rgba(79,143,255,0.05);border-radius:8px;padding:0.75rem;margin-bottom:0.75rem;font-size:0.83rem">
+        <div style="color:var(--blue2);font-weight:600;margin-bottom:0.2rem" id="q-title"></div>
+        <div style="color:var(--muted)" id="q-text"></div>
+      </div>
+      <div class="grid-3" id="retrieval-lanes"></div>
+      <div class="notice green" style="margin-top:0.75rem" id="retrieval-insight"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 RRF FUSION -->
+<section id="rrf">
+  <div class="sec-header"><span class="sec-num">04</span><h2 class="sec-title">Weighted Reciprocal Rank Fusion</h2></div>
+  <p class="sec-desc">After three ranked lists are produced, RRF merges them without requiring score normalisation. Each tool's fused score is the sum of weighted reciprocal ranks across all lists. k=60 prevents position-1 domination. A tool appearing at rank #1 across all three lists wins decisively; one appearing at rank #4 in just one list barely contributes.</p>
+
+  <div class="grid-col-right">
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">RRF CALCULATOR</span><button class="run-btn" id="rrf-shuffle">↺ Shuffle ranks</button></div>
+      <div class="panel-body">
+        <div class="formula">RRF(j) = Σ wₗ / (60 + rₗ(j)) — absent tools get rₗ(j) = ∞ (0 contribution)</div>
+        <div style="margin-top:0.75rem">
+          <div style="font-family:var(--mono);font-size:0.65rem;color:var(--muted);margin-bottom:0.5rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem">
+            <div style="text-align:center">DENSE (w=1.0)</div>
+            <div style="text-align:center">BM25 (w=1.0)</div>
+            <div style="text-align:center">SPLADE-lite (w=0.35)</div>
+          </div>
+          <div id="rrf-input" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem"></div>
+        </div>
+        <div style="margin-top:1rem;border-top:1px solid var(--border);padding-top:1rem">
+          <div style="font-family:var(--mono);font-size:0.65rem;color:var(--green);margin-bottom:0.5rem">FUSED OUTPUT → sorted by RRF score</div>
+          <div id="rrf-output"></div>
+        </div>
+        <div class="notice green" id="rrf-insight" style="margin-top:0.75rem"></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="panel" style="margin-bottom:1rem">
+        <div class="panel-head"><span class="panel-title">RRF intuition (why agreement matters)</span></div>
+        <div class="panel-body">
+          <p style="margin:0;font-size:0.83rem;color:var(--muted);line-height:1.7">
+            VOTR combines the three ranked lists (Dense, BM25, SPLADE-lite) with <strong>weighted Reciprocal Rank Fusion (RRF)</strong> (paper Eq. 5 / Algorithm 1).
+            For each tool <em>j</em>, the fused score is the sum of per-list contributions:
+            <strong>w · 1 / (k + rank)</strong>, where <strong>k = 60</strong> smooths rank differences.
+            If a tool is <strong>absent</strong> from a list, its rank is treated as infinity, so that list contributes <strong>0</strong>.
+          </p>
+          <p style="margin:0.6rem 0 0;font-size:0.83rem;color:var(--muted);line-height:1.7">
+            With <strong>k = 60</strong>, ranks close to the top (roughly 1–5) contribute <strong>almost the same amount</strong>.
+            That means RRF rewards <strong>agreement</strong> across retrievers: a tool that appears near the top in multiple lists can beat a tool that only gets one perfect #1.
+            In this demo the list weights match the paper: <strong>dense=1.0</strong>, <strong>BM25=1.0</strong>, <strong>SPLADE-lite=0.35</strong>.
+          </p>
+          <p style="margin:0.6rem 0 0;font-size:0.83rem;color:var(--muted);line-height:1.7">
+            The SPLADE-lite weight is set lower because SPLADE-lite is a <strong>lightweight approximation</strong> of full SPLADE (TF-IDF with unigram + bigram features and sublinear term-frequency scaling),
+            so it’s used as an extra lexical cue, especially for compound/phrase-like matches—rather than letting it override the stronger dense and BM25 evidence.
+          </p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><span class="panel-title">WEIGHT SENSITIVITY</span></div>
+        <div class="panel-body">
+          <label class="ctrl">SPLADE-lite weight (currently 0.35)</label>
+          <input type="range" id="splade-w" min="0" max="100" value="35"/>
+          <div style="display:flex;justify-content:space-between;font-family:var(--mono);font-size:0.7rem;color:var(--muted)"><span>0 (ignored)</span><span id="splade-w-val">0.35</span><span>1.0 (equal)</span></div>
+          <div id="weight-effect" style="margin-top:0.75rem;font-size:0.8rem;color:var(--muted)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 RERANK -->
+<section id="rerank">
+  <div class="sec-header"><span class="sec-num">05</span><h2 class="sec-title">Field-Aware Reranking</h2></div>
+  <p class="sec-desc">After RRF fusion, the top-H=24 candidates within a score window δ=0.003 of the leader receive a structured field bonus. The reranker decomposes the query into server, action, and constraint fields, then computes token-level Sørensen-Dice overlap against each tool's metadata fields.</p>
+
+  <div class="grid-col-left">
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">FIELD WEIGHTS (Sørensen-Dice)</span></div>
+      <div class="panel-body">
+        <div style="display:grid;gap:0.5rem;margin-bottom:0.75rem">
+          <div style="display:grid;grid-template-columns:1fr 3fr 2.5rem;gap:0.5rem;align-items:center">
+            <span style="font-family:var(--mono);font-size:0.72rem;color:var(--muted)">tool_name</span>
+            <div class="score-bar-wrap"><div class="score-bar" style="width:100%;background:var(--blue)"></div></div>
+            <span style="font-family:var(--mono);font-size:0.7rem;color:var(--blue2)">0.35</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 3fr 2.5rem;gap:0.5rem;align-items:center">
+            <span style="font-family:var(--mono);font-size:0.72rem;color:var(--muted)">server_name</span>
+            <div class="score-bar-wrap"><div class="score-bar" style="width:71%;background:var(--blue)"></div></div>
+            <span style="font-family:var(--mono);font-size:0.7rem;color:var(--blue2)">0.25</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 3fr 2.5rem;gap:0.5rem;align-items:center">
+            <span style="font-family:var(--mono);font-size:0.72rem;color:var(--muted)">tool_desc</span>
+            <div class="score-bar-wrap"><div class="score-bar" style="width:57%;background:var(--blue)"></div></div>
+            <span style="font-family:var(--mono);font-size:0.7rem;color:var(--blue2)">0.20</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 3fr 2.5rem;gap:0.5rem;align-items:center">
+            <span style="font-family:var(--mono);font-size:0.72rem;color:var(--muted)">params</span>
+            <div class="score-bar-wrap"><div class="score-bar" style="width:34%;background:var(--blue)"></div></div>
+            <span style="font-family:var(--mono);font-size:0.7rem;color:var(--blue2)">0.12</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 3fr 2.5rem;gap:0.5rem;align-items:center">
+            <span style="font-family:var(--mono);font-size:0.72rem;color:var(--muted)">server_summary</span>
+            <div class="score-bar-wrap"><div class="score-bar" style="width:23%;background:var(--blue)"></div></div>
+            <span style="font-family:var(--mono);font-size:0.7rem;color:var(--blue2)">0.08</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 3fr 2.5rem;gap:0.5rem;align-items:center">
+            <span style="font-family:var(--mono);font-size:0.72rem;color:var(--muted)">explicit server</span>
+            <div class="score-bar-wrap"><div class="score-bar" style="width:63%;background:var(--green)"></div></div>
+            <span style="font-family:var(--mono);font-size:0.7rem;color:var(--green)">+0.22</span>
+          </div>
+        </div>
+        <div class="formula">B_j = Σ_f w_f · Dice(Q_f, T_jf) + 0.22·[server_match]<br/>τ̂_j = RRF(j) + 0.0015 · B_j</div>
+        <div class="notice" style="margin-top:0.75rem"><strong>Dice(A,B)</strong> = 2|A∩B| / (|A|+|B|) on camelCase-split, underscore-normalised tokens. λ=0.0015 keeps field bonus proportional to RRF score range.</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">RERANK SIMULATOR</span></div>
+      <div class="panel-body">
+        <div class="seg" id="rerank-tabs">
+          <button class="on" data-rr="pr">GitHub PR query</button>
+          <button data-rr="gitlab">GitHub vs GitLab</button>
+          <button data-rr="explicit">Explicit server named</button>
+        </div>
+        <div id="rerank-query" style="border:1px solid var(--border);border-radius:8px;padding:0.6rem 0.75rem;margin-bottom:0.75rem;font-size:0.78rem;color:var(--muted)"></div>
+        <div id="rerank-board"></div>
+        <div id="rerank-verdict" style="margin-top:0.75rem"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 CONFIDENCE -->
+<section id="confidence">
+  <div class="sec-header"><span class="sec-num">06</span><h2 class="sec-title">Confidence-Gated Handoff Policy</h2></div>
+  <p class="sec-desc">VOTR uses a conformal prediction-inspired non-conformity score to adaptively choose how many tools to return. Thresholds τ₁ and τ₃ are calibrated on held-out data. On the large suite, 49% of queries get k=1 (98.4% accuracy), 6.6% get k=3 (100%), and 44.4% get k=5 (93.7% top-1, 97.7% handoff@k).</p>
+
+  <div class="grid-col-right">
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">NON-CONFORMITY SCORE CALCULATOR</span></div>
+      <div class="panel-body">
+        <div class="formula" style="text-align:left;line-height:2">
+          nc(q) = <span style="color:var(--orange)">-log₁₀(gap)</span>  ← gap signal f(δ)<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ <span style="color:var(--purple)">0.5 · (s₂/s₁ - 0.975)</span>  ← ratio signal g(s₁,s₂)<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <span style="color:var(--green)">0.3 · [explicit server match]</span>  ← structural h(ŝ)
+        </div>
+        <p style="font-size:0.78rem;color:var(--muted);margin:0.75rem 0">Lower nc → higher confidence. Gap of 0.001 → f=0.0 (confident). Gap of 0.0001 → f=1.0 (uncertain). The ratio term g provides secondary signal when absolute gap is small but relative separation is informative.</p>
+        
+        <div style="margin-bottom:0.75rem">
+          <div style="display:flex;justify-content:space-between;margin-bottom:0.35rem">
+            <label class="ctrl" style="margin:0">SCORE GAP (s₁ - s₂)</label>
+            <span id="gap-val" style="font-family:var(--mono);font-size:0.72rem;color:var(--orange)">0.0023</span>
+          </div>
+          <input type="range" id="gap-slider" min="0" max="100" value="55"/>
+        </div>
+        <div style="margin-bottom:0.75rem">
+          <div style="display:flex;justify-content:space-between;margin-bottom:0.35rem">
+            <label class="ctrl" style="margin:0">SCORE RATIO (s₂/s₁)</label>
+            <span id="ratio-val" style="font-family:var(--mono);font-size:0.72rem;color:var(--purple)">0.942</span>
+          </div>
+          <input type="range" id="ratio-slider" min="0" max="100" value="60"/>
+        </div>
+        <div style="margin-bottom:0.75rem">
+          <label class="ctrl">EXPLICIT SERVER MATCH?</label>
+          <div class="seg" id="server-match-toggle">
+            <button class="on" data-sm="0">No match</button>
+            <button data-sm="1">Server explicitly named & matched</button>
+          </div>
+        </div>
+
+        <!-- Score breakdown -->
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:0.75rem;margin-bottom:0.75rem">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-bottom:0.5rem">
+            <div><div style="font-family:var(--mono);font-size:0.65rem;color:var(--muted)">s₁ (top-1)</div><div id="s1-display" style="font-family:var(--mono);font-size:1.1rem;color:var(--blue2)">0.0241</div></div>
+            <div><div style="font-family:var(--mono);font-size:0.65rem;color:var(--muted)">s₂ (top-2)</div><div id="s2-display" style="font-family:var(--mono);font-size:1.1rem;color:var(--muted)">0.0218</div></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;padding-top:0.5rem;border-top:1px solid var(--border)">
+            <div><div style="font-family:var(--mono);font-size:0.62rem;color:var(--orange)">gap term</div><div id="term-gap" style="font-family:var(--mono);font-size:0.9rem;color:var(--orange)">2.64</div></div>
+            <div><div style="font-family:var(--mono);font-size:0.62rem;color:var(--purple)">ratio term</div><div id="term-ratio" style="font-family:var(--mono);font-size:0.9rem;color:var(--purple)">-0.02</div></div>
+            <div><div style="font-family:var(--mono);font-size:0.62rem;color:var(--green)">server term</div><div id="term-server" style="font-family:var(--mono);font-size:0.9rem;color:var(--green)">0.00</div></div>
+          </div>
+        </div>
+
+        <div id="confidence-result" style="text-align:center;padding:1rem;border-radius:8px;border:1px solid var(--border)">
+          <div style="font-family:var(--mono);font-size:0.7rem;color:var(--muted);margin-bottom:0.35rem">NON-CONFORMITY SCORE</div>
+          <div id="nc-score" style="font-family:var(--mono);font-size:2rem;font-weight:700;margin-bottom:0.5rem">2.62</div>
+          <div id="conf-tier-badge" style="font-family:var(--mono);font-size:0.75rem;margin-bottom:0.35rem">LOW CONFIDENCE</div>
+          <div id="handoff-k-display" style="font-size:1.1rem;font-weight:600">Handoff k = <span id="k-num">5</span> tools</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="panel" style="margin-bottom:1rem">
+        <div class="panel-head"><span class="panel-title">CALIBRATION RESULTS (large suite, n=500)</span></div>
+        <div class="panel-body">
+          <table class="data-table">
+            <tr><th>Tier</th><th>Count</th><th>%</th><th>Top-1</th><th>Handoff@k</th><th>Avg k</th></tr>
+            <tr>
+              <td><span class="tier-high">High</span></td>
+              <td class="num-cell">245</td><td class="num-cell">49%</td>
+              <td class="green-cell">98.4%</td><td class="green-cell">98.4%</td>
+              <td class="num-cell">1.0</td>
+            </tr>
+            <tr>
+              <td><span class="tier-med">Medium</span></td>
+              <td class="num-cell">33</td><td class="num-cell">6.6%</td>
+              <td class="green-cell">100%</td><td class="green-cell">100%</td>
+              <td class="num-cell">3.0</td>
+            </tr>
+            <tr>
+              <td><span class="tier-low">Low</span></td>
+              <td class="num-cell">222</td><td class="num-cell">44.4%</td>
+              <td class="num-cell">93.7%</td><td class="green-cell">97.7%</td>
+              <td class="num-cell">5.0</td>
+            </tr>
+            <tr>
+              <td><strong>Overall</strong></td>
+              <td class="num-cell">500</td><td class="num-cell">100%</td>
+              <td class="blue-cell" style="color:var(--blue2)">96.4%</td><td class="green-cell">98.2%</td>
+              <td class="green-cell">2.906</td>
+            </tr>
+          </table>
+          <div class="notice" style="margin-top:0.75rem"><strong>78% of all misses occur in the low-confidence tier</strong> (14/18). The policy correctly identifies hard queries — Handoff@k recovers 97.7% vs 93.7% strict Top-1 in this tier.</div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><span class="panel-title">MISS ACCOUNTING BY TIER</span></div>
+        <div class="panel-body">
+          <table class="data-table">
+            <tr><th>Tier</th><th>Misses</th><th>Steps</th><th>Error rate</th><th>% of misses</th></tr>
+            <tr><td><span class="tier-high">High</span></td><td class="num-cell">4</td><td class="num-cell">245</td><td class="num-cell">1.6%</td><td class="num-cell">22%</td></tr>
+            <tr><td><span class="tier-med">Medium</span></td><td class="green-cell">0</td><td class="num-cell">33</td><td class="green-cell">0.0%</td><td class="green-cell">0%</td></tr>
+            <tr><td><span class="tier-low">Low</span></td><td class="red-cell">14</td><td class="num-cell">222</td><td class="red-cell">6.3%</td><td class="red-cell">78%</td></tr>
+            <tr><td><strong>Total</strong></td><td class="num-cell">18</td><td class="num-cell">500</td><td class="num-cell">3.6%</td><td class="num-cell">100%</td></tr>
+          </table>
+          <div class="notice orange" style="margin-top:0.75rem"><strong>4 of 18 misses</strong> are alias/equivalence issues (recovered by equivalence-aware labels → 97.2% Top-1, 91% compound). Not genuine retrieval failures.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 SCHEMA COMPRESSION -->
+<section id="compression">
+  <div class="sec-header"><span class="sec-num">07</span><h2 class="sec-title">Compressed Schema Injection</h2></div>
+  <p class="sec-desc">VOTR replaces MCP-Zero's full JSON-Schema blocks with a compact one-liner. The format retains exactly what the model needs: server name (routing), function signature with types (arg construction), short description (intent verification). Measured with tiktoken cl100k_base on the 2,806-tool index.</p>
+
+  <div class="grid-col-left">
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">FORMAT COMPARISON — interactive</span></div>
+      <div class="panel-body">
+        <div class="seg" id="schema-tabs">
+          <button class="on" data-st="github">GitHub tool</button>
+          <button data-st="bloomberg">Bloomberg tool</button>
+          <button data-st="slack">Slack tool</button>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem">
+          <div>
+            <div style="font-family:var(--mono);font-size:0.65rem;color:var(--red);margin-bottom:0.35rem;display:flex;justify-content:space-between"><span>MCP-Zero JSON block</span><span id="mz-tokens">~93.5 tokens</span></div>
+            <pre id="mz-schema" style="font-family:var(--mono);font-size:0.67rem;background:var(--bg2);border:1px solid rgba(240,106,106,0.2);border-radius:6px;padding:0.75rem;overflow-x:auto;color:#aab;line-height:1.6;white-space:pre-wrap"></pre>
+          </div>
+          <div>
+            <div style="font-family:var(--mono);font-size:0.65rem;color:var(--green);margin-bottom:0.35rem;display:flex;justify-content:space-between"><span>VOTR compressed line</span><span id="votr-line-tokens">~26.2 tokens</span></div>
+            <pre id="votr-schema" style="font-family:var(--mono);font-size:0.67rem;background:var(--bg2);border:1px solid rgba(61,219,168,0.2);border-radius:6px;padding:0.75rem;overflow-x:auto;color:var(--green);line-height:1.6;white-space:pre-wrap"></pre>
+          </div>
+        </div>
+        <div style="margin-top:0.75rem">
+          <table class="data-table">
+            <tr><th>Format</th><th>Tokens/tool</th><th>At k=3</th><th>vs full catalog</th></tr>
+            <tr><td>MCP-Zero paper (their index)</td><td class="num-cell">~143</td><td class="num-cell">~429</td><td class="red-cell">baseline</td></tr>
+            <tr><td>MCP-Zero-style (our 2,806 tools)</td><td class="num-cell">93.5</td><td class="num-cell">281</td><td class="red-cell">262,487 total</td></tr>
+            <tr><td>VOTR compressed (same index)</td><td class="green-cell">26.2</td><td class="green-cell">79</td><td class="green-cell">72% reduction</td></tr>
+            <tr><td>VOTR full route avg (k≈2.9)</td><td>—</td><td class="green-cell">230.3</td><td class="green-cell">99.91% reduction</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">HANDOFF PAYLOAD — k slider</span><span id="handoff-k-label" class="tag green">k = 3</span></div>
+      <div class="panel-body">
+        <label class="ctrl">RETURNED CANDIDATES</label>
+        <input type="range" id="handoff-slider" min="1" max="5" step="2" value="3"/>
+        <div style="display:flex;justify-content:space-between;font-family:var(--mono);font-size:0.68rem;color:var(--muted);margin-bottom:0.75rem"><span>k=1 (high conf)</span><span>k=3 (medium)</span><span>k=5 (low conf)</span></div>
+        <div id="handoff-list"></div>
+        <div class="notice green" id="handoff-note" style="margin-top:0.75rem"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 DYNAMIC REGISTRATION -->
+<section id="registration">
+  <div class="sec-header"><span class="sec-num">08</span><h2 class="sec-title">Dynamic Registry & Hot Registration</h2></div>
+  <p class="sec-desc">New MCP servers can be added without restarting the service or rebuilding embeddings. The registration is atomic: the new ToolIndex and HybridRetriever are fully constructed before any live state is replaced — under CPython's GIL, the reference swap is atomic with respect to concurrent request threads. In end-to-end agent runs, this also means <strong>VOTR-Orchestrator</strong> (the execution layer) can keep running while it calls the router for each <code>server_intent</code>/<code>tool_intent</code> hop—newly discovered servers become available to tool routing immediately.</p>
+
+  <div class="grid-col-right">
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">REGISTRATION SIMULATOR</span><button class="run-btn" id="reg-sim-btn">▶ Simulate registration</button></div>
+      <div class="panel-body">
+        <div style="margin-bottom:0.75rem;font-size:0.8rem;color:var(--muted)">Simulates the hot registration flow for a new server. Watch the index state update atomically.</div>
+        <div id="reg-steps" style="display:grid;gap:0.4rem"></div>
+        <div style="margin-top:0.75rem;border:1px solid var(--border);border-radius:8px;padding:0.75rem;background:var(--bg2)">
+          <div style="font-family:var(--mono);font-size:0.72rem;color:var(--blue2);margin-bottom:0.4rem;display:flex;align-items:center;justify-content:space-between;gap:0.75rem">
+            <span>VOTR Orchestrator</span>
+            <span id="reg-orch-badge" style="font-size:0.68rem;color:var(--muted)">⏳ idle</span>
+          </div>
+          <div style="font-size:0.78rem;color:var(--muted);line-height:1.55">
+            <div style="margin-bottom:0.25rem"><strong>1.</strong> Decomposes your request into <code>server_intent</code>/<code>tool_intent</code> hops.</div>
+            <div style="margin-bottom:0.25rem"><strong>2.</strong> Calls the VOTR router (<code>/route</code>) to retrieve candidate tools.</div>
+            <div style="margin-bottom:0.25rem"><strong>3.</strong> Wraps routed MCP tools and runs a multi-step tool-calling loop (with session memory).</div>
+            <div><strong>Hot registration impact:</strong> while the router rebuilds indices, the orchestrator can keep executing; once the router swaps the new ToolIndex/HybridRetriever, the next hop can immediately use tools from the newly registered server.</div>
+          </div>
+        </div>
+        <div id="reg-metrics" style="margin-top:0.75rem;display:grid;grid-template-columns:repeat(4,1fr);gap:0.5rem;display:none">
+          <div style="text-align:center;border:1px solid var(--border);border-radius:8px;padding:0.6rem">
+            <div style="font-family:var(--mono);font-size:1.1rem;color:var(--green)">1.000</div>
+            <div style="font-size:0.68rem;color:var(--muted)">Control Hit@1 (pre)</div>
+          </div>
+          <div style="text-align:center;border:1px solid var(--border);border-radius:8px;padding:0.6rem">
+            <div style="font-family:var(--mono);font-size:1.1rem;color:var(--red)">1.000</div>
+            <div style="font-size:0.68rem;color:var(--muted)">Pre-register Miss@5</div>
+          </div>
+          <div style="text-align:center;border:1px solid var(--border);border-radius:8px;padding:0.6rem">
+            <div style="font-family:var(--mono);font-size:1.1rem;color:var(--green)">1.000</div>
+            <div style="font-size:0.68rem;color:var(--muted)">Post-register Hit@1</div>
+          </div>
+          <div style="text-align:center;border:1px solid var(--border);border-radius:8px;padding:0.6rem">
+            <div style="font-family:var(--mono);font-size:1.1rem;color:var(--green)">1.000</div>
+            <div style="font-size:0.68rem;color:var(--muted)">Controls Preserved</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="panel" style="margin-bottom:1rem">
+        <div class="panel-head"><span class="panel-title">REGISTRATION ALGORITHM</span></div>
+        <div class="panel-body">
+          <pre style="font-family:var(--mono);font-size:0.7rem;color:var(--blue2);line-height:1.9;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:0.75rem;white-space:pre-wrap">1. Validate uniqueness of s.name in I
+2. e_desc ← E(s.description)       [OpenAI API]
+3. e_sum  ← E(s.summary)           [OpenAI API]
+4. for ti in {t₁,...,tₘ}:
+   e_i ← E(ti.name ∥ ti.description)
+5. Append e_desc, e_sum to server arrays
+6. Append {e₁,...,eₘ} to tool array
+7. Update server/tool index mapping
+8. Rebuild BM25 + SPLADE-lite indices
+9. Persist updated .npy shards to disk
+10. Atomically swap engine.index ref  ← GIL</pre>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><span class="panel-title">TRANSPORT DISCOVERY</span></div>
+        <div class="panel-body">
+          <div style="display:grid;gap:0.5rem">
+            <div style="border:1px solid var(--border);border-radius:8px;padding:0.6rem 0.75rem">
+              <div style="font-family:var(--mono);font-size:0.7rem;color:var(--blue2);margin-bottom:0.25rem">POST /register/discover</div>
+              <div style="font-size:0.78rem;color:var(--muted)">Spawns stdio subprocess → MCP initialize handshake → tools/list → normalize → register. Timeout: 2–120s (default 20s).</div>
+            </div>
+            <div style="border:1px solid var(--border);border-radius:8px;padding:0.6rem 0.75rem">
+              <div style="font-family:var(--mono);font-size:0.7rem;color:var(--purple);margin-bottom:0.25rem">POST /register/discover/sse</div>
+              <div style="font-size:0.78rem;color:var(--muted)">Same JSON-RPC over HTTP/SSE endpoint. Suitable for remote/containerised servers.</div>
+            </div>
+            <div style="border:1px solid var(--border);border-radius:8px;padding:0.6rem 0.75rem">
+              <div style="font-family:var(--mono);font-size:0.7rem;color:var(--green);margin-bottom:0.25rem">POST /session/clear</div>
+              <div style="font-size:0.78rem;color:var(--muted)">Purges session tool history. Session memory uses TTL=24h with lazy GC on writes.</div>
+            </div>
+          </div>
+          <div class="notice green" style="margin-top:0.75rem"><strong>Zero-downtime verified:</strong> Control Hit@1 = 1.000 before and after registration in all experiments, including Bloomberg cold-start case.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 EVALUATION -->
+<section id="evaluation">
+  <div class="sec-header"><span class="sec-num">09</span><h2 class="sec-title">Evaluation Results</h2></div>
+  <p class="sec-desc">Evaluated on a 309-server / 2,806-tool corpus across single-tool, multi-hop, and multi-tool task types at small (n=100), medium (n=250), and large (n=500) routing-step scales. Multi-hop and multi-tool suites use 5 steps/case for compound chain metrics.</p>
+
+  <div class="panel" style="margin-bottom:1rem">
+    <div class="panel-head"><span class="panel-title">FULL-STACK FUNCTIONAL CORRECTNESS</span></div>
+    <div class="panel-body">
+      <div class="seg" id="eval-filter">
+        <button class="on" data-ef="all">All results</button>
+        <button data-ef="single">Single-tool only</button>
+        <button data-ef="multi">Multi-hop/tool</button>
+      </div>
+      <div id="eval-table-wrap"></div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">MULTI-HOP CHAIN SCALING</span></div>
+      <div class="panel-body">
+        <p style="font-size:0.78rem;color:var(--muted);margin-bottom:0.75rem">Compound Success@k requires EVERY hop in the chain to succeed. At k=5, VOTR achieves 100% on all chain lengths except pure adversarial (0%).</p>
+        <table class="data-table">
+          <tr><th>Dataset</th><th>Hops</th><th>Hop@1</th><th>Chain@k</th></tr>
+          <tr><td>10-hop</td><td>10</td><td class="green-cell">90.0%</td><td class="green-cell">100%</td></tr>
+          <tr><td>20-hop</td><td>20</td><td class="green-cell">95.0%</td><td class="green-cell">100%</td></tr>
+          <tr><td>25-hop strict</td><td>25</td><td class="num-cell">92.0%</td><td class="green-cell">100%</td></tr>
+          <tr><td>50-hop unique servers</td><td>50</td><td class="green-cell">100%</td><td class="green-cell">100%</td></tr>
+          <tr><td>50-hop realistic hard</td><td>50</td><td class="green-cell">100%</td><td class="green-cell">100%</td></tr>
+          <tr><td style="color:var(--red)">50-hop adversarial valid</td><td>50</td><td class="red-cell">58.0%</td><td class="red-cell">0%</td></tr>
+          <tr><td style="color:var(--red)">50-hop adversarial pure</td><td>50</td><td class="red-cell">0%</td><td class="red-cell">0%</td></tr>
+        </table>
+        <div class="notice orange" style="margin-top:0.75rem"><strong>Key limitation:</strong> Coordinated adversarial server names + paraphrased intents cause complete chain failure. No adversarial training layer yet.</div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">LIVEMCPBENCH Benchmark</span></div>
+      <div class="panel-body">
+        <p style="font-size:0.78rem;color:var(--muted);margin-bottom:0.75rem">LiveMCPBench reveals VOTR's sensitivity to input format. Under the native dual-field protocol, performance is strong. Forcing raw step-queries degrades significantly.</p>
+        <table class="data-table">
+          <tr><th>Protocol</th><th>n</th><th>R@1</th><th>nDCG@5</th></tr>
+          <tr><td style="font-size:0.75rem">Native dual-field (policy payloads)</td><td>268</td><td class="green-cell">87.7%</td><td class="green-cell">90.9%</td></tr>
+          <tr><td style="font-size:0.75rem">Paper-faithful tool-to-agent</td><td>82</td><td class="num-cell">70.7%</td><td class="num-cell">79.9%</td></tr>
+          <tr><td style="font-size:0.75rem">Full95 reconstructed stepwise</td><td>268</td><td class="num-cell">52.4%</td><td class="num-cell">59.9%</td></tr>
+          <tr><td style="font-size:0.75rem">Router format exact subset</td><td>82</td><td class="red-cell">46.3%</td><td class="num-cell">62.2%</td></tr>
+          <tr><td style="font-size:0.75rem">Tool-to-Agent Retrieval [7]</td><td>—</td><td class="num-cell">61.0%</td><td class="num-cell">—</td></tr>
+        </table>
+        <div class="notice" style="margin-top:0.75rem">
+          <strong>Key:</strong> The gap is driven by <em>VOTR+orchestrator interface sensitivity</em>, not a retriever-only ceiling. VOTR’s router emits a structured “policy payload” (dual fields like server_intent + tool_intent), along with a confidence-gated handoff candidate set (adaptive k∈{1,3,5}) and guardrails (overlap-aware expansion + abstention/null-route). The orchestrator then uses this contract to format the agent step consistently (including compressed schema injection), so the downstream model calls the right tool interface. When you force raw step-queries or truncate the router payload, the orchestrator can’t reliably reconstruct that intent/prompt contract, so Recall@1 drops; with the native payload contract, Recall@1 rises from 52% to 88%.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 ABLATION -->
+<section id="ablation">
+  <div class="sec-header"><span class="sec-num">10</span><h2 class="sec-title">Ablation Study</h2></div>
+  <p class="sec-desc">VOTR is not optimised for a single metric. BM25-only wins on single-tool lexical queries (99.0%) but collapses on multi-hop chains (80.0%). The full-stack configuration is a multi-objective operating point balancing strict Top-1, chain success, abstention safety, and token budget.</p>
+
+  <div class="panel">
+    <div class="panel-head"><span class="panel-title">ABLATION COMPARISON — interactive</span></div>
+    <div class="panel-body">
+      <div class="seg" id="ablation-suite">
+        <button class="on" data-ab="single">single_tool.large (n=500)</button>
+        <button data-ab="multihop">multi_hop.large (hop@1)</button>
+      </div>
+      <div id="ablation-bars" style="margin-bottom:1rem"></div>
+      <div class="notice" id="ablation-insight"></div>
+
+      <div style="margin-top:1rem">
+        <table class="data-table" id="ablation-table">
+          <tr><th>Profile</th><th>Top-1</th><th>Top-3</th><th>Top-5</th><th>Handoff@k</th><th>Notes</th></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- .page -->
+
+<script>
+// ─── DATA ───────────────────────────────────────────────────────────────────
+
+const REQUEST_EXAMPLES = {
+  github: {server_intent:"GitHub repository operations",tool_intent:"list open pull requests for a repository",session_id:"demo-thread-01",skip_session_filter:false,record_session:true},
+  slack: {server_intent:"Slack workspace messaging",tool_intent:"send a message to a Slack channel with text content",session_id:"demo-thread-01",skip_session_filter:false,record_session:true},
+  bloomberg: {server_intent:"Bloomberg BLPAPI financial data",tool_intent:"get historical OHLCV price data for an equity ticker",session_id:"demo-thread-02",skip_session_filter:false,record_session:true},
+  ambiguous: {server_intent:"project management tools",tool_intent:"create a task for the reported bug",session_id:"demo-thread-03",skip_session_filter:true,record_session:true}
+};
+
+const QUERIES = {
+  pr:{title:"Query: list open pull requests",text:"server_intent: GitHub repository operations / tool_intent: list open pull requests for a repo",insight:"BM25 wins here — 'list_pull_requests' exact match. Dense also retrieves correctly via semantics. Both converge, making this a lexical+semantic success.",signal:"lexical",
+    lanes:{Dense:[["github.list_pull_requests",0.88],["github.search_issues",0.82],["gitlab.list_merge_requests",0.71],["github.get_pull_request",0.68]],
+           BM25:[["github.list_pull_requests",0.97],["github.get_pull_request",0.85],["github.search_issues",0.74],["github.list_branches",0.42]],
+           "SPLADE-lite":[["github.list_pull_requests",0.90],["gitlab.list_merge_requests",0.62],["github.list_branches",0.54],["github.search_issues",0.51]]}},
+  notify:{title:"Query: manage user notification preferences",text:"server_intent: notification management / tool_intent: update notification settings for a user",insight:"Dense wins here — 'manage user notifications' shares NO lexical tokens with 'update_notification_settings'. BM25 mostly fails. This is why BM25-only drops to 80% on multi-hop queries.",signal:"semantic",
+    lanes:{Dense:[["slack.update_notification_prefs",0.91],["discord.set_notification_settings",0.84],["telegram.set_user_preferences",0.77],["github.update_subscription",0.61]],
+           BM25:[["slack.list_channels",0.45],["discord.get_guild_info",0.38],["github.list_notifications",0.34],["slack.update_notification_prefs",0.21]],
+           "SPLADE-lite":[["slack.update_notification_prefs",0.82],["discord.set_notification_settings",0.69],["telegram.set_user_preferences",0.54],["slack.list_channels",0.41]]}},
+  market:{title:"Query: fetch historical market data",text:"server_intent: Bloomberg BLPAPI financial data / tool_intent: get historical OHLCV data for equity ticker",insight:"Explicit server name 'Bloomberg' triggers field-aware bonus (+0.22) in reranking. BM25 exact-matches 'bloomberg' token. Both signal converge strongly.",signal:"lexical+explicit",
+    lanes:{Dense:[["bloomberg.get_historical_data",0.93],["alpha_vantage.time_series_daily",0.82],["yahoo_finance.download_ohlcv",0.78],["quandl.get_dataset",0.64]],
+           BM25:[["bloomberg.get_historical_data",0.96],["bloomberg.get_reference_data",0.74],["bloomberg.subscribe_market_data",0.61],["postgres.query",0.28]],
+           "SPLADE-lite":[["bloomberg.get_historical_data",0.89],["yahoo_finance.download_ohlcv",0.76],["alpha_vantage.time_series_daily",0.71],["quandl.get_dataset",0.55]]}},
+  batch:{title:"Query: batch delete all completed tasks",text:"server_intent: task management / tool_intent: delete all completed tasks in bulk",insight:"Intent disambiguation fires: 'batch delete all' → plural+destructive pattern. Singular delete tools penalised ×0.82, bulk delete tools boosted ×1.08. Without this, a targeted 'delete_task' might rank above 'bulk_delete_tasks'.",signal:"disambiguation",
+    lanes:{Dense:[["asana.delete_task",0.79],["linear.bulk_delete_issues",0.76],["jira.delete_issue",0.73],["trello.archive_card",0.68]],
+           BM25:[["linear.bulk_delete_issues",0.88],["asana.delete_task",0.81],["jira.bulk_delete_issues",0.77],["trello.delete_all_cards",0.55]],
+           "SPLADE-lite":[["linear.bulk_delete_issues",0.85],["jira.bulk_delete_issues",0.79],["asana.delete_task",0.72],["asana.bulk_remove_tasks",0.64]]}}
+};
+
+const RRF_TOOLS = ["github.list_pull_requests","github.search_issues","github.get_pull_request","gitlab.list_merge_requests","github.list_branches","github.get_commit"];
+const WEIGHTS = {Dense:1.0, BM25:1.0, "SPLADE-lite":0.35};
+
+const RERANK_SCENARIOS = {
+  pr:{query:"Query: list pull requests for a repo / server_intent: GitHub",
+    candidates:[
+      {name:"github.list_pull_requests",server:"GitHub",desc:"Lists all pull requests for a repository.",params:["owner:str","repo:str","state:str?"],rrf:0.0241,serverHit:true,nameHit:true,descHit:true,paramHit:false},
+      {name:"github.search_issues",server:"GitHub",desc:"Searches issues and pull requests by query string.",params:["query:str","sort:str?"],rrf:0.0228,serverHit:true,nameHit:false,descHit:true,paramHit:false},
+      {name:"gitlab.list_merge_requests",server:"GitLab",desc:"Lists merge requests in a GitLab project.",params:["project_id:str","state:str?"],rrf:0.0219,serverHit:false,nameHit:true,descHit:true,paramHit:false}]},
+  gitlab:{query:"Query: list pull requests / tool_intent: merge requests on GitLab specifically",
+    candidates:[
+      {name:"gitlab.list_merge_requests",server:"GitLab",desc:"Lists merge requests in a GitLab project.",params:["project_id:str","state:str?"],rrf:0.0231,serverHit:true,nameHit:true,descHit:true,paramHit:false},
+      {name:"github.list_pull_requests",server:"GitHub",desc:"Lists all pull requests for a repository.",params:["owner:str","repo:str","state:str?"],rrf:0.0233,serverHit:false,nameHit:true,descHit:true,paramHit:false},
+      {name:"github.search_issues",server:"GitHub",desc:"Searches issues and pull requests.",params:["query:str"],rrf:0.0218,serverHit:false,nameHit:false,descHit:true,paramHit:false}]},
+  explicit:{query:"Query: search Bloomberg for ticker data / server_intent: Bloomberg BLPAPI (explicit)",
+    candidates:[
+      {name:"bloomberg.get_historical_data",server:"Bloomberg",desc:"Gets historical price/volume data for a security.",params:["ticker:str","start_date:str","end_date:str","fields:list?"],rrf:0.0245,serverHit:true,nameHit:true,descHit:true,paramHit:false},
+      {name:"alpha_vantage.time_series_daily",server:"AlphaVantage",desc:"Returns daily time series for a symbol.",params:["symbol:str","outputsize:str?"],rrf:0.0238,serverHit:false,nameHit:false,descHit:true,paramHit:false},
+      {name:"yahoo_finance.download_ohlcv",server:"YahooFinance",desc:"Downloads OHLCV data for ticker from Yahoo Finance.",params:["ticker:str","period:str","interval:str?"],rrf:0.0229,serverHit:false,nameHit:false,descHit:true,paramHit:false}]}
+};
+
+const SCHEMA_EXAMPLES = {
+  github:{
+    mz:`{
+  "name": "list_pull_requests",
+  "description": "Lists pull requests for a GitHub repository, filtered by state, head branch, or base branch.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "owner": { "type": "string", "description": "Repository owner" },
+      "repo": { "type": "string", "description": "Repository name" },
+      "state": { "type": "string", "enum": ["open","closed","all"], "default": "open" }
+    },
+    "required": ["owner","repo"]
+  }
+}`,
+    votr:`[server: GitHub] list_pull_requests(owner: str, repo: str, state?: str)
+  → Lists pull requests for a repository.`,
+    mzT:"~93.5",votrT:"~26"
+  },
+  bloomberg:{
+    mz:`{
+  "name": "get_historical_data",
+  "description": "Retrieves historical OHLCV price and volume data for a Bloomberg security ticker over a specified date range.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "ticker": { "type": "string", "description": "Bloomberg security identifier" },
+      "start_date": { "type": "string", "format": "date" },
+      "end_date": { "type": "string", "format": "date" },
+      "fields": { "type": "array", "items": {"type":"string"}, "default": ["PX_LAST"] }
+    },
+    "required": ["ticker","start_date","end_date"]
+  }
+}`,
+    votr:`[server: Bloomberg] get_historical_data(ticker: str, start_date: str, end_date: str, fields?: list)
+  → Retrieves historical OHLCV data for a security.`,
+    mzT:"~108",votrT:"~31"
+  },
+  slack:{
+    mz:`{
+  "name": "send_message",
+  "description": "Sends a message to a Slack channel or direct message conversation.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "channel": { "type": "string", "description": "Channel ID or name" },
+      "text": { "type": "string", "description": "Message text content" },
+      "thread_ts": { "type": "string", "description": "Thread timestamp (optional)" },
+      "blocks": { "type": "array", "description": "Block Kit components (optional)" }
+    },
+    "required": ["channel","text"]
+  }
+}`,
+    votr:`[server: Slack] send_message(channel: str, text: str, thread_ts?: str, blocks?: list)
+  → Sends a message to a Slack channel or DM.`,
+    mzT:"~97",votrT:"~28"
+  }
+};
+
+const HANDOFF_TOOLS = [
+  {k:1,schema:"[server: GitHub] list_pull_requests(owner: str, repo: str, state?: str)\n  → Lists pull requests for a repository.",conf:"HIGH confidence — clear score separation"},
+  {k:3,schema:"[server: GitHub] get_pull_request(owner: str, repo: str, pull_number: num)\n  → Gets details for a single pull request.",conf:"MEDIUM confidence — near-tie resolved"},
+  {k:3,schema:"[server: GitHub] search_issues(query: str, sort?: str)\n  → Searches issues and pull requests by query.",conf:"MEDIUM confidence — near-tie resolved"},
+  {k:5,schema:"[server: GitLab] list_merge_requests(project_id: str, state?: str)\n  → Lists merge requests for a GitLab project.",conf:"LOW confidence — cross-server ambiguity"},
+  {k:5,schema:"[server: GitHub] list_branches(owner: str, repo: str)\n  → Lists branches (may constrain PR query).",conf:"LOW confidence — low support overlap"}
+];
+
+const ABLATION_DATA = {
+  single:{
+    profiles:[
+      {name:"bm25_only",t1:0.990,t3:0.998,t5:0.998,hk:0.998,note:"Wins on lexical — exact tool name matches"},
+      {name:"dense_only",t1:0.938,t3:0.950,t5:0.952,hk:0.952,note:"Semantic, but near-synonym confusion"},
+      {name:"dense_bm25",t1:0.942,t3:0.974,t5:0.986,hk:0.978,note:"+BM25 lexical correction"},
+      {name:"full_stack",t1:0.964,t3:0.980,t5:0.990,hk:0.982,note:"+SPLADE-lite bigrams +field rerank"},
+      {name:"no_handoff",t1:0.964,t3:0.980,t5:0.990,hk:0.964,note:"Handoff@k degrades without policy"},
+      {name:"no_session",t1:0.964,t3:0.980,t5:0.990,hk:0.982,note:"Same (session memory not yet used in retrieval)"}
+    ],
+    insight:"BM25-only achieves 99.0% — highest on lexical queries. But this is not the production default. full_stack is a multi-objective operating point trading 2.6pts single-tool precision for robustness on semantic/multi-hop queries."
+  },
+  multihop:{
+    profiles:[
+      {name:"bm25_only",t1:0.800,t3:1.000,t5:1.000,hk:1.000,note:"Collapses on paraphrastic multi-hop"},
+      {name:"dense_only",t1:0.933,t3:0.933,t5:1.000,hk:1.000,note:"Semantic matching essential here"},
+      {name:"dense_bm25",t1:0.933,t3:1.000,t5:1.000,hk:1.000,note:"Combined improves T3"},
+      {name:"full_stack",t1:1.000,t3:1.000,t5:1.000,hk:1.000,note:"Perfect on large hop-level (n=500)"},
+      {name:"no_handoff",t1:1.000,t3:1.000,t5:1.000,hk:1.000,note:"Matches full_stack here"},
+      {name:"no_session",t1:1.000,t3:1.000,t5:1.000,hk:1.000,note:"Matches full_stack here"}
+    ],
+    insight:"The picture reverses on multi-hop. BM25-only drops to 80.0% hop@1 because paraphrastic intents ('manage user notifications') have zero lexical overlap with tool names. Dense semantic retrieval is essential. full_stack achieves 100%."
+  }
+};
+
+const EVAL_DATA = [
+  {task:"single_tool",scale:"Bloomberg (100q)",t1:1.000,t3:1.000,t5:1.000,hk:1.000,chn1:null,chn3:null,chn5:null},
+  {task:"single_tool",scale:"GitHub (100q)",t1:1.000,t3:1.000,t5:1.000,hk:1.000,chn1:null,chn3:null,chn5:null},
+  {task:"single_tool",scale:"Telegram (100q)",t1:1.000,t3:1.000,t5:1.000,hk:1.000,chn1:null,chn3:null,chn5:null},
+  {task:"single_tool",scale:"medium (250q)",t1:0.992,t3:1.000,t5:1.000,hk:1.000,chn1:null,chn3:null,chn5:null},
+  {task:"single_tool",scale:"large (500q)",t1:0.964,t3:0.980,t5:0.990,hk:0.982,chn1:null,chn3:null,chn5:null},
+  {task:"multi_hop",scale:"small (100 hops)",t1:1.000,t3:1.000,t5:1.000,hk:1.000,chn1:1.000,chn3:1.000,chn5:1.000},
+  {task:"multi_hop",scale:"medium (250 hops)",t1:0.990,t3:1.000,t5:1.000,hk:1.000,chn1:0.960,chn3:1.000,chn5:1.000},
+  {task:"multi_hop",scale:"large (500 hops)",t1:0.964,t3:0.980,t5:0.990,hk:0.982,chn1:0.870,chn3:0.920,chn5:0.960},
+  {task:"multi_tool",scale:"small (100)",t1:1.000,t3:1.000,t5:1.000,hk:1.000,chn1:1.000,chn3:1.000,chn5:1.000},
+  {task:"multi_tool",scale:"medium (250)",t1:0.990,t3:1.000,t5:1.000,hk:1.000,chn1:0.960,chn3:1.000,chn5:1.000},
+  {task:"multi_tool",scale:"large (500)",t1:0.964,t3:0.980,t5:0.990,hk:0.982,chn1:0.870,chn3:0.920,chn5:0.960}
+];
+
+// ─── UTILS ───────────────────────────────────────────────────────────────────
+const $ = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+const clamp = (n,a,b) => Math.max(a,Math.min(b,n));
+const pct = n => (n*100).toFixed(1)+'%';
+const fmt = n => (n*100).toFixed(1)+'%';
+
+function colorVal(v){
+  if(v===null)return '';
+  if(v>=0.99)return 'color:var(--green)';
+  if(v>=0.96)return 'color:var(--blue2)';
+  if(v>=0.90)return 'color:var(--yellow)';
+  return 'color:var(--red)';
+}
+
+function segEvents(id, cb){
+  $('#'+id).addEventListener('click',e=>{
+    if(!e.target.matches('button'))return;
+    $$('#'+id+' button').forEach(b=>b.classList.toggle('on',b===e.target));
+    cb(e.target.dataset[Object.keys(e.target.dataset)[0]], e.target);
+  });
+}
+
+// ─── 01 CATALOG PRESSURE ─────────────────────────────────────────────────────
+function initCatalog(){
+  const sl = $('#cat-slider');
+  function update(){
+    const n = +sl.value;
+    const full = Math.round(n * 93.5);
+    const votr = 230;
+    const red = ((full-votr)/full*100).toFixed(2)+'%';
+    $('#pressure-badge').textContent = n.toLocaleString()+' tools';
+    $('#ctx-tokens').textContent = full.toLocaleString();
+    $('#votr-tokens').textContent = votr;
+    $('#reduction-pct').textContent = ((full-votr)/full*100).toFixed(2)+'%';
+    const votrPct = Math.max(0.09, votr/full*100);
+    $('#votr-bar').style.width = votrPct+'%';
+  }
+  sl.addEventListener('input',update);
+  update();
+
+  segEvents('req-tabs',k=>{
+    $('#req-pre').textContent = JSON.stringify(REQUEST_EXAMPLES[k],null,2);
+  });
+  $('#req-pre').textContent = JSON.stringify(REQUEST_EXAMPLES.github,null,2);
+}
+
+// ─── 02 PIPELINE ─────────────────────────────────────────────────────────────
+function initPipeline(){
+  const nodes = $$('#pipeline .pipe-node');
+  let active = 0;
+  function activate(i){
+    active = i;
+    nodes.forEach((n,j)=>{
+      n.classList.toggle('active-node',j===i);
+      n.classList.toggle('done-node',j<i);
+    });
+  }
+  nodes.forEach((n,i)=>n.addEventListener('click',()=>{ clearInterval(timer); activate(i); }));
+  let timer = null;
+  $('#pipe-play').addEventListener('click',()=>{
+    clearInterval(timer);
+    activate(0);
+    let i=0;
+    timer = setInterval(()=>{
+      i++;
+      if(i>=nodes.length){clearInterval(timer);return;}
+      activate(i);
+    },1500);
+  });
+
+  // Dense demo
+  const denseDemo = document.getElementById('dense-demo');
+  if(denseDemo){
+    const tools = [
+      {t:"github.list_pull_requests",σ:0.89,τt:0.91,τ:0.89*0.91*Math.max(0.89,0.91)},
+      {t:"github.search_issues",σ:0.89,τt:0.78,τ:0.89*0.78*Math.max(0.89,0.78)},
+      {t:"gitlab.list_merge_requests",σ:0.52,τt:0.88,τ:0.52*0.88*Math.max(0.52,0.88)}
+    ];
+    denseDemo.innerHTML = tools.map((t,i)=>`
+      <div style="display:grid;grid-template-columns:1.5rem 1fr 3.5rem;gap:0.4rem;align-items:center;padding:0.3rem 0;border-bottom:1px solid var(--border)">
+        <span style="font-family:var(--mono);font-size:0.68rem;color:var(--dim)">#${i+1}</span>
+        <div>
+          <div style="font-size:0.78rem;color:var(--text)">${t.t}</div>
+          <div style="font-family:var(--mono);font-size:0.65rem;color:var(--muted)">σ=${t.σ.toFixed(2)} · τ_t=${t.τt.toFixed(2)} → τ=${t.τ.toFixed(3)}</div>
+          <div class="score-bar-wrap" style="margin-top:0.2rem"><div class="score-bar" style="width:${t.τ*100}%;background:${i===0?'var(--blue)':'var(--border2)'}"></div></div>
+        </div>
+        <span style="font-family:var(--mono);font-size:0.7rem;color:${i===0?'var(--blue2)':'var(--muted)'}">${t.τ.toFixed(3)}</span>
+      </div>`).join('');
+  }
+}
+
+// ─── 03 RETRIEVAL ────────────────────────────────────────────────────────────
+function initRetrieval(){
+  const colors = {Dense:'var(--blue)',BM25:'var(--purple)',"SPLADE-lite":'var(--green)'};
+  function renderLanes(qkey){
+    const q = QUERIES[qkey];
+    $('#q-title').textContent = q.title;
+    $('#q-text').textContent = q.text;
+    const lanes = $('#retrieval-lanes');
+    lanes.innerHTML = Object.entries(q.lanes).map(([name,rows])=>{
+      const c = colors[name];
+      return `<div style="border:1px solid var(--border);border-radius:10px;padding:0.75rem;background:var(--bg2)">
+        <div style="display:flex;justify-content:space-between;margin-bottom:0.6rem">
+          <span style="font-family:var(--mono);font-size:0.68rem;font-weight:600;color:${c}">${name}</span>
+          <span style="font-family:var(--mono);font-size:0.62rem;color:var(--muted)">w=${WEIGHTS[name]}</span>
+        </div>
+        ${rows.map(([t,s],i)=>`
+        <div style="display:grid;grid-template-columns:1.5rem 1fr 2.5rem;gap:0.35rem;align-items:center;margin:0.3rem 0">
+          <span style="font-family:var(--mono);font-size:0.65rem;color:var(--dim)">#${i+1}</span>
+          <div><div style="font-size:0.73rem;color:${i===0?'var(--text)':'var(--muted)'}">${t}</div>
+               <div class="score-bar-wrap" style="margin-top:0.15rem"><div class="score-bar" style="width:${s*100}%;background:${i===0?c:'var(--border2)'}"></div></div></div>
+          <span style="font-family:var(--mono);font-size:0.65rem;color:${i===0?c:'var(--dim)'}">${s.toFixed(2)}</span>
+        </div>`).join('')}
+      </div>`;
+    }).join('');
+    const insights = {
+      lexical:'<strong>Lexical query:</strong> BM25 and SPLADE-lite win with high precision on exact tool names. Dense also retrieves correctly via semantics. All three lenses agree → strong fused confidence.',
+      semantic:'<strong>Semantic query:</strong> Dense retrieval is essential here — BM25 nearly fails (zero lexical overlap). SPLADE-lite bigrams partially recover. This query type is where hybrid retrieval most earns its keep.',
+      'lexical+explicit':'<strong>Explicit server named:</strong> All three lenses agree. Field-aware reranking will apply the +0.22 explicit server bonus, further separating Bloomberg tools from competitors.',
+      disambiguation:'<strong>Disambiguation triggered:</strong> "batch delete all" activates plural+destructive detection. Bulk tools get ×1.08 boost; singular delete tools get ×0.82 penalty after RRF fusion.'
+    };
+    $('#retrieval-insight').innerHTML = insights[q.signal]||'';
+  }
+  segEvents('query-tabs',k=>renderLanes(k));
+  renderLanes('pr');
+}
+
+// ─── 04 RRF ──────────────────────────────────────────────────────────────────
+function initRRF(){
+  let currentLists = null;
+  let spladesW = 0.35;
+
+  function computeRRF(lists){
+    const scores = {};
+    const wArr = [1.0, 1.0, spladesW];
+    lists.forEach((list,li)=>{
+      list.forEach((tool,ri)=>{
+        scores[tool] = (scores[tool]||0) + wArr[li]/(60+ri+1);
+      });
+    });
+    return Object.entries(scores).sort((a,b)=>b[1]-a[1]);
+  }
+
+  function genLists(){
+    const tools = [...RRF_TOOLS];
+    // shuffle slightly differently per call
+    const shuffled = tools.map(t=>({t,r:Math.random()})).sort((a,b)=>a.r-b.r).map(x=>x.t);
+    return [
+      [shuffled[0],shuffled[1],shuffled[2],shuffled[3],shuffled[4]],
+      [shuffled[1],shuffled[0],shuffled[3],shuffled[2],shuffled[5]],
+      [shuffled[0],shuffled[2],shuffled[1],shuffled[4],shuffled[3]]
+    ];
+  }
+
+  function render(){
+    currentLists = genLists();
+    const lnames = ['Dense','BM25','SPLADE-lite'];
+    const colors = ['var(--blue)','var(--purple)','var(--green)'];
+    $('#rrf-input').innerHTML = currentLists.map((list,li)=>`
+      <div style="border:1px solid var(--border);border-radius:8px;padding:0.5rem;background:var(--bg2)">
+        ${list.map((t,ri)=>`<div style="display:flex;justify-content:space-between;padding:0.2rem 0.3rem;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:0.65rem">
+          <span style="color:${ri===0?colors[li]:'var(--muted)'}">#${ri+1}</span>
+          <span style="color:var(--text);max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${t}">${t.split('.')[1]}</span>
+        </div>`).join('')}
+      </div>`).join('');
+
+    const fused = computeRRF(currentLists);
+    const maxS = fused[0][1];
+    $('#rrf-output').innerHTML = fused.slice(0,6).map(([t,s],i)=>`
+      <div style="display:grid;grid-template-columns:1.5rem 1fr 4.5rem;gap:0.4rem;align-items:center;padding:0.25rem 0;border-bottom:1px solid var(--border)">
+        <span style="font-family:var(--mono);font-size:0.65rem;color:${i===0?'var(--green)':'var(--dim)'}">#${i+1}</span>
+        <div><div style="font-size:0.73rem;color:${i===0?'var(--text)':'var(--muted)'}">${t}</div>
+             <div class="score-bar-wrap" style="margin-top:0.15rem"><div class="score-bar" style="width:${s/maxS*100}%;background:${i===0?'var(--green)':'var(--border2)'}"></div></div></div>
+        <span style="font-family:var(--mono);font-size:0.62rem;color:${i===0?'var(--green)':'var(--dim)'}">${s.toFixed(5)}</span>
+      </div>`).join('');
+
+    // Insight
+    const winner = fused[0][0];
+    const winLists = currentLists.filter(l=>l.indexOf(winner)<=1).length;
+    $('#rrf-insight').innerHTML = `<strong>${winner.split('.')[1]}</strong> wins fused rank — appeared in top-2 of ${winLists}/3 lists. RRF rewards consistent presence across retrievers, not just a single strong signal.`;
+  }
+
+  $('#rrf-shuffle').addEventListener('click', render);
+  render();
+
+  // SPLADE weight sensitivity
+  $('#splade-w').addEventListener('input',e=>{
+    spladesW = +e.target.value/100;
+    $('#splade-w-val').textContent = spladesW.toFixed(2);
+    const effect = spladesW < 0.2 ? 'SPLADE-lite nearly ignored. Dense+BM25 fusion only.' :
+                   spladesW < 0.5 ? 'SPLADE-lite as tiebreaker (paper setting: 0.35).' :
+                                    'SPLADE-lite weighted equal to dense/BM25. Bigram signal dominates.';
+    $('#weight-effect').textContent = effect;
+    if(currentLists) {
+      // re-render output with new weight
+      const fused = computeRRF(currentLists);
+      const maxS = fused[0][1];
+      $('#rrf-output').innerHTML = fused.slice(0,6).map(([t,s],i)=>`
+        <div style="display:grid;grid-template-columns:1.5rem 1fr 4.5rem;gap:0.4rem;align-items:center;padding:0.25rem 0;border-bottom:1px solid var(--border)">
+          <span style="font-family:var(--mono);font-size:0.65rem;color:${i===0?'var(--green)':'var(--dim)'}">#${i+1}</span>
+          <div><div style="font-size:0.73rem;color:${i===0?'var(--text)':'var(--muted)'}">${t}</div>
+               <div class="score-bar-wrap" style="margin-top:0.15rem"><div class="score-bar" style="width:${s/maxS*100}%;background:${i===0?'var(--green)':'var(--border2)'}"></div></div></div>
+          <span style="font-family:var(--mono);font-size:0.62rem;color:${i===0?'var(--green)':'var(--dim)'}">${s.toFixed(5)}</span>
+        </div>`).join('');
+    }
+  });
+  $('#weight-effect').textContent = 'SPLADE-lite as tiebreaker (paper setting: 0.35).';
+}
+
+// ─── 05 RERANK ───────────────────────────────────────────────────────────────
+function initRerank(){
+  const fieldColors = {serverHit:'var(--blue)',nameHit:'var(--green)',descHit:'var(--purple)',paramHit:'var(--yellow)'};
+  function renderRerank(key){
+    const sc = RERANK_SCENARIOS[key];
+    $('#rerank-query').innerHTML = `<span style="color:var(--muted)">${sc.query}</span>`;
+    const board = $('#rerank-board');
+    // Compute adjusted scores
+    const fieldWeights = {serverHit:0.25,nameHit:0.35,descHit:0.20,paramHit:0.12};
+    const λ = 0.0015;
+    const cands = sc.candidates.map(c=>{
+      let bonus = 0;
+      Object.entries(fieldWeights).forEach(([f,w])=>{ if(c[f]) bonus += w; });
+      if(c.serverHit && key==='explicit') bonus += 0.22;
+      const adj = c.rrf + λ * bonus;
+      return {...c, bonus, adj};
+    }).sort((a,b)=>b.adj-a.adj);
+    const maxAdj = cands[0].adj;
+
+    board.innerHTML = cands.map((c,i)=>`
+      <div style="border:1px solid ${i===0?'rgba(61,219,168,0.5)':'var(--border)'};background:${i===0?'rgba(61,219,168,0.04)':'rgba(0,0,0,0.15)'};border-radius:10px;padding:0.75rem;margin-bottom:0.5rem;transition:all .3s">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:0.35rem">
+          <span style="font-size:0.85rem;font-weight:600;color:${i===0?'var(--green)':'var(--text)'}">#${i+1} ${c.name}</span>
+          <span style="font-family:var(--mono);font-size:0.68rem;color:var(--muted)">RRF ${c.rrf.toFixed(4)} + λ·B = ${c.adj.toFixed(4)}</span>
+        </div>
+        <div style="font-size:0.75rem;color:var(--muted);margin-bottom:0.5rem">${c.desc}</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.5rem">
+          <span class="tag ${c.serverHit?'hit':'miss'}">server ${c.serverHit?'✓':'✗'}</span>
+          <span class="tag ${c.nameHit?'hit':'miss'}">name ${c.nameHit?'✓':'✗'}</span>
+          <span class="tag ${c.descHit?'hit':'miss'}">desc ${c.descHit?'✓':'✗'}</span>
+          ${key==='explicit'&&c.serverHit?'<span class="tag hit">+0.22 explicit</span>':''}
+        </div>
+        <div style="display:flex;gap:0.4rem;align-items:center">
+          <div class="score-bar-wrap" style="flex:1"><div class="score-bar" style="width:${c.adj/maxAdj*100}%;background:${i===0?'var(--green)':'var(--blue)'}"></div></div>
+          <span style="font-family:var(--mono);font-size:0.65rem;color:var(--muted)">B=${c.bonus.toFixed(2)}</span>
+        </div>
+      </div>`).join('');
+
+    const verdicts = {pr:"Field reranking confirms github.list_pull_requests. Server+name+desc all match. gitlab variant penalised by server mismatch.",
+                      gitlab:"GitLab explicitly requested → gitlab.list_merge_requests moves to #1 despite lower RRF, due to server match +0.25 and name match +0.35.",
+                      explicit:"Explicit server 'Bloomberg' named → +0.22 bonus applied. bloomberg.get_historical_data already leads; explicit bonus further widens the gap."};
+    $('#rerank-verdict').innerHTML = `<div class="notice green">${verdicts[key]}</div>`;
+  }
+  segEvents('rerank-tabs',k=>renderRerank(k));
+  renderRerank('pr');
+}
+
+// ─── 06 CONFIDENCE ───────────────────────────────────────────────────────────
+function initConfidence(){
+  let gapV=0.0023, ratioV=0.942, serverMatch=0;
+
+  function calcNC(){
+    const gap = gapV;
+    const ratio = ratioV;
+    const gapTerm = -Math.log10(Math.max(gap, 1e-9));
+    const ratioTerm = 0.5*(ratio - 0.975);
+    const serverTerm = -0.3*serverMatch;
+    const nc = gapTerm + ratioTerm + serverTerm;
+    return {nc, gapTerm, ratioTerm, serverTerm};
+  }
+
+  function update(){
+    const {nc, gapTerm, ratioTerm, serverTerm} = calcNC();
+    const s1 = 0.0241;
+    const s2 = s1 - gapV;
+    $('#s1-display').textContent = s1.toFixed(4);
+    $('#s2-display').textContent = Math.max(0,s2).toFixed(4);
+    $('#gap-val').textContent = gapV.toFixed(4);
+    $('#ratio-val').textContent = ratioV.toFixed(3);
+    $('#term-gap').textContent = gapTerm.toFixed(2);
+    $('#term-ratio').textContent = ratioTerm.toFixed(2);
+    $('#term-server').textContent = serverTerm.toFixed(2);
+    $('#nc-score').textContent = nc.toFixed(3);
+
+    let tier, k, col;
+    // Calibrated thresholds from paper: τ₁ ≈ 2.98, τ₃ ≈ 3.78 (approximate from paper data)
+    if(nc <= 2.98){ tier='HIGH'; k=1; col='var(--green)'; }
+    else if(nc <= 3.78){ tier='MEDIUM'; k=3; col='var(--yellow)'; }
+    else { tier='LOW'; k=5; col='var(--orange)'; }
+
+    $('#nc-score').style.color = col;
+    $('#conf-tier-badge').textContent = tier+' CONFIDENCE';
+    $('#conf-tier-badge').style.color = col;
+    $('#k-num').textContent = k;
+    $('#confidence-result').style.borderColor = col.replace('var','').replace('(','').replace(')','');
+  }
+
+  $('#gap-slider').addEventListener('input',e=>{
+    // map 0-100 to gap range 0.0001-0.02 (log scale)
+    const v = +e.target.value;
+    gapV = Math.pow(10, -4 + v/100*3); // 1e-4 to 1e-1, log scale
+    gapV = clamp(gapV, 0.0001, 0.02);
+    update();
+  });
+  $('#ratio-slider').addEventListener('input',e=>{
+    ratioV = 0.85 + (+e.target.value/100)*0.14; // 0.85 to 0.99
+    update();
+  });
+  segEvents('server-match-toggle',k=>{ serverMatch=+k; update(); });
+  update();
+}
+
+// ─── 07 SCHEMA COMPRESSION ───────────────────────────────────────────────────
+function initCompression(){
+  segEvents('schema-tabs',k=>{
+    const ex = SCHEMA_EXAMPLES[k];
+    $('#mz-schema').textContent = ex.mz;
+    $('#votr-schema').textContent = ex.votr;
+    $('#mz-tokens').textContent = ex.mzT+' tokens';
+    $('#votr-line-tokens').textContent = ex.votrT+' tokens';
+  });
+  const ex = SCHEMA_EXAMPLES.github;
+  $('#mz-schema').textContent = ex.mz;
+  $('#votr-schema').textContent = ex.votr;
+  $('#mz-tokens').textContent = ex.mzT+' tokens';
+  $('#votr-line-tokens').textContent = ex.votrT+' tokens';
+
+  // Handoff slider
+  function renderHandoff(){
+    const k = +$('#handoff-slider').value;
+    $('#handoff-k-label').textContent = 'k = '+k;
+    const visible = HANDOFF_TOOLS.filter(t=>t.k<=k);
+    $('#handoff-list').innerHTML = visible.map((t,i)=>`
+      <div style="border:1px solid ${i===0?'rgba(61,219,168,0.4)':'var(--border)'};border-radius:8px;padding:0.7rem;margin-bottom:0.4rem;background:var(--bg2);transition:all .3s">
+        <div style="font-family:var(--mono);font-size:0.65rem;color:${i===0?'var(--green)':'var(--blue2)'};margin-bottom:0.35rem">#${i+1} ${i===0?'BEST MATCH':'CANDIDATE'}</div>
+        <pre style="font-family:var(--mono);font-size:0.72rem;color:var(--text);white-space:pre-wrap;margin:0">${t.schema}</pre>
+        <div style="font-family:var(--mono);font-size:0.62rem;color:var(--muted);margin-top:0.35rem">${t.conf}</div>
+      </div>`).join('');
+    const notes = {1:'High confidence: single tool injected. ~26 schema tokens + metadata = ~80 total tokens.',
+                   3:'Medium confidence: 3 candidates. ~78 schema tokens + metadata = ~160 total tokens.',
+                   5:'Low confidence: 5 candidates. ~130 schema tokens + metadata = ~230 total tokens (paper avg).'};
+    $('#handoff-note').innerHTML = '<strong>Token estimate:</strong> '+notes[k];
+  }
+  $('#handoff-slider').addEventListener('input',renderHandoff);
+  renderHandoff();
+}
+
+// ─── 08 REGISTRATION ─────────────────────────────────────────────────────────
+function initRegistration(){
+  const steps = [
+    {text:'Validating server name uniqueness in live index...', state:'running'},
+    {text:'Embedding server description → e_desc ∈ ℝ³⁰⁷² [OpenAI API]', state:'api'},
+    {text:'Embedding server summary → e_sum ∈ ℝ³⁰⁷² [OpenAI API]', state:'api'},
+    {text:'Embedding 14 tool descriptions [OpenAI API, batch]', state:'api'},
+    {text:'Appending embedding vectors to server/tool arrays (NumPy concatenate)', state:'running'},
+    {text:'Rebuilding BM25 index over 2,807 servers...', state:'running'},
+    {text:'Rebuilding SPLADE-lite TF-IDF over extended corpus...', state:'running'},
+    {text:'Persisting updated .npy shards + meta.json to disk', state:'running'},
+    {text:'Atomically swapping engine.index reference [GIL-safe]', state:'done'},
+    {text:'✓ Registration complete. New server immediately queryable.', state:'success'},
+  ];
+  const stepsEl = $('#reg-steps');
+  const btn = $('#reg-sim-btn');
+  const orchBadge = $('#reg-orch-badge');
+
+  btn.addEventListener('click', ()=>{
+    btn.disabled = true;
+    stepsEl.innerHTML = '';
+    $('#reg-metrics').style.display = 'none';
+    orchBadge.textContent = '🟡 routing next hops...';
+    orchBadge.style.color = 'var(--yellow)';
+    let i = 0;
+    function next(){
+      if(i>=steps.length){
+        $('#reg-metrics').style.display = 'grid';
+        btn.disabled = false;
+        return;
+      }
+      const s = steps[i];
+      const el = document.createElement('div');
+      el.style.cssText = 'display:flex;gap:0.5rem;align-items:flex-start;padding:0.35rem 0;border-bottom:1px solid var(--border);animation:fadeIn 0.2s ease;font-size:0.78rem';
+      const dot = s.state==='success'?'🟢':s.state==='done'?'🔵':s.state==='api'?'🟡':'⚪';
+      el.innerHTML = `<span>${dot}</span><span style="color:${s.state==='success'?'var(--green)':s.state==='api'?'var(--yellow)':'var(--muted)'}">${s.text}</span>`;
+      stepsEl.appendChild(el);
+      if(s.state==='done' || s.state==='success'){
+        orchBadge.textContent = '🟢 done — new servers routable';
+        orchBadge.style.color = 'var(--green)';
+      }
+      i++;
+      setTimeout(next, 350 + (s.state==='api'?600:0));
+    }
+    next();
+  });
+}
+
+// ─── 09 EVALUATION ───────────────────────────────────────────────────────────
+function initEvaluation(){
+  function renderTable(filter){
+    const data = filter==='all' ? EVAL_DATA :
+                 filter==='single' ? EVAL_DATA.filter(d=>d.task==='single_tool') :
+                 EVAL_DATA.filter(d=>d.task!=='single_tool');
+    const wrap = $('#eval-table-wrap');
+    wrap.innerHTML = `<table class="data-table" style="margin-top:0.5rem">
+      <tr><th>Task</th><th>Scale</th><th>Top-1</th><th>Top-3</th><th>Top-5</th><th>Hd@k</th><th>Chn@1</th><th>Chn@3</th><th>Chn@5</th></tr>
+      ${data.map(d=>`<tr>
+        <td style="font-family:var(--mono);font-size:0.7rem;color:${d.task==='single_tool'?'var(--blue2)':d.task==='multi_hop'?'var(--purple)':'var(--green)'}">${d.task}</td>
+        <td style="font-size:0.75rem">${d.scale}</td>
+        <td style="${colorVal(d.t1)};font-family:var(--mono);font-size:0.78rem">${fmt(d.t1)}</td>
+        <td style="${colorVal(d.t3)};font-family:var(--mono);font-size:0.78rem">${fmt(d.t3)}</td>
+        <td style="${colorVal(d.t5)};font-family:var(--mono);font-size:0.78rem">${fmt(d.t5)}</td>
+        <td style="${colorVal(d.hk)};font-family:var(--mono);font-size:0.78rem">${fmt(d.hk)}</td>
+        <td style="${d.chn1===null?'color:var(--dim)':colorVal(d.chn1)};font-family:var(--mono);font-size:0.78rem">${d.chn1===null?'—':fmt(d.chn1)}</td>
+        <td style="${d.chn3===null?'color:var(--dim)':colorVal(d.chn3)};font-family:var(--mono);font-size:0.78rem">${d.chn3===null?'—':fmt(d.chn3)}</td>
+        <td style="${d.chn5===null?'color:var(--dim)':colorVal(d.chn5)};font-family:var(--mono);font-size:0.78rem">${d.chn5===null?'—':fmt(d.chn5)}</td>
+      </tr>`).join('')}
+    </table>`;
+  }
+  segEvents('eval-filter',k=>renderTable(k));
+  renderTable('all');
+}
+
+// ─── 10 ABLATION ─────────────────────────────────────────────────────────────
+function initAblation(){
+  function renderAblation(suite){
+    const data = ABLATION_DATA[suite];
+    const bars = $('#ablation-bars');
+    const maxT1 = Math.max(...data.profiles.map(p=>p.t1));
+    bars.innerHTML = data.profiles.map(p=>{
+      const isFull = p.name==='full_stack';
+      const isBest = p.t1===maxT1;
+      return `<div style="display:grid;grid-template-columns:8rem 1fr 3.5rem;gap:0.5rem;align-items:center;margin:0.35rem 0">
+        <span style="font-family:var(--mono);font-size:0.7rem;color:${isFull?'var(--blue2)':isBest?'var(--yellow)':'var(--muted)'}">${p.name}</span>
+        <div class="score-bar-wrap" style="height:14px">
+          <div class="score-bar" style="width:${p.t1*100}%;background:${isFull?'var(--blue)':isBest?'var(--yellow)':'var(--border2)'}"></div>
+        </div>
+        <span style="font-family:var(--mono);font-size:0.72rem;color:${isFull?'var(--blue2)':isBest?'var(--yellow)':'var(--muted)'}">${fmt(p.t1)}</span>
+      </div>`;
+    }).join('');
+    $('#ablation-insight').innerHTML = data.insight;
+
+    const table = $('#ablation-table');
+    table.innerHTML = `<tr><th>Profile</th><th>Top-1</th><th>Top-3</th><th>Top-5</th><th>Handoff@k</th><th>Notes</th></tr>`+
+      data.profiles.map(p=>{
+        const isFull = p.name==='full_stack';
+        return `<tr>
+          <td style="font-family:var(--mono);font-size:0.72rem;color:${isFull?'var(--blue2)':'var(--text)'}">${p.name}</td>
+          <td style="${colorVal(p.t1)};font-family:var(--mono)">${fmt(p.t1)}</td>
+          <td style="${colorVal(p.t3)};font-family:var(--mono)">${fmt(p.t3)}</td>
+          <td style="${colorVal(p.t5)};font-family:var(--mono)">${fmt(p.t5)}</td>
+          <td style="${colorVal(p.hk)};font-family:var(--mono)">${fmt(p.hk)}</td>
+          <td style="font-size:0.75rem;color:var(--muted)">${p.note}</td>
+        </tr>`;
+      }).join('');
+  }
+  segEvents('ablation-suite',k=>renderAblation(k));
+  renderAblation('single');
+}
+
+// ─── INIT ALL ─────────────────────────────────────────────────────────────────
+initCatalog();
+initPipeline();
+initRetrieval();
+initRRF();
+initRerank();
+initConfidence();
+initCompression();
+initRegistration();
+initEvaluation();
+initAblation();
+</script>
+<script>
+  (function () {
+    const nav = document.querySelector('nav');
+    const progressFill = document.getElementById('scroll-progress-fill');
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    if (!nav || !progressFill || sections.length === 0) return;
+
+    const links = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
+    const linkById = new Map(links.map((a) => [a.getAttribute('href').slice(1), a]));
+
+    function updateProgress() {
+      const doc = document.documentElement;
+      const scrollTop = window.scrollY || doc.scrollTop || 0;
+      const scrollable = Math.max(1, doc.scrollHeight - doc.clientHeight);
+      const pct = Math.max(0, Math.min(1, scrollTop / scrollable));
+      progressFill.style.width = (pct * 100).toFixed(2) + '%';
+    }
+
+    let raf = null;
+    function onScroll() {
+      if (raf) return;
+      raf = window.requestAnimationFrame(() => {
+        raf = null;
+        const y = window.scrollY + 96; // account for sticky nav height
+
+        let currentId = sections[0]?.id || '';
+        for (const s of sections) {
+          if (s.offsetTop <= y) currentId = s.id;
+          else break;
+        }
+
+        for (const a of links) a.classList.toggle('active', a.getAttribute('href').slice(1) === currentId);
+        updateProgress();
+      });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    onScroll();
+  })();
+</script>
+</body>
+</html>
