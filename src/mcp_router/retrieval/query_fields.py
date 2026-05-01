@@ -4,6 +4,7 @@ import re
 from dataclasses import dataclass
 from typing import Sequence
 
+from mcp_router.retrieval.tokenization import tokenize as _tokenize
 
 _ACTION_STOPWORDS = {
     "a",
@@ -93,10 +94,6 @@ def _compact(text: str) -> str:
 
 def _server_name_tokens(name: str) -> tuple[str, ...]:
     return tuple(tok for tok in re.findall(r"[a-z0-9]+", (name or "").lower()) if tok)
-
-
-def _tokenize(text: str) -> list[str]:
-    return re.findall(r"[a-zA-Z0-9_#./:-]+", text.lower())
 
 
 def _match_explicit_server(

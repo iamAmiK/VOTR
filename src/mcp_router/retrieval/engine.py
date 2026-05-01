@@ -247,6 +247,13 @@ class RouterEngine:
         boosted = []
         top_rrf_score = float(candidates[0][2]) if candidates else 0.0
         top_server_name = self.index.get_tool_record(candidates[0][0])[0].name if candidates else ""
+        
+        # Precompute normalized tool intent vector for dense margin recovery
+        q_t_vec = np.array(t_emb, dtype=np.float32)
+        q_t_norm = np.linalg.norm(q_t_vec)
+        if q_t_norm > 0:
+            q_t_vec = q_t_vec / q_t_norm
+
         for idx, (tr, key, sc) in enumerate(candidates):
             server, tool = self.index.get_tool_record(tr)
             adj = sc
@@ -257,7 +264,9 @@ class RouterEngine:
                 and field_weights is not None
                 and idx < field_head
                 and (top_rrf_score - sc) <= self.cfg.field_aware_score_window
-                and (
+            ):
+                # 1. Lexical field-aware bonus
+                if (
                     (
                         query_fields.explicit_server_name is not None
                         and query_fields.explicit_server_name == top_server_name
@@ -267,9 +276,14 @@ class RouterEngine:
                         query_fields.explicit_server_name is None
                         and server.name == top_server_name
                     )
-                )
-            ):
-                adj += self.cfg.field_bonus_scale * field_aware_bonus(server, tool, query_fields, field_weights)
+                ):
+                    adj += self.cfg.field_bonus_scale * field_aware_bonus(server, tool, query_fields, field_weights)
+                
+                # 2. Dense margin recovery: Add a scaled fraction of the exact cosine similarity 
+                # to break RRF ties semantically, not just lexically.
+                t_vec = self.index._tool_mat[tr]
+                tj = float(np.dot(t_vec, q_t_vec))
+                adj += (self.cfg.field_bonus_scale * 0.5) * max(0.0, tj)
 
             # Intent-aware disambiguation:
             # - If user likely wants a singular destructive action, downrank bulk tools.

@@ -18,14 +18,19 @@ def adaptive_top_k(
     n = len(scores)
     if n == 1:
         return 1
+    
     top = scores[0]
     second = scores[1]
     gap = top - second
+    
+    # If the gap is massive, we are extremely confident. Just return 1.
     if gap >= cfg.adaptive_gap_confident:
         return cfg.adaptive_min_tools
+        
     # More ambiguity => return more candidates (capped)
     if gap >= cfg.adaptive_gap_confident * 0.5:
         return min(3, n, cfg.adaptive_max_tools)
+        
     return min(cfg.adaptive_max_tools, n)
 
 

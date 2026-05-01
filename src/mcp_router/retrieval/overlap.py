@@ -5,6 +5,7 @@ from collections import defaultdict
 from typing import Dict, Iterable, List
 
 from mcp_router.registry.schema import RegisteredServer, RegisteredTool
+from mcp_router.retrieval.tokenization import tokenize as _tokenize
 
 _GENERIC_TOKENS = {
     "a",
@@ -30,12 +31,6 @@ _GENERIC_TOKENS = {
     "via",
     "with",
 }
-
-
-def _tokenize(text: str) -> list[str]:
-    text = re.sub(r"([a-z0-9])([A-Z])", r"\1 \2", text or "")
-    text = re.sub(r"[_./:#-]+", " ", text)
-    return re.findall(r"[a-z0-9]+", text.lower())
 
 
 def _normalized_tokens(text: str, *, drop: set[str] | None = None) -> list[str]:

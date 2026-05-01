@@ -9,10 +9,7 @@ from rank_bm25 import BM25Okapi
 from mcp_router.config import RouterConfig
 from mcp_router.registry.schema import RegisteredServer
 from mcp_router.retrieval.splade_lite import SpladeLiteRetriever
-
-
-def tokenize(text: str) -> List[str]:
-    return re.findall(r"[a-zA-Z0-9_]+", text.lower())
+from mcp_router.retrieval.tokenization import tokenize
 
 
 def build_tool_documents(servers: Sequence[RegisteredServer]) -> List[str]:

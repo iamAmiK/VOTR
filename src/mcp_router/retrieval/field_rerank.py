@@ -6,12 +6,11 @@ from typing import Iterable
 from mcp_router.registry.schema import RegisteredServer, RegisteredTool
 from mcp_router.retrieval.field_scoring import FieldScoringWeights
 from mcp_router.retrieval.query_fields import QueryFields
+from mcp_router.retrieval.tokenization import tokenize
 
 
 def _tokenize(text: str) -> set[str]:
-    text = re.sub(r"([a-z0-9])([A-Z])", r"\1 \2", text or "")
-    text = re.sub(r"[_\-./:#]+", " ", text)
-    return set(re.findall(r"[a-zA-Z0-9]+", text.lower()))
+    return set(tokenize(text))
 
 
 def _overlap_score(query: str, text: str) -> float:

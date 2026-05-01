@@ -1,59 +1,59 @@
 {
   "summary": {
     "num_items": 250,
-    "top1_accuracy": 0.992,
+    "top1_accuracy": 1.0,
     "top3_accuracy": 1.0,
     "top5_accuracy": 1.0,
     "handoff_accuracy_at_recommended_k": 1.0,
-    "avg_recommended_handoff_k": 2.624,
+    "avg_recommended_handoff_k": 3,
     "confidence_buckets": {
       "high": {
-        "count": 136,
+        "count": 101,
         "top1_accuracy": 1.0,
         "handoff_accuracy_at_recommended_k": 1.0
       },
       "low": {
-        "count": 89,
-        "top1_accuracy": 0.9775280898876404,
+        "count": 101,
+        "top1_accuracy": 1.0,
         "handoff_accuracy_at_recommended_k": 1.0
       },
       "medium": {
-        "count": 25,
+        "count": 48,
         "top1_accuracy": 1.0,
         "handoff_accuracy_at_recommended_k": 1.0
       }
     },
     "equivalence_aware": {
       "num_items": 250,
-      "top1_accuracy": 0.992,
+      "top1_accuracy": 1.0,
       "top3_accuracy": 1.0,
       "top5_accuracy": 1.0,
       "handoff_accuracy_at_recommended_k": 1.0,
-      "avg_recommended_handoff_k": 2.624,
+      "avg_recommended_handoff_k": 3,
       "confidence_buckets": {
         "high": {
-          "count": 136,
+          "count": 101,
           "top1_accuracy": 1.0,
           "handoff_accuracy_at_recommended_k": 1.0
         },
         "low": {
-          "count": 89,
-          "top1_accuracy": 0.9775280898876404,
+          "count": 101,
+          "top1_accuracy": 1.0,
           "handoff_accuracy_at_recommended_k": 1.0
         },
         "medium": {
-          "count": 25,
+          "count": 48,
           "top1_accuracy": 1.0,
           "handoff_accuracy_at_recommended_k": 1.0
         }
       },
       "num_cases": 50,
-      "chain_success_rate_at_1": 0.96,
+      "chain_success_rate_at_1": 1.0,
       "chain_success_rate_at_3": 1.0,
       "chain_success_rate_at_5": 1.0
     },
     "num_cases": 50,
-    "chain_success_rate_at_1": 0.96,
+    "chain_success_rate_at_1": 1.0,
     "chain_success_rate_at_3": 1.0,
     "chain_success_rate_at_5": 1.0
   },
@@ -71,10 +71,10 @@
           "expected_tool_key": "AgentQL::extract-web-data",
           "predicted_topk": [
             "AgentQL::extract-web-data",
-            "GreptimeDB::read_resource",
             "GreptimeDB::get_prompt",
             "GreptimeDB::list_prompts",
-            "GreptimeDB::list_tools"
+            "cognee-mcp::search",
+            "Graphlit::Extract Structured JSON from Text"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -82,9 +82,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.005256186745944379,
+          "score_gap": 0.00957504508535709,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03326840341799005,
+          "top2_score": 0.028949545078577336,
           "equivalent_tool_keys": [
             "AgentQL::extract-web-data"
           ],
@@ -102,7 +102,7 @@
             "Aiven::list_services",
             "Aiven::get_service_details",
             "AWS::s3_bucket_list",
-            "Raygun::list_applications"
+            "Kubernetes and OpenShift::projects_list"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -135,12 +135,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
+          "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "top2_score": 0.03781362007168459,
           "equivalent_tool_keys": [
             "Aiven::list_services"
           ],
@@ -156,19 +156,19 @@
           "predicted_topk": [
             "APIMatic MCP::validate-openapi-using-apimatic",
             "Contentful-mcp::bulk_validate",
-            "OpenAPI Schema::search-schema",
             "OpenAPI AnyApi::{prefix}_api_request_schema",
-            "OpenAPI Schema::get-component"
+            "Postman::run-collection",
+            "OpenAPI Schema::list-endpoints"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
+          "score_gap": 0.0006213643574828134,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "top2_score": 0.03790322580645161,
           "equivalent_tool_keys": [
             "APIMatic MCP::validate-openapi-using-apimatic"
           ],
@@ -231,8 +231,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -259,8 +259,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
           "score_gap": 0.0007977756478053932,
           "top1_score": 0.038524590163934426,
@@ -280,15 +280,15 @@
           "predicted_topk": [
             "Astra DB::DeleteCollection",
             "Astra DB::DeleteRecord",
-            "Astra DB::UpdateCollection",
             "Astra DB::ListRecords",
-            "Astra DB::CreateCollection"
+            "Astra DB::CreateCollection",
+            "Astra DB::UpdateCollection"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.0009634953447750921,
           "top1_score": 0.038524590163934426,
@@ -315,8 +315,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
           "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
@@ -343,8 +343,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
           "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
@@ -383,8 +383,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
           "score_gap": 0.0011379266482386546,
           "top1_score": 0.038524590163934426,
@@ -432,9 +432,9 @@
           "predicted_topk": [
             "Axiom::queryApl",
             "Axiom::listDatasets",
-            "PostgreSQL::query",
             "AWS Athena::run_query",
-            "AWS Athena::list_saved_queries"
+            "MariaDB::query_database",
+            "PostgreSQL::query"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -528,15 +528,15 @@
           "predicted_topk": [
             "Azure::List, create, and get keys",
             "Azure::List, get configuration and get parameters for servers",
+            "Azure::List and query Storage tables",
             "Azure::List and query databases",
-            "Azure::List and query databases",
-            "Azure::List and query Storage tables"
+            "Azure::List and query databases"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
           "score_gap": 0.0012150023503143537,
           "top1_score": 0.038524590163934426,
@@ -555,20 +555,20 @@
           "expected_tool_key": "Bitrise::list_installable_artifacts",
           "predicted_topk": [
             "Bitrise::list_installable_artifacts",
-            "Bitrise::create_connected_app",
             "Bitrise::list_connected_apps",
+            "Bitrise::create_connected_app",
             "Bitrise::get_connected_app",
             "Bitrise::create_tester_group"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011253966155473291,
+          "score_gap": 0.0008819102631900111,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373991935483871,
+          "top2_score": 0.037642679900744415,
           "equivalent_tool_keys": [
             "Bitrise::list_installable_artifacts"
           ],
@@ -591,8 +591,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.0009669864772984815,
           "top1_score": 0.038524590163934426,
@@ -641,18 +641,18 @@
             "Box::box_docgen_template_list_jobs_tool",
             "Box::box_docgen_list_jobs_tool",
             "Box::box_docgen_list_jobs_by_batch_tool",
-            "Box::box_docgen_template_list_tags_tool",
+            "Box::box_docgen_template_list_tool",
             "Box::box_docgen_template_get_by_id_tool"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011253966155473291,
+          "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373991935483871,
+          "top2_score": 0.03764720942140297,
           "equivalent_tool_keys": [
             "Box::box_docgen_template_list_jobs_tool"
           ],
@@ -679,10 +679,10 @@
           "expected_tool_key": "Chroma::read_document",
           "predicted_topk": [
             "Chroma::read_document",
+            "Chroma::chroma_get_documents",
             "Chroma::delete_document",
             "Chroma::update_document",
-            "Chroma::create_document",
-            "Chroma::search_similar"
+            "Chroma::chroma_peek_collection"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -690,9 +690,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0012150023503143537,
+          "score_gap": 0.002600292239636502,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03730958781362007,
+          "top2_score": 0.035924297924297924,
           "equivalent_tool_keys": [
             "Chroma::read_document"
           ],
@@ -708,8 +708,8 @@
           "predicted_topk": [
             "Chroma::chroma_update_documents",
             "Chroma::chroma_modify_collection",
-            "Chroma::update_document",
             "Chroma::chroma_add_documents",
+            "Chroma::update_document",
             "Chroma::chroma_get_documents"
           ],
           "hit_at_1": true,
@@ -718,9 +718,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
+          "score_gap": 0.001223002862347125,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "top2_score": 0.0373015873015873,
           "equivalent_tool_keys": [
             "Chroma::chroma_update_documents"
           ],
@@ -737,8 +737,8 @@
             "CircleCI::get_latest_pipeline_status",
             "CircleCI::get_job_test_results",
             "CircleCI::get_build_failure_logs",
-            "GitHub::get_pull_request_status",
-            "Bitrise::get_pipeline"
+            "Bitrise::get_pipeline",
+            "GitHub::update_pull_request_branch"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -771,8 +771,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.0009669864772984815,
           "top1_score": 0.038524590163934426,
@@ -791,10 +791,10 @@
           "expected_tool_key": "Codacy::codacy_list_repository_issues",
           "predicted_topk": [
             "Codacy::codacy_list_repository_issues",
-            "Codacy::codacy_search_repository_srm_items",
             "Codacy::codacy_get_file_issues",
-            "Codacy::codacy_list_files",
-            "Codacy::codacy_list_repository_tool_patterns"
+            "Codacy::codacy_search_repository_srm_items",
+            "Codacy::codacy_list_pull_request_issues",
+            "Codacy::codacy_list_files"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -802,9 +802,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011379266482386546,
+          "score_gap": 0.0012150023503143537,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03738666351569577,
+          "top2_score": 0.03730958781362007,
           "equivalent_tool_keys": [
             "Codacy::codacy_list_repository_issues"
           ],
@@ -860,9 +860,9 @@
           "predicted_topk": [
             "CodeLogic::codelogic-database-impact",
             "CodeLogic::codelogic-method-impact",
-            "Riza::create_tool",
-            "Riza::execute_code",
-            "Riza::execute_tool"
+            "Neo4j::mcp-neo4j-memory",
+            "Fibery::create_entities_batch",
+            "Fibery::update_entity"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -890,7 +890,7 @@
             "CodeLogic::codelogic-database-impact",
             "Riza::execute_tool",
             "Riza::execute_code",
-            "Riza::create_tool"
+            "Codacy::codacy_list_repository_pull_requests"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1013,8 +1013,8 @@
             "Couchbase::get_document_by_id",
             "Couchbase::delete_document_by_id",
             "Couchbase::upsert_document_by_id",
-            "Couchbase::get_collection_structure",
-            "Couchbase::get_scopes_and_collections"
+            "Couchbase::get_scopes_and_collections",
+            "Couchbase::get_collection_structure"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1040,15 +1040,15 @@
           "predicted_topk": [
             "Dart::get_config",
             "Dart::create_task",
+            "Dart::list_tasks",
             "Dart::update_task",
-            "Dart::update_doc",
-            "Dart::delete_task"
+            "Dart::create_doc"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -1069,8 +1069,8 @@
             "Dart::create_doc",
             "Dart::list_docs",
             "Dart::create_task",
-            "Dart::update_doc",
-            "Dart::delete_doc"
+            "Dart::delete_doc",
+            "Dart::update_doc"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1103,8 +1103,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -1137,14 +1137,14 @@
             "DevHub::get_locations",
             "DevHub::get_businesses",
             "DevHub::get_hours_of_operation",
-            "DevHub::site_from_url",
-            "DevHub::get_nearest_location"
+            "DevHub::get_nearest_location",
+            "DevHub::site_from_url"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -1174,9 +1174,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.004645467620568361,
+          "score_gap": 0.005270858489861668,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.033879122543366065,
+          "top2_score": 0.03325373167407276,
           "equivalent_tool_keys": [
             "Dynatrace::send_slack_message"
           ],
@@ -1193,14 +1193,14 @@
             "Dynatrace::list_problems",
             "Dynatrace::get_security_problems",
             "Dynatrace::execute_dql",
-            "Dynatrace::set_up_notification_workflow",
-            "Dynatrace::get_ownership"
+            "Kubernetes and OpenShift::events_list",
+            "Kubernetes and OpenShift::pods_list"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
           "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
@@ -1219,10 +1219,10 @@
           "expected_tool_key": "EduBase::edubase_get_user",
           "predicted_topk": [
             "EduBase::edubase_get_user",
-            "OpenCTI::get_user_by_id",
-            "Okta::get_user",
-            "Okta::get_user_last_location",
-            "mcp_weather::get_weather"
+            "GOAT::Get Nansen information using Nansen API",
+            "GOAT::Get transaction information using Etherscan API",
+            "GOAT::Get coin information using CoinGecko API",
+            "OpenCTI::get_user_by_id"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1230,9 +1230,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.017006413000595973,
+          "score_gap": 0.00989555790586991,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.021518177163338453,
+          "top2_score": 0.028629032258064516,
           "equivalent_tool_keys": [
             "EduBase::edubase_get_user"
           ],
@@ -1255,12 +1255,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
+          "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "top2_score": 0.03764720942140297,
           "equivalent_tool_keys": [
             "Elasticsearch::delete_alias"
           ],
@@ -1290,13 +1290,13 @@
             "Elasticsearch::delete_document",
             "Elasticsearch::index_document",
             "Elasticsearch::search",
-            "Elasticsearch::get_mappings"
+            "Couchbase::get_document_by_id"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -1323,8 +1323,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -1344,15 +1344,15 @@
           "predicted_topk": [
             "Exa::web_search_exa",
             "Exa::github_search",
-            "Exa::crawling",
             "Exa::research_paper_search",
+            "Exa::crawling",
             "Exa::company_research"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
           "score_gap": 0.0013657812309319436,
           "top1_score": 0.038524590163934426,
@@ -1371,10 +1371,10 @@
           "expected_tool_key": "Fibery::list_databases",
           "predicted_topk": [
             "Fibery::list_databases",
-            "Fibery::describe_database",
-            "Fibery::create_entity",
             "Fibery::query_database",
-            "Fibery::update_entity"
+            "Fibery::describe_database",
+            "Fibery::update_entity",
+            "Fibery::create_entity"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1382,9 +1382,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0014675276028396078,
+          "score_gap": 0.0011379266482386546,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03705706256109482,
+          "top2_score": 0.03738666351569577,
           "equivalent_tool_keys": [
             "Fibery::list_databases"
           ],
@@ -1401,8 +1401,8 @@
             "Fibery::describe_database",
             "Fibery::list_databases",
             "Fibery::create_entity",
-            "Fibery::query_database",
-            "Fibery::create_entities_batch"
+            "Fibery::create_entities_batch",
+            "Fibery::update_entity"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1442,7 +1442,7 @@
             "FireCrawl::firecrawl_crawl",
             "Firecrawl::firecrawl_scrape",
             "FireCrawl::firecrawl_scrape",
-            "Firecrawl::firecrawl_batch_scrape"
+            "Firecrawl::firecrawl_search"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1469,9 +1469,9 @@
           "predicted_topk": [
             "Firecrawl::firecrawl_search",
             "FireCrawl::firecrawl_search",
-            "Firecrawl::firecrawl_extract",
+            "Firecrawl::firecrawl_deep_research",
             "Firecrawl::firecrawl_scrape",
-            "Firecrawl::firecrawl_deep_research"
+            "Firecrawl::firecrawl_extract"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1498,18 +1498,18 @@
             "Gitee::comment_issue",
             "Gitee::list_issue_comments",
             "Gitee::comment_pull",
-            "Gitee::create_issue",
-            "Gitee::update_issue"
+            "GitHub::add_issue_comment",
+            "Gitee::create_issue"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
+          "score_gap": 0.0006213643574828134,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "top2_score": 0.03790322580645161,
           "equivalent_tool_keys": [
             "Gitee::comment_issue"
           ],
@@ -1526,7 +1526,7 @@
             "Gitee::create_pull",
             "Gitee::update_pull",
             "Gitee::merge_pull",
-            "Gitee::comment_pull",
+            "Gitee::create_issue",
             "Gitee::create_release"
           ],
           "hit_at_1": true,
@@ -1535,9 +1535,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0016294288736118448,
+          "score_gap": 0.002329055739283485,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03689516129032258,
+          "top2_score": 0.03619553442465094,
           "equivalent_tool_keys": [
             "Gitee::create_pull"
           ],
@@ -1555,13 +1555,13 @@
             "Grafana::list_oncall_teams",
             "Grafana::list_oncall_users",
             "Grafana::list_incidents",
-            "Grafana::list_datasources"
+            "Grafana::get_current_oncall_users"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
           "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
@@ -1592,10 +1592,10 @@
           "expected_tool_key": "Grafana::list_prometheus_metric_names",
           "predicted_topk": [
             "Grafana::list_prometheus_metric_names",
-            "Grafana::list_prometheus_metric_metadata",
             "Grafana::list_loki_label_names",
+            "Grafana::list_prometheus_metric_metadata",
             "Grafana::list_oncall_teams",
-            "Grafana::list_datasources"
+            "Grafana::list_prometheus_label_names"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1603,9 +1603,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
+          "score_gap": 0.0011253966155473291,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "top2_score": 0.0373991935483871,
           "equivalent_tool_keys": [
             "Grafana::list_prometheus_metric_names"
           ],
@@ -1620,20 +1620,20 @@
           "expected_tool_key": "GreptimeDB::get_prompt",
           "predicted_topk": [
             "GreptimeDB::get_prompt",
-            "GreptimeDB::list_tools",
             "GreptimeDB::list_prompts",
+            "GreptimeDB::list_tools",
             "GreptimeDB::read_resource",
             "GreptimeDB::call_tool"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011333971275801005,
+          "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037391193036354325,
+          "top2_score": 0.03781362007168459,
           "equivalent_tool_keys": [
             "GreptimeDB::get_prompt"
           ],
@@ -1659,9 +1659,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0016314995943732674,
+          "score_gap": 0.0023530003158739876,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03689309056956116,
+          "top2_score": 0.03617158984806044,
           "equivalent_tool_keys": [
             "GreptimeDB::list_resources"
           ],
@@ -1678,8 +1678,8 @@
             "Heroku::list_addons",
             "Heroku::list_apps",
             "Heroku::ps_list",
-            "Heroku::create_addon",
-            "Heroku::get_app_info"
+            "Heroku::get_app_info",
+            "Heroku::create_addon"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1706,8 +1706,8 @@
             "Heroku::get_app_logs",
             "Heroku::pg_ps",
             "Heroku::pg_locks",
-            "Heroku::list_apps",
-            "Heroku::pipelines_list"
+            "Heroku::pipelines_list",
+            "Heroku::pg_psql"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1752,8 +1752,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -1772,9 +1772,9 @@
           "expected_tool_key": "Hologres::gather_table_statistics",
           "predicted_topk": [
             "Hologres::gather_table_statistics",
+            "Hologres::get_query_plan",
             "Hologres::get_execution_plan",
             "Hologres::execute_select_sql",
-            "Hologres::get_query_plan",
             "Hologres::execute_dml_sql"
           ],
           "hit_at_1": true,
@@ -1783,9 +1783,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0010537920328540368,
+          "score_gap": 0.001223002862347125,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03747079813108039,
+          "top2_score": 0.0373015873015873,
           "equivalent_tool_keys": [
             "Hologres::gather_table_statistics"
           ],
@@ -1801,9 +1801,9 @@
           "predicted_topk": [
             "Hyperbrowser::claude_computer_use_agent",
             "Hyperbrowser::browser_use_agent",
-            "Hyperbrowser::list_profiles",
             "Hyperbrowser::openai_computer_use_agent",
-            "Hyperbrowser::create_profile"
+            "Hyperbrowser::create_profile",
+            "Hyperbrowser::list_profiles"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1829,9 +1829,9 @@
           "predicted_topk": [
             "Hyperbrowser::browser_use_agent",
             "Hyperbrowser::claude_computer_use_agent",
-            "Hyperbrowser::create_profile",
             "Hyperbrowser::openai_computer_use_agent",
-            "Hyperbrowser::search_with_bing"
+            "Hyperbrowser::search_with_bing",
+            "Hyperbrowser::create_profile"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1839,9 +1839,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0008819102631900111,
+          "score_gap": 0.0011379266482386546,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037642679900744415,
+          "top2_score": 0.03738666351569577,
           "equivalent_tool_keys": [
             "Hyperbrowser::browser_use_agent"
           ],
@@ -1857,9 +1857,9 @@
           "predicted_topk": [
             "Inkeep::search-product-content",
             "Stripe::createProduct",
+            "Stripe::listProducts",
             "Productboard::get_product_detail",
-            "Tinybird::llms-tinybird-docs",
-            "Open Strategy Partners Marketing Tools::OSP Product Value Map Generator"
+            "Tinybird::llms-tinybird-docs"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1867,9 +1867,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0123977212746053,
+          "score_gap": 0.011903650128360244,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.026126868889329125,
+          "top2_score": 0.02662094003557418,
           "equivalent_tool_keys": [
             "Inkeep::search-product-content"
           ],
@@ -1898,8 +1898,8 @@
             "Kagi Search::search",
             "Kagi Search::summarizer",
             "Tavily::tavily-search",
-            "Milvus::milvus_delete_entities",
-            "Exa::github_search"
+            "Exa::github_search",
+            "mcp-local-rag::rag_search"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1927,7 +1927,7 @@
             "Kagi Search::search",
             "Video Editor::generate-edit-from-videos",
             "DBHub::generate_sql",
-            "Box::box_read_tool"
+            "Video Editor::generate-edit-from-single-video"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1955,7 +1955,7 @@
             "Keboola::get_bucket_detail",
             "Keboola::get_job_detail",
             "Keboola::get_component_details",
-            "Keboola::update_table_description"
+            "Keboola::retrieve_bucket_tables"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1963,9 +1963,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0013657812309319436,
+          "score_gap": 0.0016217976159805872,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03715880893300248,
+          "top2_score": 0.03690279254795384,
           "equivalent_tool_keys": [
             "Keboola::get_table_detail"
           ],
@@ -1980,20 +1980,20 @@
           "expected_tool_key": "Keboola::get_job_detail",
           "predicted_topk": [
             "Keboola::get_job_detail",
-            "Keboola::get_table_detail",
             "Unstructured::get_job_info",
-            "Keboola::retrieve_components",
-            "Keboola::get_bucket_detail"
+            "Keboola::retrieve_jobs",
+            "Keboola::get_table_detail",
+            "Keboola::retrieve_components"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0022576429923589214,
+          "score_gap": 0.0009669864772984815,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.036266947171575505,
+          "top2_score": 0.037557603686635944,
           "equivalent_tool_keys": [
             "Keboola::get_job_detail"
           ],
@@ -2016,8 +2016,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
           "score_gap": 0.0011194668242759803,
           "top1_score": 0.038524590163934426,
@@ -2056,8 +2056,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
           "score_gap": 0.001223002862347125,
           "top1_score": 0.038524590163934426,
@@ -2078,8 +2078,8 @@
             "Stripe::createInvoice",
             "Stripe::createInvoiceItem",
             "Stripe::createProduct",
-            "Stripe::createCoupon",
-            "Stripe::createCustomer"
+            "Stripe::createCustomer",
+            "Stripe::createPrice"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -2104,20 +2104,20 @@
           "expected_tool_key": "Stripe::listSubscriptions",
           "predicted_topk": [
             "Stripe::listSubscriptions",
-            "Stripe::listProducts",
             "Stripe::listCustomers",
-            "Stripe::listPrices",
-            "Stripe::listCoupons"
+            "Stripe::listProducts",
+            "Stripe::listCoupons",
+            "Stripe::listPrices"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
+          "score_gap": 0.0014710187353629972,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "top2_score": 0.03705357142857143,
           "equivalent_tool_keys": [
             "Stripe::listSubscriptions"
           ],
@@ -2132,10 +2132,10 @@
           "expected_tool_key": "Airtable::list_records",
           "predicted_topk": [
             "Airtable::list_records",
+            "Airtable::list_tables",
             "Airtable::delete_records",
-            "Airtable::update_records",
             "Airtable::list_bases",
-            "Airtable::describe_table"
+            "Airtable::update_records"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -2143,9 +2143,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0013657812309319436,
+          "score_gap": 0.0015225420328540407,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03715880893300248,
+          "top2_score": 0.037002048131080385,
           "equivalent_tool_keys": [
             "Airtable::list_records"
           ],
@@ -2162,14 +2162,14 @@
             "Airtable::search_records",
             "Airtable::get_record",
             "Airtable::list_records",
-            "Airtable::list_tables",
+            "Airtable::update_records",
             "Airtable::describe_table"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.0009634953447750921,
           "top1_score": 0.038524590163934426,
@@ -2190,7 +2190,7 @@
     {
       "case_id": "multi_hop-medium_250-cross_app-0015",
       "description": "Cross-application chain (5 hops), case 15",
-      "chain_success_at_1": false,
+      "chain_success_at_1": true,
       "chain_success_at_3": true,
       "chain_success_at_5": true,
       "hops": [
@@ -2230,8 +2230,8 @@
             "Chess.com::get_player_stats",
             "Chess.com::get_player_profile",
             "Chess.com::get_player_current_games",
-            "Chess.com::get_player_games_by_month",
-            "Chess.com::get_titled_players"
+            "Chess.com::get_titled_players",
+            "Chess.com::get_player_games_by_month"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -2264,8 +2264,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.0009669864772984815,
           "top1_score": 0.038524590163934426,
@@ -2284,10 +2284,10 @@
           "expected_tool_key": "Datadog::get-metric-metadata",
           "predicted_topk": [
             "Datadog::get-metric-metadata",
+            "Datadog::get-metrics",
             "Datadog::get-monitor",
             "Datadog::get-dashboard",
-            "Datadog::get-metrics",
-            "Grafana::list_prometheus_metric_metadata"
+            "Datadog::get-dashboards"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -2295,9 +2295,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.001798208906303167,
+          "score_gap": 0.0015466773088549865,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03672638125763126,
+          "top2_score": 0.03697791285507944,
           "equivalent_tool_keys": [
             "Datadog::get-metric-metadata"
           ],
@@ -2311,31 +2311,31 @@
           "tool_intent": "delete a Discord channel by channel id",
           "expected_tool_key": "Discord::delete_channel",
           "predicted_topk": [
-            "Discord::send-message",
             "Discord::delete_channel",
             "Discord::delete_message",
-            "Discord::read-messages",
-            "Discord::find_channel"
+            "Discord::send-message",
+            "Discord::find_channel",
+            "Discord::send_message"
           ],
-          "hit_at_1": false,
+          "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.00043016523549310043,
-          "top1_score": 0.03800416341399948,
-          "top2_score": 0.03757399817850638,
+          "score_gap": 0.0006072323054905071,
+          "top1_score": 0.038078030436570896,
+          "top2_score": 0.03747079813108039,
           "equivalent_tool_keys": [
             "Discord::delete_channel"
           ],
-          "equivalence_hit_at_1": false,
+          "equivalence_hit_at_1": true,
           "equivalence_hit_at_3": true,
           "equivalence_hit_at_5": true,
           "equivalence_hit_at_recommended_k": true
         }
       ],
-      "equivalence_chain_success_at_1": false,
+      "equivalence_chain_success_at_1": true,
       "equivalence_chain_success_at_3": true,
       "equivalence_chain_success_at_5": true
     },
@@ -2360,12 +2360,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
+          "score_gap": 0.0014553869656989682,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "top2_score": 0.03706920319823546,
           "equivalent_tool_keys": [
             "Discord::send_private_message"
           ],
@@ -2380,10 +2380,10 @@
           "expected_tool_key": "Docker::create_network",
           "predicted_topk": [
             "Docker::create_network",
-            "Docker::remove_network",
             "Docker::create_volume",
+            "Docker::remove_network",
             "Docker::create_container",
-            "Docker::build_image"
+            "Docker::list_networks"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -2391,9 +2391,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0012150023503143537,
+          "score_gap": 0.0011253966155473291,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03730958781362007,
+          "top2_score": 0.0373991935483871,
           "equivalent_tool_keys": [
             "Docker::create_network"
           ],
@@ -2408,8 +2408,8 @@
           "expected_tool_key": "Docker::create_volume",
           "predicted_topk": [
             "Docker::create_volume",
-            "Docker::remove_volume",
             "Docker::create_network",
+            "Docker::remove_volume",
             "Docker::create_container",
             "Docker::build_image"
           ],
@@ -2419,9 +2419,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
+          "score_gap": 0.0011253966155473291,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "top2_score": 0.0373991935483871,
           "equivalent_tool_keys": [
             "Docker::create_volume"
           ],
@@ -2447,9 +2447,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011333971275801005,
+          "score_gap": 0.0018548978490808207,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037391193036354325,
+          "top2_score": 0.036669692314853605,
           "equivalent_tool_keys": [
             "Git::git_list_repositories"
           ],
@@ -2472,12 +2472,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0005965758857747194,
-          "top1_score": 0.038260179799048125,
-          "top2_score": 0.037663603913273405,
+          "score_gap": 0.0011253966155473291,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.0373991935483871,
           "equivalent_tool_keys": [
             "Git::git_create_branch"
           ],
@@ -2504,8 +2504,8 @@
           "expected_tool_key": "HubSpot::hubspot_get_recent_conversations",
           "predicted_topk": [
             "HubSpot::hubspot_get_recent_conversations",
-            "HubSpot::hubspot_get_active_companies",
             "HubSpot::hubspot_get_active_contacts",
+            "HubSpot::hubspot_get_active_companies",
             "HubSpot::hubspot_get_company_activity",
             "HubSpot::hubspot_search_data"
           ],
@@ -2515,9 +2515,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
+          "score_gap": 0.002434054282681501,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "top2_score": 0.036090535881252925,
           "equivalent_tool_keys": [
             "HubSpot::hubspot_get_recent_conversations"
           ],
@@ -2562,8 +2562,8 @@
             "Shopify::get-order-by-id",
             "Shopify::get-product-by-id",
             "Shopify::get-customer-orders",
-            "Shopify::get-products",
-            "Shopify::update-order"
+            "Shopify::get-orders",
+            "Shopify::get-products"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -2589,9 +2589,9 @@
           "predicted_topk": [
             "Shopify::get-customers",
             "Shopify::get-products",
-            "Shopify::get-orders",
+            "Shopify::get-customer-orders",
             "Shopify::get-product-by-id",
-            "Shopify::get-customer-orders"
+            "Shopify::update-customer"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -2617,8 +2617,8 @@
           "predicted_topk": [
             "Talk To Figma::get_nodes_info",
             "Talk To Figma::get_node_info",
-            "Talk To Figma::read_my_design",
             "Talk To Figma::delete_multiple_nodes",
+            "Talk To Figma::read_my_design",
             "Talk To Figma::set_multiple_text_contents"
           ],
           "hit_at_1": true,
@@ -2664,8 +2664,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
           "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
@@ -2740,10 +2740,10 @@
           "expected_tool_key": "AgentQL::extract-web-data",
           "predicted_topk": [
             "AgentQL::extract-web-data",
-            "GreptimeDB::read_resource",
             "GreptimeDB::get_prompt",
             "GreptimeDB::list_prompts",
-            "GreptimeDB::list_tools"
+            "cognee-mcp::search",
+            "Graphlit::Extract Structured JSON from Text"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -2751,9 +2751,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.005256186745944379,
+          "score_gap": 0.00957504508535709,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03326840341799005,
+          "top2_score": 0.028949545078577336,
           "equivalent_tool_keys": [
             "AgentQL::extract-web-data"
           ],
@@ -2771,7 +2771,7 @@
             "Aiven::list_services",
             "Aiven::get_service_details",
             "AWS::s3_bucket_list",
-            "Raygun::list_applications"
+            "Kubernetes and OpenShift::projects_list"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -2816,12 +2816,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
+          "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "top2_score": 0.03781362007168459,
           "equivalent_tool_keys": [
             "Aiven::list_services"
           ],
@@ -2837,19 +2837,19 @@
           "predicted_topk": [
             "APIMatic MCP::validate-openapi-using-apimatic",
             "Contentful-mcp::bulk_validate",
-            "OpenAPI Schema::search-schema",
             "OpenAPI AnyApi::{prefix}_api_request_schema",
-            "OpenAPI Schema::get-component"
+            "Postman::run-collection",
+            "OpenAPI Schema::list-endpoints"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
+          "score_gap": 0.0006213643574828134,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "top2_score": 0.03790322580645161,
           "equivalent_tool_keys": [
             "APIMatic MCP::validate-openapi-using-apimatic"
           ],
@@ -2900,8 +2900,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -2928,8 +2928,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
           "score_gap": 0.0007977756478053932,
           "top1_score": 0.038524590163934426,
@@ -2961,15 +2961,15 @@
           "predicted_topk": [
             "Astra DB::DeleteCollection",
             "Astra DB::DeleteRecord",
-            "Astra DB::UpdateCollection",
             "Astra DB::ListRecords",
-            "Astra DB::CreateCollection"
+            "Astra DB::CreateCollection",
+            "Astra DB::UpdateCollection"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.0009634953447750921,
           "top1_score": 0.038524590163934426,
@@ -2996,8 +2996,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
           "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
@@ -3024,8 +3024,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
           "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
@@ -3052,8 +3052,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
           "score_gap": 0.0011379266482386546,
           "top1_score": 0.038524590163934426,
@@ -3113,9 +3113,9 @@
           "predicted_topk": [
             "Axiom::queryApl",
             "Axiom::listDatasets",
-            "PostgreSQL::query",
             "AWS Athena::run_query",
-            "AWS Athena::list_saved_queries"
+            "MariaDB::query_database",
+            "PostgreSQL::query"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -3197,15 +3197,15 @@
           "predicted_topk": [
             "Azure::List, create, and get keys",
             "Azure::List, get configuration and get parameters for servers",
+            "Azure::List and query Storage tables",
             "Azure::List and query databases",
-            "Azure::List and query databases",
-            "Azure::List and query Storage tables"
+            "Azure::List and query databases"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
           "score_gap": 0.0012150023503143537,
           "top1_score": 0.038524590163934426,
@@ -3224,20 +3224,20 @@
           "expected_tool_key": "Bitrise::list_installable_artifacts",
           "predicted_topk": [
             "Bitrise::list_installable_artifacts",
-            "Bitrise::create_connected_app",
             "Bitrise::list_connected_apps",
+            "Bitrise::create_connected_app",
             "Bitrise::get_connected_app",
             "Bitrise::create_tester_group"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011253966155473291,
+          "score_gap": 0.0008819102631900111,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373991935483871,
+          "top2_score": 0.037642679900744415,
           "equivalent_tool_keys": [
             "Bitrise::list_installable_artifacts"
           ],
@@ -3272,8 +3272,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.0009669864772984815,
           "top1_score": 0.038524590163934426,
@@ -3322,18 +3322,18 @@
             "Box::box_docgen_template_list_jobs_tool",
             "Box::box_docgen_list_jobs_tool",
             "Box::box_docgen_list_jobs_by_batch_tool",
-            "Box::box_docgen_template_list_tags_tool",
+            "Box::box_docgen_template_list_tool",
             "Box::box_docgen_template_get_by_id_tool"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011253966155473291,
+          "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373991935483871,
+          "top2_score": 0.03764720942140297,
           "equivalent_tool_keys": [
             "Box::box_docgen_template_list_jobs_tool"
           ],
@@ -3348,10 +3348,10 @@
           "expected_tool_key": "Chroma::read_document",
           "predicted_topk": [
             "Chroma::read_document",
+            "Chroma::chroma_get_documents",
             "Chroma::delete_document",
             "Chroma::update_document",
-            "Chroma::create_document",
-            "Chroma::search_similar"
+            "Chroma::chroma_peek_collection"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -3359,9 +3359,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0012150023503143537,
+          "score_gap": 0.002600292239636502,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03730958781362007,
+          "top2_score": 0.035924297924297924,
           "equivalent_tool_keys": [
             "Chroma::read_document"
           ],
@@ -3377,8 +3377,8 @@
           "predicted_topk": [
             "Chroma::chroma_update_documents",
             "Chroma::chroma_modify_collection",
-            "Chroma::update_document",
             "Chroma::chroma_add_documents",
+            "Chroma::update_document",
             "Chroma::chroma_get_documents"
           ],
           "hit_at_1": true,
@@ -3387,9 +3387,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
+          "score_gap": 0.001223002862347125,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "top2_score": 0.0373015873015873,
           "equivalent_tool_keys": [
             "Chroma::chroma_update_documents"
           ],
@@ -3418,8 +3418,8 @@
             "CircleCI::get_latest_pipeline_status",
             "CircleCI::get_job_test_results",
             "CircleCI::get_build_failure_logs",
-            "GitHub::get_pull_request_status",
-            "Bitrise::get_pipeline"
+            "Bitrise::get_pipeline",
+            "GitHub::update_pull_request_branch"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -3452,8 +3452,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.0009669864772984815,
           "top1_score": 0.038524590163934426,
@@ -3472,10 +3472,10 @@
           "expected_tool_key": "Codacy::codacy_list_repository_issues",
           "predicted_topk": [
             "Codacy::codacy_list_repository_issues",
-            "Codacy::codacy_search_repository_srm_items",
             "Codacy::codacy_get_file_issues",
-            "Codacy::codacy_list_files",
-            "Codacy::codacy_list_repository_tool_patterns"
+            "Codacy::codacy_search_repository_srm_items",
+            "Codacy::codacy_list_pull_request_issues",
+            "Codacy::codacy_list_files"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -3483,9 +3483,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011379266482386546,
+          "score_gap": 0.0012150023503143537,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03738666351569577,
+          "top2_score": 0.03730958781362007,
           "equivalent_tool_keys": [
             "Codacy::codacy_list_repository_issues"
           ],
@@ -3529,9 +3529,9 @@
           "predicted_topk": [
             "CodeLogic::codelogic-database-impact",
             "CodeLogic::codelogic-method-impact",
-            "Riza::create_tool",
-            "Riza::execute_code",
-            "Riza::execute_tool"
+            "Neo4j::mcp-neo4j-memory",
+            "Fibery::create_entities_batch",
+            "Fibery::update_entity"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -3571,7 +3571,7 @@
             "CodeLogic::codelogic-database-impact",
             "Riza::execute_tool",
             "Riza::execute_code",
-            "Riza::create_tool"
+            "Codacy::codacy_list_repository_pull_requests"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -3682,8 +3682,8 @@
             "Couchbase::get_document_by_id",
             "Couchbase::delete_document_by_id",
             "Couchbase::upsert_document_by_id",
-            "Couchbase::get_collection_structure",
-            "Couchbase::get_scopes_and_collections"
+            "Couchbase::get_scopes_and_collections",
+            "Couchbase::get_collection_structure"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -3721,15 +3721,15 @@
           "predicted_topk": [
             "Dart::get_config",
             "Dart::create_task",
+            "Dart::list_tasks",
             "Dart::update_task",
-            "Dart::update_doc",
-            "Dart::delete_task"
+            "Dart::create_doc"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -3750,8 +3750,8 @@
             "Dart::create_doc",
             "Dart::list_docs",
             "Dart::create_task",
-            "Dart::update_doc",
-            "Dart::delete_doc"
+            "Dart::delete_doc",
+            "Dart::update_doc"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -3784,8 +3784,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -3806,14 +3806,14 @@
             "DevHub::get_locations",
             "DevHub::get_businesses",
             "DevHub::get_hours_of_operation",
-            "DevHub::site_from_url",
-            "DevHub::get_nearest_location"
+            "DevHub::get_nearest_location",
+            "DevHub::site_from_url"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -3843,9 +3843,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.004645467620568361,
+          "score_gap": 0.005270858489861668,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.033879122543366065,
+          "top2_score": 0.03325373167407276,
           "equivalent_tool_keys": [
             "Dynatrace::send_slack_message"
           ],
@@ -3874,14 +3874,14 @@
             "Dynatrace::list_problems",
             "Dynatrace::get_security_problems",
             "Dynatrace::execute_dql",
-            "Dynatrace::set_up_notification_workflow",
-            "Dynatrace::get_ownership"
+            "Kubernetes and OpenShift::events_list",
+            "Kubernetes and OpenShift::pods_list"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
           "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
@@ -3900,10 +3900,10 @@
           "expected_tool_key": "EduBase::edubase_get_user",
           "predicted_topk": [
             "EduBase::edubase_get_user",
-            "OpenCTI::get_user_by_id",
-            "Okta::get_user",
-            "Okta::get_user_last_location",
-            "mcp_weather::get_weather"
+            "GOAT::Get Nansen information using Nansen API",
+            "GOAT::Get transaction information using Etherscan API",
+            "GOAT::Get coin information using CoinGecko API",
+            "OpenCTI::get_user_by_id"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -3911,9 +3911,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.017006413000595973,
+          "score_gap": 0.00989555790586991,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.021518177163338453,
+          "top2_score": 0.028629032258064516,
           "equivalent_tool_keys": [
             "EduBase::edubase_get_user"
           ],
@@ -3936,12 +3936,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
+          "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "top2_score": 0.03764720942140297,
           "equivalent_tool_keys": [
             "Elasticsearch::delete_alias"
           ],
@@ -3959,13 +3959,13 @@
             "Elasticsearch::delete_document",
             "Elasticsearch::index_document",
             "Elasticsearch::search",
-            "Elasticsearch::get_mappings"
+            "Couchbase::get_document_by_id"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -3992,8 +3992,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -4025,15 +4025,15 @@
           "predicted_topk": [
             "Exa::web_search_exa",
             "Exa::github_search",
-            "Exa::crawling",
             "Exa::research_paper_search",
+            "Exa::crawling",
             "Exa::company_research"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
           "score_gap": 0.0013657812309319436,
           "top1_score": 0.038524590163934426,
@@ -4052,10 +4052,10 @@
           "expected_tool_key": "Fibery::list_databases",
           "predicted_topk": [
             "Fibery::list_databases",
-            "Fibery::describe_database",
-            "Fibery::create_entity",
             "Fibery::query_database",
-            "Fibery::update_entity"
+            "Fibery::describe_database",
+            "Fibery::update_entity",
+            "Fibery::create_entity"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4063,9 +4063,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0014675276028396078,
+          "score_gap": 0.0011379266482386546,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03705706256109482,
+          "top2_score": 0.03738666351569577,
           "equivalent_tool_keys": [
             "Fibery::list_databases"
           ],
@@ -4082,8 +4082,8 @@
             "Fibery::describe_database",
             "Fibery::list_databases",
             "Fibery::create_entity",
-            "Fibery::query_database",
-            "Fibery::create_entities_batch"
+            "Fibery::create_entities_batch",
+            "Fibery::update_entity"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4111,7 +4111,7 @@
             "FireCrawl::firecrawl_crawl",
             "Firecrawl::firecrawl_scrape",
             "FireCrawl::firecrawl_scrape",
-            "Firecrawl::firecrawl_batch_scrape"
+            "Firecrawl::firecrawl_search"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4138,9 +4138,9 @@
           "predicted_topk": [
             "Firecrawl::firecrawl_search",
             "FireCrawl::firecrawl_search",
-            "Firecrawl::firecrawl_extract",
+            "Firecrawl::firecrawl_deep_research",
             "Firecrawl::firecrawl_scrape",
-            "Firecrawl::firecrawl_deep_research"
+            "Firecrawl::firecrawl_extract"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4179,18 +4179,18 @@
             "Gitee::comment_issue",
             "Gitee::list_issue_comments",
             "Gitee::comment_pull",
-            "Gitee::create_issue",
-            "Gitee::update_issue"
+            "GitHub::add_issue_comment",
+            "Gitee::create_issue"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
+          "score_gap": 0.0006213643574828134,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "top2_score": 0.03790322580645161,
           "equivalent_tool_keys": [
             "Gitee::comment_issue"
           ],
@@ -4207,7 +4207,7 @@
             "Gitee::create_pull",
             "Gitee::update_pull",
             "Gitee::merge_pull",
-            "Gitee::comment_pull",
+            "Gitee::create_issue",
             "Gitee::create_release"
           ],
           "hit_at_1": true,
@@ -4216,9 +4216,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0016294288736118448,
+          "score_gap": 0.002329055739283485,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03689516129032258,
+          "top2_score": 0.03619553442465094,
           "equivalent_tool_keys": [
             "Gitee::create_pull"
           ],
@@ -4236,13 +4236,13 @@
             "Grafana::list_oncall_teams",
             "Grafana::list_oncall_users",
             "Grafana::list_incidents",
-            "Grafana::list_datasources"
+            "Grafana::get_current_oncall_users"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
           "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
@@ -4261,10 +4261,10 @@
           "expected_tool_key": "Grafana::list_prometheus_metric_names",
           "predicted_topk": [
             "Grafana::list_prometheus_metric_names",
-            "Grafana::list_prometheus_metric_metadata",
             "Grafana::list_loki_label_names",
+            "Grafana::list_prometheus_metric_metadata",
             "Grafana::list_oncall_teams",
-            "Grafana::list_datasources"
+            "Grafana::list_prometheus_label_names"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4272,9 +4272,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
+          "score_gap": 0.0011253966155473291,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "top2_score": 0.0373991935483871,
           "equivalent_tool_keys": [
             "Grafana::list_prometheus_metric_names"
           ],
@@ -4289,20 +4289,20 @@
           "expected_tool_key": "GreptimeDB::get_prompt",
           "predicted_topk": [
             "GreptimeDB::get_prompt",
-            "GreptimeDB::list_tools",
             "GreptimeDB::list_prompts",
+            "GreptimeDB::list_tools",
             "GreptimeDB::read_resource",
             "GreptimeDB::call_tool"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011333971275801005,
+          "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037391193036354325,
+          "top2_score": 0.03781362007168459,
           "equivalent_tool_keys": [
             "GreptimeDB::get_prompt"
           ],
@@ -4340,9 +4340,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0016314995943732674,
+          "score_gap": 0.0023530003158739876,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03689309056956116,
+          "top2_score": 0.03617158984806044,
           "equivalent_tool_keys": [
             "GreptimeDB::list_resources"
           ],
@@ -4359,8 +4359,8 @@
             "Heroku::list_addons",
             "Heroku::list_apps",
             "Heroku::ps_list",
-            "Heroku::create_addon",
-            "Heroku::get_app_info"
+            "Heroku::get_app_info",
+            "Heroku::create_addon"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4387,8 +4387,8 @@
             "Heroku::get_app_logs",
             "Heroku::pg_ps",
             "Heroku::pg_locks",
-            "Heroku::list_apps",
-            "Heroku::pipelines_list"
+            "Heroku::pipelines_list",
+            "Heroku::pg_psql"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4421,8 +4421,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -4441,9 +4441,9 @@
           "expected_tool_key": "Hologres::gather_table_statistics",
           "predicted_topk": [
             "Hologres::gather_table_statistics",
+            "Hologres::get_query_plan",
             "Hologres::get_execution_plan",
             "Hologres::execute_select_sql",
-            "Hologres::get_query_plan",
             "Hologres::execute_dml_sql"
           ],
           "hit_at_1": true,
@@ -4452,9 +4452,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0010537920328540368,
+          "score_gap": 0.001223002862347125,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03747079813108039,
+          "top2_score": 0.0373015873015873,
           "equivalent_tool_keys": [
             "Hologres::gather_table_statistics"
           ],
@@ -4482,9 +4482,9 @@
           "predicted_topk": [
             "Hyperbrowser::claude_computer_use_agent",
             "Hyperbrowser::browser_use_agent",
-            "Hyperbrowser::list_profiles",
             "Hyperbrowser::openai_computer_use_agent",
-            "Hyperbrowser::create_profile"
+            "Hyperbrowser::create_profile",
+            "Hyperbrowser::list_profiles"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4510,9 +4510,9 @@
           "predicted_topk": [
             "Hyperbrowser::browser_use_agent",
             "Hyperbrowser::claude_computer_use_agent",
-            "Hyperbrowser::create_profile",
             "Hyperbrowser::openai_computer_use_agent",
-            "Hyperbrowser::search_with_bing"
+            "Hyperbrowser::search_with_bing",
+            "Hyperbrowser::create_profile"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4520,9 +4520,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0008819102631900111,
+          "score_gap": 0.0011379266482386546,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037642679900744415,
+          "top2_score": 0.03738666351569577,
           "equivalent_tool_keys": [
             "Hyperbrowser::browser_use_agent"
           ],
@@ -4538,9 +4538,9 @@
           "predicted_topk": [
             "Inkeep::search-product-content",
             "Stripe::createProduct",
+            "Stripe::listProducts",
             "Productboard::get_product_detail",
-            "Tinybird::llms-tinybird-docs",
-            "Open Strategy Partners Marketing Tools::OSP Product Value Map Generator"
+            "Tinybird::llms-tinybird-docs"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4548,9 +4548,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0123977212746053,
+          "score_gap": 0.011903650128360244,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.026126868889329125,
+          "top2_score": 0.02662094003557418,
           "equivalent_tool_keys": [
             "Inkeep::search-product-content"
           ],
@@ -4567,8 +4567,8 @@
             "Kagi Search::search",
             "Kagi Search::summarizer",
             "Tavily::tavily-search",
-            "Milvus::milvus_delete_entities",
-            "Exa::github_search"
+            "Exa::github_search",
+            "mcp-local-rag::rag_search"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4596,7 +4596,7 @@
             "Kagi Search::search",
             "Video Editor::generate-edit-from-videos",
             "DBHub::generate_sql",
-            "Box::box_read_tool"
+            "Video Editor::generate-edit-from-single-video"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4636,7 +4636,7 @@
             "Keboola::get_bucket_detail",
             "Keboola::get_job_detail",
             "Keboola::get_component_details",
-            "Keboola::update_table_description"
+            "Keboola::retrieve_bucket_tables"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4644,9 +4644,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0013657812309319436,
+          "score_gap": 0.0016217976159805872,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03715880893300248,
+          "top2_score": 0.03690279254795384,
           "equivalent_tool_keys": [
             "Keboola::get_table_detail"
           ],
@@ -4661,20 +4661,20 @@
           "expected_tool_key": "Keboola::get_job_detail",
           "predicted_topk": [
             "Keboola::get_job_detail",
-            "Keboola::get_table_detail",
             "Unstructured::get_job_info",
-            "Keboola::retrieve_components",
-            "Keboola::get_bucket_detail"
+            "Keboola::retrieve_jobs",
+            "Keboola::get_table_detail",
+            "Keboola::retrieve_components"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0022576429923589214,
+          "score_gap": 0.0009669864772984815,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.036266947171575505,
+          "top2_score": 0.037557603686635944,
           "equivalent_tool_keys": [
             "Keboola::get_job_detail"
           ],
@@ -4697,8 +4697,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
           "score_gap": 0.0011194668242759803,
           "top1_score": 0.038524590163934426,
@@ -4725,8 +4725,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
           "score_gap": 0.001223002862347125,
           "top1_score": 0.038524590163934426,
@@ -4747,8 +4747,8 @@
             "Stripe::createInvoice",
             "Stripe::createInvoiceItem",
             "Stripe::createProduct",
-            "Stripe::createCoupon",
-            "Stripe::createCustomer"
+            "Stripe::createCustomer",
+            "Stripe::createPrice"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4785,20 +4785,20 @@
           "expected_tool_key": "Stripe::listSubscriptions",
           "predicted_topk": [
             "Stripe::listSubscriptions",
-            "Stripe::listProducts",
             "Stripe::listCustomers",
-            "Stripe::listPrices",
-            "Stripe::listCoupons"
+            "Stripe::listProducts",
+            "Stripe::listCoupons",
+            "Stripe::listPrices"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
+          "score_gap": 0.0014710187353629972,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "top2_score": 0.03705357142857143,
           "equivalent_tool_keys": [
             "Stripe::listSubscriptions"
           ],
@@ -4813,10 +4813,10 @@
           "expected_tool_key": "Airtable::list_records",
           "predicted_topk": [
             "Airtable::list_records",
+            "Airtable::list_tables",
             "Airtable::delete_records",
-            "Airtable::update_records",
             "Airtable::list_bases",
-            "Airtable::describe_table"
+            "Airtable::update_records"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4824,9 +4824,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0013657812309319436,
+          "score_gap": 0.0015225420328540407,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03715880893300248,
+          "top2_score": 0.037002048131080385,
           "equivalent_tool_keys": [
             "Airtable::list_records"
           ],
@@ -4843,14 +4843,14 @@
             "Airtable::search_records",
             "Airtable::get_record",
             "Airtable::list_records",
-            "Airtable::list_tables",
+            "Airtable::update_records",
             "Airtable::describe_table"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.0009634953447750921,
           "top1_score": 0.038524590163934426,
@@ -4899,8 +4899,8 @@
             "Chess.com::get_player_stats",
             "Chess.com::get_player_profile",
             "Chess.com::get_player_current_games",
-            "Chess.com::get_player_games_by_month",
-            "Chess.com::get_titled_players"
+            "Chess.com::get_titled_players",
+            "Chess.com::get_player_games_by_month"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4927,7 +4927,7 @@
     {
       "case_id": "multi_hop-medium_250-cross_app-0033",
       "description": "Cross-application chain (5 hops), case 33",
-      "chain_success_at_1": false,
+      "chain_success_at_1": true,
       "chain_success_at_3": true,
       "chain_success_at_5": true,
       "hops": [
@@ -4945,8 +4945,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.0009669864772984815,
           "top1_score": 0.038524590163934426,
@@ -4965,10 +4965,10 @@
           "expected_tool_key": "Datadog::get-metric-metadata",
           "predicted_topk": [
             "Datadog::get-metric-metadata",
+            "Datadog::get-metrics",
             "Datadog::get-monitor",
             "Datadog::get-dashboard",
-            "Datadog::get-metrics",
-            "Grafana::list_prometheus_metric_metadata"
+            "Datadog::get-dashboards"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4976,9 +4976,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.001798208906303167,
+          "score_gap": 0.0015466773088549865,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03672638125763126,
+          "top2_score": 0.03697791285507944,
           "equivalent_tool_keys": [
             "Datadog::get-metric-metadata"
           ],
@@ -4992,25 +4992,25 @@
           "tool_intent": "delete a Discord channel by channel id",
           "expected_tool_key": "Discord::delete_channel",
           "predicted_topk": [
-            "Discord::send-message",
             "Discord::delete_channel",
             "Discord::delete_message",
-            "Discord::read-messages",
-            "Discord::find_channel"
+            "Discord::send-message",
+            "Discord::find_channel",
+            "Discord::send_message"
           ],
-          "hit_at_1": false,
+          "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.00043016523549310043,
-          "top1_score": 0.03800416341399948,
-          "top2_score": 0.03757399817850638,
+          "score_gap": 0.0006072323054905071,
+          "top1_score": 0.038078030436570896,
+          "top2_score": 0.03747079813108039,
           "equivalent_tool_keys": [
             "Discord::delete_channel"
           ],
-          "equivalence_hit_at_1": false,
+          "equivalence_hit_at_1": true,
           "equivalence_hit_at_3": true,
           "equivalence_hit_at_5": true,
           "equivalence_hit_at_recommended_k": true
@@ -5029,12 +5029,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
+          "score_gap": 0.0014553869656989682,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "top2_score": 0.03706920319823546,
           "equivalent_tool_keys": [
             "Discord::send_private_message"
           ],
@@ -5049,10 +5049,10 @@
           "expected_tool_key": "Docker::create_network",
           "predicted_topk": [
             "Docker::create_network",
-            "Docker::remove_network",
             "Docker::create_volume",
+            "Docker::remove_network",
             "Docker::create_container",
-            "Docker::build_image"
+            "Docker::list_networks"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -5060,9 +5060,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0012150023503143537,
+          "score_gap": 0.0011253966155473291,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03730958781362007,
+          "top2_score": 0.0373991935483871,
           "equivalent_tool_keys": [
             "Docker::create_network"
           ],
@@ -5072,7 +5072,7 @@
           "equivalence_hit_at_recommended_k": true
         }
       ],
-      "equivalence_chain_success_at_1": false,
+      "equivalence_chain_success_at_1": true,
       "equivalence_chain_success_at_3": true,
       "equivalence_chain_success_at_5": true
     },
@@ -5089,8 +5089,8 @@
           "expected_tool_key": "Docker::create_volume",
           "predicted_topk": [
             "Docker::create_volume",
-            "Docker::remove_volume",
             "Docker::create_network",
+            "Docker::remove_volume",
             "Docker::create_container",
             "Docker::build_image"
           ],
@@ -5100,9 +5100,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
+          "score_gap": 0.0011253966155473291,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "top2_score": 0.0373991935483871,
           "equivalent_tool_keys": [
             "Docker::create_volume"
           ],
@@ -5128,9 +5128,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011333971275801005,
+          "score_gap": 0.0018548978490808207,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037391193036354325,
+          "top2_score": 0.036669692314853605,
           "equivalent_tool_keys": [
             "Git::git_list_repositories"
           ],
@@ -5153,12 +5153,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0005965758857747194,
-          "top1_score": 0.038260179799048125,
-          "top2_score": 0.037663603913273405,
+          "score_gap": 0.0011253966155473291,
+          "top1_score": 0.038524590163934426,
+          "top2_score": 0.0373991935483871,
           "equivalent_tool_keys": [
             "Git::git_create_branch"
           ],
@@ -5173,8 +5173,8 @@
           "expected_tool_key": "HubSpot::hubspot_get_recent_conversations",
           "predicted_topk": [
             "HubSpot::hubspot_get_recent_conversations",
-            "HubSpot::hubspot_get_active_companies",
             "HubSpot::hubspot_get_active_contacts",
+            "HubSpot::hubspot_get_active_companies",
             "HubSpot::hubspot_get_company_activity",
             "HubSpot::hubspot_search_data"
           ],
@@ -5184,9 +5184,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
+          "score_gap": 0.002434054282681501,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "top2_score": 0.036090535881252925,
           "equivalent_tool_keys": [
             "HubSpot::hubspot_get_recent_conversations"
           ],
@@ -5243,8 +5243,8 @@
             "Shopify::get-order-by-id",
             "Shopify::get-product-by-id",
             "Shopify::get-customer-orders",
-            "Shopify::get-products",
-            "Shopify::update-order"
+            "Shopify::get-orders",
+            "Shopify::get-products"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -5270,9 +5270,9 @@
           "predicted_topk": [
             "Shopify::get-customers",
             "Shopify::get-products",
-            "Shopify::get-orders",
+            "Shopify::get-customer-orders",
             "Shopify::get-product-by-id",
-            "Shopify::get-customer-orders"
+            "Shopify::update-customer"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -5298,8 +5298,8 @@
           "predicted_topk": [
             "Talk To Figma::get_nodes_info",
             "Talk To Figma::get_node_info",
-            "Talk To Figma::read_my_design",
             "Talk To Figma::delete_multiple_nodes",
+            "Talk To Figma::read_my_design",
             "Talk To Figma::set_multiple_text_contents"
           ],
           "hit_at_1": true,
@@ -5333,8 +5333,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
           "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
@@ -5421,10 +5421,10 @@
           "expected_tool_key": "AgentQL::extract-web-data",
           "predicted_topk": [
             "AgentQL::extract-web-data",
-            "GreptimeDB::read_resource",
             "GreptimeDB::get_prompt",
             "GreptimeDB::list_prompts",
-            "GreptimeDB::list_tools"
+            "cognee-mcp::search",
+            "Graphlit::Extract Structured JSON from Text"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -5432,9 +5432,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.005256186745944379,
+          "score_gap": 0.00957504508535709,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03326840341799005,
+          "top2_score": 0.028949545078577336,
           "equivalent_tool_keys": [
             "AgentQL::extract-web-data"
           ],
@@ -5452,7 +5452,7 @@
             "Aiven::list_services",
             "Aiven::get_service_details",
             "AWS::s3_bucket_list",
-            "Raygun::list_applications"
+            "Kubernetes and OpenShift::projects_list"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -5485,12 +5485,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
+          "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "top2_score": 0.03781362007168459,
           "equivalent_tool_keys": [
             "Aiven::list_services"
           ],
@@ -5506,19 +5506,19 @@
           "predicted_topk": [
             "APIMatic MCP::validate-openapi-using-apimatic",
             "Contentful-mcp::bulk_validate",
-            "OpenAPI Schema::search-schema",
             "OpenAPI AnyApi::{prefix}_api_request_schema",
-            "OpenAPI Schema::get-component"
+            "Postman::run-collection",
+            "OpenAPI Schema::list-endpoints"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
+          "score_gap": 0.0006213643574828134,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "top2_score": 0.03790322580645161,
           "equivalent_tool_keys": [
             "APIMatic MCP::validate-openapi-using-apimatic"
           ],
@@ -5581,8 +5581,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -5609,8 +5609,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
           "score_gap": 0.0007977756478053932,
           "top1_score": 0.038524590163934426,
@@ -5630,15 +5630,15 @@
           "predicted_topk": [
             "Astra DB::DeleteCollection",
             "Astra DB::DeleteRecord",
-            "Astra DB::UpdateCollection",
             "Astra DB::ListRecords",
-            "Astra DB::CreateCollection"
+            "Astra DB::CreateCollection",
+            "Astra DB::UpdateCollection"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.0009634953447750921,
           "top1_score": 0.038524590163934426,
@@ -5665,8 +5665,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
           "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
@@ -5705,8 +5705,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
           "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
@@ -5733,8 +5733,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
           "score_gap": 0.0011379266482386546,
           "top1_score": 0.038524590163934426,
@@ -5782,9 +5782,9 @@
           "predicted_topk": [
             "Axiom::queryApl",
             "Axiom::listDatasets",
-            "PostgreSQL::query",
             "AWS Athena::run_query",
-            "AWS Athena::list_saved_queries"
+            "MariaDB::query_database",
+            "PostgreSQL::query"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -5878,15 +5878,15 @@
           "predicted_topk": [
             "Azure::List, create, and get keys",
             "Azure::List, get configuration and get parameters for servers",
+            "Azure::List and query Storage tables",
             "Azure::List and query databases",
-            "Azure::List and query databases",
-            "Azure::List and query Storage tables"
+            "Azure::List and query databases"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
           "score_gap": 0.0012150023503143537,
           "top1_score": 0.038524590163934426,
@@ -5905,20 +5905,20 @@
           "expected_tool_key": "Bitrise::list_installable_artifacts",
           "predicted_topk": [
             "Bitrise::list_installable_artifacts",
-            "Bitrise::create_connected_app",
             "Bitrise::list_connected_apps",
+            "Bitrise::create_connected_app",
             "Bitrise::get_connected_app",
             "Bitrise::create_tester_group"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011253966155473291,
+          "score_gap": 0.0008819102631900111,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373991935483871,
+          "top2_score": 0.037642679900744415,
           "equivalent_tool_keys": [
             "Bitrise::list_installable_artifacts"
           ],
@@ -5941,8 +5941,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.0009669864772984815,
           "top1_score": 0.038524590163934426,
@@ -6003,18 +6003,18 @@
             "Box::box_docgen_template_list_jobs_tool",
             "Box::box_docgen_list_jobs_tool",
             "Box::box_docgen_list_jobs_by_batch_tool",
-            "Box::box_docgen_template_list_tags_tool",
+            "Box::box_docgen_template_list_tool",
             "Box::box_docgen_template_get_by_id_tool"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011253966155473291,
+          "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373991935483871,
+          "top2_score": 0.03764720942140297,
           "equivalent_tool_keys": [
             "Box::box_docgen_template_list_jobs_tool"
           ],
@@ -6029,10 +6029,10 @@
           "expected_tool_key": "Chroma::read_document",
           "predicted_topk": [
             "Chroma::read_document",
+            "Chroma::chroma_get_documents",
             "Chroma::delete_document",
             "Chroma::update_document",
-            "Chroma::create_document",
-            "Chroma::search_similar"
+            "Chroma::chroma_peek_collection"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -6040,9 +6040,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0012150023503143537,
+          "score_gap": 0.002600292239636502,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03730958781362007,
+          "top2_score": 0.035924297924297924,
           "equivalent_tool_keys": [
             "Chroma::read_document"
           ],
@@ -6058,8 +6058,8 @@
           "predicted_topk": [
             "Chroma::chroma_update_documents",
             "Chroma::chroma_modify_collection",
-            "Chroma::update_document",
             "Chroma::chroma_add_documents",
+            "Chroma::update_document",
             "Chroma::chroma_get_documents"
           ],
           "hit_at_1": true,
@@ -6068,9 +6068,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
+          "score_gap": 0.001223002862347125,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "top2_score": 0.0373015873015873,
           "equivalent_tool_keys": [
             "Chroma::chroma_update_documents"
           ],
@@ -6087,8 +6087,8 @@
             "CircleCI::get_latest_pipeline_status",
             "CircleCI::get_job_test_results",
             "CircleCI::get_build_failure_logs",
-            "GitHub::get_pull_request_status",
-            "Bitrise::get_pipeline"
+            "Bitrise::get_pipeline",
+            "GitHub::update_pull_request_branch"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -6121,8 +6121,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.0009669864772984815,
           "top1_score": 0.038524590163934426,
@@ -6153,10 +6153,10 @@
           "expected_tool_key": "Codacy::codacy_list_repository_issues",
           "predicted_topk": [
             "Codacy::codacy_list_repository_issues",
-            "Codacy::codacy_search_repository_srm_items",
             "Codacy::codacy_get_file_issues",
-            "Codacy::codacy_list_files",
-            "Codacy::codacy_list_repository_tool_patterns"
+            "Codacy::codacy_search_repository_srm_items",
+            "Codacy::codacy_list_pull_request_issues",
+            "Codacy::codacy_list_files"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -6164,9 +6164,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011379266482386546,
+          "score_gap": 0.0012150023503143537,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03738666351569577,
+          "top2_score": 0.03730958781362007,
           "equivalent_tool_keys": [
             "Codacy::codacy_list_repository_issues"
           ],
@@ -6210,9 +6210,9 @@
           "predicted_topk": [
             "CodeLogic::codelogic-database-impact",
             "CodeLogic::codelogic-method-impact",
-            "Riza::create_tool",
-            "Riza::execute_code",
-            "Riza::execute_tool"
+            "Neo4j::mcp-neo4j-memory",
+            "Fibery::create_entities_batch",
+            "Fibery::update_entity"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -6240,7 +6240,7 @@
             "CodeLogic::codelogic-database-impact",
             "Riza::execute_tool",
             "Riza::execute_code",
-            "Riza::create_tool"
+            "Codacy::codacy_list_repository_pull_requests"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -6363,8 +6363,8 @@
             "Couchbase::get_document_by_id",
             "Couchbase::delete_document_by_id",
             "Couchbase::upsert_document_by_id",
-            "Couchbase::get_collection_structure",
-            "Couchbase::get_scopes_and_collections"
+            "Couchbase::get_scopes_and_collections",
+            "Couchbase::get_collection_structure"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -6390,15 +6390,15 @@
           "predicted_topk": [
             "Dart::get_config",
             "Dart::create_task",
+            "Dart::list_tasks",
             "Dart::update_task",
-            "Dart::update_doc",
-            "Dart::delete_task"
+            "Dart::create_doc"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -6419,8 +6419,8 @@
             "Dart::create_doc",
             "Dart::list_docs",
             "Dart::create_task",
-            "Dart::update_doc",
-            "Dart::delete_doc"
+            "Dart::delete_doc",
+            "Dart::update_doc"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -6465,8 +6465,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -6487,14 +6487,14 @@
             "DevHub::get_locations",
             "DevHub::get_businesses",
             "DevHub::get_hours_of_operation",
-            "DevHub::site_from_url",
-            "DevHub::get_nearest_location"
+            "DevHub::get_nearest_location",
+            "DevHub::site_from_url"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -6524,9 +6524,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.004645467620568361,
+          "score_gap": 0.005270858489861668,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.033879122543366065,
+          "top2_score": 0.03325373167407276,
           "equivalent_tool_keys": [
             "Dynatrace::send_slack_message"
           ],
@@ -6543,14 +6543,14 @@
             "Dynatrace::list_problems",
             "Dynatrace::get_security_problems",
             "Dynatrace::execute_dql",
-            "Dynatrace::set_up_notification_workflow",
-            "Dynatrace::get_ownership"
+            "Kubernetes and OpenShift::events_list",
+            "Kubernetes and OpenShift::pods_list"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
           "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
@@ -6569,10 +6569,10 @@
           "expected_tool_key": "EduBase::edubase_get_user",
           "predicted_topk": [
             "EduBase::edubase_get_user",
-            "OpenCTI::get_user_by_id",
-            "Okta::get_user",
-            "Okta::get_user_last_location",
-            "mcp_weather::get_weather"
+            "GOAT::Get Nansen information using Nansen API",
+            "GOAT::Get transaction information using Etherscan API",
+            "GOAT::Get coin information using CoinGecko API",
+            "OpenCTI::get_user_by_id"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -6580,9 +6580,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.017006413000595973,
+          "score_gap": 0.00989555790586991,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.021518177163338453,
+          "top2_score": 0.028629032258064516,
           "equivalent_tool_keys": [
             "EduBase::edubase_get_user"
           ],
@@ -6617,12 +6617,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
+          "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "top2_score": 0.03764720942140297,
           "equivalent_tool_keys": [
             "Elasticsearch::delete_alias"
           ],
@@ -6640,13 +6640,13 @@
             "Elasticsearch::delete_document",
             "Elasticsearch::index_document",
             "Elasticsearch::search",
-            "Elasticsearch::get_mappings"
+            "Couchbase::get_document_by_id"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -6673,8 +6673,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -6694,15 +6694,15 @@
           "predicted_topk": [
             "Exa::web_search_exa",
             "Exa::github_search",
-            "Exa::crawling",
             "Exa::research_paper_search",
+            "Exa::crawling",
             "Exa::company_research"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
           "score_gap": 0.0013657812309319436,
           "top1_score": 0.038524590163934426,
@@ -6721,10 +6721,10 @@
           "expected_tool_key": "Fibery::list_databases",
           "predicted_topk": [
             "Fibery::list_databases",
-            "Fibery::describe_database",
-            "Fibery::create_entity",
             "Fibery::query_database",
-            "Fibery::update_entity"
+            "Fibery::describe_database",
+            "Fibery::update_entity",
+            "Fibery::create_entity"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -6732,9 +6732,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0014675276028396078,
+          "score_gap": 0.0011379266482386546,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03705706256109482,
+          "top2_score": 0.03738666351569577,
           "equivalent_tool_keys": [
             "Fibery::list_databases"
           ],
@@ -6763,8 +6763,8 @@
             "Fibery::describe_database",
             "Fibery::list_databases",
             "Fibery::create_entity",
-            "Fibery::query_database",
-            "Fibery::create_entities_batch"
+            "Fibery::create_entities_batch",
+            "Fibery::update_entity"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -6792,7 +6792,7 @@
             "FireCrawl::firecrawl_crawl",
             "Firecrawl::firecrawl_scrape",
             "FireCrawl::firecrawl_scrape",
-            "Firecrawl::firecrawl_batch_scrape"
+            "Firecrawl::firecrawl_search"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -6819,9 +6819,9 @@
           "predicted_topk": [
             "Firecrawl::firecrawl_search",
             "FireCrawl::firecrawl_search",
-            "Firecrawl::firecrawl_extract",
+            "Firecrawl::firecrawl_deep_research",
             "Firecrawl::firecrawl_scrape",
-            "Firecrawl::firecrawl_deep_research"
+            "Firecrawl::firecrawl_extract"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -6848,18 +6848,18 @@
             "Gitee::comment_issue",
             "Gitee::list_issue_comments",
             "Gitee::comment_pull",
-            "Gitee::create_issue",
-            "Gitee::update_issue"
+            "GitHub::add_issue_comment",
+            "Gitee::create_issue"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
+          "score_gap": 0.0006213643574828134,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "top2_score": 0.03790322580645161,
           "equivalent_tool_keys": [
             "Gitee::comment_issue"
           ],
@@ -6876,7 +6876,7 @@
             "Gitee::create_pull",
             "Gitee::update_pull",
             "Gitee::merge_pull",
-            "Gitee::comment_pull",
+            "Gitee::create_issue",
             "Gitee::create_release"
           ],
           "hit_at_1": true,
@@ -6885,9 +6885,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0016294288736118448,
+          "score_gap": 0.002329055739283485,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03689516129032258,
+          "top2_score": 0.03619553442465094,
           "equivalent_tool_keys": [
             "Gitee::create_pull"
           ],
@@ -6917,13 +6917,13 @@
             "Grafana::list_oncall_teams",
             "Grafana::list_oncall_users",
             "Grafana::list_incidents",
-            "Grafana::list_datasources"
+            "Grafana::get_current_oncall_users"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
           "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
@@ -6942,10 +6942,10 @@
           "expected_tool_key": "Grafana::list_prometheus_metric_names",
           "predicted_topk": [
             "Grafana::list_prometheus_metric_names",
-            "Grafana::list_prometheus_metric_metadata",
             "Grafana::list_loki_label_names",
+            "Grafana::list_prometheus_metric_metadata",
             "Grafana::list_oncall_teams",
-            "Grafana::list_datasources"
+            "Grafana::list_prometheus_label_names"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -6953,9 +6953,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
+          "score_gap": 0.0011253966155473291,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "top2_score": 0.0373991935483871,
           "equivalent_tool_keys": [
             "Grafana::list_prometheus_metric_names"
           ],
@@ -6970,20 +6970,20 @@
           "expected_tool_key": "GreptimeDB::get_prompt",
           "predicted_topk": [
             "GreptimeDB::get_prompt",
-            "GreptimeDB::list_tools",
             "GreptimeDB::list_prompts",
+            "GreptimeDB::list_tools",
             "GreptimeDB::read_resource",
             "GreptimeDB::call_tool"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "low",
+          "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011333971275801005,
+          "score_gap": 0.000710970092249838,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037391193036354325,
+          "top2_score": 0.03781362007168459,
           "equivalent_tool_keys": [
             "GreptimeDB::get_prompt"
           ],
@@ -7009,9 +7009,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0016314995943732674,
+          "score_gap": 0.0023530003158739876,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03689309056956116,
+          "top2_score": 0.03617158984806044,
           "equivalent_tool_keys": [
             "GreptimeDB::list_resources"
           ],
@@ -7028,8 +7028,8 @@
             "Heroku::list_addons",
             "Heroku::list_apps",
             "Heroku::ps_list",
-            "Heroku::create_addon",
-            "Heroku::get_app_info"
+            "Heroku::get_app_info",
+            "Heroku::create_addon"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -7068,8 +7068,8 @@
             "Heroku::get_app_logs",
             "Heroku::pg_ps",
             "Heroku::pg_locks",
-            "Heroku::list_apps",
-            "Heroku::pipelines_list"
+            "Heroku::pipelines_list",
+            "Heroku::pg_psql"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -7102,8 +7102,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.000877380742531457,
           "top1_score": 0.038524590163934426,
@@ -7122,9 +7122,9 @@
           "expected_tool_key": "Hologres::gather_table_statistics",
           "predicted_topk": [
             "Hologres::gather_table_statistics",
+            "Hologres::get_query_plan",
             "Hologres::get_execution_plan",
             "Hologres::execute_select_sql",
-            "Hologres::get_query_plan",
             "Hologres::execute_dml_sql"
           ],
           "hit_at_1": true,
@@ -7133,9 +7133,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0010537920328540368,
+          "score_gap": 0.001223002862347125,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03747079813108039,
+          "top2_score": 0.0373015873015873,
           "equivalent_tool_keys": [
             "Hologres::gather_table_statistics"
           ],
@@ -7151,9 +7151,9 @@
           "predicted_topk": [
             "Hyperbrowser::claude_computer_use_agent",
             "Hyperbrowser::browser_use_agent",
-            "Hyperbrowser::list_profiles",
             "Hyperbrowser::openai_computer_use_agent",
-            "Hyperbrowser::create_profile"
+            "Hyperbrowser::create_profile",
+            "Hyperbrowser::list_profiles"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -7179,9 +7179,9 @@
           "predicted_topk": [
             "Hyperbrowser::browser_use_agent",
             "Hyperbrowser::claude_computer_use_agent",
-            "Hyperbrowser::create_profile",
             "Hyperbrowser::openai_computer_use_agent",
-            "Hyperbrowser::search_with_bing"
+            "Hyperbrowser::search_with_bing",
+            "Hyperbrowser::create_profile"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -7189,9 +7189,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0008819102631900111,
+          "score_gap": 0.0011379266482386546,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.037642679900744415,
+          "top2_score": 0.03738666351569577,
           "equivalent_tool_keys": [
             "Hyperbrowser::browser_use_agent"
           ],
@@ -7219,9 +7219,9 @@
           "predicted_topk": [
             "Inkeep::search-product-content",
             "Stripe::createProduct",
+            "Stripe::listProducts",
             "Productboard::get_product_detail",
-            "Tinybird::llms-tinybird-docs",
-            "Open Strategy Partners Marketing Tools::OSP Product Value Map Generator"
+            "Tinybird::llms-tinybird-docs"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -7229,9 +7229,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0123977212746053,
+          "score_gap": 0.011903650128360244,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.026126868889329125,
+          "top2_score": 0.02662094003557418,
           "equivalent_tool_keys": [
             "Inkeep::search-product-content"
           ],
@@ -7248,8 +7248,8 @@
             "Kagi Search::search",
             "Kagi Search::summarizer",
             "Tavily::tavily-search",
-            "Milvus::milvus_delete_entities",
-            "Exa::github_search"
+            "Exa::github_search",
+            "mcp-local-rag::rag_search"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -7277,7 +7277,7 @@
             "Kagi Search::search",
             "Video Editor::generate-edit-from-videos",
             "DBHub::generate_sql",
-            "Box::box_read_tool"
+            "Video Editor::generate-edit-from-single-video"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -7305,7 +7305,7 @@
             "Keboola::get_bucket_detail",
             "Keboola::get_job_detail",
             "Keboola::get_component_details",
-            "Keboola::update_table_description"
+            "Keboola::retrieve_bucket_tables"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -7313,9 +7313,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0013657812309319436,
+          "score_gap": 0.0016217976159805872,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03715880893300248,
+          "top2_score": 0.03690279254795384,
           "equivalent_tool_keys": [
             "Keboola::get_table_detail"
           ],
@@ -7330,20 +7330,20 @@
           "expected_tool_key": "Keboola::get_job_detail",
           "predicted_topk": [
             "Keboola::get_job_detail",
-            "Keboola::get_table_detail",
             "Unstructured::get_job_info",
-            "Keboola::retrieve_components",
-            "Keboola::get_bucket_detail"
+            "Keboola::retrieve_jobs",
+            "Keboola::get_table_detail",
+            "Keboola::retrieve_components"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0022576429923589214,
+          "score_gap": 0.0009669864772984815,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.036266947171575505,
+          "top2_score": 0.037557603686635944,
           "equivalent_tool_keys": [
             "Keboola::get_job_detail"
           ],
@@ -7378,8 +7378,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
           "score_gap": 0.0011194668242759803,
           "top1_score": 0.038524590163934426,
@@ -7406,8 +7406,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
           "score_gap": 0.001223002862347125,
           "top1_score": 0.038524590163934426,
@@ -7428,8 +7428,8 @@
             "Stripe::createInvoice",
             "Stripe::createInvoiceItem",
             "Stripe::createProduct",
-            "Stripe::createCoupon",
-            "Stripe::createCustomer"
+            "Stripe::createCustomer",
+            "Stripe::createPrice"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -7454,20 +7454,20 @@
           "expected_tool_key": "Stripe::listSubscriptions",
           "predicted_topk": [
             "Stripe::listSubscriptions",
-            "Stripe::listProducts",
             "Stripe::listCustomers",
-            "Stripe::listPrices",
-            "Stripe::listCoupons"
+            "Stripe::listProducts",
+            "Stripe::listCoupons",
+            "Stripe::listPrices"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
+          "score_gap": 0.0014710187353629972,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "top2_score": 0.03705357142857143,
           "equivalent_tool_keys": [
             "Stripe::listSubscriptions"
           ],
@@ -7482,10 +7482,10 @@
           "expected_tool_key": "Airtable::list_records",
           "predicted_topk": [
             "Airtable::list_records",
+            "Airtable::list_tables",
             "Airtable::delete_records",
-            "Airtable::update_records",
             "Airtable::list_bases",
-            "Airtable::describe_table"
+            "Airtable::update_records"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -7493,9 +7493,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0013657812309319436,
+          "score_gap": 0.0015225420328540407,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03715880893300248,
+          "top2_score": 0.037002048131080385,
           "equivalent_tool_keys": [
             "Airtable::list_records"
           ],
@@ -7524,14 +7524,14 @@
             "Airtable::search_records",
             "Airtable::get_record",
             "Airtable::list_records",
-            "Airtable::list_tables",
+            "Airtable::update_records",
             "Airtable::describe_table"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.0009634953447750921,
           "top1_score": 0.038524590163934426,
@@ -7580,8 +7580,8 @@
             "Chess.com::get_player_stats",
             "Chess.com::get_player_profile",
             "Chess.com::get_player_current_games",
-            "Chess.com::get_player_games_by_month",
-            "Chess.com::get_titled_players"
+            "Chess.com::get_titled_players",
+            "Chess.com::get_player_games_by_month"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -7614,8 +7614,8 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "high",
-          "recommended_handoff_k": 1,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
           "score_gap": 0.0009669864772984815,
           "top1_score": 0.038524590163934426,
@@ -7634,10 +7634,10 @@
           "expected_tool_key": "Datadog::get-metric-metadata",
           "predicted_topk": [
             "Datadog::get-metric-metadata",
+            "Datadog::get-metrics",
             "Datadog::get-monitor",
             "Datadog::get-dashboard",
-            "Datadog::get-metrics",
-            "Grafana::list_prometheus_metric_metadata"
+            "Datadog::get-dashboards"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -7645,9 +7645,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.001798208906303167,
+          "score_gap": 0.0015466773088549865,
           "top1_score": 0.038524590163934426,
-          "top2_score": 0.03672638125763126,
+          "top2_score": 0.03697791285507944,
           "equivalent_tool_keys": [
             "Datadog::get-metric-metadata"
           ],
@@ -7663,5 +7663,5 @@
     }
   ],
   "suite": "multi_hop.medium_250.cross_app",
-  "equivalence_map": "C:\\Users\\swaga\\Downloads\\Research Proj\\MCP-Router\\benchmarks\\functional_correctness\\equivalence_map.json"
+  "equivalence_map": "C:\\Users\\swaga\\Documents\\VOTR\\benchmarks\\functional_correctness\\equivalence_map.json"
 }

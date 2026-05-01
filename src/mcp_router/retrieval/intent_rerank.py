@@ -5,16 +5,7 @@ from typing import Iterable
 
 
 _BULK_WORDS = ("bulk", "batch", "multiple", "all", "many", "mass")
-_SINGULAR_HINTS = (
-    " a ",
-    " an ",
-    " one ",
-    " single ",
-    " specific ",
-    " by id",
-    " task id",
-    " file id",
-)
+_SINGULAR_HINTS = (" a ", " an ", " one ", " single ", " specific ", " by id", " exact ", "task id", "file id", "user id")
 _PLURAL_HINTS = (" all ", " multiple ", " many ", " list ", " batch ")
 
 
