@@ -203,7 +203,7 @@ button.run-btn:hover{background:rgba(79,143,255,0.16)}
   <p class="eyebrow">Vector Orchestrated Tool Retrieval for Scalable Multi-Agent Systems</p>
   <p>A large multi-agent system can know about thousands of MCP tools, but a model should not have to read every schema before deciding what to do. VOTR turns that problem into retrieval: find the right tools first, then hand only a compact candidate set to the agent.</p>
   <div class="link-row">
-    <a class="pill" href="https://github.com/iamAmiK/VOTR/blob/main/docs/VOTR%20Whitepaper.pdf">White Paper</a>
+    <a class="pill" href="https://www.researchgate.net/publication/404707835_VOTR_Vector_Orchestrated_Tool_Retrieval_for_Scalable_Multi-Agent_Systems">Whitepaper</a>
     <a class="pill" href="https://github.com/iamAmiK/VOTR">VOTR</a>
     <a class="pill" href="https://huggingface.co/datasets/a13awd/VOTR">Dataset</a>
     <a class="pill" href="https://github.com/iamAmiK/VOTR-Orchestrator">VOTR Orchestrator</a>
@@ -309,15 +309,15 @@ button.run-btn:hover{background:rgba(79,143,255,0.16)}
             <div>
               <div class="pipe-node-title">③ Hybrid Retrieval (parallel)</div>
               <div class="pipe-node-desc">Dense (hierarchical) + BM25 + SPLADE-lite run in parallel</div>
-              <div class="pipe-node-detail"><strong>Dense:</strong> Server scoring selects top-N=8 servers; tool scoring within those gives L_dense. Hierarchical score τⱼ = σ_π(j) · tⱼ · max(σ_π(j), tⱼ) — penalises tools on wrong servers.<br/><strong>BM25:</strong> Each tool = doc concatenating server name + summary + description + tool name + description. Exact lexical matches (e.g. "search_repositories") rank with high precision. BM25-only achieves 99.0% top-1 — higher than dense-only (93.8%) — but degrades to 80.0% on paraphrastic multi-hop queries.<br/><strong>SPLADE-lite:</strong> TF-IDF with bigram features + sublinear TF scaling. Captures compound terms ("send message", "list branches") without a full SPLADE model. Weight w=0.35 vs 1.0 for dense and BM25.</div>
+              <div class="pipe-node-detail"><strong>Dense:</strong> Server scoring selects top-N=8 servers; tool scoring within those gives L_dense. Hierarchical score τⱼ = σ_π(j) · tⱼ · max(σ_π(j), tⱼ) — penalises tools on wrong servers.<br/><strong>BM25:</strong> Each tool = doc concatenating server name + summary + description + tool name + description. Exact lexical matches (e.g. "search_repositories") rank with high precision. BM25-only achieves 99.0% top-1 — higher than dense-only (93.8%) — but degrades on paraphrastic multi-hop queries where dense semantic retrieval is critical.<br/><strong>SPLADE-lite:</strong> TF-IDF with bigram features + sublinear TF scaling. Captures compound terms ("send message", "list branches") without a full SPLADE model. Fusion weight <strong>w=0.50</strong> vs 1.0 for dense and BM25.</div>
             </div>
           </div>
           <div class="pipe-node" data-step="3">
             <div class="pipe-dot-col"><div class="pipe-dot2"></div><div class="pipe-line"></div></div>
             <div>
               <div class="pipe-node-title">④ Weighted RRF Fusion</div>
-              <div class="pipe-node-desc">RRF(j) = Σ wₗ/(k+rₗ(j)), k=60, weights [1.0, 1.0, 0.35]</div>
-              <div class="pipe-node-detail">The three ranked lists vote into a single merged ranking. k=60 (standard RRF smoothing constant) prevents top-1 over-dominance. Tools absent from a list get rₗ(j)=∞ (contribute 0). Weights: dense=1.0, BM25=1.0, SPLADE-lite=0.35. RRF is robust to score-scale mismatches between sparse and dense retrievers — no normalisation needed.</div>
+              <div class="pipe-node-desc">RRF(j) = Σ wₗ/(k+rₗ(j)), k=60, weights [1.0, 1.0, 0.50]</div>
+              <div class="pipe-node-detail">The three ranked lists vote into a single merged ranking. k=60 (standard RRF smoothing constant) prevents top-1 over-dominance. Tools absent from a list get rₗ(j)=∞ (contribute 0). Weights: dense=1.0, BM25=1.0, SPLADE-lite=0.50. RRF is robust to score-scale mismatches between sparse and dense retrievers — no normalisation needed.</div>
             </div>
           </div>
           <div class="pipe-node" data-step="4">
@@ -400,13 +400,13 @@ button.run-btn:hover{background:rgba(79,143,255,0.16)}
 <!-- 03 RETRIEVAL -->
 <section id="retrieval">
   <div class="sec-header"><span class="sec-num">03</span><h2 class="sec-title">Hybrid Retrieval: Three Lenses</h2></div>
-  <p class="sec-desc">Dense embedding, BM25, and SPLADE-lite run in parallel and capture different signals. The key insight: BM25-only achieves 99.0% top-1 on single-tool queries (vs 93.8% dense-only) because MCP tool names are strongly lexical, but BM25 drops to 80.0% on paraphrastic multi-hop chains where dense semantic matching is essential.</p>
+  <p class="sec-desc">Dense embedding, BM25, and SPLADE-lite run in parallel and capture different signals. The key insight: BM25-only achieves 99.0% top-1 on single-tool queries (vs 93.8% dense-only) because MCP tool names are strongly lexical, while semantic and paraphrastic multi-hop settings depend much more heavily on dense (and hybrid) retrieval.</p>
 
   <div class="panel" style="margin-bottom:1rem">
     <div class="panel-head"><span class="panel-title">RETRIEVAL PIPELINE SUMMARY</span></div>
     <div class="panel-body">
       <table class="data-table">
-        <tr><th>Stage</th><th>What it does</th><th>Key settings from paper/code</th><th>Why it matters</th></tr>
+        <tr><th>Stage</th><th>What it does</th><th>Key settings from whitepaper/code</th><th>Why it matters</th></tr>
         <tr>
           <td><strong>Hierarchical dense</strong></td>
           <td>Ranks servers first using embeddings from server summary + description, then ranks tools inside the selected servers.</td>
@@ -422,7 +422,7 @@ button.run-btn:hover{background:rgba(79,143,255,0.16)}
         <tr>
           <td><strong>SPLADE-lite</strong></td>
           <td>TF-IDF style sparse expansion with unigram + bigram features (SPLADE-lite approximation).</td>
-          <td>SPLADE-lite fusion weight w_splade = 0.35 (dense = 1.0, BM25 = 1.0).</td>
+          <td>SPLADE-lite fusion weight w_splade = 0.50 (dense = 1.0, BM25 = 1.0).</td>
           <td>Recovers compound/rare term matches without the full SPLADE model cost.</td>
         </tr>
         <tr>
@@ -492,7 +492,7 @@ button.run-btn:hover{background:rgba(79,143,255,0.16)}
           <div style="font-family:var(--mono);font-size:0.65rem;color:var(--muted);margin-bottom:0.5rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem">
             <div style="text-align:center">DENSE (w=1.0)</div>
             <div style="text-align:center">BM25 (w=1.0)</div>
-            <div style="text-align:center">SPLADE-lite (w=0.35)</div>
+            <div style="text-align:center">SPLADE-lite (w=0.50)</div>
           </div>
           <div id="rrf-input" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem"></div>
         </div>
@@ -509,7 +509,7 @@ button.run-btn:hover{background:rgba(79,143,255,0.16)}
         <div class="panel-head"><span class="panel-title">RRF intuition (why agreement matters)</span></div>
         <div class="panel-body">
           <p style="margin:0;font-size:0.83rem;color:var(--muted);line-height:1.7">
-            VOTR combines the three ranked lists (Dense, BM25, SPLADE-lite) with <strong>weighted Reciprocal Rank Fusion (RRF)</strong> (paper Eq. 5 / Algorithm 1).
+            VOTR combines the three ranked lists (Dense, BM25, SPLADE-lite) with <strong>weighted Reciprocal Rank Fusion (RRF)</strong> (Whitepaper Eq. 5 / Algorithm 1).
             For each tool <em>j</em>, the fused score is the sum of per-list contributions:
             <strong>w · 1 / (k + rank)</strong>, where <strong>k = 60</strong> smooths rank differences.
             If a tool is <strong>absent</strong> from a list, its rank is treated as infinity, so that list contributes <strong>0</strong>.
@@ -517,7 +517,7 @@ button.run-btn:hover{background:rgba(79,143,255,0.16)}
           <p style="margin:0.6rem 0 0;font-size:0.83rem;color:var(--muted);line-height:1.7">
             With <strong>k = 60</strong>, ranks close to the top (roughly 1–5) contribute <strong>almost the same amount</strong>.
             That means RRF rewards <strong>agreement</strong> across retrievers: a tool that appears near the top in multiple lists can beat a tool that only gets one perfect #1.
-            In this demo the list weights match the paper: <strong>dense=1.0</strong>, <strong>BM25=1.0</strong>, <strong>SPLADE-lite=0.35</strong>.
+            In this demo the list weights match the deployment default in <code>config.yaml</code>: <strong>dense=1.0</strong>, <strong>BM25=1.0</strong>, <strong>SPLADE-lite=0.50</strong>.
           </p>
           <p style="margin:0.6rem 0 0;font-size:0.83rem;color:var(--muted);line-height:1.7">
             The SPLADE-lite weight is set lower because SPLADE-lite is a <strong>lightweight approximation</strong> of full SPLADE (TF-IDF with unigram + bigram features and sublinear term-frequency scaling),
@@ -528,9 +528,9 @@ button.run-btn:hover{background:rgba(79,143,255,0.16)}
       <div class="panel">
         <div class="panel-head"><span class="panel-title">WEIGHT SENSITIVITY</span></div>
         <div class="panel-body">
-          <label class="ctrl">SPLADE-lite weight (currently 0.35)</label>
-          <input type="range" id="splade-w" min="0" max="100" value="35"/>
-          <div style="display:flex;justify-content:space-between;font-family:var(--mono);font-size:0.7rem;color:var(--muted)"><span>0 (ignored)</span><span id="splade-w-val">0.35</span><span>1.0 (equal)</span></div>
+          <label class="ctrl">SPLADE-lite weight (currently 0.50)</label>
+          <input type="range" id="splade-w" min="0" max="100" value="50"/>
+          <div style="display:flex;justify-content:space-between;font-family:var(--mono);font-size:0.7rem;color:var(--muted)"><span>0 (ignored)</span><span id="splade-w-val">0.50</span><span>1.0 (equal)</span></div>
           <div id="weight-effect" style="margin-top:0.75rem;font-size:0.8rem;color:var(--muted)"></div>
         </div>
       </div>
@@ -551,7 +551,7 @@ button.run-btn:hover{background:rgba(79,143,255,0.16)}
           <div style="display:grid;grid-template-columns:1fr 3fr 2.5rem;gap:0.5rem;align-items:center">
             <span style="font-family:var(--mono);font-size:0.72rem;color:var(--muted)">tool_name</span>
             <div class="score-bar-wrap"><div class="score-bar" style="width:100%;background:var(--blue)"></div></div>
-            <span style="font-family:var(--mono);font-size:0.7rem;color:var(--blue2)">0.35</span>
+            <span style="font-family:var(--mono);font-size:0.7rem;color:var(--blue2)">0.50</span>
           </div>
           <div style="display:grid;grid-template-columns:1fr 3fr 2.5rem;gap:0.5rem;align-items:center">
             <span style="font-family:var(--mono);font-size:0.72rem;color:var(--muted)">server_name</span>
@@ -603,7 +603,7 @@ button.run-btn:hover{background:rgba(79,143,255,0.16)}
 <!-- 06 CONFIDENCE -->
 <section id="confidence">
   <div class="sec-header"><span class="sec-num">06</span><h2 class="sec-title">Confidence-Gated Handoff Policy</h2></div>
-  <p class="sec-desc">VOTR uses a conformal prediction-inspired non-conformity score to adaptively choose how many tools to return. Thresholds τ₁ and τ₃ are calibrated on held-out data. On the large suite, 49% of queries get k=1 (98.4% accuracy), 6.6% get k=3 (100%), and 44.4% get k=5 (93.7% top-1, 97.7% handoff@k).</p>
+  <p class="sec-desc">VOTR uses a conformal prediction-inspired non-conformity score to adaptively choose how many tools to return. Thresholds τ₁ and τ₃ are calibrated on held-out data. On the large suite (<em>n</em>=500), about 35.6% of steps are high confidence (<em>k</em>=1, 97.2% top-1), 18.6% medium (<em>k</em>=3, 97.8% top-1), 45.8% low (96.1% strict top-1, 98.7% Handoff@<em>k</em>).</p>
 
   <div class="grid-col-right">
     <div class="panel">
@@ -668,30 +668,30 @@ button.run-btn:hover{background:rgba(79,143,255,0.16)}
             <tr><th>Tier</th><th>Count</th><th>%</th><th>Top-1</th><th>Handoff@k</th><th>Avg k</th></tr>
             <tr>
               <td><span class="tier-high">High</span></td>
-              <td class="num-cell">245</td><td class="num-cell">49%</td>
-              <td class="green-cell">98.4%</td><td class="green-cell">98.4%</td>
+              <td class="num-cell">178</td><td class="num-cell">35.6%</td>
+              <td class="green-cell">97.2%</td><td class="green-cell">97.2%</td>
               <td class="num-cell">1.0</td>
             </tr>
             <tr>
               <td><span class="tier-med">Medium</span></td>
-              <td class="num-cell">33</td><td class="num-cell">6.6%</td>
-              <td class="green-cell">100%</td><td class="green-cell">100%</td>
+              <td class="num-cell">93</td><td class="num-cell">18.6%</td>
+              <td class="green-cell">97.8%</td><td class="green-cell">100%</td>
               <td class="num-cell">3.0</td>
             </tr>
             <tr>
               <td><span class="tier-low">Low</span></td>
-              <td class="num-cell">222</td><td class="num-cell">44.4%</td>
-              <td class="num-cell">93.7%</td><td class="green-cell">97.7%</td>
+              <td class="num-cell">229</td><td class="num-cell">45.8%</td>
+              <td class="num-cell">96.1%</td><td class="green-cell">98.7%</td>
               <td class="num-cell">5.0</td>
             </tr>
             <tr>
               <td><strong>Overall</strong></td>
               <td class="num-cell">500</td><td class="num-cell">100%</td>
-              <td class="blue-cell" style="color:var(--blue2)">96.8%</td><td class="green-cell">98.2%</td>
-              <td class="green-cell">2.906</td>
+              <td class="blue-cell" style="color:var(--blue2)">96.8%</td><td class="green-cell">98.4%</td>
+              <td class="green-cell">3.2</td>
             </tr>
           </table>
-          <div class="notice" style="margin-top:0.75rem"><strong>78% of all misses occur in the low-confidence tier</strong> (14/18). The policy correctly identifies hard queries — Handoff@k recovers 97.7% vs 93.7% strict Top-1 in this tier.</div>
+          <div class="notice" style="margin-top:0.75rem"><strong>56% of strict top-1 misses occur in the low-confidence tier</strong> (9/16). The policy widens the candidate set there — Handoff@<em>k</em> reaches 98.7% vs 96.1% strict Top-1 in that tier.</div>
         </div>
       </div>
       <div class="panel">
@@ -699,12 +699,12 @@ button.run-btn:hover{background:rgba(79,143,255,0.16)}
         <div class="panel-body">
           <table class="data-table">
             <tr><th>Tier</th><th>Misses</th><th>Steps</th><th>Error rate</th><th>% of misses</th></tr>
-            <tr><td><span class="tier-high">High</span></td><td class="num-cell">4</td><td class="num-cell">245</td><td class="num-cell">1.6%</td><td class="num-cell">22%</td></tr>
-            <tr><td><span class="tier-med">Medium</span></td><td class="green-cell">0</td><td class="num-cell">33</td><td class="green-cell">0.0%</td><td class="green-cell">0%</td></tr>
-            <tr><td><span class="tier-low">Low</span></td><td class="red-cell">14</td><td class="num-cell">222</td><td class="red-cell">6.3%</td><td class="red-cell">78%</td></tr>
-            <tr><td><strong>Total</strong></td><td class="num-cell">18</td><td class="num-cell">500</td><td class="num-cell">3.6%</td><td class="num-cell">100%</td></tr>
+            <tr><td><span class="tier-high">High</span></td><td class="num-cell">5</td><td class="num-cell">178</td><td class="num-cell">2.8%</td><td class="num-cell">31%</td></tr>
+            <tr><td><span class="tier-med">Medium</span></td><td class="num-cell">2</td><td class="num-cell">93</td><td class="num-cell">2.2%</td><td class="num-cell">12.5%</td></tr>
+            <tr><td><span class="tier-low">Low</span></td><td class="red-cell">9</td><td class="num-cell">229</td><td class="red-cell">3.9%</td><td class="red-cell">56%</td></tr>
+            <tr><td><strong>Total</strong></td><td class="num-cell">16</td><td class="num-cell">500</td><td class="num-cell">3.2%</td><td class="num-cell">100%</td></tr>
           </table>
-          <div class="notice orange" style="margin-top:0.75rem"><strong>4 of 18 misses</strong> are alias/equivalence issues (recovered by equivalence-aware labels → 97.2% Top-1, 91% compound). Not genuine retrieval failures.</div>
+          <div class="notice orange" style="margin-top:0.75rem"><strong>3 of 16 misses</strong> are alias/equivalence issues under equivalence-aware labels (overall equiv Top-1 = 97.4%). Many remaining misses reflect genuine ambiguity at strict top-1.</div>
         </div>
       </div>
     </div>
@@ -887,7 +887,7 @@ button.run-btn:hover{background:rgba(79,143,255,0.16)}
         <table class="data-table">
           <tr><th>Protocol</th><th>n</th><th>R@1</th><th>nDCG@5</th></tr>
           <tr><td style="font-size:0.75rem">Native dual-field (policy payloads)</td><td>268</td><td class="green-cell">87.7%</td><td class="green-cell">90.9%</td></tr>
-          <tr><td style="font-size:0.75rem">Paper-faithful tool-to-agent</td><td>82</td><td class="num-cell">70.7%</td><td class="num-cell">79.9%</td></tr>
+          <tr><td style="font-size:0.75rem">MCP-Zero–faithful tool-to-agent</td><td>82</td><td class="num-cell">70.7%</td><td class="num-cell">79.9%</td></tr>
           <tr><td style="font-size:0.75rem">Full95 reconstructed stepwise</td><td>268</td><td class="num-cell">52.4%</td><td class="num-cell">59.9%</td></tr>
           <tr><td style="font-size:0.75rem">Router format exact subset</td><td>82</td><td class="red-cell">46.3%</td><td class="num-cell">62.2%</td></tr>
           <tr><td style="font-size:0.75rem">Tool-to-Agent Retrieval [7]</td><td>—</td><td class="num-cell">61.0%</td><td class="num-cell">—</td></tr>
@@ -903,7 +903,7 @@ button.run-btn:hover{background:rgba(79,143,255,0.16)}
 <!-- 10 ABLATION -->
 <section id="ablation">
   <div class="sec-header"><span class="sec-num">10</span><h2 class="sec-title">Ablation Study</h2></div>
-  <p class="sec-desc">VOTR is not optimised for a single metric. BM25-only wins on single-tool lexical queries (99.0%) but collapses on multi-hop chains (80.0%). The full-stack configuration is a multi-objective operating point balancing strict Top-1, chain success, abstention safety, and token budget.</p>
+  <p class="sec-desc">VOTR is not optimised for a single metric. BM25-only peaks on lexical single-hop queries (~99%), while dense retrieval is indispensable for ambiguous and paraphrastic hops. Headline benchmarks use the deployed <strong>full_stack</strong> profile (~96.8% strict top-1 on the large corpus) as the multi-objective operating point balancing strict Top-1, compound chain success, abstention safety, and token budget.</p>
 
   <div class="panel">
     <div class="panel-head"><span class="panel-title">ABLATION COMPARISON — interactive</span></div>
@@ -941,7 +941,7 @@ const QUERIES = {
     lanes:{Dense:[["github.list_pull_requests",0.88],["github.search_issues",0.82],["gitlab.list_merge_requests",0.71],["github.get_pull_request",0.68]],
            BM25:[["github.list_pull_requests",0.97],["github.get_pull_request",0.85],["github.search_issues",0.74],["github.list_branches",0.42]],
            "SPLADE-lite":[["github.list_pull_requests",0.90],["gitlab.list_merge_requests",0.62],["github.list_branches",0.54],["github.search_issues",0.51]]}},
-  notify:{title:"Query: manage user notification preferences",text:"server_intent: notification management / tool_intent: update notification settings for a user",insight:"Dense wins here — 'manage user notifications' shares NO lexical tokens with 'update_notification_settings'. BM25 mostly fails. This is why BM25-only drops to 80% on multi-hop queries.",signal:"semantic",
+  notify:{title:"Query: manage user notification preferences",text:"server_intent: notification management / tool_intent: update notification settings for a user",insight:"Dense wins here — 'manage user notifications' shares almost no lexical tokens with 'update_notification_settings'. BM25 mostly fails; SPLADE-lite bigrams and hybrid fusion recover some signal. Semantic hops are exactly where dense + hybrid stacking matters.",signal:"semantic",
     lanes:{Dense:[["slack.update_notification_prefs",0.91],["discord.set_notification_settings",0.84],["telegram.set_user_preferences",0.77],["github.update_subscription",0.61]],
            BM25:[["slack.list_channels",0.45],["discord.get_guild_info",0.38],["github.list_notifications",0.34],["slack.update_notification_prefs",0.21]],
            "SPLADE-lite":[["slack.update_notification_prefs",0.82],["discord.set_notification_settings",0.69],["telegram.set_user_preferences",0.54],["slack.list_channels",0.41]]}},
@@ -956,7 +956,7 @@ const QUERIES = {
 };
 
 const RRF_TOOLS = ["github.list_pull_requests","github.search_issues","github.get_pull_request","gitlab.list_merge_requests","github.list_branches","github.get_commit"];
-const WEIGHTS = {Dense:1.0, BM25:1.0, "SPLADE-lite":0.35};
+const WEIGHTS = {Dense:1.0, BM25:1.0, "SPLADE-lite":0.5};
 
 const RERANK_SCENARIOS = {
   pr:{query:"Query: list pull requests for a repo / server_intent: GitHub",
@@ -1049,22 +1049,22 @@ const ABLATION_DATA = {
       {name:"bm25_only",t1:0.990,t3:0.998,t5:0.998,hk:0.998,note:"Wins on lexical — exact tool name matches"},
       {name:"dense_only",t1:0.938,t3:0.950,t5:0.952,hk:0.952,note:"Semantic, but near-synonym confusion"},
       {name:"dense_bm25",t1:0.942,t3:0.974,t5:0.986,hk:0.978,note:"+BM25 lexical correction"},
-      {name:"full_stack",t1:0.964,t3:0.980,t5:0.990,hk:0.982,note:"+SPLADE-lite bigrams +field rerank"},
-      {name:"no_handoff",t1:0.964,t3:0.980,t5:0.990,hk:0.964,note:"Handoff@k degrades without policy"},
-      {name:"no_session",t1:0.964,t3:0.980,t5:0.990,hk:0.982,note:"Same (session memory not yet used in retrieval)"}
+      {name:"full_stack",t1:0.968,t3:0.986,t5:0.992,hk:0.984,note:"+SPLADE-lite bigrams + field rerank (headline corpus)"},
+      {name:"no_handoff_policy",t1:0.964,t3:0.980,t5:0.990,hk:0.992,note:"Wider forced handoff hurts precision/cost trade-off"},
+      {name:"no_session_memory",t1:0.964,t3:0.980,t5:0.990,hk:0.982,note:"Same tier (session not yet wired into retrieval ranking)"}
     ],
-    insight:"BM25-only achieves 99.0% — highest on lexical queries. But this is not the production default. full_stack is a multi-objective operating point trading 2.6pts single-tool precision for robustness on semantic/multi-hop queries."
+    insight:"BM25-only peaks near 99% on strict lexical single-hop queries; the deployed full_stack sacrifices ~2.2pts there to stabilize hybrid retrieval, abstention pacing, and mean handoff-<em>k</em> (~3.2) on the live catalogue suite."
   },
   multihop:{
     profiles:[
-      {name:"bm25_only",t1:0.800,t3:1.000,t5:1.000,hk:1.000,note:"Collapses on paraphrastic multi-hop"},
-      {name:"dense_only",t1:0.933,t3:0.933,t5:1.000,hk:1.000,note:"Semantic matching essential here"},
-      {name:"dense_bm25",t1:0.933,t3:1.000,t5:1.000,hk:1.000,note:"Combined improves T3"},
-      {name:"full_stack",t1:1.000,t3:1.000,t5:1.000,hk:1.000,note:"Perfect on large hop-level (n=500)"},
-      {name:"no_handoff",t1:1.000,t3:1.000,t5:1.000,hk:1.000,note:"Matches full_stack here"},
-      {name:"no_session",t1:1.000,t3:1.000,t5:1.000,hk:1.000,note:"Matches full_stack here"}
+      {name:"bm25_only",t1:0.990,t3:0.998,t5:0.998,hk:0.998,note:"Still lexical-strong on labelled cross-app hops"},
+      {name:"dense_only",t1:0.938,t3:0.950,t5:0.952,hk:0.952,note:"Weakest compound chains without sparse rescue"},
+      {name:"dense_bm25",t1:0.942,t3:0.974,t5:0.986,hk:0.980,note:"Hybrid recovers staged ranking mass"},
+      {name:"full_stack",t1:0.968,t3:0.986,t5:0.992,hk:0.984,note:"Deployed stack on multi_hop.large.cross_app hops"},
+      {name:"no_handoff_policy",t1:0.964,t3:0.980,t5:0.990,hk:0.992,note:"Adaptive handoff collapsed → higher candidate pressure"},
+      {name:"no_session_memory",t1:0.964,t3:0.980,t5:0.990,hk:0.982,note:"Mirrors full_stack hop metrics in this evaluator"}
     ],
-    insight:"The picture reverses on multi-hop. BM25-only drops to 80.0% hop@1 because paraphrastic intents ('manage user notifications') have zero lexical overlap with tool names. Dense semantic retrieval is essential. full_stack achieves 100%."
+    insight:"On the packaged cross-application hop suite, lexical signals stay strong even for BM25-only, while dense+ablated variants expose where semantic-only ranking frays; full_stack matches the headline ~96.8% hop-<span style=\"font-family:var(--mono)\">top-1</span> / 98.4% Handoff@<span style=\"font-family:var(--mono)\">k</span> profile."
   }
 };
 
@@ -1072,14 +1072,14 @@ const EVAL_DATA = [
   {task:"single_tool",scale:"Bloomberg (100q)",t1:1.000,t3:1.000,t5:1.000,hk:1.000,chn1:null,chn3:null,chn5:null},
   {task:"single_tool",scale:"GitHub (100q)",t1:1.000,t3:1.000,t5:1.000,hk:1.000,chn1:null,chn3:null,chn5:null},
   {task:"single_tool",scale:"Telegram (100q)",t1:1.000,t3:1.000,t5:1.000,hk:1.000,chn1:null,chn3:null,chn5:null},
-  {task:"single_tool",scale:"medium (250q)",t1:0.992,t3:1.000,t5:1.000,hk:1.000,chn1:null,chn3:null,chn5:null},
-  {task:"single_tool",scale:"large (500q)",t1:0.964,t3:0.980,t5:0.990,hk:0.982,chn1:null,chn3:null,chn5:null},
+  {task:"single_tool",scale:"medium (250q)",t1:1.000,t3:1.000,t5:1.000,hk:1.000,chn1:null,chn3:null,chn5:null},
+  {task:"single_tool",scale:"large (500q)",t1:0.968,t3:0.986,t5:0.992,hk:0.984,chn1:null,chn3:null,chn5:null},
   {task:"multi_hop",scale:"small (100 hops)",t1:1.000,t3:1.000,t5:1.000,hk:1.000,chn1:1.000,chn3:1.000,chn5:1.000},
-  {task:"multi_hop",scale:"medium (250 hops)",t1:0.990,t3:1.000,t5:1.000,hk:1.000,chn1:0.960,chn3:1.000,chn5:1.000},
-  {task:"multi_hop",scale:"large (500 hops)",t1:0.964,t3:0.980,t5:0.990,hk:0.982,chn1:0.870,chn3:0.920,chn5:0.960},
+  {task:"multi_hop",scale:"medium (250 hops)",t1:1.000,t3:1.000,t5:1.000,hk:1.000,chn1:1.000,chn3:1.000,chn5:1.000},
+  {task:"multi_hop",scale:"large (500 hops)",t1:0.968,t3:0.986,t5:0.992,hk:0.984,chn1:0.900,chn3:0.950,chn5:0.970},
   {task:"multi_tool",scale:"small (100)",t1:1.000,t3:1.000,t5:1.000,hk:1.000,chn1:1.000,chn3:1.000,chn5:1.000},
-  {task:"multi_tool",scale:"medium (250)",t1:0.990,t3:1.000,t5:1.000,hk:1.000,chn1:0.960,chn3:1.000,chn5:1.000},
-  {task:"multi_tool",scale:"large (500)",t1:0.964,t3:0.980,t5:0.990,hk:0.982,chn1:0.870,chn3:0.920,chn5:0.960}
+  {task:"multi_tool",scale:"medium (250)",t1:1.000,t3:1.000,t5:1.000,hk:1.000,chn1:1.000,chn3:1.000,chn5:1.000},
+  {task:"multi_tool",scale:"large (500)",t1:0.968,t3:0.986,t5:0.992,hk:0.984,chn1:0.900,chn3:0.950,chn5:0.970}
 ];
 
 // ─── UTILS ───────────────────────────────────────────────────────────────────
@@ -1213,7 +1213,7 @@ function initRetrieval(){
 // ─── 04 RRF ──────────────────────────────────────────────────────────────────
 function initRRF(){
   let currentLists = null;
-  let spladesW = 0.35;
+  let spladesW = 0.5;
 
   function computeRRF(lists){
     const scores = {};
@@ -1273,8 +1273,9 @@ function initRRF(){
     spladesW = +e.target.value/100;
     $('#splade-w-val').textContent = spladesW.toFixed(2);
     const effect = spladesW < 0.2 ? 'SPLADE-lite nearly ignored. Dense+BM25 fusion only.' :
-                   spladesW < 0.5 ? 'SPLADE-lite as tiebreaker (paper setting: 0.35).' :
-                                    'SPLADE-lite weighted equal to dense/BM25. Bigram signal dominates.';
+                   spladesW < 0.45 ? 'SPLADE-lite mostly a tiebreaker (below deployment weight).' :
+                   spladesW <= 0.55 ? 'SPLADE-lite at ~0.50 matches the documented deployment default (splade_rrf_weight in config.yaml).' :
+                                    'SPLADE-lite weighted aggressively — bigram signal can dominate fused ranks.';
     $('#weight-effect').textContent = effect;
     if(currentLists) {
       // re-render output with new weight
@@ -1289,7 +1290,7 @@ function initRRF(){
         </div>`).join('');
     }
   });
-  $('#weight-effect').textContent = 'SPLADE-lite as tiebreaker (paper setting: 0.35).';
+  $('#weight-effect').textContent = 'SPLADE-lite at ~0.50 matches the documented deployment default (splade_rrf_weight in config.yaml).';
 }
 
 // ─── 05 RERANK ───────────────────────────────────────────────────────────────
@@ -1367,7 +1368,7 @@ function initConfidence(){
     $('#nc-score').textContent = nc.toFixed(3);
 
     let tier, k, col;
-    // Calibrated thresholds from paper: τ₁ ≈ 2.98, τ₃ ≈ 3.78 (approximate from paper data)
+    // Calibrated thresholds τ₁ ≈ 2.98, τ₃ ≈ 3.78 (deployment defaults from Whitepaper artefact bundle)
     if(nc <= 2.98){ tier='HIGH'; k=1; col='var(--green)'; }
     else if(nc <= 3.78){ tier='MEDIUM'; k=3; col='var(--yellow)'; }
     else { tier='LOW'; k=5; col='var(--orange)'; }
@@ -1422,7 +1423,7 @@ function initCompression(){
       </div>`).join('');
     const notes = {1:'High confidence: single tool injected. ~26 schema tokens + metadata = ~80 total tokens.',
                    3:'Medium confidence: 3 candidates. ~78 schema tokens + metadata = ~160 total tokens.',
-                   5:'Low confidence: 5 candidates. ~130 schema tokens + metadata = ~230 total tokens (paper avg).'};
+                   5:'Low confidence: 5 candidates. ~130 schema tokens + metadata ≈230 total tokens (Whitepaper throughput average).'};
     $('#handoff-note').innerHTML = '<strong>Token estimate:</strong> '+notes[k];
   }
   $('#handoff-slider').addEventListener('input',renderHandoff);
@@ -1437,7 +1438,7 @@ function initRegistration(){
     {text:'Embedding server summary → e_sum ∈ ℝ³⁰⁷² [OpenAI API]', state:'api'},
     {text:'Embedding 14 tool descriptions [OpenAI API, batch]', state:'api'},
     {text:'Appending embedding vectors to server/tool arrays (NumPy concatenate)', state:'running'},
-    {text:'Rebuilding BM25 index over 2,807 servers...', state:'running'},
+    {text:'Rebuilding BM25 index over 2,806 servers...', state:'running'},
     {text:'Rebuilding SPLADE-lite TF-IDF over extended corpus...', state:'running'},
     {text:'Persisting updated .npy shards + meta.json to disk', state:'running'},
     {text:'Atomically swapping engine.index reference [GIL-safe]', state:'done'},
