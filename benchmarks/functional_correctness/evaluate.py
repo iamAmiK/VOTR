@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import statistics
 import urllib.request
 from collections import defaultdict
@@ -11,12 +12,13 @@ from typing import Any
 
 
 def call_route(base_url: str, payload: dict[str, Any]) -> dict[str, Any]:
+    timeout_s = float(os.getenv("FC_ROUTE_TIMEOUT_SECONDS", "60"))
     req = urllib.request.Request(
         f"{base_url.rstrip('/')}/route",
         data=json.dumps(payload).encode("utf-8"),
         headers={"Content-Type": "application/json"},
     )
-    with urllib.request.urlopen(req, timeout=60) as resp:
+    with urllib.request.urlopen(req, timeout=timeout_s) as resp:
         return json.loads(resp.read().decode("utf-8"))
 
 
@@ -166,9 +168,13 @@ def evaluate_single_tool(
     cases: list[dict[str, Any]],
     keep_memory: bool,
     equivalence_lookup: dict[str, set[str]],
+    progress: bool = False,
 ) -> dict[str, Any]:
     rows = []
-    for case in cases:
+    total = len(cases)
+    for idx, case in enumerate(cases, start=1):
+        if progress:
+            print(f"[single_tool] case {idx}/{total}: {case.get('id', '<unknown>')}", flush=True)
         session_id = case.get("session_id") or f"fc-{case['id']}"
         rows.append(evaluate_step(base_url, case, session_id, keep_memory, equivalence_lookup))
     return {"summary": summarize_rows(rows, equivalence_lookup), "results": rows}
@@ -179,15 +185,21 @@ def evaluate_multi_hop(
     cases: list[dict[str, Any]],
     keep_memory: bool,
     equivalence_lookup: dict[str, set[str]],
+    progress: bool = False,
 ) -> dict[str, Any]:
     case_results = []
     all_rows = []
-    for case in cases:
+    total = len(cases)
+    for idx, case in enumerate(cases, start=1):
+        if progress:
+            print(f"[multi_hop] case {idx}/{total}: {case.get('id', '<unknown>')}", flush=True)
         session_id = case.get("session_id") or f"fc-{case['id']}"
-        rows = [
-            evaluate_step(base_url, hop, session_id, keep_memory, equivalence_lookup)
-            for hop in case["hops"]
-        ]
+        rows = []
+        hops = case["hops"]
+        for hop_idx, hop in enumerate(hops, start=1):
+            if progress:
+                print(f"  hop {hop_idx}/{len(hops)}", flush=True)
+            rows.append(evaluate_step(base_url, hop, session_id, keep_memory, equivalence_lookup))
         all_rows.extend(rows)
         case_result = {
             "case_id": case["id"],
@@ -251,15 +263,21 @@ def evaluate_multi_tool(
     cases: list[dict[str, Any]],
     keep_memory: bool,
     equivalence_lookup: dict[str, set[str]],
+    progress: bool = False,
 ) -> dict[str, Any]:
     case_results = []
     all_rows = []
-    for case in cases:
+    total = len(cases)
+    for idx, case in enumerate(cases, start=1):
+        if progress:
+            print(f"[multi_tool] case {idx}/{total}: {case.get('id', '<unknown>')}", flush=True)
         session_id = case.get("session_id") or f"fc-{case['id']}"
-        rows = [
-            evaluate_step(base_url, subtask, session_id, keep_memory, equivalence_lookup)
-            for subtask in case["subtasks"]
-        ]
+        rows = []
+        subtasks = case["subtasks"]
+        for subtask_idx, subtask in enumerate(subtasks, start=1):
+            if progress:
+                print(f"  subtask {subtask_idx}/{len(subtasks)}", flush=True)
+            rows.append(evaluate_step(base_url, subtask, session_id, keep_memory, equivalence_lookup))
         all_rows.extend(rows)
         case_result = {
             "case_id": case["id"],
@@ -325,6 +343,7 @@ def main() -> None:
     ap.add_argument("--out", type=Path, default=None)
     ap.add_argument("--equivalence-map", type=Path, default=None)
     ap.add_argument("--keep-memory", action="store_true")
+    ap.add_argument("--progress", action="store_true", help="Print case-level progress while evaluating")
     args = ap.parse_args()
 
     raw = json.loads(args.cases.read_text(encoding="utf-8"))
@@ -335,11 +354,11 @@ def main() -> None:
     suite = raw.get("suite", "")
     equivalence_lookup = load_equivalence_lookup(args.equivalence_map)
     if cases and "subtasks" in cases[0]:
-        report = evaluate_multi_tool(args.base_url, cases, args.keep_memory, equivalence_lookup)
+        report = evaluate_multi_tool(args.base_url, cases, args.keep_memory, equivalence_lookup, args.progress)
     elif cases and "hops" in cases[0]:
-        report = evaluate_multi_hop(args.base_url, cases, args.keep_memory, equivalence_lookup)
+        report = evaluate_multi_hop(args.base_url, cases, args.keep_memory, equivalence_lookup, args.progress)
     else:
-        report = evaluate_single_tool(args.base_url, cases, args.keep_memory, equivalence_lookup)
+        report = evaluate_single_tool(args.base_url, cases, args.keep_memory, equivalence_lookup, args.progress)
 
     report["suite"] = suite
     if args.equivalence_map:

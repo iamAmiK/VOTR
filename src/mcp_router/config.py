@@ -28,7 +28,7 @@ class RouterConfig(BaseModel):
     bulk_boost_plural: float = 1.08
     splade_enabled: bool = True
     splade_candidate_multiplier: int = 4
-    splade_rrf_weight: float = 0.35
+    splade_rrf_weight: float = 0.50
     handoff_enabled: bool = True
     server_score_max_weight: float = 1.0
     server_score_mean_weight: float = 0.0

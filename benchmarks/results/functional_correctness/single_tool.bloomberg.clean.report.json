@@ -5,20 +5,20 @@
     "top3_accuracy": 1.0,
     "top5_accuracy": 1.0,
     "handoff_accuracy_at_recommended_k": 1.0,
-    "avg_recommended_handoff_k": 2.1,
+    "avg_recommended_handoff_k": 2.76,
     "confidence_buckets": {
       "high": {
-        "count": 67,
+        "count": 45,
         "top1_accuracy": 1.0,
         "handoff_accuracy_at_recommended_k": 1.0
       },
       "low": {
-        "count": 22,
+        "count": 33,
         "top1_accuracy": 1.0,
         "handoff_accuracy_at_recommended_k": 1.0
       },
       "medium": {
-        "count": 11,
+        "count": 22,
         "top1_accuracy": 1.0,
         "handoff_accuracy_at_recommended_k": 1.0
       }
@@ -29,20 +29,20 @@
       "top3_accuracy": 1.0,
       "top5_accuracy": 1.0,
       "handoff_accuracy_at_recommended_k": 1.0,
-      "avg_recommended_handoff_k": 2.1,
+      "avg_recommended_handoff_k": 2.76,
       "confidence_buckets": {
         "high": {
-          "count": 67,
+          "count": 45,
           "top1_accuracy": 1.0,
           "handoff_accuracy_at_recommended_k": 1.0
         },
         "low": {
-          "count": 22,
+          "count": 33,
           "top1_accuracy": 1.0,
           "handoff_accuracy_at_recommended_k": 1.0
         },
         "medium": {
-          "count": 11,
+          "count": 22,
           "top1_accuracy": 1.0,
           "handoff_accuracy_at_recommended_k": 1.0
         }
@@ -57,8 +57,8 @@
       "predicted_topk": [
         "Bloomberg::bdp",
         "Bloomberg::bdh",
-        "Bloomberg::bds",
         "Bloomberg::bdtick",
+        "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
       "hit_at_1": true,
@@ -67,9 +67,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bdp"
       ],
@@ -92,12 +92,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bds"
       ],
@@ -112,8 +112,8 @@
       "expected_tool_key": "Bloomberg::bdh",
       "predicted_topk": [
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
@@ -123,9 +123,9 @@
       "confidence": "medium",
       "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0007977756478053932,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03772681451612903,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::bdh"
       ],
@@ -140,20 +140,20 @@
       "expected_tool_key": "Bloomberg::bdib",
       "predicted_topk": [
         "Bloomberg::bdib",
-        "Bloomberg::bdtick",
         "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011379266482386546,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03738666351569577,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdib"
       ],
@@ -179,9 +179,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdtick"
       ],
@@ -196,9 +196,9 @@
       "expected_tool_key": "Bloomberg::earning",
       "predicted_topk": [
         "Bloomberg::earning",
-        "Bloomberg::bds",
         "Bloomberg::bdp",
         "Bloomberg::bdh",
+        "Bloomberg::bds",
         "Bloomberg::beqs"
       ],
       "hit_at_1": true,
@@ -207,9 +207,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001301807905869909,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03722278225806452,
+      "score_gap": 0.0010450504897887292,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039938556067588324,
       "equivalent_tool_keys": [
         "Bloomberg::earning"
       ],
@@ -225,19 +225,19 @@
       "predicted_topk": [
         "Bloomberg::dividend",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::dividend"
       ],
@@ -253,19 +253,19 @@
       "predicted_topk": [
         "Bloomberg::beqs",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::beqs"
       ],
@@ -280,9 +280,9 @@
       "expected_tool_key": "Bloomberg::turnover",
       "predicted_topk": [
         "Bloomberg::turnover",
-        "Bloomberg::bdtick",
+        "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds",
+        "Bloomberg::bdtick",
         "Bloomberg::dividend"
       ],
       "hit_at_1": true,
@@ -291,9 +291,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0016263271366391413,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.036898263027295285,
+      "score_gap": 0.0018646850359519199,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03911892152142513,
       "equivalent_tool_keys": [
         "Bloomberg::turnover"
       ],
@@ -309,8 +309,8 @@
       "predicted_topk": [
         "Bloomberg::bdp",
         "Bloomberg::bdh",
-        "Bloomberg::bds",
         "Bloomberg::bdtick",
+        "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
       "hit_at_1": true,
@@ -319,9 +319,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bdp"
       ],
@@ -344,12 +344,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bds"
       ],
@@ -364,8 +364,8 @@
       "expected_tool_key": "Bloomberg::bdh",
       "predicted_topk": [
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
@@ -375,9 +375,9 @@
       "confidence": "medium",
       "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0007977756478053932,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03772681451612903,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::bdh"
       ],
@@ -392,20 +392,20 @@
       "expected_tool_key": "Bloomberg::bdib",
       "predicted_topk": [
         "Bloomberg::bdib",
-        "Bloomberg::bdtick",
         "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011379266482386546,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03738666351569577,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdib"
       ],
@@ -431,9 +431,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdtick"
       ],
@@ -448,9 +448,9 @@
       "expected_tool_key": "Bloomberg::earning",
       "predicted_topk": [
         "Bloomberg::earning",
-        "Bloomberg::bds",
         "Bloomberg::bdp",
         "Bloomberg::bdh",
+        "Bloomberg::bds",
         "Bloomberg::beqs"
       ],
       "hit_at_1": true,
@@ -459,9 +459,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001301807905869909,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03722278225806452,
+      "score_gap": 0.0010450504897887292,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039938556067588324,
       "equivalent_tool_keys": [
         "Bloomberg::earning"
       ],
@@ -477,19 +477,19 @@
       "predicted_topk": [
         "Bloomberg::dividend",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::dividend"
       ],
@@ -505,19 +505,19 @@
       "predicted_topk": [
         "Bloomberg::beqs",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::beqs"
       ],
@@ -532,9 +532,9 @@
       "expected_tool_key": "Bloomberg::turnover",
       "predicted_topk": [
         "Bloomberg::turnover",
-        "Bloomberg::bdtick",
+        "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds",
+        "Bloomberg::bdtick",
         "Bloomberg::dividend"
       ],
       "hit_at_1": true,
@@ -543,9 +543,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0016263271366391413,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.036898263027295285,
+      "score_gap": 0.0018646850359519199,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03911892152142513,
       "equivalent_tool_keys": [
         "Bloomberg::turnover"
       ],
@@ -561,8 +561,8 @@
       "predicted_topk": [
         "Bloomberg::bdp",
         "Bloomberg::bdh",
-        "Bloomberg::bds",
         "Bloomberg::bdtick",
+        "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
       "hit_at_1": true,
@@ -571,9 +571,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bdp"
       ],
@@ -596,12 +596,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bds"
       ],
@@ -616,8 +616,8 @@
       "expected_tool_key": "Bloomberg::bdh",
       "predicted_topk": [
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
@@ -627,9 +627,9 @@
       "confidence": "medium",
       "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0007977756478053932,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03772681451612903,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::bdh"
       ],
@@ -644,20 +644,20 @@
       "expected_tool_key": "Bloomberg::bdib",
       "predicted_topk": [
         "Bloomberg::bdib",
-        "Bloomberg::bdtick",
         "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011379266482386546,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03738666351569577,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdib"
       ],
@@ -683,9 +683,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdtick"
       ],
@@ -700,9 +700,9 @@
       "expected_tool_key": "Bloomberg::earning",
       "predicted_topk": [
         "Bloomberg::earning",
-        "Bloomberg::bds",
         "Bloomberg::bdp",
         "Bloomberg::bdh",
+        "Bloomberg::bds",
         "Bloomberg::beqs"
       ],
       "hit_at_1": true,
@@ -711,9 +711,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001301807905869909,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03722278225806452,
+      "score_gap": 0.0010450504897887292,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039938556067588324,
       "equivalent_tool_keys": [
         "Bloomberg::earning"
       ],
@@ -729,19 +729,19 @@
       "predicted_topk": [
         "Bloomberg::dividend",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::dividend"
       ],
@@ -757,19 +757,19 @@
       "predicted_topk": [
         "Bloomberg::beqs",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::beqs"
       ],
@@ -784,9 +784,9 @@
       "expected_tool_key": "Bloomberg::turnover",
       "predicted_topk": [
         "Bloomberg::turnover",
-        "Bloomberg::bdtick",
+        "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds",
+        "Bloomberg::bdtick",
         "Bloomberg::dividend"
       ],
       "hit_at_1": true,
@@ -795,9 +795,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0016263271366391413,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.036898263027295285,
+      "score_gap": 0.0018646850359519199,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03911892152142513,
       "equivalent_tool_keys": [
         "Bloomberg::turnover"
       ],
@@ -813,8 +813,8 @@
       "predicted_topk": [
         "Bloomberg::bdp",
         "Bloomberg::bdh",
-        "Bloomberg::bds",
         "Bloomberg::bdtick",
+        "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
       "hit_at_1": true,
@@ -823,9 +823,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bdp"
       ],
@@ -848,12 +848,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bds"
       ],
@@ -868,8 +868,8 @@
       "expected_tool_key": "Bloomberg::bdh",
       "predicted_topk": [
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
@@ -879,9 +879,9 @@
       "confidence": "medium",
       "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0007977756478053932,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03772681451612903,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::bdh"
       ],
@@ -896,20 +896,20 @@
       "expected_tool_key": "Bloomberg::bdib",
       "predicted_topk": [
         "Bloomberg::bdib",
-        "Bloomberg::bdtick",
         "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011379266482386546,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03738666351569577,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdib"
       ],
@@ -935,9 +935,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdtick"
       ],
@@ -952,9 +952,9 @@
       "expected_tool_key": "Bloomberg::earning",
       "predicted_topk": [
         "Bloomberg::earning",
-        "Bloomberg::bds",
         "Bloomberg::bdp",
         "Bloomberg::bdh",
+        "Bloomberg::bds",
         "Bloomberg::beqs"
       ],
       "hit_at_1": true,
@@ -963,9 +963,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001301807905869909,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03722278225806452,
+      "score_gap": 0.0010450504897887292,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039938556067588324,
       "equivalent_tool_keys": [
         "Bloomberg::earning"
       ],
@@ -981,19 +981,19 @@
       "predicted_topk": [
         "Bloomberg::dividend",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::dividend"
       ],
@@ -1009,19 +1009,19 @@
       "predicted_topk": [
         "Bloomberg::beqs",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::beqs"
       ],
@@ -1036,9 +1036,9 @@
       "expected_tool_key": "Bloomberg::turnover",
       "predicted_topk": [
         "Bloomberg::turnover",
-        "Bloomberg::bdtick",
+        "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds",
+        "Bloomberg::bdtick",
         "Bloomberg::dividend"
       ],
       "hit_at_1": true,
@@ -1047,9 +1047,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0016263271366391413,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.036898263027295285,
+      "score_gap": 0.0018646850359519199,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03911892152142513,
       "equivalent_tool_keys": [
         "Bloomberg::turnover"
       ],
@@ -1065,8 +1065,8 @@
       "predicted_topk": [
         "Bloomberg::bdp",
         "Bloomberg::bdh",
-        "Bloomberg::bds",
         "Bloomberg::bdtick",
+        "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
       "hit_at_1": true,
@@ -1075,9 +1075,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bdp"
       ],
@@ -1100,12 +1100,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bds"
       ],
@@ -1120,8 +1120,8 @@
       "expected_tool_key": "Bloomberg::bdh",
       "predicted_topk": [
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
@@ -1131,9 +1131,9 @@
       "confidence": "medium",
       "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0007977756478053932,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03772681451612903,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::bdh"
       ],
@@ -1148,20 +1148,20 @@
       "expected_tool_key": "Bloomberg::bdib",
       "predicted_topk": [
         "Bloomberg::bdib",
-        "Bloomberg::bdtick",
         "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011379266482386546,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03738666351569577,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdib"
       ],
@@ -1187,9 +1187,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdtick"
       ],
@@ -1204,9 +1204,9 @@
       "expected_tool_key": "Bloomberg::earning",
       "predicted_topk": [
         "Bloomberg::earning",
-        "Bloomberg::bds",
         "Bloomberg::bdp",
         "Bloomberg::bdh",
+        "Bloomberg::bds",
         "Bloomberg::beqs"
       ],
       "hit_at_1": true,
@@ -1215,9 +1215,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001301807905869909,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03722278225806452,
+      "score_gap": 0.0010450504897887292,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039938556067588324,
       "equivalent_tool_keys": [
         "Bloomberg::earning"
       ],
@@ -1233,19 +1233,19 @@
       "predicted_topk": [
         "Bloomberg::dividend",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::dividend"
       ],
@@ -1261,19 +1261,19 @@
       "predicted_topk": [
         "Bloomberg::beqs",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::beqs"
       ],
@@ -1288,9 +1288,9 @@
       "expected_tool_key": "Bloomberg::turnover",
       "predicted_topk": [
         "Bloomberg::turnover",
-        "Bloomberg::bdtick",
+        "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds",
+        "Bloomberg::bdtick",
         "Bloomberg::dividend"
       ],
       "hit_at_1": true,
@@ -1299,9 +1299,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0016263271366391413,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.036898263027295285,
+      "score_gap": 0.0018646850359519199,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03911892152142513,
       "equivalent_tool_keys": [
         "Bloomberg::turnover"
       ],
@@ -1317,8 +1317,8 @@
       "predicted_topk": [
         "Bloomberg::bdp",
         "Bloomberg::bdh",
-        "Bloomberg::bds",
         "Bloomberg::bdtick",
+        "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
       "hit_at_1": true,
@@ -1327,9 +1327,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bdp"
       ],
@@ -1352,12 +1352,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bds"
       ],
@@ -1372,8 +1372,8 @@
       "expected_tool_key": "Bloomberg::bdh",
       "predicted_topk": [
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
@@ -1383,9 +1383,9 @@
       "confidence": "medium",
       "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0007977756478053932,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03772681451612903,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::bdh"
       ],
@@ -1400,20 +1400,20 @@
       "expected_tool_key": "Bloomberg::bdib",
       "predicted_topk": [
         "Bloomberg::bdib",
-        "Bloomberg::bdtick",
         "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011379266482386546,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03738666351569577,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdib"
       ],
@@ -1439,9 +1439,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdtick"
       ],
@@ -1456,9 +1456,9 @@
       "expected_tool_key": "Bloomberg::earning",
       "predicted_topk": [
         "Bloomberg::earning",
-        "Bloomberg::bds",
         "Bloomberg::bdp",
         "Bloomberg::bdh",
+        "Bloomberg::bds",
         "Bloomberg::beqs"
       ],
       "hit_at_1": true,
@@ -1467,9 +1467,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001301807905869909,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03722278225806452,
+      "score_gap": 0.0010450504897887292,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039938556067588324,
       "equivalent_tool_keys": [
         "Bloomberg::earning"
       ],
@@ -1485,19 +1485,19 @@
       "predicted_topk": [
         "Bloomberg::dividend",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::dividend"
       ],
@@ -1513,19 +1513,19 @@
       "predicted_topk": [
         "Bloomberg::beqs",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::beqs"
       ],
@@ -1540,9 +1540,9 @@
       "expected_tool_key": "Bloomberg::turnover",
       "predicted_topk": [
         "Bloomberg::turnover",
-        "Bloomberg::bdtick",
+        "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds",
+        "Bloomberg::bdtick",
         "Bloomberg::dividend"
       ],
       "hit_at_1": true,
@@ -1551,9 +1551,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0016263271366391413,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.036898263027295285,
+      "score_gap": 0.0018646850359519199,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03911892152142513,
       "equivalent_tool_keys": [
         "Bloomberg::turnover"
       ],
@@ -1569,8 +1569,8 @@
       "predicted_topk": [
         "Bloomberg::bdp",
         "Bloomberg::bdh",
-        "Bloomberg::bds",
         "Bloomberg::bdtick",
+        "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
       "hit_at_1": true,
@@ -1579,9 +1579,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bdp"
       ],
@@ -1604,12 +1604,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bds"
       ],
@@ -1624,8 +1624,8 @@
       "expected_tool_key": "Bloomberg::bdh",
       "predicted_topk": [
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
@@ -1635,9 +1635,9 @@
       "confidence": "medium",
       "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0007977756478053932,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03772681451612903,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::bdh"
       ],
@@ -1652,20 +1652,20 @@
       "expected_tool_key": "Bloomberg::bdib",
       "predicted_topk": [
         "Bloomberg::bdib",
-        "Bloomberg::bdtick",
         "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011379266482386546,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03738666351569577,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdib"
       ],
@@ -1691,9 +1691,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdtick"
       ],
@@ -1708,9 +1708,9 @@
       "expected_tool_key": "Bloomberg::earning",
       "predicted_topk": [
         "Bloomberg::earning",
-        "Bloomberg::bds",
         "Bloomberg::bdp",
         "Bloomberg::bdh",
+        "Bloomberg::bds",
         "Bloomberg::beqs"
       ],
       "hit_at_1": true,
@@ -1719,9 +1719,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001301807905869909,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03722278225806452,
+      "score_gap": 0.0010450504897887292,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039938556067588324,
       "equivalent_tool_keys": [
         "Bloomberg::earning"
       ],
@@ -1737,19 +1737,19 @@
       "predicted_topk": [
         "Bloomberg::dividend",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::dividend"
       ],
@@ -1765,19 +1765,19 @@
       "predicted_topk": [
         "Bloomberg::beqs",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::beqs"
       ],
@@ -1792,9 +1792,9 @@
       "expected_tool_key": "Bloomberg::turnover",
       "predicted_topk": [
         "Bloomberg::turnover",
-        "Bloomberg::bdtick",
+        "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds",
+        "Bloomberg::bdtick",
         "Bloomberg::dividend"
       ],
       "hit_at_1": true,
@@ -1803,9 +1803,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0016263271366391413,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.036898263027295285,
+      "score_gap": 0.0018646850359519199,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03911892152142513,
       "equivalent_tool_keys": [
         "Bloomberg::turnover"
       ],
@@ -1821,8 +1821,8 @@
       "predicted_topk": [
         "Bloomberg::bdp",
         "Bloomberg::bdh",
-        "Bloomberg::bds",
         "Bloomberg::bdtick",
+        "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
       "hit_at_1": true,
@@ -1831,9 +1831,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bdp"
       ],
@@ -1856,12 +1856,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bds"
       ],
@@ -1876,8 +1876,8 @@
       "expected_tool_key": "Bloomberg::bdh",
       "predicted_topk": [
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
@@ -1887,9 +1887,9 @@
       "confidence": "medium",
       "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0007977756478053932,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03772681451612903,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::bdh"
       ],
@@ -1904,20 +1904,20 @@
       "expected_tool_key": "Bloomberg::bdib",
       "predicted_topk": [
         "Bloomberg::bdib",
-        "Bloomberg::bdtick",
         "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011379266482386546,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03738666351569577,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdib"
       ],
@@ -1943,9 +1943,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdtick"
       ],
@@ -1960,9 +1960,9 @@
       "expected_tool_key": "Bloomberg::earning",
       "predicted_topk": [
         "Bloomberg::earning",
-        "Bloomberg::bds",
         "Bloomberg::bdp",
         "Bloomberg::bdh",
+        "Bloomberg::bds",
         "Bloomberg::beqs"
       ],
       "hit_at_1": true,
@@ -1971,9 +1971,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001301807905869909,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03722278225806452,
+      "score_gap": 0.0010450504897887292,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039938556067588324,
       "equivalent_tool_keys": [
         "Bloomberg::earning"
       ],
@@ -1989,19 +1989,19 @@
       "predicted_topk": [
         "Bloomberg::dividend",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::dividend"
       ],
@@ -2017,19 +2017,19 @@
       "predicted_topk": [
         "Bloomberg::beqs",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::beqs"
       ],
@@ -2044,9 +2044,9 @@
       "expected_tool_key": "Bloomberg::turnover",
       "predicted_topk": [
         "Bloomberg::turnover",
-        "Bloomberg::bdtick",
+        "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds",
+        "Bloomberg::bdtick",
         "Bloomberg::dividend"
       ],
       "hit_at_1": true,
@@ -2055,9 +2055,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0016263271366391413,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.036898263027295285,
+      "score_gap": 0.0018646850359519199,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03911892152142513,
       "equivalent_tool_keys": [
         "Bloomberg::turnover"
       ],
@@ -2073,8 +2073,8 @@
       "predicted_topk": [
         "Bloomberg::bdp",
         "Bloomberg::bdh",
-        "Bloomberg::bds",
         "Bloomberg::bdtick",
+        "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
       "hit_at_1": true,
@@ -2083,9 +2083,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bdp"
       ],
@@ -2108,12 +2108,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bds"
       ],
@@ -2128,8 +2128,8 @@
       "expected_tool_key": "Bloomberg::bdh",
       "predicted_topk": [
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
@@ -2139,9 +2139,9 @@
       "confidence": "medium",
       "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0007977756478053932,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03772681451612903,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::bdh"
       ],
@@ -2156,20 +2156,20 @@
       "expected_tool_key": "Bloomberg::bdib",
       "predicted_topk": [
         "Bloomberg::bdib",
-        "Bloomberg::bdtick",
         "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011379266482386546,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03738666351569577,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdib"
       ],
@@ -2195,9 +2195,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdtick"
       ],
@@ -2212,9 +2212,9 @@
       "expected_tool_key": "Bloomberg::earning",
       "predicted_topk": [
         "Bloomberg::earning",
-        "Bloomberg::bds",
         "Bloomberg::bdp",
         "Bloomberg::bdh",
+        "Bloomberg::bds",
         "Bloomberg::beqs"
       ],
       "hit_at_1": true,
@@ -2223,9 +2223,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001301807905869909,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03722278225806452,
+      "score_gap": 0.0010450504897887292,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039938556067588324,
       "equivalent_tool_keys": [
         "Bloomberg::earning"
       ],
@@ -2241,19 +2241,19 @@
       "predicted_topk": [
         "Bloomberg::dividend",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::dividend"
       ],
@@ -2269,19 +2269,19 @@
       "predicted_topk": [
         "Bloomberg::beqs",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::beqs"
       ],
@@ -2296,9 +2296,9 @@
       "expected_tool_key": "Bloomberg::turnover",
       "predicted_topk": [
         "Bloomberg::turnover",
-        "Bloomberg::bdtick",
+        "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds",
+        "Bloomberg::bdtick",
         "Bloomberg::dividend"
       ],
       "hit_at_1": true,
@@ -2307,9 +2307,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0016263271366391413,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.036898263027295285,
+      "score_gap": 0.0018646850359519199,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03911892152142513,
       "equivalent_tool_keys": [
         "Bloomberg::turnover"
       ],
@@ -2325,8 +2325,8 @@
       "predicted_topk": [
         "Bloomberg::bdp",
         "Bloomberg::bdh",
-        "Bloomberg::bds",
         "Bloomberg::bdtick",
+        "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
       "hit_at_1": true,
@@ -2335,9 +2335,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bdp"
       ],
@@ -2360,12 +2360,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bds"
       ],
@@ -2380,8 +2380,8 @@
       "expected_tool_key": "Bloomberg::bdh",
       "predicted_topk": [
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
@@ -2391,9 +2391,9 @@
       "confidence": "medium",
       "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0007977756478053932,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03772681451612903,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::bdh"
       ],
@@ -2408,20 +2408,20 @@
       "expected_tool_key": "Bloomberg::bdib",
       "predicted_topk": [
         "Bloomberg::bdib",
-        "Bloomberg::bdtick",
         "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011379266482386546,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03738666351569577,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdib"
       ],
@@ -2447,9 +2447,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdtick"
       ],
@@ -2464,9 +2464,9 @@
       "expected_tool_key": "Bloomberg::earning",
       "predicted_topk": [
         "Bloomberg::earning",
-        "Bloomberg::bds",
         "Bloomberg::bdp",
         "Bloomberg::bdh",
+        "Bloomberg::bds",
         "Bloomberg::beqs"
       ],
       "hit_at_1": true,
@@ -2475,9 +2475,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001301807905869909,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03722278225806452,
+      "score_gap": 0.0010450504897887292,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039938556067588324,
       "equivalent_tool_keys": [
         "Bloomberg::earning"
       ],
@@ -2493,19 +2493,19 @@
       "predicted_topk": [
         "Bloomberg::dividend",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::dividend"
       ],
@@ -2521,19 +2521,19 @@
       "predicted_topk": [
         "Bloomberg::beqs",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::beqs"
       ],
@@ -2548,9 +2548,9 @@
       "expected_tool_key": "Bloomberg::turnover",
       "predicted_topk": [
         "Bloomberg::turnover",
-        "Bloomberg::bdtick",
+        "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds",
+        "Bloomberg::bdtick",
         "Bloomberg::dividend"
       ],
       "hit_at_1": true,
@@ -2559,9 +2559,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0016263271366391413,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.036898263027295285,
+      "score_gap": 0.0018646850359519199,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03911892152142513,
       "equivalent_tool_keys": [
         "Bloomberg::turnover"
       ],
@@ -2577,8 +2577,8 @@
       "predicted_topk": [
         "Bloomberg::bdp",
         "Bloomberg::bdh",
-        "Bloomberg::bds",
         "Bloomberg::bdtick",
+        "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
       "hit_at_1": true,
@@ -2587,9 +2587,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bdp"
       ],
@@ -2612,12 +2612,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bds"
       ],
@@ -2632,8 +2632,8 @@
       "expected_tool_key": "Bloomberg::bdh",
       "predicted_topk": [
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
@@ -2643,9 +2643,9 @@
       "confidence": "medium",
       "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0007977756478053932,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03772681451612903,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::bdh"
       ],
@@ -2660,20 +2660,20 @@
       "expected_tool_key": "Bloomberg::bdib",
       "predicted_topk": [
         "Bloomberg::bdib",
-        "Bloomberg::bdtick",
         "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011379266482386546,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03738666351569577,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdib"
       ],
@@ -2699,9 +2699,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::bdtick"
       ],
@@ -2716,9 +2716,9 @@
       "expected_tool_key": "Bloomberg::earning",
       "predicted_topk": [
         "Bloomberg::earning",
-        "Bloomberg::bds",
         "Bloomberg::bdp",
         "Bloomberg::bdh",
+        "Bloomberg::bds",
         "Bloomberg::beqs"
       ],
       "hit_at_1": true,
@@ -2727,9 +2727,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001301807905869909,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03722278225806452,
+      "score_gap": 0.0010450504897887292,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039938556067588324,
       "equivalent_tool_keys": [
         "Bloomberg::earning"
       ],
@@ -2745,19 +2745,19 @@
       "predicted_topk": [
         "Bloomberg::dividend",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
+        "Bloomberg::bdtick",
         "Bloomberg::bds"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Bloomberg::dividend"
       ],
@@ -2773,19 +2773,19 @@
       "predicted_topk": [
         "Bloomberg::beqs",
         "Bloomberg::bdh",
-        "Bloomberg::bdtick",
         "Bloomberg::bdp",
-        "Bloomberg::bds"
+        "Bloomberg::bds",
+        "Bloomberg::bdtick"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Bloomberg::beqs"
       ],
@@ -2800,9 +2800,9 @@
       "expected_tool_key": "Bloomberg::turnover",
       "predicted_topk": [
         "Bloomberg::turnover",
-        "Bloomberg::bdtick",
+        "Bloomberg::bdh",
         "Bloomberg::bdp",
-        "Bloomberg::bds",
+        "Bloomberg::bdtick",
         "Bloomberg::dividend"
       ],
       "hit_at_1": true,
@@ -2811,9 +2811,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0016263271366391413,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.036898263027295285,
+      "score_gap": 0.0018646850359519199,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03911892152142513,
       "equivalent_tool_keys": [
         "Bloomberg::turnover"
       ],
@@ -2829,8 +2829,8 @@
       "predicted_topk": [
         "Bloomberg::bdp",
         "Bloomberg::bdh",
-        "Bloomberg::bds",
         "Bloomberg::bdtick",
+        "Bloomberg::bds",
         "Bloomberg::bdib"
       ],
       "hit_at_1": true,
@@ -2839,9 +2839,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Bloomberg::bdp"
       ],
@@ -2852,5 +2852,5 @@
     }
   ],
   "suite": "single_tool.bloomberg.clean",
-  "equivalence_map": "C:\\Users\\swaga\\Downloads\\Research Proj\\MCP-Router\\benchmarks\\functional_correctness\\equivalence_map.json"
+  "equivalence_map": "C:\\Users\\swaga\\Documents\\VOTR\\benchmarks\\functional_correctness\\equivalence_map.json"
 }

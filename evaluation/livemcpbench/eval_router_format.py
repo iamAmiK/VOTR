@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import urllib.request
 import sys
 from pathlib import Path
 from typing import Any
@@ -56,6 +57,18 @@ def dedupe_servers_from_route_tools(tools: list[Any]) -> list[str]:
     return out
 
 
+def dedupe_servers_from_route_dicts(tools: list[dict[str, Any]]) -> list[str]:
+    out: list[str] = []
+    seen: set[str] = set()
+    for tool in tools:
+        server_name = str(tool.get("server_name", ""))
+        if not server_name or server_name in seen:
+            continue
+        seen.add(server_name)
+        out.append(server_name)
+    return out
+
+
 def build_router(index_dir: Path) -> RouterEngine:
     cfg = load_config()
     cfg.index_dir = index_dir
@@ -65,7 +78,17 @@ def build_router(index_dir: Path) -> RouterEngine:
     return RouterEngine(cfg, index, embedder, sessions)
 
 
-def run_queries(router: RouterEngine, queries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def _call_route(base_url: str, payload: dict[str, Any]) -> dict[str, Any]:
+    req = urllib.request.Request(
+        f"{base_url.rstrip('/')}/route",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+    )
+    with urllib.request.urlopen(req, timeout=120) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def run_queries_router_engine(router: RouterEngine, queries: list[dict[str, Any]]) -> list[dict[str, Any]]:
     rows = []
     for idx, query in enumerate(queries):
         server_intent = truncate_text(query["server_intent"])
@@ -106,7 +129,57 @@ def run_queries(router: RouterEngine, queries: list[dict[str, Any]]) -> list[dic
     return rows
 
 
-def evaluate_exact_subset(router: RouterEngine, exact_path: Path) -> dict[str, Any]:
+def run_queries_http(base_url: str, queries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    rows = []
+    for idx, query in enumerate(queries):
+        server_intent = truncate_text(query["server_intent"])
+        tool_intent = truncate_text(query["tool_intent"])
+        out = _call_route(
+            base_url,
+            {
+                "server_intent": server_intent,
+                "tool_intent": tool_intent,
+                "session_id": f"livemcpbench-router-format-{idx}",
+                "record_session": False,
+            },
+        )
+        predicted_tools = out.get("tools", []) or []
+        predicted_servers = dedupe_servers_from_route_dicts(predicted_tools)
+        gold_servers = set(query["gold_server_names"])
+        metrics = score_query(predicted_servers, gold_servers)
+        rows.append(
+            {
+                **query,
+                "server_intent": server_intent,
+                "tool_intent": tool_intent,
+                "query_was_truncated": (
+                    server_intent != query["server_intent"] or tool_intent != query["tool_intent"]
+                ),
+                "predicted_servers_topk": predicted_servers,
+                "predicted_tools_topk": [
+                    {
+                        "tool_key": tool.get("tool_key"),
+                        "server_name": tool.get("server_name"),
+                        "tool_name": tool.get("tool_name"),
+                        "score": tool.get("score"),
+                    }
+                    for tool in predicted_tools
+                ],
+                "adaptive_k": out.get("adaptive_k"),
+                "recommended_handoff_k": out.get("recommended_handoff_k"),
+                "confidence": out.get("confidence"),
+                **metrics,
+            }
+        )
+    return rows
+
+
+def evaluate_exact_subset(
+    exact_path: Path,
+    *,
+    router: RouterEngine | None = None,
+    base_url: str | None = None,
+) -> dict[str, Any]:
     exact = json.loads(exact_path.read_text(encoding="utf-8"))
     queries = []
     for task in exact:
@@ -123,7 +196,7 @@ def evaluate_exact_subset(router: RouterEngine, exact_path: Path) -> dict[str, A
                     "label_quality": "exact",
                 }
             )
-    rows = run_queries(router, queries)
+    rows = run_queries_http(base_url, queries) if base_url else run_queries_router_engine(router, queries)
     return {
         "metadata": {
             "protocol": "router-format-exact-step-subset",
@@ -134,7 +207,12 @@ def evaluate_exact_subset(router: RouterEngine, exact_path: Path) -> dict[str, A
     }
 
 
-def evaluate_task_level(router: RouterEngine, prepared_path: Path) -> dict[str, Any]:
+def evaluate_task_level(
+    prepared_path: Path,
+    *,
+    router: RouterEngine | None = None,
+    base_url: str | None = None,
+) -> dict[str, Any]:
     prepared = json.loads(prepared_path.read_text(encoding="utf-8"))
     queries = []
     fully_resolved = 0
@@ -153,7 +231,7 @@ def evaluate_task_level(router: RouterEngine, prepared_path: Path) -> dict[str, 
                 "gold_resolution": meta,
             }
         )
-    rows = run_queries(router, queries)
+    rows = run_queries_http(base_url, queries) if base_url else run_queries_router_engine(router, queries)
     summary = summarize_rows(rows)
     summary["num_tasks_with_any_gold_servers"] = sum(1 for row in rows if row["gold_server_names"])
     summary["num_fully_resolved_tasks"] = fully_resolved
@@ -167,7 +245,12 @@ def evaluate_task_level(router: RouterEngine, prepared_path: Path) -> dict[str, 
     }
 
 
-def evaluate_reconstructed_stepwise(router: RouterEngine, prepared_path: Path) -> dict[str, Any]:
+def evaluate_reconstructed_stepwise(
+    prepared_path: Path,
+    *,
+    router: RouterEngine | None = None,
+    base_url: str | None = None,
+) -> dict[str, Any]:
     prepared = json.loads(prepared_path.read_text(encoding="utf-8"))
     queries = []
     label_counts: dict[str, int] = {}
@@ -182,7 +265,7 @@ def evaluate_reconstructed_stepwise(router: RouterEngine, prepared_path: Path) -
                     "label_quality": step["reconstruction_label"],
                 }
             )
-    rows = run_queries(router, queries)
+    rows = run_queries_http(base_url, queries) if base_url else run_queries_router_engine(router, queries)
     summary = summarize_rows(rows)
     summary["reconstruction_label_counts"] = label_counts
     summary["num_steps_with_any_gold_servers"] = sum(1 for row in rows if row["gold_server_names"])
@@ -205,16 +288,23 @@ def main() -> None:
     ap.add_argument("--exact", type=Path, default=DEFAULT_EXACT)
     ap.add_argument("--index-dir", type=Path, default=DEFAULT_INDEX)
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT)
+    ap.add_argument(
+        "--base-url",
+        type=str,
+        default=None,
+        help="Optional router URL (e.g. http://127.0.0.1:8777). If set, queries are sent to POST /route.",
+    )
     args = ap.parse_args()
 
-    router = build_router(args.index_dir)
-    exact_result = evaluate_exact_subset(router, args.exact)
-    task_result = evaluate_task_level(router, args.prepared)
-    recon_result = evaluate_reconstructed_stepwise(router, args.prepared)
+    router = None if args.base_url else build_router(args.index_dir)
+    exact_result = evaluate_exact_subset(args.exact, router=router, base_url=args.base_url)
+    task_result = evaluate_task_level(args.prepared, router=router, base_url=args.base_url)
+    recon_result = evaluate_reconstructed_stepwise(args.prepared, router=router, base_url=args.base_url)
 
     payload = {
         "metadata": {
             "index_dir": str(args.index_dir),
+            "base_url": args.base_url,
             "intent_mapping": {
                 "exact_step_subset": {
                     "server_intent": "task question",

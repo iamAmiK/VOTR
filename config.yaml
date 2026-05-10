@@ -28,7 +28,7 @@ bulk_penalty_singular: 0.82
 bulk_boost_plural: 1.08
 splade_enabled: true
 splade_candidate_multiplier: 4
-splade_rrf_weight: 0.35
+splade_rrf_weight: 0.5
 handoff_enabled: true
 server_score_max_weight: 1.0
 server_score_mean_weight: 0.0

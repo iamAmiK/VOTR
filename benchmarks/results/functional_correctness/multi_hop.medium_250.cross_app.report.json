@@ -5,20 +5,20 @@
     "top3_accuracy": 1.0,
     "top5_accuracy": 1.0,
     "handoff_accuracy_at_recommended_k": 1.0,
-    "avg_recommended_handoff_k": 3,
+    "avg_recommended_handoff_k": 2.832,
     "confidence_buckets": {
       "high": {
-        "count": 101,
+        "count": 119,
         "top1_accuracy": 1.0,
         "handoff_accuracy_at_recommended_k": 1.0
       },
       "low": {
-        "count": 101,
+        "count": 98,
         "top1_accuracy": 1.0,
         "handoff_accuracy_at_recommended_k": 1.0
       },
       "medium": {
-        "count": 48,
+        "count": 33,
         "top1_accuracy": 1.0,
         "handoff_accuracy_at_recommended_k": 1.0
       }
@@ -29,20 +29,20 @@
       "top3_accuracy": 1.0,
       "top5_accuracy": 1.0,
       "handoff_accuracy_at_recommended_k": 1.0,
-      "avg_recommended_handoff_k": 3,
+      "avg_recommended_handoff_k": 2.832,
       "confidence_buckets": {
         "high": {
-          "count": 101,
+          "count": 119,
           "top1_accuracy": 1.0,
           "handoff_accuracy_at_recommended_k": 1.0
         },
         "low": {
-          "count": 101,
+          "count": 98,
           "top1_accuracy": 1.0,
           "handoff_accuracy_at_recommended_k": 1.0
         },
         "medium": {
-          "count": 48,
+          "count": 33,
           "top1_accuracy": 1.0,
           "handoff_accuracy_at_recommended_k": 1.0
         }
@@ -82,8 +82,8 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.00957504508535709,
-          "top1_score": 0.038524590163934426,
+          "score_gap": 0.012034061478799717,
+          "top1_score": 0.04098360655737705,
           "top2_score": 0.028949545078577336,
           "equivalent_tool_keys": [
             "AgentQL::extract-web-data"
@@ -110,9 +110,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Aiven::list_projects"
           ],
@@ -138,9 +138,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "Aiven::list_services"
           ],
@@ -166,9 +166,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "APIMatic MCP::validate-openapi-using-apimatic"
           ],
@@ -194,9 +194,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Arize Phoenix::arize-phoenix-otel"
           ],
@@ -234,9 +234,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Arize Phoenix::@arizeai/phoenix-mcp"
           ],
@@ -259,12 +259,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0007977756478053932,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03772681451612903,
+          "score_gap": 0.0009130420412480217,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04007056451612903,
           "equivalent_tool_keys": [
             "Astra DB::UpdateCollection"
           ],
@@ -287,12 +287,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009634953447750921,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037561094819159334,
+          "score_gap": 0.0011497844654904457,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03983382209188661,
           "equivalent_tool_keys": [
             "Astra DB::DeleteCollection"
           ],
@@ -318,9 +318,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "Audiense Insights::get-baselines"
           ],
@@ -346,9 +346,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "Audiense Insights::get-categories"
           ],
@@ -386,9 +386,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011379266482386546,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03738666351569577,
+          "score_gap": 0.0012892507339889725,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969435582338808,
           "equivalent_tool_keys": [
             "AWS::s3_bucket_list"
           ],
@@ -414,9 +414,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0021925194568637174,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03633207070707071,
+          "score_gap": 0.002270583469353965,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03871302308802309,
           "equivalent_tool_keys": [
             "AWS::Get Content Recommendations"
           ],
@@ -433,8 +433,8 @@
             "Axiom::queryApl",
             "Axiom::listDatasets",
             "AWS Athena::run_query",
-            "MariaDB::query_database",
-            "PostgreSQL::query"
+            "PostgreSQL::query",
+            "Prometheus::execute_query"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -442,9 +442,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Axiom::queryApl"
           ],
@@ -470,9 +470,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Axiom::listDatasets"
           ],
@@ -498,9 +498,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Azure::Sample rows from a Kusto table"
           ],
@@ -528,8 +528,8 @@
           "predicted_topk": [
             "Azure::List, create, and get keys",
             "Azure::List, get configuration and get parameters for servers",
-            "Azure::List and query Storage tables",
             "Azure::List and query databases",
+            "Azure::List and query Storage tables",
             "Azure::List and query databases"
           ],
           "hit_at_1": true,
@@ -538,9 +538,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0012150023503143537,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03730958781362007,
+          "score_gap": 0.0012930663628046013,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969054019457245,
           "equivalent_tool_keys": [
             "Azure::List, create, and get keys"
           ],
@@ -566,9 +566,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0008819102631900111,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037642679900744415,
+          "score_gap": 0.001033234348940329,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039950372208436724,
           "equivalent_tool_keys": [
             "Bitrise::list_installable_artifacts"
           ],
@@ -591,12 +591,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "score_gap": 0.0010450504897887292,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039938556067588324,
           "equivalent_tool_keys": [
             "Bitrise::set_installable_artifact_public_install_page"
           ],
@@ -622,9 +622,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.00043627710206240594,
-          "top1_score": 0.03843204653622422,
-          "top2_score": 0.037995769434161816,
+          "score_gap": 0.00039661554732945553,
+          "top1_score": 0.0408514013749339,
+          "top2_score": 0.04045478582760444,
           "equivalent_tool_keys": [
             "Box::box_hubs_ask_ai_tool"
           ],
@@ -641,8 +641,8 @@
             "Box::box_docgen_template_list_jobs_tool",
             "Box::box_docgen_list_jobs_tool",
             "Box::box_docgen_list_jobs_by_batch_tool",
-            "Box::box_docgen_template_list_tool",
-            "Box::box_docgen_template_get_by_id_tool"
+            "Box::box_docgen_template_get_by_id_tool",
+            "Box::box_docgen_template_list_tool"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -650,9 +650,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Box::box_docgen_template_list_jobs_tool"
           ],
@@ -682,7 +682,7 @@
             "Chroma::chroma_get_documents",
             "Chroma::delete_document",
             "Chroma::update_document",
-            "Chroma::chroma_peek_collection"
+            "Chroma::chroma_delete_documents"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -690,9 +690,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.002600292239636502,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.035924297924297924,
+          "score_gap": 0.0030593086330791275,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.037924297924297926,
           "equivalent_tool_keys": [
             "Chroma::read_document"
           ],
@@ -718,9 +718,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.001223002862347125,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373015873015873,
+          "score_gap": 0.0013010668748373727,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03968253968253968,
           "equivalent_tool_keys": [
             "Chroma::chroma_update_documents"
           ],
@@ -746,9 +746,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.002665889573293806,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03585870059064062,
+          "score_gap": 0.0027055511280267563,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.0382780554293503,
           "equivalent_tool_keys": [
             "CircleCI::get_latest_pipeline_status"
           ],
@@ -771,12 +771,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "score_gap": 0.0010450504897887292,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039938556067588324,
           "equivalent_tool_keys": [
             "CircleCI::find_flaky_tests"
           ],
@@ -802,9 +802,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0012150023503143537,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03730958781362007,
+          "score_gap": 0.0012930663628046013,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969054019457245,
           "equivalent_tool_keys": [
             "Codacy::codacy_list_repository_issues"
           ],
@@ -842,9 +842,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Codacy::codacy_get_repository_with_analysis"
           ],
@@ -870,9 +870,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "CodeLogic::codelogic-database-impact"
           ],
@@ -888,9 +888,9 @@
           "predicted_topk": [
             "CodeLogic::codelogic-method-impact",
             "CodeLogic::codelogic-database-impact",
+            "Codacy::codacy_list_repository_pull_requests",
             "Riza::execute_tool",
-            "Riza::execute_code",
-            "Codacy::codacy_list_repository_pull_requests"
+            "Riza::execute_code"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -898,9 +898,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "CodeLogic::codelogic-method-impact"
           ],
@@ -926,9 +926,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Comet Opik::Traces"
           ],
@@ -954,9 +954,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0012150023503143537,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03730958781362007,
+          "score_gap": 0.0012930663628046013,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969054019457245,
           "equivalent_tool_keys": [
             "Comet Opik::Projects/Workspaces Management"
           ],
@@ -994,9 +994,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Couchbase::delete_document_by_id"
           ],
@@ -1022,9 +1022,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Couchbase::get_document_by_id"
           ],
@@ -1050,9 +1050,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Dart::get_config"
           ],
@@ -1078,9 +1078,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Dart::create_doc"
           ],
@@ -1106,9 +1106,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "DevHub::update_blog_post"
           ],
@@ -1146,9 +1146,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "DevHub::get_locations"
           ],
@@ -1174,9 +1174,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.005270858489861668,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03325373167407276,
+          "score_gap": 0.005617198826966263,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03536640773041079,
           "equivalent_tool_keys": [
             "Dynatrace::send_slack_message"
           ],
@@ -1202,9 +1202,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "Dynatrace::list_problems"
           ],
@@ -1230,8 +1230,8 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.00989555790586991,
-          "top1_score": 0.038524590163934426,
+          "score_gap": 0.012354574299312537,
+          "top1_score": 0.04098360655737705,
           "top2_score": 0.028629032258064516,
           "equivalent_tool_keys": [
             "EduBase::edubase_get_user"
@@ -1258,9 +1258,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Elasticsearch::delete_alias"
           ],
@@ -1298,9 +1298,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Elasticsearch::get_document"
           ],
@@ -1326,9 +1326,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Exa::research_paper_search"
           ],
@@ -1354,9 +1354,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0013657812309319436,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03715880893300248,
+          "score_gap": 0.001405442785664894,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03957816377171216,
           "equivalent_tool_keys": [
             "Exa::web_search_exa"
           ],
@@ -1382,9 +1382,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011379266482386546,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03738666351569577,
+          "score_gap": 0.0012892507339889725,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969435582338808,
           "equivalent_tool_keys": [
             "Fibery::list_databases"
           ],
@@ -1410,9 +1410,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.001223002862347125,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373015873015873,
+          "score_gap": 0.0013010668748373727,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03968253968253968,
           "equivalent_tool_keys": [
             "Fibery::describe_database"
           ],
@@ -1450,9 +1450,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "FireCrawl::firecrawl_crawl",
             "Firecrawl::firecrawl_crawl"
@@ -1479,9 +1479,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.00043627710206240594,
-          "top1_score": 0.03843204653622422,
-          "top2_score": 0.037995769434161816,
+          "score_gap": 0.00039661554732945553,
+          "top1_score": 0.0408514013749339,
+          "top2_score": 0.04045478582760444,
           "equivalent_tool_keys": [
             "Firecrawl::firecrawl_search"
           ],
@@ -1507,9 +1507,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Gitee::comment_issue"
           ],
@@ -1527,7 +1527,7 @@
             "Gitee::update_pull",
             "Gitee::merge_pull",
             "Gitee::create_issue",
-            "Gitee::create_release"
+            "Gitee::comment_pull"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1535,9 +1535,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.002329055739283485,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03619553442465094,
+          "score_gap": 0.0023687172940164355,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03861488926336062,
           "equivalent_tool_keys": [
             "Gitee::create_pull"
           ],
@@ -1563,9 +1563,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "Grafana::list_oncall_schedules"
           ],
@@ -1594,8 +1594,8 @@
             "Grafana::list_prometheus_metric_names",
             "Grafana::list_loki_label_names",
             "Grafana::list_prometheus_metric_metadata",
-            "Grafana::list_oncall_teams",
-            "Grafana::list_prometheus_label_names"
+            "Grafana::list_prometheus_label_names",
+            "Grafana::list_oncall_teams"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1603,9 +1603,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011253966155473291,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373991935483871,
+          "score_gap": 0.0011650581702802795,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039818548387096774,
           "equivalent_tool_keys": [
             "Grafana::list_prometheus_metric_names"
           ],
@@ -1631,9 +1631,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "GreptimeDB::get_prompt"
           ],
@@ -1659,9 +1659,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0023530003158739876,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03617158984806044,
+          "score_gap": 0.002606134356375439,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.038377472201001614,
           "equivalent_tool_keys": [
             "GreptimeDB::list_resources"
           ],
@@ -1687,9 +1687,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0016884871987992017,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.036836102965135224,
+          "score_gap": 0.0017665512112894494,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039217055346087604,
           "equivalent_tool_keys": [
             "Heroku::list_addons"
           ],
@@ -1706,8 +1706,8 @@
             "Heroku::get_app_logs",
             "Heroku::pg_ps",
             "Heroku::pg_locks",
-            "Heroku::pipelines_list",
-            "Heroku::pg_psql"
+            "Heroku::pg_psql",
+            "Heroku::pipelines_list"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1715,9 +1715,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011253966155473291,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373991935483871,
+          "score_gap": 0.0011650581702802795,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039818548387096774,
           "equivalent_tool_keys": [
             "Heroku::get_app_logs"
           ],
@@ -1755,9 +1755,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Hologres::execute_dml_sql"
           ],
@@ -1783,9 +1783,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.001223002862347125,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373015873015873,
+          "score_gap": 0.0013010668748373727,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03968253968253968,
           "equivalent_tool_keys": [
             "Hologres::gather_table_statistics"
           ],
@@ -1811,9 +1811,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011379266482386546,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03738666351569577,
+          "score_gap": 0.0012892507339889725,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969435582338808,
           "equivalent_tool_keys": [
             "Hyperbrowser::claude_computer_use_agent"
           ],
@@ -1830,8 +1830,8 @@
             "Hyperbrowser::browser_use_agent",
             "Hyperbrowser::claude_computer_use_agent",
             "Hyperbrowser::openai_computer_use_agent",
-            "Hyperbrowser::search_with_bing",
-            "Hyperbrowser::create_profile"
+            "Hyperbrowser::create_profile",
+            "Hyperbrowser::search_with_bing"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -1839,9 +1839,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011379266482386546,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03738666351569577,
+          "score_gap": 0.0012892507339889725,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969435582338808,
           "equivalent_tool_keys": [
             "Hyperbrowser::browser_use_agent"
           ],
@@ -1867,9 +1867,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.011903650128360244,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.02662094003557418,
+          "score_gap": 0.012533398229119946,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.028450208328257107,
           "equivalent_tool_keys": [
             "Inkeep::search-product-content"
           ],
@@ -1907,9 +1907,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Kagi Search::search"
           ],
@@ -1935,9 +1935,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Kagi Search::summarizer"
           ],
@@ -1963,9 +1963,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0016217976159805872,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03690279254795384,
+          "score_gap": 0.0016614591707135376,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039322147386663515,
           "equivalent_tool_keys": [
             "Keboola::get_table_detail"
           ],
@@ -1981,19 +1981,19 @@
           "predicted_topk": [
             "Keboola::get_job_detail",
             "Unstructured::get_job_info",
-            "Keboola::retrieve_jobs",
             "Keboola::get_table_detail",
+            "Keboola::retrieve_jobs",
             "Keboola::retrieve_components"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "score_gap": 0.0010450504897887292,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039938556067588324,
           "equivalent_tool_keys": [
             "Keboola::get_job_detail"
           ],
@@ -2019,9 +2019,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011194668242759803,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037405123339658446,
+          "score_gap": 0.0013726008647774318,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03961100569259962,
           "equivalent_tool_keys": [
             "Redis::hash"
           ],
@@ -2059,9 +2059,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.001223002862347125,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373015873015873,
+          "score_gap": 0.0013010668748373727,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03968253968253968,
           "equivalent_tool_keys": [
             "Redis::set"
           ],
@@ -2087,9 +2087,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Stripe::createInvoice"
           ],
@@ -2115,9 +2115,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0014710187353629972,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03705357142857143,
+          "score_gap": 0.0015490827478532448,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03943452380952381,
           "equivalent_tool_keys": [
             "Stripe::listSubscriptions"
           ],
@@ -2132,8 +2132,8 @@
           "expected_tool_key": "Airtable::list_records",
           "predicted_topk": [
             "Airtable::list_records",
-            "Airtable::list_tables",
             "Airtable::delete_records",
+            "Airtable::list_tables",
             "Airtable::list_bases",
             "Airtable::update_records"
           ],
@@ -2143,9 +2143,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0015225420328540407,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037002048131080385,
+          "score_gap": 0.0016614591707135376,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039322147386663515,
           "equivalent_tool_keys": [
             "Airtable::list_records"
           ],
@@ -2162,18 +2162,18 @@
             "Airtable::search_records",
             "Airtable::get_record",
             "Airtable::list_records",
-            "Airtable::update_records",
-            "Airtable::describe_table"
+            "Airtable::describe_table",
+            "Airtable::list_tables"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009634953447750921,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037561094819159334,
+          "score_gap": 0.0011497844654904457,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03983382209188661,
           "equivalent_tool_keys": [
             "Airtable::search_records"
           ],
@@ -2211,9 +2211,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Chess.com::get_player_profile"
           ],
@@ -2239,9 +2239,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Chess.com::get_player_stats"
           ],
@@ -2259,17 +2259,17 @@
             "Datadog::get-monitors",
             "Datadog::get-incidents",
             "Datadog::get-metric-metadata",
-            "Datadog::get-dashboard"
+            "Datadog::get-metrics"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "score_gap": 0.0010450504897887292,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039938556067588324,
           "equivalent_tool_keys": [
             "Datadog::get-events"
           ],
@@ -2295,9 +2295,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0015466773088549865,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03697791285507944,
+          "score_gap": 0.0017668877321483575,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039216718825228696,
           "equivalent_tool_keys": [
             "Datadog::get-metric-metadata"
           ],
@@ -2323,9 +2323,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006072323054905071,
-          "top1_score": 0.038078030436570896,
-          "top2_score": 0.03747079813108039,
+          "score_gap": 0.0006444346864428879,
+          "top1_score": 0.040458982817523276,
+          "top2_score": 0.03981454813108039,
           "equivalent_tool_keys": [
             "Discord::delete_channel"
           ],
@@ -2363,9 +2363,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0014553869656989682,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03706920319823546,
+          "score_gap": 0.0015334509781892158,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03945015557918784,
           "equivalent_tool_keys": [
             "Discord::send_private_message"
           ],
@@ -2391,9 +2391,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011253966155473291,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373991935483871,
+          "score_gap": 0.0011650581702802795,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039818548387096774,
           "equivalent_tool_keys": [
             "Docker::create_network"
           ],
@@ -2419,9 +2419,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011253966155473291,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373991935483871,
+          "score_gap": 0.0011650581702802795,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039818548387096774,
           "equivalent_tool_keys": [
             "Docker::create_volume"
           ],
@@ -2447,9 +2447,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0018548978490808207,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.036669692314853605,
+          "score_gap": 0.0018945594038137711,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03908904715356328,
           "equivalent_tool_keys": [
             "Git::git_list_repositories"
           ],
@@ -2475,9 +2475,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011253966155473291,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373991935483871,
+          "score_gap": 0.0011650581702802795,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039818548387096774,
           "equivalent_tool_keys": [
             "Git::git_create_branch"
           ],
@@ -2515,9 +2515,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.002434054282681501,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.036090535881252925,
+          "score_gap": 0.0025493206761241297,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03843428588125292,
           "equivalent_tool_keys": [
             "HubSpot::hubspot_get_recent_conversations"
           ],
@@ -2543,9 +2543,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "HubSpot::hubspot_get_active_contacts"
           ],
@@ -2571,9 +2571,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Shopify::get-order-by-id"
           ],
@@ -2599,9 +2599,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Shopify::get-customers"
           ],
@@ -2627,9 +2627,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Talk To Figma::get_nodes_info"
           ],
@@ -2667,9 +2667,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "Talk To Figma::set_layout_sizing"
           ],
@@ -2695,9 +2695,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0018250234812189695,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.036699566682715457,
+          "score_gap": 0.0018646850359519199,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03911892152142513,
           "equivalent_tool_keys": [
             "Telegram::unblock_user"
           ],
@@ -2723,9 +2723,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Telegram::import_contacts"
           ],
@@ -2751,8 +2751,8 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.00957504508535709,
-          "top1_score": 0.038524590163934426,
+          "score_gap": 0.012034061478799717,
+          "top1_score": 0.04098360655737705,
           "top2_score": 0.028949545078577336,
           "equivalent_tool_keys": [
             "AgentQL::extract-web-data"
@@ -2779,9 +2779,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Aiven::list_projects"
           ],
@@ -2819,9 +2819,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "Aiven::list_services"
           ],
@@ -2847,9 +2847,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "APIMatic MCP::validate-openapi-using-apimatic"
           ],
@@ -2875,9 +2875,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Arize Phoenix::arize-phoenix-otel"
           ],
@@ -2903,9 +2903,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Arize Phoenix::@arizeai/phoenix-mcp"
           ],
@@ -2928,12 +2928,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0007977756478053932,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03772681451612903,
+          "score_gap": 0.0009130420412480217,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04007056451612903,
           "equivalent_tool_keys": [
             "Astra DB::UpdateCollection"
           ],
@@ -2968,12 +2968,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009634953447750921,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037561094819159334,
+          "score_gap": 0.0011497844654904457,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03983382209188661,
           "equivalent_tool_keys": [
             "Astra DB::DeleteCollection"
           ],
@@ -2999,9 +2999,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "Audiense Insights::get-baselines"
           ],
@@ -3027,9 +3027,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "Audiense Insights::get-categories"
           ],
@@ -3055,9 +3055,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011379266482386546,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03738666351569577,
+          "score_gap": 0.0012892507339889725,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969435582338808,
           "equivalent_tool_keys": [
             "AWS::s3_bucket_list"
           ],
@@ -3083,9 +3083,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0021925194568637174,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03633207070707071,
+          "score_gap": 0.002270583469353965,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03871302308802309,
           "equivalent_tool_keys": [
             "AWS::Get Content Recommendations"
           ],
@@ -3114,8 +3114,8 @@
             "Axiom::queryApl",
             "Axiom::listDatasets",
             "AWS Athena::run_query",
-            "MariaDB::query_database",
-            "PostgreSQL::query"
+            "PostgreSQL::query",
+            "Prometheus::execute_query"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -3123,9 +3123,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Axiom::queryApl"
           ],
@@ -3151,9 +3151,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Axiom::listDatasets"
           ],
@@ -3179,9 +3179,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Azure::Sample rows from a Kusto table"
           ],
@@ -3197,8 +3197,8 @@
           "predicted_topk": [
             "Azure::List, create, and get keys",
             "Azure::List, get configuration and get parameters for servers",
-            "Azure::List and query Storage tables",
             "Azure::List and query databases",
+            "Azure::List and query Storage tables",
             "Azure::List and query databases"
           ],
           "hit_at_1": true,
@@ -3207,9 +3207,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0012150023503143537,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03730958781362007,
+          "score_gap": 0.0012930663628046013,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969054019457245,
           "equivalent_tool_keys": [
             "Azure::List, create, and get keys"
           ],
@@ -3235,9 +3235,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0008819102631900111,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037642679900744415,
+          "score_gap": 0.001033234348940329,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039950372208436724,
           "equivalent_tool_keys": [
             "Bitrise::list_installable_artifacts"
           ],
@@ -3272,12 +3272,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "score_gap": 0.0010450504897887292,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039938556067588324,
           "equivalent_tool_keys": [
             "Bitrise::set_installable_artifact_public_install_page"
           ],
@@ -3303,9 +3303,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.00043627710206240594,
-          "top1_score": 0.03843204653622422,
-          "top2_score": 0.037995769434161816,
+          "score_gap": 0.00039661554732945553,
+          "top1_score": 0.0408514013749339,
+          "top2_score": 0.04045478582760444,
           "equivalent_tool_keys": [
             "Box::box_hubs_ask_ai_tool"
           ],
@@ -3322,8 +3322,8 @@
             "Box::box_docgen_template_list_jobs_tool",
             "Box::box_docgen_list_jobs_tool",
             "Box::box_docgen_list_jobs_by_batch_tool",
-            "Box::box_docgen_template_list_tool",
-            "Box::box_docgen_template_get_by_id_tool"
+            "Box::box_docgen_template_get_by_id_tool",
+            "Box::box_docgen_template_list_tool"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -3331,9 +3331,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Box::box_docgen_template_list_jobs_tool"
           ],
@@ -3351,7 +3351,7 @@
             "Chroma::chroma_get_documents",
             "Chroma::delete_document",
             "Chroma::update_document",
-            "Chroma::chroma_peek_collection"
+            "Chroma::chroma_delete_documents"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -3359,9 +3359,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.002600292239636502,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.035924297924297924,
+          "score_gap": 0.0030593086330791275,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.037924297924297926,
           "equivalent_tool_keys": [
             "Chroma::read_document"
           ],
@@ -3387,9 +3387,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.001223002862347125,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373015873015873,
+          "score_gap": 0.0013010668748373727,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03968253968253968,
           "equivalent_tool_keys": [
             "Chroma::chroma_update_documents"
           ],
@@ -3427,9 +3427,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.002665889573293806,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03585870059064062,
+          "score_gap": 0.0027055511280267563,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.0382780554293503,
           "equivalent_tool_keys": [
             "CircleCI::get_latest_pipeline_status"
           ],
@@ -3452,12 +3452,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "score_gap": 0.0010450504897887292,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039938556067588324,
           "equivalent_tool_keys": [
             "CircleCI::find_flaky_tests"
           ],
@@ -3483,9 +3483,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0012150023503143537,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03730958781362007,
+          "score_gap": 0.0012930663628046013,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969054019457245,
           "equivalent_tool_keys": [
             "Codacy::codacy_list_repository_issues"
           ],
@@ -3511,9 +3511,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Codacy::codacy_get_repository_with_analysis"
           ],
@@ -3539,9 +3539,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "CodeLogic::codelogic-database-impact"
           ],
@@ -3569,9 +3569,9 @@
           "predicted_topk": [
             "CodeLogic::codelogic-method-impact",
             "CodeLogic::codelogic-database-impact",
+            "Codacy::codacy_list_repository_pull_requests",
             "Riza::execute_tool",
-            "Riza::execute_code",
-            "Codacy::codacy_list_repository_pull_requests"
+            "Riza::execute_code"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -3579,9 +3579,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "CodeLogic::codelogic-method-impact"
           ],
@@ -3607,9 +3607,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Comet Opik::Traces"
           ],
@@ -3635,9 +3635,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0012150023503143537,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03730958781362007,
+          "score_gap": 0.0012930663628046013,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969054019457245,
           "equivalent_tool_keys": [
             "Comet Opik::Projects/Workspaces Management"
           ],
@@ -3663,9 +3663,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Couchbase::delete_document_by_id"
           ],
@@ -3691,9 +3691,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Couchbase::get_document_by_id"
           ],
@@ -3731,9 +3731,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Dart::get_config"
           ],
@@ -3759,9 +3759,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Dart::create_doc"
           ],
@@ -3787,9 +3787,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "DevHub::update_blog_post"
           ],
@@ -3815,9 +3815,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "DevHub::get_locations"
           ],
@@ -3843,9 +3843,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.005270858489861668,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03325373167407276,
+          "score_gap": 0.005617198826966263,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03536640773041079,
           "equivalent_tool_keys": [
             "Dynatrace::send_slack_message"
           ],
@@ -3883,9 +3883,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "Dynatrace::list_problems"
           ],
@@ -3911,8 +3911,8 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.00989555790586991,
-          "top1_score": 0.038524590163934426,
+          "score_gap": 0.012354574299312537,
+          "top1_score": 0.04098360655737705,
           "top2_score": 0.028629032258064516,
           "equivalent_tool_keys": [
             "EduBase::edubase_get_user"
@@ -3939,9 +3939,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Elasticsearch::delete_alias"
           ],
@@ -3967,9 +3967,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Elasticsearch::get_document"
           ],
@@ -3995,9 +3995,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Exa::research_paper_search"
           ],
@@ -4035,9 +4035,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0013657812309319436,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03715880893300248,
+          "score_gap": 0.001405442785664894,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03957816377171216,
           "equivalent_tool_keys": [
             "Exa::web_search_exa"
           ],
@@ -4063,9 +4063,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011379266482386546,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03738666351569577,
+          "score_gap": 0.0012892507339889725,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969435582338808,
           "equivalent_tool_keys": [
             "Fibery::list_databases"
           ],
@@ -4091,9 +4091,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.001223002862347125,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373015873015873,
+          "score_gap": 0.0013010668748373727,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03968253968253968,
           "equivalent_tool_keys": [
             "Fibery::describe_database"
           ],
@@ -4119,9 +4119,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "FireCrawl::firecrawl_crawl",
             "Firecrawl::firecrawl_crawl"
@@ -4148,9 +4148,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.00043627710206240594,
-          "top1_score": 0.03843204653622422,
-          "top2_score": 0.037995769434161816,
+          "score_gap": 0.00039661554732945553,
+          "top1_score": 0.0408514013749339,
+          "top2_score": 0.04045478582760444,
           "equivalent_tool_keys": [
             "Firecrawl::firecrawl_search"
           ],
@@ -4188,9 +4188,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Gitee::comment_issue"
           ],
@@ -4208,7 +4208,7 @@
             "Gitee::update_pull",
             "Gitee::merge_pull",
             "Gitee::create_issue",
-            "Gitee::create_release"
+            "Gitee::comment_pull"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4216,9 +4216,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.002329055739283485,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03619553442465094,
+          "score_gap": 0.0023687172940164355,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03861488926336062,
           "equivalent_tool_keys": [
             "Gitee::create_pull"
           ],
@@ -4244,9 +4244,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "Grafana::list_oncall_schedules"
           ],
@@ -4263,8 +4263,8 @@
             "Grafana::list_prometheus_metric_names",
             "Grafana::list_loki_label_names",
             "Grafana::list_prometheus_metric_metadata",
-            "Grafana::list_oncall_teams",
-            "Grafana::list_prometheus_label_names"
+            "Grafana::list_prometheus_label_names",
+            "Grafana::list_oncall_teams"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4272,9 +4272,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011253966155473291,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373991935483871,
+          "score_gap": 0.0011650581702802795,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039818548387096774,
           "equivalent_tool_keys": [
             "Grafana::list_prometheus_metric_names"
           ],
@@ -4300,9 +4300,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "GreptimeDB::get_prompt"
           ],
@@ -4340,9 +4340,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0023530003158739876,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03617158984806044,
+          "score_gap": 0.002606134356375439,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.038377472201001614,
           "equivalent_tool_keys": [
             "GreptimeDB::list_resources"
           ],
@@ -4368,9 +4368,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0016884871987992017,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.036836102965135224,
+          "score_gap": 0.0017665512112894494,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039217055346087604,
           "equivalent_tool_keys": [
             "Heroku::list_addons"
           ],
@@ -4387,8 +4387,8 @@
             "Heroku::get_app_logs",
             "Heroku::pg_ps",
             "Heroku::pg_locks",
-            "Heroku::pipelines_list",
-            "Heroku::pg_psql"
+            "Heroku::pg_psql",
+            "Heroku::pipelines_list"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4396,9 +4396,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011253966155473291,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373991935483871,
+          "score_gap": 0.0011650581702802795,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039818548387096774,
           "equivalent_tool_keys": [
             "Heroku::get_app_logs"
           ],
@@ -4424,9 +4424,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Hologres::execute_dml_sql"
           ],
@@ -4452,9 +4452,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.001223002862347125,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373015873015873,
+          "score_gap": 0.0013010668748373727,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03968253968253968,
           "equivalent_tool_keys": [
             "Hologres::gather_table_statistics"
           ],
@@ -4492,9 +4492,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011379266482386546,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03738666351569577,
+          "score_gap": 0.0012892507339889725,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969435582338808,
           "equivalent_tool_keys": [
             "Hyperbrowser::claude_computer_use_agent"
           ],
@@ -4511,8 +4511,8 @@
             "Hyperbrowser::browser_use_agent",
             "Hyperbrowser::claude_computer_use_agent",
             "Hyperbrowser::openai_computer_use_agent",
-            "Hyperbrowser::search_with_bing",
-            "Hyperbrowser::create_profile"
+            "Hyperbrowser::create_profile",
+            "Hyperbrowser::search_with_bing"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -4520,9 +4520,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011379266482386546,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03738666351569577,
+          "score_gap": 0.0012892507339889725,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969435582338808,
           "equivalent_tool_keys": [
             "Hyperbrowser::browser_use_agent"
           ],
@@ -4548,9 +4548,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.011903650128360244,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.02662094003557418,
+          "score_gap": 0.012533398229119946,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.028450208328257107,
           "equivalent_tool_keys": [
             "Inkeep::search-product-content"
           ],
@@ -4576,9 +4576,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Kagi Search::search"
           ],
@@ -4604,9 +4604,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Kagi Search::summarizer"
           ],
@@ -4644,9 +4644,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0016217976159805872,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03690279254795384,
+          "score_gap": 0.0016614591707135376,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039322147386663515,
           "equivalent_tool_keys": [
             "Keboola::get_table_detail"
           ],
@@ -4662,19 +4662,19 @@
           "predicted_topk": [
             "Keboola::get_job_detail",
             "Unstructured::get_job_info",
-            "Keboola::retrieve_jobs",
             "Keboola::get_table_detail",
+            "Keboola::retrieve_jobs",
             "Keboola::retrieve_components"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "score_gap": 0.0010450504897887292,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039938556067588324,
           "equivalent_tool_keys": [
             "Keboola::get_job_detail"
           ],
@@ -4700,9 +4700,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011194668242759803,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037405123339658446,
+          "score_gap": 0.0013726008647774318,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03961100569259962,
           "equivalent_tool_keys": [
             "Redis::hash"
           ],
@@ -4728,9 +4728,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.001223002862347125,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373015873015873,
+          "score_gap": 0.0013010668748373727,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03968253968253968,
           "equivalent_tool_keys": [
             "Redis::set"
           ],
@@ -4756,9 +4756,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Stripe::createInvoice"
           ],
@@ -4796,9 +4796,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0014710187353629972,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03705357142857143,
+          "score_gap": 0.0015490827478532448,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03943452380952381,
           "equivalent_tool_keys": [
             "Stripe::listSubscriptions"
           ],
@@ -4813,8 +4813,8 @@
           "expected_tool_key": "Airtable::list_records",
           "predicted_topk": [
             "Airtable::list_records",
-            "Airtable::list_tables",
             "Airtable::delete_records",
+            "Airtable::list_tables",
             "Airtable::list_bases",
             "Airtable::update_records"
           ],
@@ -4824,9 +4824,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0015225420328540407,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037002048131080385,
+          "score_gap": 0.0016614591707135376,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039322147386663515,
           "equivalent_tool_keys": [
             "Airtable::list_records"
           ],
@@ -4843,18 +4843,18 @@
             "Airtable::search_records",
             "Airtable::get_record",
             "Airtable::list_records",
-            "Airtable::update_records",
-            "Airtable::describe_table"
+            "Airtable::describe_table",
+            "Airtable::list_tables"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009634953447750921,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037561094819159334,
+          "score_gap": 0.0011497844654904457,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03983382209188661,
           "equivalent_tool_keys": [
             "Airtable::search_records"
           ],
@@ -4880,9 +4880,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Chess.com::get_player_profile"
           ],
@@ -4908,9 +4908,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Chess.com::get_player_stats"
           ],
@@ -4940,17 +4940,17 @@
             "Datadog::get-monitors",
             "Datadog::get-incidents",
             "Datadog::get-metric-metadata",
-            "Datadog::get-dashboard"
+            "Datadog::get-metrics"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "score_gap": 0.0010450504897887292,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039938556067588324,
           "equivalent_tool_keys": [
             "Datadog::get-events"
           ],
@@ -4976,9 +4976,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0015466773088549865,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03697791285507944,
+          "score_gap": 0.0017668877321483575,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039216718825228696,
           "equivalent_tool_keys": [
             "Datadog::get-metric-metadata"
           ],
@@ -5004,9 +5004,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006072323054905071,
-          "top1_score": 0.038078030436570896,
-          "top2_score": 0.03747079813108039,
+          "score_gap": 0.0006444346864428879,
+          "top1_score": 0.040458982817523276,
+          "top2_score": 0.03981454813108039,
           "equivalent_tool_keys": [
             "Discord::delete_channel"
           ],
@@ -5032,9 +5032,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0014553869656989682,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03706920319823546,
+          "score_gap": 0.0015334509781892158,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03945015557918784,
           "equivalent_tool_keys": [
             "Discord::send_private_message"
           ],
@@ -5060,9 +5060,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011253966155473291,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373991935483871,
+          "score_gap": 0.0011650581702802795,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039818548387096774,
           "equivalent_tool_keys": [
             "Docker::create_network"
           ],
@@ -5100,9 +5100,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011253966155473291,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373991935483871,
+          "score_gap": 0.0011650581702802795,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039818548387096774,
           "equivalent_tool_keys": [
             "Docker::create_volume"
           ],
@@ -5128,9 +5128,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0018548978490808207,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.036669692314853605,
+          "score_gap": 0.0018945594038137711,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03908904715356328,
           "equivalent_tool_keys": [
             "Git::git_list_repositories"
           ],
@@ -5156,9 +5156,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011253966155473291,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373991935483871,
+          "score_gap": 0.0011650581702802795,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039818548387096774,
           "equivalent_tool_keys": [
             "Git::git_create_branch"
           ],
@@ -5184,9 +5184,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.002434054282681501,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.036090535881252925,
+          "score_gap": 0.0025493206761241297,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03843428588125292,
           "equivalent_tool_keys": [
             "HubSpot::hubspot_get_recent_conversations"
           ],
@@ -5212,9 +5212,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "HubSpot::hubspot_get_active_contacts"
           ],
@@ -5252,9 +5252,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Shopify::get-order-by-id"
           ],
@@ -5280,9 +5280,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Shopify::get-customers"
           ],
@@ -5308,9 +5308,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Talk To Figma::get_nodes_info"
           ],
@@ -5336,9 +5336,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "Talk To Figma::set_layout_sizing"
           ],
@@ -5364,9 +5364,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0018250234812189695,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.036699566682715457,
+          "score_gap": 0.0018646850359519199,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03911892152142513,
           "equivalent_tool_keys": [
             "Telegram::unblock_user"
           ],
@@ -5404,9 +5404,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Telegram::import_contacts"
           ],
@@ -5432,8 +5432,8 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.00957504508535709,
-          "top1_score": 0.038524590163934426,
+          "score_gap": 0.012034061478799717,
+          "top1_score": 0.04098360655737705,
           "top2_score": 0.028949545078577336,
           "equivalent_tool_keys": [
             "AgentQL::extract-web-data"
@@ -5460,9 +5460,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Aiven::list_projects"
           ],
@@ -5488,9 +5488,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "Aiven::list_services"
           ],
@@ -5516,9 +5516,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "APIMatic MCP::validate-openapi-using-apimatic"
           ],
@@ -5556,9 +5556,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Arize Phoenix::arize-phoenix-otel"
           ],
@@ -5584,9 +5584,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Arize Phoenix::@arizeai/phoenix-mcp"
           ],
@@ -5609,12 +5609,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "low",
-          "recommended_handoff_k": 5,
+          "confidence": "medium",
+          "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0007977756478053932,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03772681451612903,
+          "score_gap": 0.0009130420412480217,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04007056451612903,
           "equivalent_tool_keys": [
             "Astra DB::UpdateCollection"
           ],
@@ -5637,12 +5637,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009634953447750921,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037561094819159334,
+          "score_gap": 0.0011497844654904457,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03983382209188661,
           "equivalent_tool_keys": [
             "Astra DB::DeleteCollection"
           ],
@@ -5668,9 +5668,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "Audiense Insights::get-baselines"
           ],
@@ -5708,9 +5708,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "Audiense Insights::get-categories"
           ],
@@ -5736,9 +5736,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011379266482386546,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03738666351569577,
+          "score_gap": 0.0012892507339889725,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969435582338808,
           "equivalent_tool_keys": [
             "AWS::s3_bucket_list"
           ],
@@ -5764,9 +5764,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0021925194568637174,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03633207070707071,
+          "score_gap": 0.002270583469353965,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03871302308802309,
           "equivalent_tool_keys": [
             "AWS::Get Content Recommendations"
           ],
@@ -5783,8 +5783,8 @@
             "Axiom::queryApl",
             "Axiom::listDatasets",
             "AWS Athena::run_query",
-            "MariaDB::query_database",
-            "PostgreSQL::query"
+            "PostgreSQL::query",
+            "Prometheus::execute_query"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -5792,9 +5792,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Axiom::queryApl"
           ],
@@ -5820,9 +5820,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Axiom::listDatasets"
           ],
@@ -5860,9 +5860,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Azure::Sample rows from a Kusto table"
           ],
@@ -5878,8 +5878,8 @@
           "predicted_topk": [
             "Azure::List, create, and get keys",
             "Azure::List, get configuration and get parameters for servers",
-            "Azure::List and query Storage tables",
             "Azure::List and query databases",
+            "Azure::List and query Storage tables",
             "Azure::List and query databases"
           ],
           "hit_at_1": true,
@@ -5888,9 +5888,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0012150023503143537,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03730958781362007,
+          "score_gap": 0.0012930663628046013,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969054019457245,
           "equivalent_tool_keys": [
             "Azure::List, create, and get keys"
           ],
@@ -5916,9 +5916,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0008819102631900111,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037642679900744415,
+          "score_gap": 0.001033234348940329,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039950372208436724,
           "equivalent_tool_keys": [
             "Bitrise::list_installable_artifacts"
           ],
@@ -5941,12 +5941,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "score_gap": 0.0010450504897887292,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039938556067588324,
           "equivalent_tool_keys": [
             "Bitrise::set_installable_artifact_public_install_page"
           ],
@@ -5972,9 +5972,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.00043627710206240594,
-          "top1_score": 0.03843204653622422,
-          "top2_score": 0.037995769434161816,
+          "score_gap": 0.00039661554732945553,
+          "top1_score": 0.0408514013749339,
+          "top2_score": 0.04045478582760444,
           "equivalent_tool_keys": [
             "Box::box_hubs_ask_ai_tool"
           ],
@@ -6003,8 +6003,8 @@
             "Box::box_docgen_template_list_jobs_tool",
             "Box::box_docgen_list_jobs_tool",
             "Box::box_docgen_list_jobs_by_batch_tool",
-            "Box::box_docgen_template_list_tool",
-            "Box::box_docgen_template_get_by_id_tool"
+            "Box::box_docgen_template_get_by_id_tool",
+            "Box::box_docgen_template_list_tool"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -6012,9 +6012,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Box::box_docgen_template_list_jobs_tool"
           ],
@@ -6032,7 +6032,7 @@
             "Chroma::chroma_get_documents",
             "Chroma::delete_document",
             "Chroma::update_document",
-            "Chroma::chroma_peek_collection"
+            "Chroma::chroma_delete_documents"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -6040,9 +6040,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.002600292239636502,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.035924297924297924,
+          "score_gap": 0.0030593086330791275,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.037924297924297926,
           "equivalent_tool_keys": [
             "Chroma::read_document"
           ],
@@ -6068,9 +6068,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.001223002862347125,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373015873015873,
+          "score_gap": 0.0013010668748373727,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03968253968253968,
           "equivalent_tool_keys": [
             "Chroma::chroma_update_documents"
           ],
@@ -6096,9 +6096,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.002665889573293806,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03585870059064062,
+          "score_gap": 0.0027055511280267563,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.0382780554293503,
           "equivalent_tool_keys": [
             "CircleCI::get_latest_pipeline_status"
           ],
@@ -6121,12 +6121,12 @@
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "score_gap": 0.0010450504897887292,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039938556067588324,
           "equivalent_tool_keys": [
             "CircleCI::find_flaky_tests"
           ],
@@ -6164,9 +6164,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0012150023503143537,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03730958781362007,
+          "score_gap": 0.0012930663628046013,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969054019457245,
           "equivalent_tool_keys": [
             "Codacy::codacy_list_repository_issues"
           ],
@@ -6192,9 +6192,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Codacy::codacy_get_repository_with_analysis"
           ],
@@ -6220,9 +6220,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "CodeLogic::codelogic-database-impact"
           ],
@@ -6238,9 +6238,9 @@
           "predicted_topk": [
             "CodeLogic::codelogic-method-impact",
             "CodeLogic::codelogic-database-impact",
+            "Codacy::codacy_list_repository_pull_requests",
             "Riza::execute_tool",
-            "Riza::execute_code",
-            "Codacy::codacy_list_repository_pull_requests"
+            "Riza::execute_code"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -6248,9 +6248,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "CodeLogic::codelogic-method-impact"
           ],
@@ -6276,9 +6276,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Comet Opik::Traces"
           ],
@@ -6316,9 +6316,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0012150023503143537,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03730958781362007,
+          "score_gap": 0.0012930663628046013,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969054019457245,
           "equivalent_tool_keys": [
             "Comet Opik::Projects/Workspaces Management"
           ],
@@ -6344,9 +6344,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Couchbase::delete_document_by_id"
           ],
@@ -6372,9 +6372,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Couchbase::get_document_by_id"
           ],
@@ -6400,9 +6400,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Dart::get_config"
           ],
@@ -6428,9 +6428,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Dart::create_doc"
           ],
@@ -6468,9 +6468,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "DevHub::update_blog_post"
           ],
@@ -6496,9 +6496,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "DevHub::get_locations"
           ],
@@ -6524,9 +6524,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.005270858489861668,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03325373167407276,
+          "score_gap": 0.005617198826966263,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03536640773041079,
           "equivalent_tool_keys": [
             "Dynatrace::send_slack_message"
           ],
@@ -6552,9 +6552,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "Dynatrace::list_problems"
           ],
@@ -6580,8 +6580,8 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.00989555790586991,
-          "top1_score": 0.038524590163934426,
+          "score_gap": 0.012354574299312537,
+          "top1_score": 0.04098360655737705,
           "top2_score": 0.028629032258064516,
           "equivalent_tool_keys": [
             "EduBase::edubase_get_user"
@@ -6620,9 +6620,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Elasticsearch::delete_alias"
           ],
@@ -6648,9 +6648,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Elasticsearch::get_document"
           ],
@@ -6676,9 +6676,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Exa::research_paper_search"
           ],
@@ -6704,9 +6704,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0013657812309319436,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03715880893300248,
+          "score_gap": 0.001405442785664894,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03957816377171216,
           "equivalent_tool_keys": [
             "Exa::web_search_exa"
           ],
@@ -6732,9 +6732,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011379266482386546,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03738666351569577,
+          "score_gap": 0.0012892507339889725,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969435582338808,
           "equivalent_tool_keys": [
             "Fibery::list_databases"
           ],
@@ -6772,9 +6772,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.001223002862347125,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373015873015873,
+          "score_gap": 0.0013010668748373727,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03968253968253968,
           "equivalent_tool_keys": [
             "Fibery::describe_database"
           ],
@@ -6800,9 +6800,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "FireCrawl::firecrawl_crawl",
             "Firecrawl::firecrawl_crawl"
@@ -6829,9 +6829,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.00043627710206240594,
-          "top1_score": 0.03843204653622422,
-          "top2_score": 0.037995769434161816,
+          "score_gap": 0.00039661554732945553,
+          "top1_score": 0.0408514013749339,
+          "top2_score": 0.04045478582760444,
           "equivalent_tool_keys": [
             "Firecrawl::firecrawl_search"
           ],
@@ -6857,9 +6857,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Gitee::comment_issue"
           ],
@@ -6877,7 +6877,7 @@
             "Gitee::update_pull",
             "Gitee::merge_pull",
             "Gitee::create_issue",
-            "Gitee::create_release"
+            "Gitee::comment_pull"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -6885,9 +6885,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.002329055739283485,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03619553442465094,
+          "score_gap": 0.0023687172940164355,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03861488926336062,
           "equivalent_tool_keys": [
             "Gitee::create_pull"
           ],
@@ -6925,9 +6925,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "Grafana::list_oncall_schedules"
           ],
@@ -6944,8 +6944,8 @@
             "Grafana::list_prometheus_metric_names",
             "Grafana::list_loki_label_names",
             "Grafana::list_prometheus_metric_metadata",
-            "Grafana::list_oncall_teams",
-            "Grafana::list_prometheus_label_names"
+            "Grafana::list_prometheus_label_names",
+            "Grafana::list_oncall_teams"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -6953,9 +6953,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011253966155473291,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373991935483871,
+          "score_gap": 0.0011650581702802795,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039818548387096774,
           "equivalent_tool_keys": [
             "Grafana::list_prometheus_metric_names"
           ],
@@ -6981,9 +6981,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000710970092249838,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03781362007168459,
+          "score_gap": 0.0007890341047400856,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04019457245263697,
           "equivalent_tool_keys": [
             "GreptimeDB::get_prompt"
           ],
@@ -7009,9 +7009,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0023530003158739876,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03617158984806044,
+          "score_gap": 0.002606134356375439,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.038377472201001614,
           "equivalent_tool_keys": [
             "GreptimeDB::list_resources"
           ],
@@ -7037,9 +7037,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0016884871987992017,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.036836102965135224,
+          "score_gap": 0.0017665512112894494,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039217055346087604,
           "equivalent_tool_keys": [
             "Heroku::list_addons"
           ],
@@ -7068,8 +7068,8 @@
             "Heroku::get_app_logs",
             "Heroku::pg_ps",
             "Heroku::pg_locks",
-            "Heroku::pipelines_list",
-            "Heroku::pg_psql"
+            "Heroku::pg_psql",
+            "Heroku::pipelines_list"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -7077,9 +7077,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011253966155473291,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373991935483871,
+          "score_gap": 0.0011650581702802795,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039818548387096774,
           "equivalent_tool_keys": [
             "Heroku::get_app_logs"
           ],
@@ -7105,9 +7105,9 @@
           "confidence": "medium",
           "recommended_handoff_k": 3,
           "hit_at_recommended_k": true,
-          "score_gap": 0.000877380742531457,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03764720942140297,
+          "score_gap": 0.0009170422972644074,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.040066564260112646,
           "equivalent_tool_keys": [
             "Hologres::execute_dml_sql"
           ],
@@ -7133,9 +7133,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.001223002862347125,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373015873015873,
+          "score_gap": 0.0013010668748373727,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03968253968253968,
           "equivalent_tool_keys": [
             "Hologres::gather_table_statistics"
           ],
@@ -7161,9 +7161,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011379266482386546,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03738666351569577,
+          "score_gap": 0.0012892507339889725,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969435582338808,
           "equivalent_tool_keys": [
             "Hyperbrowser::claude_computer_use_agent"
           ],
@@ -7180,8 +7180,8 @@
             "Hyperbrowser::browser_use_agent",
             "Hyperbrowser::claude_computer_use_agent",
             "Hyperbrowser::openai_computer_use_agent",
-            "Hyperbrowser::search_with_bing",
-            "Hyperbrowser::create_profile"
+            "Hyperbrowser::create_profile",
+            "Hyperbrowser::search_with_bing"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
@@ -7189,9 +7189,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011379266482386546,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03738666351569577,
+          "score_gap": 0.0012892507339889725,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03969435582338808,
           "equivalent_tool_keys": [
             "Hyperbrowser::browser_use_agent"
           ],
@@ -7229,9 +7229,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.011903650128360244,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.02662094003557418,
+          "score_gap": 0.012533398229119946,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.028450208328257107,
           "equivalent_tool_keys": [
             "Inkeep::search-product-content"
           ],
@@ -7257,9 +7257,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Kagi Search::search"
           ],
@@ -7285,9 +7285,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Kagi Search::summarizer"
           ],
@@ -7313,9 +7313,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0016217976159805872,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03690279254795384,
+          "score_gap": 0.0016614591707135376,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039322147386663515,
           "equivalent_tool_keys": [
             "Keboola::get_table_detail"
           ],
@@ -7331,19 +7331,19 @@
           "predicted_topk": [
             "Keboola::get_job_detail",
             "Unstructured::get_job_info",
-            "Keboola::retrieve_jobs",
             "Keboola::get_table_detail",
+            "Keboola::retrieve_jobs",
             "Keboola::retrieve_components"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "score_gap": 0.0010450504897887292,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039938556067588324,
           "equivalent_tool_keys": [
             "Keboola::get_job_detail"
           ],
@@ -7381,9 +7381,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0011194668242759803,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037405123339658446,
+          "score_gap": 0.0013726008647774318,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03961100569259962,
           "equivalent_tool_keys": [
             "Redis::hash"
           ],
@@ -7409,9 +7409,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.001223002862347125,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.0373015873015873,
+          "score_gap": 0.0013010668748373727,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03968253968253968,
           "equivalent_tool_keys": [
             "Redis::set"
           ],
@@ -7437,9 +7437,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Stripe::createInvoice"
           ],
@@ -7465,9 +7465,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0014710187353629972,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03705357142857143,
+          "score_gap": 0.0015490827478532448,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03943452380952381,
           "equivalent_tool_keys": [
             "Stripe::listSubscriptions"
           ],
@@ -7482,8 +7482,8 @@
           "expected_tool_key": "Airtable::list_records",
           "predicted_topk": [
             "Airtable::list_records",
-            "Airtable::list_tables",
             "Airtable::delete_records",
+            "Airtable::list_tables",
             "Airtable::list_bases",
             "Airtable::update_records"
           ],
@@ -7493,9 +7493,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0015225420328540407,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037002048131080385,
+          "score_gap": 0.0016614591707135376,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039322147386663515,
           "equivalent_tool_keys": [
             "Airtable::list_records"
           ],
@@ -7524,18 +7524,18 @@
             "Airtable::search_records",
             "Airtable::get_record",
             "Airtable::list_records",
-            "Airtable::update_records",
-            "Airtable::describe_table"
+            "Airtable::describe_table",
+            "Airtable::list_tables"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009634953447750921,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037561094819159334,
+          "score_gap": 0.0011497844654904457,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.03983382209188661,
           "equivalent_tool_keys": [
             "Airtable::search_records"
           ],
@@ -7561,9 +7561,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Chess.com::get_player_profile"
           ],
@@ -7589,9 +7589,9 @@
           "confidence": "low",
           "recommended_handoff_k": 5,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0006213643574828134,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03790322580645161,
+          "score_gap": 0.0006610259122157638,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.04032258064516129,
           "equivalent_tool_keys": [
             "Chess.com::get_player_stats"
           ],
@@ -7609,17 +7609,17 @@
             "Datadog::get-monitors",
             "Datadog::get-incidents",
             "Datadog::get-metric-metadata",
-            "Datadog::get-dashboard"
+            "Datadog::get-metrics"
           ],
           "hit_at_1": true,
           "hit_at_3": true,
           "hit_at_5": true,
-          "confidence": "medium",
-          "recommended_handoff_k": 3,
+          "confidence": "high",
+          "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0009669864772984815,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.037557603686635944,
+          "score_gap": 0.0010450504897887292,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039938556067588324,
           "equivalent_tool_keys": [
             "Datadog::get-events"
           ],
@@ -7645,9 +7645,9 @@
           "confidence": "high",
           "recommended_handoff_k": 1,
           "hit_at_recommended_k": true,
-          "score_gap": 0.0015466773088549865,
-          "top1_score": 0.038524590163934426,
-          "top2_score": 0.03697791285507944,
+          "score_gap": 0.0017668877321483575,
+          "top1_score": 0.04098360655737705,
+          "top2_score": 0.039216718825228696,
           "equivalent_tool_keys": [
             "Datadog::get-metric-metadata"
           ],

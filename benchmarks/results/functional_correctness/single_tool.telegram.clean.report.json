@@ -5,20 +5,20 @@
     "top3_accuracy": 1.0,
     "top5_accuracy": 1.0,
     "handoff_accuracy_at_recommended_k": 1.0,
-    "avg_recommended_handoff_k": 4.3,
+    "avg_recommended_handoff_k": 3.2,
     "confidence_buckets": {
       "high": {
-        "count": 9,
+        "count": 43,
         "top1_accuracy": 1.0,
         "handoff_accuracy_at_recommended_k": 1.0
       },
       "low": {
-        "count": 74,
+        "count": 53,
         "top1_accuracy": 1.0,
         "handoff_accuracy_at_recommended_k": 1.0
       },
       "medium": {
-        "count": 17,
+        "count": 4,
         "top1_accuracy": 1.0,
         "handoff_accuracy_at_recommended_k": 1.0
       }
@@ -29,20 +29,20 @@
       "top3_accuracy": 1.0,
       "top5_accuracy": 1.0,
       "handoff_accuracy_at_recommended_k": 1.0,
-      "avg_recommended_handoff_k": 4.3,
+      "avg_recommended_handoff_k": 3.2,
       "confidence_buckets": {
         "high": {
-          "count": 9,
+          "count": 43,
           "top1_accuracy": 1.0,
           "handoff_accuracy_at_recommended_k": 1.0
         },
         "low": {
-          "count": 74,
+          "count": 53,
           "top1_accuracy": 1.0,
           "handoff_accuracy_at_recommended_k": 1.0
         },
         "medium": {
-          "count": 17,
+          "count": 4,
           "top1_accuracy": 1.0,
           "handoff_accuracy_at_recommended_k": 1.0
         }
@@ -59,17 +59,17 @@
         "Telegram::get_contact_chats",
         "Telegram::list_chats",
         "Telegram::get_messages",
-        "Telegram::get_pinned_messages"
+        "Telegram::get_participants"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "medium",
-      "recommended_handoff_k": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001301807905869909,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03722278225806452,
+      "score_gap": 0.0014170742993125374,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039566532258064516,
       "equivalent_tool_keys": [
         "Telegram::get_chats"
       ],
@@ -87,7 +87,7 @@
         "Telegram::get_contact_chats",
         "Telegram::get_chats",
         "Telegram::search_public_chats",
-        "Telegram-Client::tg_dialogs"
+        "Telegram::get_participants"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -95,9 +95,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::list_chats"
       ],
@@ -113,9 +113,9 @@
       "predicted_topk": [
         "Telegram::get_chat",
         "Telegram::get_bot_info",
-        "Telegram::get_history",
         "Telegram::get_media_info",
-        "Telegram::send_message"
+        "Telegram::get_history",
+        "Telegram::get_me"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -123,9 +123,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000710970092249838,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03781362007168459,
+      "score_gap": 0.0007890341047400856,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04019457245263697,
       "equivalent_tool_keys": [
         "Telegram::get_chat"
       ],
@@ -142,18 +142,18 @@
         "Telegram::create_group",
         "Telegram::create_channel",
         "Telegram::leave_chat",
-        "Telegram::edit_chat_title",
-        "Telegram::get_invite_link"
+        "Telegram::get_invite_link",
+        "Telegram::edit_chat_title"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0010426450507904708,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.037481945113143955,
+      "score_gap": 0.0012628554740838419,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03972075108329321,
       "equivalent_tool_keys": [
         "Telegram::create_group"
       ],
@@ -176,12 +176,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Telegram::create_channel"
       ],
@@ -197,19 +197,19 @@
       "predicted_topk": [
         "Telegram::edit_chat_title",
         "Telegram::delete_chat_photo",
-        "Telegram::leave_chat",
         "Telegram::search_public_chats",
+        "Telegram::leave_chat",
         "Telegram::create_channel"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Telegram::edit_chat_title"
       ],
@@ -235,9 +235,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000710970092249838,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03781362007168459,
+      "score_gap": 0.0007890341047400856,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04019457245263697,
       "equivalent_tool_keys": [
         "Telegram::delete_chat_photo"
       ],
@@ -260,12 +260,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "medium",
-      "recommended_handoff_k": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001223002862347125,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373015873015873,
+      "score_gap": 0.0010450504897887292,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039938556067588324,
       "equivalent_tool_keys": [
         "Telegram::leave_chat"
       ],
@@ -291,9 +291,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::get_participants"
       ],
@@ -310,7 +310,7 @@
         "Telegram::get_admins",
         "Telegram::get_participants",
         "Telegram::get_banned_users",
-        "Telegram::get_pinned_messages",
+        "Telegram::get_recent_actions",
         "Telegram::get_contact_chats"
       ],
       "hit_at_1": true,
@@ -319,9 +319,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::get_admins"
       ],
@@ -338,7 +338,7 @@
         "Telegram::get_banned_users",
         "Telegram::get_admins",
         "Telegram::get_participants",
-        "Telegram::get_pinned_messages",
+        "Telegram::get_blocked_users",
         "Telegram::get_contact_chats"
       ],
       "hit_at_1": true,
@@ -347,9 +347,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::get_banned_users"
       ],
@@ -367,7 +367,7 @@
         "Telegram::demote_admin",
         "Telegram::block_user",
         "Telegram::get_recent_actions",
-        "Telegram::get_me"
+        "Telegram::unblock_user"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -375,9 +375,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::promote_admin"
       ],
@@ -403,9 +403,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::demote_admin"
       ],
@@ -423,7 +423,7 @@
         "Telegram::unban_user",
         "Telegram::block_user",
         "Telegram::unblock_user",
-        "Telegram::archive_chat"
+        "Telegram::get_banned_users"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -431,9 +431,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::ban_user"
       ],
@@ -451,7 +451,7 @@
         "Telegram::ban_user",
         "Telegram::unblock_user",
         "Telegram::block_user",
-        "Telegram::unarchive_chat"
+        "Telegram::get_banned_users"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -459,9 +459,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::unban_user"
       ],
@@ -487,9 +487,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::get_invite_link"
       ],
@@ -515,9 +515,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::export_chat_invite"
       ],
@@ -535,7 +535,7 @@
         "Telegram::join_chat_by_link",
         "Telegram::export_chat_invite",
         "Telegram::get_invite_link",
-        "Telegram::archive_chat"
+        "Telegram::get_direct_chat_by_contact"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -543,9 +543,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::import_chat_invite"
       ],
@@ -563,7 +563,7 @@
         "Telegram::import_chat_invite",
         "Telegram::export_chat_invite",
         "Telegram::get_invite_link",
-        "Telegram::archive_chat"
+        "Telegram::get_direct_chat_by_contact"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -571,9 +571,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::join_chat_by_link"
       ],
@@ -589,19 +589,19 @@
       "predicted_topk": [
         "Telegram::get_messages",
         "Telegram::list_messages",
+        "Telegram::get_chats",
         "Telegram::get_pinned_messages",
-        "Telegram::search_messages",
-        "Telegram::get_chats"
+        "Telegram::search_messages"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0009669864772984815,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.037557603686635944,
+      "score_gap": 0.0013010668748373727,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03968253968253968,
       "equivalent_tool_keys": [
         "Telegram::get_messages"
       ],
@@ -617,9 +617,9 @@
       "predicted_topk": [
         "Telegram::list_messages",
         "Telegram::get_pinned_messages",
+        "Telegram::get_messages",
         "Telegram-Client::tg_dialog",
-        "Telegram-Client::tg_dialogs",
-        "Telegram::get_messages"
+        "Telegram-Client::tg_dialogs"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -627,9 +627,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001798208906303167,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03672638125763126,
+      "score_gap": 0.0011690584262966652,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03981454813108039,
       "equivalent_tool_keys": [
         "Telegram::list_messages"
       ],
@@ -644,10 +644,10 @@
       "expected_tool_key": "Telegram::send_message",
       "predicted_topk": [
         "Telegram::send_message",
-        "Telegram::archive_chat",
         "Telegram::search_messages",
-        "Telegram::mute_chat",
-        "Telegram::reply_to_message"
+        "Telegram::archive_chat",
+        "Telegram::get_direct_chat_by_contact",
+        "Telegram::mute_chat"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -655,9 +655,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.002085569386926167,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03643902077700826,
+      "score_gap": 0.0014791652296538213,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03950444132772323,
       "equivalent_tool_keys": [
         "Telegram::send_message"
       ],
@@ -673,8 +673,8 @@
       "predicted_topk": [
         "Telegram::reply_to_message",
         "Slack::slack_reply_to_thread",
-        "Telegram::edit_message",
         "Telegram::delete_message",
+        "Telegram::edit_message",
         "Telegram::forward_message"
       ],
       "hit_at_1": true,
@@ -683,9 +683,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::reply_to_message"
       ],
@@ -701,19 +701,19 @@
       "predicted_topk": [
         "Telegram::edit_message",
         "Telegram::delete_message",
+        "Telegram::unpin_message",
         "Telegram::forward_message",
-        "Telegram::reply_to_message",
-        "Telegram::unpin_message"
+        "Telegram::reply_to_message"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0012150023503143537,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03730958781362007,
+      "score_gap": 0.0019926932284762416,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03899091332890081,
       "equivalent_tool_keys": [
         "Telegram::edit_message"
       ],
@@ -730,18 +730,18 @@
         "Telegram::delete_message",
         "Telegram::delete_contact",
         "Telegram::edit_message",
-        "Telegram::unpin_message",
-        "Telegram::forward_message"
+        "Telegram::forward_message",
+        "Telegram::unpin_message"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Telegram::delete_message"
       ],
@@ -756,20 +756,20 @@
       "expected_tool_key": "Telegram::forward_message",
       "predicted_topk": [
         "Telegram::forward_message",
-        "Telegram::edit_message",
         "Telegram::delete_message",
+        "Telegram::edit_message",
         "Telegram::reply_to_message",
         "Telegram::send_message"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "medium",
-      "recommended_handoff_k": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0014710187353629972,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03705357142857143,
+      "score_gap": 0.0019094750437294097,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03907413151364764,
       "equivalent_tool_keys": [
         "Telegram::forward_message"
       ],
@@ -792,12 +792,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "medium",
-      "recommended_handoff_k": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0016263271366391413,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.036898263027295285,
+      "score_gap": 0.0015372666070048446,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03944633995037221,
       "equivalent_tool_keys": [
         "Telegram::pin_message"
       ],
@@ -813,19 +813,19 @@
       "predicted_topk": [
         "Telegram::unpin_message",
         "Telegram::delete_message",
-        "Telegram::pin_message",
         "Telegram::edit_message",
+        "Telegram::pin_message",
         "Telegram::reply_to_message"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "medium",
-      "recommended_handoff_k": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0013814130005959727,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03714317716333845,
+      "score_gap": 0.0016614591707135376,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039322147386663515,
       "equivalent_tool_keys": [
         "Telegram::unpin_message"
       ],
@@ -851,9 +851,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::mark_as_read"
       ],
@@ -871,17 +871,17 @@
         "Telegram::get_media_info",
         "Telegram::get_last_interaction",
         "Telegram::edit_message",
-        "Telegram::forward_message"
+        "Telegram::get_messages"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011379266482386546,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03738666351569577,
+      "score_gap": 0.0012892507339889725,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03969435582338808,
       "equivalent_tool_keys": [
         "Telegram::get_message_context"
       ],
@@ -897,9 +897,9 @@
       "predicted_topk": [
         "Telegram::get_history",
         "Telegram::get_chat",
-        "Telegram::archive_chat",
         "Telegram::get_recent_actions",
-        "Telegram::unarchive_chat"
+        "Telegram::archive_chat",
+        "Telegram::get_participants"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -907,9 +907,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::get_history"
       ],
@@ -932,12 +932,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Telegram::get_pinned_messages"
       ],
@@ -960,12 +960,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0012150023503143537,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03730958781362007,
+      "score_gap": 0.0015490827478532448,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03943452380952381,
       "equivalent_tool_keys": [
         "Telegram::get_last_interaction"
       ],
@@ -980,20 +980,20 @@
       "expected_tool_key": "Telegram::list_contacts",
       "predicted_topk": [
         "Telegram::list_contacts",
-        "Telegram::search_contacts",
         "Telegram::export_contacts",
+        "Telegram::search_contacts",
         "Telegram::get_contact_ids",
         "Telegram::import_contacts"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "medium",
-      "recommended_handoff_k": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0013098084179026803,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.037214781746031746,
+      "score_gap": 0.001405442785664894,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03957816377171216,
       "equivalent_tool_keys": [
         "Telegram::list_contacts"
       ],
@@ -1011,7 +1011,7 @@
         "Telegram::list_contacts",
         "Telegram::import_contacts",
         "Telegram::export_contacts",
-        "Telegram::search_messages"
+        "Telegram::add_contact"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -1019,9 +1019,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::search_contacts"
       ],
@@ -1038,8 +1038,8 @@
         "Telegram::add_contact",
         "Telegram::delete_contact",
         "Telegram::get_direct_chat_by_contact",
-        "Telegram::get_contact_chats",
-        "Telegram::get_contact_ids"
+        "Telegram::get_contact_ids",
+        "Telegram::get_contact_chats"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -1047,9 +1047,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::add_contact"
       ],
@@ -1065,9 +1065,9 @@
       "predicted_topk": [
         "Telegram::delete_contact",
         "Telegram::add_contact",
-        "Telegram::delete_message",
         "Telegram::get_direct_chat_by_contact",
-        "Telegram::get_last_interaction"
+        "Telegram::search_contacts",
+        "Telegram::delete_message"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -1075,9 +1075,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::delete_contact"
       ],
@@ -1095,7 +1095,7 @@
         "Telegram::unblock_user",
         "Telegram::ban_user",
         "Telegram::unban_user",
-        "Telegram::demote_admin"
+        "Telegram::get_user_status"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -1103,9 +1103,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.002220925552928736,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03630366461100569,
+      "score_gap": 0.0023361919463713576,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.038647414611005695,
       "equivalent_tool_keys": [
         "Telegram::block_user"
       ],
@@ -1131,9 +1131,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0018250234812189695,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.036699566682715457,
+      "score_gap": 0.0018646850359519199,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03911892152142513,
       "equivalent_tool_keys": [
         "Telegram::unblock_user"
       ],
@@ -1159,9 +1159,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::import_contacts"
       ],
@@ -1179,7 +1179,7 @@
         "Telegram::list_contacts",
         "Telegram::search_contacts",
         "Telegram::import_contacts",
-        "Telegram::export_chat_invite"
+        "Telegram::get_contact_ids"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -1187,9 +1187,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::export_contacts"
       ],
@@ -1215,9 +1215,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::get_blocked_users"
       ],
@@ -1232,20 +1232,20 @@
       "expected_tool_key": "Telegram::get_contact_ids",
       "predicted_topk": [
         "Telegram::get_contact_ids",
-        "Telegram::get_contact_chats",
         "Telegram::list_contacts",
+        "Telegram::get_contact_chats",
         "Telegram::delete_contact",
         "Telegram::add_contact"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0010450504897887292,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039938556067588324,
       "equivalent_tool_keys": [
         "Telegram::get_contact_ids"
       ],
@@ -1261,9 +1261,9 @@
       "predicted_topk": [
         "Telegram::get_direct_chat_by_contact",
         "Telegram::get_contact_chats",
-        "Telegram::get_last_interaction",
         "Telegram::add_contact",
-        "Telegram::send_message"
+        "Telegram::get_last_interaction",
+        "Telegram::delete_contact"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -1271,9 +1271,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::get_direct_chat_by_contact"
       ],
@@ -1289,19 +1289,19 @@
       "predicted_topk": [
         "Telegram::get_contact_chats",
         "Telegram::list_chats",
-        "Telegram::get_direct_chat_by_contact",
         "Telegram::get_chats",
-        "Telegram::get_contact_ids"
+        "Telegram::get_direct_chat_by_contact",
+        "Telegram::list_contacts"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "medium",
-      "recommended_handoff_k": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0016294288736118448,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03689516129032258,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Telegram::get_contact_chats"
       ],
@@ -1327,9 +1327,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0018548978490808207,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.036669692314853605,
+      "score_gap": 0.0016385430187651276,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039345063538611925,
       "equivalent_tool_keys": [
         "Telegram::get_me"
       ],
@@ -1347,7 +1347,7 @@
         "Telegram::delete_profile_photo",
         "Telegram::get_me",
         "Telegram::get_user_photos",
-        "Telegram::search_contacts"
+        "Telegram::edit_message"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -1355,9 +1355,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::update_profile"
       ],
@@ -1383,9 +1383,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000710970092249838,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03781362007168459,
+      "score_gap": 0.0007890341047400856,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04019457245263697,
       "equivalent_tool_keys": [
         "Telegram::delete_profile_photo"
       ],
@@ -1401,19 +1401,19 @@
       "predicted_topk": [
         "Telegram::get_user_photos",
         "Telegram::get_user_status",
-        "Telegram-Client::tg_me",
         "Telegram::delete_profile_photo",
-        "Telegram::get_me"
+        "Telegram::get_me",
+        "Telegram::update_profile"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.001421074555328923,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03956253200204813,
       "equivalent_tool_keys": [
         "Telegram::get_user_photos"
       ],
@@ -1428,20 +1428,20 @@
       "expected_tool_key": "Telegram::get_user_status",
       "predicted_topk": [
         "Telegram::get_user_status",
-        "Telegram-Client::tg_me",
         "Telegram::get_user_photos",
+        "Telegram-Client::tg_me",
         "Telegram::get_me",
         "Telegram-Client::tg_dialog"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "medium",
-      "recommended_handoff_k": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0014553869656989682,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03706920319823546,
+      "score_gap": 0.0021207014210005634,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03886290513637649,
       "equivalent_tool_keys": [
         "Telegram::get_user_status"
       ],
@@ -1464,12 +1464,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0009669864772984815,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.037557603686635944,
+      "score_gap": 0.0010450504897887292,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039938556067588324,
       "equivalent_tool_keys": [
         "Telegram::get_media_info"
       ],
@@ -1484,8 +1484,8 @@
       "expected_tool_key": "Telegram::search_public_chats",
       "predicted_topk": [
         "Telegram::search_public_chats",
-        "Telegram::list_chats",
         "Telegram::edit_chat_title",
+        "Telegram::list_chats",
         "Telegram::get_contact_chats",
         "Telegram::create_channel"
       ],
@@ -1495,9 +1495,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.003259777717216604,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03526481244671782,
+      "score_gap": 0.002479598488151595,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03850400806922546,
       "equivalent_tool_keys": [
         "Telegram::search_public_chats"
       ],
@@ -1513,19 +1513,19 @@
       "predicted_topk": [
         "Telegram::search_messages",
         "Telegram::get_pinned_messages",
-        "Telegram-Client::tg_dialog",
         "Telegram::mark_as_read",
+        "Telegram-Client::tg_dialog",
         "Telegram::list_messages"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "medium",
-      "recommended_handoff_k": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0013657812309319436,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03715880893300248,
+      "score_gap": 0.001405442785664894,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03957816377171216,
       "equivalent_tool_keys": [
         "Telegram::search_messages"
       ],
@@ -1543,17 +1543,17 @@
         "Telegram::search_public_chats",
         "Telegram::unblock_user",
         "Telegram::block_user",
-        "Telegram::unarchive_chat"
+        "Telegram::add_contact"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "medium",
-      "recommended_handoff_k": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0015988814640321772,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03692570869990225,
+      "score_gap": 0.0016385430187651276,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039345063538611925,
       "equivalent_tool_keys": [
         "Telegram::resolve_username"
       ],
@@ -1570,18 +1570,18 @@
         "Telegram::get_sticker_sets",
         "Telegram-Client::tg_dialogs",
         "Telegram::list_contacts",
-        "Telegram::get_blocked_users",
-        "Telegram::get_contact_ids"
+        "Telegram::get_contact_ids",
+        "Telegram::get_blocked_users"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "medium",
-      "recommended_handoff_k": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001472005099860188,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03705258506407424,
+      "score_gap": 0.002853744079304235,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03812986247807282,
       "equivalent_tool_keys": [
         "Telegram::get_sticker_sets"
       ],
@@ -1604,12 +1604,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000710970092249838,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03781362007168459,
+      "score_gap": 0.0010450504897887292,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039938556067588324,
       "equivalent_tool_keys": [
         "Telegram::get_bot_info"
       ],
@@ -1626,8 +1626,8 @@
         "Telegram::set_bot_commands",
         "Telegram::get_bot_info",
         "Telegram::set_privacy_settings",
-        "Discord::delete_webhook",
-        "Discord::delete_category"
+        "Telegram::search_public_chats",
+        "HDW LinkedIn::get_linkedin_company"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -1635,9 +1635,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::set_bot_commands"
       ],
@@ -1663,9 +1663,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::get_privacy_settings"
       ],
@@ -1682,8 +1682,8 @@
         "Telegram::set_privacy_settings",
         "Telegram::get_privacy_settings",
         "Telegram::set_bot_commands",
-        "Telegram::update_profile",
-        "Telegram::add_contact"
+        "Telegram::get_sticker_sets",
+        "Telegram-Client::tg_read"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -1691,9 +1691,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::set_privacy_settings"
       ],
@@ -1710,8 +1710,8 @@
         "Telegram::mute_chat",
         "Telegram::unmute_chat",
         "Telegram::archive_chat",
-        "Telegram::send_message",
-        "Telegram::unarchive_chat"
+        "Telegram::unarchive_chat",
+        "Telegram::send_message"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -1719,9 +1719,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::mute_chat"
       ],
@@ -1738,8 +1738,8 @@
         "Telegram::unmute_chat",
         "Telegram::mute_chat",
         "Telegram::unarchive_chat",
-        "Telegram::send_message",
-        "Telegram::unban_user"
+        "Telegram::archive_chat",
+        "Telegram::send_message"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -1747,9 +1747,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::unmute_chat"
       ],
@@ -1765,8 +1765,8 @@
       "predicted_topk": [
         "Telegram::archive_chat",
         "Telegram::unarchive_chat",
-        "Telegram::send_message",
         "Telegram::mute_chat",
+        "Telegram::send_message",
         "Telegram::search_messages"
       ],
       "hit_at_1": true,
@@ -1775,9 +1775,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::archive_chat"
       ],
@@ -1793,9 +1793,9 @@
       "predicted_topk": [
         "Telegram::unarchive_chat",
         "Telegram::archive_chat",
-        "Telegram::search_messages",
+        "Telegram::unmute_chat",
         "Telegram::unban_user",
-        "Telegram::unmute_chat"
+        "Telegram::search_messages"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -1803,9 +1803,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::unarchive_chat"
       ],
@@ -1823,17 +1823,17 @@
         "Telegram::get_admins",
         "Telegram::get_last_interaction",
         "Telegram::get_pinned_messages",
-        "Telegram::get_chat"
+        "Telegram::get_participants"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "high",
-      "recommended_handoff_k": 1,
+      "confidence": "low",
+      "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001914629215985994,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03660996094794843,
+      "score_gap": 0.0007890341047400856,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04019457245263697,
       "equivalent_tool_keys": [
         "Telegram::get_recent_actions"
       ],
@@ -1851,17 +1851,17 @@
         "Telegram::get_contact_chats",
         "Telegram::list_chats",
         "Telegram::get_messages",
-        "Telegram::get_pinned_messages"
+        "Telegram::get_participants"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "medium",
-      "recommended_handoff_k": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001301807905869909,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03722278225806452,
+      "score_gap": 0.0014170742993125374,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039566532258064516,
       "equivalent_tool_keys": [
         "Telegram::get_chats"
       ],
@@ -1879,7 +1879,7 @@
         "Telegram::get_contact_chats",
         "Telegram::get_chats",
         "Telegram::search_public_chats",
-        "Telegram-Client::tg_dialogs"
+        "Telegram::get_participants"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -1887,9 +1887,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::list_chats"
       ],
@@ -1905,9 +1905,9 @@
       "predicted_topk": [
         "Telegram::get_chat",
         "Telegram::get_bot_info",
-        "Telegram::get_history",
         "Telegram::get_media_info",
-        "Telegram::send_message"
+        "Telegram::get_history",
+        "Telegram::get_me"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -1915,9 +1915,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000710970092249838,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03781362007168459,
+      "score_gap": 0.0007890341047400856,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04019457245263697,
       "equivalent_tool_keys": [
         "Telegram::get_chat"
       ],
@@ -1934,18 +1934,18 @@
         "Telegram::create_group",
         "Telegram::create_channel",
         "Telegram::leave_chat",
-        "Telegram::edit_chat_title",
-        "Telegram::get_invite_link"
+        "Telegram::get_invite_link",
+        "Telegram::edit_chat_title"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0010426450507904708,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.037481945113143955,
+      "score_gap": 0.0012628554740838419,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03972075108329321,
       "equivalent_tool_keys": [
         "Telegram::create_group"
       ],
@@ -1968,12 +1968,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Telegram::create_channel"
       ],
@@ -1989,19 +1989,19 @@
       "predicted_topk": [
         "Telegram::edit_chat_title",
         "Telegram::delete_chat_photo",
-        "Telegram::leave_chat",
         "Telegram::search_public_chats",
+        "Telegram::leave_chat",
         "Telegram::create_channel"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Telegram::edit_chat_title"
       ],
@@ -2027,9 +2027,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000710970092249838,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03781362007168459,
+      "score_gap": 0.0007890341047400856,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04019457245263697,
       "equivalent_tool_keys": [
         "Telegram::delete_chat_photo"
       ],
@@ -2052,12 +2052,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "medium",
-      "recommended_handoff_k": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001223002862347125,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373015873015873,
+      "score_gap": 0.0010450504897887292,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039938556067588324,
       "equivalent_tool_keys": [
         "Telegram::leave_chat"
       ],
@@ -2083,9 +2083,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::get_participants"
       ],
@@ -2102,7 +2102,7 @@
         "Telegram::get_admins",
         "Telegram::get_participants",
         "Telegram::get_banned_users",
-        "Telegram::get_pinned_messages",
+        "Telegram::get_recent_actions",
         "Telegram::get_contact_chats"
       ],
       "hit_at_1": true,
@@ -2111,9 +2111,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::get_admins"
       ],
@@ -2130,7 +2130,7 @@
         "Telegram::get_banned_users",
         "Telegram::get_admins",
         "Telegram::get_participants",
-        "Telegram::get_pinned_messages",
+        "Telegram::get_blocked_users",
         "Telegram::get_contact_chats"
       ],
       "hit_at_1": true,
@@ -2139,9 +2139,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::get_banned_users"
       ],
@@ -2159,7 +2159,7 @@
         "Telegram::demote_admin",
         "Telegram::block_user",
         "Telegram::get_recent_actions",
-        "Telegram::get_me"
+        "Telegram::unblock_user"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -2167,9 +2167,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::promote_admin"
       ],
@@ -2195,9 +2195,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::demote_admin"
       ],
@@ -2215,7 +2215,7 @@
         "Telegram::unban_user",
         "Telegram::block_user",
         "Telegram::unblock_user",
-        "Telegram::archive_chat"
+        "Telegram::get_banned_users"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -2223,9 +2223,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::ban_user"
       ],
@@ -2243,7 +2243,7 @@
         "Telegram::ban_user",
         "Telegram::unblock_user",
         "Telegram::block_user",
-        "Telegram::unarchive_chat"
+        "Telegram::get_banned_users"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -2251,9 +2251,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::unban_user"
       ],
@@ -2279,9 +2279,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::get_invite_link"
       ],
@@ -2307,9 +2307,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::export_chat_invite"
       ],
@@ -2327,7 +2327,7 @@
         "Telegram::join_chat_by_link",
         "Telegram::export_chat_invite",
         "Telegram::get_invite_link",
-        "Telegram::archive_chat"
+        "Telegram::get_direct_chat_by_contact"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -2335,9 +2335,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::import_chat_invite"
       ],
@@ -2355,7 +2355,7 @@
         "Telegram::import_chat_invite",
         "Telegram::export_chat_invite",
         "Telegram::get_invite_link",
-        "Telegram::archive_chat"
+        "Telegram::get_direct_chat_by_contact"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -2363,9 +2363,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::join_chat_by_link"
       ],
@@ -2381,19 +2381,19 @@
       "predicted_topk": [
         "Telegram::get_messages",
         "Telegram::list_messages",
+        "Telegram::get_chats",
         "Telegram::get_pinned_messages",
-        "Telegram::search_messages",
-        "Telegram::get_chats"
+        "Telegram::search_messages"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0009669864772984815,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.037557603686635944,
+      "score_gap": 0.0013010668748373727,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03968253968253968,
       "equivalent_tool_keys": [
         "Telegram::get_messages"
       ],
@@ -2409,9 +2409,9 @@
       "predicted_topk": [
         "Telegram::list_messages",
         "Telegram::get_pinned_messages",
+        "Telegram::get_messages",
         "Telegram-Client::tg_dialog",
-        "Telegram-Client::tg_dialogs",
-        "Telegram::get_messages"
+        "Telegram-Client::tg_dialogs"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -2419,9 +2419,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.001798208906303167,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03672638125763126,
+      "score_gap": 0.0011690584262966652,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03981454813108039,
       "equivalent_tool_keys": [
         "Telegram::list_messages"
       ],
@@ -2436,10 +2436,10 @@
       "expected_tool_key": "Telegram::send_message",
       "predicted_topk": [
         "Telegram::send_message",
-        "Telegram::archive_chat",
         "Telegram::search_messages",
-        "Telegram::mute_chat",
-        "Telegram::reply_to_message"
+        "Telegram::archive_chat",
+        "Telegram::get_direct_chat_by_contact",
+        "Telegram::mute_chat"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -2447,9 +2447,9 @@
       "confidence": "high",
       "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.002085569386926167,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03643902077700826,
+      "score_gap": 0.0014791652296538213,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03950444132772323,
       "equivalent_tool_keys": [
         "Telegram::send_message"
       ],
@@ -2465,8 +2465,8 @@
       "predicted_topk": [
         "Telegram::reply_to_message",
         "Slack::slack_reply_to_thread",
-        "Telegram::edit_message",
         "Telegram::delete_message",
+        "Telegram::edit_message",
         "Telegram::forward_message"
       ],
       "hit_at_1": true,
@@ -2475,9 +2475,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::reply_to_message"
       ],
@@ -2493,19 +2493,19 @@
       "predicted_topk": [
         "Telegram::edit_message",
         "Telegram::delete_message",
+        "Telegram::unpin_message",
         "Telegram::forward_message",
-        "Telegram::reply_to_message",
-        "Telegram::unpin_message"
+        "Telegram::reply_to_message"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0012150023503143537,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03730958781362007,
+      "score_gap": 0.0019926932284762416,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03899091332890081,
       "equivalent_tool_keys": [
         "Telegram::edit_message"
       ],
@@ -2522,18 +2522,18 @@
         "Telegram::delete_message",
         "Telegram::delete_contact",
         "Telegram::edit_message",
-        "Telegram::unpin_message",
-        "Telegram::forward_message"
+        "Telegram::forward_message",
+        "Telegram::unpin_message"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "medium",
+      "recommended_handoff_k": 3,
       "hit_at_recommended_k": true,
-      "score_gap": 0.000877380742531457,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03764720942140297,
+      "score_gap": 0.0009170422972644074,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.040066564260112646,
       "equivalent_tool_keys": [
         "Telegram::delete_message"
       ],
@@ -2548,20 +2548,20 @@
       "expected_tool_key": "Telegram::forward_message",
       "predicted_topk": [
         "Telegram::forward_message",
-        "Telegram::edit_message",
         "Telegram::delete_message",
+        "Telegram::edit_message",
         "Telegram::reply_to_message",
         "Telegram::send_message"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "medium",
-      "recommended_handoff_k": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0014710187353629972,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03705357142857143,
+      "score_gap": 0.0019094750437294097,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03907413151364764,
       "equivalent_tool_keys": [
         "Telegram::forward_message"
       ],
@@ -2584,12 +2584,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "medium",
-      "recommended_handoff_k": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0016263271366391413,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.036898263027295285,
+      "score_gap": 0.0015372666070048446,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03944633995037221,
       "equivalent_tool_keys": [
         "Telegram::pin_message"
       ],
@@ -2605,19 +2605,19 @@
       "predicted_topk": [
         "Telegram::unpin_message",
         "Telegram::delete_message",
-        "Telegram::pin_message",
         "Telegram::edit_message",
+        "Telegram::pin_message",
         "Telegram::reply_to_message"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "medium",
-      "recommended_handoff_k": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0013814130005959727,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03714317716333845,
+      "score_gap": 0.0016614591707135376,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039322147386663515,
       "equivalent_tool_keys": [
         "Telegram::unpin_message"
       ],
@@ -2643,9 +2643,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::mark_as_read"
       ],
@@ -2663,17 +2663,17 @@
         "Telegram::get_media_info",
         "Telegram::get_last_interaction",
         "Telegram::edit_message",
-        "Telegram::forward_message"
+        "Telegram::get_messages"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011379266482386546,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03738666351569577,
+      "score_gap": 0.0012892507339889725,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03969435582338808,
       "equivalent_tool_keys": [
         "Telegram::get_message_context"
       ],
@@ -2689,9 +2689,9 @@
       "predicted_topk": [
         "Telegram::get_history",
         "Telegram::get_chat",
-        "Telegram::archive_chat",
         "Telegram::get_recent_actions",
-        "Telegram::unarchive_chat"
+        "Telegram::archive_chat",
+        "Telegram::get_participants"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -2699,9 +2699,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::get_history"
       ],
@@ -2724,12 +2724,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0011253966155473291,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.0373991935483871,
+      "score_gap": 0.0011650581702802795,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.039818548387096774,
       "equivalent_tool_keys": [
         "Telegram::get_pinned_messages"
       ],
@@ -2752,12 +2752,12 @@
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "low",
-      "recommended_handoff_k": 5,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0012150023503143537,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03730958781362007,
+      "score_gap": 0.0015490827478532448,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03943452380952381,
       "equivalent_tool_keys": [
         "Telegram::get_last_interaction"
       ],
@@ -2772,20 +2772,20 @@
       "expected_tool_key": "Telegram::list_contacts",
       "predicted_topk": [
         "Telegram::list_contacts",
-        "Telegram::search_contacts",
         "Telegram::export_contacts",
+        "Telegram::search_contacts",
         "Telegram::get_contact_ids",
         "Telegram::import_contacts"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
       "hit_at_5": true,
-      "confidence": "medium",
-      "recommended_handoff_k": 3,
+      "confidence": "high",
+      "recommended_handoff_k": 1,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0013098084179026803,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.037214781746031746,
+      "score_gap": 0.001405442785664894,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.03957816377171216,
       "equivalent_tool_keys": [
         "Telegram::list_contacts"
       ],
@@ -2803,7 +2803,7 @@
         "Telegram::list_contacts",
         "Telegram::import_contacts",
         "Telegram::export_contacts",
-        "Telegram::search_messages"
+        "Telegram::add_contact"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -2811,9 +2811,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::search_contacts"
       ],
@@ -2830,8 +2830,8 @@
         "Telegram::add_contact",
         "Telegram::delete_contact",
         "Telegram::get_direct_chat_by_contact",
-        "Telegram::get_contact_chats",
-        "Telegram::get_contact_ids"
+        "Telegram::get_contact_ids",
+        "Telegram::get_contact_chats"
       ],
       "hit_at_1": true,
       "hit_at_3": true,
@@ -2839,9 +2839,9 @@
       "confidence": "low",
       "recommended_handoff_k": 5,
       "hit_at_recommended_k": true,
-      "score_gap": 0.0006213643574828134,
-      "top1_score": 0.038524590163934426,
-      "top2_score": 0.03790322580645161,
+      "score_gap": 0.0006610259122157638,
+      "top1_score": 0.04098360655737705,
+      "top2_score": 0.04032258064516129,
       "equivalent_tool_keys": [
         "Telegram::add_contact"
       ],
@@ -2852,5 +2852,5 @@
     }
   ],
   "suite": "single_tool.telegram.clean",
-  "equivalence_map": "C:\\Users\\swaga\\Downloads\\Research Proj\\MCP-Router\\benchmarks\\functional_correctness\\equivalence_map.json"
+  "equivalence_map": "C:\\Users\\swaga\\Documents\\VOTR\\benchmarks\\functional_correctness\\equivalence_map.json"
 }

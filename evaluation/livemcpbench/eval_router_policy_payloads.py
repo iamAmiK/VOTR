@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import urllib.request
 import sys
 from pathlib import Path
 from typing import Any
@@ -112,6 +113,18 @@ def dedupe_servers(route_tools: list[Any]) -> list[str]:
     return out
 
 
+def dedupe_servers_from_route_dicts(tools: list[dict[str, Any]]) -> list[str]:
+    out: list[str] = []
+    seen: set[str] = set()
+    for tool in tools:
+        server_name = str(tool.get("server_name", ""))
+        if not server_name or server_name in seen:
+            continue
+        seen.add(server_name)
+        out.append(server_name)
+    return out
+
+
 def score_query(predicted_servers: list[str], gold_servers: set[str]) -> dict[str, float]:
     return {
         "precision@1": precision_at(predicted_servers, gold_servers, 1),
@@ -129,10 +142,20 @@ def score_query(predicted_servers: list[str], gold_servers: set[str]) -> dict[st
     }
 
 
-def evaluate(payloads_path: Path, index_dir: Path) -> dict[str, Any]:
+def _call_route(base_url: str, payload: dict[str, Any]) -> dict[str, Any]:
+    req = urllib.request.Request(
+        f"{base_url.rstrip('/')}/route",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+    )
+    with urllib.request.urlopen(req, timeout=120) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def evaluate(payloads_path: Path, index_dir: Path, base_url: str | None = None) -> dict[str, Any]:
     payload_file = json.loads(payloads_path.read_text(encoding="utf-8"))
     rows = payload_file["rows"]
-    router = build_router(index_dir)
+    router = None if base_url else build_router(index_dir)
 
     results = []
     label_counts: dict[str, int] = {}
@@ -142,8 +165,37 @@ def evaluate(payloads_path: Path, index_dir: Path) -> dict[str, Any]:
 
         payload = dict(row["payload"])
         payload["session_id"] = f"{payload['session_id']}-{idx}"
-        out = router.route(**payload)
-        predicted_servers = dedupe_servers(out.tools)
+        if base_url:
+            out = _call_route(base_url, payload)
+            predicted_tools = out.get("tools", []) or []
+            predicted_servers = dedupe_servers_from_route_dicts(predicted_tools)
+            adaptive_k = out.get("adaptive_k")
+            recommended_handoff_k = out.get("recommended_handoff_k")
+            confidence = out.get("confidence")
+            predicted_tools_topk = [
+                {
+                    "tool_key": tool.get("tool_key"),
+                    "server_name": tool.get("server_name"),
+                    "tool_name": tool.get("tool_name"),
+                    "score": tool.get("score"),
+                }
+                for tool in predicted_tools
+            ]
+        else:
+            out = router.route(**payload)
+            predicted_servers = dedupe_servers(out.tools)
+            adaptive_k = out.adaptive_k
+            recommended_handoff_k = out.recommended_handoff_k
+            confidence = out.confidence
+            predicted_tools_topk = [
+                {
+                    "tool_key": tool.tool_key,
+                    "server_name": tool.server_name,
+                    "tool_name": tool.tool_name,
+                    "score": tool.score,
+                }
+                for tool in out.tools
+            ]
         gold_servers = set(row.get("gold_server_names", []))
         metrics = score_query(predicted_servers, gold_servers)
         results.append(
@@ -157,18 +209,10 @@ def evaluate(payloads_path: Path, index_dir: Path) -> dict[str, Any]:
                 "assigned_tool_names": row.get("assigned_tool_names", []),
                 "payload": payload,
                 "predicted_servers_topk": predicted_servers,
-                "predicted_tools_topk": [
-                    {
-                        "tool_key": tool.tool_key,
-                        "server_name": tool.server_name,
-                        "tool_name": tool.tool_name,
-                        "score": tool.score,
-                    }
-                    for tool in out.tools
-                ],
-                "adaptive_k": out.adaptive_k,
-                "recommended_handoff_k": out.recommended_handoff_k,
-                "confidence": out.confidence,
+                "predicted_tools_topk": predicted_tools_topk,
+                "adaptive_k": adaptive_k,
+                "recommended_handoff_k": recommended_handoff_k,
+                "confidence": confidence,
                 **metrics,
             }
         )
@@ -181,6 +225,7 @@ def evaluate(payloads_path: Path, index_dir: Path) -> dict[str, Any]:
             "protocol": "router-policy-payload-eval",
             "payloads_path": str(payloads_path),
             "index_dir": str(index_dir),
+            "base_url": base_url,
             "note": "Runs the real router on Policy.md-style reconstructed payloads.",
         },
         "summary": summary,
@@ -193,9 +238,15 @@ def main() -> None:
     ap.add_argument("--payloads", type=Path, default=DEFAULT_PAYLOADS)
     ap.add_argument("--index-dir", type=Path, default=DEFAULT_INDEX)
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT)
+    ap.add_argument(
+        "--base-url",
+        type=str,
+        default=None,
+        help="Optional router URL (e.g. http://127.0.0.1:8777). If set, payloads are sent to POST /route.",
+    )
     args = ap.parse_args()
 
-    result = evaluate(args.payloads, args.index_dir)
+    result = evaluate(args.payloads, args.index_dir, base_url=args.base_url)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(result, indent=2), encoding="utf-8")
     print(json.dumps(result["summary"], indent=2))
