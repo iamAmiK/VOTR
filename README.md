@@ -2,7 +2,7 @@
 
 # VOTR: Vector Orchestrated Tool Retrieval
 
-**Production-grade MCP tool retrieval and routing for large, dynamic tool ecosystems**
+**A scalable and efficient MCP tool retrieval and routing system for large, dynamic tool ecosystems**
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-service-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
