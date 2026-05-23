@@ -1,6 +1,6 @@
 <div align="center">
 
-# VOTR: Vector Orchestrated Tool Retrieval
+# [ANON - Replace after submission]
 
 **A scalable and efficient MCP tool retrieval and routing system for large, dynamic tool ecosystems**
 
